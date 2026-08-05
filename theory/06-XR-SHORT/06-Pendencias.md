@@ -1,0 +1,58 @@
+# Pendências — XR Short Stack
+
+## Módulo 06 — XR Short Stack
+
+---
+
+# Pontos para complementar
+
+---
+
+## 1. Exercícios completos
+
+Adicionar todos os exercícios originais em formato:
+
+- Situação.
+- Decisão.
+- Resposta.
+- Correção.
+- Regra criada.
+
+---
+
+## 2. Gyazos completos
+
+Adicionar imagens do Solver utilizadas na aula.
+
+---
+
+## 3. Frequências
+
+Adicionar:
+
+- Frequências de XR.
+- Frequências de Call.
+- Frequências por board.
+
+Somente quando disponível no material.
+
+---
+
+## 4. Separação por posição
+
+Expandir futuramente:
+
+- EP vs BB.
+- BTN vs BB.
+
+Mantendo estratégias separadas.
+
+---
+
+## 5. Revisões futuras
+
+Qualquer nova aula deve atualizar:
+
+- Regras.
+- Exercícios.
+- Decisões.
