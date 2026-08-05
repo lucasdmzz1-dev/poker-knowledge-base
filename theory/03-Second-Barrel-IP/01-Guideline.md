@@ -1,118 +1,236 @@
-# Guideline – Second Barrel IP
+# C-Bet IP + Second Barrel
 
-> **Módulo:** 03 – Second Barrel IP
-
----
-
-# Objetivo
-
-Desenvolver uma estratégia de Second Barrel IP baseada na textura do turn, utilizando diferentes construções de range e sizings conforme a interação do turn com o board. 
+> Módulo de estudo Poker Knowledge Base
 
 ---
 
-# Filosofia
+# Objetivo do Módulo
 
-Após a C-Bet e Call do adversário, o range do vilão torna-se mais forte e filtrado.
+Dominar a construção da agressão em posição desde o Flop até o Turn.
 
-A estratégia de Second Barrel deve considerar:
+O módulo aborda duas etapas conectadas:
 
-- Vantagem de Equity.
-- Vantagem de Nuts.
-- Interação do turn com o board.
-- Capacidade de Thin Value. 
+1. Construção da C-Bet IP no Flop.
+2. Continuação da agressão através do Second Barrel no Turn.
+
+O objetivo não é estudar cada street isoladamente, mas entender como a construção do range no Flop influencia todas as decisões posteriores.
+
+---
+
+# Conceito Central
+
+Quando estamos em posição e fazemos uma C-Bet recebendo call, ocorre uma mudança importante na distribuição dos ranges.
+
+O vilão:
+
+- Filtra seu range.
+- Chega ao Turn com mais mãos conectadas ao board.
+- Aumenta sua frequência de mãos com showdown e equity.
+
+Porém, o agressor mantém:
+
+- Maior quantidade de mãos fortes.
+- Maior vantagem de nuts em diversos boards.
+
+A estratégia de Second Barrel nasce desse conflito:
+
+- Quando temos vantagem de nuts → estratégia mais polarizada.
+- Quando o board conecta o range do vilão → estratégia mais linear.
+
+---
+
+# Estrutura do Módulo
+
+## Parte 1 — C-Bet IP
+
+Construção da estratégia inicial:
+
+- Escolha de boards.
+- Frequência de aposta.
+- Sizing.
+- Range de valor.
+- Range de bluff.
+- Critérios de check.
+
+---
+
+## Parte 2 — Evolução Flop → Turn
+
+Após receber call:
+
+Analisar:
+
+- Como o range do vilão mudou.
+- Como o Turn altera a vantagem.
+- Quais mãos continuam apostando.
+- Quais mãos entram no check.
+
+---
+
+## Parte 3 — Second Barrel
+
+Classificação dos Turns:
+
+- Turn Blank.
+- Turn High Card.
+- Turn Conectado.
+- Flush completando com High Card.
+- Flush completando com Low Card.
+
+Cada grupo possui:
+
+- Estratégia própria.
+- Sizing próprio.
+- Construção de range própria.
+
+---
+
+# Principais Conceitos
+
+## Equity x Nuts Advantage
+
+Uma das principais ideias do módulo:
+
+O jogador que pagou a C-Bet normalmente ganha equity no Turn.
+
+Porém, o agressor ainda possui mais mãos muito fortes.
+
+Portanto:
+
+Ter mais equity não significa automaticamente ter a melhor estratégia.
 
 ---
 
 # Turn Blank
 
-## Construção
+Quando o Turn não altera as interações do board:
 
-- Polarizada.
+Estratégia:
 
-## Sizing
+- Mais polarizada.
+- Menor frequência.
+- Sizing maior.
 
-- Geométrico.
-- Mínimo Pot.
+Objetivo:
 
-## Range
+Extrair o máximo das mãos fortes.
 
-### Valor
+---
 
-- Mãos muito fortes.
+# Turn Conectado
 
-### Bluff
+Quando o Turn melhora muitos draws do vilão:
 
-- Mãos que desbloqueiam os autofolds do adversário. 
+Estratégia:
+
+- Mais linear.
+- Mais mãos com equity.
+- Mais frequência.
+
+Objetivo:
+
+Combater equity com equity.
 
 ---
 
 # Turn High Card
 
-## Sizing
+Quando aparece uma carta alta:
 
-- B70.
+Exemplo:
 
-## Objetivo
+Ás ou Rei.
 
-Apostar fino por valor com:
+Estratégia:
+
+- Expandir valor.
+- Utilizar sizing médio.
+
+Objetivo:
+
+Conseguir apostar:
 
 - Novos Top Pairs.
 - Melhores Second Pairs.
-- Grande quantidade de Thin Value. 
 
 ---
 
-# Turn Dinâmico que Conecta
+# Filosofia de Sizing
 
-## Construção
+Cada situação possui um sizing principal.
 
-- Linear.
+Não devemos criar múltiplos sizes sem necessidade.
 
-## Sizing
+A ideia:
 
-- B70.
-
-## Objetivo
-
-Utilizar mãos com maior equidade e blockers, pois o adversário reduz sua frequência de fold ao conectar melhor com o board. 
+Uma textura → uma estratégia → um sizing principal.
 
 ---
 
-# Flush Completa com High Card
+# Regras Gerais do Módulo
 
-## Sizing
+## Regra 1
 
-- B40.
-
-## Objetivo
-
-Continuar extraindo valor de um grande número de Top Pairs. 
+Não analisar Second Barrel sem considerar a C-Bet inicial.
 
 ---
 
-# Flush Completa com Low Card
+## Regra 2
 
-## Sizing
+Turn Blank:
 
-- B70.
-
-## Objetivo
-
-Os Top Pairs continuam pagando em alta frequência, permitindo manter um sizing maior. 
+→ Polarização  
+→ Size alto  
+→ Valor forte + bluffs selecionados
 
 ---
 
-# Sequência de 4 Cartas
+## Regra 3
 
-## Sizing
+Turn Conectado:
 
-- Size reduzido.
+→ Mais equity  
+→ Mais frequência  
+→ Size médio
 
-## Objetivo
+---
 
-Manter apostas por valor com:
+## Regra 4
 
-- Dois Pares.
-- Trincas.
+Top Pairs fracos precisam existir no check.
 
-Sem restringir o range apenas a sequência ou bluffs. 
+Objetivo:
+
+Capturar bluffs no River.
+
+---
+
+## Regra 5
+
+Em posição, não existe incentivo para utilizar sizes pequenos sem motivo.
+
+O IP consegue realizar equity dando check.
+
+---
+
+# Resultado Esperado
+
+Após dominar este módulo o jogador deve conseguir:
+
+- Escolher melhores C-Bets.
+- Entender quando continuar no Turn.
+- Escolher sizing correto.
+- Construir ranges de valor e bluff.
+- Evitar overbarrel automático.
+- Preparar melhor as decisões de River.
+
+---
+
+# Fontes Utilizadas
+
+- Guideline C-Bet IP 2025.
+- Aula Second Barrel IP.
+- Transcrição da aula.
+- Exercícios realizados.
+- Correções do instrutor.
+- Solver quando disponível.

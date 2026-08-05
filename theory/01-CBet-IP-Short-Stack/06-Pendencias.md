@@ -1,57 +1,66 @@
 # Pendências – C-Bet IP Short Stack
 
-> Este documento registra dúvidas, pontos não consolidados e futuras revisões do módulo.
+> Módulo 01 — Poker Knowledge Base
 
 ---
 
-# Pendências
+# Objetivo
 
-## Naipes nos Draws Off
-
-### Situação
-
-Determinar quando os draws da parte off devem:
-
-- Apostar contendo o naipe do Flush Draw.
-- Apostar sem conter o naipe do Flush Draw.
-
-### Status
-
-**Pendente de validação pelo instrutor.**
+Registrar pontos que precisam de complemento futuro.
 
 ---
 
-## Critérios Exatos para Slowplays
+# 1. Mais exemplos práticos
 
-Embora o módulo indique Check com parte das Trincas, ainda não existe uma regra totalmente objetiva para definir quais combinações entram nessa estratégia.
+Adicionar:
 
-### Status
-
-**Pendente.**
-
----
-
-## Simplificações Futuras
-
-Conforme novos estudos forem realizados, verificar se existe alguma simplificação adicional que mantenha o EV da estratégia.
-
-### Status
-
-Contínuo.
+- Mais boards A High.
+- Mais boards BBX.
+- Mais boards Low.
+- Mais boards conectados.
 
 ---
 
-# Histórico de Pendências Resolvidas
+# 2. Mais mãos específicas
 
-Nenhuma registrada até o momento.
+Adicionar exemplos de:
+
+- Top Pair.
+- Second Pair.
+- Draws.
+- Trincas.
+- High Cards.
 
 ---
 
-# Observações
+# 3. Solver detalhado
 
-Toda pendência somente poderá ser considerada resolvida após validação por uma das seguintes fontes:
+Os Gyazos atuais representam os solves principais.
 
-- Guideline
-- Videoaula
-- Solver
-- Resposta oficial do instrutor
+Adicionar futuramente:
+
+- Frequências por posição.
+- Distribuição completa dos ranges.
+- Combinações específicas.
+
+---
+
+# 4. Integração com Pós-Flop
+
+Adicionar conexão com:
+
+- Second Barrel.
+- Turn Check Raise.
+- Estratégias de continuação.
+
+---
+
+# 5. Correções futuras
+
+Caso novas aulas ou exercícios tragam ajustes:
+
+Atualizar:
+
+- Guideline.
+- Regras Consolidadas.
+- Changelog.

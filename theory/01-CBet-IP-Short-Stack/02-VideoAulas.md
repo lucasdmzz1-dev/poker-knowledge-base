@@ -1,110 +1,282 @@
-# Videoaulas – C-Bet IP Short Stack
+# VideoAulas – C-Bet IP Short Stack
 
-> Este documento registra apenas os conceitos apresentados nas videoaulas que complementam o Guideline.
-
----
-
-# Filosofia do módulo
-
-No jogo Short Stack, **realizar equidade vale mais do que proteger equidade** em muitos spots.
-
-Sempre que uma mão não estiver confortável em jogar por stacks após sofrer Check Raise, devemos considerar colocá-la no range de Check.
+> Módulo 01 — Poker Knowledge Base
 
 ---
 
-# Frequência geral de C-Bet
+# Objetivo da Aula
 
-Embora alguns boards possuam frequência reduzida, a estratégia completa gera aproximadamente:
+Entender como construir uma estratégia de C-Bet em posição jogando Short Stack (20bbs).
 
-- 85% de frequência de C-Bet.
+A aula apresenta uma adaptação importante:
 
-Esse deve ser o target esperado para o módulo quando executado corretamente. :contentReference[oaicite:1]{index=1}
+No Short Stack, não devemos pensar apenas em apostar mãos fortes.
 
----
+Devemos pensar em:
 
-# Slowplays
-
-O range de Check não existe apenas para proteger mãos médias.
-
-Também precisamos proteger nosso range de Check com mãos muito fortes.
-
-Principais candidatos:
-
-- Top Set.
-- Algumas Trincas em boards secos.
-
-Objetivos:
-
-- Permitir que o vilão bluffe.
-- Permitir que o vilão melhore sua mão.
-- Evitar que nosso range de Check fique capado. 
+- Realização de equity.
+- Frequência de check raise recebida.
+- Capacidade de continuar após agressão.
+- Valor de chegar ao Turn.
 
 ---
 
-# Boards Low
+# Conceito Principal
 
-Existe uma exceção importante.
+No jogo Short Stack:
 
-## Board 932
+A realização de equity possui prioridade.
 
-Apesar de ser um board low, jogamos praticamente Range Bet.
+Isso acontece porque:
 
-Motivo:
+- O SPR é menor.
+- As decisões ficam mais próximas de comprometer o stack.
+- O custo de apostar e abandonar aumenta.
 
-O BB possui pouquíssimas combinações contendo 2x e 3x.
+Portanto:
 
-Nossa vantagem de range aumenta significativamente. :contentReference[oaicite:3]{index=3}
+Uma mão pode possuir equity suficiente para apostar, mas ainda assim possuir maior EV dando check.
 
 ---
 
-# Construção do Range de Check
+# A pergunta correta
 
-Algumas mãos possuem valor de showdown suficiente para preferirem realizar equidade.
+Não é:
 
-Exemplos citados:
+"Minha mão é boa?"
 
-- A-high.
-- Q-high.
-- Pockets médios.
+É:
+
+"Minha mão quer jogar um pote maior ou quer realizar equity?"
+
+---
+
+# Boards A High
+
+Exemplo:
+
+A84r
+
+---
+
+# Estratégia
+
+C-Bet Range.
+
+---
+
+# Motivo
+
+Possuímos:
+
+- Vantagem de equity.
+- Vantagem de nuts.
+- Alta realização de equity.
+
+---
+
+# Decisão
+
+Apostamos praticamente todo o range.
+
+---
+
+# Board BBX
+
+Exemplo:
+
+KT6r
+
+---
+
+# Estratégia
+
+Alta frequência de C-Bet.
+
+---
+
+# Motivo
+
+O board favorece nossa construção de range.
+
+Temos:
+
+- Mais mãos fortes.
+- Melhor interação com nuts.
+- Boa realização de equity.
+
+---
+
+# Boards Onde Criamos Check
+
+Nos boards onde enfrentamos maior frequência de Check Raise:
+
+Precisamos desenvolver range de Check Behind.
+
+---
+
+# Motivo
+
+No Short Stack:
+
+Tomar Check Raise possui grande impacto.
+
+Mãos que apostam e não conseguem continuar perdem muito EV.
+
+---
+
+# Board J84s
+
+## Estratégia
+
+Split.
+
+---
+
+# Parte do Range que Checka
+
+Entram:
+
+- Parte média do range.
+- Second Pair.
+- Third Pair.
+- Draws que queremos realizar.
+- High Cards com BDFD.
+- Trincas.
+- Piores Top Pairs.
+
+---
+
+# Draws Off Suit
+
+Os draws off suit possuem preferência por bet quando:
+
+- Bloqueiam Flush Draws do adversário.
+- Reduzem a frequência de Check Raise.
+
+---
+
+# Motivo
+
+Ao diminuir o número de Check Raises:
+
+Aumentamos nossa realização de equity.
+
+---
+
+# Board Low
+
+Exemplo:
+
+985r
+
+---
+
+# Estratégia
+
+Split.
+
+---
+
+# Conceito
+
+Boards Low possuem maior interação com o range adversário.
+
+Por isso:
+
+Não queremos apostar todo nosso range.
+
+---
+
+# Filosofia do Check
+
+O check não significa fraqueza.
+
+Ele é uma ferramenta para:
+
+- Realizar equity.
+- Proteger mãos médias.
+- Controlar tamanho do pote.
+- Evitar situações ruins contra raise.
+
+---
+
+# Range de Check Short Stack
+
+Construído por:
+
+## Trincas
+
+Para proteger o range.
+
+---
+
+## Pares abaixo do Top Pair
+
+Exemplo:
+
 - Second Pair.
 - Third Pair.
 
-Essas mãos frequentemente preferem Check ao invés de Bet/Fold. :contentReference[oaicite:4]{index=4}
-
 ---
-
-# Draws
-
-Separação importante:
-
-## Draws fortes
-
-Quando um draw é forte o suficiente para jogar Bet/Call, devemos apostar.
 
 ## Draws médios
 
-Quando um draw não suporta jogar por stacks, preferimos realizar equidade através do Check. :contentReference[oaicite:5]{index=5}
+Exemplo:
+
+- Flush Draw fraco.
+- Duas pontas sem overcard.
+- Brocas.
 
 ---
 
-# Construção do Range
+## High Cards com BDFD
 
-O instrutor enfatiza que o objetivo não é copiar exatamente as frequências do solver.
-
-A construção prática busca:
-
-- Cobrir todos os runouts.
-- Manter o range protegido.
-- Ser simples de executar durante o jogo.
-
-Por isso algumas mãos específicas são alocadas manualmente entre Bet e Check. 
+Mãos que querem ver o Turn.
 
 ---
 
-# Prioridade do módulo
+## Piores Top Pairs
 
-Durante toda a aula, o conceito mais reforçado foi:
+Dependendo da textura.
 
-> No jogo Short Stack, perder realização de equidade custa muito EV.
+---
 
-Esse conceito é a base de toda a estratégia de C-Bet IP Short Stack. :contentReference[oaicite:7]{index=7}
+# Sizing
+
+No Short Stack:
+
+Não trabalhamos com muitos tamanhos.
+
+---
+
+# B25
+
+Size baixo.
+
+Utilizado para:
+
+- Bet range.
+- Boards onde temos vantagem ampla.
+
+---
+
+# B40
+
+Size alto.
+
+Utilizado para:
+
+- Estratégias Split.
+- Mãos selecionadas.
+
+---
+
+# Conclusão da Aula
+
+A estratégia C-Bet Short Stack é baseada em:
+
+- Apostar quando temos vantagem clara.
+- Checkar quando queremos realizar equity.
+- Respeitar frequência de Check Raise.
+- Construir ranges equilibrados de bet e check.

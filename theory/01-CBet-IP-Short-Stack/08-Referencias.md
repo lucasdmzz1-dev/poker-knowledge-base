@@ -1,21 +1,66 @@
 # Referências – C-Bet IP Short Stack
 
-## Fontes Oficiais
-
-- Guideline oficial do módulo.
-- Videoaulas.
-- Solver.
-- Exercícios.
-- Correções do instrutor.
+> Módulo 01 — Poker Knowledge Base
 
 ---
 
-## Links
-
-Adicionar os links das aulas e demais materiais oficiais.
+# Fontes Utilizadas
 
 ---
 
-## Observação
+# 1. Guideline C-Bet IP 20bbs
 
-Toda regra documentada neste módulo deve possuir origem em uma das fontes acima.
+Fonte principal.
+
+Contém:
+
+- Estratégia por textura.
+- Frequências de bet.
+- Sizes.
+- Construção de range.
+- Outputs de Solver através dos Gyazos.
+
+---
+
+# 2. Gyazos / Solver
+
+Utilizados como referência para:
+
+- Frequências de C-Bet.
+- Estratégias Split.
+- Construção dos ranges.
+
+Spots principais:
+
+- A84r.
+- KT6r.
+- J84s.
+- 985r.
+
+---
+
+# 3. Videoaula C-Bet IP Short Stack
+
+Utilizada para:
+
+- Entendimento estratégico.
+- Explicação do instrutor.
+- Racional das decisões.
+
+---
+
+# Critério de Prioridade
+
+Em caso de conflito:
+
+1. Correção do instrutor.
+2. Solver.
+3. Aula.
+4. Guideline.
+5. Exercícios.
+
+---
+
+# Atualizações
+
+Novos materiais devem ser adicionados antes de alterar regras consolidadas.

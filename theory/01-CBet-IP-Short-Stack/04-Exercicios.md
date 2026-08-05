@@ -68,3 +68,201 @@ Ao final do módulo o aluno deve conseguir identificar automaticamente:
 - Construção do range de Check.
 - Sizing.
 - Motivo estratégico.
+
+# Exercícios – C-Bet IP Short Stack
+
+> Módulo 01 — Poker Knowledge Base
+
+---
+
+# Exercício 01 — Board A High
+
+## Spot
+
+Board:
+
+A84r
+
+---
+
+## Pergunta
+
+Devemos apostar ou construir range de check?
+
+---
+
+## Resposta
+
+Bet Range.
+
+---
+
+## Motivo
+
+Temos:
+
+- Vantagem de equity.
+- Vantagem de nuts.
+- Alta realização de equity.
+
+---
+
+# Regra Extraída
+
+Boards A High secos favorecem C-Bet de frequência máxima.
+
+---
+
+# Exercício 02 — Board BBX
+
+## Spot
+
+Board:
+
+KT6r
+
+---
+
+## Resposta
+
+Alta frequência de bet.
+
+---
+
+## Motivo
+
+Nossa distribuição de mãos fortes é superior.
+
+---
+
+# Regra Extraída
+
+Boards BBX permitem C-Bet ampla quando temos vantagem estrutural.
+
+---
+
+# Exercício 03 — Board J84s
+
+## Spot
+
+Board conectado com straight draws.
+
+---
+
+## Resposta
+
+Split.
+
+---
+
+## Bet
+
+Entram:
+
+- Draws que querem continuar.
+- Mãos que não se importam com Bet/Fold.
+- Draws off suit bloqueando FD.
+
+---
+
+## Check
+
+Entram:
+
+- Second Pair.
+- Third Pair.
+- Valor médio.
+- High Card com BDFD.
+- Trincas.
+- Piores Top Pairs.
+
+---
+
+# Regra Extraída
+
+Quanto maior o risco de Check Raise, maior necessidade de Check Behind.
+
+---
+
+# Exercício 04 — Board 985r
+
+## Spot
+
+Board Low.
+
+---
+
+## Resposta
+
+Split.
+
+---
+
+## Motivo
+
+O board conecta mais com o range adversário.
+
+---
+
+# Regra Extraída
+
+Board Low Short Stack prioriza realização de equity.
+
+---
+
+# Exercício 05 — Escolha de Draw
+
+## Pergunta
+
+Todo draw deve apostar?
+
+---
+
+## Resposta
+
+Não.
+
+---
+
+## Apostar
+
+Draws que:
+
+- Querem continuar contra raise.
+- Possuem boa realização.
+- Bloqueiam raises.
+
+---
+
+## Check
+
+Draws que:
+
+- Não querem Bet/Fold.
+- Preferem ver Turn.
+
+---
+
+# Exercício 06 — Construção de Range de Check
+
+## Pergunta
+
+Quais mãos entram no check?
+
+---
+
+## Resposta
+
+- Trincas.
+- Pares abaixo do Top Pair.
+- Draws médios.
+- High Cards com BDFD.
+- Piores Top Pairs.
+
+---
+
+# Regra Final
+
+No Short Stack:
+
+Ver o Turn frequentemente possui valor superior a apostar automaticamente.
