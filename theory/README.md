@@ -1,0 +1,127 @@
+# Theory Index
+
+**Version:** 1.0  
+**Status:** Active  
+**Last Updated:** 2026-08-04
+
+---
+
+# Purpose
+
+This directory contains the official human-readable poker theory of the Poker Knowledge Base.
+
+Each strategic module has its own document.
+
+Theory modules contain:
+
+- Scope
+- Philosophy
+- Strategic guidelines
+- Value strategy
+- Bluff strategy
+- Call strategy
+- Sizes
+- Position differences
+- Stack differences
+- Suit logic
+- Exceptions
+- Operational simplifications
+- Validated examples
+- Pending validations
+- Changelog
+
+Structured rules for software use will be stored separately in the Decision Engine.
+
+---
+
+# Current Modules
+
+## Fundamentals
+
+| Module | ID | Status | Version |
+|---|---|---:|---:|
+| Structural Board Classification | `MODULE_FUNDAMENTALS_BOARD_STRUCTURE` | To document | — |
+
+## Single-Raised Pot — OOP
+
+| Module | ID | Status | Version |
+|---|---|---:|---:|
+| C-Bet Flop OOP | `MODULE_SRP_OOP_CBET_FLOP` | Consolidated — documentation pending | — |
+| Second Barrel OOP | `MODULE_SRP_OOP_SECOND_BARREL` | Consolidated — documentation pending | — |
+| Third Barrel OOP | `MODULE_SRP_OOP_THIRD_BARREL` | Partially consolidated — review required | — |
+| Check-Raise Flop Short Stack | `MODULE_SRP_OOP_XR_SHORT` | Consolidated with pending suit validation | — |
+| Check-Raise Flop Deep Stack | `MODULE_SRP_OOP_XR_DEEP` | Not started | — |
+
+## Single-Raised Pot — IP
+
+| Module | ID | Status | Version |
+|---|---|---:|---:|
+| C-Bet Flop IP | `MODULE_SRP_IP_CBET_FLOP` | Existing knowledge — documentation pending | — |
+| Second Barrel IP | `MODULE_SRP_IP_SECOND_BARREL` | Existing knowledge — documentation pending | — |
+| Third Barrel IP | `MODULE_SRP_IP_THIRD_BARREL` | Existing knowledge — documentation pending | — |
+
+---
+
+# Documentation Order
+
+The initial migration will follow this order:
+
+1. Structural Board Classification
+2. C-Bet Flop OOP
+3. Second Barrel OOP
+4. Third Barrel OOP
+5. Check-Raise Flop Short Stack
+6. Validated Examples
+7. Pending Validations
+8. Decision Engine Rules
+9. Trainer Exercises
+
+---
+
+# Status Definitions
+
+## Consolidated
+
+The strategy has been studied, discussed and validated sufficiently to become official theory.
+
+## Partially Consolidated
+
+Some sections are validated, but the complete module still requires review.
+
+## In Study
+
+The module is currently being studied and tested.
+
+## Pending Validation
+
+A specific point requires instructor, solver or additional source confirmation.
+
+## Not Started
+
+The module has not yet entered the formal study process.
+
+## Deprecated
+
+The module or strategy is no longer recommended but remains stored historically.
+
+---
+
+# Source of Truth
+
+The GitHub repository is the official long-term source of truth.
+
+Chats are used for:
+
+- Study
+- Discussion
+- Exercises
+- Corrections
+- Validation
+
+A concept becomes official only after it is transferred to the Knowledge Base with:
+
+- Scope
+- Status
+- Version
+- Sources
+- Changelog
