@@ -260,3 +260,150 @@ Range de Check:
 - Possui força.
 - Realiza equity.
 - Protege contra exploração.
+
+# Correção do Instrutor — Divisão dos Nut Flush Draws
+
+## Spot
+
+Contexto:
+
+Stack:
+40bb
+
+Spot:
+SRP
+
+Posição:
+OOP
+
+Street:
+Flop
+
+Módulo:
+C-Bet OOP
+
+Board:
+K♦ 4♥ 2♥
+
+Mão:
+A♥7♥
+
+---
+
+# Conceito
+
+Os Nut Flush Draws não devem ser tratados como um grupo único.
+
+A estratégia divide os NFDs conforme a força do Ax.
+
+A ideia é extrair a melhor função de cada grupo:
+
+- Valor de showdown.
+- Bloqueio de flush draws do vilão.
+- Proteção de equity.
+- Fold equity.
+- Capacidade de coolerar draws adversários.
+
+---
+
+# 1) Nut Flush Draws Fortes
+
+Exemplos:
+
+AK  
+AQ  
+AJ  
+AT
+
+Linha:
+
+## Check Call
+
+Motivos:
+
+- Possuem valor de showdown mais robusto.
+- Possuem hot cards.
+- Bloqueiam boa parte dos flush draws do vilão.
+
+Essas mãos não precisam transformar sua força em agressão.
+
+---
+
+# 2) Nut Flush Draws Médios
+
+Exemplos:
+
+A9  
+A8  
+A7  
+A6
+
+Linha:
+
+## Bet
+
+Motivos:
+
+- Protegem contra outs de Ax no turn.
+- Geram fold equity no flop.
+- Geram fold equity no turn.
+- Aproveitam a vulnerabilidade do range adversário.
+
+Exemplo:
+
+A♥7♥
+
+No board K♦4♥2♥:
+
+→ BET
+
+---
+
+# 3) Nut Flush Draws Baixos
+
+Exemplos:
+
+A5  
+A4  
+A3  
+A2
+
+Linha:
+
+## Check Raise
+
+Motivos:
+
+- Possuem menor valor de showdown.
+- Permitem manter mais Flush Draws no range adversário.
+- Conseguem coolerar esses Flush Draws quando acertam.
+- Funcionam melhor como agressão.
+
+---
+
+# Regra Consolidada
+
+Nut Flush Draw não é uma categoria única.
+
+Divisão prática:
+
+## Ax forte:
+XC
+
+## Ax médio:
+BET
+
+## Ax baixo:
+XR
+
+---
+
+# Observação
+
+Uma alternativa seria randomizar todos os Nut Flush Draws com uma frequência média de aproximadamente 33%.
+
+Porém, a divisão por grupos permite uma estratégia mais prática:
+
+- Cada grupo cumpre uma função específica.
+- Facilita execução humana.
+- Mantém a frequência próxima da solução do solver.
