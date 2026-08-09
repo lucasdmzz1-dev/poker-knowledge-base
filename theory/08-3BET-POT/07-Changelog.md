@@ -1,0 +1,160 @@
+# 07-CHANGELOG.md
+
+# 3BET POT — CHANGELOG
+
+
+# OBJETIVO
+
+Registrar a evolução do módulo 3BET POT durante o processo de estudo, revisão e consolidação.
+
+
+Este arquivo deve registrar:
+
+- Alterações realizadas;
+- Correções de entendimento;
+- Novas conclusões;
+- Atualizações após análise de solver;
+- Ajustes de documentação.
+
+
+---
+
+# VERSÃO 1.0
+
+
+## Estrutura inicial criada
+
+
+Adicionado:
+
+
+- Arquitetura do módulo;
+- Separação entre 3BET POT OOP e 3BET POT IP;
+- Separação entre Short Stack e Deep Stack;
+- Estrutura de documentação.
+
+
+---
+
+# VERSÃO 1.1
+
+
+## Consolidação inicial do Guideline
+
+
+Adicionado:
+
+
+- Estratégias de Flop OOP Short Stack;
+- Estratégias de Flop OOP Deep Stack;
+- Estratégias de Turn;
+- Sizes principais;
+- Splits de range.
+
+
+---
+
+# VERSÃO 1.2
+
+
+## Correções de estrutura
+
+
+Alterado:
+
+
+- Separação correta entre IP e OOP;
+- Remoção de mistura entre estratégias;
+- Organização conforme arquitetura da Poker Knowledge Base.
+
+
+---
+
+# VERSÃO 1.3
+
+
+## Revisão de conceitos
+
+
+Adicionado:
+
+
+- Diferenças entre Short Stack e Deep Stack;
+- Importância da posição;
+- Construção de blefes com equidade;
+- Importância de backdoors.
+
+
+---
+
+# VERSÃO ATUAL
+
+
+## Consolidado
+
+
+- Estrutura do módulo definida;
+- Guideline organizado;
+- Arquitetura criada;
+- Regras fundamentais estabelecidas.
+
+
+## Em andamento
+
+
+- Consolidação completa das aulas;
+- Inserção dos exemplos;
+- Validação dos spots no solver;
+- Exercícios finais.
+
+
+---
+
+# HISTÓRICO DE DECISÕES IMPORTANTES
+
+
+## Separação IP x OOP
+
+
+Decisão:
+
+Nunca utilizar estratégia de uma posição em outra.
+
+
+Motivo:
+
+As estratégias possuem objetivos e construções de range diferentes.
+
+
+---
+
+## Separação Short x Deep
+
+
+Decisão:
+
+Manter árvores independentes.
+
+
+Motivo:
+
+SPR altera construção de range, sizing e linhas futuras.
+
+
+---
+
+# FORMATO DE ATUALIZAÇÃO
+
+
+Toda nova alteração deve conter:
+
+
+Data:
+
+Alteração:
+
+Motivo:
+
+Fonte:
+
+Impacto no módulo:
