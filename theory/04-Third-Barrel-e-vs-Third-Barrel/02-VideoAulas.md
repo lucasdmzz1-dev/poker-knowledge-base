@@ -178,6 +178,36 @@ Só então escolhemos quais bluff catchers permanecem.
 
 ---
 
+# Padrões Práticos Observados na Aula
+
+A aula prática trabalhou dez mãos reais (cinco de Third Barrel, cinco de Vs Third Barrel). Os padrões abaixo resumem o que se repetiu em várias delas.
+
+## Construção do Turn quando o board empareia
+
+Ao decidir o range de bet no Turn após um pareamento, sempre reservar uma combinação de Second Pair com Top Kicker para apostar — essa é a mão de força absoluta que justifica o restante do range. Top Pairs fracos (abaixo da "linha do 8" de kicker) preferem check nessa situação, podendo virar Value Bet mais tarde se o River vier seguro e o adversário chegar capado.
+
+## Blefe que "morre" e blefe que continua
+
+Uma mão de blefe sem blockers reais (ex: um par baixo usado no Turn) só volta a fazer sentido como blefe no River quando um draw completa — antes disso, ela não representa nada. Já uma mão com blockers reais (ex: um combo de sequência) segue fazendo sentido blefar mesmo em Rivers sem nenhuma mudança de textura.
+
+## Boards Monotone — cuidado com o range de blefe
+
+Se o range de blefe do Turn for construído só com combos do naipe do flush, não sobra nada para blefar quando o flush completa no River. É necessário manter também blefes off-suit no Turn para preservar opções quando o draw completar.
+
+## Vs Third Barrel — Turn Seco x Turn Dinâmico
+
+No Turn seco (sem mudança relevante de textura), a defesa segue tranquila com Second Pair ou melhor. No Turn dinâmico (o board ganha sequência, conecta ou muda o nuts), o range de call precisa ficar mais restrito — só Top Pair com alguma interação/redraw ou pares com redraw direto continuam; pares sem redraw (mesmo Second Pair) foldam.
+
+## Ranking de bluff-catchers no River
+
+Para decidir quais combos pagam o River: primeiro eliminar mãos que não bloqueiam nada de valor, depois priorizar as que bloqueiam o naipe/estrutura da mão de valor do adversário, e só então considerar remover as que bloqueiam os blefes naturais dele (essas queremos manter no range de call, não remover).
+
+## Regra de posição no call
+
+Duas pontas sem valor de showdown nunca pagam quando fora de posição — a mão não tem função defensável nesse contexto.
+
+---
+
 # Filosofia Final
 
 Toda estratégia de River pode ser resumida em quatro perguntas:
