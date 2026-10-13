@@ -1,0 +1,57 @@
+# Changelog — Multiway Pot
+
+---
+
+# Versão 1.0
+
+## Criação do módulo
+
+Fonte: guideline do instrutor + videoaula prática + transcrição.
+
+Contexto definido:
+
+- Stack: 40bb (base).
+- Spot: 3-way — EP abre, BTN paga, BB paga.
+- Motivador: liberação da função 3-way no GTOWizard + análise de MDA do field.
+
+---
+
+## Conteúdos adicionados
+
+- Diagnóstico dos três erros da estratégia antiga (C-Bet quase-range OOP, Bet-vs-Missed tratado como range, overfold generalizado).
+- Dado de referência: frequência média de C-Bet do field multiway ≈ 35%.
+- Situação 1 (Hero OOP/agressor): Split C-Bet, reação a Bet+Call por textura, sizing de turn (B40 dinâmico / B100 blank).
+- Situação 2 (Hero IP): Split Bet-vs-Missed, reação a C-Bet e Check-Raise, sizing de turn (B70).
+- Situação 3 (Hero BB): ausência de Check-Raise contra agressor que não falou, ausência de Probe Turn quando todos checaram, e o conceito de Lead no Turn (B25) como situação exclusiva do multiway.
+- Tabela de sizing de referência rápida.
+- Nota sobre Lead do Small Blind (identificado, não implementado).
+
+---
+
+## Estrutura KB aplicada
+
+Criados:
+
+- README.
+- Guideline.
+- VideoAulas.
+- Regras Consolidadas.
+- Pendências.
+
+Pendentes (ver 06-Pendencias.md):
+
+- Solver detalhado.
+- Exercícios.
+- Referências formalizadas.
+- Decisões estruturais.
+
+---
+
+# Próximas Atualizações
+
+Adicionar:
+
+- Divisão fina de combos por categoria (próxima etapa anunciada pelo instrutor).
+- Resoluções em efetivos menores (20bb, 15bb).
+- Cobertura de River.
+- Exercícios práticos.

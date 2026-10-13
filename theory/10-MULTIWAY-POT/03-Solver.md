@@ -1,0 +1,30 @@
+# Solver — Multiway Pot
+
+## Módulo 10 — Multiway Pot
+
+---
+
+# Status
+
+Pendente de preenchimento detalhado.
+
+A ferramenta usada para validar este módulo foi o GTOWizard, na função 3-way recém-lançada. Diferente dos softwares multiway anteriores (que davam respostas inconsistentes dependendo da quantidade de mãos simuladas), essa função permite consultar diretamente a solução da biblioteca por efetivo de stack e ação pré-flop.
+
+---
+
+# O que já foi validado por solver (resumo — ver 01-Guideline.md para detalhe)
+
+- Frequência de C-Bet OOP: split, não range.
+- Frequência de Bet-vs-Missed: split, não range.
+- Ausência de Check-Raise do BB contra agressor que ainda não apostou.
+- Ausência de Probe Turn quando o flop foi check-check-check (frequência próxima de zero em praticamente todas as texturas testadas, incluindo boards pareados e boards que pareiam no turn).
+- Existência do Lead no Turn do BB, com B25 como único size identificado (nenhuma interação de B70 encontrada).
+- Possibilidade de Lead do Small Blind em boards low conectados, com frequência baixa.
+
+---
+
+# Pendente
+
+- Frequências exatas por textura específica (A-high, Broadway, Low, Monotone, Pareado).
+- Distribuição completa de combos por bucket.
+- Validação em efetivos de 20bb e abaixo.
