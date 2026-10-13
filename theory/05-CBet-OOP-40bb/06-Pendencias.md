@@ -58,3 +58,16 @@ Possível expansão:
 - SB vs BB.
 
 Mantendo sempre o contexto original.
+
+---
+
+# 6. Second Barrel OOP — completar o turn
+
+O guideline cobre só o range de valor. Falta definir:
+
+- Bluffs no turn.
+- Semi-bluffs (draws que fazem barrel).
+- Composição do range de check no turn.
+- Exercícios mão a mão de turn.
+- Gyazos de Solver do turn.
+- Videoaula (seção ainda sem aula).

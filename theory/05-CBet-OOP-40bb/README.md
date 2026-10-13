@@ -21,7 +21,7 @@ Relação de posições:
 - CO vs BTN
 
 Street:
-Flop
+Flop (C-Bet) e Turn (Second Barrel — só range de valor)
 
 Fonte:
 
@@ -128,6 +128,23 @@ Categorias:
 
 ---
 
+## 5. Second Barrel OOP (Turn)
+
+Spot: C-Bet no flop pago.
+
+Estratégia de valor por textura de turn:
+
+- Blank.
+- Dinâmico, high card seco.
+- High card carregado.
+- Dinâmico, flush.
+
+Detalhes em `01-Guideline.md`, seção Second Barrel OOP.
+
+Bluffs, semi-bluffs e check no turn ainda pendentes.
+
+---
+
 # Resultado Esperado
 
 Ao finalizar o módulo o jogador deve conseguir:
@@ -137,3 +154,4 @@ Ao finalizar o módulo o jogador deve conseguir:
 - Saber quando usar split.
 - Construir bet e check.
 - Entender quais mãos entram em cada parte.
+- Escolher size e range de valor do Second Barrel conforme a textura do turn.

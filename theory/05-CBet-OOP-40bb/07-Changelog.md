@@ -77,6 +77,29 @@ Criados:
 
 ---
 
+# Versão 1.1
+
+Adicionado:
+
+Second Barrel OOP (Turn).
+
+Fonte:
+
+Guideline do instrutor (ainda sem aula).
+
+Conteúdo:
+
+- Estratégia de valor por textura de turn.
+- Sizes: B40, B70, B100.
+- Leitura da lógica de size por largura de range.
+- Consistência com Módulo 10 (Multiway) e Módulo 11 (Value Bet).
+
+Pendente:
+
+- Bluffs, semi-bluffs e check no turn (ver Pendências, item 6).
+
+---
+
 # Próximas atualizações
 
 Adicionar:
