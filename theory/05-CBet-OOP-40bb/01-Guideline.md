@@ -459,3 +459,57 @@ Range de Check:
 - Possui força.
 - Realiza equity.
 - Protege contra exploração.
+
+
+---
+
+# Second Barrel OOP
+
+Fonte: guideline do instrutor (ainda sem aula).
+
+## Contexto
+
+Stack:
+40bb
+
+Spot:
+SRP, Hero agressor OOP, C-Bet no flop e pago.
+
+Street:
+Turn
+
+---
+
+## Estratégia por textura de turn
+
+| Textura do turn | Size | Apostar |
+|---|---|---|
+| Blank | B100 | 2-3 melhores TP ou melhor |
+| Dinâmico, high card seco | B40 | Todos os TP (deixar 1-2 piores no X/C) e os 2 melhores Second Pairs ou melhor |
+| Dinâmico, high card seco, sem querer value de Second Pair | B70 | Todos os TP ou melhor |
+| High card carregado | B100 | 1-2 melhores TP ou melhor |
+| Dinâmico, flush | B40 | 2 melhores TP ou melhor |
+
+---
+
+## Leitura da lógica
+
+Inferência a partir da tabela, não está escrita no guideline.
+
+- O size acompanha a largura do range de valor. B40 inclui Second Pairs (range largo). B70 e B100 aparecem quando o range de valor é só TP ou melhor (range estreito).
+- A mesma textura (dinâmico, high card seco) tem duas versões: B40 se queremos value de Second Pair, B70 se não queremos.
+- Turn de flush é a exceção: o range é estreito (2 melhores TP), mas o size continua B40. Board que completa flush não pede size maior, porque o adversário passa a foldar mãos que deveriam continuar pagando (Regra 3 do módulo 11).
+- Turn blank pede o size mais alto: sem mudança no que o vilão chega jogando, o top pair dele paga qualquer size (Regra 4 do módulo 11).
+
+---
+
+## Consistência com outros módulos
+
+- Módulo 10, Multiway, situação 1: turn blank em B100 com os 3 melhores TP ou melhor, e dinâmico em B40 com Second Pairs fortes ou melhor. Os números batem.
+- Módulo 11, Value Bet: a lógica de size por largura de range é a Regra 2.
+
+---
+
+## Em aberto
+
+O guideline cobre só o range de valor. Bluffs, semi-bluffs e a composição do check no turn ainda não estão definidos (ver Pendências).
