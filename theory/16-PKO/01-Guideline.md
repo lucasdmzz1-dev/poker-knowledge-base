@@ -202,9 +202,13 @@ Siglas:
 
 **Por quê:** na regra v2, 40 de 50 mãos foram PERFEITO, e os 4 pagamentos marginais errados da v1 caíram para 2 (T8s e J7s).
 
+**[Trainer] v3:** em mais 100 mãos, 79 foram PERFEITO e 7 QUASE (86%). As marginais ficaram em 81% e o núcleo em 93%. Os erros foram nos dois sentidos: 5 folds que deviam ser call (Kx e Qx suited baixos em nós largos, com field alto e stacks parecidos) e 4 calls que deviam ser fold. O EV perdido foi pequeno (de 0,01 a 0,17bb por erro).
+
 ## Regra 15 — Stack curto: raise e all-in **[Pendente]**
 
-**Faça (a testar):** hero com 25bb ou menos, ou opener com 25bb ou menos coberto pelo hero: troque "pagar" por raise ou all-in.
+**Faça (a testar):** hero com 25bb ou menos: troque "pagar" por raise ou all-in nos premium e nos pares médios. Nenhuma mão assim apareceu na v3.
+
+**Não usar:** o shove com blockers (A5o a A2o) contra opener curto e coberto. Foi testado em 2 mãos e errou nas duas (A5o contra CO de 16bb: o certo era fold; A3o contra CO de 15bb: o certo era call).
 
 - Premium (AQs, AKs, QQ e acima): raise.
 - Blockers (A2o) contra opener curto e coberto: all-in.
@@ -229,5 +233,7 @@ Siglas:
 
 - A regra foi testada só em BTN contra **um open**, no Early e Mid (de ~13% a 95% do field). Não vale para outras posições, contra 3bet, squeeze, mesa final ou bolha de verdade.
 - Entre árvores, os fatores explicam só ~25% do call. O que é confiável é a **ordem de entrada** e o sentido dos efeitos (dentro de uma árvore), e não os números exatos.
+- Nas 170 mãos testadas (v1, v2 e v3) o modo era **Close Decisions** nas sessões 1 e 2 (a da sessão 3 não foi confirmada).
+- Os testes no Trainer foram no modo **Close Decisions** (decisões próximas), com muitas mãos marginais. O placar (84% de precisão e −0,80bb de EV perdido em 70 mãos) não é comparável com o de um modo comum.
 - A amostra: 52 árvores, 203 nós e 70 mãos. As diferenças de poucos pontos podem ser sorte.
 - Ver `06-Pendencias.md`.

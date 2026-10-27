@@ -41,6 +41,18 @@ Criados:
 
 ---
 
+# Versão 1.1
+
+Registro das mãos ampliado: `pko-maos-jogadas.csv` passa a ter 41 colunas (torneio, mesa, RP, nó do solver) e ganhou o `pko-maos-dicionario.md`. Registrada a configuração dos testes (Facing RFI, RNG OFF, Close Decisions) e o resumo do Trainer (70 mãos, 84% de precisão, −0,80bb de EV perdido).
+
+---
+
+# Versão 1.2
+
+Sessão 3 do Trainer: 100 mãos com a regra v3 (79 PERFEITO, 7 QUASE, 1 IMPRECISO, 3 ERRO e 10 BLUNDER; precisão de 86% e EV perdido de 0,73bb). O shove com blockers foi descartado (errou 2 em 2). As regras de stack curto seguem sem teste (nenhuma mão apareceu). Registrado o cenário completo mão a mão (42 colunas no CSV). Hipóteses para a v3.1 em `regras-vivas-pko-btn.md`.
+
+---
+
 # Próximas Atualizações
 
 Adicionar:

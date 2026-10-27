@@ -16,7 +16,7 @@ Tabela do valor do KO por fase, Help Value, fórmula do dead money, notas de ICM
 
 Árvores do HRC de PKO 50%, lidas pelo Chrome conectado, e mãos jogadas com a correção do solver.
 
-Arquivos de apoio (fora do módulo): `pko-conhecimento.md`, `pko-solver-playbook.md`, `regras-vivas-pko-btn.md` e `pko-maos-jogadas.csv`.
+Arquivos de apoio (fora do módulo, na pasta `tools/pko/` do repositório): `pko-conhecimento.md`, `pko-solver-playbook.md`, `regras-vivas-pko-btn.md`, `pko-maos-dicionario.md` e `pko-maos-jogadas.csv`.
 
 ---
 

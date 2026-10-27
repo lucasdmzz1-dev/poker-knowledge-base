@@ -91,4 +91,4 @@ Ao finalizar este módulo o jogador deve conseguir:
 
 # Status
 
-Módulo estruturado (v1.0). A regra foi testada em 70 mãos no Trainer (v2: 80% de acertos perfeitos em 50 mãos). Ainda não vale para outras posições, stack curto, bolha, mesa final ou contra 3bet. Ver 06-Pendencias.md.
+Módulo estruturado (v1.2). A regra foi testada em 170 mãos no Trainer (v2: 80% de acertos perfeitos em 50 mãos; v3: 79% em 100 mãos, 86% contando os quase perfeitos). Ainda não vale para outras posições, stack curto, bolha, mesa final ou contra 3bet. Ver 06-Pendencias.md.

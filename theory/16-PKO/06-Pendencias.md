@@ -12,7 +12,7 @@ Registrar pontos que precisam de complemento futuro.
 
 # 1. Stack curto (hero ou opener com 25bb ou menos)
 
-A regra de raise e all-in no lugar de call (Regra 15) não foi testada. Os erros da v2 em A2o, AQs e 66 apontam para ela.
+A regra de raise e all-in no lugar de call (Regra 15) segue sem teste: na v3 nenhuma mão com hero de 25bb ou menos e premium ou par médio apareceu. O shove com blockers foi testado e errou (2 em 2).
 
 ---
 
@@ -54,7 +54,19 @@ Hoje o registro vai ao arquivo `pko-maos-jogadas.csv` ao fim de cada sessão. Fa
 
 ---
 
-# 8. Atualizações futuras
+# 8. Nós largos (Early, stacks parecidos)
+
+Na v3, 5 folds de Kx e Qx suited baixos deviam ser call (field alto, hero e opener com stacks parecidos). Testar não apertar nesses nós.
+
+---
+
+# 9. Premium contra opener fundo ou curto
+
+QQ contra opener de 214bb pede raise; AA contra opener de 14bb pede call. Confirmar com mais mãos.
+
+---
+
+# 10. Atualizações futuras
 
 Quando houver novas mãos ou árvores, atualizar:
 
