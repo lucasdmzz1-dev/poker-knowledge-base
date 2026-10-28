@@ -87,6 +87,22 @@ Adicionado:
 
 ---
 
+# VERSÃO 1.4
+
+
+Data: 28/10/2026
+
+Alteração: ordem de prioridade das fontes padronizada na ordem geral do `theory/CLAUDE.md`.
+
+Motivo: a ordem do módulo estava invertida (correções por último).
+
+Fonte: decisão do autor do KB.
+
+Impacto no módulo: `08-Referencias.md` e `09-Decisoes.md` atualizados; divergência 01 das Pendências resolvida. Nenhuma regra de estratégia mudou.
+
+
+---
+
 # VERSÃO ATUAL
 
 

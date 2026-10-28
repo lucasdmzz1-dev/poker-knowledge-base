@@ -53,6 +53,12 @@ Sessão 3 do Trainer: 100 mãos com a regra v3 (79 PERFEITO, 7 QUASE, 1 IMPRECIS
 
 ---
 
+# Versão 1.3
+
+Ordem de prioridade das fontes padronizada na ordem geral do `theory/CLAUDE.md` (decisão do autor do KB, 28/10/2026). `08-Referencias.md` e `09-Decisoes.md` atualizados, e a pendência correspondente resolvida. Nenhuma regra de estratégia mudou.
+
+---
+
 # Próximas Atualizações
 
 Adicionar:

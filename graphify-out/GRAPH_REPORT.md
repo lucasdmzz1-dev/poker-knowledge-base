@@ -1,17 +1,17 @@
 # Graph Report - poker-knowledge-base  (2026-10-28)
 
 ## Corpus Check
-- 200 files · ~146,561 words
+- 206 files · ~179,335 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 3 file(s) not represented in the graph (top: .csv 2, (none) 1)
 
 ## Summary
-- 1006 nodes · 1845 edges · 51 communities (34 shown, 17 thin omitted)
-- Extraction: 80% EXTRACTED · 20% INFERRED · 0% AMBIGUOUS · INFERRED: 370 edges (avg confidence: 0.87)
+- 1004 nodes · 1842 edges · 51 communities (34 shown, 17 thin omitted)
+- Extraction: 80% EXTRACTED · 20% INFERRED · 0% AMBIGUOUS · INFERRED: 368 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `21396d14`
+- Built from commit: `504ac37b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -136,7 +136,7 @@ Nodes (30): Changelog – C-Bet IP 40bb, Versão 1.0 (05/08/2026) – C-Bet IP 4
 
 ### Community 5 - "Bet Check Bet e Value Bet"
 Cohesion: 0.06
-Nodes (32): Solver BCB: validar frequência, sizes e composição dos ranges, Alvo do Bluff (qual parte do range adversário fazer foldar), Blockers dependem do alvo do bluff, Exercício 01 — A♣9♠ em T-7-3-3-Q (High Card, CHECK), Exercício 02 — K♠3♠ com Ás no river (Dinâmico Ax, CHECK), Exercício 03 — J♣T♣ em 9♦5♦T♣K♠4♦ (Dinâmico Flush, BET B70), Exercício 04 — K♦9♦ em Q-2-5-6-T (Blank, BET B70 BLUFF), Exercício 05 — 8♥8♣ em 6♣A♠K♠2♦A♦ (Dobra, BET B70 VALUE) (+24 more)
+Nodes (33): Solver BCB: validar frequência, sizes e composição dos ranges, Alvo do Bluff (qual parte do range adversário fazer foldar), Blockers dependem do alvo do bluff, Exercício 01 — A♣9♠ em T-7-3-3-Q (High Card, CHECK), Exercício 02 — K♠3♠ com Ás no river (Dinâmico Ax, CHECK), Exercício 03 — J♣T♣ em 9♦5♦T♣K♠4♦ (Dinâmico Flush, BET B70), Exercício 04 — K♦9♦ em Q-2-5-6-T (Blank, BET B70 BLUFF), Exercício 05 — 8♥8♣ em 6♣A♠K♠2♦A♦ (Dobra, BET B70 VALUE) (+25 more)
 
 ### Community 6 - "PKO BTN vs Open"
 Cohesion: 0.07
@@ -160,7 +160,7 @@ Nodes (36): Regra 1 — C-Bet OOP é Construção de Range, Blockers na Parte Of
 
 ### Community 11 - "Multiway Pot"
 Cohesion: 0.10
-Nodes (26): Ranges Capados (agressor e defensor no river), Estratégia antiga baseada em exploits (C-Bet quase-range OOP, Bet-vs-Missed range, overfold), Frequência média de C-Bet do field multiway ≈ 35%, Guideline Multiway Pot, Lead no Turn do BB (B25, exclusivo do multiway), Lead do Small Blind em boards low conectados (estudo futuro), Situação 1 — Hero OOP (agressor pré-flop), Situação 2 — Hero IP (paga o EP, BB também paga) (+18 more)
+Nodes (25): Estratégia antiga baseada em exploits (C-Bet quase-range OOP, Bet-vs-Missed range, overfold), Frequência média de C-Bet do field multiway ≈ 35%, Guideline Multiway Pot, Lead no Turn do BB (B25, exclusivo do multiway), Lead do Small Blind em boards low conectados (estudo futuro), Situação 1 — Hero OOP (agressor pré-flop), Situação 2 — Hero IP (paga o EP, BB também paga), Situação 3 — Hero BB (+17 more)
 
 ### Community 12 - "Value Bet (regras)"
 Cohesion: 0.10
@@ -171,8 +171,8 @@ Cohesion: 0.10
 Nodes (31): ChipEV do LJ e coluna do 8, 9 e 10 — a confirmar, Pendências – ICM e Risk Premium, 27 exercícios de conceito (ICM), Módulo 12 (Reta Final), PKO e bounty (RP negativo) — pendente, Short stack na bolha — pendente, Changelog — ICM e Risk Premium, Referências — ICM e Risk Premium (+23 more)
 
 ### Community 14 - "Bet vs Missed (meta)"
-Cohesion: 0.08
-Nodes (20): Aulas futuras: blind war e c-bet em posição, Método best of best (multiway), Pendências – Bet vs Missed C-Bet, Changelog — Bet vs Missed C-Bet, Guideline em imagem do instrutor (segunda versão), Referências — Bet vs Missed C-Bet, Decisões – Bet vs Missed C-Bet, Glossário (thin value, TS top set, 2P, 3P) (+12 more)
+Cohesion: 0.09
+Nodes (18): Aulas futuras: blind war e c-bet em posição, Método best of best (multiway), Pendências – Bet vs Missed C-Bet, Changelog — Bet vs Missed C-Bet, Guideline em imagem do instrutor (segunda versão), Referências — Bet vs Missed C-Bet, Decisões – Bet vs Missed C-Bet, Glossário (thin value, TS top set, 2P, 3P) (+10 more)
 
 ### Community 15 - "C-Bet IP Short (boards)"
 Cohesion: 0.14
@@ -271,7 +271,7 @@ Nodes (6): Notas técnicas (Chrome conectado), O que existe, Pendências, Prefer
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Guideline — Bet vs Missed C-Bet` connect `Bet vs Missed (regras)` to `Probe Turn`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `Guideline — Probe Turn` (e.g. with `Módulo 05 (C-Bet OOP 40bb)` and `Módulos 03 e 09 (Second Barrel IP e Bet-Check-Bet)`) actually correct?**
   _`Guideline — Probe Turn` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Onde cada mão vai (bet/XC/XR/check)`, `Apostar por bluff: equity direta (duas pontas, FDs, melhores brocas)`, `Quando o vilão aposta (B25, B33-70, overbet)` to the rest of the system?**

@@ -38,12 +38,24 @@ Cruzamento com os módulos 02, 03 e 04 (C-Bet IP, Second Barrel IP e Third Barre
 
 # Ordem de prioridade
 
-Em caso de conflito:
+Ordem geral do KB (`theory/CLAUDE.md`, padronizada em 28/10/2026):
 
 1. Esclarecimentos do autor do KB.
-2. Guideline em imagem do instrutor.
-3. Aula (fala do instrutor).
-4. Exercícios.
+2. Correção do instrutor.
+3. Solver.
+4. Videoaula.
+5. Guideline.
+6. Exercícios.
+
+Como as fontes deste módulo entram nela:
+
+- Autor do KB: esclarecimentos.
+- Correção do instrutor: o coach mandou seguir 100% o guideline em imagem. Por isso, neste módulo, a imagem vale mais que a fala (Decisão 3, mantida), mesmo com o guideline abaixo da videoaula na ordem geral.
+- Solver: a aula não mostra solver.
+- Videoaula: aula (transcrição e SRT) e replayer.
+- Guideline: guideline em imagem do instrutor (segunda versão).
+- Exercícios: os 34 exercícios.
+
 
 ---
 

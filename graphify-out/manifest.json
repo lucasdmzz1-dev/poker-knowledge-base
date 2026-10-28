@@ -486,28 +486,28 @@
     "semantic_hash": "a4270ffa0aea59669402922a196cd0ed"
   },
   "theory/08-3BET-POT/06-Pendencias.md": {
-    "mtime": 1793199702.5873353,
-    "seen": 1793199742.1895916,
-    "ast_hash": "cbcee5f02caecf8fd90cbfe4e8565776",
-    "semantic_hash": "cbcee5f02caecf8fd90cbfe4e8565776"
+    "mtime": 1793199835.0033321,
+    "seen": 1793199843.5041893,
+    "ast_hash": "3709377ec0d12f99a439fd39ba864ffa",
+    "semantic_hash": ""
   },
   "theory/08-3BET-POT/07-Changelog.md": {
-    "mtime": 1793199702.5873353,
-    "seen": 1793199742.1895928,
-    "ast_hash": "1ccfd73fd8e2ea1a21ad869e9805977e",
-    "semantic_hash": "1ccfd73fd8e2ea1a21ad869e9805977e"
+    "mtime": 1793199835.0033321,
+    "seen": 1793199843.504191,
+    "ast_hash": "a35e79bfc0f64d0dd63331678f1f8370",
+    "semantic_hash": ""
   },
   "theory/08-3BET-POT/08-Referencias.md": {
-    "mtime": 1793199702.5873353,
-    "seen": 1793199742.189594,
-    "ast_hash": "1fa753042e3b3ae8a45344b89a422023",
-    "semantic_hash": "1fa753042e3b3ae8a45344b89a422023"
+    "mtime": 1793199835.0033321,
+    "seen": 1793199843.5041924,
+    "ast_hash": "a570d0ae4250fe2ac08ff295bd6024b3",
+    "semantic_hash": ""
   },
   "theory/08-3BET-POT/09-Decisoes.md": {
-    "mtime": 1793199702.5873353,
-    "seen": 1793199742.1895955,
-    "ast_hash": "0376f5f8d5432a046527537d13c9c666",
-    "semantic_hash": "0376f5f8d5432a046527537d13c9c666"
+    "mtime": 1793199835.0033321,
+    "seen": 1793199843.5041938,
+    "ast_hash": "0919177dc365a216cd113187cde25387",
+    "semantic_hash": ""
   },
   "theory/08-3BET-POT/README.md": {
     "mtime": 1793196022.218226,
@@ -546,10 +546,10 @@
     "semantic_hash": "e9f4a32f654fc3f39dcd188124e4af69"
   },
   "theory/09-BET-CHECK-BET/06-Pendencias.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896052,
-    "ast_hash": "5af79620a0bc013c740e6f59299a0ee0",
-    "semantic_hash": "5af79620a0bc013c740e6f59299a0ee0"
+    "mtime": 1793199835.0033321,
+    "seen": 1793199843.5042045,
+    "ast_hash": "e909d24e13b758d11cfabf51f9268627",
+    "semantic_hash": ""
   },
   "theory/09-BET-CHECK-BET/07-Changelog.md": {
     "mtime": 1793196022.2186005,
@@ -606,28 +606,28 @@
     "semantic_hash": "2bb453c1babfd0bd968ac15c971a5b2f"
   },
   "theory/10-MULTIWAY-POT/06-Pendencias.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896186,
-    "ast_hash": "eced2aef851bf606f0cd3e19173d643e",
-    "semantic_hash": "eced2aef851bf606f0cd3e19173d643e"
+    "mtime": 1793199835.007332,
+    "seen": 1793199843.504221,
+    "ast_hash": "17e77daa03d7d802997872e876ffe2ca",
+    "semantic_hash": ""
   },
   "theory/10-MULTIWAY-POT/07-Changelog.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.18962,
-    "ast_hash": "8d5c60ee11ec0a6480c59eca8bc8ef5b",
-    "semantic_hash": "8d5c60ee11ec0a6480c59eca8bc8ef5b"
+    "mtime": 1793199835.007332,
+    "seen": 1793199843.5042224,
+    "ast_hash": "89a42dedb54b7d19189920b1d703d5d8",
+    "semantic_hash": ""
   },
   "theory/10-MULTIWAY-POT/08-Referencias.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896212,
-    "ast_hash": "9a5a96857f7a3bdd2976ef731f450144",
-    "semantic_hash": "9a5a96857f7a3bdd2976ef731f450144"
+    "mtime": 1793199835.007332,
+    "seen": 1793199843.504224,
+    "ast_hash": "518521aa35a8b06110a06276817ae102",
+    "semantic_hash": ""
   },
   "theory/10-MULTIWAY-POT/09-Decisoes.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896226,
-    "ast_hash": "091609cd4362688d61df8620201addd8",
-    "semantic_hash": "091609cd4362688d61df8620201addd8"
+    "mtime": 1793199835.007332,
+    "seen": 1793199843.504225,
+    "ast_hash": "4b9bf0a458cd76a3225ebfead4ee2614",
+    "semantic_hash": ""
   },
   "theory/10-MULTIWAY-POT/README.md": {
     "mtime": 1793196022.2189786,
@@ -726,28 +726,28 @@
     "semantic_hash": "834fd981f368238beb22e959f76dc76e"
   },
   "theory/12-RETA-FINAL/06-Pendencias.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896436,
-    "ast_hash": "788a716ba35a0a413269a834019f9639",
-    "semantic_hash": "788a716ba35a0a413269a834019f9639"
+    "mtime": 1793199835.007332,
+    "seen": 1793199843.5042515,
+    "ast_hash": "e9a83c83e2fe6da6b6a19eca364274af",
+    "semantic_hash": ""
   },
   "theory/12-RETA-FINAL/07-Changelog.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896448,
-    "ast_hash": "5832a8ca7b678a29d2590afa4eb790dd",
-    "semantic_hash": "5832a8ca7b678a29d2590afa4eb790dd"
+    "mtime": 1793199835.007332,
+    "seen": 1793199843.5042527,
+    "ast_hash": "c0f1fd494e3324671cdbc2950837c652",
+    "semantic_hash": ""
   },
   "theory/12-RETA-FINAL/08-Referencias.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.189646,
-    "ast_hash": "e747bdb65794b38ac9bc74109aa6534f",
-    "semantic_hash": "e747bdb65794b38ac9bc74109aa6534f"
+    "mtime": 1793199835.007332,
+    "seen": 1793199843.504254,
+    "ast_hash": "ce6e5f64e090cb9dfbcf4e9cf0c118f0",
+    "semantic_hash": ""
   },
   "theory/12-RETA-FINAL/09-Decisoes.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896474,
-    "ast_hash": "bee0815b337df9b9a1047fd4ae1d9647",
-    "semantic_hash": "bee0815b337df9b9a1047fd4ae1d9647"
+    "mtime": 1793199835.007332,
+    "seen": 1793199843.5042555,
+    "ast_hash": "d2d95fe098ccbfa3d55e0805d5f1a3a5",
+    "semantic_hash": ""
   },
   "theory/12-RETA-FINAL/README.md": {
     "mtime": 1793196022.2201524,
@@ -792,28 +792,28 @@
     "semantic_hash": "597f081542a4408621db3192575171b8"
   },
   "theory/13-ICM/06-Pendencias.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896577,
-    "ast_hash": "bfed59967f9038be88a3fca6d4b36c05",
-    "semantic_hash": "bfed59967f9038be88a3fca6d4b36c05"
+    "mtime": 1793199835.0128622,
+    "seen": 1793199843.5042675,
+    "ast_hash": "d9e52b24479fc6cc9986376d57230d02",
+    "semantic_hash": ""
   },
   "theory/13-ICM/07-Changelog.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896586,
-    "ast_hash": "3ba0d538881a8a2ed404a134d38d874f",
-    "semantic_hash": "3ba0d538881a8a2ed404a134d38d874f"
+    "mtime": 1793199835.0128622,
+    "seen": 1793199843.5042686,
+    "ast_hash": "5950ded7eb1443df837959addc153f2b",
+    "semantic_hash": ""
   },
   "theory/13-ICM/08-Referencias.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.18966,
-    "ast_hash": "f179e5b14278a87499cb51ba3d320b67",
-    "semantic_hash": "f179e5b14278a87499cb51ba3d320b67"
+    "mtime": 1793199835.0128622,
+    "seen": 1793199843.50427,
+    "ast_hash": "9af542666b3005e2ca66ab772d416fec",
+    "semantic_hash": ""
   },
   "theory/13-ICM/09-Decisoes.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896615,
-    "ast_hash": "5d35bdd85a07b9fdd18ea0cbebe5c309",
-    "semantic_hash": "5d35bdd85a07b9fdd18ea0cbebe5c309"
+    "mtime": 1793199835.0128622,
+    "seen": 1793199843.504272,
+    "ast_hash": "9e44023bfdbc91a19e891561a0e046e8",
+    "semantic_hash": ""
   },
   "theory/13-ICM/README.md": {
     "mtime": 1793196022.2210326,
@@ -852,28 +852,28 @@
     "semantic_hash": "d6ec15752ba26727721ac7d16683aed4"
   },
   "theory/14-Probe-Turn/06-Pendencias.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896706,
-    "ast_hash": "2bfe89fbf6902cb82c90b8be07ba3718",
-    "semantic_hash": "2bfe89fbf6902cb82c90b8be07ba3718"
+    "mtime": 1793199835.0128622,
+    "seen": 1793199843.5042827,
+    "ast_hash": "ba6ed7dd1cda265dc6cb2461ee3300f7",
+    "semantic_hash": ""
   },
   "theory/14-Probe-Turn/07-Changelog.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896722,
-    "ast_hash": "838dd189f3dbe13a28448598ff815316",
-    "semantic_hash": "838dd189f3dbe13a28448598ff815316"
+    "mtime": 1793199835.0128622,
+    "seen": 1793199843.5042841,
+    "ast_hash": "4aab876557286c61343b19e88fdc864e",
+    "semantic_hash": ""
   },
   "theory/14-Probe-Turn/08-Referencias.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896734,
-    "ast_hash": "6e37a763b2322660f5bf3836c00a422f",
-    "semantic_hash": "6e37a763b2322660f5bf3836c00a422f"
+    "mtime": 1793199835.0128622,
+    "seen": 1793199843.5042858,
+    "ast_hash": "6f0aca390b2c95febcf9fb9f58ce80af",
+    "semantic_hash": ""
   },
   "theory/14-Probe-Turn/09-Decisoes.md": {
-    "mtime": 1793199702.5913353,
-    "seen": 1793199742.1896749,
-    "ast_hash": "7eb0b1ca2024f106c603f897210e7027",
-    "semantic_hash": "7eb0b1ca2024f106c603f897210e7027"
+    "mtime": 1793199835.0164473,
+    "seen": 1793199843.504287,
+    "ast_hash": "b86b0626d3c0e2b57e54745921190395",
+    "semantic_hash": ""
   },
   "theory/14-Probe-Turn/10-Como-Jogar.md": {
     "mtime": 1793196022.2224236,
@@ -924,28 +924,28 @@
     "semantic_hash": "ae08a4c2a20c4cad442a58918d4e4a64"
   },
   "theory/15-Bet-vs-Missed/06-Pendencias.md": {
-    "mtime": 1793199702.5953352,
-    "seen": 1793199742.189686,
-    "ast_hash": "49d1206115f3c7c0bb3c44864e210d5e",
-    "semantic_hash": "49d1206115f3c7c0bb3c44864e210d5e"
+    "mtime": 1793199835.0164473,
+    "seen": 1793199843.5042999,
+    "ast_hash": "ea96080beb1bb80e12690d0df962b20e",
+    "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/07-Changelog.md": {
-    "mtime": 1793199702.5969071,
-    "seen": 1793199742.1896873,
-    "ast_hash": "674cb49711867109adef53ddf8eedc96",
-    "semantic_hash": "674cb49711867109adef53ddf8eedc96"
+    "mtime": 1793199835.0164473,
+    "seen": 1793199843.504301,
+    "ast_hash": "274b3a33c8c82a55b2bc3e4fdf0d91e6",
+    "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/08-Referencias.md": {
-    "mtime": 1793199702.5969071,
-    "seen": 1793199742.1896887,
-    "ast_hash": "62dadeebf1a6b820711bfa326da0d4cf",
-    "semantic_hash": "62dadeebf1a6b820711bfa326da0d4cf"
+    "mtime": 1793199835.0183606,
+    "seen": 1793199843.5043023,
+    "ast_hash": "f20c796806143463503ff824696f9cef",
+    "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/09-Decisoes.md": {
-    "mtime": 1793199702.5969071,
-    "seen": 1793199742.1896896,
-    "ast_hash": "977c8a1461b64c8598c7d0c9e518f281",
-    "semantic_hash": "977c8a1461b64c8598c7d0c9e518f281"
+    "mtime": 1793199835.0183606,
+    "seen": 1793199843.504304,
+    "ast_hash": "779ede816a1f2a7f2d64f3f565ebf9cf",
+    "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/README.md": {
     "mtime": 1793196022.239771,
@@ -984,28 +984,28 @@
     "semantic_hash": "5c5626cf63557010cd702c7e586f5547"
   },
   "theory/16-PKO/06-Pendencias.md": {
-    "mtime": 1793199702.5969071,
-    "seen": 1793199742.1896985,
-    "ast_hash": "4d6f8964df37eadc7d6d3bf62fd1f742",
-    "semantic_hash": "4d6f8964df37eadc7d6d3bf62fd1f742"
+    "mtime": 1793199835.0183606,
+    "seen": 1793199843.504314,
+    "ast_hash": "4ce737153fd160e93cfb722c665b91f4",
+    "semantic_hash": ""
   },
   "theory/16-PKO/07-Changelog.md": {
-    "mtime": 1793199702.5969071,
-    "seen": 1793199742.1897,
-    "ast_hash": "155f450cab4fbe35e02e5bb17ba6c6af",
-    "semantic_hash": "155f450cab4fbe35e02e5bb17ba6c6af"
+    "mtime": 1793199835.0183606,
+    "seen": 1793199843.5043151,
+    "ast_hash": "52d4eec18bb066bf5a05c33e69678c45",
+    "semantic_hash": ""
   },
   "theory/16-PKO/08-Referencias.md": {
-    "mtime": 1793199702.5969071,
-    "seen": 1793199742.1897013,
-    "ast_hash": "a83c1300501549afaeabdbd58e541cea",
-    "semantic_hash": "a83c1300501549afaeabdbd58e541cea"
+    "mtime": 1793199835.020401,
+    "seen": 1793199843.5043166,
+    "ast_hash": "01dc0dcf8ada479f821d2b69e2e54a2b",
+    "semantic_hash": ""
   },
   "theory/16-PKO/09-Decisoes.md": {
-    "mtime": 1793199702.5969071,
-    "seen": 1793199742.1897027,
-    "ast_hash": "bcf6148e194529d5d2dfe0da33f3216f",
-    "semantic_hash": "bcf6148e194529d5d2dfe0da33f3216f"
+    "mtime": 1793199835.020401,
+    "seen": 1793199843.504318,
+    "ast_hash": "00522883fb63126ad89c4eb926a21797",
+    "semantic_hash": ""
   },
   "theory/16-PKO/CLAUDE.md": {
     "mtime": 1793196022.2406733,
@@ -1044,16 +1044,10 @@
     "semantic_hash": "5bf9a276cb3a170c597bb4c3a40cdc9e"
   },
   "theory/CLAUDE.md": {
-    "mtime": 1793199739.8847694,
-    "seen": 1793199742.189712,
-    "ast_hash": "ea4ad75c8289a9c5ecf75ac0bca81082",
+    "mtime": 1793199837.460291,
+    "seen": 1793199843.5043283,
+    "ast_hash": "879039e0f58814a1981a2b8e51d02276",
     "semantic_hash": ""
-  },
-  "theory/CLAUDE_1.md": {
-    "mtime": 1793199702.5969071,
-    "seen": 1793199742.1897137,
-    "ast_hash": "317743620a30b163b13c5f125157211f",
-    "semantic_hash": "317743620a30b163b13c5f125157211f"
   },
   "theory/README.md": {
     "mtime": 1793196022.2423015,
@@ -1140,8 +1134,8 @@
     "semantic_hash": ""
   },
   "theory/MAPA-PRE-POS.md": {
-    "mtime": 1793199739.8838658,
-    "seen": 1793199742.1897151,
+    "mtime": 1793199837.460291,
+    "seen": 1793199843.5043294,
     "ast_hash": "4f83bb0d544e5116f8a57f88a264959d",
     "semantic_hash": ""
   },
@@ -1206,8 +1200,8 @@
     "semantic_hash": ""
   },
   "theory/retomada-main-teoria.md": {
-    "mtime": 1793199725.8193347,
-    "seen": 1793199742.1897295,
+    "mtime": 1793199837.460291,
+    "seen": 1793199843.5043468,
     "ast_hash": "c5712cfe866183c42465d2294e385198",
     "semantic_hash": ""
   },
@@ -1215,6 +1209,78 @@
     "mtime": 1793196022.243397,
     "seen": 1793199742.189738,
     "ast_hash": "720960baecc92eec91467d0e3750a7d1",
+    "semantic_hash": ""
+  },
+  "coaching/stats/dados/errors.json": {
+    "mtime": 1793199834.9913323,
+    "seen": 1793199843.5039456,
+    "ast_hash": "208fced642f9f43c6f26683410c0b3af",
+    "semantic_hash": ""
+  },
+  "coaching/stats/dados/hands.json": {
+    "mtime": 1793199834.9930613,
+    "seen": 1793199843.5039504,
+    "ast_hash": "be6a5043cb53031658c9f46c2fa5dc59",
+    "semantic_hash": ""
+  },
+  "coaching/stats/dados/pko_btn_vs_co_7067.json": {
+    "mtime": 1793199834.9930613,
+    "seen": 1793199843.5039532,
+    "ast_hash": "0b12867201f88b05abcdba02a9ddb503",
+    "semantic_hash": ""
+  },
+  "coaching/stats/dados/pko_btn_vs_co_early50_48bb.json": {
+    "mtime": 1793199834.9930613,
+    "seen": 1793199843.5039551,
+    "ast_hash": "daf8677e8d33cefcaa3b6aefce5d0b38",
+    "semantic_hash": ""
+  },
+  "coaching/stats/dados/positions.json": {
+    "mtime": 1793199834.9930613,
+    "seen": 1793199843.503957,
+    "ast_hash": "b505f3c8c534e44231c8f3d92d2df003",
+    "semantic_hash": ""
+  },
+  "coaching/stats/dados/takeaways.json": {
+    "mtime": 1793199834.9930613,
+    "seen": 1793199843.5039587,
+    "ast_hash": "bdbd3b4d8c15ede31d8d02b6babe7fa6",
+    "semantic_hash": ""
+  },
+  "coaching/stats/dados/toplist.json": {
+    "mtime": 1793199834.9930613,
+    "seen": 1793199843.5039601,
+    "ast_hash": "852a10c239ea2c6afd78f957ab713de9",
+    "semantic_hash": ""
+  },
+  "coaching/stats/cheat-btn-vs-co.html": {
+    "mtime": 1793199834.9913323,
+    "seen": 1793199843.5039804,
+    "ast_hash": "982a1d16226a680702f2994060b7e1d7",
+    "semantic_hash": ""
+  },
+  "coaching/stats/leak-tracker.html": {
+    "mtime": 1793199834.9930613,
+    "seen": 1793199843.503982,
+    "ast_hash": "c2a2c3acb32da7ef33de98e4311d4711",
+    "semantic_hash": ""
+  },
+  "coaching/stats/painel-evolucao-com-prints.html": {
+    "mtime": 1793199834.9930613,
+    "seen": 1793199843.503984,
+    "ast_hash": "bf5936849cd76b4b78462cf238d3b42b",
+    "semantic_hash": ""
+  },
+  "coaching/stats/painel-evolucao-s2-backup.html": {
+    "mtime": 1793199834.9930613,
+    "seen": 1793199843.5039856,
+    "ast_hash": "9b9172887bec72c749edf900d6dee4c7",
+    "semantic_hash": ""
+  },
+  "coaching/stats/painel-evolucao.html": {
+    "mtime": 1793199834.9930613,
+    "seen": 1793199843.5039873,
+    "ast_hash": "c321b5fb2f5bee8647d7e93039c813bc",
     "semantic_hash": ""
   }
 }

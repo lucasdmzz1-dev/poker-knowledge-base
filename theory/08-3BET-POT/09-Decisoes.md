@@ -217,6 +217,31 @@ Evitar decisões baseadas apenas no board ou na força absoluta da mão.
 
 ---
 
+# 07 — ORDEM DE PRIORIDADE DAS FONTES
+
+
+## Data
+
+28/10/2026
+
+
+## Decisão
+
+Seguir a ordem geral do KB (`theory/CLAUDE.md`): esclarecimento do autor do KB, correção do instrutor, solver, videoaulas e transcrições, guideline, exercícios.
+
+
+## Motivo
+
+A ordem antiga do módulo estava invertida (guideline primeiro e correções por último). Decisão do autor do KB.
+
+
+## Impacto no módulo
+
+`08-Referencias.md` atualizado. Divergência 01 de `06-Pendencias.md` resolvida.
+
+
+---
+
 # DECISÕES FUTURAS
 
 

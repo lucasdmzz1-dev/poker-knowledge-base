@@ -59,6 +59,12 @@ Toda nova informação (blind war, c-bet em posição) deve passar por:
 
 ---
 
+# Decisão 9 — Ordem de prioridade das fontes
+
+Em 28/10/2026, o autor do KB decidiu padronizar a ordem de prioridade das fontes na ordem geral do `theory/CLAUDE.md`: esclarecimento do autor do KB, correção do instrutor, solver, videoaula, guideline, exercícios. O encaixe das fontes deste módulo está em `08-Referencias.md`. A Decisão 3 (a imagem vale mais que a fala) continua valendo, porque o coach mandou seguir 100% o guideline (correção do instrutor, 2º lugar).
+
+---
+
 # Estado Atual
 
 Módulo estruturado com:

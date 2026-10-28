@@ -35,3 +35,14 @@ Quando houver nova aula ou correção do instrutor, atualizar:
 - Guideline.
 - Regras Consolidadas.
 - Changelog.
+
+---
+
+# 5. Pior trinca em 100% contra as tabelas do monotone e do dobrado
+
+Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
+
+- **Regra 4** (Guideline e Regras Consolidadas), **Exercício 05** e a regra de bolso 5 dizem: a pior trinca vai sempre em 100%, e a única exceção é o board ultraconectado high (AKT, QJT, QJ9, KJ9).
+- As tabelas do guideline em imagem dizem outra coisa: no **monotone** (A♠ 9♠ 8♠) a trinca vai em 75%, e no **dobrado** (K♠ K♥ 7♣) fulls e trincas vão em 75% no seco (50% no carregado). O próprio `03-Solver.md` (Padrões) e o Exercício 06 dizem que conectado high, monotone e dobrado não têm bucket de 100%.
+
+Pela Decisão 3 a imagem prevalece sobre a fala, então as tabelas devem estar certas e o texto da Regra 4 incompleto. **Inferência:** a regra da pior trinca em 100% vale só nos boards que têm bucket de 100% (semi conectado e seco). Confirmar com o coach antes de corrigir a Regra 4 e o Exercício 05.

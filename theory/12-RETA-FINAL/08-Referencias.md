@@ -39,12 +39,24 @@ Mostradas na aula, não serão capturadas. O módulo usa só o que o instrutor d
 
 # Ordem de prioridade
 
-Em caso de conflito:
+Ordem geral do KB (`theory/CLAUDE.md`, padronizada em 28/10/2026):
 
-1. Esclarecimentos do autor do KB e correções do instrutor.
-2. Solver.
-3. Aula.
-4. Exercícios.
+1. Esclarecimentos do autor do KB.
+2. Correção do instrutor.
+3. Solver.
+4. Videoaula.
+5. Guideline.
+6. Exercícios.
+
+Como as fontes deste módulo entram nela:
+
+- Autor do KB: esclarecimentos da construção do módulo.
+- Correção do instrutor: separada do autor do KB (antes ficavam juntos no 1º lugar).
+- Solver: mapas de RFI do BTN e do CO (as simulações da aula não foram capturadas).
+- Videoaula: aula (transcrição).
+- Guideline: não há guideline do instrutor neste módulo.
+- Exercícios: os 50 exercícios.
+
 
 ---
 

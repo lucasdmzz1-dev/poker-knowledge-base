@@ -49,6 +49,12 @@ Confirmação do coach sobre o bucket do flop conectado high: o semi conectado t
 
 ---
 
+# Versão 1.2
+
+Ordem de prioridade das fontes padronizada na ordem geral do `theory/CLAUDE.md` (decisão do autor do KB, 28/10/2026). `08-Referencias.md` e `09-Decisoes.md` atualizados. Nenhuma regra de estratégia mudou.
+
+---
+
 # Próximas Atualizações
 
 Adicionar:

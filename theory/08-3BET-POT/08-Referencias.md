@@ -109,20 +109,23 @@ Utilizadas para:
 # HIERARQUIA DAS FONTES
 
 
-Em caso de conflito:
+Em caso de conflito (ordem geral do KB, `theory/CLAUDE.md`, padronizada em 28/10/2026):
 
 
-1. Guideline
+1. Esclarecimentos do autor do KB
 
-2. Videoaulas
+2. Correções do instrutor
 
-3. Transcrições
+3. Solver
 
-4. Solver
+4. Videoaulas e transcrições
 
-5. Exercícios
+5. Guideline
 
-6. Correções
+6. Exercícios
+
+
+Até 28/10/2026 este módulo usava a ordem invertida (Guideline primeiro e Correções por último).
 
 
 Caso exista divergência entre fontes, registrar em:

@@ -74,3 +74,36 @@ Quando houver novas mãos ou árvores, atualizar:
 - Regras Consolidadas.
 - `regras-vivas-pko-btn.md` e `pko-maos-jogadas.csv`.
 - Changelog.
+
+---
+
+# 11. Regra 15: o shove com blocker aparece proibido e recomendado
+
+Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
+
+- Na Regra 15 do Guideline, o item **Não usar** diz: shove com blockers (A5o a A2o) contra opener curto e coberto não vale (errou 2 em 2 na v3: A5o e A3o).
+- Logo abaixo, a lista diz: **Blockers (A2o) contra opener curto e coberto: all-in.** O Exercício 28 (A2o, hero 141bb, CO 24bb) segue essa linha, com a resposta do solver da v2.
+- O `regras-vivas-pko-btn.md` (seção 8, item 1) manda tirar o shove de blocker na v3.1.
+
+Os dados não são contraditórios entre si (1 árvore pediu all-in, 2 pediram fold e call), mas o texto da regra é. Decidir se o item do A2o sai da lista ou se ganha uma condição (por exemplo, hero muito fundo cobrindo), e ajustar o Exercício 28.
+
+---
+
+# 12. Versão e números desatualizados entre os arquivos
+
+Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
+
+- **Versão:** README e Changelog dizem v1.2. O cabeçalho do Guideline diz "versão 1.0", e o `09-Decisoes.md` diz "Estado Atual (v1.0)".
+- **Mãos:** README, Regra 14 e Limites (primeiro item) falam em 170 mãos (v1, v2 e v3). Os Limites (último item: "70 mãos" e "84% em 70 mãos"), o `02-VideoAulas.md` (Fonte 3), a Decisão 4 e o item 4 desta lista ainda falam em 70 mãos.
+- **Nós e árvores:** Guideline, README e `pko-conhecimento.md` dizem 203 nós. O `theory/CLAUDE.md`, o `retomada-pko.md` e o `pko-arvores-dicionario.md` dizem 208 nós. A tabela de efeitos do `03-Solver.md` fala em 50 árvores (contra 52 no resto).
+- **Fase:** os Limites dizem Early e Mid "de ~13% a 95%", mas a árvore #3697 (13%) é bolha.
+
+Atualizar os arquivos para a v1.2 e explicar a diferença de 203 para 208 nós (provavelmente nós duplicados ou os 2 excluídos sem RP).
+
+---
+
+# 13. Ordem de prioridade das fontes
+
+Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
+
+O `08-Referencias.md` usa: esclarecimentos do autor do KB, notas do usuário, árvores do Trainer, testes no Trainer. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. **Resolvida (28/10/2026):** o autor do KB decidiu seguir a ordem geral, com o autor do KB em 1º. Ver `08-Referencias.md` e `09-Decisoes.md`.

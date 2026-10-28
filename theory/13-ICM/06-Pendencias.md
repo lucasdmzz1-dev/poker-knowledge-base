@@ -66,3 +66,11 @@ Quando houver nova aula ou correção do instrutor, atualizar:
 - Guideline.
 - Regras Consolidadas.
 - Changelog.
+
+---
+
+# 10. Ordem de prioridade das fontes
+
+Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
+
+O `08-Referencias.md` usa: esclarecimentos do autor do KB, solver (números lidos nos frames), aula, anotações do instrutor, exercícios. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. **Resolvida (28/10/2026):** o autor do KB decidiu seguir a ordem geral, com o autor do KB em 1º. Ver `08-Referencias.md` e `09-Decisoes.md`.

@@ -34,12 +34,24 @@ Cruzamento com o módulo 13 (ICM e Risk Premium) e o módulo 12 (Reta Final) par
 
 # Ordem de prioridade
 
-Em caso de conflito:
+Ordem geral do KB (`theory/CLAUDE.md`, padronizada em 28/10/2026):
 
 1. Esclarecimentos do autor do KB.
-2. Notas do usuário.
-3. Árvores do Trainer.
-4. Testes no Trainer.
+2. Correção do instrutor.
+3. Solver.
+4. Videoaula.
+5. Guideline.
+6. Exercícios.
+
+Como as fontes deste módulo entram nela:
+
+- Autor do KB: esclarecimentos e notas do usuário (conhecimento de mesa), nessa ordem.
+- Correção do instrutor: não há aula nem instrutor neste módulo.
+- Solver: árvores do 4BET Trainer (HRC) e a correção do solver nas mãos jogadas.
+- Videoaula e guideline: não há.
+- Exercícios: os 39 exercícios.
+- A ordem é a mesma de antes, só encaixada na ordem geral.
+
 
 ---
 

@@ -62,6 +62,12 @@ Toda nova informação (aula de PKO, short stack na bolha) deve passar por:
 
 ---
 
+# Decisão 10 — Ordem de prioridade das fontes
+
+Em 28/10/2026, o autor do KB decidiu padronizar a ordem de prioridade das fontes na ordem geral do `theory/CLAUDE.md`: esclarecimento do autor do KB, correção do instrutor, solver, videoaula, guideline, exercícios. O encaixe das fontes deste módulo está em `08-Referencias.md`. A Decisão 3 (o frame vale mais que a fala) continua valendo: o solver está acima da videoaula. Dentro da aula, a fala vale mais que as anotações.
+
+---
+
 # Estado Atual
 
 Módulo estruturado com:

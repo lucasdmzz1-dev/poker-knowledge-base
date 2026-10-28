@@ -40,13 +40,24 @@ Cruzamento com o módulo 12 (Reta Final) e com os mapas de RFI do BTN e do CO em
 
 # Ordem de prioridade
 
-Em caso de conflito:
+Ordem geral do KB (`theory/CLAUDE.md`, padronizada em 28/10/2026):
 
 1. Esclarecimentos do autor do KB.
-2. Solver (números lidos nos frames).
-3. Aula (fala do instrutor).
-4. Anotações do instrutor.
-5. Exercícios.
+2. Correção do instrutor.
+3. Solver.
+4. Videoaula.
+5. Guideline.
+6. Exercícios.
+
+Como as fontes deste módulo entram nela:
+
+- Autor do KB: esclarecimentos.
+- Correção do instrutor: não houve.
+- Solver: números lidos nos frames do GTO Wizard.
+- Videoaula: fala do instrutor e anotações (Bloco de Notas). Dentro da aula, a fala vale mais que as anotações (como antes).
+- Guideline: não há guideline do instrutor neste módulo.
+- Exercícios: os 27 exercícios de conceito.
+
 
 ---
 

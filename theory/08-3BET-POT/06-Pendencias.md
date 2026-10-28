@@ -190,6 +190,27 @@ Registrar:
 ## Decisão:
 
 
+## Divergência 01 — Ordem de prioridade das fontes
+
+Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
+
+## Fonte 1:
+
+`08-Referencias.md` deste módulo: Guideline, Videoaulas, Transcrições, Solver, Exercícios, Correções.
+
+## Fonte 2:
+
+`theory/CLAUDE.md`: correção do instrutor, solver, videoaula, guideline, exercícios.
+
+## Conflito:
+
+A ordem do módulo está invertida em relação à geral: a correção do instrutor fica em último e o guideline em primeiro.
+
+## Decisão:
+
+Resolvida (28/10/2026): seguir a ordem geral do KB, com o autor do KB em 1º. Ver `08-Referencias.md` e a decisão 07 de `09-Decisoes.md`.
+
+
 ---
 
 # REGRA FINAL

@@ -104,6 +104,12 @@ Toda nova informação deve passar por:
 
 ---
 
+# Decisão 17 — Ordem de prioridade das fontes
+
+Em 28/10/2026, o autor do KB decidiu padronizar a ordem de prioridade das fontes na ordem geral do `theory/CLAUDE.md`: esclarecimento do autor do KB, correção do instrutor, solver, videoaula, guideline, exercícios. O encaixe das fontes deste módulo está em `08-Referencias.md`. Antes o autor do KB e as correções do instrutor dividiam o 1º lugar. Agora o autor do KB vem antes.
+
+---
+
 # Estado Atual
 
 Módulo estruturado com:
