@@ -126,3 +126,15 @@ Ao finalizar este módulo o jogador deve conseguir:
 # Status
 
 Módulo estruturado e consolidado, com 50 exercícios. Solver detalhado pendente (ver 06-Pendencias.md).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]]
+
+<!-- graphify-links:end -->

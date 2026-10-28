@@ -80,3 +80,20 @@ Conteúdo:
 - Exercícios.
 - Regras.
 - Decisões.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/06-XR-SHORT/README|README]] · [[theory/06-XR-SHORT/01-Guideline|01-Guideline]]
+
+**Outros módulos:**
+
+- [[theory/05-CBet-OOP-40bb/09-Decisoes|05-CBet-OOP-40bb · 09-Decisoes]]
+- [[theory/05-CBet-OOP-40bb/01-Guideline|05-CBet-OOP-40bb · 01-Guideline]]
+
+<!-- graphify-links:end -->

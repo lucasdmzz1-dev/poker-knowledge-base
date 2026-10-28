@@ -112,3 +112,15 @@ Sem XR contra agressor que não falou ainda. Sem Probe quando todos checaram. Le
 # Objetivo Final
 
 Substituir o exploit genérico por uma estratégia fundamentada: entender quando o adversário está capado (e só aí pressionar) e quando não está (e por isso não vale a pena atacar nem overfoldar).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/10-MULTIWAY-POT/README|README]] · [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]] · [[theory/10-MULTIWAY-POT/04-Exercicios|04-Exercicios]]
+
+<!-- graphify-links:end -->

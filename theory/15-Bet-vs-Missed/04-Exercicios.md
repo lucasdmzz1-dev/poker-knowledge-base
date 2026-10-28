@@ -835,3 +835,15 @@ Se a mão faz parte do topo do seu range de check no turn, ela sempre aposta o r
 **Regra:** Regra 22
 
 ---
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/15-Bet-vs-Missed/README|README]] · [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]]
+
+<!-- graphify-links:end -->

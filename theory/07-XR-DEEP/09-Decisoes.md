@@ -177,3 +177,15 @@ Utilizar:
 XR Deep Stack:
 
 > Construir pote com mãos fortes e pressionar com mãos que possuem equidade suficiente para continuar.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/07-XR-DEEP/01-Guideline|01-Guideline]] · [[theory/07-XR-DEEP/README|README]] · [[theory/07-XR-DEEP/03-Solver|03-Solver]]
+
+<!-- graphify-links:end -->

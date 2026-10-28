@@ -107,3 +107,19 @@ Vem de equity futura real, bloqueia valor, desbloqueia os folds naturais do vil�
 # Regra Principal do Módulo
 
 O size certo é sempre aquele que acompanha a composição real do seu range de valor — nunca o instinto de "board esquisitou, então aposta mais alto" ou "carta alta, então é blank". Antes de escolher o size, pergunte sempre: contra qual grupo de mãos do vilão eu realmente quero apostar, e esse size ataca esse grupo sem perder o que deveria continuar pagando?
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]]
+
+**Outros módulos:**
+
+- [[theory/12-RETA-FINAL/01-Guideline|12-RETA-FINAL · 01-Guideline]]
+
+<!-- graphify-links:end -->

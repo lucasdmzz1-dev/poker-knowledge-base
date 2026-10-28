@@ -234,3 +234,21 @@ Após dominar este módulo o jogador deve conseguir:
 - Exercícios realizados.
 - Correções do instrutor.
 - Solver quando disponível.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/09-Decisoes|09-Decisoes]] · [[theory/03-Second-Barrel-IP/03-Solver|03-Solver]] · [[theory/03-Second-Barrel-IP/04-Exercicios|04-Exercicios]] · [[theory/03-Second-Barrel-IP/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+
+**Outros módulos:**
+
+- [[theory/02-CBet-IP-40bb/README|02-CBet-IP-40bb · README]]
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/05-Regras-Consolidadas|04-Third-Barrel-e-vs-Third-Barrel · 05-Regras-Consolidadas]]
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|04-Third-Barrel-e-vs-Third-Barrel · 01-Guideline]]
+
+<!-- graphify-links:end -->

@@ -221,3 +221,19 @@ Toda estratégia de River pode ser resumida em quatro perguntas:
 4. Minha mão desbloqueia os blefes naturais?
 
 Responder corretamente essas quatro perguntas permite construir praticamente toda a estratégia de Third Barrel apresentada pelo instrutor.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|README]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|01-Guideline]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/04-Exercicios|04-Exercicios]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/03-Solver|03-Solver]]
+
+**Outros módulos:**
+
+- [[theory/03-Second-Barrel-IP/02-VideoAulas|03-Second-Barrel-IP · 02-VideoAulas]]
+
+<!-- graphify-links:end -->

@@ -174,3 +174,15 @@ Motivo:
 Fonte:
 
 Impacto no módulo:
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/08-3BET-POT/README|README]]
+
+<!-- graphify-links:end -->

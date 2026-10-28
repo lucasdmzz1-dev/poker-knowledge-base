@@ -382,3 +382,19 @@ Ele é decidido pela relação entre:
 - Sizing.
 - Frequência de defesa.
 - Mãos que o adversário representa.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|README]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/02-VideoAulas|02-VideoAulas]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|01-Guideline]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/04-Exercicios|04-Exercicios]]
+
+**Outros módulos:**
+
+- [[theory/03-Second-Barrel-IP/01-Guideline|03-Second-Barrel-IP · 01-Guideline]]
+
+<!-- graphify-links:end -->

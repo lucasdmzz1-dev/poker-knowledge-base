@@ -79,3 +79,15 @@ Em árvores deixadas de fora, essa ordem acerta quais mãos continuam com F1 de 
 - **O range varia de 13% a 49%** conforme o nó. O que muda pouco é a ordem das mãos.
 - **Hero curto contra opener fundo, ICM alto e bounty alto do hero** apertam o range.
 - **Hero fundo no Early com bounties iguais** é o nó mais largo.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]] · [[theory/16-PKO/09-Decisoes|09-Decisoes]] · [[theory/16-PKO/04-Exercicios|04-Exercicios]]
+
+<!-- graphify-links:end -->

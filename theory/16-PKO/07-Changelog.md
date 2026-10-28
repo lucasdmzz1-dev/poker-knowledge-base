@@ -65,3 +65,15 @@ Adicionar:
 
 - Regra de stack curto (raise e all-in) testada.
 - Árvores de bolha e de outras posições.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]]
+
+<!-- graphify-links:end -->

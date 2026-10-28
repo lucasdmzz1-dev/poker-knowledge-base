@@ -71,3 +71,15 @@ O guideline cobre só o range de valor. Falta definir:
 - Exercícios mão a mão de turn.
 - Gyazos de Solver do turn.
 - Videoaula (seção ainda sem aula).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/05-CBet-OOP-40bb/README|README]] · [[theory/05-CBet-OOP-40bb/01-Guideline|01-Guideline]] · [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]]
+
+<!-- graphify-links:end -->

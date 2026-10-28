@@ -155,3 +155,19 @@ Mãos mais fortes nos buckets mais altos. Nenhum board se aposta 100%. Só B25 e
 # Regra Principal do Módulo
 
 Pense em frequências: o bucket mais alto de cada board tem as mãos mais fortes, e o size sai do grupo de mãos que você aposta.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/15-Bet-vs-Missed/README|README]] · [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]]
+
+**Outros módulos:**
+
+- [[theory/14-Probe-Turn/05-Regras-Consolidadas|14-Probe-Turn · 05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

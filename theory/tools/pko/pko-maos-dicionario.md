@@ -36,3 +36,15 @@ Cada linha é **uma decisão** do hero no BTN diante de um open. O objetivo é p
 
 ## Como gravar daqui para frente
 Antes de cada ação, ler e gravar o cabeçalho (ID, % restante, restantes, pagos, média, SI, KOI), todos os assentos (stack e bounty), o open e o pote. Depois da ação, ler o veredito, a ação certa, os EVs e as frequências do solver (painel "Mão anterior"). Se o erro for relevante, abrir a solução do solver para gravar o RP e o range do nó. Sempre registrar a `config_trainer`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]]
+
+<!-- graphify-links:end -->

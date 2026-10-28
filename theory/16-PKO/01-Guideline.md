@@ -237,3 +237,15 @@ Siglas:
 - Os testes no Trainer foram no modo **Close Decisions** (decisões próximas), com muitas mãos marginais. O placar (84% de precisão e −0,80bb de EV perdido em 70 mãos) não é comparável com o de um modo comum.
 - A amostra: 52 árvores, 203 nós e 70 mãos. As diferenças de poucos pontos podem ser sorte.
 - Ver `06-Pendencias.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/04-Exercicios|04-Exercicios]] · [[theory/16-PKO/03-Solver|03-Solver]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]] · [[theory/16-PKO/tools/pko/pko-conhecimento|pko-conhecimento]]
+
+<!-- graphify-links:end -->

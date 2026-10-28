@@ -1227,3 +1227,15 @@ Em FT você joga poucas mãos contra cada pessoa. Na primeira vez, assuma que o 
 **Regra:** Regra 31
 
 ---
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/06-Pendencias|06-Pendencias]] · [[theory/12-RETA-FINAL/07-Changelog|07-Changelog]]
+
+<!-- graphify-links:end -->

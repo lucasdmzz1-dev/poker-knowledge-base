@@ -63,3 +63,21 @@ Ficou estabelecido que a natureza do Check-Raise muda por street: no flop, tende
 # Conclusão da Aula
 
 O tema comum de todas as 19 mãos, segundo o fechamento da aula, foi a construção de range: entender exatamente qual grupo de mãos compõe cada size em cada street, e não deixar as mãos boas passarem batido por estarem "olhando a mão isolada" em vez de pensar em como o range inteiro se comporta. O maior gargalo identificado, de forma repetida, foi chegar ao river com pote mal construído (por erro de size ou de leitura nas streets anteriores) e, com isso, deixar de extrair o valor máximo disponível.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]]
+
+**Outros módulos:**
+
+- [[theory/09-BET-CHECK-BET/README|09-BET-CHECK-BET · README]]
+- [[theory/09-BET-CHECK-BET/05-Regras-Consolidadas|09-BET-CHECK-BET · 05-Regras-Consolidadas]]
+- [[theory/10-MULTIWAY-POT/01-Guideline|10-MULTIWAY-POT · 01-Guideline]]
+
+<!-- graphify-links:end -->

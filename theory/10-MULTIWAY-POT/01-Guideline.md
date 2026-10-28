@@ -136,3 +136,20 @@ O estudo identificou uma possibilidade de Lead do Small Blind em boards low cone
 - Testado majoritariamente a 40bb; ainda não testado a 15-20bb.
 - Assume ranges pré-flop "padrão" (ChipEV) — cenários de ICM tendem a ter ranges pré-flop mais curtos, o que deve reduzir a frequência de aposta em geral, mas a lógica base deve se manter.
 - Ainda não cobre situações com dois jogadores em posição contra o Hero, nem river.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/10-MULTIWAY-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]] · [[theory/10-MULTIWAY-POT/README|README]] · [[theory/10-MULTIWAY-POT/09-Decisoes|09-Decisoes]] · [[theory/10-MULTIWAY-POT/03-Solver|03-Solver]]
+
+**Outros módulos:**
+
+- [[theory/11-Value-Bet-Masterclass/02-VideoAulas|11-Value-Bet-Masterclass · 02-VideoAulas]]
+- [[theory/11-Value-Bet-Masterclass/01-Guideline|11-Value-Bet-Masterclass · 01-Guideline]]
+
+<!-- graphify-links:end -->

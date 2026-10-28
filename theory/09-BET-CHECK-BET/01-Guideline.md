@@ -490,3 +490,15 @@ A estratégia é baseada em:
 - Blockers;
 - Dinâmica do river;
 - Size correto.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/09-BET-CHECK-BET/README|README]] · [[theory/09-BET-CHECK-BET/02-VideoAulas|02-VideoAulas]]
+
+<!-- graphify-links:end -->

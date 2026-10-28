@@ -117,3 +117,20 @@ E sim construir uma estratégia:
 - com mínima perda de EV.
 
 Essa é a filosofia utilizada durante todo o módulo.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]]
+
+**Outros módulos:**
+
+- [[docs/00-Architecture/KB-003-Module-Template|00-Architecture/KB-003-Module-Template]]
+- [[theory/02-CBet-IP-40bb/03-Solver|02-CBet-IP-40bb · 03-Solver]]
+
+<!-- graphify-links:end -->

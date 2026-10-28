@@ -223,3 +223,19 @@ Ao finalizar este módulo o jogador deve saber:
 - Quais draws apostar.
 - Quais draws proteger dando check.
 - Como adaptar a estratégia ao Short Stack.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]]
+
+**Outros módulos:**
+
+- [[docs/00-Architecture/KB-000-Architecture|00-Architecture/KB-000-Architecture]]
+
+<!-- graphify-links:end -->

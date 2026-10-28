@@ -225,3 +225,19 @@ SB cobrindo o BB: sem limp. SB coberto: protege o call. SB curto: sem limp.
 # Regra Principal do Módulo
 
 Antes de qualquer decisão, pergunte: quem me cobre, e há pressão a favor? Quem cobre expande, quem é coberto aperta, e sem pressão ninguém precisa expandir.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/13-ICM/README|README]] · [[theory/13-ICM/01-Guideline|01-Guideline]]
+
+**Outros módulos:**
+
+- [[theory/12-RETA-FINAL/05-Regras-Consolidadas|12-RETA-FINAL · 05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

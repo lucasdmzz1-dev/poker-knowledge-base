@@ -376,3 +376,15 @@ XR Deep Stack é construído por:
 - capacidade de continuar.
 
 A composição do combo importa tanto quanto a categoria da mão.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/07-XR-DEEP/README|README]] · [[theory/07-XR-DEEP/02-VideoAulas|02-VideoAulas]] · [[theory/07-XR-DEEP/04-Exercicios|04-Exercicios]] · [[theory/07-XR-DEEP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/07-XR-DEEP/07-Changelog|07-Changelog]]
+
+<!-- graphify-links:end -->

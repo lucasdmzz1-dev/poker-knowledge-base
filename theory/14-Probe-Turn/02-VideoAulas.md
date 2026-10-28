@@ -117,3 +117,15 @@ O instrutor fecha a aula com este resumo:
 Um aluno pergunta como adaptar ao field, já que os jogadores bons dão check atrás com TP. O instrutor responde que a construção não muda muito, porque está ligada ao size. Contra jogadores mais fracos, assuma menos TP no check atrás. Nos buy-ins mais altos (US$ 250) boa parte já faz check atrás com TP, e nos mais baixos (US$ 70 e 100) boa parte não faz.
 
 Sobre testar vários sizes, o instrutor explica que o GTO Wizard permite cadastrar muitos sizes e dá o size médio da estratégia. Ele usa essa referência para ter uma estratégia de size único, que é praticável.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]]
+
+<!-- graphify-links:end -->

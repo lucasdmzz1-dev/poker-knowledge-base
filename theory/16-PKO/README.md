@@ -92,3 +92,15 @@ Ao finalizar este módulo o jogador deve conseguir:
 # Status
 
 Módulo estruturado (v1.2). A regra foi testada em 170 mãos no Trainer (v2: 80% de acertos perfeitos em 50 mãos; v3: 79% em 100 mãos, 86% contando os quase perfeitos). Ainda não vale para outras posições, stack curto, bolha, mesa final ou contra 3bet. Ver 06-Pendencias.md.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]]
+
+<!-- graphify-links:end -->

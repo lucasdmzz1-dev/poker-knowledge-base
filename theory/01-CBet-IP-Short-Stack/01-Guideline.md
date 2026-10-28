@@ -453,3 +453,21 @@ A estratégia C-Bet Short Stack é baseada em:
 - Checkar quando queremos realizar equity.
 - Respeitar frequência de Check Raise.
 - Construir ranges equilibrados de bet e check.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/01-CBet-IP-Short-Stack/03-Solver|03-Solver]] · [[theory/01-CBet-IP-Short-Stack/04-Exercicios|04-Exercicios]] · [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]]
+
+**Outros módulos:**
+
+- [[theory/02-CBet-IP-40bb/01-Guideline|02-CBet-IP-40bb · 01-Guideline]]
+- [[theory/02-CBet-IP-40bb/02-VideoAulas|02-CBet-IP-40bb · 02-VideoAulas]]
+- [[docs/00-Architecture/KB-002-Domain-Model|00-Architecture/KB-002-Domain-Model]]
+
+<!-- graphify-links:end -->

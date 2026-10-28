@@ -108,3 +108,21 @@ Seleção de combos pro Check-Raise de blefe: preferir mãos com equity futura r
 # Regra 12 — Formato Bounty amplifica o custo do Miss Value
 
 Em torneios com premiação por eliminação (Bounty/KO), deixar de valuebetar uma mão forte não custa só EV em fichas — custa a chance real e imediata de realizar o bounty do adversário. Isso reforça ainda mais a prioridade de nunca deixar essas oportunidades passarem nesse formato.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/03-Solver|03-Solver]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]] · [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]]
+
+**Outros módulos:**
+
+- [[theory/09-BET-CHECK-BET/04-Exercicios|09-BET-CHECK-BET · 04-Exercicios]]
+- [[theory/09-BET-CHECK-BET/09-Decisoes|09-BET-CHECK-BET · 09-Decisoes]]
+- [[theory/10-MULTIWAY-POT/01-Guideline|10-MULTIWAY-POT · 01-Guideline]]
+
+<!-- graphify-links:end -->

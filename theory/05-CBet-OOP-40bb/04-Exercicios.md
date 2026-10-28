@@ -175,3 +175,15 @@ Preferir mãos com:
 # Conclusão
 
 Os exercícios mostram que C-Bet OOP é uma construção de range, não uma decisão isolada de mão.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/05-CBet-OOP-40bb/README|README]] · [[theory/05-CBet-OOP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/05-CBet-OOP-40bb/02-VideoAulas|02-VideoAulas]]
+
+<!-- graphify-links:end -->

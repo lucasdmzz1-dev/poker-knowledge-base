@@ -84,3 +84,19 @@ Módulo estruturado com:
 - Decisões.
 
 Pendente: ver 06-Pendencias.md.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/13-ICM/README|README]] · [[theory/13-ICM/06-Pendencias|06-Pendencias]]
+
+**Outros módulos:**
+
+- [[theory/14-Probe-Turn/09-Decisoes|14-Probe-Turn · 09-Decisoes]]
+
+<!-- graphify-links:end -->

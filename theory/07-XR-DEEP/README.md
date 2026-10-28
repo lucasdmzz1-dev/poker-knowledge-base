@@ -146,3 +146,14 @@ Regras finais implementadas.
 
 Módulo estruturado para documentação na Poker Knowledge Base.
 
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/07-XR-DEEP/01-Guideline|01-Guideline]] · [[theory/07-XR-DEEP/08-Referencias|08-Referencias]] · [[theory/07-XR-DEEP/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

@@ -214,3 +214,18 @@ Devemos diferenciar:
 - mãos que querem pressionar;
 - mãos que querem construir pote.
 
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/07-XR-DEEP/02-VideoAulas|02-VideoAulas]] · [[theory/07-XR-DEEP/03-Solver|03-Solver]] · [[theory/07-XR-DEEP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/07-XR-DEEP/09-Decisoes|09-Decisoes]] · [[theory/07-XR-DEEP/README|README]]
+
+**Outros módulos:**
+
+- [[theory/08-3BET-POT/01-Guideline|08-3BET-POT · 01-Guideline]]
+
+<!-- graphify-links:end -->

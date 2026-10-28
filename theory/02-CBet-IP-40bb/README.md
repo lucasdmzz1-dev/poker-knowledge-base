@@ -48,3 +48,20 @@ Não inclui:
 ## Status
 
 🟢 Em documentação
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/02-CBet-IP-40bb/07-Changelog|07-Changelog]] · [[theory/02-CBet-IP-40bb/08-Referencias|08-Referencias]] · [[theory/02-CBet-IP-40bb/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/03-Second-Barrel-IP/01-Guideline|03-Second-Barrel-IP · 01-Guideline]]
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|04-Third-Barrel-e-vs-Third-Barrel · 01-Guideline]]
+
+<!-- graphify-links:end -->

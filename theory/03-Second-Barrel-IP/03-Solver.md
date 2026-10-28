@@ -333,3 +333,15 @@ A carta determina:
 Qualquer nova solução de Solver deve ser adicionada aqui antes de alterar as Regras Consolidadas.
 
 Caso exista diferença entre Solver e correção do instrutor, o conflito deve ser registrado.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/03-Second-Barrel-IP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/03-Second-Barrel-IP/01-Guideline|01-Guideline]] · [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/04-Exercicios|04-Exercicios]] · [[theory/03-Second-Barrel-IP/08-Referencias|08-Referencias]]
+
+<!-- graphify-links:end -->

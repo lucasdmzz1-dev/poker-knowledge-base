@@ -93,3 +93,21 @@ Módulo estruturado com:
 - Como Jogar.
 
 Pendente: ver 06-Pendencias.md (uma pendência menor).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]] · [[theory/14-Probe-Turn/04-Exercicios|04-Exercicios]]
+
+**Módulos citados no texto:** [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]]
+
+**Outros módulos:**
+
+- [[theory/13-ICM/09-Decisoes|13-ICM · 09-Decisoes]]
+
+<!-- graphify-links:end -->

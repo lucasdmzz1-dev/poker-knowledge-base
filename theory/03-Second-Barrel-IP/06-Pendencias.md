@@ -141,3 +141,19 @@ Quando novos conteúdos forem adicionados:
 2. Validar a informação.
 3. Atualizar Regras Consolidadas se necessário.
 4. Registrar no Changelog.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/03-Second-Barrel-IP/01-Guideline|01-Guideline]] · [[theory/03-Second-Barrel-IP/03-Solver|03-Solver]]
+
+**Outros módulos:**
+
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|04-Third-Barrel-e-vs-Third-Barrel · 01-Guideline]]
+
+<!-- graphify-links:end -->

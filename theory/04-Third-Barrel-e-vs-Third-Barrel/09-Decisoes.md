@@ -172,3 +172,20 @@ Adicionar futuramente:
 - Árvores de decisão.
 - Soluções específicas de Solver.
 - Exemplos classificados por textura de board.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|README]]
+
+**Outros módulos:**
+
+- [[theory/05-CBet-OOP-40bb/09-Decisoes|05-CBet-OOP-40bb · 09-Decisoes]]
+- [[theory/06-XR-SHORT/01-Guideline|06-XR-SHORT · 01-Guideline]]
+
+<!-- graphify-links:end -->

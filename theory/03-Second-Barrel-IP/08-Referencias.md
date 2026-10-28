@@ -136,3 +136,20 @@ Nenhum conflito identificado entre as fontes utilizadas.
 # Atualização das Referências
 
 Novos materiais adicionados ao módulo devem ser registrados aqui antes de alterar qualquer regra consolidada.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/03-Second-Barrel-IP/01-Guideline|01-Guideline]] · [[theory/03-Second-Barrel-IP/03-Solver|03-Solver]]
+
+**Outros módulos:**
+
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/08-Referencias|04-Third-Barrel-e-vs-Third-Barrel · 08-Referencias]]
+- [[theory/02-CBet-IP-40bb/08-Referencias|02-CBet-IP-40bb · 08-Referencias]]
+
+<!-- graphify-links:end -->

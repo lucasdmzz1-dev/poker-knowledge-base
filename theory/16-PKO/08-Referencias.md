@@ -58,3 +58,21 @@ Como as fontes deste módulo entram nela:
 # Regra
 
 Não adicionar conhecimento externo ao módulo. O que veio de interpretação ficou marcado como hipótese.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/16-PKO/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/16-PKO/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]]
+
+**Módulos citados no texto:** [[theory/12-RETA-FINAL/README|12-RETA-FINAL]] · [[theory/13-ICM/README|13-ICM]]
+
+**Outros módulos:**
+
+- [[theory/15-Bet-vs-Missed/08-Referencias|15-Bet-vs-Missed · 08-Referencias]]
+
+<!-- graphify-links:end -->

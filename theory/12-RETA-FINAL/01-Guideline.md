@@ -321,3 +321,23 @@ Em FT você joga poucas mãos contra cada pessoa. Na primeira vez, assuma que o 
 # Pendências e decisões
 
 As pendências abertas estão em `06-Pendencias.md` e as decisões e esclarecimentos da construção do módulo estão em `09-Decisoes.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]] · [[theory/12-RETA-FINAL/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/12-RETA-FINAL/09-Decisoes|09-Decisoes]] · [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]]
+
+**Módulos citados no texto:** [[theory/01-CBet-IP-Short-Stack/README|01-CBet-IP-Short-Stack]] · [[theory/08-3BET-POT/README|08-3BET-POT]]
+
+**Outros módulos:**
+
+- [[theory/13-ICM/01-Guideline|13-ICM · 01-Guideline]]
+- [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|11-Value-Bet-Masterclass · 05-Regras-Consolidadas]]
+- [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass · README]]
+
+<!-- graphify-links:end -->

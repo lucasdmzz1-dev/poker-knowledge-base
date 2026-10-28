@@ -91,3 +91,15 @@ Toda a documentação deste módulo deverá ser construída exclusivamente a par
 5. Correções do instrutor.
 
 Quando houver conflito entre as fontes, ele deverá ser registrado explicitamente.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

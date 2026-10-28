@@ -66,3 +66,20 @@ Principais sizes:
 - B100
 
 A escolha depende da dinâmica e da função da mão.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/09-BET-CHECK-BET/04-Exercicios|04-Exercicios]] · [[theory/09-BET-CHECK-BET/09-Decisoes|09-Decisoes]] · [[theory/09-BET-CHECK-BET/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/09-BET-CHECK-BET/03-Solver|03-Solver]]
+
+**Outros módulos:**
+
+- [[theory/11-Value-Bet-Masterclass/02-VideoAulas|11-Value-Bet-Masterclass · 02-VideoAulas]]
+- [[theory/10-MULTIWAY-POT/02-VideoAulas|10-MULTIWAY-POT · 02-VideoAulas]]
+
+<!-- graphify-links:end -->

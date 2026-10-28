@@ -54,3 +54,20 @@ Uma pendência somente poderá ser considerada resolvida quando validada por uma
 - Videoaula
 - Solver
 - Correção oficial do instrutor
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/02-CBet-IP-40bb/README|README]] · [[theory/02-CBet-IP-40bb/01-Guideline|01-Guideline]]
+
+**Outros módulos:**
+
+- [[docs/00-Architecture/KB-003-Module-Template|00-Architecture/KB-003-Module-Template]]
+- [[theory/01-CBet-IP-Short-Stack/08-Referencias|01-CBet-IP-Short-Stack · 08-Referencias]]
+
+<!-- graphify-links:end -->

@@ -266,3 +266,20 @@ Quais mãos entram no check?
 No Short Stack:
 
 Ver o Turn frequentemente possui valor superior a apostar automaticamente.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+
+**Outros módulos:**
+
+- [[docs/00-Architecture/KB-002-Domain-Model|00-Architecture/KB-002-Domain-Model]]
+- [[theory/02-CBet-IP-40bb/04-Exercicios|02-CBet-IP-40bb · 04-Exercicios]]
+
+<!-- graphify-links:end -->

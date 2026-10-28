@@ -56,3 +56,15 @@ Adicionar:
 - Aula de PKO e de short stack na bolha.
 - Gráfico da curva do ICM.
 - Exercícios com mãos e spots.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/13-ICM/README|README]] · [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/08-Referencias|08-Referencias]]
+
+<!-- graphify-links:end -->
