@@ -1,146 +1,52 @@
-# Theory Index
+# Teoria — Poker Knowledge Base
 
-**Version:** 1.0  
-**Status:** Active  
-**Last Updated:** 2026-10-13
+**Atualizado em:** 28/10/2026
 
----
-
-# Purpose
-
-This directory contains the official human-readable poker theory of the Poker Knowledge Base.
-
-Each strategic module has its own document.
-
-Theory modules contain:
-
-- Scope
-- Philosophy
-- Strategic guidelines
-- Value strategy
-- Bluff strategy
-- Call strategy
-- Sizes
-- Position differences
-- Stack differences
-- Suit logic
-- Exceptions
-- Operational simplifications
-- Validated examples
-- Pending validations
-- Changelog
-
-Structured rules for software use will be stored separately in the Decision Engine.
+Teoria de torneio (ChipEV, foco em 20-40bb, formato Bounty/KO), um módulo por tema. As regras de trabalho estão em `theory/CLAUDE.md`, e a divisão entre os chats PRÉ e PÓS está em `theory/MAPA-PRE-POS.md`.
 
 ---
 
-# Current Modules
+# Módulos
 
-## Fundamentals
+| Mód. | Pasta | Lado | Status |
+|---|---|---|---|
+| 01 | `01-CBet-IP-Short-Stack/` (C-Bet IP 20bb) | PÓS | Conteúdo ok; arquivos precisam de limpeza (duplicatas e restos `oaicite`) |
+| 02 | `02-CBet-IP-40bb/` | PÓS | Tabelas por posição; faltam exercícios e decisões |
+| 03 | `03-Second-Barrel-IP/` | PÓS | Completo; `README.md` vazio |
+| 04 | `04-Third-Barrel-e-vs-Third-Barrel/` | PÓS | Completo (MDF); restos `oaicite`; ligar ao 11 |
+| 05 | `05-CBet-OOP-40bb/` (inclui Second Barrel OOP) | PÓS | Flop completo; turn só com valor |
+| 06 | `06-XR-SHORT/` | PÓS | Completo (usa "Lei NN") |
+| 07 | `07-XR-DEEP/` | PÓS | Completo; pendências vazias |
+| 08 | `08-3BET-POT/` | PÓS (ponte) | OOP ok; parte IP quase vazia |
+| 09 | `09-BET-CHECK-BET/` | PÓS | Guideline e 6 exercícios; falta solver |
+| 10 | `10-MULTIWAY-POT/` | PÓS (ponte) | Guideline bom; faltam solver e exercícios |
+| 11 | `11-Value-Bet-Masterclass/` | PÓS (transversal) | 13 regras; faltam solver, exercícios e links com 01-10 |
+| 12 | `12-RETA-FINAL/` | PRÉ | 31 regras, 50 exercícios; lido junto com o 13 |
+| 13 | `13-ICM/` (ICM e Risk Premium) | PRÉ | 31 regras, 27 exercícios; telas pendentes |
+| 14 | `14-Probe-Turn/` | PÓS | Finalizado |
+| 15 | `15-Bet-vs-Missed/` | PÓS | Finalizado |
+| 16 | `16-PKO/` | PRÉ | v1.2, regra v3 (170 mãos); arquivos de trabalho em `tools/pko/` |
 
-| Module | ID | Status | Version |
-|---|---|---:|---:|
-| Structural Board Classification | `MODULE_FUNDAMENTALS_BOARD_STRUCTURE` | To document | — |
-
-## Single-Raised Pot — OOP
-
-| Module | ID | Status | Version |
-|---|---|---:|---:|
-| C-Bet Flop OOP | `MODULE_SRP_OOP_CBET_FLOP` | Consolidated — documentation pending | — |
-| Second Barrel OOP | `MODULE_SRP_OOP_SECOND_BARREL` | Partially consolidated — value range documented in `05-CBet-OOP-40bb`; bluffs and check pending | 1.1 |
-| Third Barrel OOP | `MODULE_SRP_OOP_THIRD_BARREL` | Partially consolidated — review required | — |
-| Check-Raise Flop Short Stack | `MODULE_SRP_OOP_XR_SHORT` | Consolidated with pending suit validation | — |
-| Check-Raise Flop Deep Stack | `MODULE_SRP_OOP_XR_DEEP` | Not started | — |
-
-## Single-Raised Pot — IP
-
-| Module | ID | Status | Version |
-|---|---|---:|---:|
-| C-Bet Flop IP | `MODULE_SRP_IP_CBET_FLOP` | Existing knowledge — documentation pending | — |
-| Second Barrel IP | `MODULE_SRP_IP_SECOND_BARREL` | Existing knowledge — documentation pending | — |
-| Third Barrel IP | `MODULE_SRP_IP_THIRD_BARREL` | Existing knowledge — documentation pending | — |
+O detalhe do que falta em cada módulo está no `06-Pendencias.md` dele e em `theory/retomada-main-teoria.md`.
 
 ---
 
-# Module Directory
+# Outras pastas
 
-| Folder | Module |
-|---|---|
-| `01-CBet-IP-Short-Stack` | C-Bet IP Short Stack |
-| `02-CBet-IP-40bb` | C-Bet IP 40bb |
-| `03-Second-Barrel-IP` | Second Barrel IP |
-| `04-Third-Barrel-e-vs-Third-Barrel` | Third Barrel and vs Third Barrel |
-| `05-CBet-OOP-40bb` | C-Bet OOP 40bb + Second Barrel OOP (turn) |
-| `06-XR-SHORT` | Check-Raise Short Stack |
-| `07-XR-DEEP` | Check-Raise Deep Stack |
-| `08-3BET-POT` | 3-Bet Pot |
-| `09-BET-CHECK-BET` | Bet-Check-Bet |
-| `10-MULTIWAY-POT` | Multiway Pot |
-| `11-Value-Bet-Masterclass` | Value Bet Masterclass (cross-module) |
-| `_TEMPLATE` | Template for new modules |
+- `_TEMPLATE/` — esqueleto de módulo (10 arquivos). Copie para criar um módulo novo.
+- `tools/pko/` — estudo PKO em andamento (regra viva, mãos jogadas, árvores do solver).
 
 ---
 
-# Documentation Order
+# Padrão de módulo
 
-The initial migration will follow this order:
-
-1. Structural Board Classification
-2. C-Bet Flop OOP
-3. Second Barrel OOP
-4. Third Barrel OOP
-5. Check-Raise Flop Short Stack
-6. Validated Examples
-7. Pending Validations
-8. Decision Engine Rules
-9. Trainer Exercises
+`README.md`, `01-Guideline.md`, `02-VideoAulas.md`, `03-Solver.md`, `04-Exercicios.md`, `05-Regras-Consolidadas.md`, `06-Pendencias.md`, `07-Changelog.md`, `08-Referencias.md` e `09-Decisoes.md`. Função e convenções de cada um em `theory/CLAUDE.md`.
 
 ---
 
-# Status Definitions
+# Como colar uma aula nova
 
-## Consolidated
-
-The strategy has been studied, discussed and validated sufficiently to become official theory.
-
-## Partially Consolidated
-
-Some sections are validated, but the complete module still requires review.
-
-## In Study
-
-The module is currently being studied and tested.
-
-## Pending Validation
-
-A specific point requires instructor, solver or additional source confirmation.
-
-## Not Started
-
-The module has not yet entered the formal study process.
-
-## Deprecated
-
-The module or strategy is no longer recommended but remains stored historically.
-
----
-
-# Source of Truth
-
-The GitHub repository is the official long-term source of truth.
-
-Chats are used for:
-
-- Study
-- Discussion
-- Exercises
-- Corrections
-- Validation
-
-A concept becomes official only after it is transferred to the Knowledge Base with:
-
-- Scope
-- Status
-- Version
-- Sources
-- Changelog
+1. Abra o chat do lado do módulo (PRÉ ou PÓS) com a mensagem inicial de `theory/MAPA-PRE-POS.md`.
+2. Diga o módulo de destino (ou peça um módulo novo ao MAIN CHAT TEORIA, que copia o `_TEMPLATE/`).
+3. Cole a transcrição (.txt), a legenda (.srt) e, se houver, o guideline e as telas.
+4. O chat segue "Como processar uma aula nova" do `theory/CLAUDE.md`, trabalha numa branch `theory/pre-...` ou `theory/pos-...` e abre um PR para revisão.
