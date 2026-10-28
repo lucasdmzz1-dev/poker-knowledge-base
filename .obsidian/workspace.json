@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "5d38cfa0c45d2690",
+    "type": "split",
+    "children": [
+      {
+        "id": "c74b1f82ed23fd82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "953898d6457849a9",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "72c6b8f94da2ae8e",
+    "type": "split",
+    "children": [
+      {
+        "id": "38bbe0c9f7186dd0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "227534c91613f34b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "451e6ec2bd07335f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "35efff23b5ba9255",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a527399f394e41cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "aa4c5ed59dfb27f0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e453a670fe844ede",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos"
+            }
+          },
+          {
+            "id": "15fa28b454ea7919",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "309846d18dce866a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "ddf1d47d0a914f31",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "96d9ac1afae17b84",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "953898d6457849a9",
+  "lastOpenFiles": [
+    "coaching/stats/estudos-de-ranges/README.md",
+    "theory/03-Second-Barrel-IP/07-Changelog.md",
+    "theory/04-Third-Barrel-e-vs-Third-Barrel/04-Exercicios.md",
+    "theory/04-Third-Barrel-e-vs-Third-Barrel/02-VideoAulas.md",
+    "theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline.md",
+    "theory/_TEMPLATE/05-Regras-Consolidadas.md",
+    "theory/_TEMPLATE/04-Exercicios.md",
+    "theory/_TEMPLATE/02-VideoAulas.md",
+    "theory/_TEMPLATE/01-Guideline.md"
+  ]
+}
