@@ -54,7 +54,16 @@ Ainda não existem módulos próprios de pré-flop para o torneio em geral (RFI/
 | `08-Referencias.md` | Fontes | Lista de fontes e ordem de prioridade |
 | `09-Decisoes.md` | Meta-decisões | Decisões numeradas sobre como o módulo foi estruturado |
 
-Ordem de prioridade em caso de conflito entre fontes: correção do instrutor, solver, videoaula, guideline, exercícios.
+Ordem de prioridade em caso de conflito entre fontes (vale para todos os módulos, decidida em 28/10/2026):
+
+1. Esclarecimento do autor do KB (inclui as notas próprias dele, quando são a fonte do módulo).
+2. Correção do instrutor.
+3. Solver.
+4. Videoaula (fala, transcrição e anotações do instrutor na aula).
+5. Guideline.
+6. Exercícios.
+
+Dados de field (MDA, stats, HUD) não são fonte de regra: só apoiam. Quando, dentro da mesma aula, a fala e o material escrito (anotações, imagem) divergem, o módulo registra em `09-Decisoes.md` qual vale. Cada `08-Referencias.md` mostra como as fontes do módulo entram nessa ordem.
 
 ## Estilo dos arquivos
 

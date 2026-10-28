@@ -53,6 +53,12 @@ Toda nova informação (stack curto, bolha, outras posições) deve passar por:
 
 ---
 
+# Decisão 8 — Ordem de prioridade das fontes
+
+Em 28/10/2026, o autor do KB decidiu padronizar a ordem de prioridade das fontes na ordem geral do `theory/CLAUDE.md`: esclarecimento do autor do KB, correção do instrutor, solver, videoaula, guideline, exercícios. O encaixe das fontes deste módulo está em `08-Referencias.md`. Nada muda na prática: as notas do usuário contam como fonte do autor do KB, e as árvores e testes como solver.
+
+---
+
 # Estado Atual
 
 Módulo estruturado (v1.0), com os 10 arquivos. Pendências em 06-Pendencias.md.

@@ -106,4 +106,4 @@ Atualizar os arquivos para a v1.2 e explicar a diferença de 203 para 208 nós (
 
 Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
 
-O `08-Referencias.md` usa: esclarecimentos do autor do KB, notas do usuário, árvores do Trainer, testes no Trainer. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. Decidir (MAIN CHAT TEORIA) se o módulo passa a seguir a ordem geral ou se mantém a exceção, registrando o motivo em `09-Decisoes.md`. Nada foi alterado.
+O `08-Referencias.md` usa: esclarecimentos do autor do KB, notas do usuário, árvores do Trainer, testes no Trainer. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. **Resolvida (28/10/2026):** o autor do KB decidiu seguir a ordem geral, com o autor do KB em 1º. Ver `08-Referencias.md` e `09-Decisoes.md`.

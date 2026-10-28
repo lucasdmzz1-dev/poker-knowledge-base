@@ -208,7 +208,7 @@ A ordem do módulo está invertida em relação à geral: a correção do instru
 
 ## Decisão:
 
-Pendente (MAIN CHAT TEORIA). Nada foi alterado.
+Resolvida (28/10/2026): seguir a ordem geral do KB, com o autor do KB em 1º. Ver `08-Referencias.md` e a decisão 07 de `09-Decisoes.md`.
 
 
 ---

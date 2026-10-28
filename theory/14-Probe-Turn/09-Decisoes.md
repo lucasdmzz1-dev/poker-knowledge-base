@@ -70,6 +70,12 @@ Toda nova informação (outros boards e stacks) deve passar por:
 
 ---
 
+# Decisão 11 — Ordem de prioridade das fontes
+
+Em 28/10/2026, o autor do KB decidiu padronizar a ordem de prioridade das fontes na ordem geral do `theory/CLAUDE.md`: esclarecimento do autor do KB, correção do instrutor, solver, videoaula, guideline, exercícios. O encaixe das fontes deste módulo está em `08-Referencias.md`. A Decisão 2 (as anotações valem mais que a fala) continua valendo: as duas são da mesma aula.
+
+---
+
 # Estado Atual
 
 Módulo estruturado com:

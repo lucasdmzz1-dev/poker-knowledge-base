@@ -47,6 +47,12 @@ Pendentes (ver 06-Pendencias.md):
 
 ---
 
+# Versão 1.1
+
+Ordem de prioridade das fontes padronizada na ordem geral do `theory/CLAUDE.md` (decisão do autor do KB, 28/10/2026). `08-Referencias.md` e `09-Decisoes.md` atualizados, e a pendência correspondente resolvida. Nenhuma regra de estratégia mudou.
+
+---
+
 # Próximas Atualizações
 
 Adicionar:

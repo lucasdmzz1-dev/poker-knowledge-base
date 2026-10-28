@@ -32,12 +32,24 @@ Cruzamento com os módulos 05 (C-Bet OOP), 06 e 07 (XR), 10 (Multiway) e 11 (Val
 
 # Ordem de prioridade
 
-Em caso de conflito:
+Ordem geral do KB (`theory/CLAUDE.md`, padronizada em 28/10/2026):
 
 1. Esclarecimentos do autor do KB.
-2. Anotações do instrutor.
-3. Aula (fala do instrutor).
-4. Exercícios.
+2. Correção do instrutor.
+3. Solver.
+4. Videoaula.
+5. Guideline.
+6. Exercícios.
+
+Como as fontes deste módulo entram nela:
+
+- Autor do KB: esclarecimentos.
+- Correção do instrutor: não houve.
+- Solver: a aula não usa solver.
+- Videoaula: anotações do instrutor e fala. Dentro da aula, as anotações valem mais que a fala (Decisão 2, mantida).
+- Guideline: não há guideline do instrutor neste módulo.
+- Exercícios: os 28 exercícios.
+
 
 ---
 
