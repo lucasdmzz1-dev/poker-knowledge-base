@@ -55,3 +55,15 @@ A grade célula a célula (campo `grid`) passa do limite de saída. Para gravá-
 - [ ] RP contra SB e BB
 - [ ] classes (10) e, se der, grade de 169
 - [ ] soma da grade confere com os totais
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[coaching/stats/estudos-de-ranges/README|coaching/stats/estudos-de-ranges]]
+
+<!-- graphify-links:end -->

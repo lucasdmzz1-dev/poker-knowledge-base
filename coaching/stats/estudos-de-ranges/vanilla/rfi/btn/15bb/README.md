@@ -50,3 +50,23 @@ Perguntas que a coleta deve responder:
 - O all-in sobe quando SB e BB são curtos (menos fold equity no raise) ou quando cobrem o BTN?
 - A média da mesa e a fase mudam o open total ou só a divisão entre raise e all-in?
 - Quais classes de mão trocam de raise para all-in?
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[coaching/stats/estudos-de-ranges/README|coaching/stats/estudos-de-ranges]]
+
+**Nesta pasta:**
+
+- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/arvores/10057|arvores/10057]]
+- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/arvores/3336|arvores/3336]]
+- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/arvores/3411|arvores/3411]]
+- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/arvores/4772|arvores/4772]]
+- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/arvores/7211|arvores/7211]]
+
+<!-- graphify-links:end -->
