@@ -74,10 +74,22 @@ Os módulos 12 e 13 continuam sendo lidos juntos (ver `theory/CLAUDE.md`).
 5. **Módulo novo:** é criado pelo MAIN CHAT TEORIA a partir do `_TEMPLATE`, já colocado num dos lados deste mapa. Depois o chat do lado assume.
 6. **Branch e PR separados por chat.** Prefixo de branch: `theory/pre-...`, `theory/pos-...` ou `theory/main-...`.
 7. **Stats, HUD e leaks** não entram em nenhum dos dois: são do chat STATS.
+8. **Economia de contexto (todos os chats):** nunca reler a teoria inteira (custa ~400k tokens). Para pergunta de conteúdo, rodar `graphify query "..."` primeiro e ler só os trechos apontados. Ler um módulo por vez e só os arquivos que vão ser editados. Varredura de muitos arquivos vai para um subagente. Ao fechar um bloco de trabalho, commitar e começar uma sessão nova.
+9. **Arquivo de retomada por chat:** o MAIN usa `theory/retomada-main-teoria.md`; o PRÉ usa `theory/tools/pko/retomada-pko.md` para o PKO. Cada chat atualiza o seu no fim da sessão.
 
 ---
 
 # Mensagens iniciais
+
+Se o `graphify` não estiver instalado na sessão (ambiente na nuvem): `uv tool install graphifyy` e `export PATH="$HOME/.local/bin:$PATH"`.
+
+## MAIN CHAT TEORIA
+
+```
+MAIN CHAT TEORIA do Poker Knowledge Base. Sou Lucas; respostas diretas, em português, com termos de poker em inglês.
+Leia só `theory/CLAUDE.md`, `theory/MAPA-PRE-POS.md` e `theory/retomada-main-teoria.md`. Não releia os módulos inteiros: use `graphify query` e leia só o que for preciso.
+Hoje quero: [tarefa].
+```
 
 ## Chat PRÉ-FLOP
 
@@ -85,6 +97,7 @@ Os módulos 12 e 13 continuam sendo lidos juntos (ver `theory/CLAUDE.md`).
 Chat PRÉ-FLOP da teoria do Poker Knowledge Base. Sou Lucas; respostas diretas, em português, com termos de poker em inglês.
 Leia primeiro `theory/CLAUDE.md` e `theory/MAPA-PRE-POS.md` e siga as regras deles.
 Você edita só os módulos PRÉ (12, 13, 16 e futuros de RFI, 3bet e squeeze) e `theory/tools/pko/`.
+Não leia a teoria inteira: use `graphify query` e leia só os arquivos do módulo de hoje que forem necessários.
 Pontes com o PÓS: 08, 10, 12 Parte 9, 13 Regra 2, 16, 14 e 15. Se mudar algo que toca uma ponte, registre em `06-Pendencias.md` do módulo PÓS com o título "Ponte PRÉ→PÓS:".
 Arquivos comuns (CLAUDE.md, README.md, mapa, _TEMPLATE) são do MAIN CHAT TEORIA. Stats, HUD e leaks são do chat STATS.
 Hoje quero trabalhar no módulo: [nome do módulo / aula nova].
@@ -96,6 +109,7 @@ Hoje quero trabalhar no módulo: [nome do módulo / aula nova].
 Chat PÓS-FLOP da teoria do Poker Knowledge Base. Sou Lucas; respostas diretas, em português, com termos de poker em inglês.
 Leia primeiro `theory/CLAUDE.md` e `theory/MAPA-PRE-POS.md` e siga as regras deles.
 Você edita só os módulos PÓS (01 a 11, 14 e 15).
+Não leia a teoria inteira: use `graphify query` e leia só os arquivos do módulo de hoje que forem necessários.
 Pontes com o PRÉ: 08, 10, 12 Parte 9, 13 Regra 2, 16, 14 e 15. Se mudar algo que toca uma ponte, registre em `06-Pendencias.md` do módulo PRÉ com o título "Ponte PÓS→PRÉ:".
 Arquivos comuns (CLAUDE.md, README.md, mapa, _TEMPLATE) são do MAIN CHAT TEORIA. Stats, HUD e leaks são do chat STATS.
 Hoje quero trabalhar no módulo: [nome do módulo / aula nova].

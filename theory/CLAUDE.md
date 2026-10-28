@@ -104,6 +104,8 @@ A teoria é trabalhada em três chats, definidos em `theory/MAPA-PRE-POS.md` (le
 
 Cada chat edita só os módulos do seu lado. Mudança que toca uma ponte (08, 10, 12 Parte 9, 13 Regra 2, 16, 14 e 15) vira item em `06-Pendencias.md` do módulo do outro lado, com o título `Ponte PRÉ→PÓS:` ou `Ponte PÓS→PRÉ:`. Detalhes e mensagens iniciais de cada chat no mapa.
 
+Para economizar contexto: não releia a teoria inteira. O MAIN CHAT TEORIA começa por `theory/retomada-main-teoria.md`; todos os chats usam `graphify query` antes de abrir arquivos e leem só o módulo do dia.
+
 ## Módulos que devem ser lidos juntos
 
 - **Reta final = módulos 12 e 13.** O módulo 13 (ICM e Risk Premium) é complemento do módulo 12 (Reta Final). Sempre que a tarefa envolver reta final, leia e considere os dois: o 12 diz o que fazer em cada spot, e o 13 explica o risk premium por trás e como ajustar conforme quem cobre quem. Ao criar ou alterar conteúdo de um deles, verifique se o outro precisa de atualização ou de referência cruzada.
