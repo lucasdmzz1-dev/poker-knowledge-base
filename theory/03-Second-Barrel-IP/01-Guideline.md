@@ -255,6 +255,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 - [[theory/03-Second-Barrel-IP/07-Changelog|07-Changelog]]
 - [[theory/03-Second-Barrel-IP/08-Referencias|08-Referencias]]
 - [[theory/03-Second-Barrel-IP/09-Decisoes|09-Decisoes]]
+- [[theory/03-Second-Barrel-IP/README|README]]
 
 **Outros módulos:**
 

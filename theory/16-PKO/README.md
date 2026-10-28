@@ -114,6 +114,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 - [[theory/16-PKO/07-Changelog|07-Changelog]]
 - [[theory/16-PKO/08-Referencias|08-Referencias]]
 - [[theory/16-PKO/09-Decisoes|09-Decisoes]]
+- [[theory/16-PKO/CLAUDE|CLAUDE]]
 - [[theory/16-PKO/tools/pko/pko-conhecimento|tools/pko/pko-conhecimento]]
 - [[theory/16-PKO/tools/pko/pko-maos-dicionario|tools/pko/pko-maos-dicionario]]
 - [[theory/16-PKO/tools/pko/pko-solver-playbook|tools/pko/pko-solver-playbook]]

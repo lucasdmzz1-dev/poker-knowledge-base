@@ -26,3 +26,21 @@ Vanilla:
 
 PKO:
 - nenhuma ainda
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[README|Início]]
+
+**Nesta pasta:**
+
+- [[coaching/stats/estudos-de-ranges/dicionario-arvores-rfi|dicionario-arvores-rfi]]
+- [[coaching/stats/estudos-de-ranges/playbook-coleta-rfi|playbook-coleta-rfi]]
+- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/README|vanilla/rfi/btn/15bb]]
+
+<!-- graphify-links:end -->
