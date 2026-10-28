@@ -11,7 +11,7 @@ Versão atual: **v3** (27/10/2026, testada em 100 mãos; ver seção 8 para o qu
 - Hero no BTN, diante de **um único open** (UTG1 a CO), PKO 50%. Early e Mid do Trainer (field restante de ~15% a 95%). Nenhum outro spot foi testado (blinds, contra 3bet e squeeze não valem).
 - Ações do Trainer: FOLD, CALL, RAISE x e ALL IN.
 
-## 2. Regra de decisão (v2)
+## 2. Regra de decisão (base da v2; a v3 acrescenta o stack curto e o shove de blocker, ver seção 3)
 **Passo 1: a mão.**
 - Núcleo: pares 66 ou mais, todos os Ax suited, KQs, KJs, KTs, K9s, QJs, QTs, Q9s, JTs, J9s, T9s, T8s, 98s, 97s, 87s, 86s, 76s, 75s, 65s, 64s, 54s, AKo, AQo, AJo, ATo, KQo, KJo, QJo.
 - Nota: a implementação v2 trata 86s, 75s e 64s como núcleo; nas árvores elas entram no meio da fila (ver abaixo). Isso pode explicar parte dos "QUASE" em 86s.
@@ -64,6 +64,12 @@ v3 em números (100 mãos): precisão (perfeito + quase) de 86%, EV perdido de 0
 - Com 50 mãos, diferenças de 4 a 6 pontos podem ser sorte. Repetir antes de confiar.
 - As árvores usadas para estimar a largura vêm de 52 árvores; faltam bolha, bounties de 3× a 5× o inicial e stacks curtos. Isso pode mudar com mais coleta.
 
+## 7. Formato do registro por mão
+Ver `pko-maos-dicionario.md` (colunas, como achar um cenário e o que já está preenchido). O arquivo `pko-maos-jogadas.csv` tem 42 colunas e 170 mãos (sessões 1 e 2 parciais, sessão 3 completa): identificação, configuração do Trainer, torneio, mesa, RP, nó do solver, mão, previsão e resultado.
+- Configuração dos testes até aqui: **Facing RFI, RNG OFF, Close Decisions** (modo de decisões próximas: muitas mãos marginais). O placar não é comparável com o de um modo comum.
+- Sessões 1 e 2 juntas, segundo o Trainer: 70 mãos, precisão de 84%, 53 PERFEITO, 6 QUASE, 3 IMPRECISO, 0 ERRO e 8 BLUNDER, −0,80bb de EV perdido.
+- Cópia das 50 mãos da v2 no navegador: `claude_pko_hands_s2`.
+
 ## 8. O que mudar na v3.1 (hipóteses a testar, não regras)
 1. Tirar o shove de blocker (A5o a A2o): errou 2 em 2.
 2. Não apertar as marginais Kx e Qx suited (K2s a K5s, Q3s a Q8s) quando o field restante é de 50% ou mais **e** o hero tem pelo menos 0,9× o stack do opener: nesses nós o solver paga. Testar com mais mãos.
@@ -71,9 +77,3 @@ v3 em números (100 mãos): precisão (perfeito + quase) de 86%, EV perdido de 0
 4. Suited broadways e Ax suited (A6s, J8s, AQo) podem dar raise contra LJ e MP quando o hero está mais fundo: testar antes de adotar.
 5. Stack curto do hero (25bb ou menos): ainda sem teste (nenhuma mão apareceu).
 6. Registrar sempre a `config_trainer` (a da sessão 3 não foi confirmada).
-
-## 7. Formato do registro por mão
-Ver `pko-maos-dicionario.md` (colunas, como achar um cenário e o que já está preenchido). O arquivo `pko-maos-jogadas.csv` tem 42 colunas e 170 mãos (sessões 1 e 2 parciais, sessão 3 completa): identificação, configuração do Trainer, torneio, mesa, RP, nó do solver, mão, previsão e resultado.
-- Configuração dos testes até aqui: **Facing RFI, RNG OFF, Close Decisions** (modo de decisões próximas: muitas mãos marginais). O placar não é comparável com o de um modo comum.
-- Sessões 1 e 2 juntas, segundo o Trainer: 70 mãos, precisão de 84%, 53 PERFEITO, 6 QUASE, 3 IMPRECISO, 0 ERRO e 8 BLUNDER, −0,80bb de EV perdido.
-- Cópia das 50 mãos da v2 no navegador: `claude_pko_hands_s2`.

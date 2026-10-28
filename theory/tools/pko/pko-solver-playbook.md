@@ -44,8 +44,8 @@ Metadados do spot (stacks, bounties, pote, % do field, stack médio): ler pelo `
 Hero (BTN): stack, bounty. Opener: posição, stack, bounty, tamanho do open. SB e BB: stack e bounty (stacks atrás). Menor stack da mesa. Pote (dead money). % de field left e stack médio. Fase. Fator progressivo. RP contra o opener (matriz de Risk Premium). Saída: fold, call e 3bet totais, mais as 10 classes acima.
 
 ## O que já foi coletado (sessão de 27/10/2026)
-- #5844: Bounty 50%, Early, BTN 48bb contra CO 46,6bb, bounties de $5. Totais: fold 72,7%, call 20,7%, 3bet 6,7%. Grade completa em `dash-data/pko_btn_vs_co_early50_48bb.json` (5% de precisão).
-- #7067: Bounty, 43% do field, média 44bb, BTN 52,8bb contra CO 52,6bb, bounties de $125 a $375, SB 14,8bb, BB 27,9bb. Totais: fold 69,4%, call 17,1%, 3bet 13,5%. Grade em `dash-data/pko_btn_vs_co_7067.json`.
+- #5844: Bounty 50%, Early, BTN 48bb contra CO 46,6bb, bounties de $5. Totais: fold 72,7%, call 20,7%, 3bet 6,7%. Grade completa em `coaching/stats/dados/pko_btn_vs_co_early50_48bb.json` (5% de precisão).
+- #7067: Bounty, 43% do field, média 44bb, BTN 52,8bb contra CO 52,6bb, bounties de $125 a $375, SB 14,8bb, BB 27,9bb. Totais: fold 69,4%, call 17,1%, 3bet 13,5%. Grade em `coaching/stats/dados/pko_btn_vs_co_7067.json`.
 - Diferença: o 3bet dobra (6,7% para 13,5%). AQo passa de 100% call para 100% 3bet. KJs, JTs, K8s e 97s viram 3bet. A5o, A7o e A8o entram como blefe de 3bet.
 - Base Vanilla (ChipEV 40bb, GTO Wizard): BTN contra CO, fold 75,1%, call 15,1%, 3bet 9,8%.
 
