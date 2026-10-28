@@ -62,3 +62,15 @@ Campo sem leitura fica `null` no JSON e "pendente" na ficha. Nunca preencher por
 - **Cabeçalho incompleto:** nem toda árvore mostra SI, KOI (PKO) ou ante. Deixar `null`.
 - **Conferir o tipo antes de gravar:** uma árvore Bounty nunca entra numa pasta `vanilla/`, e vice-versa. Se a busca misturar os dois, separar pelo filtro de tipo.
 - **Fase:** `fase_filtro` é o filtro marcado na busca. A fase real vem de `pct`, `left` e `paid`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[coaching/stats/estudos-de-ranges/README|coaching/stats/estudos-de-ranges]]
+
+<!-- graphify-links:end -->
