@@ -55,7 +55,7 @@ Pela Decisão 3 a imagem prevalece sobre a fala, então as tabelas devem estar c
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/15-Bet-vs-Missed/README|README]]
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
 
 **Módulos citados no texto:** [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]]
 

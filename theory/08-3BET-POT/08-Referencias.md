@@ -228,6 +228,8 @@ Nenhuma regra nova deve ser criada sem referência ou decisão registrada.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/08-3BET-POT/README|README]] · [[theory/08-3BET-POT/06-Pendencias|06-Pendencias]] · [[theory/08-3BET-POT/01-Guideline|01-Guideline]]
+**Pasta:** [[theory/08-3BET-POT/README|theory/08-3BET-POT]]
+
+**Relacionadas no mesmo módulo:** [[theory/08-3BET-POT/06-Pendencias|06-Pendencias]] · [[theory/08-3BET-POT/01-Guideline|01-Guideline]]
 
 <!-- graphify-links:end -->

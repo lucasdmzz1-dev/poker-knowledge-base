@@ -125,7 +125,9 @@ Adicionar:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]] · [[theory/14-Probe-Turn/04-Exercicios|04-Exercicios]] · [[theory/14-Probe-Turn/10-Como-Jogar|10-Como-Jogar]]
+**Pasta:** [[theory/14-Probe-Turn/README|theory/14-Probe-Turn]]
+
+**Relacionadas no mesmo módulo:** [[theory/14-Probe-Turn/03-Solver|03-Solver]] · [[theory/14-Probe-Turn/04-Exercicios|04-Exercicios]] · [[theory/14-Probe-Turn/10-Como-Jogar|10-Como-Jogar]]
 
 **Módulos citados no texto:** [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]]
 

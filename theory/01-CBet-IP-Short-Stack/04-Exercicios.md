@@ -275,7 +275,9 @@ Ver o Turn frequentemente possui valor superior a apostar automaticamente.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+**Pasta:** [[theory/01-CBet-IP-Short-Stack/README|theory/01-CBet-IP-Short-Stack]]
+
+**Relacionadas no mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|05-Regras-Consolidadas]]
 
 **Outros módulos:**
 

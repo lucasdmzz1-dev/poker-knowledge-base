@@ -81,6 +81,6 @@ Hoje quero: [tarefa].
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/README|README]]
+**Pasta:** [[theory/README|theory]]
 
 <!-- graphify-links:end -->

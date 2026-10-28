@@ -73,6 +73,8 @@ Adicionar:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/09-Decisoes|09-Decisoes]]
+**Pasta:** [[theory/01-CBet-IP-Short-Stack/README|theory/01-CBet-IP-Short-Stack]]
+
+**Relacionadas no mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/09-Decisoes|09-Decisoes]]
 
 <!-- graphify-links:end -->

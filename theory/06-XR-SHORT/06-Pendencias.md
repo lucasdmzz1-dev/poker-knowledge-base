@@ -65,6 +65,8 @@ Qualquer nova aula deve atualizar:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/06-XR-SHORT/README|README]] · [[theory/06-XR-SHORT/01-Guideline|01-Guideline]]
+**Pasta:** [[theory/06-XR-SHORT/README|theory/06-XR-SHORT]]
+
+**Relacionadas no mesmo módulo:** [[theory/06-XR-SHORT/01-Guideline|01-Guideline]]
 
 <!-- graphify-links:end -->

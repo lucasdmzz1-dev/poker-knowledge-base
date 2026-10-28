@@ -72,7 +72,9 @@ O tema comum de todas as 19 mãos, segundo o fechamento da aula, foi a construç
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]]
+**Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
+
+**Relacionadas no mesmo módulo:** [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]]
 
 **Outros módulos:**
 

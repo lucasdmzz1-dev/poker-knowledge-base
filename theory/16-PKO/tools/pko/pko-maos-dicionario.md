@@ -44,6 +44,8 @@ Antes de cada ação, ler e gravar o cabeçalho (ID, % restante, restantes, pago
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/08-Referencias|08-Referencias]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]] · [[theory/16-PKO/06-Pendencias|06-Pendencias]] · [[theory/16-PKO/07-Changelog|07-Changelog]]
+**Pasta:** [[theory/16-PKO/README|theory/16-PKO]]
+
+**Relacionadas no mesmo módulo:** [[theory/16-PKO/08-Referencias|08-Referencias]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]] · [[theory/16-PKO/06-Pendencias|06-Pendencias]] · [[theory/16-PKO/07-Changelog|07-Changelog]] · [[theory/16-PKO/09-Decisoes|09-Decisoes]]
 
 <!-- graphify-links:end -->

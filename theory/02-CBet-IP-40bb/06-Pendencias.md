@@ -63,7 +63,9 @@ Uma pendência somente poderá ser considerada resolvida quando validada por uma
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/02-CBet-IP-40bb/README|README]] · [[theory/02-CBet-IP-40bb/01-Guideline|01-Guideline]]
+**Pasta:** [[theory/02-CBet-IP-40bb/README|theory/02-CBet-IP-40bb]]
+
+**Relacionadas no mesmo módulo:** [[theory/02-CBet-IP-40bb/01-Guideline|01-Guideline]]
 
 **Outros módulos:**
 

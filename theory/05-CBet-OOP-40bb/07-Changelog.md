@@ -116,7 +116,9 @@ Adicionar:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/05-CBet-OOP-40bb/README|README]] · [[theory/05-CBet-OOP-40bb/01-Guideline|01-Guideline]]
+**Pasta:** [[theory/05-CBet-OOP-40bb/README|theory/05-CBet-OOP-40bb]]
+
+**Relacionadas no mesmo módulo:** [[theory/05-CBet-OOP-40bb/01-Guideline|01-Guideline]]
 
 **Módulos citados no texto:** [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]] · [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]]
 

@@ -478,7 +478,9 @@ Cada árvore deve ser estudada separadamente.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/08-3BET-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/08-3BET-POT/03-Solver|03-Solver]] · [[theory/08-3BET-POT/README|README]] · [[theory/08-3BET-POT/02-VideoAulas|02-VideoAulas]] · [[theory/08-3BET-POT/04-Exercicios|04-Exercicios]]
+**Pasta:** [[theory/08-3BET-POT/README|theory/08-3BET-POT]]
+
+**Relacionadas no mesmo módulo:** [[theory/08-3BET-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/08-3BET-POT/03-Solver|03-Solver]] · [[theory/08-3BET-POT/02-VideoAulas|02-VideoAulas]] · [[theory/08-3BET-POT/04-Exercicios|04-Exercicios]]
 
 **Outros módulos:**
 

@@ -181,7 +181,7 @@ Adicionar futuramente:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|README]]
+**Pasta:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|theory/04-Third-Barrel-e-vs-Third-Barrel]]
 
 **Outros módulos:**
 

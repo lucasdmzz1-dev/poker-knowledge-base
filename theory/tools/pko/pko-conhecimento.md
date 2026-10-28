@@ -117,6 +117,8 @@ Cuidados: nós com hero curto têm all-in na grade (cor diferente), por isso 10 
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]]
+**Pasta:** [[theory/README|theory]]
+
+**Relacionadas no mesmo módulo:** [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]]
 
 <!-- graphify-links:end -->

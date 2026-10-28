@@ -86,6 +86,8 @@ Ver `pko-maos-dicionario.md` (colunas, como achar um cenário e o que já está 
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]]
+**Pasta:** [[theory/README|theory]]
+
+**Relacionadas no mesmo módulo:** [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]]
 
 <!-- graphify-links:end -->

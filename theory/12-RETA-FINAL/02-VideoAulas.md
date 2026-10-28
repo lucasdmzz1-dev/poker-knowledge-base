@@ -101,6 +101,8 @@ O instrutor volta ao ponto de partida: o stack ditando a estratégia, a mão cer
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
+**Pasta:** [[theory/12-RETA-FINAL/README|theory/12-RETA-FINAL]]
+
+**Relacionadas no mesmo módulo:** [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
 
 <!-- graphify-links:end -->

@@ -950,6 +950,8 @@ Suited broadway, opener curto e coberto: call. O Trainer deu PERFEITO (EV 0,09).
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]] · [[theory/16-PKO/03-Solver|03-Solver]]
+**Pasta:** [[theory/16-PKO/README|theory/16-PKO]]
+
+**Relacionadas no mesmo módulo:** [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]] · [[theory/16-PKO/03-Solver|03-Solver]]
 
 <!-- graphify-links:end -->

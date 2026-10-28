@@ -70,7 +70,9 @@ Adicionar:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]] · [[theory/15-Bet-vs-Missed/README|README]]
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
+
+**Relacionadas no mesmo módulo:** [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
 
 **Módulos citados no texto:** [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]]
 

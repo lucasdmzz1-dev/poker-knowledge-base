@@ -471,7 +471,9 @@ As pendências abertas estão em `06-Pendencias.md` e as decisões da construç�
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/13-ICM/README|README]] · [[theory/13-ICM/04-Exercicios|04-Exercicios]] · [[theory/13-ICM/03-Solver|03-Solver]] · [[theory/13-ICM/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/13-ICM/02-VideoAulas|02-VideoAulas]]
+**Pasta:** [[theory/13-ICM/README|theory/13-ICM]]
+
+**Relacionadas no mesmo módulo:** [[theory/13-ICM/04-Exercicios|04-Exercicios]] · [[theory/13-ICM/03-Solver|03-Solver]] · [[theory/13-ICM/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/13-ICM/02-VideoAulas|02-VideoAulas]]
 
 **Módulos citados no texto:** [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]] · [[theory/08-3BET-POT/README|08-3BET-POT]] · [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]] · [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]] · [[theory/12-RETA-FINAL/README|12-RETA-FINAL]]
 

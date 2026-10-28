@@ -937,7 +937,9 @@ The template may evolve as new modules reveal additional requirements.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[docs/00-Architecture/KB-002-Domain-Model|KB-002-Domain-Model]] · [[docs/00-Architecture/KB-000-Architecture|KB-000-Architecture]] · [[docs/00-Architecture/KB-001-Project-Architecture|KB-001-Project-Architecture]]
+**Pasta:** [[README|Início]]
+
+**Relacionadas no mesmo módulo:** [[docs/00-Architecture/KB-002-Domain-Model|KB-002-Domain-Model]] · [[docs/00-Architecture/KB-000-Architecture|KB-000-Architecture]] · [[docs/00-Architecture/KB-001-Project-Architecture|KB-001-Project-Architecture]]
 
 **Outros módulos:**
 

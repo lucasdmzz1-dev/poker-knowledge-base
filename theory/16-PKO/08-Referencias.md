@@ -67,7 +67,9 @@ Não adicionar conhecimento externo ao módulo. O que veio de interpretação fi
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/16-PKO/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/16-PKO/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]]
+**Pasta:** [[theory/16-PKO/README|theory/16-PKO]]
+
+**Relacionadas no mesmo módulo:** [[theory/16-PKO/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/16-PKO/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/16-PKO/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]]
 
 **Módulos citados no texto:** [[theory/12-RETA-FINAL/README|12-RETA-FINAL]] · [[theory/13-ICM/README|13-ICM]]
 

@@ -126,6 +126,8 @@ Sobre testar vários sizes, o instrutor explica que o GTO Wizard permite cadastr
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]]
+**Pasta:** [[theory/14-Probe-Turn/README|theory/14-Probe-Turn]]
+
+**Relacionadas no mesmo módulo:** [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]]
 
 <!-- graphify-links:end -->

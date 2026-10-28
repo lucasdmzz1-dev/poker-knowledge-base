@@ -24,6 +24,8 @@ Validar:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/09-BET-CHECK-BET/08-Referencias|08-Referencias]] · [[theory/09-BET-CHECK-BET/README|README]] · [[theory/09-BET-CHECK-BET/06-Pendencias|06-Pendencias]]
+**Pasta:** [[theory/09-BET-CHECK-BET/README|theory/09-BET-CHECK-BET]]
+
+**Relacionadas no mesmo módulo:** [[theory/09-BET-CHECK-BET/08-Referencias|08-Referencias]] · [[theory/09-BET-CHECK-BET/06-Pendencias|06-Pendencias]]
 
 <!-- graphify-links:end -->

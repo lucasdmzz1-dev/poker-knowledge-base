@@ -814,7 +814,9 @@ However, changes must remain:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[docs/00-Architecture/KB-001-Project-Architecture|KB-001-Project-Architecture]] · [[docs/00-Architecture/KB-003-Module-Template|KB-003-Module-Template]]
+**Pasta:** [[README|Início]]
+
+**Relacionadas no mesmo módulo:** [[docs/00-Architecture/KB-001-Project-Architecture|KB-001-Project-Architecture]] · [[docs/00-Architecture/KB-003-Module-Template|KB-003-Module-Template]]
 
 **Outros módulos:**
 

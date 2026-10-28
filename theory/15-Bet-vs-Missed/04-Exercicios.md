@@ -844,6 +844,8 @@ Se a mão faz parte do topo do seu range de check no turn, ela sempre aposta o r
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/15-Bet-vs-Missed/README|README]] · [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]]
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
+
+**Relacionadas no mesmo módulo:** [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]]
 
 <!-- graphify-links:end -->
