@@ -25,10 +25,10 @@ Acompanhamento das stats reais do jogador (prints do Hand2Note, semana a semana)
 4. BTN: pagar mais AQo e ATo, em vez de 3-betar.
 
 ## Estudos de ranges no solver (em andamento)
-Pasta `estudos-de-ranges/`: ranges lidos no solver do 4BET Trainer, uma pasta por situação. Padrão dos dados em `estudos-de-ranges/dicionario-arvores-rfi.md`; coleta em `estudos-de-ranges/playbook-coleta-rfi.md`.
-- **RFI BTN 15bb** (Vanilla, Early, busca "BTN 15"): 5 árvores lidas (#4772, #3336, #10057, #3411, #7211). Open total de 37% a 41% (média 38,9%), raise 2bb de 21,4% e all-in de 17,5% em média.
+Pasta `estudos-de-ranges/`: ranges lidos no solver do 4BET Trainer, uma pasta por situação, separadas em `vanilla/` (sem bounty) e `pko/` (com bounty de cada assento, KOI e fator progressivo). Padrão dos dados em `estudos-de-ranges/dicionario-arvores-rfi.md`; coleta em `estudos-de-ranges/playbook-coleta-rfi.md`.
+- **RFI BTN 15bb Vanilla** (`vanilla/rfi/btn/15bb/`, Early, busca "BTN 15"): 5 árvores lidas (#4772, #3336, #10057, #3411, #7211). Open total de 37% a 41% (média 38,9%), raise 2bb de 21,4% e all-in de 17,5% em média.
 - Comparação com o HUD (RFI do BTN com 15–25bb em 33%, open jam em 5,5%): é só indicativa, porque o HUD mistura 15 a 25bb. O jam é o maior desvio.
-- Próximo passo: completar as 5 árvores (stacks dos 9 assentos, SI, ante, pote, RP contra SB e BB, classes e grade) e ampliar para 15 a 20 árvores. Lista completa no README da situação.
+- Próximo passo: completar as 5 árvores (stacks dos 9 assentos, SI, ante, pote, RP contra SB e BB, classes e grade) e ampliar para 15 a 20 árvores. Lista completa no README da situação. Nenhuma situação de PKO lida ainda.
 
 Limite de leitura: contra opens mais cedo o range do solver é mais curto, então parte dos folds pode estar certa. Mãos com poucas ocorrências ficam em cinza no mapa.
 

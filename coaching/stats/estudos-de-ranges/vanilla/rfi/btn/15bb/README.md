@@ -1,4 +1,4 @@
-# RFI BTN 15bb
+# RFI BTN 15bb (Vanilla)
 
 Situação: BTN com 15bb, todos os jogadores à frente foldaram. Lê-se a frequência de fold, raise 2bb e all-in do BTN.
 
@@ -33,10 +33,10 @@ Situação: BTN com 15bb, todos os jogadores à frente foldaram. Lê-se a frequ�
 
 Média das 5 árvores: open total de 38,9% (de 37,0% a 40,6%), raise 2bb de 21,4% e all-in de 17,5%. O open total varia pouco; o que muda é a divisão entre raise e all-in (de 12/25 a 30/11). Com 5 árvores e sem os stacks dos outros assentos, ainda não dá para dizer o que move essa divisão.
 
-Dados para análise: `dados/arvores.json` (campos em `../../../dicionario-arvores-rfi.md`).
+Dados para análise: `dados/arvores.json` (campos em `../../../../dicionario-arvores-rfi.md`).
 
 ## Próximos passos
-1. **Completar as 5 árvores já lidas** (reabrir pelo `#id`), seguindo `../../../playbook-coleta-rfi.md`:
+1. **Completar as 5 árvores já lidas** (reabrir pelo `#id`), seguindo `../../../../playbook-coleta-rfi.md`:
    - stacks de UTG, UTG1, MP, LJ, HJ, CO, SB e BB;
    - SI, ante e pote antes do BTN;
    - RP do BTN contra SB e BB (e deles contra o BTN);

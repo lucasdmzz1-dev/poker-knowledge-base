@@ -12,7 +12,6 @@
   "campo_n0": 157,
   "media": 54.8,
   "si": null,
-  "koi": null,
   "ante_bb": null,
   "seats": {
    "UTG": null,
@@ -21,10 +20,7 @@
    "LJ": null,
    "HJ": null,
    "CO": null,
-   "BTN": [
-    14.4,
-    null
-   ],
+   "BTN": 14.4,
    "SB": null,
    "BB": null
   },
@@ -54,7 +50,6 @@
   "campo_n0": 193,
   "media": 36.3,
   "si": null,
-  "koi": null,
   "ante_bb": null,
   "seats": {
    "UTG": null,
@@ -63,10 +58,7 @@
    "LJ": null,
    "HJ": null,
    "CO": null,
-   "BTN": [
-    15.9,
-    null
-   ],
+   "BTN": 15.9,
    "SB": null,
    "BB": null
   },
@@ -96,7 +88,6 @@
   "campo_n0": 538,
   "media": 33.0,
   "si": null,
-  "koi": null,
   "ante_bb": null,
   "seats": {
    "UTG": null,
@@ -105,10 +96,7 @@
    "LJ": null,
    "HJ": null,
    "CO": null,
-   "BTN": [
-    14.0,
-    null
-   ],
+   "BTN": 14.0,
    "SB": null,
    "BB": null
   },
@@ -138,7 +126,6 @@
   "campo_n0": 378,
   "media": 53.2,
   "si": null,
-  "koi": null,
   "ante_bb": null,
   "seats": {
    "UTG": null,
@@ -147,10 +134,7 @@
    "LJ": null,
    "HJ": null,
    "CO": null,
-   "BTN": [
-    16.3,
-    null
-   ],
+   "BTN": 16.3,
    "SB": null,
    "BB": null
   },
@@ -180,7 +164,6 @@
   "campo_n0": 238,
   "media": 49.3,
   "si": null,
-  "koi": null,
   "ante_bb": null,
   "seats": {
    "UTG": null,
@@ -189,10 +172,7 @@
    "LJ": null,
    "HJ": null,
    "CO": null,
-   "BTN": [
-    16.3,
-    null
-   ],
+   "BTN": 16.3,
    "SB": null,
    "BB": null
   },

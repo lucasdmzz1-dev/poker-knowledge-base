@@ -4,13 +4,13 @@ Como ler uma árvore de RFI completa (cabeçalho, stacks de todos os assentos, R
 
 ## Antes de começar
 1. Chrome com a extensão Claude in Chrome conectada, na sessão do usuário já logada. Abrir https://4bet-trainer.netlify.app/ numa aba nova do grupo da sessão e clicar em SOLVER.
-2. Conferir os filtros da situação no README dela (tipo, fase, stacks, busca). Não mudar os filtros no meio de uma situação.
+2. Conferir os filtros da situação no README dela (tipo, fase, stacks, busca). Não mudar os filtros no meio de uma situação. O tipo define a pasta: Vanilla em `vanilla/`, Bounty em `pko/` (com o fator progressivo, por exemplo 50%).
 3. Dizer ao usuário qual situação será lida e quantas árvores.
 
 ## Por árvore (nesta ordem)
 1. **Abrir a árvore pela lista** e anotar o `id`.
-2. **Cabeçalho:** estrutura, % do field restante, jogadores restantes, posições pagas, média, SI, KOI e ante. Ler pelo `document.body.innerText`, filtrando as linhas com "%", "bb", "$" e "left".
-3. **Mesa:** stack (bb) e bounty de todos os assentos: UTG, UTG1, MP, LJ, HJ, CO, BTN, SB e BB. Se a mesa tiver menos de 9 assentos, gravar só os que existem e anotar em `obs`.
+2. **Cabeçalho:** estrutura, % do field restante, jogadores restantes, posições pagas, média, SI e ante. **Só PKO:** KOI e fator progressivo. Ler pelo `document.body.innerText`, filtrando as linhas com "%", "bb", "$" e "left".
+3. **Mesa:** stack (bb) de todos os assentos: UTG, UTG1, MP, LJ, HJ, CO, BTN, SB e BB. **Só PKO:** o bounty ($) de cada assento junto do stack. Se a mesa tiver menos de 9 assentos, gravar só os que existem e anotar em `obs`.
 4. **Range do hero:** clicar só no rótulo da posição do hero no card do cabeçalho (nunca em fold, raise ou all-in, que avançam a árvore). Ler fold, raise (com o tamanho) e all-in na faixa "<POS> RANGE".
 5. **Matriz de RP:** ler o RP do hero contra SB e BB, e deles contra o hero.
 6. **Grade:** rodar o script abaixo. Na primeira árvore, conferir quais cores aparecem e qual é a do all-in. Conferir a soma contra os totais do passo 4.
@@ -47,8 +47,10 @@ A grade célula a célula (campo `grid`) passa do limite de saída. Para gravá-
 
 ## Checklist por árvore
 - [ ] id, estrutura, pct, left, paid, media
-- [ ] si, koi, ante (ou `null` se não aparecem)
-- [ ] stacks dos 9 assentos (e bounties, se for Bounty)
+- [ ] tipo conferido (Vanilla → `vanilla/`, Bounty → `pko/`)
+- [ ] si, ante (ou `null` se não aparecem)
+- [ ] stacks dos 9 assentos
+- [ ] só PKO: koi, fator progressivo e bounty dos 9 assentos
 - [ ] f, r (e tamanho), ai
 - [ ] RP contra SB e BB
 - [ ] classes (10) e, se der, grade de 169
