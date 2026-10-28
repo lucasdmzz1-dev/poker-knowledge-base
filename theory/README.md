@@ -2,7 +2,7 @@
 
 **Version:** 1.0  
 **Status:** Active  
-**Last Updated:** 2026-08-04
+**Last Updated:** 2026-10-13
 
 ---
 
@@ -47,7 +47,7 @@ Structured rules for software use will be stored separately in the Decision Engi
 | Module | ID | Status | Version |
 |---|---|---:|---:|
 | C-Bet Flop OOP | `MODULE_SRP_OOP_CBET_FLOP` | Consolidated — documentation pending | — |
-| Second Barrel OOP | `MODULE_SRP_OOP_SECOND_BARREL` | Consolidated — documentation pending | — |
+| Second Barrel OOP | `MODULE_SRP_OOP_SECOND_BARREL` | Partially consolidated — value range documented in `05-CBet-OOP-40bb`; bluffs and check pending | 1.1 |
 | Third Barrel OOP | `MODULE_SRP_OOP_THIRD_BARREL` | Partially consolidated — review required | — |
 | Check-Raise Flop Short Stack | `MODULE_SRP_OOP_XR_SHORT` | Consolidated with pending suit validation | — |
 | Check-Raise Flop Deep Stack | `MODULE_SRP_OOP_XR_DEEP` | Not started | — |
@@ -59,6 +59,25 @@ Structured rules for software use will be stored separately in the Decision Engi
 | C-Bet Flop IP | `MODULE_SRP_IP_CBET_FLOP` | Existing knowledge — documentation pending | — |
 | Second Barrel IP | `MODULE_SRP_IP_SECOND_BARREL` | Existing knowledge — documentation pending | — |
 | Third Barrel IP | `MODULE_SRP_IP_THIRD_BARREL` | Existing knowledge — documentation pending | — |
+
+---
+
+# Module Directory
+
+| Folder | Module |
+|---|---|
+| `01-CBet-IP-Short-Stack` | C-Bet IP Short Stack |
+| `02-CBet-IP-40bb` | C-Bet IP 40bb |
+| `03-Second-Barrel-IP` | Second Barrel IP |
+| `04-Third-Barrel-e-vs-Third-Barrel` | Third Barrel and vs Third Barrel |
+| `05-CBet-OOP-40bb` | C-Bet OOP 40bb + Second Barrel OOP (turn) |
+| `06-XR-SHORT` | Check-Raise Short Stack |
+| `07-XR-DEEP` | Check-Raise Deep Stack |
+| `08-3BET-POT` | 3-Bet Pot |
+| `09-BET-CHECK-BET` | Bet-Check-Bet |
+| `10-MULTIWAY-POT` | Multiway Pot |
+| `11-Value-Bet-Masterclass` | Value Bet Masterclass (cross-module) |
+| `_TEMPLATE` | Template for new modules |
 
 ---
 
