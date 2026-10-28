@@ -72,7 +72,9 @@ Não adicionar conhecimento externo ao módulo. O que veio de interpretação fi
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
+**Pasta:** [[theory/12-RETA-FINAL/README|theory/12-RETA-FINAL]]
+
+**Relacionadas no mesmo módulo:** [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
 
 **Outros módulos:**
 

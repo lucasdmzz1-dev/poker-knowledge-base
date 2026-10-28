@@ -44,8 +44,14 @@ Coming soon.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Outros módulos:**
+**Nesta pasta:**
 
-- [[docs/00-Architecture/KB-001-Project-Architecture|00-Architecture/KB-001-Project-Architecture]]
+- [[coaching/stats/estudos-de-ranges/README|coaching/stats/estudos-de-ranges]]
+- [[coaching/stats/retomada-stats|coaching/stats/retomada-stats]]
+- [[docs/00-Architecture/KB-000-Architecture|docs/00-Architecture/KB-000-Architecture]]
+- [[docs/00-Architecture/KB-001-Project-Architecture|docs/00-Architecture/KB-001-Project-Architecture]]
+- [[docs/00-Architecture/KB-002-Domain-Model|docs/00-Architecture/KB-002-Domain-Model]]
+- [[docs/00-Architecture/KB-003-Module-Template|docs/00-Architecture/KB-003-Module-Template]]
+- [[theory/README|theory]]
 
 <!-- graphify-links:end -->

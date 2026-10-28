@@ -462,7 +462,9 @@ A estratégia C-Bet Short Stack é baseada em:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/01-CBet-IP-Short-Stack/03-Solver|03-Solver]] · [[theory/01-CBet-IP-Short-Stack/04-Exercicios|04-Exercicios]] · [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]]
+**Pasta:** [[theory/01-CBet-IP-Short-Stack/README|theory/01-CBet-IP-Short-Stack]]
+
+**Relacionadas no mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/01-CBet-IP-Short-Stack/03-Solver|03-Solver]] · [[theory/01-CBet-IP-Short-Stack/04-Exercicios|04-Exercicios]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]]
 
 **Outros módulos:**
 

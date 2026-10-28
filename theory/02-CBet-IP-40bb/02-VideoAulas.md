@@ -99,7 +99,9 @@ Construir uma estratégia simples, consistente e de fácil execução, preservan
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/02-CBet-IP-40bb/README|README]] · [[theory/02-CBet-IP-40bb/01-Guideline|01-Guideline]] · [[theory/02-CBet-IP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+**Pasta:** [[theory/02-CBet-IP-40bb/README|theory/02-CBet-IP-40bb]]
+
+**Relacionadas no mesmo módulo:** [[theory/02-CBet-IP-40bb/01-Guideline|01-Guideline]] · [[theory/02-CBet-IP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]]
 
 **Outros módulos:**
 

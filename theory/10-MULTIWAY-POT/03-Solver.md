@@ -37,6 +37,8 @@ A ferramenta usada para validar este módulo foi o GTOWizard, na função 3-way 
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/10-MULTIWAY-POT/README|README]] · [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]] · [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]]
+**Pasta:** [[theory/10-MULTIWAY-POT/README|theory/10-MULTIWAY-POT]]
+
+**Relacionadas no mesmo módulo:** [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]] · [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]]
 
 <!-- graphify-links:end -->

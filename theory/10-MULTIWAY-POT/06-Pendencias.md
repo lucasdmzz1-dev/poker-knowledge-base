@@ -82,6 +82,8 @@ O `08-Referencias.md` coloca o solver (GTOWizard 3-way) acima das correções do
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/10-MULTIWAY-POT/README|README]] · [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]] · [[theory/10-MULTIWAY-POT/07-Changelog|07-Changelog]]
+**Pasta:** [[theory/10-MULTIWAY-POT/README|theory/10-MULTIWAY-POT]]
+
+**Relacionadas no mesmo módulo:** [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]] · [[theory/10-MULTIWAY-POT/07-Changelog|07-Changelog]]
 
 <!-- graphify-links:end -->

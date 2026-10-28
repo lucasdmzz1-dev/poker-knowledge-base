@@ -183,6 +183,6 @@ Impacto no módulo:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/08-3BET-POT/README|README]]
+**Pasta:** [[theory/08-3BET-POT/README|theory/08-3BET-POT]]
 
 <!-- graphify-links:end -->

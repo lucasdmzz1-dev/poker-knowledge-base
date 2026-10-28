@@ -164,7 +164,9 @@ Pense em frequências: o bucket mais alto de cada board tem as mãos mais fortes
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/15-Bet-vs-Missed/README|README]] · [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]]
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
+
+**Relacionadas no mesmo módulo:** [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]]
 
 **Outros módulos:**
 

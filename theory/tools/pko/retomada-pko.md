@@ -40,6 +40,8 @@ Explicações em português, com os termos de poker em inglês (node, range widt
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
+**Pasta:** [[theory/README|theory]]
+
 **Módulos citados no texto:** [[theory/16-PKO/README|16-PKO]]
 
 <!-- graphify-links:end -->

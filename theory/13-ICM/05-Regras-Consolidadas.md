@@ -234,7 +234,9 @@ Antes de qualquer decisão, pergunte: quem me cobre, e há pressão a favor? Que
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/13-ICM/README|README]] · [[theory/13-ICM/01-Guideline|01-Guideline]]
+**Pasta:** [[theory/13-ICM/README|theory/13-ICM]]
+
+**Relacionadas no mesmo módulo:** [[theory/13-ICM/01-Guideline|01-Guideline]]
 
 **Outros módulos:**
 

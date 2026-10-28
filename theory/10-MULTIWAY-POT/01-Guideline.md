@@ -145,7 +145,9 @@ O estudo identificou uma possibilidade de Lead do Small Blind em boards low cone
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/10-MULTIWAY-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]] · [[theory/10-MULTIWAY-POT/README|README]] · [[theory/10-MULTIWAY-POT/09-Decisoes|09-Decisoes]] · [[theory/10-MULTIWAY-POT/03-Solver|03-Solver]]
+**Pasta:** [[theory/10-MULTIWAY-POT/README|theory/10-MULTIWAY-POT]]
+
+**Relacionadas no mesmo módulo:** [[theory/10-MULTIWAY-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]] · [[theory/10-MULTIWAY-POT/09-Decisoes|09-Decisoes]] · [[theory/10-MULTIWAY-POT/03-Solver|03-Solver]]
 
 **Outros módulos:**
 

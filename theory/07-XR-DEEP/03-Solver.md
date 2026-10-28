@@ -385,6 +385,8 @@ A composição do combo importa tanto quanto a categoria da mão.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/07-XR-DEEP/README|README]] · [[theory/07-XR-DEEP/02-VideoAulas|02-VideoAulas]] · [[theory/07-XR-DEEP/04-Exercicios|04-Exercicios]] · [[theory/07-XR-DEEP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/07-XR-DEEP/07-Changelog|07-Changelog]]
+**Pasta:** [[theory/07-XR-DEEP/README|theory/07-XR-DEEP]]
+
+**Relacionadas no mesmo módulo:** [[theory/07-XR-DEEP/02-VideoAulas|02-VideoAulas]] · [[theory/07-XR-DEEP/04-Exercicios|04-Exercicios]] · [[theory/07-XR-DEEP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/07-XR-DEEP/07-Changelog|07-Changelog]] · [[theory/07-XR-DEEP/01-Guideline|01-Guideline]]
 
 <!-- graphify-links:end -->

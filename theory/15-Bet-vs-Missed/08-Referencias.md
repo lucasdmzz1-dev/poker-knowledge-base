@@ -71,7 +71,9 @@ Não adicionar conhecimento externo ao módulo. O que veio de interpretação fi
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]] · [[theory/15-Bet-vs-Missed/README|README]]
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
+
+**Relacionadas no mesmo módulo:** [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
 
 **Módulos citados no texto:** [[theory/02-CBet-IP-40bb/README|02-CBet-IP-40bb]]
 

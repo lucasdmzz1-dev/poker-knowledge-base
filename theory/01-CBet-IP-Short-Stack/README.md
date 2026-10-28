@@ -232,7 +232,19 @@ Ao finalizar este módulo o jogador deve saber:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]]
+**Pasta:** [[theory/README|theory]]
+
+**Nesta pasta:**
+
+- [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]]
+- [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]]
+- [[theory/01-CBet-IP-Short-Stack/03-Solver|03-Solver]]
+- [[theory/01-CBet-IP-Short-Stack/04-Exercicios|04-Exercicios]]
+- [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+- [[theory/01-CBet-IP-Short-Stack/06-Pendencias|06-Pendencias]]
+- [[theory/01-CBet-IP-Short-Stack/07-Changelog|07-Changelog]]
+- [[theory/01-CBet-IP-Short-Stack/08-Referencias|08-Referencias]]
+- [[theory/01-CBet-IP-Short-Stack/09-Decisoes|09-Decisoes]]
 
 **Outros módulos:**
 

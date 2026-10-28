@@ -46,7 +46,9 @@ A aula circulou por profundidades variadas (20bb a 40bb+) sem fixar uma única r
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]]
+**Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
+
+**Relacionadas no mesmo módulo:** [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]]
 
 **Módulos citados no texto:** [[theory/01-CBet-IP-Short-Stack/README|01-CBet-IP-Short-Stack]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|04-Third-Barrel-e-vs-Third-Barrel]]
 

@@ -39,6 +39,8 @@ Cobertura: 208 nós, 52 árvores únicas, 41 nós com a grade de 169 mãos. Fiel
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]]
+**Pasta:** [[theory/README|theory]]
+
+**Relacionadas no mesmo módulo:** [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]]
 
 <!-- graphify-links:end -->

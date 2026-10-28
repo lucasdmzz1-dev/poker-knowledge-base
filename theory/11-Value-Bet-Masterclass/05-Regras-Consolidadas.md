@@ -116,7 +116,9 @@ O size certo é sempre aquele que acompanha a composição real do seu range de 
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]]
+**Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
+
+**Relacionadas no mesmo módulo:** [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]]
 
 **Outros módulos:**
 

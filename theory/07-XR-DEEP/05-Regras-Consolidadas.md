@@ -239,7 +239,9 @@ Perguntar:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/07-XR-DEEP/README|README]] · [[theory/07-XR-DEEP/03-Solver|03-Solver]] · [[theory/07-XR-DEEP/04-Exercicios|04-Exercicios]] · [[theory/07-XR-DEEP/01-Guideline|01-Guideline]] · [[theory/07-XR-DEEP/02-VideoAulas|02-VideoAulas]]
+**Pasta:** [[theory/07-XR-DEEP/README|theory/07-XR-DEEP]]
+
+**Relacionadas no mesmo módulo:** [[theory/07-XR-DEEP/03-Solver|03-Solver]] · [[theory/07-XR-DEEP/04-Exercicios|04-Exercicios]] · [[theory/07-XR-DEEP/01-Guideline|01-Guideline]] · [[theory/07-XR-DEEP/02-VideoAulas|02-VideoAulas]]
 
 **Outros módulos:**
 

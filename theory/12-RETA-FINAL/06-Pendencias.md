@@ -67,6 +67,8 @@ O `08-Referencias.md` usa: esclarecimentos do autor do KB e correções do instr
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
+**Pasta:** [[theory/12-RETA-FINAL/README|theory/12-RETA-FINAL]]
+
+**Relacionadas no mesmo módulo:** [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
 
 <!-- graphify-links:end -->

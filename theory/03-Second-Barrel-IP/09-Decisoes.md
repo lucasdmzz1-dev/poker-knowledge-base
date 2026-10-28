@@ -264,6 +264,8 @@ Adicionar futuramente:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/03-Second-Barrel-IP/01-Guideline|01-Guideline]] · [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/07-Changelog|07-Changelog]]
+**Pasta:** [[theory/03-Second-Barrel-IP/01-Guideline|theory/03-Second-Barrel-IP]]
+
+**Relacionadas no mesmo módulo:** [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/07-Changelog|07-Changelog]]
 
 <!-- graphify-links:end -->

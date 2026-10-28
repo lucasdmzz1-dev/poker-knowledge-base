@@ -80,6 +80,8 @@ O guideline cobre só o range de valor. Falta definir:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/05-CBet-OOP-40bb/README|README]] · [[theory/05-CBet-OOP-40bb/01-Guideline|01-Guideline]] · [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]]
+**Pasta:** [[theory/05-CBet-OOP-40bb/README|theory/05-CBet-OOP-40bb]]
+
+**Relacionadas no mesmo módulo:** [[theory/05-CBet-OOP-40bb/01-Guideline|01-Guideline]] · [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]]
 
 <!-- graphify-links:end -->

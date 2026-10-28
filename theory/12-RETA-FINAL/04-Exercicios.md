@@ -1236,6 +1236,8 @@ Em FT você joga poucas mãos contra cada pessoa. Na primeira vez, assuma que o 
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/06-Pendencias|06-Pendencias]] · [[theory/12-RETA-FINAL/07-Changelog|07-Changelog]]
+**Pasta:** [[theory/12-RETA-FINAL/README|theory/12-RETA-FINAL]]
+
+**Relacionadas no mesmo módulo:** [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/06-Pendencias|06-Pendencias]] · [[theory/12-RETA-FINAL/07-Changelog|07-Changelog]]
 
 <!-- graphify-links:end -->

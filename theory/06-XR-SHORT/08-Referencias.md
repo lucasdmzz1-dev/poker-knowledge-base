@@ -70,7 +70,7 @@ Não adicionar conhecimento externo ao módulo.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/06-XR-SHORT/README|README]]
+**Pasta:** [[theory/06-XR-SHORT/README|theory/06-XR-SHORT]]
 
 **Outros módulos:**
 

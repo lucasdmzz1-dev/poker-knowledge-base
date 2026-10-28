@@ -46,7 +46,9 @@ Padrão observado:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]] · [[theory/12-RETA-FINAL/09-Decisoes|09-Decisoes]]
+**Pasta:** [[theory/12-RETA-FINAL/README|theory/12-RETA-FINAL]]
+
+**Relacionadas no mesmo módulo:** [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]] · [[theory/12-RETA-FINAL/09-Decisoes|09-Decisoes]] · [[theory/12-RETA-FINAL/06-Pendencias|06-Pendencias]]
 
 **Outros módulos:**
 

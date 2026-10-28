@@ -102,6 +102,8 @@ Principais pontos:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/07-XR-DEEP/03-Solver|03-Solver]] · [[theory/07-XR-DEEP/README|README]]
+**Pasta:** [[theory/07-XR-DEEP/README|theory/07-XR-DEEP]]
+
+**Relacionadas no mesmo módulo:** [[theory/07-XR-DEEP/03-Solver|03-Solver]]
 
 <!-- graphify-links:end -->

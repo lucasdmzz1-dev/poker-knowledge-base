@@ -117,7 +117,9 @@ Em torneios com premiação por eliminação (Bounty/KO), deixar de valuebetar u
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/03-Solver|03-Solver]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]] · [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]]
+**Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
+
+**Relacionadas no mesmo módulo:** [[theory/11-Value-Bet-Masterclass/03-Solver|03-Solver]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]] · [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]]
 
 **Outros módulos:**
 
