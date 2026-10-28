@@ -156,3 +156,15 @@ Pot+
 Novas soluções provenientes do Solver deverão ser adicionadas neste documento.
 
 Caso alguma solução entre em conflito com o Guideline ou com as Videoaulas, o conflito deverá ser registrado explicitamente.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|README]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|01-Guideline]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/02-VideoAulas|02-VideoAulas]]
+
+<!-- graphify-links:end -->

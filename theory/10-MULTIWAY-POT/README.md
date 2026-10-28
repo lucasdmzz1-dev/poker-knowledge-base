@@ -95,3 +95,15 @@ Ao finalizar este módulo o jogador deve conseguir:
 # Status
 
 🚧 Em documentação — primeira passada baseada na aula prática. Divisão fina de combos, Solver detalhado e exercícios ainda pendentes.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]] · [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]]
+
+<!-- graphify-links:end -->

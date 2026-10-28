@@ -61,3 +61,19 @@ Em caso de conflito:
 # Regra
 
 Não adicionar conhecimento externo ao módulo.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/06-XR-SHORT/README|README]]
+
+**Outros módulos:**
+
+- [[theory/05-CBet-OOP-40bb/08-Referencias|05-CBet-OOP-40bb · 08-Referencias]]
+
+<!-- graphify-links:end -->

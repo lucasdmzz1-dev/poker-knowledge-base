@@ -78,3 +78,19 @@ O fio condutor de toda a aula é: **capado ou não capado define a estratégia, 
 - A frequência real de aposta do field (35%) é a prova de que o range multiway raramente está tão fraco quanto a antiga estratégia assumia.
 
 Esses três pilares — perspectiva do agressor, perspectiva do IP e perspectiva do Big Blind — resumem a reconstrução apresentada na aula. Divisão fina de combos e solver detalhado por textura ficam para uma próxima etapa do estudo.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]] · [[theory/10-MULTIWAY-POT/08-Referencias|08-Referencias]] · [[theory/10-MULTIWAY-POT/03-Solver|03-Solver]] · [[theory/10-MULTIWAY-POT/README|README]] · [[theory/10-MULTIWAY-POT/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/09-BET-CHECK-BET/README|09-BET-CHECK-BET · README]]
+
+<!-- graphify-links:end -->

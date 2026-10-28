@@ -513,3 +513,22 @@ Inferência a partir da tabela, não está escrita no guideline.
 ## Em aberto
 
 O guideline cobre só o range de valor. Bluffs, semi-bluffs e a composição do check no turn ainda não estão definidos (ver Pendências).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/05-CBet-OOP-40bb/README|README]] · [[theory/05-CBet-OOP-40bb/02-VideoAulas|02-VideoAulas]] · [[theory/05-CBet-OOP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/05-CBet-OOP-40bb/07-Changelog|07-Changelog]] · [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]]
+
+**Módulos citados no texto:** [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]] · [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]]
+
+**Outros módulos:**
+
+- [[theory/06-XR-SHORT/09-Decisoes|06-XR-SHORT · 09-Decisoes]]
+- [[theory/06-XR-SHORT/02-VideoAulas|06-XR-SHORT · 02-VideoAulas]]
+
+<!-- graphify-links:end -->

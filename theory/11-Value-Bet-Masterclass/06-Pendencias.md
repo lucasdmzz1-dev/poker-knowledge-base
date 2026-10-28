@@ -37,3 +37,17 @@ Adicionar exercícios formais seguindo o padrão dos outros módulos, com mãos 
 # 5. Cobertura de profundidades específicas
 
 A aula circulou por profundidades variadas (20bb a 40bb+) sem fixar uma única referência. Vale, no futuro, separar se algum princípio muda significativamente conforme o efetivo (ex: a régua dos dois sizes de river pode precisar de ajuste em stacks muito curtos).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]]
+
+**Módulos citados no texto:** [[theory/01-CBet-IP-Short-Stack/README|01-CBet-IP-Short-Stack]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|04-Third-Barrel-e-vs-Third-Barrel]]
+
+<!-- graphify-links:end -->

@@ -367,3 +367,20 @@ No Short Stack:
 A pergunta é:
 
 "Eu quero realizar essa equity?"
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/04-Exercicios|04-Exercicios]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]]
+
+**Outros módulos:**
+
+- [[theory/02-CBet-IP-40bb/01-Guideline|02-CBet-IP-40bb · 01-Guideline]]
+- [[docs/00-Architecture/KB-002-Domain-Model|00-Architecture/KB-002-Domain-Model]]
+
+<!-- graphify-links:end -->

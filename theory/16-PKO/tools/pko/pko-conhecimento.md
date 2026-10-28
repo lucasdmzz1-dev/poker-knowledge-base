@@ -108,3 +108,15 @@ Ordem de entrada das mãos (terços da frequência que continua: ~24%, ~29%, ~41
 - Só nos ranges mais largos: K2s, Q6s a Q2s, J6s a J4s, T6s, K9o, Q9o, J9o, T9o, 96s, 95s, 85s, 74s, 53s, 43s e Ax offsuit de A8o a A4o.
 
 Cuidados: nós com hero curto têm all-in na grade (cor diferente), por isso 10 grades foram descartadas; os totais (fold e call) vêm do resumo do site e são confiáveis.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/08-Referencias|08-Referencias]] · [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/16-PKO/03-Solver|03-Solver]]
+
+<!-- graphify-links:end -->

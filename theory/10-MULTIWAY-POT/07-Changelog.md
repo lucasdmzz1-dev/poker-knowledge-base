@@ -61,3 +61,15 @@ Adicionar:
 - Resoluções em efetivos menores (20bb, 15bb).
 - Cobertura de River.
 - Exercícios práticos.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/10-MULTIWAY-POT/README|README]] · [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]] · [[theory/10-MULTIWAY-POT/06-Pendencias|06-Pendencias]]
+
+<!-- graphify-links:end -->

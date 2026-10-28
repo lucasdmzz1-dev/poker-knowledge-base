@@ -122,3 +122,15 @@ Com o SB cobrindo o BB, o limp quase desaparece com 16% left (de 44,4% para 2,1%
 # Fechamento da Aula
 
 O instrutor volta à ideia de que a teoria é a base, e que é preciso entendê-la antes de desviar contra um adversário específico. Ele avisa que há ainda assuntos para outras aulas, como o PKO e o short stack na bolha.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/13-ICM/README|README]] · [[theory/13-ICM/01-Guideline|01-Guideline]]
+
+<!-- graphify-links:end -->

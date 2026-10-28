@@ -103,3 +103,19 @@ Ao finalizar este módulo o jogador deve conseguir:
 # Status
 
 Módulo finalizado. Tem 28 exercícios (de conceito e de leitura de situação, com os naipes especificados), um guia de mesa e uma infografia. A aula é um resumo e não usa solver. Ponto em aberto: as sequências com o naipe do board (ver 06-Pendencias.md).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/06-Pendencias|06-Pendencias]] · [[theory/14-Probe-Turn/10-Como-Jogar|10-Como-Jogar]]
+
+**Outros módulos:**
+
+- [[theory/15-Bet-vs-Missed/01-Guideline|15-Bet-vs-Missed · 01-Guideline]]
+
+<!-- graphify-links:end -->

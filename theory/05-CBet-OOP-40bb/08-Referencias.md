@@ -63,3 +63,19 @@ Em caso de conflito:
 Não adicionar conteúdo externo ao módulo.
 
 Toda atualização deve vir das fontes estudadas.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/05-CBet-OOP-40bb/README|README]] · [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]] · [[theory/05-CBet-OOP-40bb/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/06-XR-SHORT/08-Referencias|06-XR-SHORT · 08-Referencias]]
+
+<!-- graphify-links:end -->

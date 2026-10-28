@@ -255,3 +255,15 @@ Adicionar futuramente:
 - Mais árvores de decisão.
 - Integração com Third Barrel.
 - Exemplos completos de linhas Flop → Turn → River.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/03-Second-Barrel-IP/01-Guideline|01-Guideline]] · [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/07-Changelog|07-Changelog]]
+
+<!-- graphify-links:end -->

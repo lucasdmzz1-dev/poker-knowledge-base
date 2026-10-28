@@ -58,3 +58,15 @@ O Contexto do Guideline, o README e a tabela do Resumo operacional falam em **80
 Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
 
 O `08-Referencias.md` usa: esclarecimentos do autor do KB e correções do instrutor (juntos), solver, aula, exercícios. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. **Resolvida (28/10/2026):** o autor do KB decidiu seguir a ordem geral, com o autor do KB em 1º. Ver `08-Referencias.md` e `09-Decisoes.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
+
+<!-- graphify-links:end -->

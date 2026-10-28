@@ -70,3 +70,15 @@ Adicionar:
 - Novas soluções de Solver.
 - Correções futuras do instrutor.
 - Exemplos adicionais de mãos.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|README]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/02-VideoAulas|02-VideoAulas]]
+
+<!-- graphify-links:end -->

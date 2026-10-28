@@ -93,3 +93,15 @@ Principais pontos:
 - Naipes possuem papel fundamental.
 - Offs precisam de estrutura para XR.
 - Draws fortes entram para extrair.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/07-XR-DEEP/03-Solver|03-Solver]] · [[theory/07-XR-DEEP/README|README]]
+
+<!-- graphify-links:end -->

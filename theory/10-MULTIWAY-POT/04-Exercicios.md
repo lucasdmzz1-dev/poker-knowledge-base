@@ -25,3 +25,15 @@ Sugestão de eixos prioritários para os primeiros exercícios:
 2. Diferenciar boards secos de carregados na reação do agressor (XR puro vs XR seletivo + call).
 3. Identificar a janela exata em que o Lead do BB é válido.
 4. Praticar a régua de "pagar igual Hupot" na perspectiva IP contra C-Bet e Check-Raise.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/10-MULTIWAY-POT/README|README]] · [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]] · [[theory/10-MULTIWAY-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

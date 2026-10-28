@@ -64,3 +64,21 @@ Como as fontes deste módulo entram nela:
 # Regra
 
 Não adicionar conhecimento externo ao módulo. O que veio de interpretação ficou marcado como inferência no guideline.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/07-Changelog|07-Changelog]] · [[theory/13-ICM/README|README]]
+
+**Módulos citados no texto:** [[theory/12-RETA-FINAL/README|12-RETA-FINAL]]
+
+**Outros módulos:**
+
+- [[theory/14-Probe-Turn/08-Referencias|14-Probe-Turn · 08-Referencias]]
+
+<!-- graphify-links:end -->

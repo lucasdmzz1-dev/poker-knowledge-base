@@ -73,3 +73,15 @@ Como as fontes deste módulo entram nela:
 # Regra
 
 Não adicionar conhecimento externo ao módulo. Cenários de ICM e efetivos ainda não estudados (15-20bb) ficam registrados como pendência, não como suposição.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/10-MULTIWAY-POT/README|README]] · [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]]
+
+<!-- graphify-links:end -->

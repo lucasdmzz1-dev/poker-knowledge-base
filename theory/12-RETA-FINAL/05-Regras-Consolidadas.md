@@ -221,3 +221,19 @@ Stack grande joga mais mãos e flata mais. Stack médio ou curto é 3bet ou fold
 # Regra Principal do Módulo
 
 O stack e o risco de cair definem o plano. Antes de qualquer decisão, pergunte: qual é o meu stack em relação ao dos outros, qual mão eu tenho para executar essa oportunidade e se os blockers aumentam a chance de o adversário reagir como eu quero.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]]
+
+**Outros módulos:**
+
+- [[theory/13-ICM/05-Regras-Consolidadas|13-ICM · 05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

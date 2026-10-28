@@ -89,3 +89,15 @@ Nos boards Low:
 # Objetivo Final
 
 Executar uma estratégia simples, consistente e de fácil aplicação, utilizando corretamente os sizings e a estratégia Split conforme a textura do board.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/02-CBet-IP-40bb/README|README]] · [[theory/02-CBet-IP-40bb/01-Guideline|01-Guideline]] · [[theory/02-CBet-IP-40bb/02-VideoAulas|02-VideoAulas]]
+
+<!-- graphify-links:end -->

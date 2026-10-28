@@ -61,3 +61,17 @@ Adicionar:
 
 - Exercícios com as mãos reais da revisão.
 - A revisão do módulo 10 (Multiway).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]] · [[theory/15-Bet-vs-Missed/README|README]]
+
+**Módulos citados no texto:** [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]]
+
+<!-- graphify-links:end -->

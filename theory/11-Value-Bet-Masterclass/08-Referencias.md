@@ -38,3 +38,19 @@ Em caso de conflito:
 # Regra
 
 Não adicionar conhecimento externo ao módulo. Como o módulo é transversal, pontos que pareçam contradizer um módulo de spot específico (01-10) devem ser registrados como pendência de reconciliação, não sobrepostos automaticamente.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]]
+
+**Outros módulos:**
+
+- [[theory/12-RETA-FINAL/08-Referencias|12-RETA-FINAL · 08-Referencias]]
+
+<!-- graphify-links:end -->

@@ -58,3 +58,17 @@ Adicionar:
 - Aula específica sobre Check-Raise ofensivo, quando disponível.
 - Exercícios práticos com mãos completas.
 - Linkagem cruzada com o módulo 04 (Third Barrel) e outros pontos de sizing já documentados.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]] · [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+
+**Módulos citados no texto:** [[theory/01-CBet-IP-Short-Stack/README|01-CBet-IP-Short-Stack]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|04-Third-Barrel-e-vs-Third-Barrel]]
+
+<!-- graphify-links:end -->

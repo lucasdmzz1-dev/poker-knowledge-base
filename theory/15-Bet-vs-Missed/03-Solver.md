@@ -88,3 +88,15 @@ Exemplo: K♠ K♥ 7♣.
 - **Os boards em que se pode ter thin value usam B25:** seco, monotone e dobrado. Os outros usam B50.
 - **Conectado high, monotone e dobrado não têm bucket de 100%.**
 - **Os buckets baixos (25%) concentram as mãos fracas e os blefes:** underpair baixo, terceiro par, air e gutshot.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/15-Bet-vs-Missed/README|README]] · [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]] · [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

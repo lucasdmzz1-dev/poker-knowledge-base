@@ -223,3 +223,15 @@ Nunca existe limp, nas duas fases.
 - **O call é o primeiro a sumir quando o RP sobe.** Nos spots do BTN contra o LJ e do CO coberto o range de call vira 3bet, shove ou fold. No BB cai de 45,7% para 21%.
 - **O topo muda de ação, e não sai.** AA, AK, QQ e JJ passam de raise a shove (BB contra CO) ou a limp (SB coberto).
 - **O limp desaparece com SB cobrindo o BB e com SB curto.** Quando coberto pelo BB, o raise some e o range protege o call.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/13-ICM/README|README]] · [[theory/13-ICM/01-Guideline|01-Guideline]]
+
+<!-- graphify-links:end -->

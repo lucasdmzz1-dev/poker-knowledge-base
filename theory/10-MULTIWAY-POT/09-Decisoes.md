@@ -73,3 +73,15 @@ Pendente: Solver detalhado e Exercícios (ver 06-Pendencias.md).
 - Adicionar resoluções de solver por textura específica.
 - Criar exercícios práticos a partir de mãos reais.
 - Expandir para River e efetivos menores.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/10-MULTIWAY-POT/README|README]] · [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]] · [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]]
+
+<!-- graphify-links:end -->

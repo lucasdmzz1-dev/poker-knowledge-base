@@ -90,3 +90,15 @@ Ao finalizar este módulo o jogador deve conseguir:
 # Status
 
 Módulo estruturado e consolidado, com 27 exercícios de conceito. PKO e short stack na bolha serão cobertos em aulas futuras (ver 06-Pendencias.md).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/13-ICM/07-Changelog|07-Changelog]] · [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/08-Referencias|08-Referencias]]
+
+<!-- graphify-links:end -->

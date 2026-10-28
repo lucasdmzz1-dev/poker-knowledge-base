@@ -46,3 +46,17 @@ Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026)
 - As tabelas do guideline em imagem dizem outra coisa: no **monotone** (A♠ 9♠ 8♠) a trinca vai em 75%, e no **dobrado** (K♠ K♥ 7♣) fulls e trincas vão em 75% no seco (50% no carregado). O próprio `03-Solver.md` (Padrões) e o Exercício 06 dizem que conectado high, monotone e dobrado não têm bucket de 100%.
 
 Pela Decisão 3 a imagem prevalece sobre a fala, então as tabelas devem estar certas e o texto da Regra 4 incompleto. **Inferência:** a regra da pior trinca em 100% vale só nos boards que têm bucket de 100% (semi conectado e seco). Confirmar com o coach antes de corrigir a Regra 4 e o Exercício 05.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/15-Bet-vs-Missed/README|README]]
+
+**Módulos citados no texto:** [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]]
+
+<!-- graphify-links:end -->

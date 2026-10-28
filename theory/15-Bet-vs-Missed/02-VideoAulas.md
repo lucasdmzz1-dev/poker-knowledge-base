@@ -145,3 +145,19 @@ Depois do guideline, a segunda parte da aula revisa mãos de turn e river. Os po
 O instrutor lembra que a mudança é pequena: o jogador já faz boa parte disso. A ideia é refinar, por exemplo apostar o AJ no A-K-2 em 75%, em vez de 100%, e o 9-8 em 25%, em vez de 50%.
 
 Para treinar, ele sugere filtrar no Hand2Note as mãos de bet vs missed e rever as próprias mãos, porque ver as próprias mãos é "um tapa na cara". A aula é o começo de uma série: o mesmo método de frequências vai valer para a aula de blind war (na semana seguinte) e para o c-bet em posição (no futuro). O instrutor diz também que a aula implica diretamente o multiway, que usava o best of best method, e que o c-bet fora de posição já usa esse split.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/15-Bet-vs-Missed/README|README]] · [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]]
+
+**Outros módulos:**
+
+- [[theory/14-Probe-Turn/01-Guideline|14-Probe-Turn · 01-Guideline]]
+
+<!-- graphify-links:end -->

@@ -27,3 +27,15 @@ Todas as alterações futuras deste módulo deverão ser registradas neste docum
 - Correções do instrutor.
 - Atualizações do Solver.
 - Mudanças na Poker Knowledge Base.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/02-CBet-IP-40bb/08-Referencias|08-Referencias]] · [[theory/02-CBet-IP-40bb/README|README]]
+
+<!-- graphify-links:end -->

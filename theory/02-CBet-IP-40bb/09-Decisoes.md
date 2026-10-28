@@ -27,3 +27,15 @@ Cada decisão deverá conter:
 ## Status
 
 Nenhuma decisão consolidada registrada.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/02-CBet-IP-40bb/README|README]] · [[theory/02-CBet-IP-40bb/08-Referencias|08-Referencias]]
+
+<!-- graphify-links:end -->

@@ -97,3 +97,21 @@ Ao final deste módulo o jogador deve conseguir:
 # Status
 
 🚧 Em documentação — primeira passada baseada na masterclass prática. Módulo é transversal: revisar os módulos 01-10 no futuro pra linkar pontos de sizing de valor de volta pra cá.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]]
+
+**Módulos citados no texto:** [[theory/01-CBet-IP-Short-Stack/README|01-CBet-IP-Short-Stack]]
+
+**Outros módulos:**
+
+- [[theory/12-RETA-FINAL/01-Guideline|12-RETA-FINAL · 01-Guideline]]
+
+<!-- graphify-links:end -->

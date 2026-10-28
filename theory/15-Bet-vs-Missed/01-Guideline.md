@@ -362,3 +362,22 @@ Frequência média de aposta em boards secos: de 55% a 65%. Não existe bucket d
 # Pendências e decisões
 
 As pendências abertas estão em `06-Pendencias.md` e as decisões da construção do módulo estão em `09-Decisoes.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/15-Bet-vs-Missed/README|README]] · [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/15-Bet-vs-Missed/04-Exercicios|04-Exercicios]] · [[theory/15-Bet-vs-Missed/02-VideoAulas|02-VideoAulas]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]]
+
+**Módulos citados no texto:** [[theory/02-CBet-IP-40bb/README|02-CBet-IP-40bb]] · [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]] · [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]]
+
+**Outros módulos:**
+
+- [[theory/14-Probe-Turn/01-Guideline|14-Probe-Turn · 01-Guideline]]
+- [[theory/14-Probe-Turn/README|14-Probe-Turn · README]]
+
+<!-- graphify-links:end -->

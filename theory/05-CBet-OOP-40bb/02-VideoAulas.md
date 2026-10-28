@@ -288,3 +288,19 @@ Ter um range de bet forte e um range de check protegido.
 A melhor estratégia não é apostar mais.
 
 É construir melhor.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/05-CBet-OOP-40bb/README|README]] · [[theory/05-CBet-OOP-40bb/01-Guideline|01-Guideline]] · [[theory/05-CBet-OOP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/05-CBet-OOP-40bb/04-Exercicios|04-Exercicios]] · [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]]
+
+**Outros módulos:**
+
+- [[theory/06-XR-SHORT/01-Guideline|06-XR-SHORT · 01-Guideline]]
+
+<!-- graphify-links:end -->

@@ -665,3 +665,19 @@ A pergunta final sempre é:
 
 
 "Qual parte do range adversário estou tentando fazer foldar?"
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/09-BET-CHECK-BET/README|README]] · [[theory/09-BET-CHECK-BET/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/09-BET-CHECK-BET/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/11-Value-Bet-Masterclass/01-Guideline|11-Value-Bet-Masterclass · 01-Guideline]]
+
+<!-- graphify-links:end -->

@@ -664,3 +664,15 @@ No painel Bubble factor do GTO Wizard, a linha é a posição que decide, a colu
 **Regra:** Painel Bubble factor (Parte 3)
 
 ---
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/13-ICM/README|README]] · [[theory/13-ICM/01-Guideline|01-Guideline]]
+
+<!-- graphify-links:end -->
