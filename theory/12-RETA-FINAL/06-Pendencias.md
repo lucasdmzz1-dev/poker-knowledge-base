@@ -42,3 +42,19 @@ Quando houver nova aula ou correção do instrutor, atualizar:
 - Guideline.
 - Regras Consolidadas.
 - Changelog.
+
+---
+
+# 5. 80bb ou 84bb no 3-handed
+
+Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
+
+O Contexto do Guideline, o README e a tabela do Resumo operacional falam em **80bb** contra 20bb e 20bb. A Regra 27 (Guideline e Regras Consolidadas) e o Exercício 40 usam **84bb**. Confirmar na aula qual é o stack e unificar.
+
+---
+
+# 6. Ordem de prioridade das fontes
+
+Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
+
+O `08-Referencias.md` usa: esclarecimentos do autor do KB e correções do instrutor (juntos), solver, aula, exercícios. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. Decidir (MAIN CHAT TEORIA) se o módulo passa a seguir a ordem geral ou se mantém a exceção, registrando o motivo em `09-Decisoes.md`. Nada foi alterado.
