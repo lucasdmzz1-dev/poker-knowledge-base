@@ -1,17 +1,17 @@
 # Graph Report - poker-knowledge-base  (2026-10-28)
 
 ## Corpus Check
-- 204 files · ~177,180 words
+- 206 files · ~179,335 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 3 file(s) not represented in the graph (top: .csv 2, (none) 1)
 
 ## Summary
-- 983 nodes · 1823 edges · 49 communities (32 shown, 17 thin omitted)
+- 1004 nodes · 1842 edges · 51 communities (34 shown, 17 thin omitted)
 - Extraction: 80% EXTRACTED · 20% INFERRED · 0% AMBIGUOUS · INFERRED: 368 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `dbcd849d`
+- Built from commit: `504ac37b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,13 +44,15 @@
 - Gestão de mudanças KB
 - XR Deep boards conectados
 - XR Deep boards secos
-- Separação Short Stack ≠ Deep Stack
+- Blefes com equidade
+- MAPA-PRE-POS.md
+- Retomada do MAIN CHAT TEORIA
 - Retomada do estudo de stats (painel de evolução e call open contra o solver)
-- pko-stats.md
-- Retomada do estudo de PKO (resumo para uma conversa nova)
 - Second Barrel IP README
 - PKO posição do opener
 - PKO blinds curtos
+- pko-stats.md
+- Retomada do estudo de PKO (resumo para uma conversa nova)
 - CLAUDE.md
 - .claude/CLAUDE.md
 
@@ -110,7 +112,7 @@
 - **Sizing de river por textura: blank vs board que esquisitou (B70 vs Overbet)** — theory_11_value_bet_masterclass_05_regras_consolidadas_regra_3_board_completa_draw_size_menor, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_4_board_blank_size_alto, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_5_carta_alta_nao_e_blank, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_6_dois_sizes_river, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_7_river_blank_vs_muda_nuts [INFERRED 0.85]
 - **Fluxo defensivo Vs Third Barrel** — theory_04_third_barrel_e_vs_third_barrel_01_guideline_vs_third_barrel, theory_04_third_barrel_e_vs_third_barrel_01_guideline_mdf, theory_04_third_barrel_e_vs_third_barrel_02_videoaulas_turn_seco_x_turn_dinamico, theory_04_third_barrel_e_vs_third_barrel_05_regras_consolidadas_processo_de_ranking_dos_bluff_catchers, theory_04_third_barrel_e_vs_third_barrel_04_exercicios_processo_de_defesa [INFERRED 0.85]
 
-## Communities (49 total, 17 thin omitted)
+## Communities (51 total, 17 thin omitted)
 
 ### Community 0 - "Probe Turn"
 Cohesion: 0.06
@@ -118,11 +120,11 @@ Nodes (87): Regra 18 — A construção não muda, quem muda é a frequência, B
 
 ### Community 1 - "Reta Final"
 Cohesion: 0.07
-Nodes (23): Referências — Value Bet Masterclass, Cenário 10% field left, Click (4bet pequeno, só a diferença), Guideline — Reta Final, Meiuca (mãos médias), Resteal (shove em cima de shove), Shove vs open, Simulações do GTO Wizard da aula (não capturadas) (+15 more)
+Nodes (24): Referências — Value Bet Masterclass, Cenário 10% field left, Click (4bet pequeno, só a diferença), Guideline — Reta Final, Meiuca (mãos médias), Resteal (shove em cima de shove), Risk premium (RP) na reta final, Shove vs open (+16 more)
 
 ### Community 2 - "ICM e Risk Premium"
-Cohesion: 0.07
-Nodes (26): Risk premium (RP) na reta final, Guideline — ICM e Risk Premium, ICM, Painel Bubble factor (GTO Wizard modo ICM), Quatro passos do instrutor (tipo de stack, fase, RP, hierarquia), Risk premium (RP) — o equity extra que você precisa, Vanilla vs PKO (RP maior no vanilla), Curva do ICM comparada a um eletrocardiograma (+18 more)
+Cohesion: 0.08
+Nodes (25): Guideline — ICM e Risk Premium, ICM, Painel Bubble factor (GTO Wizard modo ICM), Quatro passos do instrutor (tipo de stack, fase, RP, hierarquia), Risk premium (RP) — o equity extra que você precisa, Vanilla vs PKO (RP maior no vanilla), Curva do ICM comparada a um eletrocardiograma, VideoAulas — ICM e Risk Premium (+17 more)
 
 ### Community 3 - "Ferramentas PKO (dados)"
 Cohesion: 0.06
@@ -224,19 +226,27 @@ Nodes (13): Boards Conectados (XR Deep), Importância dos Naipes, Board 5♠3♦
 Cohesion: 0.19
 Nodes (12): Top Pair no XR Deep, XR Bluff com Equidade, Boards Secos (XR Deep), Showdown Value e Escolha entre XR e XC, Board A♠6♦4♣, Board K♣7♦2♠, Board K♠8♦3♣, Exercício A5s x 96s em K♣7♦2♠ (+4 more)
 
-### Community 28 - "Separação Short Stack ≠ Deep Stack"
+### Community 28 - "Blefes com equidade"
 Cohesion: 0.25
 Nodes (4): Posição Altera o Objetivo da Aposta, Stack Altera a Composição do Range, Banco de Correções (3BET POT), Erros Principais 3BET POT
 
-### Community 29 - "Retomada do estudo de stats (painel de evolução e call open contra o solver)"
+### Community 29 - "MAPA-PRE-POS.md"
+Cohesion: 0.17
+Nodes (11): Chat PRÉ-FLOP, Chat PÓS-FLOP, MAIN CHAT TEORIA, Mapa da teoria — Pré-flop e Pós-flop, Mensagens iniciais, Módulos por chat, Os chats, Pontes (onde PRÉ e PÓS se ligam) (+3 more)
+
+### Community 30 - "Retomada do MAIN CHAT TEORIA"
+Cohesion: 0.22
+Nodes (8): 1. Papel deste chat, 2. Estado dos módulos (leitura completa de 28/10/2026), 3. Decisões tomadas neste chat, 4. PRs abertos, 5. Próximos passos (em ordem), 6. Como economizar contexto, 7. Mensagem inicial para uma sessão nova do MAIN CHAT TEORIA, Retomada do MAIN CHAT TEORIA
+
+### Community 31 - "Retomada do estudo de stats (painel de evolução e call open contra o solver)"
 Cohesion: 0.25
 Nodes (7): Arquivos (pasta `coaching/stats/`), Fonte dos dados, O que fazer primeiro, O que é, Relação com o PKO, Resultados principais (call open contra o solver, 40bb), Retomada do estudo de stats (painel de evolução e call open contra o solver)
 
-### Community 30 - "pko-stats.md"
+### Community 35 - "pko-stats.md"
 Cohesion: 0.29
 Nodes (6): Antes de qualquer coisa, leia nesta ordem, Estilo, Onde cada coisa fica (não misture), Pendências conhecidas (confirme nos arquivos de retomada antes de usar), Regras de trabalho, Solver
 
-### Community 31 - "Retomada do estudo de PKO (resumo para uma conversa nova)"
+### Community 36 - "Retomada do estudo de PKO (resumo para uma conversa nova)"
 Cohesion: 0.29
 Nodes (6): Notas técnicas (Chrome conectado), O que existe, Pendências, Preferências do usuário, Resultados principais, Retomada do estudo de PKO (resumo para uma conversa nova)
 
@@ -254,22 +264,22 @@ Nodes (6): Notas técnicas (Chrome conectado), O que existe, Pendências, Prefer
 
 ## Knowledge Gaps
 - **108 isolated node(s):** `Onde cada mão vai (bet/XC/XR/check)`, `Apostar por bluff: equity direta (duas pontas, FDs, melhores brocas)`, `Quando o vilão aposta (B25, B33-70, overbet)`, `Convenções: efetivo é o menor stack, todo open é de 2bb`, `Pendência: enfrentar open shove do adversário (sem regra)` (+103 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 187 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 204 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Guideline — ICM e Risk Premium` connect `ICM e Risk Premium` to `Reta Final`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `Guideline — Bet vs Missed C-Bet` connect `Bet vs Missed (regras)` to `Probe Turn`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `Guideline — Probe Turn` (e.g. with `Módulo 05 (C-Bet OOP 40bb)` and `Módulos 03 e 09 (Second Barrel IP e Bet-Check-Bet)`) actually correct?**
   _`Guideline — Probe Turn` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Onde cada mão vai (bet/XC/XR/check)`, `Apostar por bluff: equity direta (duas pontas, FDs, melhores brocas)`, `Quando o vilão aposta (B25, B33-70, overbet)` to the rest of the system?**
   _108 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Probe Turn` be split into smaller, more focused modules?**
   _Cohesion score 0.05934242181234964 - nodes in this community are weakly interconnected._
-- **Why does `Guideline — Reta Final` connect `Reta Final` to `ICM e Risk Premium`, `Value Bet (regras)`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Are the 2 inferred relationships involving `Guideline — Bet vs Missed C-Bet` (e.g. with `Probe turn (BB OOP após check-check no flop, BTN vs BB 40bb)` and `Módulos 02, 03 e 04 (C-Bet IP, Second Barrel IP e Third Barrel)`) actually correct?**
+  _`Guideline — Bet vs Missed C-Bet` has 2 INFERRED edges - model-reasoned connections that need verification._
 
 ### Low-confidence Hints
 _AMBIGUOUS edges — the extractor was unsure. Verify before acting on these._

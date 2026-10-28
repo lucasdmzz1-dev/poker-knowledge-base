@@ -103,6 +103,18 @@ Tabelas de HUD (LeakScope, Preflop Academy) e acompanhamentos semanais do dono n
 
 Nesse repositório esses arquivos ficam em `coaching/stats/`. Antes de trabalhar com stats, HUD, leaks ou evolução, ler `coaching/stats/retomada-stats.md` (resumo, fonte dos dados, resultados principais e lista de arquivos). O painel de evolução, a planilha de call open contra o solver e os JSONs ficam na mesma pasta.
 
+## Divisão da teoria em chats (PRÉ e PÓS)
+
+A teoria é trabalhada em três chats, definidos em `theory/MAPA-PRE-POS.md` (ler antes de editar qualquer módulo):
+
+- **MAIN CHAT TEORIA:** coordena. É dono de `theory/CLAUDE.md`, `theory/README.md`, `theory/MAPA-PRE-POS.md` e `theory/_TEMPLATE/`, cria módulos novos e resolve conflitos entre PRÉ e PÓS.
+- **Chat PRÉ-FLOP:** módulos 12, 13, 16 (e futuros de RFI, 3bet e squeeze) e `theory/tools/pko/`.
+- **Chat PÓS-FLOP:** módulos 01 a 11, 14 e 15.
+
+Cada chat edita só os módulos do seu lado. Mudança que toca uma ponte (08, 10, 12 Parte 9, 13 Regra 2, 16, 14 e 15) vira item em `06-Pendencias.md` do módulo do outro lado, com o título `Ponte PRÉ→PÓS:` ou `Ponte PÓS→PRÉ:`. Detalhes e mensagens iniciais de cada chat no mapa.
+
+Para economizar contexto: não releia a teoria inteira. O MAIN CHAT TEORIA começa por `theory/retomada-main-teoria.md`; todos os chats usam `graphify query` antes de abrir arquivos e leem só o módulo do dia.
+
 ## Módulos que devem ser lidos juntos
 
 - **Reta final = módulos 12 e 13.** O módulo 13 (ICM e Risk Premium) é complemento do módulo 12 (Reta Final). Sempre que a tarefa envolver reta final, leia e considere os dois: o 12 diz o que fazer em cada spot, e o 13 explica o risk premium por trás e como ajustar conforme quem cobre quem. Ao criar ou alterar conteúdo de um deles, verifique se o outro precisa de atualização ou de referência cruzada.
