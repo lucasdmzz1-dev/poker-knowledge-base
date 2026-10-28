@@ -31,4 +31,22 @@ Situação: BTN com 15bb, todos os jogadores à frente foldaram. Lê-se a frequ�
 | #3411 | 16,3 | 306 (81%) | 53,2 | 62,6% | 19,2% | 18,3% | arvores/3411.md |
 | #7211 | 16,3 | 124 (52%) | 49,3 | 59,4% | 30,0% | 10,7% | arvores/7211.md |
 
-Pendente: stacks de UTG, UTG1, MP, LJ, HJ, CO, SB e BB em cada árvore acima (ainda não registrados), e a leitura da #4287 (BTN 17, fora da faixa).
+Média das 5 árvores: open total de 38,9% (de 37,0% a 40,6%), raise 2bb de 21,4% e all-in de 17,5%. O open total varia pouco; o que muda é a divisão entre raise e all-in (de 12/25 a 30/11). Com 5 árvores e sem os stacks dos outros assentos, ainda não dá para dizer o que move essa divisão.
+
+Dados para análise: `dados/arvores.json` (campos em `../../../dicionario-arvores-rfi.md`).
+
+## Próximos passos
+1. **Completar as 5 árvores já lidas** (reabrir pelo `#id`), seguindo `../../../playbook-coleta-rfi.md`:
+   - stacks de UTG, UTG1, MP, LJ, HJ, CO, SB e BB;
+   - SI, ante e pote antes do BTN;
+   - RP do BTN contra SB e BB (e deles contra o BTN);
+   - classes de mão (raise e all-in) e, se der, a grade de 169;
+   - na primeira árvore, registrar a cor do all-in na grade.
+2. **Ampliar a amostra** para ~15 a 20 árvores na mesma busca, sem repetir árvore, variando a média da mesa e os stacks de SB e BB.
+3. **#4287** (BTN 17bb): fora da faixa de 14 a 16,3bb; ler só se a amostra ficar curta.
+4. **Depois desta situação:** Mid (mesmo stack) e BTN com 20bb e 25bb, para comparar com o HUD (RFI do BTN com 15–25bb: 33%; open jam: 5,5%).
+
+Perguntas que a coleta deve responder:
+- O all-in sobe quando SB e BB são curtos (menos fold equity no raise) ou quando cobrem o BTN?
+- A média da mesa e a fase mudam o open total ou só a divisão entre raise e all-in?
+- Quais classes de mão trocam de raise para all-in?

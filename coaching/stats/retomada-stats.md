@@ -1,6 +1,6 @@
 # Retomada do estudo de stats (painel de evolução e call open contra o solver)
 
-Atualizado em 28/10/2026. Leia este arquivo primeiro quando o assunto for stats, HUD, leaks ou evolução.
+Atualizado em 28/10/2026 (inclui o estudo de RFI BTN 15bb). Leia este arquivo primeiro quando o assunto for stats, HUD, leaks ou evolução.
 
 ## O que é
 Acompanhamento das stats reais do jogador (prints do Hand2Note, semana a semana) comparadas com o solver, para achar leaks e medir a evolução. Foco atual: o que fazer no pré-flop quando enfrenta um open (fold, call e 3-bet).
@@ -24,6 +24,12 @@ Acompanhamento das stats reais do jogador (prints do Hand2Note, semana a semana)
 3. HJ e CO: não pagar 22 e 33.
 4. BTN: pagar mais AQo e ATo, em vez de 3-betar.
 
+## Estudos de ranges no solver (em andamento)
+Pasta `estudos-de-ranges/`: ranges lidos no solver do 4BET Trainer, uma pasta por situação. Padrão dos dados em `estudos-de-ranges/dicionario-arvores-rfi.md`; coleta em `estudos-de-ranges/playbook-coleta-rfi.md`.
+- **RFI BTN 15bb** (Vanilla, Early, busca "BTN 15"): 5 árvores lidas (#4772, #3336, #10057, #3411, #7211). Open total de 37% a 41% (média 38,9%), raise 2bb de 21,4% e all-in de 17,5% em média.
+- Comparação com o HUD (RFI do BTN com 15–25bb em 33%, open jam em 5,5%): é só indicativa, porque o HUD mistura 15 a 25bb. O jam é o maior desvio.
+- Próximo passo: completar as 5 árvores (stacks dos 9 assentos, SI, ante, pote, RP contra SB e BB, classes e grade) e ampliar para 15 a 20 árvores. Lista completa no README da situação.
+
 Limite de leitura: contra opens mais cedo o range do solver é mais curto, então parte dos folds pode estar certa. Mãos com poucas ocorrências ficam em cinza no mapa.
 
 ## Arquivos (pasta `coaching/stats/`)
@@ -32,6 +38,7 @@ Limite de leitura: contra opens mais cedo o range do solver é mais curto, entã
 - `call-opens-vs-solver.xlsx`: planilha com as abas Resumo, CallOpen_vs_Base, Padroes, Maos_por_spot, Folds_lidos, Folds_total, Erros_comuns, Mais_foldadas e Checklist_folds.
 - `cheat-btn-vs-co.html`: cola do BTN contra open do CO.
 - `leak-tracker.html`: plano de correção de leaks.
+- `estudos-de-ranges/`: estudos de ranges no solver (ver a seção acima).
 - `dados/`: `positions.json` (totais por posição), `hands.json` (mão a mão), `errors.json` (tipos de erro), `toplist.json` (mãos que mais pesam) e `takeaways.json` (conclusões).
 
 ## Relação com o PKO
