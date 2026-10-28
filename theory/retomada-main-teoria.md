@@ -40,21 +40,18 @@ Coordenar a teoria: dono do `theory/CLAUDE.md`, `theory/README.md`, `theory/MAPA
 
 ---
 
-## 4. PRs abertos
+## 4. PRs
 
-- **#2** `theory/mapa-pre-pos`: mapa PRÉ/PÓS, este arquivo e as regras de economia de contexto.
-- **#3** `theory/main-pendencias`: conflitos registrados nas Pendências (08, 09, 10, 12, 13, 14, 15, 16), ordem de prioridade padronizada, grafo do graphify (só AST) e `.gitignore`.
-
-Os dois mexem em partes diferentes do `theory/CLAUDE.md` e podem ser mergeados em qualquer ordem.
+- **#2** (mapa PRÉ/PÓS, retomada, economia de contexto) e **#3** (pendências, ordem de fontes) mergeados no `main` em 28/10/2026.
+- Nenhum PR do MAIN aberto.
 
 ---
 
 ## 5. Próximos passos (em ordem)
 
-1. Mergear #2 e #3.
-2. Rodar `/graphify --update` (semântico, com LLM) no `main`, para o grafo pegar o mapa, as pendências e a ordem de fontes. O `graphify` não vem instalado no ambiente na nuvem: `uv tool install graphifyy` e `export PATH="$HOME/.local/bin:$PATH"`.
-3. Limpeza (PR do MAIN): apagar `theory/16-PKO/CLAUDE.md`, `theory/16-PKO/tools/` (versão antiga de `theory/tools/pko/`) e `theory/CLAUDE_1.md`; atualizar `theory/README.md` (lista só até o 11, em inglês, status errado); preencher o `_TEMPLATE` (está vazio).
-4. Passar aos chats PRÉ e PÓS os itens de cada lado (ver seção 2 e os `06-Pendencias.md`).
+1. Rodar `/graphify --update` (semântico, com LLM) no `main`, para o grafo pegar o mapa, as pendências e a ordem de fontes. O `graphify` não vem instalado no ambiente na nuvem: `uv tool install graphifyy` e `export PATH="$HOME/.local/bin:$PATH"`.
+2. Limpeza (PR do MAIN): apagar `theory/16-PKO/CLAUDE.md`, `theory/16-PKO/tools/` (versão antiga de `theory/tools/pko/`) e `theory/CLAUDE_1.md`; atualizar `theory/README.md` (lista só até o 11, em inglês, status errado); preencher o `_TEMPLATE` (está vazio).
+3. Passar aos chats PRÉ e PÓS os itens de cada lado (ver seção 2 e os `06-Pendencias.md`).
 
 ---
 
