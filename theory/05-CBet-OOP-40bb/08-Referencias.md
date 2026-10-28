@@ -72,7 +72,9 @@ Toda atualização deve vir das fontes estudadas.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/05-CBet-OOP-40bb/README|README]] · [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]] · [[theory/05-CBet-OOP-40bb/09-Decisoes|09-Decisoes]]
+**Pasta:** [[theory/05-CBet-OOP-40bb/README|theory/05-CBet-OOP-40bb]]
+
+**Relacionadas no mesmo módulo:** [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]] · [[theory/05-CBet-OOP-40bb/09-Decisoes|09-Decisoes]]
 
 **Outros módulos:**
 

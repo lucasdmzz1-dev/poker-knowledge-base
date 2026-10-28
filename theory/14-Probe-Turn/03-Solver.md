@@ -61,6 +61,8 @@ Nota: nas anotações do flush, "FD" é usado no sentido dos melhores flushes (d
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/07-Changelog|07-Changelog]] · [[theory/14-Probe-Turn/02-VideoAulas|02-VideoAulas]] · [[theory/14-Probe-Turn/08-Referencias|08-Referencias]]
+**Pasta:** [[theory/14-Probe-Turn/README|theory/14-Probe-Turn]]
+
+**Relacionadas no mesmo módulo:** [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/07-Changelog|07-Changelog]] · [[theory/14-Probe-Turn/02-VideoAulas|02-VideoAulas]] · [[theory/14-Probe-Turn/08-Referencias|08-Referencias]] · [[theory/14-Probe-Turn/09-Decisoes|09-Decisoes]]
 
 <!-- graphify-links:end -->

@@ -73,7 +73,9 @@ Não adicionar conhecimento externo ao módulo. O que veio de interpretação fi
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/07-Changelog|07-Changelog]] · [[theory/13-ICM/README|README]]
+**Pasta:** [[theory/13-ICM/README|theory/13-ICM]]
+
+**Relacionadas no mesmo módulo:** [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/07-Changelog|07-Changelog]]
 
 **Módulos citados no texto:** [[theory/12-RETA-FINAL/README|12-RETA-FINAL]]
 

@@ -63,6 +63,8 @@ Hero (BTN): stack, bounty. Opener: posição, stack, bounty, tamanho do open. SB
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]] · [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]]
+**Pasta:** [[theory/README|theory]]
+
+**Relacionadas no mesmo módulo:** [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]] · [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]]
 
 <!-- graphify-links:end -->

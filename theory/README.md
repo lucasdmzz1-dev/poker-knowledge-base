@@ -153,6 +153,33 @@ A concept becomes official only after it is transferred to the Knowledge Base wi
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Módulos citados no texto:** [[theory/01-CBet-IP-Short-Stack/README|01-CBet-IP-Short-Stack]] · [[theory/02-CBet-IP-40bb/README|02-CBet-IP-40bb]] · [[theory/03-Second-Barrel-IP/01-Guideline|03-Second-Barrel-IP]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|04-Third-Barrel-e-vs-Third-Barrel]] · [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]] · [[theory/06-XR-SHORT/README|06-XR-SHORT]] · [[theory/07-XR-DEEP/README|07-XR-DEEP]] · [[theory/08-3BET-POT/README|08-3BET-POT]] · [[theory/09-BET-CHECK-BET/README|09-BET-CHECK-BET]] · [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]] · [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]] · [[theory/12-RETA-FINAL/README|12-RETA-FINAL]] · [[theory/13-ICM/README|13-ICM]] · [[theory/14-Probe-Turn/README|14-Probe-Turn]] · [[theory/15-Bet-vs-Missed/README|15-Bet-vs-Missed]] · [[theory/16-PKO/README|16-PKO]]
+**Pasta:** [[README|Início]]
+
+**Nesta pasta:**
+
+- [[theory/01-CBet-IP-Short-Stack/README|01-CBet-IP-Short-Stack]]
+- [[theory/02-CBet-IP-40bb/README|02-CBet-IP-40bb]]
+- [[theory/03-Second-Barrel-IP/01-Guideline|03-Second-Barrel-IP]]
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|04-Third-Barrel-e-vs-Third-Barrel]]
+- [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]]
+- [[theory/06-XR-SHORT/README|06-XR-SHORT]]
+- [[theory/07-XR-DEEP/README|07-XR-DEEP]]
+- [[theory/08-3BET-POT/README|08-3BET-POT]]
+- [[theory/09-BET-CHECK-BET/README|09-BET-CHECK-BET]]
+- [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]]
+- [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]]
+- [[theory/12-RETA-FINAL/README|12-RETA-FINAL]]
+- [[theory/13-ICM/README|13-ICM]]
+- [[theory/14-Probe-Turn/README|14-Probe-Turn]]
+- [[theory/15-Bet-vs-Missed/README|15-Bet-vs-Missed]]
+- [[theory/16-PKO/README|16-PKO]]
+- [[theory/MAPA-PRE-POS|MAPA-PRE-POS]]
+- [[theory/retomada-main-teoria|retomada-main-teoria]]
+- [[theory/tools/pko/pko-arvores-dicionario|tools/pko/pko-arvores-dicionario]]
+- [[theory/tools/pko/pko-conhecimento|tools/pko/pko-conhecimento]]
+- [[theory/tools/pko/pko-maos-dicionario|tools/pko/pko-maos-dicionario]]
+- [[theory/tools/pko/pko-solver-playbook|tools/pko/pko-solver-playbook]]
+- [[theory/tools/pko/regras-vivas-pko-btn|tools/pko/regras-vivas-pko-btn]]
+- [[theory/tools/pko/retomada-pko|tools/pko/retomada-pko]]
 
 <!-- graphify-links:end -->

@@ -674,7 +674,9 @@ A pergunta final sempre é:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/09-BET-CHECK-BET/README|README]] · [[theory/09-BET-CHECK-BET/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/09-BET-CHECK-BET/09-Decisoes|09-Decisoes]]
+**Pasta:** [[theory/09-BET-CHECK-BET/README|theory/09-BET-CHECK-BET]]
+
+**Relacionadas no mesmo módulo:** [[theory/09-BET-CHECK-BET/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/09-BET-CHECK-BET/09-Decisoes|09-Decisoes]]
 
 **Outros módulos:**
 

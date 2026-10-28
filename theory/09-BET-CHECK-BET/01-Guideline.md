@@ -499,6 +499,8 @@ A estratégia é baseada em:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/09-BET-CHECK-BET/README|README]] · [[theory/09-BET-CHECK-BET/02-VideoAulas|02-VideoAulas]]
+**Pasta:** [[theory/09-BET-CHECK-BET/README|theory/09-BET-CHECK-BET]]
+
+**Relacionadas no mesmo módulo:** [[theory/09-BET-CHECK-BET/02-VideoAulas|02-VideoAulas]]
 
 <!-- graphify-links:end -->

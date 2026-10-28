@@ -342,6 +342,8 @@ Caso exista diferença entre Solver e correção do instrutor, o conflito deve s
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/03-Second-Barrel-IP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/03-Second-Barrel-IP/01-Guideline|01-Guideline]] · [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/04-Exercicios|04-Exercicios]] · [[theory/03-Second-Barrel-IP/08-Referencias|08-Referencias]]
+**Pasta:** [[theory/03-Second-Barrel-IP/01-Guideline|theory/03-Second-Barrel-IP]]
+
+**Relacionadas no mesmo módulo:** [[theory/03-Second-Barrel-IP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/04-Exercicios|04-Exercicios]] · [[theory/03-Second-Barrel-IP/08-Referencias|08-Referencias]]
 
 <!-- graphify-links:end -->

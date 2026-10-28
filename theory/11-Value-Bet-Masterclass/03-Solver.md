@@ -23,6 +23,8 @@ Pendente. A masterclass foi construída em cima de análise prática de mãos re
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]]
+**Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
+
+**Relacionadas no mesmo módulo:** [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]]
 
 <!-- graphify-links:end -->

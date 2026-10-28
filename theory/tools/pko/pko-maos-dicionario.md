@@ -45,6 +45,8 @@ Antes de cada ação, ler e gravar o cabeçalho (ID, % restante, restantes, pago
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]]
+**Pasta:** [[theory/README|theory]]
+
+**Relacionadas no mesmo módulo:** [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]]
 
 <!-- graphify-links:end -->

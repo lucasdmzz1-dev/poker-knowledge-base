@@ -112,7 +112,20 @@ Módulo finalizado. Tem 28 exercícios (de conceito e de leitura de situação, 
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/06-Pendencias|06-Pendencias]] · [[theory/14-Probe-Turn/10-Como-Jogar|10-Como-Jogar]]
+**Pasta:** [[theory/README|theory]]
+
+**Nesta pasta:**
+
+- [[theory/14-Probe-Turn/01-Guideline|01-Guideline]]
+- [[theory/14-Probe-Turn/02-VideoAulas|02-VideoAulas]]
+- [[theory/14-Probe-Turn/03-Solver|03-Solver]]
+- [[theory/14-Probe-Turn/04-Exercicios|04-Exercicios]]
+- [[theory/14-Probe-Turn/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+- [[theory/14-Probe-Turn/06-Pendencias|06-Pendencias]]
+- [[theory/14-Probe-Turn/07-Changelog|07-Changelog]]
+- [[theory/14-Probe-Turn/08-Referencias|08-Referencias]]
+- [[theory/14-Probe-Turn/09-Decisoes|09-Decisoes]]
+- [[theory/14-Probe-Turn/10-Como-Jogar|10-Como-Jogar]]
 
 **Outros módulos:**
 

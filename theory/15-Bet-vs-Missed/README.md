@@ -122,6 +122,18 @@ Módulo finalizado, com 34 exercícios (de conceito e de leitura de situação, 
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/15-Bet-vs-Missed/06-Pendencias|06-Pendencias]] · [[theory/15-Bet-vs-Missed/07-Changelog|07-Changelog]] · [[theory/15-Bet-vs-Missed/08-Referencias|08-Referencias]] · [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
+**Pasta:** [[theory/README|theory]]
+
+**Nesta pasta:**
+
+- [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]]
+- [[theory/15-Bet-vs-Missed/02-VideoAulas|02-VideoAulas]]
+- [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]]
+- [[theory/15-Bet-vs-Missed/04-Exercicios|04-Exercicios]]
+- [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+- [[theory/15-Bet-vs-Missed/06-Pendencias|06-Pendencias]]
+- [[theory/15-Bet-vs-Missed/07-Changelog|07-Changelog]]
+- [[theory/15-Bet-vs-Missed/08-Referencias|08-Referencias]]
+- [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
 
 <!-- graphify-links:end -->

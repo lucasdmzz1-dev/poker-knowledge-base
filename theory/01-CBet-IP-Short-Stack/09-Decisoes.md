@@ -113,7 +113,9 @@ A estratégia C-Bet IP Short Stack é construída em torno de:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/08-Referencias|08-Referencias]] · [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/07-Changelog|07-Changelog]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]]
+**Pasta:** [[theory/01-CBet-IP-Short-Stack/README|theory/01-CBet-IP-Short-Stack]]
+
+**Relacionadas no mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/08-Referencias|08-Referencias]] · [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/07-Changelog|07-Changelog]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]]
 
 **Outros módulos:**
 

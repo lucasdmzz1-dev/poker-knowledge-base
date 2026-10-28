@@ -54,7 +54,9 @@ O `08-Referencias.md` usa: esclarecimentos do autor do KB, anotações do instru
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/04-Exercicios|04-Exercicios]] · [[theory/14-Probe-Turn/README|README]]
+**Pasta:** [[theory/14-Probe-Turn/README|theory/14-Probe-Turn]]
+
+**Relacionadas no mesmo módulo:** [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/04-Exercicios|04-Exercicios]]
 
 **Módulos citados no texto:** [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]]
 

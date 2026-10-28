@@ -43,3 +43,15 @@ Limite de leitura: contra opens mais cedo o range do solver é mais curto, entã
 
 ## Relação com o PKO
 O estudo de PKO (`retomada-pko.md`) usa essas mesmas stats do HUD como ponto de partida: o call open do BTN em ~10% contra ~18% a 19% estimado para um bom call open em PKO (gap de uns 8 pontos).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[README|Início]]
+
+<!-- graphify-links:end -->

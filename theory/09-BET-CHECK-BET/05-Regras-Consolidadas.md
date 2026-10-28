@@ -48,7 +48,9 @@ Valor é relativo ao range adversário.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/09-BET-CHECK-BET/04-Exercicios|04-Exercicios]] · [[theory/09-BET-CHECK-BET/README|README]] · [[theory/09-BET-CHECK-BET/07-Changelog|07-Changelog]] · [[theory/09-BET-CHECK-BET/09-Decisoes|09-Decisoes]]
+**Pasta:** [[theory/09-BET-CHECK-BET/README|theory/09-BET-CHECK-BET]]
+
+**Relacionadas no mesmo módulo:** [[theory/09-BET-CHECK-BET/04-Exercicios|04-Exercicios]] · [[theory/09-BET-CHECK-BET/07-Changelog|07-Changelog]] · [[theory/09-BET-CHECK-BET/09-Decisoes|09-Decisoes]]
 
 **Outros módulos:**
 

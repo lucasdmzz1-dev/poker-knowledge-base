@@ -460,11 +460,12 @@ Knowledge survives time.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[docs/00-Architecture/KB-002-Domain-Model|KB-002-Domain-Model]] · [[docs/00-Architecture/KB-000-Architecture|KB-000-Architecture]] · [[docs/00-Architecture/KB-003-Module-Template|KB-003-Module-Template]]
+**Pasta:** [[README|Início]]
+
+**Relacionadas no mesmo módulo:** [[docs/00-Architecture/KB-002-Domain-Model|KB-002-Domain-Model]] · [[docs/00-Architecture/KB-000-Architecture|KB-000-Architecture]] · [[docs/00-Architecture/KB-003-Module-Template|KB-003-Module-Template]]
 
 **Outros módulos:**
 
-- [[README|README]]
 - [[theory/01-CBet-IP-Short-Stack/09-Decisoes|01-CBet-IP-Short-Stack · 09-Decisoes]]
 
 <!-- graphify-links:end -->

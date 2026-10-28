@@ -110,6 +110,8 @@ Broadways utilizam size alto.
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/09-BET-CHECK-BET/README|README]] · [[theory/09-BET-CHECK-BET/01-Guideline|01-Guideline]]
+**Pasta:** [[theory/09-BET-CHECK-BET/README|theory/09-BET-CHECK-BET]]
+
+**Relacionadas no mesmo módulo:** [[theory/09-BET-CHECK-BET/01-Guideline|01-Guideline]]
 
 <!-- graphify-links:end -->

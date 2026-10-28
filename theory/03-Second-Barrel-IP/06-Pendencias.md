@@ -150,7 +150,9 @@ Quando novos conteúdos forem adicionados:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/03-Second-Barrel-IP/01-Guideline|01-Guideline]] · [[theory/03-Second-Barrel-IP/03-Solver|03-Solver]]
+**Pasta:** [[theory/03-Second-Barrel-IP/01-Guideline|theory/03-Second-Barrel-IP]]
+
+**Relacionadas no mesmo módulo:** [[theory/03-Second-Barrel-IP/03-Solver|03-Solver]]
 
 **Outros módulos:**
 

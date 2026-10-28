@@ -34,6 +34,8 @@ Sugestão de eixos prioritários pros primeiros exercícios:
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]]
+**Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
+
+**Relacionadas no mesmo módulo:** [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]]
 
 <!-- graphify-links:end -->

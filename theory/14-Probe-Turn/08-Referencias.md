@@ -65,7 +65,9 @@ Não adicionar conhecimento externo ao módulo. O que veio de interpretação fi
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]]
+**Pasta:** [[theory/14-Probe-Turn/README|theory/14-Probe-Turn]]
+
+**Relacionadas no mesmo módulo:** [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]]
 
 **Módulos citados no texto:** [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]]
 

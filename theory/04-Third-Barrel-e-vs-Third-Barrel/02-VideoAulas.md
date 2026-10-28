@@ -230,7 +230,9 @@ Responder corretamente essas quatro perguntas permite construir praticamente tod
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|README]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|01-Guideline]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/04-Exercicios|04-Exercicios]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/03-Solver|03-Solver]]
+**Pasta:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|theory/04-Third-Barrel-e-vs-Third-Barrel]]
+
+**Relacionadas no mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|01-Guideline]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/04-Exercicios|04-Exercicios]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/03-Solver|03-Solver]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/08-Referencias|08-Referencias]]
 
 **Outros módulos:**
 

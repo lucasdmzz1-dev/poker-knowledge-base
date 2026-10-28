@@ -68,7 +68,9 @@ Este módulo funciona como a "camada de cima" do KB — os módulos de spot dize
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]]
+**Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
+
+**Relacionadas no mesmo módulo:** [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]]
 
 **Módulos citados no texto:** [[theory/01-CBet-IP-Short-Stack/README|01-CBet-IP-Short-Stack]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|04-Third-Barrel-e-vs-Third-Barrel]]
 

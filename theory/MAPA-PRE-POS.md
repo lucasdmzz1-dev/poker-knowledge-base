@@ -123,7 +123,7 @@ Hoje quero trabalhar no módulo: [nome do módulo / aula nova].
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/README|README]]
+**Pasta:** [[theory/README|theory]]
 
 **Módulos citados no texto:** [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]] · [[theory/12-RETA-FINAL/README|12-RETA-FINAL]]
 

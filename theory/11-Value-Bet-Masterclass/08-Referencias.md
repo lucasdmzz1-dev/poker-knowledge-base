@@ -47,7 +47,7 @@ Não adicionar conhecimento externo ao módulo. Como o módulo é transversal, p
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]]
+**Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
 
 **Outros módulos:**
 

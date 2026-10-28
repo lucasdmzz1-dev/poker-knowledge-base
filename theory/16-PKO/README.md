@@ -101,6 +101,22 @@ Módulo estruturado (v1.2). A regra foi testada em 170 mãos no Trainer (v2: 80%
 
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
-**Mesmo módulo:** [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]]
+**Pasta:** [[theory/README|theory]]
+
+**Nesta pasta:**
+
+- [[theory/16-PKO/01-Guideline|01-Guideline]]
+- [[theory/16-PKO/02-VideoAulas|02-VideoAulas]]
+- [[theory/16-PKO/03-Solver|03-Solver]]
+- [[theory/16-PKO/04-Exercicios|04-Exercicios]]
+- [[theory/16-PKO/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+- [[theory/16-PKO/06-Pendencias|06-Pendencias]]
+- [[theory/16-PKO/07-Changelog|07-Changelog]]
+- [[theory/16-PKO/08-Referencias|08-Referencias]]
+- [[theory/16-PKO/09-Decisoes|09-Decisoes]]
+- [[theory/16-PKO/tools/pko/pko-conhecimento|tools/pko/pko-conhecimento]]
+- [[theory/16-PKO/tools/pko/pko-maos-dicionario|tools/pko/pko-maos-dicionario]]
+- [[theory/16-PKO/tools/pko/pko-solver-playbook|tools/pko/pko-solver-playbook]]
+- [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|tools/pko/regras-vivas-pko-btn]]
 
 <!-- graphify-links:end -->
