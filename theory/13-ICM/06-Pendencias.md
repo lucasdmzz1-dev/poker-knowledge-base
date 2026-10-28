@@ -74,3 +74,17 @@ Quando houver nova aula ou correção do instrutor, atualizar:
 Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
 
 O `08-Referencias.md` usa: esclarecimentos do autor do KB, solver (números lidos nos frames), aula, anotações do instrutor, exercícios. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. **Resolvida (28/10/2026):** o autor do KB decidiu seguir a ordem geral, com o autor do KB em 1º. Ver `08-Referencias.md` e `09-Decisoes.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/13-ICM/09-Decisoes|09-Decisoes]] · [[theory/13-ICM/README|README]] · [[theory/13-ICM/08-Referencias|08-Referencias]] · [[theory/13-ICM/07-Changelog|07-Changelog]]
+
+**Módulos citados no texto:** [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]] · [[theory/12-RETA-FINAL/README|12-RETA-FINAL]]
+
+<!-- graphify-links:end -->

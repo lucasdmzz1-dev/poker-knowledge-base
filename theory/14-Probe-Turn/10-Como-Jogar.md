@@ -136,3 +136,15 @@ Pergunte o que você acha que ele tem no check atrás:
 - Na sequência com o naipe do board, a fala ficou confusa e as anotações só mandam dar check-raise quando você não tem o naipe.
 
 Os outros pontos em aberto estão em `06-Pendencias.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/07-Changelog|07-Changelog]] · [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]]
+
+<!-- graphify-links:end -->

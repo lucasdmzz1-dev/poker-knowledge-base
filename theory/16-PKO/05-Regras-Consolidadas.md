@@ -125,3 +125,15 @@ Núcleo paga, marginal só em nó largo com T baixo, premium dá raise, stack cu
 # Regra Principal do Módulo
 
 O que se mexe é a largura do range; o que não se mexe é a ordem das mãos.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/01-Guideline|01-Guideline]]
+
+<!-- graphify-links:end -->

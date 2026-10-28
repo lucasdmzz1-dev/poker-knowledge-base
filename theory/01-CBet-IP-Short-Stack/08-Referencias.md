@@ -64,3 +64,20 @@ Em caso de conflito:
 # Atualizações
 
 Novos materiais devem ser adicionados antes de alterar regras consolidadas.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/09-Decisoes|09-Decisoes]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]] · [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]]
+
+**Outros módulos:**
+
+- [[docs/00-Architecture/KB-002-Domain-Model|00-Architecture/KB-002-Domain-Model]]
+- [[theory/02-CBet-IP-40bb/06-Pendencias|02-CBet-IP-40bb · 06-Pendencias]]
+
+<!-- graphify-links:end -->

@@ -62,3 +62,15 @@ Em 28/10/2026, o autor do KB decidiu padronizar a ordem de prioridade das fontes
 # Estado Atual
 
 Módulo estruturado (v1.0), com os 10 arquivos. Pendências em 06-Pendencias.md.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]] · [[theory/16-PKO/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/16-PKO/03-Solver|03-Solver]]
+
+<!-- graphify-links:end -->

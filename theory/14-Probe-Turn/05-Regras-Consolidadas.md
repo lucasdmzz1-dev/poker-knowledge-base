@@ -135,3 +135,19 @@ Conectado B70, seco B100. B40 só se o vilão dá raise ou se há thin value. Bl
 # Regra Principal do Módulo
 
 Antes de escolher o size, decida o grupo de mãos que você quer apostar.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/01-Guideline|01-Guideline]]
+
+**Outros módulos:**
+
+- [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|15-Bet-vs-Missed · 05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

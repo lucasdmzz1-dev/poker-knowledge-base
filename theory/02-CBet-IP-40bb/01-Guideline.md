@@ -169,3 +169,22 @@ Nos boards Low:
 ## Flush completa com Low Card
 
 - Bet de **70%** do pote.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/02-CBet-IP-40bb/README|README]] · [[theory/02-CBet-IP-40bb/02-VideoAulas|02-VideoAulas]] · [[theory/02-CBet-IP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/02-CBet-IP-40bb/03-Solver|03-Solver]] · [[theory/02-CBet-IP-40bb/06-Pendencias|06-Pendencias]]
+
+**Outros módulos:**
+
+- [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-CBet-IP-Short-Stack · 01-Guideline]]
+- [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|01-CBet-IP-Short-Stack · 05-Regras-Consolidadas]]
+- [[theory/01-CBet-IP-Short-Stack/06-Pendencias|01-CBet-IP-Short-Stack · 06-Pendencias]]
+- [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|01-CBet-IP-Short-Stack · 02-VideoAulas]]
+
+<!-- graphify-links:end -->

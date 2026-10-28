@@ -155,3 +155,15 @@ Ao finalizar o módulo o jogador deve conseguir:
 - Construir bet e check.
 - Entender quais mãos entram em cada parte.
 - Escolher size e range de valor do Second Barrel conforme a textura do turn.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/05-CBet-OOP-40bb/01-Guideline|01-Guideline]]
+
+<!-- graphify-links:end -->

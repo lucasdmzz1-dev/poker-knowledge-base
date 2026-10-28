@@ -494,3 +494,15 @@ Adicionar valor fino.
 2. Como o range do vilão mudou?
 3. Minha mão quer valor, bluff ou realização?
 4. Qual sizing representa melhor essa estratégia?
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/01-Guideline|01-Guideline]] · [[theory/03-Second-Barrel-IP/03-Solver|03-Solver]] · [[theory/03-Second-Barrel-IP/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

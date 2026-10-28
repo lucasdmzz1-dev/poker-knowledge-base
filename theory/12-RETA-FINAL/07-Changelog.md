@@ -105,3 +105,15 @@ Ordem de prioridade das fontes padronizada na ordem geral do `theory/CLAUDE.md` 
 Adicionar:
 
 - Mapas de solver de defesa e squeeze em 10% field left.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]]
+
+<!-- graphify-links:end -->

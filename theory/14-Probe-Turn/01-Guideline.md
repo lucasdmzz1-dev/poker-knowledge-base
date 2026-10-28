@@ -388,3 +388,22 @@ Em todos os casos: BTN vs BB, 40bb, flop em check-check. **[Anotações]**
 # Pendências e decisões
 
 As pendências abertas estão em `06-Pendencias.md` e as decisões da construção do módulo estão em `09-Decisoes.md`. O guia de mesa, só com o que fazer, está em `10-Como-Jogar.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/04-Exercicios|04-Exercicios]] · [[theory/14-Probe-Turn/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/14-Probe-Turn/02-VideoAulas|02-VideoAulas]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]]
+
+**Módulos citados no texto:** [[theory/03-Second-Barrel-IP/01-Guideline|03-Second-Barrel-IP]] · [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]] · [[theory/06-XR-SHORT/README|06-XR-SHORT]] · [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]] · [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]]
+
+**Outros módulos:**
+
+- [[theory/15-Bet-vs-Missed/01-Guideline|15-Bet-vs-Missed · 01-Guideline]]
+- [[theory/15-Bet-vs-Missed/02-VideoAulas|15-Bet-vs-Missed · 02-VideoAulas]]
+
+<!-- graphify-links:end -->

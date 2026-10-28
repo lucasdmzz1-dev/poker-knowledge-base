@@ -247,3 +247,15 @@ Consequências:
 - Menos TP no check/call.
 - Usar apenas piores TP para calldown.
 - Mais cobrança com XR.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/06-XR-SHORT/README|README]] · [[theory/06-XR-SHORT/04-Exercicios|04-Exercicios]] · [[theory/06-XR-SHORT/07-Changelog|07-Changelog]] · [[theory/06-XR-SHORT/01-Guideline|01-Guideline]]
+
+<!-- graphify-links:end -->

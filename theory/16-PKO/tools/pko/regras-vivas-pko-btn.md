@@ -61,3 +61,15 @@ Ver `pko-maos-dicionario.md` (colunas, como achar um cenário e o que já está 
 - Configuração dos testes até aqui: **Facing RFI, RNG OFF, Close Decisions** (modo de decisões próximas: muitas mãos marginais). O placar não é comparável com o de um modo comum.
 - Sessões 1 e 2 juntas, segundo o Trainer: 70 mãos, precisão de 84%, 53 PERFEITO, 6 QUASE, 3 IMPRECISO, 0 ERRO e 8 BLUNDER, −0,80bb de EV perdido.
 - Cópia das 50 mãos da v2 no navegador: `claude_pko_hands_s2`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/08-Referencias|08-Referencias]] · [[theory/16-PKO/06-Pendencias|06-Pendencias]] · [[theory/16-PKO/07-Changelog|07-Changelog]]
+
+<!-- graphify-links:end -->

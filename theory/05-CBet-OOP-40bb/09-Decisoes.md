@@ -82,3 +82,20 @@ Com:
 - Exercícios.
 - Regras.
 - Histórico.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/05-CBet-OOP-40bb/README|README]] · [[theory/05-CBet-OOP-40bb/01-Guideline|01-Guideline]] · [[theory/05-CBet-OOP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/05-CBet-OOP-40bb/08-Referencias|08-Referencias]]
+
+**Outros módulos:**
+
+- [[theory/06-XR-SHORT/09-Decisoes|06-XR-SHORT · 09-Decisoes]]
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/09-Decisoes|04-Third-Barrel-e-vs-Third-Barrel · 09-Decisoes]]
+
+<!-- graphify-links:end -->

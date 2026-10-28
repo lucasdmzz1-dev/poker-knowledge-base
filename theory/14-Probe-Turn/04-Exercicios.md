@@ -688,3 +688,15 @@ A construção muda pouco, porque está ligada ao size. O que muda é a frequên
 **Regra:** Regra 18
 
 ---
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/09-Decisoes|09-Decisoes]] · [[theory/14-Probe-Turn/06-Pendencias|06-Pendencias]] · [[theory/14-Probe-Turn/07-Changelog|07-Changelog]]
+
+<!-- graphify-links:end -->

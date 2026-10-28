@@ -124,3 +124,15 @@ Módulo estruturado com:
 - Decisões.
 
 Exercícios: 50 questões. Pendente: Solver detalhado (ver 06-Pendencias.md).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
+
+<!-- graphify-links:end -->

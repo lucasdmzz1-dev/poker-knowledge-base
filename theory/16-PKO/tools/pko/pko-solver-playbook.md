@@ -54,3 +54,15 @@ Hero (BTN): stack, bounty. Opener: posição, stack, bounty, tamanho do open. SB
 2. Usar a busca por posição e stack para varrer várias linhas por chamada (umas 5 árvores por chamada, devolvendo só o resumo por classe).
 3. Guardar cada árvore (variáveis + 10 classes) num arquivo JSON e, com ~40 árvores, ajustar regras: quais variáveis movem o 3bet, o call e as mãos.
 4. Cruzar as regras com as mãos reais do usuário no BTN (folds, calls e 3bets já lidos) e atualizar o painel com filtro por cenário.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/16-PKO/README|README]] · [[theory/16-PKO/08-Referencias|08-Referencias]] · [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]] · [[theory/16-PKO/03-Solver|03-Solver]]
+
+<!-- graphify-links:end -->

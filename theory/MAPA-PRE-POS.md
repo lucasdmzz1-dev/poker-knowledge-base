@@ -114,3 +114,17 @@ Pontes com o PRÉ: 08, 10, 12 Parte 9, 13 Regra 2, 16, 14 e 15. Se mudar algo qu
 Arquivos comuns (CLAUDE.md, README.md, mapa, _TEMPLATE) são do MAIN CHAT TEORIA. Stats, HUD e leaks são do chat STATS.
 Hoje quero trabalhar no módulo: [nome do módulo / aula nova].
 ```
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/README|README]]
+
+**Módulos citados no texto:** [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]] · [[theory/12-RETA-FINAL/README|12-RETA-FINAL]]
+
+<!-- graphify-links:end -->

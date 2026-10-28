@@ -35,3 +35,17 @@ Current Phase:
 ## Repository Structure
 
 Coming soon.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Outros módulos:**
+
+- [[docs/00-Architecture/KB-001-Project-Architecture|00-Architecture/KB-001-Project-Architecture]]
+
+<!-- graphify-links:end -->

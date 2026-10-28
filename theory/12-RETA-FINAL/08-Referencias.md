@@ -63,3 +63,19 @@ Como as fontes deste módulo entram nela:
 # Regra
 
 Não adicionar conhecimento externo ao módulo. O que veio de interpretação ficou marcado como inferência no guideline.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
+
+**Outros módulos:**
+
+- [[theory/11-Value-Bet-Masterclass/08-Referencias|11-Value-Bet-Masterclass · 08-Referencias]]
+
+<!-- graphify-links:end -->

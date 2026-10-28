@@ -90,3 +90,19 @@ Nos boards Low:
 # Objetivo
 
 Construir uma estratégia simples, consistente e de fácil execução, preservando o máximo de EV através da correta utilização dos sizings e da estratégia Split nos boards Low.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/02-CBet-IP-40bb/README|README]] · [[theory/02-CBet-IP-40bb/01-Guideline|01-Guideline]] · [[theory/02-CBet-IP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+
+**Outros módulos:**
+
+- [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-CBet-IP-Short-Stack · 01-Guideline]]
+
+<!-- graphify-links:end -->

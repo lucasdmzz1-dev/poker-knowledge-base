@@ -104,3 +104,21 @@ A estratégia C-Bet IP Short Stack é construída em torno de:
 - Check quando realizar equity é superior.
 - Respeito ao Check Raise.
 - Construção inteligente do range.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/08-Referencias|08-Referencias]] · [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/07-Changelog|07-Changelog]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]]
+
+**Outros módulos:**
+
+- [[docs/00-Architecture/KB-003-Module-Template|00-Architecture/KB-003-Module-Template]]
+- [[docs/00-Architecture/KB-000-Architecture|00-Architecture/KB-000-Architecture]]
+- [[docs/00-Architecture/KB-001-Project-Architecture|00-Architecture/KB-001-Project-Architecture]]
+
+<!-- graphify-links:end -->

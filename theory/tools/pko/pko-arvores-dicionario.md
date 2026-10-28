@@ -30,3 +30,15 @@ Cobertura: 208 nós, 52 árvores únicas, 41 nós com a grade de 169 mãos. Fiel
 - **Nós com problema:** o #8954 (opener HJ) e o #7144 (opener CO) saíram sem RP e foram excluídos das análises.
 - **Etiqueta de fase:** o campo `term` não é fase. A fase vem de `pct`, `left` e `paid`.
 - **Coleta antiga (`claude_pko_btn`):** tinha etiqueta de fase inválida e árvores repetidas. Não é incluída.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]]
+
+<!-- graphify-links:end -->

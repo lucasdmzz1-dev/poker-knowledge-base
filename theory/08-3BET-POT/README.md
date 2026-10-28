@@ -234,3 +234,15 @@ Em andamento:
 - Solver;
 - Exercícios;
 - Exemplos finais.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/08-3BET-POT/01-Guideline|01-Guideline]] · [[theory/08-3BET-POT/07-Changelog|07-Changelog]]
+
+<!-- graphify-links:end -->

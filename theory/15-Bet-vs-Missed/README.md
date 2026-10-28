@@ -113,3 +113,15 @@ Ao finalizar este módulo o jogador deve conseguir:
 # Status
 
 Módulo finalizado, com 34 exercícios (de conceito e de leitura de situação, com os naipes especificados). O bucket do flop conectado high foi confirmado pelo coach, que disse para seguir 100% o guideline.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/15-Bet-vs-Missed/06-Pendencias|06-Pendencias]] · [[theory/15-Bet-vs-Missed/07-Changelog|07-Changelog]] · [[theory/15-Bet-vs-Missed/08-Referencias|08-Referencias]] · [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

@@ -287,3 +287,19 @@ O XR existe para:
 - Extrair quando possível.
 
 Não para simplesmente aumentar agressão.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/06-XR-SHORT/README|README]] · [[theory/06-XR-SHORT/01-Guideline|01-Guideline]] · [[theory/06-XR-SHORT/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+
+**Outros módulos:**
+
+- [[theory/05-CBet-OOP-40bb/01-Guideline|05-CBet-OOP-40bb · 01-Guideline]]
+
+<!-- graphify-links:end -->

@@ -469,3 +469,21 @@ Nunca copiar uma estratégia de:
 
 
 Cada árvore deve ser estudada separadamente.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/08-3BET-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/08-3BET-POT/03-Solver|03-Solver]] · [[theory/08-3BET-POT/README|README]] · [[theory/08-3BET-POT/02-VideoAulas|02-VideoAulas]] · [[theory/08-3BET-POT/04-Exercicios|04-Exercicios]]
+
+**Outros módulos:**
+
+- [[theory/07-XR-DEEP/05-Regras-Consolidadas|07-XR-DEEP · 05-Regras-Consolidadas]]
+- [[theory/07-XR-DEEP/01-Guideline|07-XR-DEEP · 01-Guideline]]
+- [[theory/07-XR-DEEP/07-Changelog|07-XR-DEEP · 07-Changelog]]
+
+<!-- graphify-links:end -->

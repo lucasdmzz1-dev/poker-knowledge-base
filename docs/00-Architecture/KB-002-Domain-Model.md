@@ -805,3 +805,22 @@ However, changes must remain:
 - Defined immutable ID prefixes
 - Defined the initial implementation scope
 - Added strategy mutability and historical support
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[docs/00-Architecture/KB-001-Project-Architecture|KB-001-Project-Architecture]] · [[docs/00-Architecture/KB-003-Module-Template|KB-003-Module-Template]]
+
+**Outros módulos:**
+
+- [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-CBet-IP-Short-Stack · 01-Guideline]]
+- [[theory/01-CBet-IP-Short-Stack/04-Exercicios|01-CBet-IP-Short-Stack · 04-Exercicios]]
+- [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|01-CBet-IP-Short-Stack · 05-Regras-Consolidadas]]
+- [[theory/01-CBet-IP-Short-Stack/08-Referencias|01-CBet-IP-Short-Stack · 08-Referencias]]
+
+<!-- graphify-links:end -->

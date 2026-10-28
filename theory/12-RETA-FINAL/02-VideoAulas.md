@@ -92,3 +92,15 @@ Spots de blind war e de 3-handed com diferença de stacks. No BTN o range de ope
 # Fechamento da Aula
 
 O instrutor volta ao ponto de partida: o stack ditando a estratégia, a mão certa para executar cada oportunidade, e o shove vs open como a ferramenta que a turma mais não pode falhar. Para fixar, ele recomenda drill nos ranges e entender por que cada mão vai, em vez de decorar.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/12-RETA-FINAL/README|README]] · [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
+
+<!-- graphify-links:end -->

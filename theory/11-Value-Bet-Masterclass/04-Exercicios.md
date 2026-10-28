@@ -25,3 +25,15 @@ Sugestão de eixos prioritários pros primeiros exercícios:
 2. Escolher entre B70 e Overbet no river dado o histórico da mão.
 3. Aplicar a régua do "pior mão que aposta" por street e por posição.
 4. Selecionar blefes por equidade futura real vs. blockers "gastos".
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/11-Value-Bet-Masterclass/README|README]] · [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]]
+
+<!-- graphify-links:end -->

@@ -420,3 +420,15 @@ Frequência Solver
 
 
 A estratégia correta nasce da árvore correta.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/08-3BET-POT/README|README]] · [[theory/08-3BET-POT/01-Guideline|01-Guideline]] · [[theory/08-3BET-POT/04-Exercicios|04-Exercicios]]
+
+<!-- graphify-links:end -->

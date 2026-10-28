@@ -609,3 +609,15 @@ Uma mão pode não ter valor suficiente para continuar.
 Nesse caso:
 
 ➡️ XR bluff.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/06-XR-SHORT/README|README]] · [[theory/06-XR-SHORT/01-Guideline|01-Guideline]] · [[theory/06-XR-SHORT/03-Solver|03-Solver]] · [[theory/06-XR-SHORT/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

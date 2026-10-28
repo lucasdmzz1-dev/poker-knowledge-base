@@ -219,3 +219,20 @@ Então:
 - Cobrar mais.
 - Menos TP no call.
 - Apenas piores TP para calldown.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/06-XR-SHORT/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/06-XR-SHORT/04-Exercicios|04-Exercicios]] · [[theory/06-XR-SHORT/02-VideoAulas|02-VideoAulas]] · [[theory/06-XR-SHORT/README|README]] · [[theory/06-XR-SHORT/07-Changelog|07-Changelog]]
+
+**Outros módulos:**
+
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/09-Decisoes|04-Third-Barrel-e-vs-Third-Barrel · 09-Decisoes]]
+- [[theory/05-CBet-OOP-40bb/02-VideoAulas|05-CBet-OOP-40bb · 02-VideoAulas]]
+
+<!-- graphify-links:end -->

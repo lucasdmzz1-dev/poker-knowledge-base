@@ -53,3 +53,14 @@ Nota: nas anotações do flush, "FD" é usado no sentido dos melhores flushes (d
 - B70: completou o flush e não quero ter thin value, aposto melhores TP+.
 - Por bluff: quero ter equity direta (duas pontas, FDs e melhores brocas). Check-raise por bluff: combo draw (duas pontas + FD).
 
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/14-Probe-Turn/README|README]] · [[theory/14-Probe-Turn/01-Guideline|01-Guideline]] · [[theory/14-Probe-Turn/07-Changelog|07-Changelog]] · [[theory/14-Probe-Turn/02-VideoAulas|02-VideoAulas]] · [[theory/14-Probe-Turn/08-Referencias|08-Referencias]]
+
+<!-- graphify-links:end -->

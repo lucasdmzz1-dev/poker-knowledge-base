@@ -273,3 +273,15 @@ Perguntar:
 - Qual o preço?
 - Minha mão bloqueia valor?
 - Minha mão desbloqueia blefes?
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|README]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|01-Guideline]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/02-VideoAulas|02-VideoAulas]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

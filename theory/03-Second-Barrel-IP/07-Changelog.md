@@ -122,3 +122,15 @@ Toda alteração futura deve seguir:
 2. Atualizar o documento correspondente.
 3. Revisar Regras Consolidadas.
 4. Atualizar Decisões caso a estrutura seja alterada.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/03-Second-Barrel-IP/01-Guideline|01-Guideline]] · [[theory/03-Second-Barrel-IP/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

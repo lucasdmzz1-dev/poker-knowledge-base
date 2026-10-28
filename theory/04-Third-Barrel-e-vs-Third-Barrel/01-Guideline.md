@@ -163,3 +163,21 @@ A frequência mínima de defesa utilizada no módulo é:
 
 - B70 → Todos os Top Pairs.
 - Pot+ → Top Pairs que desbloqueiam os blefes.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|README]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/04-Exercicios|04-Exercicios]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/02-VideoAulas|02-VideoAulas]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/03-Solver|03-Solver]]
+
+**Outros módulos:**
+
+- [[theory/03-Second-Barrel-IP/06-Pendencias|03-Second-Barrel-IP · 06-Pendencias]]
+- [[theory/02-CBet-IP-40bb/README|02-CBet-IP-40bb · README]]
+- [[theory/03-Second-Barrel-IP/01-Guideline|03-Second-Barrel-IP · 01-Guideline]]
+
+<!-- graphify-links:end -->

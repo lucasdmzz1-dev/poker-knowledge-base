@@ -64,3 +64,20 @@ Atualizar:
 - Guideline.
 - Regras Consolidadas.
 - Changelog.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/01-CBet-IP-Short-Stack/README|README]] · [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]]
+
+**Outros módulos:**
+
+- [[theory/02-CBet-IP-40bb/01-Guideline|02-CBet-IP-40bb · 01-Guideline]]
+- [[docs/00-Architecture/KB-003-Module-Template|00-Architecture/KB-003-Module-Template]]
+
+<!-- graphify-links:end -->

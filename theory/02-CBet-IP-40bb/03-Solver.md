@@ -81,3 +81,19 @@ Nos boards Low:
 # Objetivo
 
 Maximizar EV utilizando diferentes sizings conforme a textura do board, mantendo uma estratégia simples e consistente.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Mesmo módulo:** [[theory/02-CBet-IP-40bb/README|README]] · [[theory/02-CBet-IP-40bb/01-Guideline|01-Guideline]]
+
+**Outros módulos:**
+
+- [[theory/01-CBet-IP-Short-Stack/03-Solver|01-CBet-IP-Short-Stack · 03-Solver]]
+
+<!-- graphify-links:end -->
