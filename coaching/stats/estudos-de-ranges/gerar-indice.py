@@ -33,7 +33,7 @@ def linhas():
                 "id": x.get("id"), "pct": x.get("pct"), "left": x.get("left"), "paid": x.get("paid"),
                 "campo_n0": x.get("campo_n0"), "media": x.get("media"), "hs": x.get("hs"),
                 "sb": stk("SB"), "bb": stk("BB"), "n_mesa": n,
-                "regra_mesa": "ok" if n >= MESA_MIN else "fora (menos de 8)",
+                "regra_mesa": "ok" if n >= MESA_MIN else ("exceção mantida" if x.get("excecao_mesa") else "fora (menos de 8)"),
                 "f": f, "r": r, "ai": ai,
                 "open": round(100 - f, 1) if f is not None else None,
                 "caminho": f"{acao}/{posicao}/{stack}/{formato}/{fase}/arvores/{str(x.get('id', '')).lstrip('#')}.md",
@@ -60,7 +60,7 @@ def main():
         "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for x in rows:
-        mesa = f"{x['n_mesa']}" + ("" if x["regra_mesa"] == "ok" else " (fora)")
+        mesa = f"{x['n_mesa']}" + {"ok": "", "exceção mantida": " (exceção)"}.get(x["regra_mesa"], " (fora)")
         out.append(
             f"| {x['acao']} | {x['posicao']} | {x['stack']} | {x['formato']} | {x['fase']} | "
             f"[{x['id']}]({x['caminho']}) | {br(x['pct'])}% | {br(x['media'])} | {br(x['hs'])} | "

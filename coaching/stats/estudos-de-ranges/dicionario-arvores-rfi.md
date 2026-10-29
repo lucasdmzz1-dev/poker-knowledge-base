@@ -85,7 +85,8 @@ Os exemplos da tabela com números vêm da árvore #3336; os demais são só o n
 | | `r_size` | Tamanho do raise (bb), por exemplo 2. |
 | Range (classes) | `cl` | Para 10 classes, `[raise%, all-in%]` ponderado por combos: `Pa` (AA a TT), `Pm` (99 a 66), `Pb` (55 a 22), `As` (Ax suited), `Ks` (Kx suited), `QJs` (Qx e Jx suited), `Sc` (suited conectados e gappers), `Ao` (Ax offsuit), `Bo` (broadways offsuit), `Oo` (outros offsuit). |
 | Range (grade) | `grid` | 169 células na ordem de linha da grade (AA, AKs, AQs, ..., A2s, AKo, KK, KQs, ...). Cada célula é `r-a` em passos de 5% (`r` = raise, `a` = all-in; fold = 20 − r − a). |
-| Controle | `obs` | Algo fora do padrão (cabeçalho incompleto, cor não reconhecida, grade descartada). |
+| Controle | `excecao_mesa` | Só quando uma árvore com menos de 8 jogadores fica na análise por decisão do usuário: o motivo e a data. |
+| | `obs` | Algo fora do padrão (cabeçalho incompleto, cor não reconhecida, grade descartada). |
 
 ## Derivadas (calculadas na análise, não gravadas)
 - Stack inicial em bb = `media` × `pct` ÷ 100 (vale se a "Média" for do torneio; ver `media`).
