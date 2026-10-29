@@ -119,6 +119,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/16-PKO/README|theory/16-PKO]]
 
-**Relacionadas no mesmo módulo:** [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/08-Referencias|08-Referencias]] · [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/16-PKO/03-Solver|03-Solver]] · [[theory/16-PKO/tools/pko/pko-maos-dicionario|pko-maos-dicionario]]
+**Mesma pasta:** [[theory/16-PKO/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/16-PKO/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]]
 
 <!-- graphify-links:end -->

@@ -66,4 +66,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[coaching/stats/estudos-de-ranges/README|coaching/stats/estudos-de-ranges]]
 
+**Mesma pasta:** [[coaching/stats/estudos-de-ranges/dicionario-arvores-rfi|dicionario-arvores-rfi]]
+
 <!-- graphify-links:end -->

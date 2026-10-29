@@ -83,4 +83,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/README|theory]]
 
+**Mesma pasta:** [[theory/CLAUDE|CLAUDE]] · [[theory/MAPA-PRE-POS|MAPA-PRE-POS]]
+
 <!-- graphify-links:end -->

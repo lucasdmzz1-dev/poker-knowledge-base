@@ -125,6 +125,8 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/README|theory]]
 
+**Mesma pasta:** [[theory/CLAUDE|CLAUDE]] · [[theory/retomada-main-teoria|retomada-main-teoria]]
+
 **Módulos citados no texto:** [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]] · [[theory/12-RETA-FINAL/README|12-RETA-FINAL]]
 
 <!-- graphify-links:end -->
