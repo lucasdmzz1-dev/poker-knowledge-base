@@ -22,7 +22,7 @@ Explicações em português, com os termos de poker em inglês (node, range widt
 3. Hipóteses da v3.1 (seção 8 das regras vivas): não apertar Kx e Qx suited baixos em nodes wide; premium raise contra opener fundo e call contra opener muito curto.
 4. Confirmar a `config_trainer` da sessão 3 e os valores "−3%" e "−11%" da régua de Help Value (lidos como 3% e 11%).
 5. Completar o cenário das 65 mãos antigas com o "Exportar Estatísticas" do Trainer.
-7. **"Média" do cabeçalho pode ser a média da mesa, não do field.** Nas 52 árvores de `dados/pko-arvores-btn.json`, a "Média" fica a menos de 1bb da média dos stacks sentados (por exemplo #2247: 70,5 contra 69,6). O mesmo apareceu nas árvores de RFI do BTN 15bb (`coaching/stats/estudos-de-ranges/`). Se for da mesa, o "stack inicial em bb = Média × % restante" (`pko-conhecimento.md` §6) e tudo que depende dele (Help Value, dead money, sinal de bounty alto da regra) precisam ser revistos. Conferir no site antes de mudar qualquer regra.
+7. **"Média" do cabeçalho: do torneio ou da mesa?** Nas 52 árvores de `dados/pko-arvores-btn.json`, a "Média" fica a menos de 1bb da média dos stacks sentados (#2247: 70,5 contra 69,6); o mesmo nas árvores de RFI. Pode ser a média da mesa, ou o solver monta a mesa com a média do torneio (aí a fórmula do stack inicial em bb segue certa). Teste: média do field em bb = SI ÷ (BB em fichas × % restante); comparar com a "Média" numa árvore que mostre SI e o blind em fichas. Só se o teste falhar, rever stack inicial em bb, Help Value, dead money e o sinal de bounty alto da regra.
 6. `graphifyy`: não foi instalado (o ambiente do chat não tinha rede). Instalar no terminal do usuário: `uv tool install graphifyy` e `graphify install --project`.
 
 ## Notas técnicas (Chrome conectado)
