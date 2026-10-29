@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/12-reta-final
+  - tema/reta-final
+  - street/preflop
+  - tema/icm
+  - tipo/decisoes
+---
+
 # Decisões – Reta Final
 
 > Módulo 12 — Poker Knowledge Base

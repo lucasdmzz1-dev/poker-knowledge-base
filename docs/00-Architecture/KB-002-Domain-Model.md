@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/arquitetura
+---
+
 # KB-002 — Domain Model
 
 **Version:** 1.0  

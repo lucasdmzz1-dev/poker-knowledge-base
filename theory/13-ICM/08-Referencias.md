@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/referencias
+---
+
 # Referências — ICM e Risk Premium
 
 ---

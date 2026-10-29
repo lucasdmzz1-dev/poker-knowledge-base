@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/02-cbet-ip-40bb
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/40bb
+  - tipo/changelog
+---
+
 # Changelog – C-Bet IP 40bb
 
 ## Versão 1.0

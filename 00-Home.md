@@ -1,0 +1,71 @@
+# 🏠 Home — Poker Knowledge Base
+
+Ponto de partida do cofre. Abra esta nota primeiro.
+
+## Esta semana
+
+_Edite à vontade: o que estudar e jogar nesta semana._
+
+- [ ] 
+- [ ] 
+- [ ] 
+
+## Módulos de teoria
+
+| # | Módulo | Spot | Atalhos |
+|---|---|---|---|
+| 01 | [[theory/01-CBet-IP-Short-Stack/README\|C-Bet IP Short Stack]] | SRP · IP · flop · 20bb | [[theory/01-CBet-IP-Short-Stack/01-Guideline\|Guideline]] · [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas\|Regras]] · [[theory/01-CBet-IP-Short-Stack/04-Exercicios\|Exercícios]] · [[flashcards/01-CBet-IP-Short-Stack\|Flashcards]] |
+| 02 | [[theory/02-CBet-IP-40bb/README\|C-Bet IP 40bb]] | SRP · IP · flop · 40bb | [[theory/02-CBet-IP-40bb/01-Guideline\|Guideline]] · [[theory/02-CBet-IP-40bb/05-Regras-Consolidadas\|Regras]] · [[theory/02-CBet-IP-40bb/04-Exercicios\|Exercícios]] · [[flashcards/02-CBet-IP-40bb\|Flashcards]] |
+| 03 | [[theory/03-Second-Barrel-IP/01-Guideline\|C-Bet IP + Second Barrel]] | SRP · IP · flop/turn | [[theory/03-Second-Barrel-IP/01-Guideline\|Guideline]] · [[theory/03-Second-Barrel-IP/05-Regras-Consolidadas\|Regras]] · [[theory/03-Second-Barrel-IP/04-Exercicios\|Exercícios]] · [[flashcards/03-Second-Barrel-IP\|Flashcards]] |
+| 04 | [[theory/04-Third-Barrel-e-vs-Third-Barrel/README\|Third Barrel e vs Third Barrel]] | SRP · river · ataque e defesa | [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline\|Guideline]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/05-Regras-Consolidadas\|Regras]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/04-Exercicios\|Exercícios]] · [[flashcards/04-Third-Barrel-e-vs-Third-Barrel\|Flashcards]] |
+| 05 | [[theory/05-CBet-OOP-40bb/README\|C-Bet OOP 40bb + Second Barrel OOP]] | SRP · OOP · flop/turn · 40bb | [[theory/05-CBet-OOP-40bb/01-Guideline\|Guideline]] · [[theory/05-CBet-OOP-40bb/05-Regras-Consolidadas\|Regras]] · [[theory/05-CBet-OOP-40bb/04-Exercicios\|Exercícios]] · [[flashcards/05-CBet-OOP-40bb\|Flashcards]] |
+| 06 | [[theory/06-XR-SHORT/README\|Check-Raise Short Stack]] | SRP · OOP · flop · 20bb | [[theory/06-XR-SHORT/01-Guideline\|Guideline]] · [[theory/06-XR-SHORT/05-Regras-Consolidadas\|Regras]] · [[theory/06-XR-SHORT/04-Exercicios\|Exercícios]] · [[flashcards/06-XR-SHORT\|Flashcards]] |
+| 07 | [[theory/07-XR-DEEP/README\|Check-Raise Deep Stack]] | SRP · OOP · flop · deep | [[theory/07-XR-DEEP/01-Guideline\|Guideline]] · [[theory/07-XR-DEEP/05-Regras-Consolidadas\|Regras]] · [[theory/07-XR-DEEP/04-Exercicios\|Exercícios]] · [[flashcards/07-XR-DEEP\|Flashcards]] |
+| 08 | [[theory/08-3BET-POT/README\|3BET Pot]] | 3BP · IP/OOP · short/deep | [[theory/08-3BET-POT/01-Guideline\|Guideline]] · [[theory/08-3BET-POT/05-Regras-Consolidadas\|Regras]] · [[theory/08-3BET-POT/04-Exercicios\|Exercícios]] · [[flashcards/08-3BET-POT\|Flashcards]] |
+| 09 | [[theory/09-BET-CHECK-BET/README\|Bet Check Bet]] | SRP · river | [[theory/09-BET-CHECK-BET/01-Guideline\|Guideline]] · [[theory/09-BET-CHECK-BET/05-Regras-Consolidadas\|Regras]] · [[theory/09-BET-CHECK-BET/04-Exercicios\|Exercícios]] · [[flashcards/09-BET-CHECK-BET\|Flashcards]] |
+| 10 | [[theory/10-MULTIWAY-POT/README\|Multiway Pot]] | pote a 3 · flop/turn · 40bb | [[theory/10-MULTIWAY-POT/01-Guideline\|Guideline]] · [[theory/10-MULTIWAY-POT/05-Regras-Consolidadas\|Regras]] · [[theory/10-MULTIWAY-POT/04-Exercicios\|Exercícios]] · [[flashcards/10-MULTIWAY-POT\|Flashcards]] |
+| 11 | [[theory/11-Value-Bet-Masterclass/README\|Value Bet Masterclass]] | transversal · foco river | [[theory/11-Value-Bet-Masterclass/01-Guideline\|Guideline]] · [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas\|Regras]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios\|Exercícios]] · [[flashcards/11-Value-Bet-Masterclass\|Flashcards]] |
+| 12 | [[theory/12-RETA-FINAL/README\|Reta Final]] | pré-flop · 15-40bb · ICM | [[theory/12-RETA-FINAL/01-Guideline\|Guideline]] · [[theory/12-RETA-FINAL/05-Regras-Consolidadas\|Regras]] · [[theory/12-RETA-FINAL/04-Exercicios\|Exercícios]] · [[flashcards/12-RETA-FINAL\|Flashcards]] |
+| 13 | [[theory/13-ICM/README\|ICM e Risk Premium]] | pré-flop · ICM | [[theory/13-ICM/01-Guideline\|Guideline]] · [[theory/13-ICM/05-Regras-Consolidadas\|Regras]] · [[theory/13-ICM/04-Exercicios\|Exercícios]] · [[flashcards/13-ICM\|Flashcards]] |
+| 14 | [[theory/14-Probe-Turn/README\|Probe Turn]] | SRP · BB vs BTN · turn · 40bb | [[theory/14-Probe-Turn/01-Guideline\|Guideline]] · [[theory/14-Probe-Turn/05-Regras-Consolidadas\|Regras]] · [[theory/14-Probe-Turn/04-Exercicios\|Exercícios]] · [[flashcards/14-Probe-Turn\|Flashcards]] |
+| 15 | [[theory/15-Bet-vs-Missed/README\|Bet vs Missed C-Bet]] | SRP · IP · flop | [[theory/15-Bet-vs-Missed/01-Guideline\|Guideline]] · [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas\|Regras]] · [[theory/15-Bet-vs-Missed/04-Exercicios\|Exercícios]] · [[flashcards/15-Bet-vs-Missed\|Flashcards]] |
+| 16 | [[theory/16-PKO/README\|PKO — BTN vs 1 open]] | pré-flop · PKO | [[theory/16-PKO/01-Guideline\|Guideline]] · [[theory/16-PKO/05-Regras-Consolidadas\|Regras]] · [[theory/16-PKO/04-Exercicios\|Exercícios]] · [[flashcards/16-PKO\|Flashcards]] |
+
+Visão geral: [[theory/README|Índice da teoria]] · [[theory/MAPA-PRE-POS|Mapa pré → pós-flop]] · [[theory/retomada-main-teoria|Retomada da teoria]]
+
+## Pendências abertas
+
+Tudo o que ainda falta validar ou documentar, por módulo:
+
+- [[theory/01-CBet-IP-Short-Stack/06-Pendencias|01]] · [[theory/02-CBet-IP-40bb/06-Pendencias|02]] · [[theory/03-Second-Barrel-IP/06-Pendencias|03]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/06-Pendencias|04]] · [[theory/05-CBet-OOP-40bb/06-Pendencias|05]] · [[theory/06-XR-SHORT/06-Pendencias|06]] · [[theory/07-XR-DEEP/06-Pendencias|07]] · [[theory/08-3BET-POT/06-Pendencias|08]] · [[theory/09-BET-CHECK-BET/06-Pendencias|09]] · [[theory/10-MULTIWAY-POT/06-Pendencias|10]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|11]] · [[theory/12-RETA-FINAL/06-Pendencias|12]] · [[theory/13-ICM/06-Pendencias|13]] · [[theory/14-Probe-Turn/06-Pendencias|14]] · [[theory/15-Bet-vs-Missed/06-Pendencias|15]] · [[theory/16-PKO/06-Pendencias|16]]
+
+## Stats, leaks e ranges
+
+- [[coaching/stats/retomada-stats|Retomada dos stats]] (painel de evolução e call open contra o solver)
+- [[coaching/stats/estudos-de-ranges/README|Estudos de ranges]] · [[coaching/stats/estudos-de-ranges/dicionario-arvores-rfi|Dicionário de árvores RFI]] · [[coaching/stats/estudos-de-ranges/playbook-coleta-rfi|Playbook de coleta RFI]]
+- PKO: [[theory/tools/pko/regras-vivas-pko-btn|Regras vivas PKO BTN]] · [[theory/tools/pko/pko-conhecimento|Conhecimento PKO]] · [[theory/tools/pko/pko-solver-playbook|Solver playbook]] · [[theory/tools/pko/retomada-pko|Retomada PKO]]
+- Painéis em HTML (abrem no navegador, fora do Obsidian): `coaching/stats/painel-evolucao.html`, `coaching/stats/leak-tracker.html`, `coaching/stats/cheat-btn-vs-co.html`
+
+## Estudar por tema (tags)
+
+Clique numa tag para ver todas as notas com ela.
+
+- **Pot type:** #spot/srp · #spot/3bp · #spot/multiway
+- **Posição:** #posicao/ip · #posicao/oop
+- **Street:** #street/preflop · #street/flop · #street/turn · #street/river
+- **Stack:** #stack/short · #stack/40bb · #stack/deep
+- **Linha:** #linha/cbet · #linha/second-barrel · #linha/third-barrel · #linha/defesa · #linha/check-raise · #linha/bet-check-bet · #linha/probe · #linha/bet-vs-missed
+- **Tema:** #tema/icm · #tema/reta-final · #tema/pko · #tema/value-bet · #tema/stats
+- **Tipo de nota:** #tipo/regras · #tipo/exercicios · #tipo/guideline · #tipo/solver · #tipo/pendencias
+
+## Flashcards
+
+Os cards ficam em [[flashcards/README|flashcards]], um arquivo por módulo, gerados a partir das Regras Consolidadas.
+
+1. Instale o plugin da comunidade **Spaced Repetition** (Configurações → Plugins da comunidade → Explorar).
+2. Clique no ícone de cartas na barra da esquerda (ou Ctrl+P → "Spaced Repetition: Review flashcards").
+3. Escolha o deck (um por módulo) e responda Fácil / Bom / Difícil. O plugin agenda a próxima revisão.
+
+## Arquitetura
+
+[[docs/00-Architecture/KB-000-Architecture|Arquitetura da KB]] · [[docs/00-Architecture/KB-003-Module-Template|Template de módulo]] · [[README|README do repositório]]

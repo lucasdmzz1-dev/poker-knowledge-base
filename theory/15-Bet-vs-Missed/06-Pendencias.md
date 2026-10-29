@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/15-bet-vs-missed
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/bet-vs-missed
+  - tipo/pendencias
+---
+
 # Pendências – Bet vs Missed C-Bet
 
 > Módulo 15 — Poker Knowledge Base

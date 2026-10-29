@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/stats
+  - tema/ranges
+---
+
 # Playbook: coleta de árvores de RFI no 4BET Trainer
 
 Como ler uma árvore de RFI completa (cabeçalho, stacks de todos os assentos, RP e range do hero) e gravar no padrão de `dicionario-arvores-rfi.md`. Baseado no playbook do PKO (`theory/tools/pko/pko-solver-playbook.md`), que tem as notas técnicas de navegação.

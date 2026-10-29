@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/arquitetura
+---
+
 # KB-001 — Project Architecture
 
 **Version:** 1.0  

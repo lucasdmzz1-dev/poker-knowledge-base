@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/nota
+---
+
 # Playbook: coleta de árvores do 4BET Trainer (PKO) por automação
 
 Objetivo: coletar várias árvores do BTN contra open (variando stack, stacks atrás, bounties, pote e fase), guardar as variáveis e o range, e achar padrões que movem o fold, o call e o 3bet.

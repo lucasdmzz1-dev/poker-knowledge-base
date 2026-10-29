@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/12-reta-final
+  - tema/reta-final
+  - street/preflop
+  - tema/icm
+  - tipo/regras
+---
+
 # Regras Consolidadas – Reta Final
 
 > Este documento reúne apenas as regras finais consolidadas durante o estudo do módulo.

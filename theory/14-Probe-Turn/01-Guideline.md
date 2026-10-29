@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/14-probe-turn
+  - spot/srp
+  - posicao/oop
+  - street/turn
+  - linha/probe
+  - stack/40bb
+  - tipo/guideline
+---
+
 # Guideline — Probe Turn
 
 > **Módulo:** 14 – Probe Turn (consolidado, v1.1)

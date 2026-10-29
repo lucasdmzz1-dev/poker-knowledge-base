@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/01-cbet-ip-short-stack
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/short
+  - tipo/exercicios
+---
+
 # Exercícios – C-Bet IP Short Stack
 
 > Este documento reúne os exercícios utilizados durante o estudo do módulo.

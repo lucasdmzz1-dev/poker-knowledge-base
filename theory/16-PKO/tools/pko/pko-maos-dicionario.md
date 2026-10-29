@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/nota
+---
+
 # Dicionário do registro de mãos do PKO (`pko-maos-jogadas.csv`)
 
 Cada linha é **uma decisão** do hero no BTN diante de um open. O objetivo é poder reconstruir o cenário, filtrar por ele e achar a árvore exata do solver, mesmo com milhares de mãos.

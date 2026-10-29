@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/01-cbet-ip-short-stack
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/short
+  - tipo/decisoes
+---
+
 # Decisões – C-Bet IP Short Stack
 
 > Módulo 01 — Poker Knowledge Base

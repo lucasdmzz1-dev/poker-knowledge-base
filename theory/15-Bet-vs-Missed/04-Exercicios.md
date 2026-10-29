@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/15-bet-vs-missed
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/bet-vs-missed
+  - tipo/exercicios
+---
+
 # Exercícios — Bet vs Missed C-Bet
 
 ## Módulo 15 — Bet vs Missed C-Bet

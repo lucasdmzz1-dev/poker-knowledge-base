@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/10-multiway-pot
+  - spot/multiway
+  - street/flop
+  - street/turn
+  - stack/40bb
+  - tipo/changelog
+---
+
 # Changelog — Multiway Pot
 
 ---

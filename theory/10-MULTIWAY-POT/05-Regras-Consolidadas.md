@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/10-multiway-pot
+  - spot/multiway
+  - street/flop
+  - street/turn
+  - stack/40bb
+  - tipo/regras
+---
+
 # Regras Consolidadas – Multiway Pot
 
 > Este documento reúne apenas as regras finais consolidadas durante o estudo do módulo.

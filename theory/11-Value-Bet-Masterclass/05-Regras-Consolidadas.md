@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/11-value-bet-masterclass
+  - tema/value-bet
+  - street/river
+  - tema/transversal
+  - tipo/regras
+---
+
 # Regras Consolidadas – Value Bet Masterclass
 
 > Este documento reúne apenas as regras finais consolidadas durante a masterclass.

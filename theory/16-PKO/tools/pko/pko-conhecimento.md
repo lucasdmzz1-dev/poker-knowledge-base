@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/nota
+---
+
 # Notas de PKO (fornecidas pelo usuário) e como entram no modelo
 
 ## 1. Valor do KO inicial por fase (PKO 50%), em fração do stack inicial (SI)

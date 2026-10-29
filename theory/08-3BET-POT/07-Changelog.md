@@ -1,3 +1,16 @@
+---
+tags:
+  - modulo/08-3bet-pot
+  - spot/3bp
+  - posicao/ip
+  - posicao/oop
+  - street/flop
+  - street/turn
+  - stack/short
+  - stack/deep
+  - tipo/changelog
+---
+
 # 07-CHANGELOG.md
 
 # 3BET POT — CHANGELOG
