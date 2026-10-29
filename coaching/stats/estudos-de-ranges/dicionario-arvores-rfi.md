@@ -6,9 +6,11 @@ tags:
 
 # Dicionário dos dados das árvores de RFI
 
-Cada situação de RFI guarda as árvores lidas em dois lugares:
-- `<formato>/rfi/<posicao>/<stack>bb/arvores/<id>.md`: ficha legível de cada árvore.
-- `<formato>/rfi/<posicao>/<stack>bb/dados/arvores.json`: os mesmos dados em formato de análise, um registro por árvore.
+Cada combinação de filtros guarda as árvores lidas em dois lugares (estrutura completa no `README.md` desta pasta):
+- `<acao>/<posicao>/<stack>bb/<formato>/<fase>/arvores/<id>.md`: ficha legível de cada árvore.
+- `<acao>/<posicao>/<stack>bb/<formato>/<fase>/dados/arvores.json`: os mesmos dados em formato de análise, um registro por árvore.
+
+Depois de gravar, rodar `python gerar-indice.py` para atualizar o índice geral (`indice.md` e `indice.csv`).
 
 `<formato>` é `vanilla` ou `pko`. Os dois nunca se misturam na mesma situação nem no mesmo JSON: o range do PKO depende dos bounties, e o do Vanilla não.
 
@@ -17,7 +19,7 @@ O formato segue o das árvores de PKO (`theory/tools/pko/pko-arvores-dicionario.
 ## Vanilla e PKO: o que muda
 | | Vanilla | PKO |
 |---|---|---|
-| Pasta | `vanilla/` | `pko/` |
+| Pasta (nível formato) | `vanilla/` | `pko/` (fator 50%; outro fator: `pko70`, `pko75`) |
 | `tipo` | `Vanilla` | `Bounty` |
 | `fator_ko` | não existe | fator progressivo (por exemplo 50%) |
 | `koi` | não existe | bounty inicial ($), do cabeçalho; se não vier, o menor bounty da mesa |

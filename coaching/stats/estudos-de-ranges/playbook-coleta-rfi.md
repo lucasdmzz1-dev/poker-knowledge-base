@@ -10,7 +10,7 @@ Como ler uma árvore de RFI completa (cabeçalho, stacks de todos os assentos, R
 
 ## Antes de começar
 1. Chrome com a extensão Claude in Chrome conectada, na sessão do usuário já logada. Abrir https://4bet-trainer.netlify.app/ numa aba nova do grupo da sessão e clicar em SOLVER.
-2. Conferir os filtros da situação no README dela (tipo, fase, stacks, busca). Não mudar os filtros no meio de uma situação. O tipo define a pasta: Vanilla em `vanilla/`, Bounty em `pko/` (com o fator progressivo, por exemplo 50%).
+2. Conferir os filtros da situação no README dela (tipo, fase, stacks, busca). Os filtros definem a pasta: `<acao>/<posicao>/<stack>bb/<formato>/<fase>/` (por exemplo `rfi/btn/20bb/vanilla/mid/`). Vanilla vai em `vanilla/`, Bounty em `pko/` (fator 50%; outro fator em `pko70`, `pko75`). Criar a pasta se não existir, com o README da combinação e, se faltar, o README do nível do stack (menu de formatos e fases, como `rfi/btn/15bb/README.md`).
 3. Dizer ao usuário qual situação será lida e quantas árvores.
 
 ## Regra de mesa (obrigatória)
@@ -26,7 +26,7 @@ Como ler uma árvore de RFI completa (cabeçalho, stacks de todos os assentos, R
 5. **Matriz de RP:** ler o RP do hero contra SB e BB, e deles contra o hero.
 6. **Grade:** rodar o script abaixo. Na primeira árvore, conferir quais cores aparecem e qual é a do all-in. Conferir a soma contra os totais do passo 4.
 7. **Voltar à lista** pelo botão HHs (não o de compartilhar).
-8. **Gravar** a ficha em `arvores/<id>.md` e o registro em `dados/arvores.json`.
+8. **Gravar** a ficha em `arvores/<id>.md` e o registro em `dados/arvores.json` da pasta da combinação. Ao fim da rodada, rodar `python gerar-indice.py` na pasta `estudos-de-ranges` e atualizar o menu do nível do stack.
 
 ## Script: resumo da grade por cor e por classe
 Devolve, para cada classe de mão, o % ponderado por combos de cada cor encontrada. Cores conhecidas: raise = rgb(231, 76, 60), call = rgb(95, 163, 101). A cor do all-in ainda não foi registrada: o script lista toda cor que não é cinza, para identificá-la na primeira leitura. Saída curta (cabe no limite de ~1000 caracteres).

@@ -4,7 +4,7 @@ tags:
   - tema/ranges
 ---
 
-# RFI BTN 15bb (Vanilla)
+# RFI · BTN · 15bb · Vanilla · Early
 
 Situação: abertura (RFI) do BTN com 15bb, sem bounty, lida no solver do 4BET Trainer (aba SOLVER).
 
@@ -39,13 +39,14 @@ Média das 5: open total (raise + all-in) de 38,9%, raise 2bb de 21,4% e all-in 
 - #3336, #10057 e #3411 têm UTG, UTG1 ou MP sem jogador (menos de 9 assentos): gravados como null.
 - Stack do BB no anel da mesa pode ser menor que no cabeçalho (ex.: #7211, 49,3 no anel e 50,4 no cabeçalho). Gravado o valor do cabeçalho e a nota em obs.
 - Ampliar para 15 a 20 árvores só com novo pedido.
+- **Regra de mesa (playbook):** só mesas de 8 ou 9 jogadores. #3336 (6 jogadores) e #10057 (7 jogadores) foram lidas antes dessa regra e ficam fora dela; estão marcadas "(fora)" no índice. Decidir se saem da análise ou se são trocadas por outras árvores.
 - **Identificação do spot (padrão novo):** cada ficha ganhou a linha "Spot" e o bloco "Identificação do spot". Ainda faltam ler no site: fase mostrada na árvore, blinds e ante do nível, stack do hero em fichas e se o tamanho do field vem do cabeçalho. Jogadores na mesa, média da mesa, quem cobre o hero e efetivo contra os blinds foram calculados a partir dos stacks já lidos.
 - **"Média" do cabeçalho, em aberto:** nas 5 árvores ela coincide com a média dos stacks sentados (até 0,2bb). Pode ser a média da mesa, ou o solver monta a mesa com a média do torneio. Teste: média do field em bb = SI ÷ (BB em fichas × % restante).
 - **Cuidado com a leitura "SB e BB curtos, mais jam":** vale para #10057 (SB 10bb, jam 25,2%), mas #4772 tem SB 60,5bb e BB 49,9bb e mesmo assim 20,3% de jam (hero mais curto, 14,4bb, e 100% do field). Com 5 árvores, tratar como hipótese.
 
 ## Arquivos
 - `arvores/<id>.md`: ficha de cada árvore (torneio, mesa, RP, range, classes e grade).
-- `dados/arvores.json`: os 5 registros no padrão de [dicionario-arvores-rfi.md](../../../../dicionario-arvores-rfi.md).
+- `dados/arvores.json`: os 5 registros no padrão de [dicionario-arvores-rfi.md](../../../../../dicionario-arvores-rfi.md).
 
 <!-- graphify-links:start -->
 

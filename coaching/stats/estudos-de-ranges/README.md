@@ -6,32 +6,38 @@ tags:
 
 # Estudos de ranges
 
-Estudos de ranges de abertura (RFI) lidos no solver do 4BET Trainer, separados por situação.
+Ranges lidos no solver do 4BET Trainer. As pastas seguem a mesma ordem dos filtros do Trainer: primeiro o spot (ação, posição, stack do hero), depois o formato e a fase. Assim, abrir `rfi/btn/20bb/` mostra tudo o que existe de BTN com 20bb, e as subpastas separam Vanilla e PKO e cada fase.
 
 ## Organização
 
-Cada situação tem sua pasta, com um README próprio, um arquivo por árvore lida e os dados para análise:
+    <acao>/<posicao>/<stack>bb/<formato>/<fase>/
+      README.md            leituras e conclusões daquela combinação
+      arvores/<id>.md      uma ficha por árvore
+      dados/arvores.json   um registro por árvore, no padrão do dicionário
 
-    <formato>/rfi/<posicao>/<stack-do-hero>bb/      formato = vanilla ou pko
-      README.md          filtros usados, leituras e conclusões da situação
-      arvores/           um arquivo por árvore (#id)
-      dados/arvores.json um registro por árvore, no padrão do dicionário
+| Nível | Valores | Equivale ao filtro do Trainer |
+|---|---|---|
+| `acao` | `rfi` (abertura); depois `vs-open`, `vs-3bet`... | spot da árvore |
+| `posicao` | `utg`, `utg1`, `mp`, `lj`, `hj`, `co`, `btn`, `sb`, `bb` | posição do hero |
+| `stack` | `15bb`, `20bb`, `25bb`... (faixa da busca, por exemplo "BTN 20") | busca por posição + stack |
+| `formato` | `vanilla`; `pko` (fator 50%); outro fator vira `pko70`, `pko75` | tipo de torneio e fator progressivo |
+| `fase` | `early`, `mid`, `bubble`, `late` (o filtro de fase usado) | fase |
 
-Vanilla e PKO ficam em pastas separadas e nunca se misturam: Vanilla não tem bounty; PKO grava o bounty de cada assento, o KOI e o fator progressivo.
+Cada nível acima da fase tem um README curto que lista o que existe dentro, como um menu.
 
-Padrão e coleta (valem para todas as situações):
-- [dicionario-arvores-rfi.md](dicionario-arvores-rfi.md): campos de cada árvore (torneio, stacks de todos os assentos, RP, totais, classes e grade).
-- [playbook-coleta-rfi.md](playbook-coleta-rfi.md): como ler uma árvore no 4BET Trainer, script da grade e checklist.
+Vanilla e PKO nunca se misturam: Vanilla não tem bounty; PKO grava o bounty de cada assento, o KOI e o fator progressivo.
 
-Uma situação só fica completa quando a árvore registra o stack de todas as posições (UTG, UTG1, MP, LJ, HJ, CO, BTN, SB, BB), porque o range do BTN depende deles.
+## Índice geral (o "painel de filtros")
+- [indice.md](indice.md): todas as árvores numa tabela, com link para cada ficha.
+- `indice.csv`: a mesma tabela para abrir numa planilha e filtrar por ação, posição, stack, formato, fase, % restante, stacks de SB e BB, tamanho da mesa etc.
+- Os dois são gerados por `gerar-indice.py` (rodar `python gerar-indice.py` nesta pasta depois de gravar árvores). Não editar à mão.
 
-## Situações
+## Padrão e coleta
+- [dicionario-arvores-rfi.md](dicionario-arvores-rfi.md): campos de cada árvore (identificação do spot, stacks de todos os assentos, RP, totais, classes e grade).
+- [playbook-coleta-rfi.md](playbook-coleta-rfi.md): como ler uma árvore no 4BET Trainer, regra de mesa, script da grade e checklist.
 
-Vanilla:
-- [RFI BTN 15bb](vanilla/rfi/btn/15bb/README.md) (em andamento)
-
-PKO:
-- nenhuma ainda
+## O que já existe
+- [RFI · BTN · 15bb](rfi/btn/15bb/README.md): Vanilla Early (5 árvores).
 
 <!-- graphify-links:start -->
 

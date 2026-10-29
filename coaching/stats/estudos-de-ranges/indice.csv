@@ -1,0 +1,6 @@
+acao,posicao,stack,formato,fase,id,pct,left,paid,campo_n0,media,hs,sb,bb,n_mesa,regra_mesa,f,r,ai,open,caminho
+rfi,btn,15bb,vanilla,early,#4772,100,157,21,157,54.8,14.4,60.5,49.9,8,ok,59.9,19.9,20.3,40.1,rfi/btn/15bb/vanilla/early/arvores/4772.md
+rfi,btn,15bb,vanilla,early,#3336,60,116,51,193,36.3,16,21.4,26.6,6,fora (menos de 8),60.6,26.3,13.1,39.4,rfi/btn/15bb/vanilla/early/arvores/3336.md
+rfi,btn,15bb,vanilla,early,#10057,76,409,81,538,33,14,10.0,29.4,7,fora (menos de 8),63.0,11.7,25.2,37.0,rfi/btn/15bb/vanilla/early/arvores/10057.md
+rfi,btn,15bb,vanilla,early,#3411,81,306,57,378,53.2,16.2,80.3,15.4,8,ok,62.6,19.2,18.3,37.4,rfi/btn/15bb/vanilla/early/arvores/3411.md
+rfi,btn,15bb,vanilla,early,#7211,52,124,36,238,49.1,16.3,28.9,50.4,8,ok,59.4,30.0,10.7,40.6,rfi/btn/15bb/vanilla/early/arvores/7211.md
