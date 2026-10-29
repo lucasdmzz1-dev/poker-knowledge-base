@@ -236,7 +236,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/13-ICM/README|theory/13-ICM]]
 
-**Relacionadas no mesmo módulo:** [[theory/13-ICM/01-Guideline|01-Guideline]]
+**Mesma pasta:** [[theory/13-ICM/01-Guideline|01-Guideline]] · [[theory/13-ICM/02-VideoAulas|02-VideoAulas]] · [[theory/13-ICM/03-Solver|03-Solver]] · [[theory/13-ICM/04-Exercicios|04-Exercicios]] · [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/07-Changelog|07-Changelog]] · [[theory/13-ICM/08-Referencias|08-Referencias]] · [[theory/13-ICM/09-Decisoes|09-Decisoes]]
 
 **Outros módulos:**
 

@@ -166,7 +166,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
 
-**Relacionadas no mesmo módulo:** [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]]
+**Mesma pasta:** [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]] · [[theory/15-Bet-vs-Missed/02-VideoAulas|02-VideoAulas]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]] · [[theory/15-Bet-vs-Missed/04-Exercicios|04-Exercicios]] · [[theory/15-Bet-vs-Missed/06-Pendencias|06-Pendencias]] · [[theory/15-Bet-vs-Missed/07-Changelog|07-Changelog]] · [[theory/15-Bet-vs-Missed/08-Referencias|08-Referencias]] · [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
 
 **Outros módulos:**
 

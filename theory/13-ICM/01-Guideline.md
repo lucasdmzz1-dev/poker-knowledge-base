@@ -473,7 +473,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/13-ICM/README|theory/13-ICM]]
 
-**Relacionadas no mesmo módulo:** [[theory/13-ICM/04-Exercicios|04-Exercicios]] · [[theory/13-ICM/03-Solver|03-Solver]] · [[theory/13-ICM/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/13-ICM/02-VideoAulas|02-VideoAulas]]
+**Mesma pasta:** [[theory/13-ICM/02-VideoAulas|02-VideoAulas]] · [[theory/13-ICM/03-Solver|03-Solver]] · [[theory/13-ICM/04-Exercicios|04-Exercicios]] · [[theory/13-ICM/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/07-Changelog|07-Changelog]] · [[theory/13-ICM/08-Referencias|08-Referencias]] · [[theory/13-ICM/09-Decisoes|09-Decisoes]]
 
 **Módulos citados no texto:** [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]] · [[theory/08-3BET-POT/README|08-3BET-POT]] · [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]] · [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass]] · [[theory/12-RETA-FINAL/README|12-RETA-FINAL]]
 

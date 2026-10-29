@@ -119,6 +119,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/README|theory]]
 
-**Relacionadas no mesmo módulo:** [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]]
+**Mesma pasta:** [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/retomada-pko|retomada-pko]]
 
 <!-- graphify-links:end -->
