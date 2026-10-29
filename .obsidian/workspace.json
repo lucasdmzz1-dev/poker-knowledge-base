@@ -11,17 +11,10 @@
             "id": "953898d6457849a9",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Sem título.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Sem título"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
             }
           }
         ]
@@ -102,7 +95,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sem título.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +113,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sem título.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -164,7 +155,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sem título.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -193,6 +183,8 @@
   },
   "active": "953898d6457849a9",
   "lastOpenFiles": [
+    "00-Home.md",
+    "Sem título.canvas",
     "Sem título 1.canvas",
     "flashcards/README.md",
     "flashcards/16-PKO.md",
@@ -212,8 +204,6 @@
     "flashcards/02-CBet-IP-40bb.md",
     "flashcards/01-CBet-IP-Short-Stack.md",
     "flashcards",
-    "00-Home.md",
-    "Sem título.canvas",
     "docs/CLAUDE.MD",
     "theory/README.md",
     "theory/08-3BET-POT/08-Referencias.md",
