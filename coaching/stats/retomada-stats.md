@@ -32,8 +32,9 @@ Acompanhamento das stats reais do jogador (prints do Hand2Note, semana a semana)
 ## Estudos de ranges no solver (em andamento)
 Pasta `estudos-de-ranges/`: ranges lidos no solver do 4BET Trainer, uma pasta por situação, separadas em `vanilla/` (sem bounty) e `pko/` (com bounty de cada assento, KOI e fator progressivo). Padrão dos dados em `estudos-de-ranges/dicionario-arvores-rfi.md`; coleta em `estudos-de-ranges/playbook-coleta-rfi.md`.
 - **RFI BTN 15bb Vanilla** (`vanilla/rfi/btn/15bb/`, Early, busca "BTN 15"): 5 árvores completas (#4772, #3336, #10057, #3411, #7211), com stacks dos 9 assentos registrados. Open total de 36,9% a 40,7% (média 38,9%), raise 2bb de 21,4% e all-in de 17,5% em média. SB vai de 10 a 80 bb e BB de 15 a 50 bb, por isso o range do BTN depende dos blinds.
+- **RFI BTN 20bb Vanilla** (`vanilla/rfi/btn/20bb/`, busca "BTN 20", margem de ±2): 7 árvores com mesa de 8 jogadores (2 Early e 5 Mid). Open total médio de 41,5% (raise 31,3%, all-in 10,3%). Em 20bb o raise sobe e o jam cai em relação a 15bb. Só #3036 tem jam alto (40%), com BB de 7,4 bb.
 - Comparação com o HUD (RFI do BTN com 15–25bb em 33%, open jam em 5,5%): é só indicativa, porque o HUD mistura 15 a 25bb. O jam é o maior desvio.
-- Próximo passo: ampliar para 15 a 20 árvores (só com novo pedido). SI e ante seguem pendentes porque o cabeçalho não os mostra. Cada árvore agora tem a identificação completa do spot (formato, fase com % restante, field, blinds, efetivo, mesa); faltam ler fase mostrada, blinds e stack do hero em fichas. Em aberto: a "Média" do cabeçalho coincide com a média da mesa; falta o teste (SI ÷ BB em fichas × % restante) para saber se é do torneio. Lista completa no README da situação. Nenhuma situação de PKO lida ainda.
+- Próximo passo: ampliar para 15 a 20 árvores (só com novo pedido). SI e ante seguem pendentes porque o cabeçalho não os mostra. Lista completa no README da situação. Nenhuma situação de PKO lida ainda.
 
 Limite de leitura: contra opens mais cedo o range do solver é mais curto, então parte dos folds pode estar certa. Mãos com poucas ocorrências ficam em cinza no mapa.
 

@@ -29,6 +29,7 @@ Uma situação só fica completa quando a árvore registra o stack de todas as p
 
 Vanilla:
 - [RFI BTN 15bb](vanilla/rfi/btn/15bb/README.md) (em andamento)
+- [RFI BTN 20bb](vanilla/rfi/btn/20bb/README.md) (7 árvores: 2 Early e 5 Mid)
 
 PKO:
 - nenhuma ainda
