@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/02-cbet-ip-40bb
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/40bb
+  - tipo/videoaulas
+---
+
 # Videoaulas – C-Bet IP 40bb
 
 > Este documento registra apenas os conceitos apresentados nas videoaulas que complementam o Guideline.

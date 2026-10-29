@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/decisoes
+---
+
 # Decisões – PKO
 
 > Módulo 16 — Poker Knowledge Base

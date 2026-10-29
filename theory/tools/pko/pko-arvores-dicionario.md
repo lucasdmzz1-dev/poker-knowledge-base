@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/pko
+  - tipo/ferramenta
+---
+
 # Dicionário dos dados das árvores (`dados/pko-arvores-btn.json`)
 
 Origem: 4BET Trainer, aba Solver (HRC Library), lido pelo Chrome em 27/10/2026. Filtros: tipo Bounty, fator progressivo 50%. Cada registro é um **nó**: uma árvore com o BTN diante de um open de uma posição.

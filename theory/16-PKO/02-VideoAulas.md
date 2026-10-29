@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/videoaulas
+---
+
 # VideoAulas — PKO
 
 ## Módulo 16 — PKO

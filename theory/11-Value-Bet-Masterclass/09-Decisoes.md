@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/11-value-bet-masterclass
+  - tema/value-bet
+  - street/river
+  - tema/transversal
+  - tipo/decisoes
+---
+
 # Decisões – Value Bet Masterclass
 
 > Módulo 11 — Poker Knowledge Base

@@ -1,3 +1,16 @@
+---
+tags:
+  - modulo/05-cbet-oop-40bb
+  - spot/srp
+  - posicao/oop
+  - street/flop
+  - street/turn
+  - linha/cbet
+  - linha/second-barrel
+  - stack/40bb
+  - tipo/guideline
+---
+
 # Guideline — C-Bet OOP
 
 ## Módulo — SRP OOP C-Bet Flop

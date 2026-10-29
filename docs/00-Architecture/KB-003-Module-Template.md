@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/arquitetura
+---
+
 # KB-003 — Module Template
 
 **Version:** 1.0  

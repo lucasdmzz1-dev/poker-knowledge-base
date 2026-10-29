@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/guideline
+---
+
 # Guideline — ICM e Risk Premium
 
 > **Módulo:** 13 – ICM e Risk Premium (consolidado, v1.0)

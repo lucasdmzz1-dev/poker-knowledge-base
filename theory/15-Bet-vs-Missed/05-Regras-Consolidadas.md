@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/15-bet-vs-missed
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/bet-vs-missed
+  - tipo/regras
+---
+
 # Regras Consolidadas – Bet vs Missed C-Bet
 
 > Este documento reúne apenas as regras finais consolidadas durante o estudo do módulo.

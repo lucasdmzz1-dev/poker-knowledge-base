@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/regras
+---
+
 # Regras Consolidadas – PKO
 
 > Este documento reúne apenas as regras finais consolidadas durante o estudo do módulo.

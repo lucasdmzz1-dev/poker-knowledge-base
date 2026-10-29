@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/02-cbet-ip-40bb
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/40bb
+  - tipo/pendencias
+---
+
 # Pendências – C-Bet IP 40bb
 
 > Este documento registra dúvidas, pontos pendentes e futuras revisões do módulo.

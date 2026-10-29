@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/stats
+  - tema/ranges
+---
+
 # RFI BTN 15bb (Vanilla)
 
 Situação: BTN com 15bb, todos os jogadores à frente foldaram. Lê-se a frequência de fold, raise 2bb e all-in do BTN.

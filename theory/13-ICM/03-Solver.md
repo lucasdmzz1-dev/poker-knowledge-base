@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/solver
+---
+
 # Solver — ICM e Risk Premium
 
 ## Módulo 13 — ICM e Risk Premium

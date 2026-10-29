@@ -1,3 +1,15 @@
+---
+tags:
+  - modulo/04-third-barrel-e-vs-third-barrel
+  - spot/srp
+  - posicao/ip
+  - posicao/oop
+  - street/river
+  - linha/third-barrel
+  - linha/defesa
+  - tipo/modulo
+---
+
 # Third Barrel
 
 > Módulo 04

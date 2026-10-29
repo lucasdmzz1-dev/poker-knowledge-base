@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/09-bet-check-bet
+  - spot/srp
+  - street/river
+  - linha/bet-check-bet
+  - tipo/modulo
+---
+
 # BET CHECK BET
 
 ## Objetivo do módulo

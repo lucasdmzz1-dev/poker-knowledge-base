@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/stats
+  - tema/ranges
+---
+
 # Estudos de ranges
 
 Estudos de ranges de abertura (RFI) lidos no solver do 4BET Trainer, separados por situação.
