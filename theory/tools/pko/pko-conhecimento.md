@@ -66,6 +66,7 @@ Uso: variável `help` por registro = (bounty do opener ÷ KOi) ÷ (stack do open
 Exemplo (#2247): 30% do field restante, 38 jogadores restantes, Média 70,5 bb, SI 25K, KOI $250, 15 posições pagas.
 - SI (stack inicial, em fichas), KOI (bounty inicial), % do field restante, jogadores restantes, stack médio em bb e posições pagas ficam no cabeçalho.
 - Stack inicial em bb = Média × % do field restante (70,5 × 0,30 = 21,2 bb). Confirmado pelo usuário: o cabeçalho tem SI e KOI.
+- Em aberto (28/10/2026): nas 52 árvores coletadas, a "Média" fica a menos de 1bb da média dos stacks da mesa (#2247: 70,5 contra 69,6). Pode ser a média da mesa, e não a do field. Ver pendência 7 de `retomada-pko.md`.
 - Proximidade da bolha = jogadores restantes ÷ posições pagas (variável nova, para fase e ICM).
 
 ## 7. Decisões de escopo e definições (respostas do usuário, 27/10/2026)
