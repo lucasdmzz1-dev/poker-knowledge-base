@@ -37,14 +37,14 @@ Um "BTN com 15bb" muda conforme o formato, a fase, o field, os blinds e os stack
 | Fase do torneio | `fase` (classificada), `pct` (% do field restante), `left`, `paid`, `ate_itm`, `dist_bolha` | Early, 60% restante, 116 restantes, 51 pagos |
 | Tamanho do field | `campo_n0` e de onde veio (`campo_n0_fonte`: cabeçalho ou calculado) | ~193 (calculado) |
 | Blinds | `sb_fichas`, `bb_fichas`, `ante_fichas`, `ante_bb` | SB/BB, ante (fichas) |
-| Efetivo do torneio | `media_field` (stack médio do field em bb, se o site mostrar); `media` é a média da mesa | pendente |
+| Efetivo do torneio | `media` ("Média" do cabeçalho; em aberto se é do torneio ou da mesa) e `media_field` | ver `media` abaixo |
 | Hero | `hs` (bb), `hs_fichas`, `hs` ÷ média | 15,9bb |
 | Mesa | `seats` (todos os assentos), `n_mesa` (jogadores sentados), `tavg` (média da mesa), maior e menor stack da mesa | nº de jogadores, média da mesa (bb) |
 | Quem joga depois | stacks de SB e BB, quem cobre o hero, efetivo contra os blinds | stack do SB e do BB, se cobrem o hero |
 | ICM | `rp_sb`, `rp_bb`; filtros de reta final | RP do hero contra SB e BB |
 
 Linha de resumo da ficha, sempre neste formato:
-`<formato> | <fase> (<pct>% restante) | field <n0> | <left> restantes, <paid> pagos | blinds <sb>/<bb> a<ante> | média da mesa <media>bb | BTN <hs>bb | SB <x>bb · BB <y>bb`
+`<formato> | <fase> (<pct>% restante) | field <n0> | <left> restantes, <paid> pagos | blinds <sb>/<bb> a<ante> | média <media>bb | BTN <hs>bb | SB <x>bb · BB <y>bb`
 
 Os exemplos da tabela com números vêm da árvore #3336; os demais são só o nome do que gravar.
 
@@ -66,8 +66,8 @@ Os exemplos da tabela com números vêm da árvore #3336; os demais são só o n
 | | `fase_header`, `fase` | Fase mostrada na árvore e fase classificada (ver "Fase" acima). |
 | | `pct`, `left`, `paid` | % do field restante, jogadores restantes e posições pagas. |
 | | `campo_n0`, `campo_n0_fonte` | Tamanho do field no início e a fonte: `cabecalho` (se o site mostrar) ou `calculado` (`left` ÷ `pct` × 100). |
-| | `media` | "Média" do cabeçalho, em bb. **Nas 5 árvores do BTN 15bb ela bateu com a média dos stacks da mesa** (diferença de até 0,2bb), então é a média da mesa, não do field. |
-| | `media_field` | Efetivo do torneio: stack médio do field, em bb. Gravar só se o site mostrar em outro lugar; senão `null`. |
+| | `media` | "Média" do cabeçalho, em bb. **Em aberto:** nas árvores lidas ela coincide com a média dos stacks da mesa (até 1bb). Pode ser a média da mesa, ou o solver monta a mesa com a média do torneio (aí é as duas coisas). Para decidir, teste: média do field em bb = SI ÷ (BB em fichas × % restante); se bater com a "Média", ela é do torneio. |
+| | `media_field` | Efetivo do torneio, se o site mostrar em outro lugar ou se o teste acima confirmar que a "Média" é do torneio; senão `null`. |
 | | `si` | Stack inicial (fichas). |
 | Blinds | `sb_fichas`, `bb_fichas`, `ante_fichas` | Blinds e ante do nível, em fichas. |
 | | `koi` | **Só PKO.** Bounty inicial ($). |
@@ -86,8 +86,8 @@ Os exemplos da tabela com números vêm da árvore #3336; os demais são só o n
 | Controle | `obs` | Algo fora do padrão (cabeçalho incompleto, cor não reconhecida, grade descartada). |
 
 ## Derivadas (calculadas na análise, não gravadas)
-- Stack inicial em bb = média do field × `pct` ÷ 100 (só com `media_field`; a fórmula do PKO usava a "Média" do cabeçalho, conferir lá também).
-- Stack do hero ÷ média da mesa = `hs` ÷ `media`; ÷ média do field = `hs` ÷ `media_field`.
+- Stack inicial em bb = `media` × `pct` ÷ 100 (vale se a "Média" for do torneio; ver `media`).
+- Stack do hero ÷ média = `hs` ÷ `media`.
 - Cobertura: o hero cobre o SB (`hs` ≥ stack do SB) e o BB. No RFI do BTN são os únicos que jogam depois.
 - Stack efetivo contra os blinds = menor entre `hs` e o maior stack entre SB e BB.
 - Blinds curtos: SB ou BB com 20bb ou menos.

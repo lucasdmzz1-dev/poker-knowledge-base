@@ -40,7 +40,7 @@ Média das 5: open total (raise + all-in) de 38,9%, raise 2bb de 21,4% e all-in 
 - Stack do BB no anel da mesa pode ser menor que no cabeçalho (ex.: #7211, 49,3 no anel e 50,4 no cabeçalho). Gravado o valor do cabeçalho e a nota em obs.
 - Ampliar para 15 a 20 árvores só com novo pedido.
 - **Identificação do spot (padrão novo):** cada ficha ganhou a linha "Spot" e o bloco "Identificação do spot". Ainda faltam ler no site: fase mostrada na árvore, blinds e ante do nível, stack do hero em fichas e se o tamanho do field vem do cabeçalho. Jogadores na mesa, média da mesa, quem cobre o hero e efetivo contra os blinds foram calculados a partir dos stacks já lidos.
-- **"Média" do cabeçalho = média da mesa:** nas 5 árvores ela bate com a média dos stacks sentados (até 0,2bb de diferença). A coluna "Média (bb)" acima é, portanto, da mesa, e o efetivo do torneio (média do field) segue sem leitura.
+- **"Média" do cabeçalho, em aberto:** nas 5 árvores ela coincide com a média dos stacks sentados (até 0,2bb). Pode ser a média da mesa, ou o solver monta a mesa com a média do torneio. Teste: média do field em bb = SI ÷ (BB em fichas × % restante).
 - **Cuidado com a leitura "SB e BB curtos, mais jam":** vale para #10057 (SB 10bb, jam 25,2%), mas #4772 tem SB 60,5bb e BB 49,9bb e mesmo assim 20,3% de jam (hero mais curto, 14,4bb, e 100% do field). Com 5 árvores, tratar como hipótese.
 
 ## Arquivos
