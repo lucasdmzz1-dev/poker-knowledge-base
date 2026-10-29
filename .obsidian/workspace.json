@@ -11,10 +11,14 @@
             "id": "953898d6457849a9",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
+              "type": "markdown",
+              "state": {
+                "file": "theory/14-Probe-Turn/04-Exercicios.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "04-Exercicios"
             }
           }
         ]
@@ -95,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "theory/14-Probe-Turn/04-Exercicios.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "theory/14-Probe-Turn/04-Exercicios.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -155,6 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "theory/14-Probe-Turn/04-Exercicios.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -183,6 +190,7 @@
   },
   "active": "953898d6457849a9",
   "lastOpenFiles": [
+    "theory/15-Bet-vs-Missed/02-VideoAulas.md",
     "coaching/stats/estudos-de-ranges/README.md",
     "theory/03-Second-Barrel-IP/07-Changelog.md",
     "theory/04-Third-Barrel-e-vs-Third-Barrel/04-Exercicios.md",
