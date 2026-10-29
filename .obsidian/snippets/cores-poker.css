@@ -1,0 +1,94 @@
+/* =========================================================
+   Cores do vault de poker
+   Ativar em: Settings → Appearance → CSS snippets → cores-poker
+   ========================================================= */
+
+/* ---------- Paleta (muda aqui e muda no vault todo) ---------- */
+body {
+  --poker-raise:  #e5534b;  /* vermelho  */
+  --poker-3bet:   #d9480f;  /* laranja   */
+  --poker-4bet:   #ae3ec9;  /* roxo      */
+  --poker-allin:  #c2255c;  /* magenta   */
+  --poker-call:   #2f9e44;  /* verde     */
+  --poker-check:  #1098ad;  /* ciano     */
+  --poker-fold:   #4c6ef5;  /* azul      */
+  --poker-mix:    #f08c00;  /* âmbar     */
+}
+.theme-dark {
+  --poker-raise:  #ff6b6b;
+  --poker-3bet:   #ff922b;
+  --poker-4bet:   #da77f2;
+  --poker-allin:  #f06595;
+  --poker-call:   #51cf66;
+  --poker-check:  #3bc9db;
+  --poker-fold:   #748ffc;
+  --poker-mix:    #fcc419;
+}
+
+/* ---------- Ações: <span class="raise">raise</span> ---------- */
+.raise, .bet, .threebet, .fourbet, .allin, .shove,
+.call, .check, .fold, .mix {
+  font-weight: 600;
+  padding: 0 0.3em;
+  border-radius: 4px;
+}
+.raise, .bet  { color: var(--poker-raise); background: color-mix(in srgb, var(--poker-raise) 14%, transparent); }
+.threebet     { color: var(--poker-3bet);  background: color-mix(in srgb, var(--poker-3bet) 14%, transparent); }
+.fourbet      { color: var(--poker-4bet);  background: color-mix(in srgb, var(--poker-4bet) 14%, transparent); }
+.allin, .shove{ color: var(--poker-allin); background: color-mix(in srgb, var(--poker-allin) 14%, transparent); }
+.call         { color: var(--poker-call);  background: color-mix(in srgb, var(--poker-call) 14%, transparent); }
+.check        { color: var(--poker-check); background: color-mix(in srgb, var(--poker-check) 14%, transparent); }
+.fold         { color: var(--poker-fold);  background: color-mix(in srgb, var(--poker-fold) 14%, transparent); }
+.mix          { color: var(--poker-mix);   background: color-mix(in srgb, var(--poker-mix) 14%, transparent); }
+
+/* ---------- Títulos coloridos ---------- */
+body {
+  --h1-color: #e5534b;
+  --h2-color: #d9480f;
+  --h3-color: #2f9e44;
+  --h4-color: #1098ad;
+  --h5-color: #4c6ef5;
+  --h6-color: #ae3ec9;
+}
+.theme-dark {
+  --h1-color: #ff6b6b;
+  --h2-color: #ff922b;
+  --h3-color: #51cf66;
+  --h4-color: #3bc9db;
+  --h5-color: #748ffc;
+  --h6-color: #da77f2;
+}
+
+/* ---------- Pastas coloridas na barra lateral ---------- */
+.nav-folder-title[data-path="theory"]     { color: #4c6ef5; }
+.nav-folder-title[data-path="flashcards"] { color: #2f9e44; }
+.nav-folder-title[data-path="coaching"]   { color: #d9480f; }
+.nav-folder-title[data-path="docs"]       { color: #868e96; }
+.nav-folder-title[data-path="graphify-out"] { color: #868e96; opacity: 0.6; }
+.theme-dark .nav-folder-title[data-path="theory"]     { color: #748ffc; }
+.theme-dark .nav-folder-title[data-path="flashcards"] { color: #51cf66; }
+.theme-dark .nav-folder-title[data-path="coaching"]   { color: #ff922b; }
+
+.nav-folder-title[data-path="theory"],
+.nav-folder-title[data-path="flashcards"],
+.nav-folder-title[data-path="coaching"] { font-weight: 600; }
+
+/* ---------- Callouts próprios ---------- */
+/* > [!leak] Título */
+.callout[data-callout="leak"]   { --callout-color: 229, 83, 75;  --callout-icon: lucide-alert-octagon; }
+/* > [!solver] Título */
+.callout[data-callout="solver"] { --callout-color: 76, 110, 245; --callout-icon: lucide-cpu; }
+/* > [!regra] Título */
+.callout[data-callout="regra"]  { --callout-color: 47, 158, 68;  --callout-icon: lucide-check-circle; }
+/* > [!pko] Título */
+.callout[data-callout="pko"]    { --callout-color: 194, 37, 92;  --callout-icon: lucide-crosshair; }
+/* > [!icm] Título */
+.callout[data-callout="icm"]    { --callout-color: 240, 140, 0;  --callout-icon: lucide-scale; }
+/* > [!exemplo] Título */
+.callout[data-callout="exemplo"]{ --callout-color: 16, 152, 173; --callout-icon: lucide-spade; }
+
+/* ---------- Destaque ==texto== mais suave ---------- */
+.cm-highlight, mark {
+  background-color: rgba(252, 196, 25, 0.35);
+  color: inherit;
+}
