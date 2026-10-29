@@ -38,6 +38,7 @@ Vanilla e PKO nunca se misturam: Vanilla não tem bounty; PKO grava o bounty de 
 
 ## O que já existe
 - [RFI · BTN · 15bb](rfi/btn/15bb/README.md): Vanilla Early (5 árvores).
+- [RFI · BTN · 20bb](rfi/btn/20bb/README.md): Vanilla Early (2 árvores) e Mid (5 árvores).
 
 <!-- graphify-links:start -->
 
