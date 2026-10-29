@@ -10,4 +10,4 @@ Gerado por `gerar-indice.py` a partir dos `dados/arvores.json`. Não editar à m
 | rfi | btn | 15bb | vanilla | early | [#3411](rfi/btn/15bb/vanilla/early/arvores/3411.md) | 81% | 53,2 | 16,2 | 80,3 | 15,4 | 8 | 62,6% | 19,2% | 18,3% | 37,4% |
 | rfi | btn | 15bb | vanilla | early | [#7211](rfi/btn/15bb/vanilla/early/arvores/7211.md) | 52% | 49,1 | 16,3 | 28,9 | 50,4 | 8 | 59,4% | 30,0% | 10,7% | 40,6% |
 
-Total: 5 árvores. "(fora)" = mesa com menos de 8 jogadores, fora da regra de mesa do playbook.
+Total: 5 árvores. "(exceção)" = menos de 8 jogadores, mantida por decisão do usuário; "(fora)" = menos de 8 jogadores, fora da regra de mesa do playbook.

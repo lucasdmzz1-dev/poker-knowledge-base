@@ -66,7 +66,7 @@ def main():
             f"[{x['id']}]({x['caminho']}) | {br(x['pct'])}% | {br(x['media'])} | {br(x['hs'])} | "
             f"{br(x['sb'])} | {br(x['bb'])} | {mesa} | {br(x['f'])}% | {br(x['r'])}% | {br(x['ai'])}% | {br(x['open'])}% |"
         )
-    out += ["", f"Total: {len(rows)} árvores. \"(fora)\" = mesa com menos de 8 jogadores, fora da regra de mesa do playbook.", ""]
+    out += ["", f"Total: {len(rows)} árvores. \"(exceção)\" = menos de 8 jogadores, mantida por decisão do usuário; \"(fora)\" = menos de 8 jogadores, fora da regra de mesa do playbook.", ""]
     (RAIZ / "indice.md").write_text("\n".join(out), encoding="utf-8")
     print(f"{len(rows)} árvores no índice")
 
