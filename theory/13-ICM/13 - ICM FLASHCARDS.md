@@ -7,7 +7,7 @@ tags:
 
 #flashcards/13-icm
 
-Fonte: [[theory/13-ICM/05-Regras-Consolidadas|Regras Consolidadas]] · [[theory/13-ICM/README|Módulo]]
+Fonte: [[theory/13-ICM/05-Regras-Consolidadas|Regras Consolidadas]] · [[theory/13-ICM/README|Módulo]] · [[theory/13-ICM/13 - ICM GUIDELINE|Guideline]]
 
 O que é o Risk Premium (RP) no ICM?
 ?

@@ -7,7 +7,9 @@ tags:
   - tipo/modulo
 ---
 
-# Value Bet Masterclass
+# Value Bet Masterclass
+
+**Flashcards:** [[theory/11-Value-Bet-Masterclass/11 - VALUE BET FLASHCARDS|11 - VALUE BET FLASHCARDS]]
 
 ## Módulo 11 — Value Bet Masterclass (Transversal)
 

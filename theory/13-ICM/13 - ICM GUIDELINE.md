@@ -7,7 +7,9 @@ tags:
   - tipo/guideline
 ---
 
-# Guideline — ICM e Risk Premium
+# Guideline — ICM e Risk Premium
+
+**Flashcards:** [[theory/13-ICM/13 - ICM FLASHCARDS|13 - ICM FLASHCARDS]]
 
 > **Módulo:** 13 – ICM e Risk Premium (consolidado, v1.0)
 >

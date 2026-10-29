@@ -8,7 +8,9 @@ tags:
   - tipo/guideline
 ---
 
-# Guideline — PKO: BTN contra 1 open
+# Guideline — PKO: BTN contra 1 open
+
+**Flashcards:** [[theory/16-PKO/16 - PKO FLASHCARDS|16 - PKO FLASHCARDS]]
 
 > **Módulo:** 16 – PKO (versão 1.0)
 >

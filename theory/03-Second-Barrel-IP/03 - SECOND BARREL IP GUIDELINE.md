@@ -10,7 +10,9 @@ tags:
   - tipo/guideline
 ---
 
-# C-Bet IP + Second Barrel
+# C-Bet IP + Second Barrel
+
+**Flashcards:** [[theory/03-Second-Barrel-IP/03 - SECOND BARREL IP FLASHCARDS|03 - SECOND BARREL IP FLASHCARDS]]
 
 > Módulo de estudo Poker Knowledge Base
 

@@ -7,7 +7,7 @@ tags:
 
 #flashcards/01-cbet-ip-short-stack
 
-Fonte: [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|Regras Consolidadas]] · [[theory/01-CBet-IP-Short-Stack/README|Módulo]]
+Fonte: [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|Regras Consolidadas]] · [[theory/01-CBet-IP-Short-Stack/README|Módulo]] · [[theory/01-CBet-IP-Short-Stack/01 - CBET IP SHORT GUIDELINE|Guideline]]
 
 No jogo Short Stack (20bb), C-Bet IP: qual é a prioridade principal da estratégia?
 ?

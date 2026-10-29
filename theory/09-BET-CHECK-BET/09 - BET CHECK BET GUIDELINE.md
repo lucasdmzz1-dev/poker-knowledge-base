@@ -7,7 +7,9 @@ tags:
   - tipo/guideline
 ---
 
-# BET CHECK BET — GUIDELINE
+# BET CHECK BET — GUIDELINE
+
+**Flashcards:** [[theory/09-BET-CHECK-BET/09 - BET CHECK BET FLASHCARDS|09 - BET CHECK BET FLASHCARDS]]
 
 
 # 1. OBJETIVO DO MÓDULO

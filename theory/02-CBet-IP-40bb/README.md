@@ -9,7 +9,9 @@ tags:
   - tipo/modulo
 ---
 
-# Módulo 02 — C-Bet IP 40bb
+# Módulo 02 — C-Bet IP 40bb
+
+**Flashcards:** [[theory/02-CBet-IP-40bb/02 - CBET IP 40BB FLASHCARDS|02 - CBET IP 40BB FLASHCARDS]]
 
 ## Objetivo
 

@@ -9,7 +9,9 @@ tags:
   - tipo/guideline
 ---
 
-# Guideline — XR Short Stack
+# Guideline — XR Short Stack
+
+**Flashcards:** [[theory/06-XR-SHORT/06 - XR SHORT FLASHCARDS|06 - XR SHORT FLASHCARDS]]
 
 ---
 

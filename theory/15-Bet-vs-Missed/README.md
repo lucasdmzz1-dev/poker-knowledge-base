@@ -8,7 +8,9 @@ tags:
   - tipo/modulo
 ---
 
-# Bet vs Missed C-Bet
+# Bet vs Missed C-Bet
+
+**Flashcards:** [[theory/15-Bet-vs-Missed/15 - BET VS MISSED FLASHCARDS|15 - BET VS MISSED FLASHCARDS]]
 
 ## Módulo 15 — Bet vs Missed C-Bet
 

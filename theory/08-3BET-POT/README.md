@@ -11,7 +11,9 @@ tags:
   - tipo/modulo
 ---
 
-# 3BET POT — ARQUITETURA DO MÓDULO
+# 3BET POT — ARQUITETURA DO MÓDULO
+
+**Flashcards:** [[theory/08-3BET-POT/08 - 3BET POT FLASHCARDS|08 - 3BET POT FLASHCARDS]]
 
 
 ## Estrutura

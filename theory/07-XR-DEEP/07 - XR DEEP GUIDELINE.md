@@ -9,7 +9,9 @@ tags:
   - tipo/guideline
 ---
 
-# XR Deep Stack — Guideline
+# XR Deep Stack — Guideline
+
+**Flashcards:** [[theory/07-XR-DEEP/07 - XR DEEP FLASHCARDS|07 - XR DEEP FLASHCARDS]]
 
 ## 1. Construção do XR Deep Stack
 

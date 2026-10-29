@@ -7,7 +7,9 @@ tags:
   - tipo/modulo
 ---
 
-# Reta Final
+# Reta Final
+
+**Flashcards:** [[theory/12-RETA-FINAL/12 - RETA FINAL FLASHCARDS|12 - RETA FINAL FLASHCARDS]]
 
 ## Módulo 12 — Reta Final
 

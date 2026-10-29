@@ -9,7 +9,9 @@ tags:
   - tipo/modulo
 ---
 
-# XR Deep Stack
+# XR Deep Stack
+
+**Flashcards:** [[theory/07-XR-DEEP/07 - XR DEEP FLASHCARDS|07 - XR DEEP FLASHCARDS]]
 
 ## Objetivo do Módulo
 

@@ -7,7 +7,9 @@ tags:
   - tipo/guideline
 ---
 
-# Guideline — Reta Final
+# Guideline — Reta Final
+
+**Flashcards:** [[theory/12-RETA-FINAL/12 - RETA FINAL FLASHCARDS|12 - RETA FINAL FLASHCARDS]]
 
 > **Módulo:** 12 – Reta Final (consolidado, v1.0)
 >

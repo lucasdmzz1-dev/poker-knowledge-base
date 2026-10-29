@@ -9,7 +9,9 @@ tags:
   - tipo/guideline
 ---
 
-# Guideline — Probe Turn
+# Guideline — Probe Turn
+
+**Flashcards:** [[theory/14-Probe-Turn/14 - PROBE TURN FLASHCARDS|14 - PROBE TURN FLASHCARDS]]
 
 > **Módulo:** 14 – Probe Turn (consolidado, v1.1)
 >

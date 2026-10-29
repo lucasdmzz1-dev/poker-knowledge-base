@@ -11,7 +11,9 @@ tags:
   - tipo/guideline
 ---
 
-# 3BET POT — GUIDELINE
+# 3BET POT — GUIDELINE
+
+**Flashcards:** [[theory/08-3BET-POT/08 - 3BET POT FLASHCARDS|08 - 3BET POT FLASHCARDS]]
 
 
 # OBJETIVO

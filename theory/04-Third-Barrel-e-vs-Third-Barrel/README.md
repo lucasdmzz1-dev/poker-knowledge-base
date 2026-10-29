@@ -10,7 +10,9 @@ tags:
   - tipo/modulo
 ---
 
-# Third Barrel
+# Third Barrel
+
+**Flashcards:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/04 - THIRD BARREL FLASHCARDS|04 - THIRD BARREL FLASHCARDS]]
 
 > Módulo 04
 

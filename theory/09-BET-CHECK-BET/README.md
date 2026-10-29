@@ -7,7 +7,9 @@ tags:
   - tipo/modulo
 ---
 
-# BET CHECK BET
+# BET CHECK BET
+
+**Flashcards:** [[theory/09-BET-CHECK-BET/09 - BET CHECK BET FLASHCARDS|09 - BET CHECK BET FLASHCARDS]]
 
 ## Objetivo do módulo
 

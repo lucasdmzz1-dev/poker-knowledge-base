@@ -9,7 +9,9 @@ tags:
   - tipo/modulo
 ---
 
-# XR Short Stack
+# XR Short Stack
+
+**Flashcards:** [[theory/06-XR-SHORT/06 - XR SHORT FLASHCARDS|06 - XR SHORT FLASHCARDS]]
 
 ## Módulo 06 — XR Short Stack
 

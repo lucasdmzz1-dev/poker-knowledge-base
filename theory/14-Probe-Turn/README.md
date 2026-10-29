@@ -9,7 +9,9 @@ tags:
   - tipo/modulo
 ---
 
-# Probe Turn
+# Probe Turn
+
+**Flashcards:** [[theory/14-Probe-Turn/14 - PROBE TURN FLASHCARDS|14 - PROBE TURN FLASHCARDS]]
 
 ## Módulo 14 — Probe Turn
 

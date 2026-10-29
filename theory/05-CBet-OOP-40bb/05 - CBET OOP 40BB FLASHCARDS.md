@@ -7,7 +7,7 @@ tags:
 
 #flashcards/05-cbet-oop-40bb
 
-Fonte: [[theory/05-CBet-OOP-40bb/05-Regras-Consolidadas|Regras Consolidadas]] · [[theory/05-CBet-OOP-40bb/README|Módulo]]
+Fonte: [[theory/05-CBet-OOP-40bb/05-Regras-Consolidadas|Regras Consolidadas]] · [[theory/05-CBet-OOP-40bb/README|Módulo]] · [[theory/05-CBet-OOP-40bb/05 - CBET OOP 40BB GUIDELINE|Guideline]]
 
 SRP 40bb, Hero OOP no flop decidindo c-bet. Qual é a pergunta certa a fazer sobre a mão?
 ?

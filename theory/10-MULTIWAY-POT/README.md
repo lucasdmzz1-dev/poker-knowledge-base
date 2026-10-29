@@ -8,7 +8,9 @@ tags:
   - tipo/modulo
 ---
 
-# Multiway Pot
+# Multiway Pot
+
+**Flashcards:** [[theory/10-MULTIWAY-POT/10 - MULTIWAY POT FLASHCARDS|10 - MULTIWAY POT FLASHCARDS]]
 
 ## Módulo 10 — Multiway Pot
 

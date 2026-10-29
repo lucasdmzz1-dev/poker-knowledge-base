@@ -11,7 +11,9 @@ tags:
   - tipo/guideline
 ---
 
-# Guideline — C-Bet OOP
+# Guideline — C-Bet OOP
+
+**Flashcards:** [[theory/05-CBet-OOP-40bb/05 - CBET OOP 40BB FLASHCARDS|05 - CBET OOP 40BB FLASHCARDS]]
 
 ## Módulo — SRP OOP C-Bet Flop
 

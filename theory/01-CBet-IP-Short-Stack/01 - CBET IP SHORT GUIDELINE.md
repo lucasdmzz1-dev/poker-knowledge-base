@@ -9,7 +9,9 @@ tags:
   - tipo/guideline
 ---
 
-# Guideline – C-Bet IP Short Stack
+# Guideline – C-Bet IP Short Stack
+
+**Flashcards:** [[theory/01-CBet-IP-Short-Stack/01 - CBET IP SHORT FLASHCARDS|01 - CBET IP SHORT FLASHCARDS]]
 
 > **Módulo:** 01 – C-Bet IP Short Stack
 >

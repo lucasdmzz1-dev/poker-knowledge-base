@@ -1,5 +1,7 @@
 {
   "enabledCssSnippets": [
     "cores-poker"
-  ]
+  ],
+  "theme": "obsidian",
+  "accentColor": ""
 }

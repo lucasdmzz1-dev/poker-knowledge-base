@@ -7,7 +7,9 @@ tags:
   - tipo/modulo
 ---
 
-# ICM e Risk Premium
+# ICM e Risk Premium
+
+**Flashcards:** [[theory/13-ICM/13 - ICM FLASHCARDS|13 - ICM FLASHCARDS]]
 
 ## Módulo 13 — ICM e Risk Premium
 

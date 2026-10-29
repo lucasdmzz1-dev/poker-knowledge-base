@@ -7,7 +7,7 @@ tags:
 
 #flashcards/15-bet-vs-missed
 
-Fonte: [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|Regras Consolidadas]] · [[theory/15-Bet-vs-Missed/README|Módulo]]
+Fonte: [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|Regras Consolidadas]] · [[theory/15-Bet-vs-Missed/README|Módulo]] · [[theory/15-Bet-vs-Missed/15 - BET VS MISSED GUIDELINE|Guideline]]
 
 SRP, Hero IP no flop depois do missed c-bet do agressor. Qual a ideia central da estratégia de frequências?
 ?
