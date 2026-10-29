@@ -28,6 +28,32 @@ Em Vanilla não se grava nenhum campo de bounty (nem como `null`).
 
 Campo sem leitura fica `null` no JSON e "pendente" na ficha. Nunca preencher por estimativa.
 
+## Identificação do spot (obrigatória em toda árvore)
+Um "BTN com 15bb" muda conforme o formato, a fase, o field, os blinds e os stacks em volta. Por isso toda ficha começa com uma linha de resumo do spot e o bloco abaixo. Sem esses campos, a árvore não pode ser comparada com outra.
+
+| O que diferencia | Campos | Exemplo |
+|---|---|---|
+| Formato | `tipo` (Vanilla ou PKO); em PKO, `fator_ko` e `koi` | Vanilla |
+| Fase do torneio | `fase` (classificada), `pct` (% do field restante), `left`, `paid`, `ate_itm`, `dist_bolha` | Early, 60% restante, 116 restantes, 51 pagos |
+| Tamanho do field | `campo_n0` e de onde veio (`campo_n0_fonte`: cabeçalho ou calculado) | ~193 (calculado) |
+| Blinds | `sb_fichas`, `bb_fichas`, `ante_fichas`, `ante_bb` | SB/BB, ante (fichas) |
+| Efetivo do torneio | `media_field` (stack médio do field em bb, se o site mostrar); `media` é a média da mesa | pendente |
+| Hero | `hs` (bb), `hs_fichas`, `hs` ÷ média | 15,9bb |
+| Mesa | `seats` (todos os assentos), `n_mesa` (jogadores sentados), `tavg` (média da mesa), maior e menor stack da mesa | nº de jogadores, média da mesa (bb) |
+| Quem joga depois | stacks de SB e BB, quem cobre o hero, efetivo contra os blinds | stack do SB e do BB, se cobrem o hero |
+| ICM | `rp_sb`, `rp_bb`; filtros de reta final | RP do hero contra SB e BB |
+
+Linha de resumo da ficha, sempre neste formato:
+`<formato> | <fase> (<pct>% restante) | field <n0> | <left> restantes, <paid> pagos | blinds <sb>/<bb> a<ante> | média da mesa <media>bb | BTN <hs>bb | SB <x>bb · BB <y>bb`
+
+Os exemplos da tabela com números vêm da árvore #3336; os demais são só o nome do que gravar.
+
+### Fase (`fase`)
+- `fase_filtro`: o filtro marcado na busca do Solver (rastreia a amostragem, não é a fase real).
+- `fase_header`: a fase mostrada na própria árvore, se o site mostrar.
+- `fase`: a fase classificada, sempre gravada junto do `pct`. Referência do usuário (`theory/tools/pko/pko-conhecimento.md` §8): Mid vai até ~16% do field restante; depois vem a bolha; depois o late game (ITM) e a mesa final. Em fields menores isso muda um pouco.
+- **Pendente:** o limite entre Early e Mid ainda não foi definido pelo usuário. Até lá, gravar `fase` = `fase_header` (ou `fase_filtro`, marcando em `obs`) e sempre o `pct`.
+
 ## Campos de cada registro
 | Grupo | Campo | O que é |
 |---|---|---|
@@ -35,16 +61,22 @@ Campo sem leitura fica `null` no JSON e "pendente" na ficha. Nunca preencher por
 | | `busca` | Termo de busca usado (por exemplo "BTN 15"). Só rastreia a amostragem. |
 | Filtros | `tipo`, `fase_filtro`, `stacks_filtro` | Tipo de torneio (`Vanilla` ou `Bounty`), fase marcada no filtro e tipo de stacks (Asymmetric...). |
 | | `fator_ko` | **Só PKO.** Fator progressivo do bounty (por exemplo 50). |
+| | `reta_final` | Filtros de reta final marcados (bolha, mesa final...), ou `null` se nenhum. |
 | Torneio | `estrutura` | Estrutura mostrada no cabeçalho (por exemplo "Regular"). |
+| | `fase_header`, `fase` | Fase mostrada na árvore e fase classificada (ver "Fase" acima). |
 | | `pct`, `left`, `paid` | % do field restante, jogadores restantes e posições pagas. |
-| | `campo_n0` | Tamanho do field no início (`left` ÷ `pct` × 100), calculado. |
-| | `media` | Stack médio do field, em bb. |
+| | `campo_n0`, `campo_n0_fonte` | Tamanho do field no início e a fonte: `cabecalho` (se o site mostrar) ou `calculado` (`left` ÷ `pct` × 100). |
+| | `media` | "Média" do cabeçalho, em bb. **Nas 5 árvores do BTN 15bb ela bateu com a média dos stacks da mesa** (diferença de até 0,2bb), então é a média da mesa, não do field. |
+| | `media_field` | Efetivo do torneio: stack médio do field, em bb. Gravar só se o site mostrar em outro lugar; senão `null`. |
 | | `si` | Stack inicial (fichas). |
+| Blinds | `sb_fichas`, `bb_fichas`, `ante_fichas` | Blinds e ante do nível, em fichas. |
 | | `koi` | **Só PKO.** Bounty inicial ($). |
 | | `ante_bb` | Ante em bb, se o cabeçalho mostrar. |
 | Mesa | `seats` | Todos os assentos: UTG, UTG1, MP, LJ, HJ, CO, BTN, SB, BB. **Vanilla:** posição → stack em bb. **PKO:** posição → `[stack em bb, bounty em $]`. |
 | | `hero` | Posição do hero (aqui sempre `BTN`). |
-| | `hs` | Stack do hero no cabeçalho do range (bb). |
+| | `hs`, `hs_fichas` | Stack do hero no cabeçalho do range (bb) e em fichas, se aparecer. |
+| | `n_mesa` | Número de jogadores sentados (9, 8, 7...). |
+| | `tavg` | Média dos stacks da mesa (bb), calculada dos `seats`. |
 | | `pot` | Pote antes da ação do hero (blinds + antes), em bb. |
 | Risk Premium | `rp_sb`, `rp_bb` | `[RP do hero contra o jogador, RP do jogador contra o hero]`, em %, lidos na matriz de RP. São os únicos que importam no RFI do BTN. |
 | Range (totais) | `f`, `r`, `ai` | Fold, raise e all-in (%) da faixa "BTN RANGE". Somam 100. |
@@ -54,12 +86,13 @@ Campo sem leitura fica `null` no JSON e "pendente" na ficha. Nunca preencher por
 | Controle | `obs` | Algo fora do padrão (cabeçalho incompleto, cor não reconhecida, grade descartada). |
 
 ## Derivadas (calculadas na análise, não gravadas)
-- Stack inicial em bb = `media` × `pct` ÷ 100.
-- Stack do hero ÷ média do field = `hs` ÷ `media`.
+- Stack inicial em bb = média do field × `pct` ÷ 100 (só com `media_field`; a fórmula do PKO usava a "Média" do cabeçalho, conferir lá também).
+- Stack do hero ÷ média da mesa = `hs` ÷ `media`; ÷ média do field = `hs` ÷ `media_field`.
 - Cobertura: o hero cobre o SB (`hs` ≥ stack do SB) e o BB. No RFI do BTN são os únicos que jogam depois.
 - Stack efetivo contra os blinds = menor entre `hs` e o maior stack entre SB e BB.
 - Blinds curtos: SB ou BB com 20bb ou menos.
-- Distância da bolha = `left` ÷ `paid`.
+- Distância da bolha = `left` ÷ `paid`. Jogadores até o ITM (`ate_itm`) = `left` − `paid`. % pago = `paid` ÷ `campo_n0`.
+- Maior e menor stack da mesa, e quantos jogadores da mesa cobrem o hero.
 - Open total = `r` + `ai` (= 100 − `f`).
 - **Só PKO:** Help Value de SB e BB = (bounty ÷ `koi`) ÷ (stack ÷ stack inicial em bb). Dead money do bounty, bounty do hero em relação ao stack dele, e tabela de valor do KO por fase: ver `theory/tools/pko/pko-conhecimento.md`.
 

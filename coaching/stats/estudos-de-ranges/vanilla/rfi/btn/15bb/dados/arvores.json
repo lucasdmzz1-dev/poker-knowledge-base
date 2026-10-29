@@ -1,62 +1,487 @@
 [
-  {
-    "id": "#4772", "busca": "BTN 15", "tipo": "Vanilla", "fase_filtro": "Early", "stacks_filtro": "Asymmetric",
-    "estrutura": "Regular", "pct": 100, "left": 157, "paid": 21, "campo_n0": 157, "media": 54.8,
-    "si": null, "ante_bb": null, "pot": 2.46,
-    "seats": {"UTG": null, "UTG1": 170, "MP": 39.8, "LJ": 26.3, "HJ": 33.7, "CO": 44.4, "BTN": 14.4, "SB": 60.5, "BB": 49.9},
-    "hero": "BTN", "hs": 14.4,
-    "rp_sb": [0.4, 0.4], "rp_bb": [0.4, 0.4],
-    "f": 59.9, "r": 19.9, "ai": 20.3, "r_size": 2,
-    "cl": {"Pa": [100, 0], "Pm": [67, 33], "Pb": [0, 100], "As": [50, 50], "Ks": [81, 10], "QJs": [51, 19], "Sc": [15, 8], "Ao": [18, 82], "Bo": [13, 87], "Oo": [9, 0]},
-    "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 100-0;A9s 100-0;A8s 60-40;A7s 40-60;A6s 0-100;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 100-0;KK 100-0;KQs 100-0;KJs 100-0;KTs 100-0;K9s 0-100;K8s 90-10;K7s 95-5;K6s 100-0;K5s 100-0;K4s 100-0;K3s 100-0;K2s 5-0;AQo 70-30;KQo 0-100;QQ 100-0;QJs 100-0;QTs 45-55;Q9s 0-100;Q8s 100-0;Q7s 100-0;Q6s 100-0;Q5s 100-0;Q4s 95-0;Q3s 0-0;Q2s 0-0;AJo 0-100;KJo 0-100;QJo 0-100;JJ 100-0;JTs 0-100;J9s 0-100;J8s 85-15;J7s 100-0;J6s 90-0;J5s 45-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 0-100;KTo 15-85;QTo 60-40;JTo 0-100;TT 100-0;T9s 0-100;T8s 0-100;T7s 100-0;T6s 0-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 100-0;J9o 100-0;T9o 100-0;99 100-0;98s 0-100;97s 100-0;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 100-0;Q8o 10-0;J8o 15-0;T8o 0-0;98o 0-0;88 100-0;87s 100-0;86s 85-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 0-100;K7o 0-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 60-40;76s 100-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 0-100;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 5-95;65s 45-0;64s 0-0;63s 0-0;62s 0-0;A5o 0-100;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 0-100;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 0-100;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 45-55;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
-    "obs": "Cabeçalho mostra 8 assentos (UTG sem assento). Stacks das mesas lidos no cabeçalho (SB, BB da matriz de RP). Soma da grade: f 59,9 / r 19,9 / ai 20,2 (cabeçalho 20,3). Pot lido com BTN selecionado. Total de combos 1326."
+ {
+  "id": "#4772",
+  "busca": "BTN 15",
+  "tipo": "Vanilla",
+  "fase_filtro": "Early",
+  "stacks_filtro": "Asymmetric",
+  "reta_final": "nenhum marcado",
+  "estrutura": "Regular",
+  "fase_header": null,
+  "fase": null,
+  "pct": 100,
+  "left": 157,
+  "paid": 21,
+  "ate_itm": 136,
+  "campo_n0": 157,
+  "campo_n0_fonte": null,
+  "media": 54.8,
+  "media_field": null,
+  "si": null,
+  "sb_fichas": null,
+  "bb_fichas": null,
+  "ante_fichas": null,
+  "ante_bb": null,
+  "pot": 2.46,
+  "seats": {
+   "UTG": null,
+   "UTG1": 170,
+   "MP": 39.8,
+   "LJ": 26.3,
+   "HJ": 33.7,
+   "CO": 44.4,
+   "BTN": 14.4,
+   "SB": 60.5,
+   "BB": 49.9
   },
-  {
-    "id": "#3336", "busca": "BTN 15", "tipo": "Vanilla", "fase_filtro": "Early", "stacks_filtro": "Asymmetric",
-    "estrutura": "Regular", "pct": 60, "left": 116, "paid": 51, "campo_n0": 193, "media": 36.3,
-    "si": null, "ante_bb": null, "pot": 2.4,
-    "seats": {"UTG": null, "UTG1": null, "MP": null, "LJ": 38.1, "HJ": 24.9, "CO": 90.7, "BTN": 15.9, "SB": 21.4, "BB": 26.6},
-    "hero": "BTN", "hs": 16,
-    "rp_sb": [2.9, 2.7], "rp_bb": [2.9, 2.6],
-    "f": 60.6, "r": 26.3, "ai": 13.1, "r_size": 2,
-    "cl": {"Pa": [100, 0], "Pm": [94, 6], "Pb": [0, 100], "As": [58, 42], "Ks": [85, 1], "QJs": [40, 22], "Sc": [17, 4], "Ao": [50, 51], "Bo": [56, 44], "Oo": [9, 0]},
-    "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 100-0;A9s 100-0;A8s 100-0;A7s 95-5;A6s 0-100;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 100-0;KK 100-0;KQs 100-0;KJs 100-0;KTs 100-0;K9s 95-5;K8s 100-0;K7s 100-0;K6s 100-0;K5s 100-0;K4s 100-0;K3s 45-0;K2s 0-0;AQo 100-0;KQo 40-60;QQ 100-0;QJs 60-40;QTs 0-100;Q9s 20-80;Q8s 100-0;Q7s 100-0;Q6s 100-0;Q5s 95-0;Q4s 0-0;Q3s 0-0;Q2s 0-0;AJo 75-25;KJo 20-80;QJo 65-35;JJ 100-0;JTs 0-100;J9s 0-100;J8s 100-0;J7s 100-0;J6s 90-0;J5s 0-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 25-75;KTo 100-0;QTo 95-5;JTo 10-90;TT 100-0;T9s 0-100;T8s 65-35;T7s 100-0;T6s 15-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 100-0;J9o 100-0;T9o 100-0;99 100-0;98s 85-15;97s 100-0;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 100-0;Q8o 5-0;J8o 0-0;T8o 5-0;98o 0-0;88 100-0;87s 100-0;86s 50-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 0-100;K7o 25-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 100-0;76s 100-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 0-100;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 75-25;65s 0-0;64s 0-0;63s 0-0;62s 0-0;A5o 0-100;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 95-5;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 100-0;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 100-0;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
-    "obs": "Assentos UTG, UTG1 e MP sem jogador na mesa (5 posições ativas + BB). Hero aparece como 16 no rótulo do range e 15,9 no cabeçalho. Soma da grade: f 60,6 / r 26,3 / ai 13,1 (bate). Pot lido com BTN selecionado."
+  "n_mesa": 8,
+  "tavg": 54.9,
+  "hero": "BTN",
+  "hs": 14.4,
+  "hs_fichas": null,
+  "rp_sb": [
+   0.4,
+   0.4
+  ],
+  "rp_bb": [
+   0.4,
+   0.4
+  ],
+  "f": 59.9,
+  "r": 19.9,
+  "ai": 20.3,
+  "r_size": 2,
+  "cl": {
+   "Pa": [
+    100,
+    0
+   ],
+   "Pm": [
+    67,
+    33
+   ],
+   "Pb": [
+    0,
+    100
+   ],
+   "As": [
+    50,
+    50
+   ],
+   "Ks": [
+    81,
+    10
+   ],
+   "QJs": [
+    51,
+    19
+   ],
+   "Sc": [
+    15,
+    8
+   ],
+   "Ao": [
+    18,
+    82
+   ],
+   "Bo": [
+    13,
+    87
+   ],
+   "Oo": [
+    9,
+    0
+   ]
   },
-  {
-    "id": "#10057", "busca": "BTN 15", "tipo": "Vanilla", "fase_filtro": "Early", "stacks_filtro": "Asymmetric",
-    "estrutura": "Regular", "pct": 76, "left": 409, "paid": 81, "campo_n0": 538, "media": 33,
-    "si": null, "ante_bb": null, "pot": 2.38,
-    "seats": {"UTG": null, "UTG1": null, "MP": 54.3, "LJ": 42.6, "HJ": 62.7, "CO": 18.0, "BTN": 14.0, "SB": 10.0, "BB": 29.4},
-    "hero": "BTN", "hs": 14,
-    "rp_sb": [0.7, 0.7], "rp_bb": [1.0, 1.0],
-    "f": 63.0, "r": 11.7, "ai": 25.2, "r_size": 2,
-    "cl": {"Pa": [100, 0], "Pm": [33, 68], "Pb": [0, 100], "As": [43, 57], "Ks": [43, 43], "QJs": [20, 36], "Sc": [5, 12], "Ao": [6, 94], "Bo": [6, 94], "Oo": [6, 0]},
-    "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 50-50;A9s 30-70;A8s 100-0;A7s 15-85;A6s 15-85;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 0-100;KK 100-0;KQs 0-100;KJs 25-75;KTs 100-0;K9s 0-100;K8s 50-50;K7s 0-100;K6s 60-40;K5s 100-0;K4s 100-0;K3s 45-0;K2s 0-0;AQo 0-100;KQo 0-100;QQ 100-0;QJs 10-90;QTs 0-100;Q9s 0-100;Q8s 0-100;Q7s 100-0;Q6s 100-0;Q5s 65-0;Q4s 0-0;Q3s 0-0;Q2s 0-0;AJo 0-100;KJo 0-100;QJo 0-100;JJ 100-0;JTs 0-100;J9s 0-100;J8s 0-100;J7s 100-0;J6s 0-0;J5s 0-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 0-100;KTo 0-100;QTo 35-65;JTo 0-100;TT 100-0;T9s 0-100;T8s 0-100;T7s 100-0;T6s 0-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 80-0;J9o 75-0;T9o 30-0;99 100-0;98s 0-100;97s 35-65;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 85-0;Q8o 0-0;J8o 0-0;T8o 0-0;98o 0-0;88 30-70;87s 25-75;86s 0-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 0-100;K7o 0-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 0-100;76s 5-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 0-100;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 0-100;65s 0-0;64s 0-0;63s 0-0;62s 0-0;A5o 0-100;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 0-100;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 50-50;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 20-80;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
-    "obs": "UTG e UTG1 sem jogador. Soma da grade: f 63,0 / r 11,7 / ai 25,2 (bate). Pot lido com MP selecionado (primeira ação); conferir se a leitura com BTN selecionado for diferente."
+  "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 100-0;A9s 100-0;A8s 60-40;A7s 40-60;A6s 0-100;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 100-0;KK 100-0;KQs 100-0;KJs 100-0;KTs 100-0;K9s 0-100;K8s 90-10;K7s 95-5;K6s 100-0;K5s 100-0;K4s 100-0;K3s 100-0;K2s 5-0;AQo 70-30;KQo 0-100;QQ 100-0;QJs 100-0;QTs 45-55;Q9s 0-100;Q8s 100-0;Q7s 100-0;Q6s 100-0;Q5s 100-0;Q4s 95-0;Q3s 0-0;Q2s 0-0;AJo 0-100;KJo 0-100;QJo 0-100;JJ 100-0;JTs 0-100;J9s 0-100;J8s 85-15;J7s 100-0;J6s 90-0;J5s 45-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 0-100;KTo 15-85;QTo 60-40;JTo 0-100;TT 100-0;T9s 0-100;T8s 0-100;T7s 100-0;T6s 0-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 100-0;J9o 100-0;T9o 100-0;99 100-0;98s 0-100;97s 100-0;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 100-0;Q8o 10-0;J8o 15-0;T8o 0-0;98o 0-0;88 100-0;87s 100-0;86s 85-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 0-100;K7o 0-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 60-40;76s 100-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 0-100;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 5-95;65s 45-0;64s 0-0;63s 0-0;62s 0-0;A5o 0-100;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 0-100;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 0-100;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 45-55;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
+  "obs": "Cabeçalho mostra 8 assentos (UTG sem assento). Stacks das mesas lidos no cabeçalho (SB, BB da matriz de RP). Soma da grade: f 59,9 / r 19,9 / ai 20,2 (cabeçalho 20,3). Pot lido com BTN selecionado. Total de combos 1326."
+ },
+ {
+  "id": "#3336",
+  "busca": "BTN 15",
+  "tipo": "Vanilla",
+  "fase_filtro": "Early",
+  "stacks_filtro": "Asymmetric",
+  "reta_final": "nenhum marcado",
+  "estrutura": "Regular",
+  "fase_header": null,
+  "fase": null,
+  "pct": 60,
+  "left": 116,
+  "paid": 51,
+  "ate_itm": 65,
+  "campo_n0": 193,
+  "campo_n0_fonte": null,
+  "media": 36.3,
+  "media_field": null,
+  "si": null,
+  "sb_fichas": null,
+  "bb_fichas": null,
+  "ante_fichas": null,
+  "ante_bb": null,
+  "pot": 2.4,
+  "seats": {
+   "UTG": null,
+   "UTG1": null,
+   "MP": null,
+   "LJ": 38.1,
+   "HJ": 24.9,
+   "CO": 90.7,
+   "BTN": 15.9,
+   "SB": 21.4,
+   "BB": 26.6
   },
-  {
-    "id": "#3411", "busca": "BTN 15", "tipo": "Vanilla", "fase_filtro": "Early", "stacks_filtro": "Asymmetric",
-    "estrutura": "Regular", "pct": 81, "left": 306, "paid": 57, "campo_n0": 378, "media": 53.2,
-    "si": null, "ante_bb": null, "pot": 2.46,
-    "seats": {"UTG": null, "UTG1": 73.9, "MP": 54.2, "LJ": 107, "HJ": 42.6, "CO": 37.7, "BTN": 16.2, "SB": 80.3, "BB": 15.4},
-    "hero": "BTN", "hs": 16.2,
-    "rp_sb": [0.7, 0.6], "rp_bb": [0.6, 0.6],
-    "f": 62.6, "r": 19.2, "ai": 18.3, "r_size": 2,
-    "cl": {"Pa": [100, 0], "Pm": [68, 33], "Pb": [0, 100], "As": [52, 48], "Ks": [82, 8], "QJs": [35, 25], "Sc": [6, 8], "Ao": [23, 77], "Bo": [41, 60], "Oo": [7, 0]},
-    "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 100-0;A9s 75-25;A8s 95-5;A7s 55-45;A6s 0-100;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 100-0;KK 100-0;KQs 100-0;KJs 100-0;KTs 85-15;K9s 20-80;K8s 100-0;K7s 100-0;K6s 100-0;K5s 100-0;K4s 100-0;K3s 90-0;K2s 0-0;AQo 70-30;KQo 0-100;QQ 100-0;QJs 30-70;QTs 0-100;Q9s 0-100;Q8s 100-0;Q7s 100-0;Q6s 100-0;Q5s 100-0;Q4s 0-0;Q3s 0-0;Q2s 0-0;AJo 5-95;KJo 0-100;QJo 35-65;JJ 100-0;JTs 0-100;J9s 0-100;J8s 100-0;J7s 100-0;J6s 30-0;J5s 0-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 0-100;KTo 35-65;QTo 100-0;JTo 75-25;TT 100-0;T9s 0-100;T8s 15-85;T7s 100-0;T6s 0-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 100-0;J9o 100-0;T9o 25-0;99 100-0;98s 0-100;97s 5-0;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 90-0;Q8o 0-0;J8o 0-0;T8o 0-0;98o 0-0;88 100-0;87s 90-0;86s 0-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 0-100;K7o 0-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 70-30;76s 0-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 0-100;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 0-100;65s 0-0;64s 0-0;63s 0-0;62s 0-0;A5o 0-100;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 0-100;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 5-95;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 100-0;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
-    "obs": "UTG sem jogador. Cabeçalho: 57 posições pagas (anotado como 67 em versão anterior do README; corrigido aqui). Soma da grade: f 62,5 / r 19,2 / ai 18,3 (cabeçalho 62,6 / 19,2 / 18,3). Pot lido com BTN selecionado."
+  "n_mesa": 6,
+  "tavg": 36.3,
+  "hero": "BTN",
+  "hs": 16,
+  "hs_fichas": null,
+  "rp_sb": [
+   2.9,
+   2.7
+  ],
+  "rp_bb": [
+   2.9,
+   2.6
+  ],
+  "f": 60.6,
+  "r": 26.3,
+  "ai": 13.1,
+  "r_size": 2,
+  "cl": {
+   "Pa": [
+    100,
+    0
+   ],
+   "Pm": [
+    94,
+    6
+   ],
+   "Pb": [
+    0,
+    100
+   ],
+   "As": [
+    58,
+    42
+   ],
+   "Ks": [
+    85,
+    1
+   ],
+   "QJs": [
+    40,
+    22
+   ],
+   "Sc": [
+    17,
+    4
+   ],
+   "Ao": [
+    50,
+    51
+   ],
+   "Bo": [
+    56,
+    44
+   ],
+   "Oo": [
+    9,
+    0
+   ]
   },
-  {
-    "id": "#7211", "busca": "BTN 15", "tipo": "Vanilla", "fase_filtro": "Early", "stacks_filtro": "Asymmetric",
-    "estrutura": "Regular", "pct": 52, "left": 124, "paid": 36, "campo_n0": 238, "media": 49.1,
-    "si": null, "ante_bb": null, "pot": 2.46,
-    "seats": {"UTG": null, "UTG1": 10.6, "MP": 121, "LJ": 19.9, "HJ": 68.8, "CO": 77.0, "BTN": 16.3, "SB": 28.9, "BB": 50.4},
-    "hero": "BTN", "hs": 16.3,
-    "rp_sb": [1.2, 1.1], "rp_bb": [1.2, 1.1],
-    "f": 59.4, "r": 30.0, "ai": 10.7, "r_size": 2,
-    "cl": {"Pa": [100, 0], "Pm": [100, 0], "Pb": [0, 100], "As": [61, 40], "Ks": [88, 3], "QJs": [51, 12], "Sc": [21, 3], "Ao": [54, 46], "Bo": [75, 25], "Oo": [10, 0]},
-    "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 100-0;A9s 100-0;A8s 100-0;A7s 100-0;A6s 25-75;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 100-0;KK 100-0;KQs 100-0;KJs 100-0;KTs 100-0;K9s 70-30;K8s 100-0;K7s 100-0;K6s 100-0;K5s 100-0;K4s 100-0;K3s 100-0;K2s 0-0;AQo 100-0;KQo 100-0;QQ 100-0;QJs 100-0;QTs 70-30;Q9s 100-0;Q8s 100-0;Q7s 100-0;Q6s 100-0;Q5s 100-0;Q4s 0-0;Q3s 0-0;Q2s 0-0;AJo 100-0;KJo 15-85;QJo 65-35;JJ 100-0;JTs 5-95;J9s 0-100;J8s 100-0;J7s 100-0;J6s 100-0;J5s 0-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 60-40;KTo 95-5;QTo 100-0;JTo 80-20;TT 100-0;T9s 0-100;T8s 100-0;T7s 100-0;T6s 30-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 100-0;J9o 100-0;T9o 100-0;99 100-0;98s 100-0;97s 100-0;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 100-0;Q8o 55-0;J8o 0-0;T8o 0-0;98o 0-0;88 100-0;87s 100-0;86s 80-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 0-100;K7o 70-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 100-0;76s 100-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 0-100;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 100-0;65s 35-0;64s 0-0;63s 0-0;62s 0-0;A5o 0-100;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 85-15;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 100-0;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 100-0;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
-    "obs": "UTG sem jogador. BB 50,4 no cabeçalho (49,3 no anel da mesa, com blinds postados). Soma da grade: f 59,4 / r 30,0 / ai 10,7 (bate). Pot lido com BTN selecionado."
-  }
+  "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 100-0;A9s 100-0;A8s 100-0;A7s 95-5;A6s 0-100;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 100-0;KK 100-0;KQs 100-0;KJs 100-0;KTs 100-0;K9s 95-5;K8s 100-0;K7s 100-0;K6s 100-0;K5s 100-0;K4s 100-0;K3s 45-0;K2s 0-0;AQo 100-0;KQo 40-60;QQ 100-0;QJs 60-40;QTs 0-100;Q9s 20-80;Q8s 100-0;Q7s 100-0;Q6s 100-0;Q5s 95-0;Q4s 0-0;Q3s 0-0;Q2s 0-0;AJo 75-25;KJo 20-80;QJo 65-35;JJ 100-0;JTs 0-100;J9s 0-100;J8s 100-0;J7s 100-0;J6s 90-0;J5s 0-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 25-75;KTo 100-0;QTo 95-5;JTo 10-90;TT 100-0;T9s 0-100;T8s 65-35;T7s 100-0;T6s 15-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 100-0;J9o 100-0;T9o 100-0;99 100-0;98s 85-15;97s 100-0;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 100-0;Q8o 5-0;J8o 0-0;T8o 5-0;98o 0-0;88 100-0;87s 100-0;86s 50-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 0-100;K7o 25-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 100-0;76s 100-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 0-100;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 75-25;65s 0-0;64s 0-0;63s 0-0;62s 0-0;A5o 0-100;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 95-5;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 100-0;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 100-0;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
+  "obs": "Assentos UTG, UTG1 e MP sem jogador na mesa (5 posições ativas + BB). Hero aparece como 16 no rótulo do range e 15,9 no cabeçalho. Soma da grade: f 60,6 / r 26,3 / ai 13,1 (bate). Pot lido com BTN selecionado."
+ },
+ {
+  "id": "#10057",
+  "busca": "BTN 15",
+  "tipo": "Vanilla",
+  "fase_filtro": "Early",
+  "stacks_filtro": "Asymmetric",
+  "reta_final": "nenhum marcado",
+  "estrutura": "Regular",
+  "fase_header": null,
+  "fase": null,
+  "pct": 76,
+  "left": 409,
+  "paid": 81,
+  "ate_itm": 328,
+  "campo_n0": 538,
+  "campo_n0_fonte": null,
+  "media": 33,
+  "media_field": null,
+  "si": null,
+  "sb_fichas": null,
+  "bb_fichas": null,
+  "ante_fichas": null,
+  "ante_bb": null,
+  "pot": 2.38,
+  "seats": {
+   "UTG": null,
+   "UTG1": null,
+   "MP": 54.3,
+   "LJ": 42.6,
+   "HJ": 62.7,
+   "CO": 18.0,
+   "BTN": 14.0,
+   "SB": 10.0,
+   "BB": 29.4
+  },
+  "n_mesa": 7,
+  "tavg": 33.0,
+  "hero": "BTN",
+  "hs": 14,
+  "hs_fichas": null,
+  "rp_sb": [
+   0.7,
+   0.7
+  ],
+  "rp_bb": [
+   1.0,
+   1.0
+  ],
+  "f": 63.0,
+  "r": 11.7,
+  "ai": 25.2,
+  "r_size": 2,
+  "cl": {
+   "Pa": [
+    100,
+    0
+   ],
+   "Pm": [
+    33,
+    68
+   ],
+   "Pb": [
+    0,
+    100
+   ],
+   "As": [
+    43,
+    57
+   ],
+   "Ks": [
+    43,
+    43
+   ],
+   "QJs": [
+    20,
+    36
+   ],
+   "Sc": [
+    5,
+    12
+   ],
+   "Ao": [
+    6,
+    94
+   ],
+   "Bo": [
+    6,
+    94
+   ],
+   "Oo": [
+    6,
+    0
+   ]
+  },
+  "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 50-50;A9s 30-70;A8s 100-0;A7s 15-85;A6s 15-85;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 0-100;KK 100-0;KQs 0-100;KJs 25-75;KTs 100-0;K9s 0-100;K8s 50-50;K7s 0-100;K6s 60-40;K5s 100-0;K4s 100-0;K3s 45-0;K2s 0-0;AQo 0-100;KQo 0-100;QQ 100-0;QJs 10-90;QTs 0-100;Q9s 0-100;Q8s 0-100;Q7s 100-0;Q6s 100-0;Q5s 65-0;Q4s 0-0;Q3s 0-0;Q2s 0-0;AJo 0-100;KJo 0-100;QJo 0-100;JJ 100-0;JTs 0-100;J9s 0-100;J8s 0-100;J7s 100-0;J6s 0-0;J5s 0-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 0-100;KTo 0-100;QTo 35-65;JTo 0-100;TT 100-0;T9s 0-100;T8s 0-100;T7s 100-0;T6s 0-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 80-0;J9o 75-0;T9o 30-0;99 100-0;98s 0-100;97s 35-65;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 85-0;Q8o 0-0;J8o 0-0;T8o 0-0;98o 0-0;88 30-70;87s 25-75;86s 0-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 0-100;K7o 0-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 0-100;76s 5-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 0-100;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 0-100;65s 0-0;64s 0-0;63s 0-0;62s 0-0;A5o 0-100;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 0-100;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 50-50;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 20-80;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
+  "obs": "UTG e UTG1 sem jogador. Soma da grade: f 63,0 / r 11,7 / ai 25,2 (bate). Pot lido com MP selecionado (primeira ação); conferir se a leitura com BTN selecionado for diferente."
+ },
+ {
+  "id": "#3411",
+  "busca": "BTN 15",
+  "tipo": "Vanilla",
+  "fase_filtro": "Early",
+  "stacks_filtro": "Asymmetric",
+  "reta_final": "nenhum marcado",
+  "estrutura": "Regular",
+  "fase_header": null,
+  "fase": null,
+  "pct": 81,
+  "left": 306,
+  "paid": 57,
+  "ate_itm": 249,
+  "campo_n0": 378,
+  "campo_n0_fonte": null,
+  "media": 53.2,
+  "media_field": null,
+  "si": null,
+  "sb_fichas": null,
+  "bb_fichas": null,
+  "ante_fichas": null,
+  "ante_bb": null,
+  "pot": 2.46,
+  "seats": {
+   "UTG": null,
+   "UTG1": 73.9,
+   "MP": 54.2,
+   "LJ": 107,
+   "HJ": 42.6,
+   "CO": 37.7,
+   "BTN": 16.2,
+   "SB": 80.3,
+   "BB": 15.4
+  },
+  "n_mesa": 8,
+  "tavg": 53.4,
+  "hero": "BTN",
+  "hs": 16.2,
+  "hs_fichas": null,
+  "rp_sb": [
+   0.7,
+   0.6
+  ],
+  "rp_bb": [
+   0.6,
+   0.6
+  ],
+  "f": 62.6,
+  "r": 19.2,
+  "ai": 18.3,
+  "r_size": 2,
+  "cl": {
+   "Pa": [
+    100,
+    0
+   ],
+   "Pm": [
+    68,
+    33
+   ],
+   "Pb": [
+    0,
+    100
+   ],
+   "As": [
+    52,
+    48
+   ],
+   "Ks": [
+    82,
+    8
+   ],
+   "QJs": [
+    35,
+    25
+   ],
+   "Sc": [
+    6,
+    8
+   ],
+   "Ao": [
+    23,
+    77
+   ],
+   "Bo": [
+    41,
+    60
+   ],
+   "Oo": [
+    7,
+    0
+   ]
+  },
+  "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 100-0;A9s 75-25;A8s 95-5;A7s 55-45;A6s 0-100;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 100-0;KK 100-0;KQs 100-0;KJs 100-0;KTs 85-15;K9s 20-80;K8s 100-0;K7s 100-0;K6s 100-0;K5s 100-0;K4s 100-0;K3s 90-0;K2s 0-0;AQo 70-30;KQo 0-100;QQ 100-0;QJs 30-70;QTs 0-100;Q9s 0-100;Q8s 100-0;Q7s 100-0;Q6s 100-0;Q5s 100-0;Q4s 0-0;Q3s 0-0;Q2s 0-0;AJo 5-95;KJo 0-100;QJo 35-65;JJ 100-0;JTs 0-100;J9s 0-100;J8s 100-0;J7s 100-0;J6s 30-0;J5s 0-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 0-100;KTo 35-65;QTo 100-0;JTo 75-25;TT 100-0;T9s 0-100;T8s 15-85;T7s 100-0;T6s 0-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 100-0;J9o 100-0;T9o 25-0;99 100-0;98s 0-100;97s 5-0;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 90-0;Q8o 0-0;J8o 0-0;T8o 0-0;98o 0-0;88 100-0;87s 90-0;86s 0-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 0-100;K7o 0-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 70-30;76s 0-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 0-100;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 0-100;65s 0-0;64s 0-0;63s 0-0;62s 0-0;A5o 0-100;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 0-100;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 5-95;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 100-0;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
+  "obs": "UTG sem jogador. Cabeçalho: 57 posições pagas (anotado como 67 em versão anterior do README; corrigido aqui). Soma da grade: f 62,5 / r 19,2 / ai 18,3 (cabeçalho 62,6 / 19,2 / 18,3). Pot lido com BTN selecionado."
+ },
+ {
+  "id": "#7211",
+  "busca": "BTN 15",
+  "tipo": "Vanilla",
+  "fase_filtro": "Early",
+  "stacks_filtro": "Asymmetric",
+  "reta_final": "nenhum marcado",
+  "estrutura": "Regular",
+  "fase_header": null,
+  "fase": null,
+  "pct": 52,
+  "left": 124,
+  "paid": 36,
+  "ate_itm": 88,
+  "campo_n0": 238,
+  "campo_n0_fonte": null,
+  "media": 49.1,
+  "media_field": null,
+  "si": null,
+  "sb_fichas": null,
+  "bb_fichas": null,
+  "ante_fichas": null,
+  "ante_bb": null,
+  "pot": 2.46,
+  "seats": {
+   "UTG": null,
+   "UTG1": 10.6,
+   "MP": 121,
+   "LJ": 19.9,
+   "HJ": 68.8,
+   "CO": 77.0,
+   "BTN": 16.3,
+   "SB": 28.9,
+   "BB": 50.4
+  },
+  "n_mesa": 8,
+  "tavg": 49.1,
+  "hero": "BTN",
+  "hs": 16.3,
+  "hs_fichas": null,
+  "rp_sb": [
+   1.2,
+   1.1
+  ],
+  "rp_bb": [
+   1.2,
+   1.1
+  ],
+  "f": 59.4,
+  "r": 30.0,
+  "ai": 10.7,
+  "r_size": 2,
+  "cl": {
+   "Pa": [
+    100,
+    0
+   ],
+   "Pm": [
+    100,
+    0
+   ],
+   "Pb": [
+    0,
+    100
+   ],
+   "As": [
+    61,
+    40
+   ],
+   "Ks": [
+    88,
+    3
+   ],
+   "QJs": [
+    51,
+    12
+   ],
+   "Sc": [
+    21,
+    3
+   ],
+   "Ao": [
+    54,
+    46
+   ],
+   "Bo": [
+    75,
+    25
+   ],
+   "Oo": [
+    10,
+    0
+   ]
+  },
+  "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 100-0;A9s 100-0;A8s 100-0;A7s 100-0;A6s 25-75;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 100-0;KK 100-0;KQs 100-0;KJs 100-0;KTs 100-0;K9s 70-30;K8s 100-0;K7s 100-0;K6s 100-0;K5s 100-0;K4s 100-0;K3s 100-0;K2s 0-0;AQo 100-0;KQo 100-0;QQ 100-0;QJs 100-0;QTs 70-30;Q9s 100-0;Q8s 100-0;Q7s 100-0;Q6s 100-0;Q5s 100-0;Q4s 0-0;Q3s 0-0;Q2s 0-0;AJo 100-0;KJo 15-85;QJo 65-35;JJ 100-0;JTs 5-95;J9s 0-100;J8s 100-0;J7s 100-0;J6s 100-0;J5s 0-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 60-40;KTo 95-5;QTo 100-0;JTo 80-20;TT 100-0;T9s 0-100;T8s 100-0;T7s 100-0;T6s 30-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 100-0;J9o 100-0;T9o 100-0;99 100-0;98s 100-0;97s 100-0;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 100-0;Q8o 55-0;J8o 0-0;T8o 0-0;98o 0-0;88 100-0;87s 100-0;86s 80-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 0-100;K7o 70-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 100-0;76s 100-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 0-100;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 100-0;65s 35-0;64s 0-0;63s 0-0;62s 0-0;A5o 0-100;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 85-15;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 100-0;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 100-0;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
+  "obs": "UTG sem jogador. BB 50,4 no cabeçalho (49,3 no anel da mesa, com blinds postados). Soma da grade: f 59,4 / r 30,0 / ai 10,7 (bate). Pot lido com BTN selecionado."
+ }
 ]
