@@ -136,7 +136,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/15-Bet-vs-Missed/01-Guideline|01-Guideline]]
+- [[theory/15-Bet-vs-Missed/15 - BET VS MISSED GUIDELINE|01-Guideline]]
 - [[theory/15-Bet-vs-Missed/02-VideoAulas|02-VideoAulas]]
 - [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]]
 - [[theory/15-Bet-vs-Missed/04-Exercicios|04-Exercicios]]

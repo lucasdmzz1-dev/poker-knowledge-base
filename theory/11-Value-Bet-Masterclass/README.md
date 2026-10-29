@@ -119,7 +119,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]]
+- [[theory/11-Value-Bet-Masterclass/11 - VALUE BET GUIDELINE|01-Guideline]]
 - [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]]
 - [[theory/11-Value-Bet-Masterclass/03-Solver|03-Solver]]
 - [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]]
@@ -133,6 +133,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Outros módulos:**
 
-- [[theory/12-RETA-FINAL/01-Guideline|12-RETA-FINAL · 01-Guideline]]
+- [[theory/12-RETA-FINAL/12 - RETA FINAL GUIDELINE|12-RETA-FINAL · 01-Guideline]]
 
 <!-- graphify-links:end -->

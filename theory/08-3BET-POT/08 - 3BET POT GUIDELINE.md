@@ -498,7 +498,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 **Outros módulos:**
 
 - [[theory/07-XR-DEEP/05-Regras-Consolidadas|07-XR-DEEP · 05-Regras-Consolidadas]]
-- [[theory/07-XR-DEEP/01-Guideline|07-XR-DEEP · 01-Guideline]]
+- [[theory/07-XR-DEEP/07 - XR DEEP GUIDELINE|07-XR-DEEP · 01-Guideline]]
 - [[theory/07-XR-DEEP/07-Changelog|07-XR-DEEP · 07-Changelog]]
 
 <!-- graphify-links:end -->

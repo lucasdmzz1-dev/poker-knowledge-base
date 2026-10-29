@@ -88,7 +88,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/09-BET-CHECK-BET/01-Guideline|01-Guideline]]
+- [[theory/09-BET-CHECK-BET/09 - BET CHECK BET GUIDELINE|01-Guideline]]
 - [[theory/09-BET-CHECK-BET/02-VideoAulas|02-VideoAulas]]
 - [[theory/09-BET-CHECK-BET/03-Solver|03-Solver]]
 - [[theory/09-BET-CHECK-BET/04-Exercicios|04-Exercicios]]

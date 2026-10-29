@@ -825,7 +825,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Outros módulos:**
 
-- [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-CBet-IP-Short-Stack · 01-Guideline]]
+- [[theory/01-CBet-IP-Short-Stack/01 - CBET IP SHORT GUIDELINE|01-CBet-IP-Short-Stack · 01-Guideline]]
 - [[theory/01-CBet-IP-Short-Stack/04-Exercicios|01-CBet-IP-Short-Stack · 04-Exercicios]]
 - [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|01-CBet-IP-Short-Stack · 05-Regras-Consolidadas]]
 - [[theory/01-CBet-IP-Short-Stack/08-Referencias|01-CBet-IP-Short-Stack · 08-Referencias]]

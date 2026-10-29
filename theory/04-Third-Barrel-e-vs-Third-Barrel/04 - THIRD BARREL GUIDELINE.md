@@ -192,6 +192,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 - [[theory/03-Second-Barrel-IP/06-Pendencias|03-Second-Barrel-IP · 06-Pendencias]]
 - [[theory/02-CBet-IP-40bb/README|02-CBet-IP-40bb · README]]
-- [[theory/03-Second-Barrel-IP/01-Guideline|03-Second-Barrel-IP · 01-Guideline]]
+- [[theory/03-Second-Barrel-IP/03 - SECOND BARREL IP GUIDELINE|03-Second-Barrel-IP · 01-Guideline]]
 
 <!-- graphify-links:end -->

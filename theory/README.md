@@ -159,7 +159,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 - [[theory/01-CBet-IP-Short-Stack/README|01-CBet-IP-Short-Stack]]
 - [[theory/02-CBet-IP-40bb/README|02-CBet-IP-40bb]]
-- [[theory/03-Second-Barrel-IP/01-Guideline|03-Second-Barrel-IP]]
+- [[theory/03-Second-Barrel-IP/03 - SECOND BARREL IP GUIDELINE|03-Second-Barrel-IP]]
 - [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|04-Third-Barrel-e-vs-Third-Barrel]]
 - [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]]
 - [[theory/06-XR-SHORT/README|06-XR-SHORT]]

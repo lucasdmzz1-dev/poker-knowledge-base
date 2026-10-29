@@ -181,7 +181,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/05-CBet-OOP-40bb/01-Guideline|01-Guideline]]
+- [[theory/05-CBet-OOP-40bb/05 - CBET OOP 40BB GUIDELINE|01-Guideline]]
 - [[theory/05-CBet-OOP-40bb/02-VideoAulas|02-VideoAulas]]
 - [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]]
 - [[theory/05-CBet-OOP-40bb/04-Exercicios|04-Exercicios]]

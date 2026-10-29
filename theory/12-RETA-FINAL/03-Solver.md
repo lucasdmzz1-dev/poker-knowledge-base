@@ -57,10 +57,10 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/12-RETA-FINAL/README|theory/12-RETA-FINAL]]
 
-**Mesma pasta:** [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]] · [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]] · [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]] · [[theory/12-RETA-FINAL/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/12-RETA-FINAL/06-Pendencias|06-Pendencias]] · [[theory/12-RETA-FINAL/07-Changelog|07-Changelog]] · [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/09-Decisoes|09-Decisoes]]
+**Mesma pasta:** [[theory/12-RETA-FINAL/12 - RETA FINAL GUIDELINE|01-Guideline]] · [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]] · [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]] · [[theory/12-RETA-FINAL/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/12-RETA-FINAL/06-Pendencias|06-Pendencias]] · [[theory/12-RETA-FINAL/07-Changelog|07-Changelog]] · [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/09-Decisoes|09-Decisoes]]
 
 **Outros módulos:**
 
-- [[theory/13-ICM/01-Guideline|13-ICM · 01-Guideline]]
+- [[theory/13-ICM/13 - ICM GUIDELINE|13-ICM · 01-Guideline]]
 
 <!-- graphify-links:end -->

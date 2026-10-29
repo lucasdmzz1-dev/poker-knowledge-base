@@ -479,7 +479,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Outros módulos:**
 
-- [[theory/02-CBet-IP-40bb/01-Guideline|02-CBet-IP-40bb · 01-Guideline]]
+- [[theory/02-CBet-IP-40bb/02 - CBET IP 40BB GUIDELINE|02-CBet-IP-40bb · 01-Guideline]]
 - [[theory/02-CBet-IP-40bb/02-VideoAulas|02-CBet-IP-40bb · 02-VideoAulas]]
 - [[docs/00-Architecture/KB-002-Domain-Model|00-Architecture/KB-002-Domain-Model]]
 

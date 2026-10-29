@@ -347,7 +347,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Outros módulos:**
 
-- [[theory/13-ICM/01-Guideline|13-ICM · 01-Guideline]]
+- [[theory/13-ICM/13 - ICM GUIDELINE|13-ICM · 01-Guideline]]
 - [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|11-Value-Bet-Masterclass · 05-Regras-Consolidadas]]
 - [[theory/11-Value-Bet-Masterclass/README|11-Value-Bet-Masterclass · README]]
 

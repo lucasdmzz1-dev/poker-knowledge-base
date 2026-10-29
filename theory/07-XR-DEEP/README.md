@@ -169,7 +169,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/07-XR-DEEP/01-Guideline|01-Guideline]]
+- [[theory/07-XR-DEEP/07 - XR DEEP GUIDELINE|01-Guideline]]
 - [[theory/07-XR-DEEP/02-VideoAulas|02-VideoAulas]]
 - [[theory/07-XR-DEEP/03-Solver|03-Solver]]
 - [[theory/07-XR-DEEP/04-Exercicios|04-Exercicios]]

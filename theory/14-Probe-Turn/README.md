@@ -127,7 +127,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/14-Probe-Turn/01-Guideline|01-Guideline]]
+- [[theory/14-Probe-Turn/14 - PROBE TURN GUIDELINE|01-Guideline]]
 - [[theory/14-Probe-Turn/02-VideoAulas|02-VideoAulas]]
 - [[theory/14-Probe-Turn/03-Solver|03-Solver]]
 - [[theory/14-Probe-Turn/04-Exercicios|04-Exercicios]]
@@ -140,6 +140,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Outros módulos:**
 
-- [[theory/15-Bet-vs-Missed/01-Guideline|15-Bet-vs-Missed · 01-Guideline]]
+- [[theory/15-Bet-vs-Missed/15 - BET VS MISSED GUIDELINE|15-Bet-vs-Missed · 01-Guideline]]
 
 <!-- graphify-links:end -->

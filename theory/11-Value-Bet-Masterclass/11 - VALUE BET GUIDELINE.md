@@ -134,6 +134,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 - [[theory/09-BET-CHECK-BET/04-Exercicios|09-BET-CHECK-BET · 04-Exercicios]]
 - [[theory/09-BET-CHECK-BET/09-Decisoes|09-BET-CHECK-BET · 09-Decisoes]]
-- [[theory/10-MULTIWAY-POT/01-Guideline|10-MULTIWAY-POT · 01-Guideline]]
+- [[theory/10-MULTIWAY-POT/10 - MULTIWAY POT GUIDELINE|10-MULTIWAY-POT · 01-Guideline]]
 
 <!-- graphify-links:end -->

@@ -83,12 +83,12 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
 
-**Mesma pasta:** [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/03-Solver|03-Solver]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]] · [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]] · [[theory/11-Value-Bet-Masterclass/08-Referencias|08-Referencias]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]]
+**Mesma pasta:** [[theory/11-Value-Bet-Masterclass/11 - VALUE BET GUIDELINE|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/03-Solver|03-Solver]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]] · [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]] · [[theory/11-Value-Bet-Masterclass/08-Referencias|08-Referencias]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]]
 
 **Outros módulos:**
 
 - [[theory/09-BET-CHECK-BET/README|09-BET-CHECK-BET · README]]
 - [[theory/09-BET-CHECK-BET/05-Regras-Consolidadas|09-BET-CHECK-BET · 05-Regras-Consolidadas]]
-- [[theory/10-MULTIWAY-POT/01-Guideline|10-MULTIWAY-POT · 01-Guideline]]
+- [[theory/10-MULTIWAY-POT/10 - MULTIWAY POT GUIDELINE|10-MULTIWAY-POT · 01-Guideline]]
 
 <!-- graphify-links:end -->

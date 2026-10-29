@@ -148,7 +148,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/12-RETA-FINAL/01-Guideline|01-Guideline]]
+- [[theory/12-RETA-FINAL/12 - RETA FINAL GUIDELINE|01-Guideline]]
 - [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]]
 - [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
 - [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]]

@@ -488,7 +488,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Outros módulos:**
 
-- [[theory/12-RETA-FINAL/01-Guideline|12-RETA-FINAL · 01-Guideline]]
+- [[theory/12-RETA-FINAL/12 - RETA FINAL GUIDELINE|12-RETA-FINAL · 01-Guideline]]
 - [[theory/12-RETA-FINAL/03-Solver|12-RETA-FINAL · 03-Solver]]
 
 <!-- graphify-links:end -->

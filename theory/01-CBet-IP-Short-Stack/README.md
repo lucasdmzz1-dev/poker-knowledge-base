@@ -247,7 +247,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/01-CBet-IP-Short-Stack/01-Guideline|01-Guideline]]
+- [[theory/01-CBet-IP-Short-Stack/01 - CBET IP SHORT GUIDELINE|01-Guideline]]
 - [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]]
 - [[theory/01-CBet-IP-Short-Stack/03-Solver|03-Solver]]
 - [[theory/01-CBet-IP-Short-Stack/04-Exercicios|04-Exercicios]]

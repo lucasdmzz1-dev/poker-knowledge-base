@@ -34,6 +34,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
 
-**Mesma pasta:** [[theory/11-Value-Bet-Masterclass/01-Guideline|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]] · [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]] · [[theory/11-Value-Bet-Masterclass/08-Referencias|08-Referencias]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]]
+**Mesma pasta:** [[theory/11-Value-Bet-Masterclass/11 - VALUE BET GUIDELINE|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]] · [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]] · [[theory/11-Value-Bet-Masterclass/08-Referencias|08-Referencias]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]]
 
 <!-- graphify-links:end -->

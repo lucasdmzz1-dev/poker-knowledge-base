@@ -116,7 +116,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|01-Guideline]]
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/04 - THIRD BARREL GUIDELINE|01-Guideline]]
 - [[theory/04-Third-Barrel-e-vs-Third-Barrel/02-VideoAulas|02-VideoAulas]]
 - [[theory/04-Third-Barrel-e-vs-Third-Barrel/03-Solver|03-Solver]]
 - [[theory/04-Third-Barrel-e-vs-Third-Barrel/04-Exercicios|04-Exercicios]]

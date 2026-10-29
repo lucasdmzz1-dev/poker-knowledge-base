@@ -72,7 +72,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/02-CBet-IP-40bb/01-Guideline|01-Guideline]]
+- [[theory/02-CBet-IP-40bb/02 - CBET IP 40BB GUIDELINE|01-Guideline]]
 - [[theory/02-CBet-IP-40bb/02-VideoAulas|02-VideoAulas]]
 - [[theory/02-CBet-IP-40bb/03-Solver|03-Solver]]
 - [[theory/02-CBet-IP-40bb/04-Exercicios|04-Exercicios]]
@@ -84,7 +84,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Outros módulos:**
 
-- [[theory/03-Second-Barrel-IP/01-Guideline|03-Second-Barrel-IP · 01-Guideline]]
-- [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|04-Third-Barrel-e-vs-Third-Barrel · 01-Guideline]]
+- [[theory/03-Second-Barrel-IP/03 - SECOND BARREL IP GUIDELINE|03-Second-Barrel-IP · 01-Guideline]]
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/04 - THIRD BARREL GUIDELINE|04-Third-Barrel-e-vs-Third-Barrel · 01-Guideline]]
 
 <!-- graphify-links:end -->

@@ -239,6 +239,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Outros módulos:**
 
-- [[theory/08-3BET-POT/01-Guideline|08-3BET-POT · 01-Guideline]]
+- [[theory/08-3BET-POT/08 - 3BET POT GUIDELINE|08-3BET-POT · 01-Guideline]]
 
 <!-- graphify-links:end -->

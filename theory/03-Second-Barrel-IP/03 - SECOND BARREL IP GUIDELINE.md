@@ -273,6 +273,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 - [[theory/02-CBet-IP-40bb/README|02-CBet-IP-40bb · README]]
 - [[theory/04-Third-Barrel-e-vs-Third-Barrel/05-Regras-Consolidadas|04-Third-Barrel-e-vs-Third-Barrel · 05-Regras-Consolidadas]]
-- [[theory/04-Third-Barrel-e-vs-Third-Barrel/01-Guideline|04-Third-Barrel-e-vs-Third-Barrel · 01-Guideline]]
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/04 - THIRD BARREL GUIDELINE|04-Third-Barrel-e-vs-Third-Barrel · 01-Guideline]]
 
 <!-- graphify-links:end -->

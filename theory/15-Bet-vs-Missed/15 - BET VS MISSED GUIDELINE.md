@@ -389,7 +389,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Outros módulos:**
 
-- [[theory/14-Probe-Turn/01-Guideline|14-Probe-Turn · 01-Guideline]]
+- [[theory/14-Probe-Turn/14 - PROBE TURN GUIDELINE|14-Probe-Turn · 01-Guideline]]
 - [[theory/14-Probe-Turn/README|14-Probe-Turn · README]]
 
 <!-- graphify-links:end -->

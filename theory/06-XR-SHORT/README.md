@@ -134,7 +134,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/06-XR-SHORT/01-Guideline|01-Guideline]]
+- [[theory/06-XR-SHORT/06 - XR SHORT GUIDELINE|01-Guideline]]
 - [[theory/06-XR-SHORT/02-VideoAulas|02-VideoAulas]]
 - [[theory/06-XR-SHORT/03-Solver|03-Solver]]
 - [[theory/06-XR-SHORT/04-Exercicios|04-Exercicios]]

@@ -44,7 +44,7 @@ Ainda não existem módulos próprios de pré-flop para o torneio em geral (RFI/
 | Arquivo | Função | Convenção |
 |---|---|---|
 | `README.md` | Visão geral | Contexto, objetivo, conceito central, estrutura, resultado esperado, status |
-| `01-Guideline.md` | Estratégia oficial | Por textura de board ou por posição; cada bloco com size, estratégia e justificativa |
+| `NN - TEMA GUIDELINE.md` (ex.: `01 - CBET IP SHORT GUIDELINE.md`; no `_TEMPLATE` continua `01-Guideline.md`) | Estratégia oficial | Por textura de board ou por posição; cada bloco com size, estratégia e justificativa |
 | `02-VideoAulas.md` | Conteúdo das aulas | Explicação conceitual em prosa, com o "por quê" |
 | `03-Solver.md` | Validação por solver | Por board: valor, bluff, call, com combos reais de exemplo |
 | `04-Exercicios.md` | Prática | Contexto, objetivo, exercícios com Pergunta e Correção |

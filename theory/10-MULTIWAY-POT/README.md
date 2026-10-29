@@ -118,7 +118,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/10-MULTIWAY-POT/01-Guideline|01-Guideline]]
+- [[theory/10-MULTIWAY-POT/10 - MULTIWAY POT GUIDELINE|01-Guideline]]
 - [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]]
 - [[theory/10-MULTIWAY-POT/03-Solver|03-Solver]]
 - [[theory/10-MULTIWAY-POT/04-Exercicios|04-Exercicios]]

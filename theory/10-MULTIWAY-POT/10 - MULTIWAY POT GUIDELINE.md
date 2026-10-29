@@ -162,6 +162,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 **Outros módulos:**
 
 - [[theory/11-Value-Bet-Masterclass/02-VideoAulas|11-Value-Bet-Masterclass · 02-VideoAulas]]
-- [[theory/11-Value-Bet-Masterclass/01-Guideline|11-Value-Bet-Masterclass · 01-Guideline]]
+- [[theory/11-Value-Bet-Masterclass/11 - VALUE BET GUIDELINE|11-Value-Bet-Masterclass · 01-Guideline]]
 
 <!-- graphify-links:end -->

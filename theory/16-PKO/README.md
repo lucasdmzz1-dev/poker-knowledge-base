@@ -115,7 +115,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Nesta pasta:**
 
-- [[theory/16-PKO/01-Guideline|01-Guideline]]
+- [[theory/16-PKO/16 - PKO GUIDELINE|01-Guideline]]
 - [[theory/16-PKO/02-VideoAulas|02-VideoAulas]]
 - [[theory/16-PKO/03-Solver|03-Solver]]
 - [[theory/16-PKO/04-Exercicios|04-Exercicios]]
