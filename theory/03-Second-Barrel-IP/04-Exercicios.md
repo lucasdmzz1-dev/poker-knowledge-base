@@ -505,6 +505,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/03-Second-Barrel-IP/01-Guideline|theory/03-Second-Barrel-IP]]
 
-**Relacionadas no mesmo módulo:** [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/03-Solver|03-Solver]] · [[theory/03-Second-Barrel-IP/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+**Mesma pasta:** [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/03-Solver|03-Solver]] · [[theory/03-Second-Barrel-IP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/03-Second-Barrel-IP/06-Pendencias|06-Pendencias]] · [[theory/03-Second-Barrel-IP/07-Changelog|07-Changelog]] · [[theory/03-Second-Barrel-IP/08-Referencias|08-Referencias]] · [[theory/03-Second-Barrel-IP/09-Decisoes|09-Decisoes]] · [[theory/03-Second-Barrel-IP/README|README]]
 
 <!-- graphify-links:end -->

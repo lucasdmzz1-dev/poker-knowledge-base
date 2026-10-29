@@ -64,6 +64,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/16-PKO/README|theory/16-PKO]]
 
-**Relacionadas no mesmo módulo:** [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/03-Solver|03-Solver]] · [[theory/16-PKO/08-Referencias|08-Referencias]] · [[theory/16-PKO/04-Exercicios|04-Exercicios]] · [[theory/16-PKO/tools/pko/pko-maos-dicionario|pko-maos-dicionario]]
+**Mesma pasta:** [[theory/16-PKO/01-Guideline|01-Guideline]] · [[theory/16-PKO/03-Solver|03-Solver]] · [[theory/16-PKO/04-Exercicios|04-Exercicios]] · [[theory/16-PKO/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/16-PKO/06-Pendencias|06-Pendencias]] · [[theory/16-PKO/07-Changelog|07-Changelog]] · [[theory/16-PKO/08-Referencias|08-Referencias]] · [[theory/16-PKO/09-Decisoes|09-Decisoes]] · [[theory/16-PKO/CLAUDE|CLAUDE]]
 
 <!-- graphify-links:end -->

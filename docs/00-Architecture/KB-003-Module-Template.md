@@ -939,7 +939,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[README|Início]]
 
-**Relacionadas no mesmo módulo:** [[docs/00-Architecture/KB-002-Domain-Model|KB-002-Domain-Model]] · [[docs/00-Architecture/KB-000-Architecture|KB-000-Architecture]] · [[docs/00-Architecture/KB-001-Project-Architecture|KB-001-Project-Architecture]]
+**Mesma pasta:** [[docs/00-Architecture/KB-000-Architecture|KB-000-Architecture]] · [[docs/00-Architecture/KB-001-Project-Architecture|KB-001-Project-Architecture]] · [[docs/00-Architecture/KB-002-Domain-Model|KB-002-Domain-Model]]
 
 **Outros módulos:**
 

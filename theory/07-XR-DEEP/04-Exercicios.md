@@ -235,6 +235,6 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/07-XR-DEEP/README|theory/07-XR-DEEP]]
 
-**Relacionadas no mesmo módulo:** [[theory/07-XR-DEEP/03-Solver|03-Solver]] · [[theory/07-XR-DEEP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/07-XR-DEEP/07-Changelog|07-Changelog]] · [[theory/07-XR-DEEP/02-VideoAulas|02-VideoAulas]]
+**Mesma pasta:** [[theory/07-XR-DEEP/01-Guideline|01-Guideline]] · [[theory/07-XR-DEEP/02-VideoAulas|02-VideoAulas]] · [[theory/07-XR-DEEP/03-Solver|03-Solver]] · [[theory/07-XR-DEEP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/07-XR-DEEP/06-Pendencias|06-Pendencias]] · [[theory/07-XR-DEEP/07-Changelog|07-Changelog]] · [[theory/07-XR-DEEP/08-Referencias|08-Referencias]] · [[theory/07-XR-DEEP/09-Decisoes|09-Decisoes]]
 
 <!-- graphify-links:end -->

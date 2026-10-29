@@ -156,7 +156,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[README|Início]]
 
-**Relacionadas no mesmo módulo:** [[docs/00-Architecture/KB-001-Project-Architecture|KB-001-Project-Architecture]] · [[docs/00-Architecture/KB-003-Module-Template|KB-003-Module-Template]]
+**Mesma pasta:** [[docs/00-Architecture/KB-001-Project-Architecture|KB-001-Project-Architecture]] · [[docs/00-Architecture/KB-002-Domain-Model|KB-002-Domain-Model]] · [[docs/00-Architecture/KB-003-Module-Template|KB-003-Module-Template]]
 
 **Outros módulos:**
 

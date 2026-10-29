@@ -180,7 +180,7 @@ _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na pr
 
 **Pasta:** [[theory/02-CBet-IP-40bb/README|theory/02-CBet-IP-40bb]]
 
-**Relacionadas no mesmo módulo:** [[theory/02-CBet-IP-40bb/02-VideoAulas|02-VideoAulas]] · [[theory/02-CBet-IP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/02-CBet-IP-40bb/03-Solver|03-Solver]] · [[theory/02-CBet-IP-40bb/06-Pendencias|06-Pendencias]] · [[theory/02-CBet-IP-40bb/04-Exercicios|04-Exercicios]]
+**Mesma pasta:** [[theory/02-CBet-IP-40bb/02-VideoAulas|02-VideoAulas]] · [[theory/02-CBet-IP-40bb/03-Solver|03-Solver]] · [[theory/02-CBet-IP-40bb/04-Exercicios|04-Exercicios]] · [[theory/02-CBet-IP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/02-CBet-IP-40bb/06-Pendencias|06-Pendencias]] · [[theory/02-CBet-IP-40bb/07-Changelog|07-Changelog]] · [[theory/02-CBet-IP-40bb/08-Referencias|08-Referencias]] · [[theory/02-CBet-IP-40bb/09-Decisoes|09-Decisoes]]
 
 **Outros módulos:**
 
