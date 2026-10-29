@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/02-cbet-ip-40bb
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/40bb
+  - tipo/solver
+---
+
 # Solver – C-Bet IP 40bb
 
 > Este documento registra apenas as conclusões obtidas através do Solver.

@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/nota
+---
+
 # Regras vivas: BTN contra 1 open em PKO (4BET Trainer)
 
 Versão atual: **v2** (27/10/2026). Este arquivo é a memória de trabalho do Claude para esse estudo. Atualize-o ao fim de cada sessão.

@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/changelog
+---
+
 # Changelog — ICM e Risk Premium
 
 ---

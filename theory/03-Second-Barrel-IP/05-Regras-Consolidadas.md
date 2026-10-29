@@ -1,3 +1,15 @@
+---
+tags:
+  - modulo/03-second-barrel-ip
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - street/turn
+  - linha/cbet
+  - linha/second-barrel
+  - tipo/regras
+---
+
 # Regras Consolidadas – C-Bet IP + Second Barrel
 
 > Módulo de estudo Poker Knowledge Base

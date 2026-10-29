@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/pko
+  - tipo/ferramenta
+---
+
 # Notas de PKO (fornecidas pelo usuário) e como entram no modelo
 
 ## 1. Valor do KO inicial por fase (PKO 50%), em fração do stack inicial (SI)

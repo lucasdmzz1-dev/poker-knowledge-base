@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/pendencias
+---
+
 # Pendências – ICM e Risk Premium
 
 > Módulo 13 — Poker Knowledge Base

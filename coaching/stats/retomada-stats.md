@@ -1,3 +1,8 @@
+---
+tags:
+  - tema/stats
+---
+
 # Retomada do estudo de stats (painel de evolução e call open contra o solver)
 
 Atualizado em 28/10/2026 (inclui o estudo de RFI BTN 15bb). Leia este arquivo primeiro quando o assunto for stats, HUD, leaks ou evolução.

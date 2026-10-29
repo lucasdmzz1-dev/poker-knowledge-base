@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/10-multiway-pot
+  - spot/multiway
+  - street/flop
+  - street/turn
+  - stack/40bb
+  - tipo/pendencias
+---
+
 # Pendências – Multiway Pot
 
 > Módulo 10 — Poker Knowledge Base

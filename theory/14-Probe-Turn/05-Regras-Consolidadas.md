@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/14-probe-turn
+  - spot/srp
+  - posicao/oop
+  - street/turn
+  - linha/probe
+  - stack/40bb
+  - tipo/regras
+---
+
 # Regras Consolidadas – Probe Turn
 
 > Este documento reúne apenas as regras finais consolidadas durante o estudo do módulo.

@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/02-cbet-ip-40bb
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/40bb
+  - tipo/decisoes
+---
+
 # Decisões Consolidadas
 
 > Este documento registra todas as decisões consolidadas durante o estudo deste módulo.

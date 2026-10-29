@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/regras
+---
+
 # Regras Consolidadas – ICM e Risk Premium
 
 > Este documento reúne apenas as regras finais consolidadas durante o estudo do módulo.

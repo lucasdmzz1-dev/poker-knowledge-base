@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/arquitetura
+---
+
 # KB-000 — Poker Knowledge Base Architecture
 
 **Version:** 1.0  

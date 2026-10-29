@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/01-cbet-ip-short-stack
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/short
+  - tipo/solver
+---
+
 # Solver – C-Bet IP Short Stack
 
 > Este documento registra apenas as conclusões obtidas através do Solver utilizadas na construção da estratégia.

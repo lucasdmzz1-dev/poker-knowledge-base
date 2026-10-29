@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/guideline
+---
+
 # Guideline — PKO: BTN contra 1 open
 
 > **Módulo:** 16 – PKO (versão 1.0)

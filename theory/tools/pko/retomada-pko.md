@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/pko
+  - tipo/ferramenta
+---
+
 # Retomada do estudo de PKO (resumo para uma conversa nova)
 
 Atualizado em 27 e 28/10/2026. Leia este arquivo primeiro, depois `regras-vivas-pko-btn.md`.

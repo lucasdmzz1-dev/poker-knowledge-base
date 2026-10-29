@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/07-xr-deep
+  - spot/srp
+  - posicao/oop
+  - street/flop
+  - linha/check-raise
+  - stack/deep
+  - tipo/referencias
+---
+
 # 08-Referencias.md
 # XR Deep Stack
 

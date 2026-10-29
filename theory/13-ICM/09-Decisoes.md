@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/decisoes
+---
+
 # Decisões – ICM e Risk Premium
 
 > Módulo 13 — Poker Knowledge Base

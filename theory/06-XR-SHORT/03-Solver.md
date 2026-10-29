@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/06-xr-short
+  - spot/srp
+  - posicao/oop
+  - street/flop
+  - linha/check-raise
+  - stack/short
+  - tipo/solver
+---
+
 # Solver — XR Short Stack
 
 ## Módulo 06 — XR Short Stack

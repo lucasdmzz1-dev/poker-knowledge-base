@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/pko
+  - tipo/ferramenta
+---
+
 # Regras vivas: BTN contra 1 open em PKO (4BET Trainer)
 
 Versão atual: **v3** (27/10/2026, testada em 100 mãos; ver seção 8 para o que mudar na v3.1). Este arquivo é a memória de trabalho do Claude para esse estudo. Atualize-o ao fim de cada sessão.

@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/stats
+  - tema/ranges
+---
+
 # Dicionário dos dados das árvores de RFI
 
 Cada situação de RFI guarda as árvores lidas em dois lugares:
