@@ -6,56 +6,43 @@ tags:
 
 # RFI BTN 15bb (Vanilla)
 
-Situação: BTN com 15bb, todos os jogadores à frente foldaram. Lê-se a frequência de fold, raise 2bb e all-in do BTN.
+Situação: abertura (RFI) do BTN com 15bb, sem bounty, lida no solver do 4BET Trainer (aba SOLVER).
 
-## Filtros do solver (fixos nesta situação)
-
-- Tipo de torneio: Vanilla
-- Fase: Early (filtro atual; Mid ainda não lida)
+## Filtros usados
+- Tipo: Vanilla
+- Fase: Early
 - Stacks: Asymmetric
-- Reta final: nenhuma marcada
-- Tamanho do field: 20 a 79808 (faixa completa)
-- Players left: 2 a 18948 (faixa completa)
-- % players left: 0% a 100%
-- Avg stack da mesa: 4 a 310 bb (faixa completa)
-- Busca: "BTN 15" (aceita stacks de ±1 a ±4 bb)
+- Busca: "BTN 15" (aceita ±1 a ±4 bb; as árvores lidas trazem stacks de hero entre 14 e 16 bb)
 
-## Como ler cada árvore
+Os filtros ficam fixos nesta situação. Vanilla não tem bounty, então nenhum campo de bounty é gravado.
 
-1. Abrir a árvore pela lista.
-2. Clicar só no rótulo "BTN" do card no cabeçalho, nunca em fold, raise ou all-in (isso leva para a ação do SB).
-3. Ler fold, raise 2bb e all-in na faixa "BTN RANGE".
-4. Voltar à lista pelo botão HHs (não o de compartilhar).
+## Situação atual
+5 árvores lidas, todas com os stacks dos 9 assentos (UTG a BB) registrados e a grade 169 conferida contra os totais. Campos sem leitura (SI e ante) ficam "pendente" nas fichas, porque o cabeçalho não os mostra.
+
+| Árvore | Field | Left | Média (bb) | Stack BTN | SB | BB | Fold | Raise 2bb | All-in |
+|---|---|---|---|---|---|---|---|---|---|
+| #4772 | 100% | 157 | 54,8 | 14,4 | 60,5 | 49,9 | 59,9% | 19,9% | 20,3% |
+| #3336 | 60% | 116 | 36,3 | 15,9 | 21,4 | 26,6 | 60,6% | 26,3% | 13,1% |
+| #10057 | 76% | 409 | 33,0 | 14,0 | 10,0 | 29,4 | 63,0% | 11,7% | 25,2% |
+| #3411 | 81% | 306 | 53,2 | 16,2 | 80,3 | 15,4 | 62,6% | 19,2% | 18,3% |
+| #7211 | 52% | 124 | 49,1 | 16,3 | 28,9 | 50,4 | 59,4% | 30,0% | 10,7% |
+
+Média das 5: open total (raise + all-in) de 38,9%, raise 2bb de 21,4% e all-in de 17,5%. Variação do open total de 36,9% (#10057) a 40,7% (#7211).
 
 ## Leituras
+- O stack do BTN varia pouco (14 a 16,3 bb), mas o do SB e do BB varia muito entre as árvores (SB de 10 a 80 bb; BB de 15 a 50 bb). Por isso o range do BTN deve ser lido junto com os stacks dos blinds, não só com o 15bb.
+- O all-in é a ação que mais muda: 10,7% em #7211 e 25,2% em #10057. Nas árvores com SB e BB curtos o jam sobe.
+- RP do BTN contra SB e BB fica entre 0,4 e 2,9%. A exceção é #3336, com RP mais alto (2,9% contra SB e BB).
 
-| Árvore | BTN (bb) | Restantes | Média mesa (bb) | Fold | Raise 2bb | All-in | Arquivo |
-|---|---|---|---|---|---|---|---|
-| #4772 | 14,4 | 157 (100%) | 54,8 | 59,9% | 19,9% | 20,3% | arvores/4772.md |
-| #3336 | 15,9 | 116 (60%) | 36,3 | 60,6% | 26,3% | 13,1% | arvores/3336.md |
-| #10057 | 14,0 | 409 (76%) | 33,0 | 63,0% | 11,7% | 25,2% | arvores/10057.md |
-| #3411 | 16,3 | 306 (81%) | 53,2 | 62,6% | 19,2% | 18,3% | arvores/3411.md |
-| #7211 | 16,3 | 124 (52%) | 49,3 | 59,4% | 30,0% | 10,7% | arvores/7211.md |
+## Pendências
+- SI e ante não aparecem no cabeçalho das árvores: "pendente".
+- #3336, #10057 e #3411 têm UTG, UTG1 ou MP sem jogador (menos de 9 assentos): gravados como null.
+- Stack do BB no anel da mesa pode ser menor que no cabeçalho (ex.: #7211, 49,3 no anel e 50,4 no cabeçalho). Gravado o valor do cabeçalho e a nota em obs.
+- Ampliar para 15 a 20 árvores só com novo pedido.
 
-Média das 5 árvores: open total de 38,9% (de 37,0% a 40,6%), raise 2bb de 21,4% e all-in de 17,5%. O open total varia pouco; o que muda é a divisão entre raise e all-in (de 12/25 a 30/11). Com 5 árvores e sem os stacks dos outros assentos, ainda não dá para dizer o que move essa divisão.
-
-Dados para análise: `dados/arvores.json` (campos em `../../../../dicionario-arvores-rfi.md`).
-
-## Próximos passos
-1. **Completar as 5 árvores já lidas** (reabrir pelo `#id`), seguindo `../../../../playbook-coleta-rfi.md`:
-   - stacks de UTG, UTG1, MP, LJ, HJ, CO, SB e BB;
-   - SI, ante e pote antes do BTN;
-   - RP do BTN contra SB e BB (e deles contra o BTN);
-   - classes de mão (raise e all-in) e, se der, a grade de 169;
-   - na primeira árvore, registrar a cor do all-in na grade.
-2. **Ampliar a amostra** para ~15 a 20 árvores na mesma busca, sem repetir árvore, variando a média da mesa e os stacks de SB e BB.
-3. **#4287** (BTN 17bb): fora da faixa de 14 a 16,3bb; ler só se a amostra ficar curta.
-4. **Depois desta situação:** Mid (mesmo stack) e BTN com 20bb e 25bb, para comparar com o HUD (RFI do BTN com 15–25bb: 33%; open jam: 5,5%).
-
-Perguntas que a coleta deve responder:
-- O all-in sobe quando SB e BB são curtos (menos fold equity no raise) ou quando cobrem o BTN?
-- A média da mesa e a fase mudam o open total ou só a divisão entre raise e all-in?
-- Quais classes de mão trocam de raise para all-in?
+## Arquivos
+- `arvores/<id>.md`: ficha de cada árvore (torneio, mesa, RP, range, classes e grade).
+- `dados/arvores.json`: os 5 registros no padrão de [dicionario-arvores-rfi.md](../../../../dicionario-arvores-rfi.md).
 
 <!-- graphify-links:start -->
 
@@ -66,13 +53,5 @@ Perguntas que a coleta deve responder:
 _Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
 
 **Pasta:** [[coaching/stats/estudos-de-ranges/README|coaching/stats/estudos-de-ranges]]
-
-**Nesta pasta:**
-
-- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/arvores/10057|arvores/10057]]
-- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/arvores/3336|arvores/3336]]
-- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/arvores/3411|arvores/3411]]
-- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/arvores/4772|arvores/4772]]
-- [[coaching/stats/estudos-de-ranges/vanilla/rfi/btn/15bb/arvores/7211|arvores/7211]]
 
 <!-- graphify-links:end -->
