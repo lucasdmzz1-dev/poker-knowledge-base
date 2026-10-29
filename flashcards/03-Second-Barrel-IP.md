@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — Second Barrel IP
 
 #flashcards/03-second-barrel-ip

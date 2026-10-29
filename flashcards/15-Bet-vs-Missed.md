@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — Bet vs Missed C-Bet
 
 #flashcards/15-bet-vs-missed

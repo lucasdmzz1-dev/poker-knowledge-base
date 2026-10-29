@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — Reta Final
 
 #flashcards/12-reta-final

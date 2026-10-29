@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — C-Bet IP 40bb
 
 #flashcards/02-cbet-ip-40bb

@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — XR Deep Stack
 
 #flashcards/07-xr-deep

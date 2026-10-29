@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — Multiway Pot
 
 #flashcards/10-multiway-pot

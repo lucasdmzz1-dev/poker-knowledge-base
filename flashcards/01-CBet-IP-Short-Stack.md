@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — C-Bet IP Short Stack
 
 #flashcards/01-cbet-ip-short-stack

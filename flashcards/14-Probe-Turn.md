@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — Probe Turn
 
 #flashcards/14-probe-turn

@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — ICM e Risk Premium
 
 #flashcards/13-icm

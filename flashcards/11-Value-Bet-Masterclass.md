@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — Value Bet Masterclass
 
 #flashcards/11-value-bet-masterclass

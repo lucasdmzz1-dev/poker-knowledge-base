@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — C-Bet OOP 40bb
 
 #flashcards/05-cbet-oop-40bb

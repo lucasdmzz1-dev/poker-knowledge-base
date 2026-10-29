@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — XR Short Stack
 
 #flashcards/06-xr-short

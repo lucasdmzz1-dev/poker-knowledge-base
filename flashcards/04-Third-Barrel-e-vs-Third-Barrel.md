@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — Third Barrel e Vs Third Barrel
 
 #flashcards/04-third-barrel-e-vs-third-barrel

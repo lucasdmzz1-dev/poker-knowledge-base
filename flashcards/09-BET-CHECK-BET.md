@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — BET CHECK BET
 
 #flashcards/09-bet-check-bet

@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/flashcards
+---
+
 # Flashcards — 3Bet Pot
 
 #flashcards/08-3bet-pot
