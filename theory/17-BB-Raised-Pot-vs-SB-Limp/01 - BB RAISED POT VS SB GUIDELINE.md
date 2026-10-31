@@ -188,3 +188,58 @@ Regras gerais do IMG1:
 - Módulo 02: boards low em split e monotone e dobrado em B25.
 - Módulo 14: B40 com sentido diferente.
 - Módulos 12 e 13: pré-flop e blind war (ver `06-Pendencias.md`).
+
+---
+
+# Resumo da aula (formato Discord)
+
+Texto pronto para postar, dividido em duas mensagens de até 2000 caracteres. Os títulos em negrito usam `**`.
+
+## Mensagem 1
+
+**BB raised pot vs SB limp (40bb deep)**
+
+**Spot**
+O SB faz limp, o BB (você) faz raise de 3.5bb e o SB paga. Você está em posição no flop.
+
+**Ideia central**
+Quase ninguém estuda esse pote, e a maioria aposta range em size baixo. O range de BB é polarizado: topo e lixo, pouca mão média. Isso impede de apostar range em size médio, como um range de EP faz contra o BB.
+O limp-call do SB defende pouco offsuit baixo (7-3, 7-5, 8-6, T-6 e 9-6 não entram). A parte offsuit começa em 8x, então carta de valor 8 ou mais no board significa que o SB acerta par.
+
+**Thin value define o size**
+Thin value é uma escala: B25 é o máximo, B40 o intermediário e B70 o mínimo. Quanto menos thin value o board permite, maior o size e menor a frequência.
+- Com thin value: B25
+- Sem thin value: B70
+- O que sobrar: B40
+
+**Como dividir o range (split)**
+Com size alto, as mãos fortes apostam mais e as fracas menos. Execução com RNG: no bucket de 75%, de 0 a 75 aposta e de 76 em diante dá check.
+- B70: 75% overpair e top pair forte; 50% dois pares, top pairs e melhores draws; 25% o resto; 0% underpair
+- B40: 75% overpair, sets, dois pares, top pair forte e FDs; 50% top pairs e melhores draws; 25% o resto; 0% underpair
+- B25: 100% overpair e sets (menos o top set); 75% dois pares, top pair e bons draws; 50% o resto
+- Top set: no B70 vai no menor bucket possível, porque bloqueia quem paga
+
+## Mensagem 2
+
+**Size por tipo de board**
+- K-T-Q (triple broadway): B70
+- K-J-4 (dois broadways): B40
+- J-T-8 (sequência): B40, porque o SB tem sequências offsuit
+- 9-7-5 (low conectado): B70
+- 8-4-2 (low desconectado): B40
+- Semi-conectado com flush draw (Q-8-7, J-7-6, K-9-8): B70
+- High card: duas cartas abaixo do 8, B25 (Q-6-3, a 66–75%); duas de valor 8 ou mais, B40 (Q-9-4)
+- A high: seco é range B25; carregado é split B25
+- Dobrado seco: range B25
+- Dobrado conectado: split, com trinca, full e quadra em 75% e o resto em 50%
+- Monotone: B25, buckets 25/50/75, frequência geral de cerca de 50%
+
+**Flush draw e execução**
+Com flush draw no board, a mão com carta do naipe aposta mais e a sem carta dá check. Sem flush draw, um RNG de 0 a 50 serve. No pré-flop, randomizar é opcional.
+
+**Turn**
+- Flop em check-check: o size do turn é sempre alto. B70 se for apostar todos os top pairs, B100 ou mais se for só top pair com bom kicker
+- Flop apostado: blank é geométrico, e carta que conecta tende a B70
+
+**Stacks**
+Por ora a mesma estratégia vale para outros stacks. O coach vai trazer ajustes pontuais para 20bb ou menos numa aula futura.
