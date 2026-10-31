@@ -77,6 +77,7 @@ Structured rules for software use will be stored separately in the Decision Engi
 | `09-BET-CHECK-BET` | Bet-Check-Bet |
 | `10-MULTIWAY-POT` | Multiway Pot |
 | `11-Value-Bet-Masterclass` | Value Bet Masterclass (cross-module) |
+| `17-Blind-War-BB-vs-SB` | Blind War BB vs SB (SB limpa, BB raise) |
 | `_TEMPLATE` | Template for new modules |
 
 ---
