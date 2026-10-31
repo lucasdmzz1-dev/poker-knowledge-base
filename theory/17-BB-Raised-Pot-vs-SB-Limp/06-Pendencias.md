@@ -218,3 +218,11 @@ Pela regra do `MAPA-PRE-POS.md`, o módulo 12 (Parte 7) e o 13 (Regras 28 a 30) 
 `theory/CLAUDE.md` e `theory/MAPA-PRE-POS.md` não listam o módulo 17. Só o `theory/README.md` foi atualizado.
 
 **Status:** aberta.
+
+---
+
+# 29. T-8-4
+
+A aula não cita esse board. Pela regra "duas cartas de valor 8 ou mais = B40" (T e 8) e pelo Q-8-4, que é B40, a leitura é B40 (inferência). Não há sequência possível com duas cartas. O T-7-4 com flush draw é B40 e o T-8-5 com flush draw é B70, então, se o T-8-4 tiver flush draw, ele pode puxar para B70 (inferência). Os naipes não foram definidos.
+
+**Status:** aberta. Pergunta ao coach: o T-8-4 é B40 ou B70, com e sem flush draw?

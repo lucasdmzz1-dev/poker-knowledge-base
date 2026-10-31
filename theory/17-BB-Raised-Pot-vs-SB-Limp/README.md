@@ -1,7 +1,7 @@
 # BB Raised Pot vs SB — Módulo 17
 
 **Module ID:** `MODULE_BB_RAISED_POT_VS_SB`
-**Versão:** 1.1
+**Versão:** 1.3
 **Status:** Partially consolidated
 **Confidence:** medium
 
