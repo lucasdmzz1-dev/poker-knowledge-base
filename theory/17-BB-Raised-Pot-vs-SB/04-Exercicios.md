@@ -1,4 +1,4 @@
-# Exercícios — Blind War BB vs SB
+# Exercícios — BB Raised Pot vs SB
 
 > Módulo 17. Cada exercício usa um board citado na aula. Confira as cartas antes de responder, porque a transcrição trouxe nomes imprecisos.
 

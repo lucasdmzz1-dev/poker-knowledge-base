@@ -1,4 +1,4 @@
-# VideoAulas — Blind War BB vs SB
+# VideoAulas — BB Raised Pot vs SB
 
 > Módulo 17. Resumo em prosa da aula de 31/10/2026, escrito com as próprias palavras. A transcrição fica fora do repositório (ver `09-Decisoes.md`).
 

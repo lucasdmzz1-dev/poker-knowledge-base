@@ -1,4 +1,4 @@
-# Referências — Blind War BB vs SB
+# Referências — BB Raised Pot vs SB
 
 ---
 

@@ -1,6 +1,6 @@
-# Blind War BB vs SB — Módulo 17
+# BB Raised Pot vs SB — Módulo 17
 
-**Module ID:** `MODULE_BLIND_WAR_BB_VS_SB`
+**Module ID:** `MODULE_BB_RAISED_POT_VS_SB`
 **Versão:** 1.0
 **Status:** Partially consolidated
 **Confidence:** medium

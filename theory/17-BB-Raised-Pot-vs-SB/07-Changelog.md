@@ -1,4 +1,4 @@
-# Changelog — Blind War BB vs SB
+# Changelog — BB Raised Pot vs SB
 
 ## Versão 1.0 (31/10/2026)
 

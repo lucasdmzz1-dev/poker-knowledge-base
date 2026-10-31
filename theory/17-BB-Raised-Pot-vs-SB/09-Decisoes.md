@@ -1,4 +1,4 @@
-# Decisões — Blind War BB vs SB
+# Decisões — BB Raised Pot vs SB
 
 ---
 

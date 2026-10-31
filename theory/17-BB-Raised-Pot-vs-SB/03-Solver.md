@@ -1,4 +1,4 @@
-# Solver — Blind War BB vs SB
+# Solver — BB Raised Pot vs SB
 
 > Módulo 17.
 

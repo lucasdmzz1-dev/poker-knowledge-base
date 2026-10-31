@@ -1,4 +1,4 @@
-# Regras Consolidadas — Blind War BB vs SB
+# Regras Consolidadas — BB Raised Pot vs SB
 
 > Módulo 17. Regras numeradas. Fonte: aula de 31/10/2026, salvo quando indicado.
 

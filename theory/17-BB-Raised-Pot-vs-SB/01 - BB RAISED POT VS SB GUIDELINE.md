@@ -1,6 +1,6 @@
-# Guideline — Blind War BB vs SB
+# Guideline — BB Raised Pot vs SB
 
-> **Módulo:** 17 — Blind War BB vs SB
+> **Módulo:** 17 — BB Raised Pot vs SB
 
 ---
 

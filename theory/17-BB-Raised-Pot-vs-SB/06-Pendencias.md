@@ -1,4 +1,4 @@
-# Pendências — Blind War BB vs SB
+# Pendências — BB Raised Pot vs SB
 
 > Módulo 17. Itens numerados.
 
