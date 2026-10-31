@@ -1,0 +1,23 @@
+# Changelog — BB Raised Pot vs SB
+
+## Versão 1.1 (31/10/2026)
+
+Fontes: aula (transcrição e SRT, conferidas), vídeo da aula, guideline em texto (TXT), IMG1 (10 boards) e IMG2 (tabela dos splits).
+
+- Contexto: 40bb deep e Hero em posição no flop (esclarecimento do autor do KB).
+- Guideline: tabelas de split B25, B40 e B70, utilização do size por tipo de board, critérios por board, monotone, dobrado conectado, execução com RNG, turn e guideline por board (IMG1, a confirmar).
+- Exercícios: as 8 mãos da atividade com boards conferidos no vídeo e 4 extras.
+- Regras: de 10 para 20 regras.
+- Correções à v1.0: o monotone e o dobrado conectado ficam em B25 (a v1.0 dava B70 ou B40 e B40); a posição deixa de ser pendência.
+- Pendências: itens 1 a 10 atualizados e 11 a 28 novos.
+- A pasta passou de `17-BB-Raised-Pot-vs-SB` para `17-BB-Raised-Pot-vs-SB-Limp`.
+
+## Versão 1.0 (31/10/2026)
+
+- Criação do módulo a partir do `_TEMPLATE`.
+- Fonte: aula de 31/10/2026 (transcrição em texto), resumida em prosa.
+- Regra base de size por thin value (B25, B40, B70).
+- Tabela de exceções por textura.
+- Divisão do B70 em buckets de 75%, 50% e 25%.
+- Exercícios com os boards citados na aula.
+- Pendências abertas para posição, stacks, nomes de carta e conflitos com os módulos 02 e 15.
