@@ -1,5 +1,9 @@
 # Changelog — BB Raised Pot vs SB
 
+## Versão 1.3 (31/10/2026)
+
+- Pendências: adicionado o item 29 (T-8-4), board que a aula não cita, com a leitura provisória marcada como inferência.
+
 ## Versão 1.2 (31/10/2026)
 
 - Guideline: adicionado o resumo da aula no formato do Discord, em duas mensagens de até 2000 caracteres.
