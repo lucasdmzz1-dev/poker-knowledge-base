@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poker KB</title>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-base="">
+<header id="nav"></header>
+<main class="wrap home">
+  <h1>O que você quer fazer hoje?</h1>
+  <div class="doors">
+    <a class="door" href="teoria/index.html"><span class="door-name">Teoria</span><span class="door-arrow" aria-hidden="true">›</span></a>
+    <a class="door" href="pratica/index.html"><span class="door-name">Prática</span><span class="door-arrow" aria-hidden="true">›</span></a>
+    <a class="door" href="analise/index.html"><span class="door-name">Análise</span><span class="door-arrow" aria-hidden="true">›</span></a>
+  </div>
+  <p class="resume"><a id="resume" href="teoria/bet-vs-missed.html">Continuar: Bet vs Missed C-Bet · Teoria ›</a></p>
+</main>
+<script src="assets/js/core.js"></script>
+<script>
+  PKB.renderNav("");
+  var last = PKB.store.get("pkb:last", null);
+  if (last && last.href) {
+    var a = document.getElementById("resume");
+    a.href = last.href;
+    a.textContent = "Continuar: " + last.label + " ›";
+  }
+</script>
+</body>
+</html>

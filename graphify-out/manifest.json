@@ -822,9 +822,9 @@
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/04-Exercicios.md": {
-    "mtime": 1793496530.9510124,
-    "seen": 1793501717.4778602,
-    "ast_hash": "cc5bcb138a43c715e7ba167185e1a7b9",
+    "mtime": 1793502404.975215,
+    "seen": 1793503250.912924,
+    "ast_hash": "f622670da3428dbf572af66871626e72",
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/05-Regras-Consolidadas.md": {
@@ -834,15 +834,15 @@
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/06-Pendencias.md": {
-    "mtime": 1793501702.4314394,
-    "seen": 1793501717.4778602,
-    "ast_hash": "330bc25eca26208469f48d512971ab66",
+    "mtime": 1793502345.901629,
+    "seen": 1793503250.912924,
+    "ast_hash": "28919b9d7524250e7334a33cd8ba5979",
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/07-Changelog.md": {
-    "mtime": 1793502181.031585,
-    "seen": 1793502190.103147,
-    "ast_hash": "99ceb3fa45d6838c1618457ff7811ffd",
+    "mtime": 1793502345.901629,
+    "seen": 1793503250.912924,
+    "ast_hash": "55540b845a8c11db7cfa6757ad4f9065",
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/08-Referencias.md": {
@@ -852,9 +852,9 @@
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/09-Decisoes.md": {
-    "mtime": 1793502181.030584,
-    "seen": 1793502190.103147,
-    "ast_hash": "13a330b717bac19dafd3a8ad7c083963",
+    "mtime": 1793502203.9838276,
+    "seen": 1793503250.912924,
+    "ast_hash": "336c2ebd29103e3f0bacf9f97cfd5d42",
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/README.md": {
@@ -1536,9 +1536,9 @@
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/12-Padroes.md": {
-    "mtime": 1793502181.030584,
-    "seen": 1793502190.103147,
-    "ast_hash": "bf526921d9061dcecebd095877349779",
+    "mtime": 1793502231.897737,
+    "seen": 1793503250.912924,
+    "ast_hash": "733a8a3ba171692a795420dffa9fbe3a",
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/01 - BB RAISED POT VS SB GUIDELINE.md": {
@@ -1599,6 +1599,60 @@
     "mtime": 1793496530.9709086,
     "seen": 1793501717.4778602,
     "ast_hash": "54c2862af9dfeafa493a9941f411d7dd",
+    "semantic_hash": ""
+  },
+  ".claude/launch.json": {
+    "mtime": 1793503181.952882,
+    "seen": 1793503250.912924,
+    "ast_hash": "e1eb1c36b4903e3180f5c39034f31434",
+    "semantic_hash": ""
+  },
+  "site/assets/js/core.js": {
+    "mtime": 1793503220.2652392,
+    "seen": 1793503250.912924,
+    "ast_hash": "f4fed09ba6c85f9316e08491dda524a8",
+    "semantic_hash": ""
+  },
+  "site/assets/js/data-mod15.js": {
+    "mtime": 1793503090.4723907,
+    "seen": 1793503250.912924,
+    "ast_hash": "772ee276f599ab371d6818f64c862162",
+    "semantic_hash": ""
+  },
+  "site/README.md": {
+    "mtime": 1793503226.0841434,
+    "seen": 1793503250.912924,
+    "ast_hash": "cb8be69f60f35267d8fcbcf84641afd3",
+    "semantic_hash": ""
+  },
+  "site/analise/index.html": {
+    "mtime": 1793503220.376017,
+    "seen": 1793503250.912924,
+    "ast_hash": "88189efd73d132c9832b3f8496fe6d92",
+    "semantic_hash": ""
+  },
+  "site/index.html": {
+    "mtime": 1793503131.3044848,
+    "seen": 1793503250.912924,
+    "ast_hash": "38746caf64842e6e93d48e46ea00f6d7",
+    "semantic_hash": ""
+  },
+  "site/pratica/index.html": {
+    "mtime": 1793503181.746197,
+    "seen": 1793503250.912924,
+    "ast_hash": "571701972020f6637aa5ef4a27cc3cfc",
+    "semantic_hash": ""
+  },
+  "site/teoria/bet-vs-missed.html": {
+    "mtime": 1793503149.768103,
+    "seen": 1793503250.912924,
+    "ast_hash": "ac0e0703a55aeeaf5a5f9e48244e4741",
+    "semantic_hash": ""
+  },
+  "site/teoria/index.html": {
+    "mtime": 1793503149.6868434,
+    "seen": 1793503250.912924,
+    "ast_hash": "4f7ce8d3890b420a9d5da73d0e7ff765",
     "semantic_hash": ""
   }
 }

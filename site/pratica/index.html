@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prática · Poker KB</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-base="../">
+<header id="nav"></header>
+<main class="wrap" id="app"></main>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/data-mod15.js"></script>
+<script>
+(function () {
+  var M = PKB.mod15;
+  PKB.renderNav("pratica");
+  PKB.remember("pratica/index.html", "Prática · Bet vs Missed C-Bet");
+  var app = document.getElementById("app");
+  var tipoById = {};
+  M.tipos.forEach(function (t) { tipoById[t.id] = t; });
+  var st = null;
+
+  function countByTipo() {
+    var c = {};
+    M.situacoes.forEach(function (s) { c[s.tipo] = (c[s.tipo] || 0) + 1; });
+    return c;
+  }
+
+  function renderSetup(msg) {
+    var c = countByTipo();
+    var checks = M.tipos.map(function (t) {
+      var n = c[t.id] || 0;
+      var off = n === 0;
+      return '<label class="' + (off ? "off" : "") + '"><input type="checkbox" name="tipo" value="' + t.id + '" ' + (off ? "disabled" : "checked") + "> " + t.nome + ' <span class="muted">' + (off ? "sem situações validadas" : n) + "</span></label>";
+    }).join("");
+    app.innerHTML =
+      "<h1>Prática</h1>" +
+      '<p class="lead">Treine as decisões do módulo 15. Você vê o board, a sua mão e o RNG. Escolha a ação.</p>' +
+      '<form class="setup" id="setup">' +
+      '<div class="field"><h3>Tema</h3><div class="check-row"><label><input type="radio" checked disabled> Bet vs Missed C-Bet</label><label class="off"><input type="radio" disabled> Misturar temas <span class="muted">em breve</span></label></div></div>' +
+      '<div class="field"><h3>Tipos de flop</h3><div class="check-row">' + checks + "</div></div>" +
+      '<div class="field"><h3>Quantidade</h3><div class="check-row" id="qty">' +
+      [10, 20, 0].map(function (q, i) { return '<label><input type="radio" name="qty" value="' + q + '" ' + (i === 0 ? "checked" : "") + "> " + (q || "Todas") + "</label>"; }).join("") +
+      "</div></div>" +
+      '<p class="err" id="err" role="alert">' + (msg || "") + "</p>" +
+      '<div><button class="btn primary" type="submit">Iniciar treino</button></div>' +
+      "</form>";
+    document.getElementById("setup").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var tipos = Array.prototype.map.call(document.querySelectorAll('input[name="tipo"]:checked'), function (i) { return i.value; });
+      if (!tipos.length) { document.getElementById("err").textContent = "Escolha ao menos um tipo de flop."; return; }
+      var qty = Number(document.querySelector('input[name="qty"]:checked').value);
+      var pool = PKB.shuffle(M.situacoes.filter(function (s) { return tipos.indexOf(s.tipo) >= 0; }));
+      if (qty && pool.length > qty) pool = pool.slice(0, qty);
+      st = { fila: pool, i: 0, itens: [], tipos: tipos };
+      renderHand();
+    });
+  }
+
+  function renderHand() {
+    var s = st.fila[st.i];
+    st.rng = PKB.rng();
+    st.answered = false;
+    var acertos = st.itens.filter(function (x) { return x.ok; }).length;
+    app.innerHTML =
+      '<div class="progress"><span>Mão ' + (st.i + 1) + " de " + st.fila.length + "</span><span>" + acertos + " acertos</span></div>" +
+      '<div class="table">' +
+      '<p class="table-info">' + M.spot + ". Você aposta ou dá check?</p>" +
+      '<div class="board-row"><span class="lbl">Flop</span><div class="cards">' + PKB.cardsHTML(s.board, "xl") + "</div></div>" +
+      '<div class="hand-row"><div class="hero"><span class="lbl">Sua mão</span><div class="cards">' + PKB.cardsHTML(s.hero, "lg") + "</div></div>" +
+      '<div class="rng"><span class="lbl">RNG de 1 a 100</span><div class="rng-plate" aria-label="RNG ' + st.rng + '">' + st.rng + "</div></div></div>" +
+      "</div>" +
+      '<div class="actions" id="actions">' +
+      '<button class="act" data-a="Check" type="button">Check<small>tecla C</small></button>' +
+      '<button class="act" data-a="B25" type="button">B25<small>tecla 1</small></button>' +
+      '<button class="act" data-a="B50" type="button">B50<small>tecla 2</small></button>' +
+      "</div>" +
+      '<div id="fb" aria-live="polite"></div>' +
+      '<p class="kbd">Dica: bucket é a frequência da mão. Se o RNG for menor ou igual a ela, aposta.</p>';
+    document.getElementById("actions").addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (b && !st.answered) answer(b.dataset.a);
+    });
+  }
+
+  function answer(a) {
+    var s = st.fila[st.i];
+    var t = tipoById[s.tipo];
+    var apostar = st.rng <= s.bucket;
+    var esperado = apostar ? t.size : "Check";
+    var ok = a === esperado;
+    st.answered = true;
+    st.itens.push({ sid: s.id, tipo: s.tipo, bucket: s.bucket, rng: st.rng, resp: a, esperado: esperado, ok: ok });
+
+    Array.prototype.forEach.call(document.querySelectorAll(".act"), function (b) {
+      b.disabled = true;
+      if (b.dataset.a === esperado) b.classList.add("right");
+      if (b.dataset.a === a) b.classList.add("pick");
+    });
+
+    var titulo = ok ? "Certo" : "Errado";
+    var texto;
+    if (ok) {
+      texto = apostar
+        ? "Sua mão está no bucket de " + s.bucket + "% e o RNG " + st.rng + " cai na aposta. O size do " + t.nome.toLowerCase() + " é " + t.size + "."
+        : "Sua mão está no bucket de " + s.bucket + "%, mas o RNG " + st.rng + " cai no check.";
+    } else if (a !== "Check" && apostar) {
+      texto = "Apostar estava certo (RNG " + st.rng + " ≤ " + s.bucket + "), mas o size do " + t.nome.toLowerCase() + " é " + t.size + ".";
+    } else if (a === "Check") {
+      texto = "O RNG " + st.rng + " cai na aposta (bucket de " + s.bucket + "%). O certo era " + t.size + ".";
+    } else {
+      texto = "O RNG " + st.rng + " fica acima de " + s.bucket + "%, então a mão dá check.";
+    }
+    var last = st.i === st.fila.length - 1;
+    document.getElementById("fb").innerHTML =
+      '<div class="feedback ' + (ok ? "ok" : "no") + '"><h3>' + titulo + "</h3>" +
+      "<p>" + texto + "</p>" +
+      "<p><strong>" + s.classe + "</strong> no flop " + t.nome.toLowerCase() + ": " + s.porque + "</p>" +
+      PKB.stripHTML(s.bucket, st.rng, t.size) +
+      '<div class="next"><button class="btn primary" id="next" type="button">' + (last ? "Ver resultado" : "Próxima mão") + "</button></div></div>";
+    var n = document.getElementById("next");
+    n.focus();
+    n.addEventListener("click", function () { if (last) finish(); else { st.i++; renderHand(); } });
+  }
+
+  function finish() {
+    var acertos = st.itens.filter(function (x) { return x.ok; }).length;
+    var sess = { id: Date.now(), modulo: "15", total: st.itens.length, acertos: acertos, itens: st.itens, levar: false };
+    var all = PKB.store.get("pkb:sessions", []);
+    all.push(sess);
+    PKB.store.set("pkb:sessions", all);
+    var pct = Math.round((acertos / st.itens.length) * 100);
+    app.innerHTML =
+      '<div class="summary"><h1>Treino concluído</h1><div class="big">' + acertos + " de " + st.itens.length + ' <span class="muted" style="font-size:1.4rem">' + pct + "%</span></div>" +
+      '<p class="lead" style="margin:0">Quer levar esta sessão para a Análise? Sessões de teste ficam de fora.</p>' +
+      '<div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn primary" id="levar" type="button">Levar para a Análise</button><button class="btn" id="again" type="button">Novo treino</button></div>' +
+      '<p class="muted" id="levarMsg" role="status" style="margin:0"></p></div>';
+    document.getElementById("levar").addEventListener("click", function () {
+      var all2 = PKB.store.get("pkb:sessions", []);
+      all2.forEach(function (x) { if (x.id === sess.id) x.levar = true; });
+      PKB.store.set("pkb:sessions", all2);
+      document.getElementById("levarMsg").textContent = "Sessão enviada para a Análise.";
+      document.getElementById("levar").disabled = true;
+    });
+    document.getElementById("again").addEventListener("click", function () { renderSetup(); });
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (!st || st.answered === undefined || e.metaKey || e.ctrlKey || e.altKey) return;
+    var k = e.key.toLowerCase();
+    if (!st.answered) {
+      if (k === "c") answer("Check");
+      else if (k === "1") answer("B25");
+      else if (k === "2") answer("B50");
+    }
+  });
+
+  renderSetup();
+})();
+</script>
+</body>
+</html>

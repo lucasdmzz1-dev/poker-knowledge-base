@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teoria · Poker KB</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-base="../">
+<header id="nav"></header>
+<main class="wrap">
+  <h1>Teoria</h1>
+  <p class="lead">Escolha o tema que você quer estudar.</p>
+  <ul class="theme-list" id="themes"></ul>
+</main>
+<script src="../assets/js/core.js"></script>
+<script>
+  PKB.renderNav("teoria");
+  var temas = [
+    ["01", "C-Bet IP Short Stack"], ["02", "C-Bet IP 40bb"], ["03", "Second Barrel IP"],
+    ["04", "Third Barrel e vs Third Barrel"], ["05", "C-Bet OOP 40bb"], ["06", "Check-Raise Short Stack"],
+    ["07", "Check-Raise Deep Stack"], ["08", "3Bet Pot"], ["09", "Bet Check Bet"], ["10", "Multiway Pot"],
+    ["11", "Value Bet Masterclass"], ["12", "Reta Final"], ["13", "ICM e Risk Premium"], ["14", "Probe Turn"],
+    ["15", "Bet vs Missed C-Bet"], ["16", "PKO · BTN vs 1 open"], ["17", "BB Raised Pot vs SB Limp"]
+  ];
+  var ul = document.getElementById("themes");
+  ul.innerHTML = temas.map(function (t) {
+    if (t[0] === "15") {
+      return '<li><a class="theme on" href="bet-vs-missed.html"><span class="n">' + t[0] + '</span><span class="name">' + t[1] + '</span><span class="tag go">Disponível</span></a></li>';
+    }
+    return '<li><div class="theme off"><span class="n">' + t[0] + '</span><span class="name">' + t[1] + '</span><span class="tag">Em breve</span></div></li>';
+  }).join("");
+</script>
+</body>
+</html>
