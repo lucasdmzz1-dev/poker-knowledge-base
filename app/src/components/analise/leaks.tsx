@@ -5,11 +5,13 @@ import { PrintsDoMes } from "@/components/analise/prints"
 import { Secao, CAMPO } from "@/components/analise/secao"
 import {
   CHAVES,
+  PONTOS_CRITICOS,
   desvio,
   fmt,
   lerLeaks,
   novoId,
   rotuloMes,
+  type Fase,
   type Leak,
 } from "@/lib/analise"
 import { writeJSON } from "@/lib/storage"
@@ -18,6 +20,8 @@ import { cn } from "@/lib/utils"
 function mesesDe(leaks: Leak[]): string[] {
   return [...new Set(leaks.map((l) => l.mes))].sort().reverse()
 }
+
+const VISIVEIS = 6
 
 export function useLeaks() {
   const [leaks, setLeaks] = useState<Leak[]>(lerLeaks)
@@ -39,13 +43,19 @@ export function LeaksDoMes({
   const [escolhido, setEscolhido] = useState<string | null>(null)
   const mes =
     escolhido && meses.includes(escolhido) ? escolhido : (meses[0] ?? "")
+  const [fase, setFase] = useState<Fase>("preflop")
+  const [todos, setTodos] = useState(false)
   const doMes = useMemo(
     () =>
       leaks
-        .filter((l) => l.mes === mes)
+        .filter((l) => l.mes === mes && l.fase === fase)
         .sort((a, b) => Math.abs(desvio(b)) - Math.abs(desvio(a))),
-    [leaks, mes]
+    [leaks, mes, fase]
   )
+  const total = (f: Fase) =>
+    leaks.filter((l) => l.mes === mes && l.fase === f).length
+  const mostrados = todos ? doMes : doMes.slice(0, VISIVEIS)
+  const criticos = PONTOS_CRITICOS[mes]
   const [aberto, setAberto] = useState(false)
   const [erro, setErro] = useState("")
 
@@ -57,6 +67,7 @@ export function LeaksDoMes({
     const spot = String(f.get("spot")).trim()
     const stat = String(f.get("stat")).trim()
     const mesNovo = String(f.get("mes"))
+    const faseNova: Fase = f.get("fase") === "posflop" ? "posflop" : "preflop"
     if (
       !spot ||
       !stat ||
@@ -73,14 +84,17 @@ export function LeaksDoMes({
       {
         id: novoId(),
         mes: mesNovo,
+        fase: faseNova,
         spot,
         stat,
         real,
         solver,
+        contra: "Referência",
         fazer: String(f.get("fazer")).trim(),
       },
     ])
     setEscolhido(mesNovo)
+    setFase(faseNova)
     setAberto(false)
     e.currentTarget.reset()
   }
@@ -88,7 +102,7 @@ export function LeaksDoMes({
   return (
     <Secao
       titulo="Leaks do mês"
-      lead="Os spots em que o seu número mais foge do solver, do maior desvio para o menor. Os três primeiros são onde atacar."
+      lead="Os spots em que o seu número mais foge da referência, do maior desvio para o menor, separados em pré-flop e pós-flop. Os três primeiros de cada lado são onde atacar."
     >
       <div className="mb-4 flex flex-wrap items-center gap-3">
         {meses.length > 0 && (
@@ -129,32 +143,39 @@ export function LeaksDoMes({
               />
             </label>
             <label className="grid gap-1 text-sm">
+              Fase
+              <select name="fase" defaultValue={fase} className={CAMPO}>
+                <option value="preflop">Pré-flop</option>
+                <option value="posflop">Pós-flop</option>
+              </select>
+            </label>
+            <label className="grid gap-1 text-sm">
               Spot
               <input
                 name="spot"
-                placeholder="BTN contra CO"
+                placeholder="BTN · 15–25bb"
                 className={CAMPO}
               />
             </label>
             <label className="grid gap-1 text-sm">
               Estatística
-              <input name="stat" placeholder="Fold" className={CAMPO} />
+              <input name="stat" placeholder="RFI" className={CAMPO} />
             </label>
             <label className="grid gap-1 text-sm">
               Seu valor (%)
               <input
                 name="real"
                 inputMode="decimal"
-                placeholder="80,0"
+                placeholder="33"
                 className={CAMPO}
               />
             </label>
             <label className="grid gap-1 text-sm">
-              Solver (%)
+              Referência (%)
               <input
                 name="solver"
                 inputMode="decimal"
-                placeholder="76,3"
+                placeholder="45"
                 className={CAMPO}
               />
             </label>
@@ -162,7 +183,7 @@ export function LeaksDoMes({
               O que fazer
               <input
                 name="fazer"
-                placeholder="Parar de foldar A9o e KTo"
+                placeholder="Abrir mais Kxo e Jxs"
                 className={CAMPO}
               />
             </label>
@@ -183,53 +204,117 @@ export function LeaksDoMes({
 
       <PrintsDoMes mes={mes || new Date().toISOString().slice(0, 7)} />
 
+      {criticos && (
+        <Card className="mb-6 rounded-[18px] p-5">
+          <h3 className="mb-2 font-bold">
+            Pontos críticos de {rotuloMes(mes)}
+          </h3>
+          <ol className="grid list-decimal gap-1 pl-5 text-muted-foreground">
+            {criticos.map((c) => (
+              <li key={c}>{c}</li>
+            ))}
+          </ol>
+        </Card>
+      )}
+
+      <div role="tablist" aria-label="Fase" className="mb-4 flex gap-2">
+        {(
+          [
+            ["preflop", "Pré-flop"],
+            ["posflop", "Pós-flop"],
+          ] as const
+        ).map(([id, nome]) => (
+          <button
+            key={id}
+            type="button"
+            role="tab"
+            aria-selected={fase === id}
+            onClick={() => {
+              setFase(id)
+              setTodos(false)
+            }}
+            className={cn(
+              "cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition-[background-color,border-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.97]",
+              fase === id
+                ? "border-primary bg-primary text-primary-foreground"
+                : "bg-card text-muted-foreground hover:text-foreground"
+            )}
+          >
+            {nome} · {total(id)}
+          </button>
+        ))}
+      </div>
+
       {doMes.length === 0 ? (
         <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
-          Nenhum leak neste mês ainda. Use "Adicionar leak" com os números do
-          mês.
+          Nenhum leak de {fase === "preflop" ? "pré-flop" : "pós-flop"} em{" "}
+          {rotuloMes(mes) || "este mês"} ainda. Use "Adicionar leak" com os
+          números do mês.
         </div>
       ) : (
-        <ul className="grid gap-3">
-          {doMes.map((l, i) => {
-            const d = desvio(l)
-            return (
-              <li key={l.id}>
-                <Card className="rounded-[18px] p-5">
-                  <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                    <h3 className="text-lg font-bold">
-                      {l.spot} · {l.stat}
-                      {i < 3 && (
-                        <span className="ml-2 rounded-full bg-primary px-2.5 py-0.5 align-middle text-xs font-bold text-primary-foreground">
-                          Atacar
-                        </span>
-                      )}
-                    </h3>
-                    <p className="text-muted-foreground tabular-nums">
-                      Você <b className="text-foreground">{fmt(l.real)}%</b> ·
-                      Solver <b className="text-foreground">{fmt(l.solver)}%</b>{" "}
-                      ·{" "}
-                      <b className={d > 0 ? "text-b50" : "text-check"}>
-                        {d > 0 ? "+" : ""}
-                        {fmt(d)} pts
-                      </b>
-                    </p>
-                  </div>
-                  {l.fazer && <p className="mt-2 max-w-[70ch]">{l.fazer}</p>}
-                  <div className="mt-3 flex items-center justify-between gap-3 text-sm text-muted-foreground">
-                    <span>{l.fonte ?? "Registrado por você"}</span>
-                    <button
-                      type="button"
-                      className="cursor-pointer underline-offset-4 hover:text-foreground hover:underline"
-                      onClick={() => salvar(leaks.filter((x) => x.id !== l.id))}
-                    >
-                      Remover
-                    </button>
-                  </div>
-                </Card>
-              </li>
-            )
-          })}
-        </ul>
+        <>
+          <ul className="grid gap-3">
+            {mostrados.map((l, i) => {
+              const d = desvio(l)
+              const un = l.unidade ?? "%"
+              return (
+                <li key={l.id}>
+                  <Card className="rounded-[18px] p-5">
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                      <h3 className="text-lg font-bold">
+                        {l.spot} · {l.stat}
+                        {i < 3 && (
+                          <span className="ml-2 rounded-full bg-primary px-2.5 py-0.5 align-middle text-xs font-bold text-primary-foreground">
+                            Atacar
+                          </span>
+                        )}
+                      </h3>
+                      <p className="text-muted-foreground tabular-nums">
+                        Você{" "}
+                        <b className="text-foreground">
+                          {fmt(l.real)}
+                          {un === "%" ? "%" : " bb"}
+                        </b>{" "}
+                        · {l.contra ?? "Solver"}{" "}
+                        <b className="text-foreground">
+                          {fmt(l.solver)}
+                          {un === "%" ? "%" : " bb"}
+                        </b>{" "}
+                        ·{" "}
+                        <b className={d > 0 ? "text-b50" : "text-check"}>
+                          {d > 0 ? "+" : ""}
+                          {fmt(d)} {un === "%" ? "pts" : "bb"}
+                        </b>
+                      </p>
+                    </div>
+                    {l.fazer && <p className="mt-2 max-w-[70ch]">{l.fazer}</p>}
+                    <div className="mt-3 flex items-center justify-between gap-3 text-sm text-muted-foreground">
+                      <span>{l.fonte ?? "Registrado por você"}</span>
+                      <button
+                        type="button"
+                        className="cursor-pointer underline-offset-4 hover:text-foreground hover:underline"
+                        onClick={() =>
+                          salvar(leaks.filter((x) => x.id !== l.id))
+                        }
+                      >
+                        Remover
+                      </button>
+                    </div>
+                  </Card>
+                </li>
+              )
+            })}
+          </ul>
+          {doMes.length > VISIVEIS && (
+            <div className="mt-4 flex justify-center">
+              <Button variant="outline" onClick={() => setTodos((v) => !v)}>
+                {todos
+                  ? "Mostrar só os principais"
+                  : `Mostrar todos (${doMes.length})`}
+              </Button>
+            </div>
+          )}
+        </>
       )}
     </Secao>
   )
@@ -268,8 +353,9 @@ export function Comparacao({ leaks }: { leaks: Leak[] }) {
         lead="Compara o desvio de cada spot entre dois meses e diz se melhorou, piorou ou ficou igual."
       >
         <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
-          Falta um segundo mês. Adicione os leaks do mês seguinte com o mesmo
-          spot e a mesma estatística, e a comparação aparece aqui.
+          Falta um segundo mês. Quando você adicionar os leaks de outubro, com o
+          mesmo spot e a mesma estatística de setembro, a comparação aparece
+          aqui.
         </div>
       </Secao>
     )
@@ -278,7 +364,7 @@ export function Comparacao({ leaks }: { leaks: Leak[] }) {
   return (
     <Secao
       titulo="Comparação mês a mês"
-      lead="Menos desvio do solver é melhor. A variação mostra quanto o desvio mudou, em pontos percentuais."
+      lead="Menos desvio da referência é melhor. A variação mostra quanto o desvio mudou, em pontos percentuais."
     >
       <div className="mb-4 flex flex-wrap gap-3 text-sm text-muted-foreground">
         <label className="flex items-center gap-2">
