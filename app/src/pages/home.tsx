@@ -2,7 +2,9 @@ import { Link } from "react-router-dom"
 import { Cards, RngPlate } from "@/components/poker/cards"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { COR_NIVEL, nivelStat } from "@/lib/hud"
 import { lerUltimo } from "@/lib/storage"
+import { cn } from "@/lib/utils"
 
 const CARD =
   "group h-full bg-card hover:border-primary hover:bg-secondary relative flex flex-col gap-5 overflow-hidden rounded-[22px] border p-6 transition-[transform,border-color,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.985] [@media(hover:hover)_and_(pointer:fine)]:hover:-translate-y-1 motion-reduce:[@media(hover:hover)_and_(pointer:fine)]:hover:translate-y-0"
@@ -98,15 +100,15 @@ export default function Home() {
             texto="Seus leaks do mês e a evolução nos temas, para saber onde atacar."
             to="/analise"
           >
-            <div className="grid w-full max-w-[240px] gap-2.5">
+            <div className="grid w-full max-w-[260px] gap-2.5">
               {[
-                ["VPIP", 26],
-                ["PFR", 17],
-                ["3bet", 9.4],
-              ].map(([nome, v]) => (
+                ["VPIP", 26, "26-29"],
+                ["PFR", 17, "20-23"],
+                ["3bet", 9.4, "11-14"],
+              ].map(([nome, v, meta]) => (
                 <div
                   key={nome}
-                  className="grid grid-cols-[3rem_1fr_2.4rem] items-center gap-2 text-sm"
+                  className="grid grid-cols-[2.6rem_1fr_2rem_3.2rem] items-center gap-2 text-sm"
                 >
                   <span className="text-muted-foreground">{nome}</span>
                   <span className="h-2 overflow-hidden rounded-full bg-secondary">
@@ -115,8 +117,16 @@ export default function Home() {
                       style={{ width: `${(Number(v) / 40) * 100}%` }}
                     />
                   </span>
-                  <span className="text-right font-bold tabular-nums">
+                  <span
+                    className={cn(
+                      "text-right font-bold tabular-nums",
+                      COR_NIVEL[nivelStat(Number(v), String(meta)) ?? "alvo"]
+                    )}
+                  >
                     {String(v).replace(".", ",")}
+                  </span>
+                  <span className="text-right text-xs text-muted-foreground tabular-nums">
+                    {String(meta).replace("-", "–")}
                   </span>
                 </div>
               ))}
