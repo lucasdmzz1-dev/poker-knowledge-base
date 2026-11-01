@@ -103,8 +103,8 @@ export default function Home() {
             <div className="grid w-full max-w-[260px] gap-2.5">
               {[
                 ["VPIP", 26, "26-29"],
-                ["PFR", 17, "20-23"],
-                ["3bet", 9.4, "11-14"],
+                ["PFR", 20, "20-23"],
+                ["3bet", 11, "11-14"],
               ].map(([nome, v, meta]) => (
                 <div
                   key={nome}
