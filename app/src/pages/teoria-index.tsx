@@ -66,7 +66,7 @@ const GRUPOS: { nome: string; temas: Tema[] }[] = [
 ]
 
 const CHIP =
-  "rounded-full border px-5 py-2.5 text-sm font-medium tracking-wide uppercase transition-[border-color,background-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)]"
+  "inline-flex h-11 items-center rounded-full border px-5 text-sm font-medium tracking-wide whitespace-nowrap uppercase transition-[border-color,background-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)]"
 
 function Chip({ tema }: { tema: Tema }) {
   if (tema.to) {
@@ -84,7 +84,10 @@ function Chip({ tema }: { tema: Tema }) {
   }
   return (
     <span
-      className={cn(CHIP, "bg-card text-muted-foreground opacity-60")}
+      className={cn(
+        CHIP,
+        "border-border bg-card text-muted-foreground opacity-60"
+      )}
       title="Em breve"
     >
       {tema.nome}
