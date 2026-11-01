@@ -3,11 +3,6 @@ import { Link } from "react-router-dom"
 import { PageHeader } from "@/components/page-header"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Cards, PlayingCard, RngStrip } from "@/components/poker/cards"
 import { mod15, tipoById, type TipoId } from "@/data/mod15"
@@ -84,6 +79,15 @@ export default function Teoria15() {
           <Badge variant="outline">Em posição</Badge>
           <Badge variant="outline">Sizes B25 e B50</Badge>
         </div>
+        <div className="mx-auto mt-8 aspect-video w-full max-w-[720px] overflow-hidden rounded-[22px] border">
+          <iframe
+            src="https://www.youtube.com/embed/3sDt8hoFNYE"
+            title="Aula: Bet vs Missed C-Bet"
+            className="size-full"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowFullScreen
+          />
+        </div>
       </PageHeader>
       <div className="mx-auto max-w-[1080px] px-5 pb-20">
         <Secao titulo="Em 30 segundos">
@@ -139,7 +143,7 @@ export default function Teoria15() {
                             style={{ width: `${b.p}%` }}
                           />
                         </span>
-                        <span className="col-start-2 text-muted-foreground">
+                        <span className="col-start-2 text-lg font-semibold text-foreground">
                           {b.maos}
                         </span>
                       </div>
@@ -202,19 +206,7 @@ export default function Teoria15() {
         </Secao>
 
         <section className="mt-16">
-          <Collapsible className="rounded-xl border bg-card px-4 py-3.5">
-            <CollapsibleTrigger className="cursor-pointer font-medium">
-              Dúvidas abertas (levar ao coach)
-            </CollapsibleTrigger>
-            <CollapsibleContent>
-              <ul className="mt-3 list-disc pl-5 text-muted-foreground">
-                {mod15.duvidas.map((d) => (
-                  <li key={d}>{d}</li>
-                ))}
-              </ul>
-            </CollapsibleContent>
-          </Collapsible>
-          <p className="mt-3 max-w-[60ch] text-muted-foreground">
+          <p className="max-w-[60ch] text-muted-foreground">
             Fonte: {mod15.fonte}.
           </p>
         </section>

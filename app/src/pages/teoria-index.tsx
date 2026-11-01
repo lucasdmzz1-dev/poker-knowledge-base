@@ -43,7 +43,7 @@ const GRUPOS: { nome: string; temas: Tema[] }[] = [
     temas: [
       { nome: "2nd Barrel IP" },
       { nome: "2nd Barrel OOP" },
-      { nome: "Probe Turn" },
+      { nome: "Probe Turn", to: "/teoria/probe-turn" },
     ],
   },
   {

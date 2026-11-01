@@ -166,13 +166,6 @@ export const mod15 = {
     { b: ["Kd", "Kh", "Jc"], t: "dobrado", fixo: false },
   ] as RefBoard[],
 
-  duvidas: [
-    "Boards intermediários entre semi conectado e seco (9-6-3, 8-6-2).",
-    "Até onde vai o semi conectado nos boards baixos (5-4-3, 7-5-4, 8-6-4).",
-    "Cartas do meio no dobrado (K-K-9, K-K-8, K-K-T).",
-    "Seu range de call pré-flop por posição, para classificar o top pair.",
-  ],
-
   situacoes: [
     {
       id: "seco-1",
