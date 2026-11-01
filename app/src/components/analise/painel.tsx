@@ -1,7 +1,14 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Secao, CAMPO } from "@/components/analise/secao"
-import { CHAVES, fmt, lerPainel, novoId, type Painel } from "@/lib/analise"
+import {
+  CHAVES,
+  FONTE_PAINEL,
+  fmt,
+  lerPainel,
+  novoId,
+  type Painel,
+} from "@/lib/analise"
 import { writeJSON } from "@/lib/storage"
 import { cn } from "@/lib/utils"
 
@@ -27,13 +34,15 @@ export function PainelSemanal() {
     writeJSON(CHAVES.painel, p)
   }
 
-  function adicionarSemana(e: React.FormEvent) {
-    e.preventDefault()
+  function adicionarPeriodo(tipo: "semana" | "mes") {
     const r = rotulo.trim()
     if (!r) return
     salvar({
       ...painel,
-      semanas: [...painel.semanas, { id: novoId(), rotulo: r, valores: {} }],
+      semanas: [
+        ...painel.semanas,
+        { id: novoId(), rotulo: r, tipo, valores: {} },
+      ],
     })
     setRotulo("")
   }
@@ -46,13 +55,13 @@ export function PainelSemanal() {
     setMetrica("")
   }
 
-  function definir(semanaId: string, m: string, texto: string) {
+  function definir(periodoId: string, m: string, texto: string) {
     const n = Number(texto.replace(",", "."))
     const valor = texto.trim() === "" || Number.isNaN(n) ? null : n
     salvar({
       ...painel,
       semanas: painel.semanas.map((s) =>
-        s.id === semanaId ? { ...s, valores: { ...s.valores, [m]: valor } } : s
+        s.id === periodoId ? { ...s, valores: { ...s.valores, [m]: valor } } : s
       ),
     })
   }
@@ -60,19 +69,34 @@ export function PainelSemanal() {
   return (
     <Secao
       titulo="Painel semanal"
-      lead="Copie os números da semana do Hand2Note. A última coluna mostra a variação da última semana contra a anterior."
+      lead="O mês de referência e as semanas seguintes, lado a lado, com a meta de cada métrica. A última coluna mostra a variação do último período contra o anterior."
     >
+      <p className="mb-4 text-sm text-muted-foreground">{FONTE_PAINEL}</p>
+
       <div className="mb-4 flex flex-wrap gap-4">
-        <form onSubmit={adicionarSemana} className="flex gap-2">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault()
+            adicionarPeriodo("semana")
+          }}
+          className="flex flex-wrap gap-2"
+        >
           <input
             value={rotulo}
             onChange={(e) => setRotulo(e.target.value)}
-            placeholder="Semana, ex.: 20 a 26/10"
-            aria-label="Nome da nova semana"
-            className={cn(CAMPO, "w-56")}
+            placeholder="Ex.: 20 a 26/10 ou Outubro de 2026"
+            aria-label="Nome do novo período"
+            className={cn(CAMPO, "w-64")}
           />
           <Button type="submit" variant="outline">
             Adicionar semana
+          </Button>
+          <Button
+            type="button"
+            variant="outline"
+            onClick={() => adicionarPeriodo("mes")}
+          >
+            Adicionar mês
           </Button>
         </form>
         <form onSubmit={adicionarMetrica} className="flex gap-2">
@@ -89,86 +113,84 @@ export function PainelSemanal() {
         </form>
       </div>
 
-      {painel.semanas.length === 0 ? (
-        <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
-          Nenhuma semana ainda. Adicione a primeira e preencha os números.
-        </div>
-      ) : (
-        <div className="overflow-x-auto rounded-2xl border">
-          <table className="w-full border-collapse text-left">
-            <thead className="bg-card text-sm text-muted-foreground">
-              <tr>
-                <th className="p-3 font-medium">Métrica (%)</th>
-                {painel.semanas.map((s) => (
-                  <th key={s.id} className="p-3 font-medium whitespace-nowrap">
-                    {s.rotulo}
+      <div className="overflow-x-auto rounded-2xl border">
+        <table className="w-full border-collapse text-left">
+          <thead className="bg-card text-sm text-muted-foreground">
+            <tr>
+              <th className="p-3 font-medium">Métrica (%)</th>
+              <th className="p-3 font-medium">Meta</th>
+              {painel.semanas.map((s) => (
+                <th key={s.id} className="p-3 font-medium whitespace-nowrap">
+                  {s.rotulo}
+                  <span className="ml-2 rounded-full border px-2 py-0.5 text-xs">
+                    {s.tipo === "mes" ? "mês" : "semana"}
+                  </span>
+                  <button
+                    type="button"
+                    aria-label={`Remover ${s.rotulo}`}
+                    className="ml-2 cursor-pointer text-xs underline-offset-4 hover:text-foreground hover:underline"
+                    onClick={() =>
+                      salvar({
+                        ...painel,
+                        semanas: painel.semanas.filter((x) => x.id !== s.id),
+                      })
+                    }
+                  >
+                    remover
+                  </button>
+                </th>
+              ))}
+              <th className="p-3 font-medium">Variação</th>
+            </tr>
+          </thead>
+          <tbody>
+            {painel.metricas.map((m) => {
+              const v = ultimaVariacao(painel, m)
+              return (
+                <tr key={m} className="border-t">
+                  <th scope="row" className="p-3 font-medium whitespace-nowrap">
+                    {m}
                     <button
                       type="button"
-                      aria-label={`Remover a semana ${s.rotulo}`}
-                      className="ml-2 cursor-pointer text-xs underline-offset-4 hover:text-foreground hover:underline"
+                      aria-label={`Remover a métrica ${m}`}
+                      className="ml-2 cursor-pointer text-xs font-normal text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
                       onClick={() =>
                         salvar({
                           ...painel,
-                          semanas: painel.semanas.filter((x) => x.id !== s.id),
+                          metricas: painel.metricas.filter((x) => x !== m),
                         })
                       }
                     >
                       remover
                     </button>
                   </th>
-                ))}
-                <th className="p-3 font-medium">Variação</th>
-              </tr>
-            </thead>
-            <tbody>
-              {painel.metricas.map((m) => {
-                const v = ultimaVariacao(painel, m)
-                return (
-                  <tr key={m} className="border-t">
-                    <th
-                      scope="row"
-                      className="p-3 font-medium whitespace-nowrap"
-                    >
-                      {m}
-                      <button
-                        type="button"
-                        aria-label={`Remover a métrica ${m}`}
-                        className="ml-2 cursor-pointer text-xs font-normal text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
-                        onClick={() =>
-                          salvar({
-                            ...painel,
-                            metricas: painel.metricas.filter((x) => x !== m),
-                          })
+                  <td className="p-3 whitespace-nowrap text-muted-foreground tabular-nums">
+                    {painel.metas[m] ?? "–"}
+                  </td>
+                  {painel.semanas.map((s) => (
+                    <td key={s.id} className="p-2">
+                      <input
+                        inputMode="decimal"
+                        aria-label={`${m}, ${s.rotulo}`}
+                        defaultValue={
+                          typeof s.valores[m] === "number"
+                            ? String(s.valores[m]).replace(".", ",")
+                            : ""
                         }
-                      >
-                        remover
-                      </button>
-                    </th>
-                    {painel.semanas.map((s) => (
-                      <td key={s.id} className="p-2">
-                        <input
-                          inputMode="decimal"
-                          aria-label={`${m}, ${s.rotulo}`}
-                          defaultValue={
-                            typeof s.valores[m] === "number"
-                              ? String(s.valores[m]).replace(".", ",")
-                              : ""
-                          }
-                          onBlur={(e) => definir(s.id, m, e.target.value)}
-                          className={cn(CAMPO, "w-24 tabular-nums")}
-                        />
-                      </td>
-                    ))}
-                    <td className="p-3 text-muted-foreground tabular-nums">
-                      {v === null ? "–" : `${v > 0 ? "+" : ""}${fmt(v)} pts`}
+                        onBlur={(e) => definir(s.id, m, e.target.value)}
+                        className={cn(CAMPO, "w-24 tabular-nums")}
+                      />
                     </td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
-        </div>
-      )}
+                  ))}
+                  <td className="p-3 whitespace-nowrap text-muted-foreground tabular-nums">
+                    {v === null ? "–" : `${v > 0 ? "+" : ""}${fmt(v)} pts`}
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
     </Secao>
   )
 }

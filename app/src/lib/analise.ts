@@ -14,26 +14,83 @@ export interface Leak {
 export interface Semana {
   id: string
   rotulo: string
+  tipo?: "mes" | "semana"
   valores: Record<string, number | null>
 }
 
 export interface Painel {
   metricas: string[]
+  metas: Record<string, string>
   semanas: Semana[]
 }
 
 export const CHAVES = { leaks: "pkb:leaks", painel: "pkb:painel" }
 
-export const METRICAS_PADRAO = [
-  "VPIP",
-  "PFR",
-  "3bet",
-  "Fold vs 3bet",
-  "C-bet flop",
-  "Fold vs c-bet",
-  "WTSD",
-  "W$SD",
-]
+// Stats mensais de setembro de 2026 (HUD LuqqDamz, 46k mãos), de coaching/stats/mensal-2026-09.md.
+// Foram lidas dos prints: confira os decimais contra a tela antes de citar um número exato.
+export const FONTE_PAINEL =
+  "Setembro de 2026: snapshot do HUD (46k mãos), lido dos prints. Confira os decimais contra a tela."
+
+const SETEMBRO: Record<string, number> = {
+  VPIP: 26,
+  PFR: 17,
+  "3bet": 9.4,
+  "Fold vs 3bet": 50,
+  Squeeze: 8,
+  "Steal CO": 33,
+  "Steal BTN": 48,
+  WTSD: 28,
+  W$SD: 51,
+  WWSF: 44,
+  "C-bet flop IP": 87,
+  "C-bet flop OOP": 25,
+  "C-bet turn IP": 53,
+  "C-bet turn OOP": 38,
+  "Fold vs X/R IP": 28,
+  "Fold no turn vs 2nd barrel IP": 32,
+  "Fold no turn vs 2nd barrel OOP": 47,
+  "Delayed c-bet OOP": 62,
+  "Delayed c-bet IP": 59,
+  "X/C OR OOP": 59,
+  "X/R turn BB": 5.8,
+  "Fold no river IP": 40,
+  "Fold no river OOP": 60,
+  "Raise no flop IP": 3.1,
+}
+
+const METAS: Record<string, string> = {
+  "3bet": "11 a 14",
+  "Fold vs 3bet": "48 a 55",
+  "Steal CO": "40 a 45",
+  "Steal BTN": "60 a 65",
+  WWSF: "48 a 51",
+  "C-bet flop IP": "80 a 100",
+  "C-bet turn IP": "60",
+  "C-bet turn OOP": "65",
+  "Fold vs X/R IP": "35 a 40",
+  "Fold no turn vs 2nd barrel IP": "40 a 45",
+  "Fold no turn vs 2nd barrel OOP": "45 a 50",
+  "Delayed c-bet OOP": "70",
+  "Delayed c-bet IP": "60",
+  "X/C OR OOP": "35 a 40",
+  "X/R turn BB": "10",
+  "Fold no river IP": "50",
+  "Fold no river OOP": "55 ou menos",
+  "Raise no flop IP": "10 a 15",
+}
+
+export const PAINEL_INICIAL: Painel = {
+  metricas: Object.keys(SETEMBRO),
+  metas: METAS,
+  semanas: [
+    {
+      id: "mes-2026-09",
+      rotulo: "Setembro de 2026",
+      tipo: "mes",
+      valores: SETEMBRO,
+    },
+  ],
+}
 
 const FONTE = "Painel de evolução, 28/10/2026 (call open contra o solver, 40bb)"
 
@@ -103,24 +160,26 @@ export function lerLeaks(): Leak[] {
 }
 
 export function lerPainel(): Painel {
-  const vazio: Painel = { metricas: METRICAS_PADRAO, semanas: [] }
   const bruto = readJSON<unknown>(
     CHAVES.painel,
-    vazio,
+    null,
     (v) => ehObj(v) && Array.isArray(v.metricas) && Array.isArray(v.semanas)
   )
-  if (!ehObj(bruto)) return vazio
+  if (!ehObj(bruto)) return PAINEL_INICIAL
   const metricas = (bruto.metricas as unknown[]).filter(
     (m): m is string => typeof m === "string"
   )
   const semanas = (bruto.semanas as unknown[]).filter(
-    (s): s is Semana =>
-      ehObj(s) &&
-      typeof s.id === "string" &&
-      typeof s.rotulo === "string" &&
-      ehObj(s.valores)
+    (x): x is Semana =>
+      ehObj(x) &&
+      typeof x.id === "string" &&
+      typeof x.rotulo === "string" &&
+      ehObj(x.valores)
   )
-  return { metricas, semanas }
+  const metas = ehObj(bruto.metas)
+    ? (bruto.metas as Record<string, string>)
+    : METAS
+  return { metricas, metas, semanas }
 }
 
 const MESES = [

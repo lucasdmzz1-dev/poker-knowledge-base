@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { PrintsDoMes } from "@/components/analise/prints"
 import { Secao, CAMPO } from "@/components/analise/secao"
 import {
   CHAVES,
@@ -179,6 +180,8 @@ export function LeaksDoMes({
           </form>
         </Card>
       )}
+
+      <PrintsDoMes mes={mes || new Date().toISOString().slice(0, 7)} />
 
       {doMes.length === 0 ? (
         <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
