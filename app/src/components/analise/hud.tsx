@@ -2,18 +2,23 @@ import { Fragment, useMemo, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { CAMPO } from "@/components/analise/secao"
-import { fmt, rotuloMes } from "@/lib/analise"
+import { capitalizar, fmt, rotuloMes } from "@/lib/analise"
 import {
   CHAVE_FIXADAS,
   CHAVE_HUD,
+  CHAVE_TOL,
+  COR_NIVEL,
   LEGENDA_COMBATIVIDADE,
+  TOLERANCIA_PADRAO,
   SECOES,
   STATS,
   distanciaMeta,
-  ehPequena,
   lerFixadas,
   lerHud,
+  lerTol,
+  nivelStat,
   type MesHud,
+  type NivelStat,
   type StatDef,
   type ValorStat,
 } from "@/lib/hud"
@@ -23,6 +28,14 @@ import { cn } from "@/lib/utils"
 function useHud() {
   const [meses, setMeses] = useState<MesHud[]>(lerHud)
   const [fixadas, setFixadas] = useState<string[]>(lerFixadas)
+  const [tol, setTol] = useState<Record<string, number>>(lerTol)
+  const definirTol = (id: string, valor: number | null) => {
+    const novas = { ...tol }
+    if (valor === null) delete novas[id]
+    else novas[id] = valor
+    setTol(novas)
+    writeJSON(CHAVE_TOL, novas)
+  }
   const salvarMeses = (m: MesHud[]) => {
     setMeses(m)
     writeJSON(CHAVE_HUD, m)
@@ -34,7 +47,7 @@ function useHud() {
     setFixadas(novas)
     writeJSON(CHAVE_FIXADAS, novas)
   }
-  return { meses, salvarMeses, fixadas, alternarFixada }
+  return { meses, salvarMeses, fixadas, alternarFixada, tol, definirTol }
 }
 
 function Pilula({
@@ -63,30 +76,14 @@ function Pilula({
   )
 }
 
-function Estado({ v, meta }: { v: number | null; meta?: string }) {
-  if (v === null) return null
-  const d = distanciaMeta(v, meta)
-  if (d === null) return null
-  const [rotulo, cor] =
-    d === 0
-      ? ["No alvo", "text-primary"]
-      : d <= 2
-        ? ["Perto", "text-[#fcc419]"]
-        : ["Longe", "text-destructive"]
-  return (
-    <span className={cn("text-xs font-bold whitespace-nowrap", cor)}>
-      {rotulo}
-    </span>
-  )
-}
-
 function numero(texto: string): number | null {
   const n = Number(texto.replace(",", "."))
   return texto.trim() === "" || Number.isNaN(n) ? null : n
 }
 
 export function ExploradorHud() {
-  const { meses, salvarMeses, fixadas, alternarFixada } = useHud()
+  const { meses, salvarMeses, fixadas, alternarFixada, tol, definirTol } =
+    useHud()
   const lista = useMemo(
     () => [...meses].sort((a, b) => b.mes.localeCompare(a.mes)),
     [meses]
@@ -109,8 +106,8 @@ export function ExploradorHud() {
       return false
     if (!soFora) return true
     const v = atual?.valores[s.id]?.v
-    const d = typeof v === "number" ? distanciaMeta(v, s.meta) : null
-    return d !== null && d > 0
+    const nivel = nivelStat(v, s.meta, tol[s.id])
+    return nivel === "perto" || nivel === "longe"
   })
   const porBloco = new Map<string, StatDef[]>()
   for (const s of visiveis) {
@@ -151,7 +148,7 @@ export function ExploradorHud() {
           >
             {lista.map((m) => (
               <option key={m.mes} value={m.mes}>
-                {rotuloMes(m.mes)}
+                {capitalizar(rotuloMes(m.mes))}
               </option>
             ))}
           </select>
@@ -200,7 +197,10 @@ export function ExploradorHud() {
 
       {editando && (
         <div className="mb-5 flex flex-wrap items-center gap-2 rounded-xl border border-dashed p-3 text-sm text-muted-foreground">
-          <span>Os campos abaixo agora aceitam número. Para um mês novo:</span>
+          <span>
+            Os campos aceitam número. Em perto até, diga quantos pontos fora da
+            meta ainda contam como perto. Para um mês novo:
+          </span>
           <input
             type="month"
             value={novoMes}
@@ -256,6 +256,11 @@ export function ExploradorHud() {
                         <th className="px-2 py-2 text-right font-medium">AP</th>
                       )}
                       <th className="px-2 py-2 text-right font-medium">Meta</th>
+                      {editando && (
+                        <th className="px-2 py-2 text-right font-medium">
+                          Perto até
+                        </th>
+                      )}
                       <th className="px-2 py-2 font-medium">
                         <span className="sr-only">Fixar</span>
                       </th>
@@ -272,6 +277,11 @@ export function ExploradorHud() {
                             className="px-4 py-1.5 text-left font-normal"
                           >
                             {s.nome}
+                            {typeof val?.n === "number" && (
+                              <span className="ml-2 text-[11px] whitespace-nowrap text-muted-foreground tabular-nums">
+                                {val.n} {val.n === 1 ? "mão" : "mãos"}
+                              </span>
+                            )}
                           </th>
                           <Celula
                             val={val}
@@ -280,7 +290,7 @@ export function ExploradorHud() {
                             id={s.id}
                             definir={definir}
                             destaque
-                            meta={s.meta}
+                            nivel={nivelStat(val?.v, s.meta, tol[s.id])}
                           />
                           {temNai && (
                             <Celula
@@ -303,6 +313,32 @@ export function ExploradorHud() {
                           <td className="px-2 py-1.5 text-right text-muted-foreground tabular-nums">
                             {s.meta ?? "–"}
                           </td>
+                          {editando && (
+                            <td className="px-1 py-1 text-right">
+                              {s.meta ? (
+                                <input
+                                  inputMode="decimal"
+                                  aria-label={`Perto até, ${s.nome}`}
+                                  defaultValue={String(
+                                    tol[s.id] ?? TOLERANCIA_PADRAO
+                                  ).replace(".", ",")}
+                                  onBlur={(e) => {
+                                    const n = numero(e.target.value)
+                                    definirTol(
+                                      s.id,
+                                      n === null || n < 0 ? null : n
+                                    )
+                                  }}
+                                  className={cn(
+                                    CAMPO,
+                                    "h-8 w-16 text-right tabular-nums"
+                                  )}
+                                />
+                              ) : (
+                                <span className="text-muted-foreground">–</span>
+                              )}
+                            </td>
+                          )}
                           <td className="px-2 py-1.5 text-right">
                             <button
                               type="button"
@@ -351,9 +387,11 @@ export function ExploradorHud() {
       )}
 
       <p className="mt-4 text-xs text-muted-foreground">
-        Valor é o número do mês, NAI exclui o all-in, AP é o lucro médio. "n"
-        pequeno aparece como amostra pequena. Use a estrela para levar uma stat
-        para a aba Comparação.
+        O valor fica verde no alvo, amarelo perto da meta e vermelho longe dela.
+        Quanto é perto muda por stat, em editar valores, no campo perto até (o
+        padrão é 2 pontos). NAI exclui o all-in e AP é o lucro médio. O número
+        pequeno ao lado do nome é a quantidade de mãos. Use a estrela para levar
+        uma stat para a comparação.
       </p>
     </div>
   )
@@ -366,7 +404,7 @@ function Celula({
   id,
   definir,
   destaque,
-  meta,
+  nivel,
 }: {
   val?: ValorStat
   campo: "v" | "ap" | "nai"
@@ -374,7 +412,7 @@ function Celula({
   id: string
   definir: (id: string, campo: "v" | "ap" | "nai", texto: string) => void
   destaque?: boolean
-  meta?: string
+  nivel?: NivelStat | null
 }) {
   const v = val?.[campo]
   if (editando)
@@ -399,21 +437,14 @@ function Celula({
       )}
     >
       {typeof v === "number" ? (
-        <span className="inline-flex items-baseline justify-end gap-1.5">
-          {destaque && <Estado v={v} meta={meta} />}
-          <span
-            className={cn(
-              campo === "ap" && v < 0 && "text-destructive",
-              campo === "ap" && v > 0 && "text-primary"
-            )}
-          >
-            {fmt(v).replace(",0", "")}
-          </span>
-          {campo === "v" && ehPequena(val) && (
-            <span className="text-xs font-normal text-[#fcc419]">
-              n={val?.n}
-            </span>
+        <span
+          className={cn(
+            campo === "v" && nivel && COR_NIVEL[nivel],
+            campo === "ap" && v < 0 && "text-destructive",
+            campo === "ap" && v > 0 && "text-primary"
           )}
+        >
+          {fmt(v).replace(",0", "")}
         </span>
       ) : (
         <span className="text-muted-foreground">–</span>
@@ -423,7 +454,7 @@ function Celula({
 }
 
 export function ComparacaoHud() {
-  const { meses, fixadas } = useHud()
+  const { meses, fixadas, tol } = useHud()
   const lista = [...meses].sort((a, b) => b.mes.localeCompare(a.mes))
   const [a, setA] = useState<string | null>(null)
   const [b, setB] = useState<string | null>(null)
@@ -454,7 +485,16 @@ export function ComparacaoHud() {
             : db > da + 0.05
               ? "piorou"
               : "igual"
-      return { s, va, vb, delta, julgamento, fixada: fixadas.includes(s.id) }
+      return {
+        s,
+        va,
+        vb,
+        delta,
+        julgamento,
+        fixada: fixadas.includes(s.id),
+        na: nivelStat(va, s.meta, tol[s.id]),
+        nb: nivelStat(vb, s.meta, tol[s.id]),
+      }
     })
       .filter((x): x is NonNullable<typeof x> => x !== null)
       .filter(
@@ -468,14 +508,14 @@ export function ComparacaoHud() {
           Number(q.fixada) - Number(p.fixada) ||
           Math.abs(q.delta) - Math.abs(p.delta)
       )
-  }, [agora, antes, fixadas, soFixadas, soMudou, secao])
+  }, [agora, antes, fixadas, tol, soFixadas, soMudou, secao])
 
   if (lista.length < 2)
     return (
       <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
-        Falta um segundo mês de stats. Em Leaks do mês, abra "Todas as stats",
-        ative "Editar valores" e adicione outubro. Depois use a estrela nas
-        stats que você quer acompanhar, e elas aparecem aqui primeiro.
+        Falta um segundo mês de stats. Em leaks do mês, abra todas as stats,
+        ative editar valores e adicione outubro. Depois use a estrela nas stats
+        que você quer acompanhar, e elas aparecem aqui primeiro.
       </div>
     )
 
@@ -495,7 +535,7 @@ export function ComparacaoHud() {
               .filter((m) => m.mes !== agora?.mes)
               .map((m) => (
                 <option key={m.mes} value={m.mes}>
-                  {rotuloMes(m.mes)}
+                  {capitalizar(rotuloMes(m.mes))}
                 </option>
               ))}
           </select>
@@ -509,7 +549,7 @@ export function ComparacaoHud() {
           >
             {lista.map((m) => (
               <option key={m.mes} value={m.mes}>
-                {rotuloMes(m.mes)}
+                {capitalizar(rotuloMes(m.mes))}
               </option>
             ))}
           </select>
@@ -568,10 +608,20 @@ export function ComparacaoHud() {
                     <td className="p-3 text-muted-foreground tabular-nums">
                       {x.s.meta ?? "–"}
                     </td>
-                    <td className="p-3 tabular-nums">
+                    <td
+                      className={cn(
+                        "p-3 tabular-nums",
+                        x.na && COR_NIVEL[x.na]
+                      )}
+                    >
                       {fmt(x.va).replace(",0", "")}
                     </td>
-                    <td className="p-3 tabular-nums">
+                    <td
+                      className={cn(
+                        "p-3 font-bold tabular-nums",
+                        x.nb && COR_NIVEL[x.nb]
+                      )}
+                    >
                       {fmt(x.vb).replace(",0", "")}
                     </td>
                     <td className="p-3 tabular-nums">
@@ -614,9 +664,9 @@ export function ComparacaoHud() {
         </div>
       )}
       <p className="mt-4 text-xs text-muted-foreground">
-        "Melhorou" e "Piorou" só aparecem nas stats que têm meta: quer dizer que
-        o número chegou mais perto ou mais longe da meta. Nas outras, a coluna
-        mostra só a variação ("Mudou").
+        As cores seguem a meta e a tolerância de cada stat. Melhorou e piorou só
+        aparecem nas stats que têm meta, e querem dizer que o número chegou mais
+        perto ou mais longe dela. Nas outras, a coluna mostra só a variação.
       </p>
     </div>
   )

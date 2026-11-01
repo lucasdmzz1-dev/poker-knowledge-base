@@ -333,24 +333,30 @@ export function lerLeaks(): Leak[] {
 }
 
 const MESES = [
-  "Janeiro",
-  "Fevereiro",
-  "Março",
-  "Abril",
-  "Maio",
-  "Junho",
-  "Julho",
-  "Agosto",
-  "Setembro",
-  "Outubro",
-  "Novembro",
-  "Dezembro",
+  "janeiro",
+  "fevereiro",
+  "março",
+  "abril",
+  "maio",
+  "junho",
+  "julho",
+  "agosto",
+  "setembro",
+  "outubro",
+  "novembro",
+  "dezembro",
 ]
+
+// Em minúsculas, para caber no meio da frase. Use capitalizar() no início de um rótulo.
 
 export function rotuloMes(mes: string): string {
   const [a, m] = mes.split("-")
   const nome = MESES[Number(m) - 1]
   return nome ? `${nome} de ${a}` : mes
+}
+
+export function capitalizar(texto: string): string {
+  return texto.charAt(0).toUpperCase() + texto.slice(1)
 }
 
 export function desvio(l: Leak): number {

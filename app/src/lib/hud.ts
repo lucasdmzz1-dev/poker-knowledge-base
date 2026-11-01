@@ -25,6 +25,8 @@ export interface MesHud {
 
 export const CHAVE_HUD = "pkb:hud"
 export const CHAVE_FIXADAS = "pkb:hud-fixadas"
+export const CHAVE_TOL = "pkb:hud-tol"
+export const TOLERANCIA_PADRAO = 2
 
 type L = [
   nome: string,
@@ -378,12 +380,43 @@ export const LEGENDA_COMBATIVIDADE = [
   "WWSF acima de 52 não é um grande problema se você está convertendo isso em dinheiro (EV/bb).",
 ]
 
+// Nome de exibição: padroniza a caixa e troca as letras soltas (F, T, R) pela rua.
+// O id continua com o nome original, para não perder os valores já salvos.
+const NOMES: Record<string, string> = {
+  "Call 2nd T": "Call 2nd barrel turn",
+  "Raise 2nd T": "Raise 2nd barrel turn",
+  "Call ou raise vs 3rd R": "Call ou raise vs 3rd barrel river",
+  "Flop bet vs miss": "Bet vs miss no flop",
+  "Turn bet vs miss": "Bet vs miss no turn",
+  "Brr T após B vs M F": "Barrel de turn após bet vs miss no flop",
+  "Brr R após B vs M T": "Barrel de river após bet vs miss no turn",
+  "Brr de river após o delay": "Barrel de river após o delay",
+  "Prob Turn (BB)": "Probe turn (BB)",
+  "Prob Turn": "Probe turn",
+  "X/C - Lead Turn (BB)": "X/C - lead turn (BB)",
+  "X/C - Lead Turn": "X/C - lead turn",
+}
+
+export function nomeStat(nome: string): string {
+  return (
+    NOMES[nome] ??
+    nome
+      .replace(/^Fold to /, "Fold vs ")
+      .replace(/\bBU\b/g, "BTN")
+      .replace(/\bSqz\b/, "Squeeze")
+      .replace(/\boverall\b/g, "geral")
+      .replace(/(?<![\w/])F(?![\w/])/g, "flop")
+      .replace(/(?<![\w/])T(?![\w/])/g, "turn")
+      .replace(/(?<![\w/])R(?![\w/])/g, "river")
+  )
+}
+
 export const STATS: StatDef[] = BLOCOS.flatMap((b) =>
   b.linhas.map((l) => ({
     id: `${b.secao}|${b.bloco}|${l[0]}`,
     secao: b.secao,
     bloco: b.bloco,
-    nome: l[0],
+    nome: nomeStat(l[0]),
     meta: l[3],
   }))
 )
@@ -420,6 +453,34 @@ export function lerHud(): MesHud[] {
 export function lerFixadas(): string[] {
   const bruto = readJSON<unknown>(CHAVE_FIXADAS, [], Array.isArray)
   return (bruto as unknown[]).filter((x): x is string => typeof x === "string")
+}
+
+export function lerTol(): Record<string, number> {
+  const bruto = readJSON<unknown>(CHAVE_TOL, {}, ehObj)
+  const out: Record<string, number> = {}
+  for (const [k, v] of Object.entries(bruto as Record<string, unknown>))
+    if (typeof v === "number" && v >= 0) out[k] = v
+  return out
+}
+
+export type NivelStat = "alvo" | "perto" | "longe"
+
+// Verde no alvo, amarelo até a tolerância da stat, vermelho além dela.
+export function nivelStat(
+  v: number | null | undefined,
+  meta: string | undefined,
+  tol = TOLERANCIA_PADRAO
+): NivelStat | null {
+  if (typeof v !== "number") return null
+  const d = distanciaMeta(v, meta)
+  if (d === null) return null
+  return d === 0 ? "alvo" : d <= tol ? "perto" : "longe"
+}
+
+export const COR_NIVEL: Record<NivelStat, string> = {
+  alvo: "text-primary",
+  perto: "text-[#fcc419]",
+  longe: "text-destructive",
 }
 
 // "26-29" vira faixa; um número só vira o alvo exato.

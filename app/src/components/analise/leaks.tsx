@@ -11,6 +11,7 @@ import {
   fmt,
   lerLeaks,
   novoId,
+  capitalizar,
   rotuloMes,
   type Fase,
   type Leak,
@@ -116,7 +117,7 @@ function LeaksLista({
             >
               {meses.map((m) => (
                 <option key={m} value={m}>
-                  {rotuloMes(m)}
+                  {capitalizar(rotuloMes(m))}
                 </option>
               ))}
             </select>
@@ -379,7 +380,7 @@ function ComparacaoLeaks({ leaks }: { leaks: Leak[] }) {
               .filter((m) => m !== atual)
               .map((m) => (
                 <option key={m} value={m}>
-                  {rotuloMes(m)}
+                  {capitalizar(rotuloMes(m))}
                 </option>
               ))}
           </select>
@@ -393,7 +394,7 @@ function ComparacaoLeaks({ leaks }: { leaks: Leak[] }) {
           >
             {meses.map((m) => (
               <option key={m} value={m}>
-                {rotuloMes(m)}
+                {capitalizar(rotuloMes(m))}
               </option>
             ))}
           </select>

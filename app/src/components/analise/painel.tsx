@@ -5,7 +5,6 @@ import { fmt } from "@/lib/analise"
 import {
   CHAVE_PAINEL,
   METRICAS,
-  ROTULO_ESTADO,
   comparar,
   estado,
   faixa,
@@ -24,9 +23,9 @@ import { cn } from "@/lib/utils"
 type Sub = "semana" | "mes" | "comparar"
 
 const COR_ESTADO: Record<Estado, string> = {
-  alvo: "bg-primary/15 text-primary",
-  perto: "bg-[#fcc419]/15 text-[#fcc419]",
-  longe: "bg-destructive/15 text-destructive",
+  alvo: "text-primary",
+  perto: "text-[#fcc419]",
+  longe: "text-destructive",
 }
 
 function maosCurto(n: number | null): string {
@@ -46,17 +45,8 @@ function numeros(periodos: Periodo[], m: Metrica): number[] {
     .filter((v): v is number => typeof v === "number")
 }
 
-function Chip({ e }: { e: Estado }) {
-  return (
-    <span
-      className={cn(
-        "rounded-full px-2.5 py-0.5 text-xs font-bold whitespace-nowrap",
-        COR_ESTADO[e]
-      )}
-    >
-      {ROTULO_ESTADO[e]}
-    </span>
-  )
+function corValor(v: unknown, m: Metrica): string {
+  return typeof v === "number" ? COR_ESTADO[estado(v, m)] : ""
 }
 
 function Tendencia({ valores, m }: { valores: number[]; m: Metrica }) {
@@ -214,7 +204,6 @@ function Tabela({
                   )}
                 </th>
               ))}
-              <th className="p-3 font-medium">Status</th>
               <th className="p-3 font-medium">Tendência</th>
             </tr>
           </thead>
@@ -223,7 +212,7 @@ function Tabela({
               <Fragment key={g}>
                 <tr className="border-t bg-card/60">
                   <th
-                    colSpan={periodos.length + 4}
+                    colSpan={periodos.length + 3}
                     className="p-3 text-left text-sm font-bold"
                   >
                     {g}
@@ -233,7 +222,6 @@ function Tabela({
                   .filter((m) => m.grupo === g)
                   .map((m) => {
                     const v = numeros(periodos, m)
-                    const ultimo = v.length ? v[v.length - 1] : null
                     return (
                       <tr key={m.id} className="border-t align-top">
                         <th
@@ -261,7 +249,12 @@ function Tabela({
                         {periodos.map((p) => (
                           <td key={p.id} className="p-2">
                             {p.fechado ? (
-                              <span className="block px-3 py-2 tabular-nums">
+                              <span
+                                className={cn(
+                                  "block px-3 py-2 font-medium tabular-nums",
+                                  corValor(p.valores[m.id], m)
+                                )}
+                              >
                                 {typeof p.valores[m.id] === "number"
                                   ? fmt(p.valores[m.id] as number)
                                   : "–"}
@@ -276,18 +269,15 @@ function Tabela({
                                     : ""
                                 }
                                 onBlur={(e) => definir(p, m, e.target.value)}
-                                className={cn(CAMPO, "w-24 tabular-nums")}
+                                className={cn(
+                                  CAMPO,
+                                  "w-24 tabular-nums",
+                                  corValor(p.valores[m.id], m)
+                                )}
                               />
                             )}
                           </td>
                         ))}
-                        <td className="p-3">
-                          {ultimo === null ? (
-                            <span className="text-muted-foreground">–</span>
-                          ) : (
-                            <Chip e={estado(ultimo, m)} />
-                          )}
-                        </td>
                         <td className="p-3 text-sm">
                           <Tendencia valores={v} m={m} />
                         </td>
@@ -479,7 +469,7 @@ export function PainelSemanal() {
   return (
     <Secao
       titulo="Painel semanal"
-      lead="As stats que você acompanha por semana e por mês, com a faixa-alvo de cada uma, o status e a tendência contra o período anterior."
+      lead="As stats que você acompanha por semana e por mês, com a faixa-alvo de cada uma, o valor colorido (verde no alvo, amarelo perto, vermelho longe) e a tendência contra o período anterior."
     >
       <div
         role="tablist"

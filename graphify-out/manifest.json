@@ -1746,9 +1746,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/analise.tsx": {
-    "mtime": 1793506564.3420851,
-    "seen": 1793506647.3096583,
-    "ast_hash": "4103a36c1e1ee8df9ddf9241936f719b",
+    "mtime": 1793531586.000975,
+    "seen": 1793533534.8372452,
+    "ast_hash": "9791726293f7b2e889b7a1fbd42a1bad",
     "semantic_hash": ""
   },
   "app/src/pages/home.tsx": {
@@ -1770,9 +1770,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/teoria-index.tsx": {
-    "mtime": 1793530590.3933094,
-    "seen": 1793530628.1442146,
-    "ast_hash": "0b8137c21b24234f614b73bd89b4c0ef",
+    "mtime": 1793531321.2693596,
+    "seen": 1793533534.8382456,
+    "ast_hash": "436992ef700c782f4e181e1164df3fb3",
     "semantic_hash": ""
   },
   "app/tsconfig.app.json": {
@@ -2580,9 +2580,63 @@
     "semantic_hash": ""
   },
   "app/src/components/poker/mesa.tsx": {
-    "mtime": 1793530590.4347987,
-    "seen": 1793530628.1402135,
-    "ast_hash": "abca55acedbedc79af15d4a28384d679",
+    "mtime": 1793530762.5475352,
+    "seen": 1793533534.834245,
+    "ast_hash": "6de9d3da663678831c4d155a8883933a",
+    "semantic_hash": ""
+  },
+  "app/src/components/analise/hud.tsx": {
+    "mtime": 1793533502.9608262,
+    "seen": 1793533534.8332446,
+    "ast_hash": "797ba209ea5d6c96a29d53729142f5d7",
+    "semantic_hash": ""
+  },
+  "app/src/components/analise/leaks.tsx": {
+    "mtime": 1793533498.8495808,
+    "seen": 1793533534.8332446,
+    "ast_hash": "aecd2298d03722927e85c06a6a74c14d",
+    "semantic_hash": ""
+  },
+  "app/src/components/analise/painel.tsx": {
+    "mtime": 1793533498.8485808,
+    "seen": 1793533534.8332446,
+    "ast_hash": "c899fe6b220868447c65691f0487dcca",
+    "semantic_hash": ""
+  },
+  "app/src/components/analise/prints.tsx": {
+    "mtime": 1793531707.4401362,
+    "seen": 1793533534.8332446,
+    "ast_hash": "f8ca42d618fbe3ecc0c865a0b1fbbcf5",
+    "semantic_hash": ""
+  },
+  "app/src/components/analise/secao.tsx": {
+    "mtime": 1793531458.1477654,
+    "seen": 1793533534.8332446,
+    "ast_hash": "db46d86bc8a2485525fd8374ebaecf78",
+    "semantic_hash": ""
+  },
+  "app/src/lib/analise.ts": {
+    "mtime": 1793533498.8485808,
+    "seen": 1793533534.8362455,
+    "ast_hash": "0d5853fb7660ce689aa915b658837f18",
+    "semantic_hash": ""
+  },
+  "app/src/lib/hud.ts": {
+    "mtime": 1793533424.3496327,
+    "seen": 1793533534.8362455,
+    "ast_hash": "690b0ccf8f1ee41ba78e7db18fce1ce0",
+    "semantic_hash": ""
+  },
+  "app/src/lib/painel.ts": {
+    "mtime": 1793532169.8937023,
+    "seen": 1793533534.8362455,
+    "ast_hash": "8cdedf2cdd6043572ceeecd281c3e2de",
+    "semantic_hash": ""
+  },
+  "app/src/lib/prints.ts": {
+    "mtime": 1793531707.5056245,
+    "seen": 1793533534.8372452,
+    "ast_hash": "7ffc6844022213fa24dfc023c9642b72",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {
