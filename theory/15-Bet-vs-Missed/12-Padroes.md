@@ -43,7 +43,7 @@ Siga esta ordem:
 
 1. **Três cartas do mesmo naipe?** É **monotone**. **[Imagem]**
 2. **Board pareado?** É **dobrado**. O quanto a terceira carta se conecta com o par decide entre **seco** e **carregado** (seção 2). **[Autor]**
-3. **Senão, olhe a interação do range do opener com o board:** quanto do range dele acerta o board (pares, dois pares, draws). Isso decide entre **seco**, **semi conectado** e **conectado high**. **[Aula]** **[Autor]**
+3. **Senão, olhe a interação do range do opener com o board:** quanto do range dele acerta o board (pares, dois pares, draws). Isso decide entre **seco**, **semi conectado** e **conectado high**. Duas coisas aumentam a conexão: **cartas mais altas** e **mais possibilidades de gutshot e duas pontas** no flop. **[Aula]** **[Autor]**
 4. **Dois naipes no board não mudam o tipo.** O naipe só decide quais combos apostam (Regras 13 e 14 do guideline). **[Inferência]**
 5. **Ajuste pelo opener:** a posição e o stack dele mudam o tipo do mesmo board (seção 5).
 
@@ -54,10 +54,10 @@ Siga esta ordem:
 | Tipo | Critério | Size |
 |---|---|---|
 | **Conectado high** | Cartas encadeadas (altas, ou baixas contra um opener que acerta quase tudo), com muitas sequências e draws. Não existe bucket de 100% | B50 |
-| **Semi conectado** | O range do opener acerta muito o board, por cartas altas (A-K-2) ou por cartas médias conectadas (J-9-6) | B50 |
-| **Seco** | Uma carta alta e duas baixas desconectadas. O range do opener acerta pouco | B25 |
+| **Semi conectado** | O range do opener acerta muito o board, por cartas altas (A-K-2), por cartas médias conectadas (J-9-6, 9-6-2) ou por boards baixos conectados (7-6-5, 6-5-4) | B50 |
+| **Seco** | Poucas cartas altas, com gaps amplos e poucas possibilidades de gutshot e duas pontas (T-6-2, K-7-4). Quanto mais baixo o board e maiores os gaps, mais seco. O range do opener acerta pouco | B25 |
 | **Monotone** | Três cartas do mesmo naipe | B25 |
-| **Dobrado** | Board pareado. Seco: a terceira carta não se conecta com o par. Carregado: se conecta | B25 |
+| **Dobrado** | Board pareado. Seco: a terceira carta não forma sequência nem flush draw com o par. Carregado: forma |  B25 |
 
 Critérios dos quatro primeiros tipos (menos o monotone) são **[Aula]** e **[Autor]**. A redação em termos de "acerta o range" é **[Inferência]**.
 
@@ -113,7 +113,7 @@ Critérios dos quatro primeiros tipos (menos o monotone) são **[Aula]** e **[Au
 
 **Pior trinca.** Vai em 100% **nos boards que têm bucket de 100%** (semi conectado e seco). Nos boards sem bucket de 100% (conectado high, monotone e dobrado) não há onde encaixá-la em 100%, e ela vai onde a tabela do board põe a trinca: 50% no conectado high, 75% no monotone e 75% no dobrado seco. **[Autor]**
 
-**TP forte, médio e fraco.** A força do top pair é **relativa ao range que chega no spot**, e não a um kicker fixo. Forte são geralmente os dois melhores kickers que de fato existem no range. Fraco são os piores kickers do range. Mãos que vão para 3bet pré-flop saem da conta (por exemplo, o AK quase não aparece num flop K-9-2). **[Autor]**
+**TP forte, médio e fraco.** A força do top pair é **relativa ao range que chega no spot**, e não a um kicker fixo. Forte são geralmente os dois melhores kickers que de fato existem no range. Fraco são os piores kickers do range. O range base é o range com que o autor paga pré-flop em cada posição. Mãos que vão para 3bet pré-flop saem da conta (por exemplo, o AK quase não aparece num flop K-9-2). **[Autor]**
 
 **Demais classes** (overpair, underpair, segundo e terceiro par, dois pares, draws): as definições estão em "Como ler este guideline" do `15 - BET VS MISSED GUIDELINE.md`.
 
@@ -145,9 +145,12 @@ Contra EP e MP o range é outro que o do BB, então o tipo pode mudar (Regra 16 
 | J♠ 9♥ 6♣ | Semi conectado | Imagem | Validado |
 | 9-8-6 (contra HJ) | Semi conectado | Aula | Validado |
 | 8-7-6 (deep) | Semi conectado | Aula | Validado |
+| 9-6-2 | Semi conectado | Autor | Validado |
+| 7-6-5, 6-5-4 | Semi conectado | Autor | Validado |
 | Q♠ 5♥ 3♣ | Seco | Imagem | Validado |
 | Q-2-3, K-5-3, K-7-4, A-7-2 | Seco | Autor | Validado |
 | A-5-3, 9-4-2, T-3-2, Q-6-4 | Seco | Aula | Validado |
+| T-6-2 | Seco | Autor | Validado |
 | 8-5-4 | Seco (tratado como) | Aula | Validado |
 | A♠ 9♠ 8♠ | Monotone | Imagem | Validado |
 | J-3-3 | Dobrado seco | Aula | Validado |
@@ -160,13 +163,21 @@ Contra EP e MP o range é outro que o do BB, então o tipo pode mudar (Regra 16 
 
 # 7. Dúvidas abertas
 
-1. **Fronteira entre semi conectado e seco** além dos exemplos. Um board como 9-6-3 ou T-6-2: o range do opener acerta muito ou pouco?
-2. **Boards baixos conectados** (7-6-5, 6-5-4): semi conectado ou conectado high? Hoje só sabemos que depende do range do opener.
-3. **Dobrado:** a partir de qual terceira carta o board passa de seco a carregado? K-K-9, K-K-8, K-K-T?
-4. **Base do TP forte, médio e fraco:** qual range pré-flop define os kickers que existem (o seu range de call em cada posição)?
+1. **Boards intermediários** entre semi conectado e seco além dos exemplos validados (por exemplo 9-6-3, 8-6-2). O critério existe (altura e possibilidades de gutshot e duas pontas), mas o corte exato não. Por isso os exercícios usam só boards validados.
+2. **Limite dos boards baixos:** 7-6-5 e 6-5-4 são semi conectados. Falta saber até onde vai (5-4-3, 7-5-4, 8-6-4).
+3. **Dobrado:** o critério é a terceira carta formar sequência e flush draw com o par. Falta confirmar as cartas do meio (K-K-9, K-K-8, K-K-T).
+4. **Fonte do range base do TP:** o range é o de call pré-flop do autor em cada posição. Falta esse range registrado no KB, por posição, para eu classificar o TP.
 5. **Exemplo do K-9-2:** o K9 seria dois pares nesse board. Confirmar qual board o autor tinha em mente para o kicker mais fraco.
 
+Itens esclarecidos em 01/11/2026: o critério de altura e de possibilidades de gutshot e duas pontas, os boards 9-6-2 (semi), T-6-2 (seco), 7-6-5 e 6-5-4 (semi), o critério da terceira carta no dobrado e o range base do TP.
+
 Itens esclarecidos em 31/10/2026: A-K-2 é semi conectado, a lista dos boards secos, o critério da terceira carta no dobrado, o top pair relativo ao range e a pior trinca (ver `09-Decisoes.md`, Decisão 10).
+
+---
+
+# 8. Criação de exercícios
+
+Por enquanto, os exercícios e as situações do trainer usam **só boards com status Validado** (seção 6). Boards intermediários ou com status Inferência ficam de fora até serem confirmados.
 
 ---
 
