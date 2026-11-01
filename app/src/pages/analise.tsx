@@ -2,29 +2,15 @@ import { useState } from "react"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { Comparacao, LeaksDoMes, useLeaks } from "@/components/analise/leaks"
+import { PainelSemanal } from "@/components/analise/painel"
+import { Secao } from "@/components/analise/secao"
 import { mod15, tipoById, type TipoId } from "@/data/mod15"
-import type { Sessao } from "@/lib/poker"
 import { KEYS, lerSessoes, writeJSON } from "@/lib/storage"
 
-function Bloco({
-  titulo,
-  children,
-}: {
-  titulo: string
-  children: React.ReactNode
-}) {
-  return (
-    <section className="mt-12 first:mt-0">
-      <h2 className="mb-4 text-[clamp(1.4rem,3vw,1.9rem)] leading-tight font-bold tracking-tight">
-        {titulo}
-      </h2>
-      {children}
-    </section>
-  )
-}
-
 export default function Analise() {
-  const [todas, setTodas] = useState<Sessao[]>(() => lerSessoes())
+  const { leaks, salvar } = useLeaks()
+  const [todas, setTodas] = useState(lerSessoes)
   const levadas = todas.filter((s) => s.levar)
 
   function tirar(id: number) {
@@ -48,10 +34,17 @@ export default function Analise() {
     <main>
       <PageHeader
         title="Análise"
-        lead="Sua evolução nos temas do trainer. Só entram as sessões que você escolheu levar."
+        lead="Seus leaks do mês, a evolução semana a semana e o que o trainer mostra por tema."
       />
-      <div className="mx-auto max-w-[1080px] px-5 pb-20">
-        <Bloco titulo="Evolução nos temas">
+      <div className="mx-auto max-w-[1080px] px-5 pb-24">
+        <LeaksDoMes leaks={leaks} salvar={salvar} />
+        <Comparacao leaks={leaks} />
+        <PainelSemanal />
+
+        <Secao
+          titulo="Evolução nos temas"
+          lead="Só entram as sessões do trainer que você escolheu levar para a Análise."
+        >
           {levadas.length === 0 ? (
             <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
               Nenhuma sessão levada ainda. Ao terminar um treino na Prática,
@@ -71,7 +64,9 @@ export default function Analise() {
                   </Card>
                 ))}
               </div>
-              <h3 className="mb-1.5 font-bold">Acerto por tipo de flop</h3>
+              <h3 className="mb-1.5 font-bold">
+                Acerto por tipo de flop · {mod15.nome}
+              </h3>
               {[...porTipo.entries()].map(([k, o]) => {
                 const p = Math.round((o.ok / o.n) * 100)
                 return (
@@ -92,10 +87,10 @@ export default function Analise() {
               })}
             </>
           )}
-        </Bloco>
+        </Secao>
 
         {levadas.length > 0 && (
-          <Bloco titulo="Sessões levadas">
+          <Secao titulo="Sessões levadas">
             <div className="grid gap-2.5">
               {[...levadas].reverse().map((s) => (
                 <div
@@ -117,35 +112,8 @@ export default function Analise() {
                 </div>
               ))}
             </div>
-          </Bloco>
+          </Secao>
         )}
-
-        <Bloco titulo="Em construção">
-          <div className="grid [grid-template-columns:repeat(auto-fill,minmax(220px,1fr))] gap-3">
-            {[
-              [
-                "Leaks do mês",
-                "Prints mensais do HUD, com os leaks priorizados e o que fazer.",
-              ],
-              [
-                "Painel semanal",
-                "Entrada manual dos números da semana, vindos do Hand2Note.",
-              ],
-              [
-                "Comparação mês a mês",
-                "Melhorou, piorou ou ficou igual, por spot.",
-              ],
-            ].map(([t, d]) => (
-              <div
-                key={t}
-                className="rounded-2xl border border-dashed p-5 text-muted-foreground"
-              >
-                <h3 className="font-bold text-foreground">{t}</h3>
-                <p className="mt-2">{d}</p>
-              </div>
-            ))}
-          </div>
-        </Bloco>
       </div>
     </main>
   )
