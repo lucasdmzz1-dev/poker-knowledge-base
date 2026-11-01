@@ -42,7 +42,7 @@ Marcações:
 Siga esta ordem:
 
 1. **Três cartas do mesmo naipe?** É **monotone**. **[Imagem]**
-2. **Board pareado?** É **dobrado**. O quanto a terceira carta se conecta com o par decide entre **seco** e **carregado** (seção 2). **[Autor]**
+2. **Board pareado (carta repetida)?** É **dobrado**, sempre, em qualquer altura. **[Autor]** O quanto a terceira carta se conecta com o par decide entre **seco** e **carregado** (seção 2). **[Autor]**
 3. **Senão, olhe a interação do range do opener com o board:** quanto do range dele acerta o board (pares, dois pares, draws). Isso decide entre **seco**, **semi conectado** e **conectado high**. Duas coisas aumentam a conexão: **cartas mais altas** e **mais possibilidades de gutshot e duas pontas** no flop. **[Aula]** **[Autor]**
 4. **Dois naipes no board não mudam o tipo.** O naipe só decide quais combos apostam (Regras 13 e 14 do guideline). **[Inferência]**
 5. **Ajuste pelo opener:** a posição e o stack dele mudam o tipo do mesmo board (seção 5).
@@ -157,7 +157,7 @@ Contra EP e MP o range é outro que o do BB, então o tipo pode mudar (Regra 16 
 | K-K-2 | Dobrado seco | Autor | Validado |
 | J-J-9 | Dobrado carregado | Aula | Validado |
 | K-K-J | Dobrado carregado | Autor | Validado |
-| K♠ K♥ 7♣ | Dobrado seco | Imagem (exemplo do tipo) e critério da terceira carta | Inferência |
+| K♠ K♥ 7♣ | Dobrado (tipo validado; subtipo seco é inferência) | Imagem e autor | Tipo validado |
 
 ---
 
