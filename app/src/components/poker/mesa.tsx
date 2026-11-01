@@ -13,13 +13,13 @@ const ORDEM: Pos[] = ["UTG", "UTG1", "LJ", "HJ", "CO", "BTN", "SB", "BB"]
 // que vai de 6% a 94% na horizontal e de 12% a 88% na vertical.
 const POS_TELA: Record<Pos, [x: number, y: number, xCelular: number]> = {
   BTN: [50, 88, 50],
-  SB: [26, 88, 24],
+  SB: [18, 88, 17],
   BB: [6, 50, 7],
   UTG: [26, 12, 24],
   UTG1: [50, 12, 50],
   LJ: [74, 12, 76],
   HJ: [94, 50, 93],
-  CO: [74, 88, 88],
+  CO: [82, 88, 91],
 }
 
 const STACK = 40
@@ -169,7 +169,12 @@ function Assento({ pos, opener }: { pos: Pos; opener: Opener }) {
         </span>
       </div>
       {abriu && (
-        <span className="absolute top-full mt-1 flex flex-col items-center gap-0.5 whitespace-nowrap">
+        <span
+          className={cn(
+            "absolute flex flex-col items-center gap-0.5 whitespace-nowrap",
+            y > 70 ? "bottom-full mb-1 flex-col-reverse" : "top-full mt-1"
+          )}
+        >
           <span className="rounded-full bg-b50 px-2 py-0.5 text-[clamp(0.6rem,1.05vw,0.78rem)] font-bold text-[#1a0907]">
             Abriu {ABERTURA}
           </span>
@@ -181,7 +186,7 @@ function Assento({ pos, opener }: { pos: Pos; opener: Opener }) {
       {heroi && (
         <span
           aria-label="Botão do dealer"
-          className="absolute -top-1 -left-1 grid size-5 place-items-center rounded-full bg-white text-[11px] font-bold text-black"
+          className="absolute top-0 right-full mr-1 grid size-5 place-items-center rounded-full bg-white text-[11px] font-bold text-black"
         >
           D
         </span>
@@ -231,7 +236,7 @@ export function Mesa({
       </div>
 
       <div
-        className="relative aspect-[1.25/1] w-full sm:aspect-[2.2/1]"
+        className="relative mb-5 aspect-[1.25/1] w-full sm:aspect-[2.2/1]"
         role="group"
         aria-label={`Mesa: herói no BTN contra ${opener}, pote de ${POTE_BB} bb`}
       >
