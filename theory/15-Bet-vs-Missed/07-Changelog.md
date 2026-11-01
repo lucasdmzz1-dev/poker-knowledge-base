@@ -65,6 +65,30 @@ Ordem de prioridade das fontes padronizada na ordem geral do `theory/CLAUDE.md` 
 
 ---
 
+# Versão 1.3
+
+Fonte: esclarecimentos do autor do KB (31/10/2026).
+
+- Criado `12-Padroes.md` (ficha de padrões): fluxo de classificação do board, critérios dos cinco tipos, buckets, classes de mão, boards de referência e dúvidas abertas.
+- Regra 4 (Guideline e Regras Consolidadas): esclarecimento de que a pior trinca em 100% vale só onde existe bucket de 100%. Pendência 5 resolvida, com ajuste do Exercício 05 ainda por fazer.
+- Decisão 10 registrada.
+
+Nenhuma tabela de buckets mudou.
+
+---
+
+# Versão 1.4
+
+Fonte: esclarecimentos do autor do KB (01/11/2026).
+
+- `12-Padroes.md`: critério de altura e de possibilidades de gutshot e duas pontas, boards 9-6-2, T-6-2, 7-6-5 e 6-5-4, critério da terceira carta no dobrado, range base do TP e regra de usar só boards validados nos exercícios.
+- Decisão 10 complementada.
+- Exercício 05 ajustado: a pior trinca em 100% vale onde existe bucket de 100%. Texto anterior da alternativa correta: "d) 100%, menos no board ultraconectado high", com a correção "A pior trinca vai sempre em 100%. A exceção é o board ultraconectado high (AKT, QJT, QJ9, KJ9), onde não existe mão em 100%."
+
+Nenhuma tabela de buckets mudou.
+
+---
+
 # Próximas Atualizações
 
 Adicionar:

@@ -39,7 +39,7 @@ Módulos existentes (confira a pasta `theory/` para o estado atual):
 
 Ainda não existem módulos próprios de pré-flop para o torneio em geral (RFI/open jam, 3bet, squeeze). O módulo 12 cobre esses spots só na reta final. Quando os módulos gerais forem criados, a fonte primária será solver (Preflop Academy, GTOWizard), não aula.
 
-## Padrão de um módulo (10 arquivos)
+## Padrão de um módulo (10 arquivos, mais a ficha de padrões quando o tema tem divisões a classificar)
 
 | Arquivo | Função | Convenção |
 |---|---|---|
@@ -53,6 +53,7 @@ Ainda não existem módulos próprios de pré-flop para o torneio em geral (RFI/
 | `07-Changelog.md` | Histórico | Versão, fonte, o que foi adicionado |
 | `08-Referencias.md` | Fontes | Lista de fontes e ordem de prioridade |
 | `09-Decisoes.md` | Meta-decisões | Decisões numeradas sobre como o módulo foi estruturado |
+| `12-Padroes.md` | Ficha de padrões (opcional) | Como classificar o board ou a situação do tema: fluxo de classificação, critérios de cada divisão, boards de referência validados e dúvidas abertas. Piloto no módulo 15 |
 
 Ordem de prioridade em caso de conflito entre fontes (vale para todos os módulos, decidida em 28/10/2026):
 
