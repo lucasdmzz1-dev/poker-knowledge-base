@@ -296,14 +296,93 @@ export default function Pratica() {
   if (fase === "fim") {
     const acertos = itens.filter((x) => x.ok).length
     const pct = Math.round((acertos / itens.length) * 100)
+    const porTipo = mod15.tipos
+      .map((t) => {
+        const doTipo = itens.filter((x) => x.tipo === t.id)
+        const certos = doTipo.filter((x) => x.ok).length
+        return { nome: t.nome, total: doTipo.length, certos }
+      })
+      .filter((x) => x.total > 0)
+      .sort(
+        (a, b) => a.certos / a.total - b.certos / b.total || b.total - a.total
+      )
+    const piorTipo = porTipo.find((x) => x.certos < x.total)
+    const erros = itens.filter((x) => !x.ok)
+    const motivos = [
+      {
+        nome: "Check quando era para apostar",
+        n: erros.filter((x) => x.resp === "Check").length,
+      },
+      {
+        nome: "Apostou quando era check",
+        n: erros.filter((x) => x.esperado === "Check").length,
+      },
+      {
+        nome: "Apostou com o size errado",
+        n: erros.filter((x) => x.resp !== "Check" && x.esperado !== "Check")
+          .length,
+      },
+    ].filter((m) => m.n > 0)
     return (
       <main>
         <PageHeader title="Treino concluído" />
-        <div className="enter mx-auto grid max-w-[560px] justify-items-center gap-4 px-5 pb-20 text-center">
+        <div className="enter mx-auto grid max-w-[620px] justify-items-center gap-4 px-5 pb-20 text-center">
           <div className="text-[clamp(2.4rem,6vw,3.4rem)] font-bold">
             {acertos} de {itens.length}{" "}
             <span className="text-2xl text-muted-foreground">{pct}%</span>
           </div>
+          {piorTipo ? (
+            <p className="text-lg text-muted-foreground">
+              Você mais errou no flop{" "}
+              <strong className="text-foreground">
+                {piorTipo.nome.toLowerCase()}
+              </strong>
+              : {piorTipo.total - piorTipo.certos} erro
+              {piorTipo.total - piorTipo.certos > 1 ? "s" : ""} em{" "}
+              {piorTipo.total} mãos.
+            </p>
+          ) : (
+            <p className="text-lg text-muted-foreground">
+              Nenhum erro nesta sessão.
+            </p>
+          )}
+          <Card className="grid w-full gap-3 rounded-2xl p-5 text-left">
+            <h3 className="font-bold">Por tipo de board</h3>
+            {porTipo.map((x) => {
+              const p = Math.round((x.certos / x.total) * 100)
+              return (
+                <div key={x.nome} className="grid gap-1">
+                  <div className="flex justify-between gap-3">
+                    <span>{x.nome}</span>
+                    <span className="text-muted-foreground">
+                      {x.certos} de {x.total} ·{" "}
+                      <strong className="text-foreground">{p}%</strong>
+                    </span>
+                  </div>
+                  <div className="h-2 overflow-hidden rounded-full bg-muted">
+                    <div
+                      className={cn(
+                        "h-full rounded-full",
+                        p >= 70 ? "bg-primary" : "bg-destructive"
+                      )}
+                      style={{ width: `${p}%` }}
+                    />
+                  </div>
+                </div>
+              )
+            })}
+            {motivos.length > 0 && (
+              <>
+                <h3 className="mt-2 font-bold">Tipo de erro</h3>
+                {motivos.map((m) => (
+                  <div key={m.nome} className="flex justify-between gap-3">
+                    <span>{m.nome}</span>
+                    <strong>{m.n}</strong>
+                  </div>
+                ))}
+              </>
+            )}
+          </Card>
           <p className="text-lg text-muted-foreground">
             Quer levar esta sessão para a Análise? Sessões de teste ficam de
             fora.
