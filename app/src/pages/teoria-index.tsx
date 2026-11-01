@@ -107,7 +107,7 @@ export default function TeoriaIndex() {
           <section key={g.nome} aria-labelledby={`g-${g.nome}`}>
             <h2
               id={`g-${g.nome}`}
-              className="mb-4 text-2xl font-bold tracking-tight uppercase"
+              className="mb-4 text-center text-2xl font-bold tracking-tight uppercase"
             >
               {g.nome}
             </h2>
