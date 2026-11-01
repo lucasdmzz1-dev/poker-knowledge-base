@@ -10,6 +10,8 @@
     --font-heading: var(--font-sans);
     --font-sans: 'Schibsted Grotesk Variable', system-ui, sans-serif;
     --font-serif: 'Source Serif 4 Variable', Georgia, serif;
+    --color-felt: var(--felt);
+    --color-felt-line: var(--felt-line);
     --color-check: #3bc9db;
     --color-b25: #ffa8a0;
     --color-b50: #ff6b6b;
@@ -134,32 +136,34 @@
     }
 }
 
-/* Tema do Poker KB: sempre escuro, destaque verde */
+/* Tema do Poker KB: sempre escuro, grafite neutro com destaque verde */
 .dark {
-    --background: #0b1317;
-    --foreground: #e9f1f4;
-    --card: #13222a;
-    --card-foreground: #e9f1f4;
-    --popover: #13222a;
-    --popover-foreground: #e9f1f4;
-    --primary: #7be7a3;
-    --primary-foreground: #052512;
-    --secondary: #1a2f39;
-    --secondary-foreground: #e9f1f4;
-    --muted: #1a2f39;
-    --muted-foreground: #93a9b6;
-    --accent: #1a2f39;
-    --accent-foreground: #e9f1f4;
+    --background: #0d0e10;
+    --foreground: #eceef0;
+    --card: #16181b;
+    --card-foreground: #eceef0;
+    --popover: #16181b;
+    --popover-foreground: #eceef0;
+    --primary: #8ff0a8;
+    --primary-foreground: #06210f;
+    --secondary: #1f2226;
+    --secondary-foreground: #eceef0;
+    --muted: #1f2226;
+    --muted-foreground: #9aa1a8;
+    --accent: #1f2226;
+    --accent-foreground: #eceef0;
     --destructive: #ff8787;
-    --border: #27414d;
-    --input: #27414d;
-    --ring: #7be7a3;
+    --border: #2c3035;
+    --input: #2c3035;
+    --ring: #8ff0a8;
     --radius: 0.875rem;
+    --felt: #15201b;
+    --felt-line: #25382f;
 }
 
 /* Superfícies do navegador, tematizadas com a paleta */
 ::selection { background: color-mix(in srgb, var(--primary) 35%, transparent); color: var(--foreground); }
-html { scrollbar-color: #2c4350 var(--background); scrollbar-width: thin; }
+html { scrollbar-color: #343940 var(--background); scrollbar-width: thin; }
 a { text-underline-offset: 0.2em; }
 
 

@@ -1638,9 +1638,9 @@
     "semantic_hash": ""
   },
   "app/src/components/layout.tsx": {
-    "mtime": 1793505982.619774,
-    "seen": 1793506022.0254388,
-    "ast_hash": "fdc1da9eff2a49035edebc094aebb71a",
+    "mtime": 1793506260.501144,
+    "seen": 1793506296.4700181,
+    "ast_hash": "c3ffcc0524d4ce13205d794ca904deb3",
     "semantic_hash": ""
   },
   "app/src/components/poker/cards.tsx": {
@@ -1758,9 +1758,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793506086.0476985,
-    "seen": 1793506120.049523,
-    "ast_hash": "0c368cca079febe131b000bc6e36cb19",
+    "mtime": 1793506155.3188486,
+    "seen": 1793506296.4740534,
+    "ast_hash": "9ee9fe519015dcf9694db182921f8b6d",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {

@@ -307,7 +307,7 @@ export default function Pratica() {
         <span>{acertos} acertos</span>
       </div>
 
-      <div className="grid justify-items-center gap-6 rounded-[28px] border border-[#1d4034] bg-[#0f241e] px-5 pt-9 pb-8">
+      <div className="grid justify-items-center gap-6 rounded-[28px] border border-felt-line bg-felt px-5 pt-9 pb-8">
         <p className="max-w-[52ch] text-center text-muted-foreground">
           {mod15.spot}. Você aposta ou dá check?
         </p>
