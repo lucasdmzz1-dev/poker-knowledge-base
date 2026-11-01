@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { ComparacaoHud, ExploradorHud } from "@/components/analise/hud"
 import { PrintsDoMes } from "@/components/analise/prints"
 import { Secao, CAMPO } from "@/components/analise/secao"
 import {
@@ -32,7 +33,7 @@ export function useLeaks() {
   return { leaks, salvar }
 }
 
-export function LeaksDoMes({
+function LeaksLista({
   leaks,
   salvar,
 }: {
@@ -320,7 +321,7 @@ export function LeaksDoMes({
   )
 }
 
-export function Comparacao({ leaks }: { leaks: Leak[] }) {
+function ComparacaoLeaks({ leaks }: { leaks: Leak[] }) {
   const meses = mesesDe(leaks)
   const [a, setA] = useState<string | null>(null)
   const [b, setB] = useState<string | null>(null)
@@ -447,5 +448,96 @@ export function Comparacao({ leaks }: { leaks: Leak[] }) {
         </table>
       </div>
     </Secao>
+  )
+}
+
+function Vista<T extends string>({
+  valor,
+  opcoes,
+  onChange,
+}: {
+  valor: T
+  opcoes: readonly (readonly [T, string])[]
+  onChange: (v: T) => void
+}) {
+  return (
+    <div
+      role="tablist"
+      aria-label="Vista"
+      className="mb-8 flex flex-wrap gap-2"
+    >
+      {opcoes.map(([id, nome]) => (
+        <button
+          key={id}
+          type="button"
+          role="tab"
+          aria-selected={valor === id}
+          onClick={() => onChange(id)}
+          className={cn(
+            "cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition-[background-color,border-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.97]",
+            valor === id
+              ? "border-foreground bg-secondary text-foreground"
+              : "text-muted-foreground hover:text-foreground"
+          )}
+        >
+          {nome}
+        </button>
+      ))}
+    </div>
+  )
+}
+
+export function LeaksDoMes(props: {
+  leaks: Leak[]
+  salvar: (l: Leak[]) => void
+}) {
+  const [vista, setVista] = useState<"leaks" | "stats">("leaks")
+  return (
+    <div>
+      <Vista
+        valor={vista}
+        onChange={setVista}
+        opcoes={[
+          ["leaks", "Leaks do mês"],
+          ["stats", "Todas as stats do HUD"],
+        ]}
+      />
+      {vista === "leaks" ? (
+        <LeaksLista {...props} />
+      ) : (
+        <Secao
+          titulo="Todas as stats do mês"
+          lead="As stats gerais que você recebe todo mês, por seção. Busque pelo nome, filtre as que estão fora da meta e use a estrela para levar uma stat para a comparação."
+        >
+          <ExploradorHud />
+        </Secao>
+      )}
+    </div>
+  )
+}
+
+export function Comparacao({ leaks }: { leaks: Leak[] }) {
+  const [vista, setVista] = useState<"leaks" | "stats">("stats")
+  return (
+    <div>
+      <Vista
+        valor={vista}
+        onChange={setVista}
+        opcoes={[
+          ["stats", "Stats do HUD"],
+          ["leaks", "Leaks"],
+        ]}
+      />
+      {vista === "leaks" ? (
+        <ComparacaoLeaks leaks={leaks} />
+      ) : (
+        <Secao
+          titulo="Comparação das stats do HUD"
+          lead="O que mudou de um mês para o outro, da maior mudança para a menor. As stats que você fixou com a estrela aparecem primeiro."
+        >
+          <ComparacaoHud />
+        </Secao>
+      )}
+    </div>
   )
 }
