@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils"
 
 interface Tema {
   nome: string
-  modulo?: string
   to?: string
 }
 
@@ -13,10 +12,7 @@ interface Tema {
 const GRUPOS: { nome: string; temas: Tema[] }[] = [
   {
     nome: "Geral",
-    temas: [
-      { nome: "Reta Final", modulo: "12" },
-      { nome: "Introdução ao ICM", modulo: "13" },
-    ],
+    temas: [{ nome: "Reta Final" }, { nome: "Introdução ao ICM" }],
   },
   {
     nome: "Pré-flop",
@@ -24,21 +20,20 @@ const GRUPOS: { nome: string; temas: Tema[] }[] = [
   },
   {
     nome: "Blind war",
-    temas: [{ nome: "BB Raise Pot vs SB", modulo: "17" }],
+    temas: [{ nome: "BB Raise Pot vs SB" }],
   },
   {
     nome: "Flop",
     temas: [
-      { nome: "C-Bet IP Short Stack", modulo: "01" },
+      { nome: "C-Bet IP Short Stack" },
       { nome: "C-Bet IP e 2nd Barrel" },
-      { nome: "C-Bet OOP", modulo: "05" },
+      { nome: "C-Bet OOP" },
       { nome: "Lead no Flop e Barrel no Turn" },
-      { nome: "Check-Raise Deep Stack", modulo: "07" },
-      { nome: "Check-Raise Short Stack", modulo: "06" },
-      { nome: "Multiway", modulo: "10" },
+      { nome: "Check-Raise Deep Stack" },
+      { nome: "Check-Raise Short Stack" },
+      { nome: "Multiway" },
       {
         nome: "Bet vs Missed C-Bet",
-        modulo: "15",
         to: "/teoria/bet-vs-missed",
       },
     ],
@@ -48,14 +43,14 @@ const GRUPOS: { nome: string; temas: Tema[] }[] = [
     temas: [
       { nome: "2nd Barrel IP" },
       { nome: "2nd Barrel OOP" },
-      { nome: "Probe Turn", modulo: "14" },
+      { nome: "Probe Turn" },
     ],
   },
   {
     nome: "River",
     temas: [
-      { nome: "Bet Check Bet", modulo: "09" },
-      { nome: "3rd Barrel e vs 3rd Barrel", modulo: "04" },
+      { nome: "Bet Check Bet" },
+      { nome: "3rd Barrel e vs 3rd Barrel" },
       { nome: "XC no River" },
     ],
   },
@@ -70,7 +65,7 @@ const GRUPOS: { nome: string; temas: Tema[] }[] = [
   },
   {
     nome: "PKO",
-    temas: [{ nome: "BTN contra 1 open", modulo: "16" }],
+    temas: [{ nome: "BTN contra 1 open" }],
   },
 ]
 
@@ -83,10 +78,9 @@ function Cartao({ tema }: { tema: Tema }) {
   )
   const inner = (
     <>
-      <span className="min-w-[2ch] text-muted-foreground tabular-nums">
-        {tema.modulo ?? "–"}
+      <span className="flex-1 font-medium tracking-wide uppercase">
+        {tema.nome}
       </span>
-      <span className="flex-1 font-medium">{tema.nome}</span>
       <Badge variant={on ? "default" : "outline"}>
         {on ? "Disponível" : "Em breve"}
       </Badge>
@@ -113,7 +107,7 @@ export default function TeoriaIndex() {
           <section key={g.nome} aria-labelledby={`g-${g.nome}`}>
             <h2
               id={`g-${g.nome}`}
-              className="mb-4 text-2xl font-bold tracking-tight"
+              className="mb-4 text-2xl font-bold tracking-tight uppercase"
             >
               {g.nome}
             </h2>
