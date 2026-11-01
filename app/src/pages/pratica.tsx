@@ -53,14 +53,14 @@ const ACOES: {
     rotulo: "BET 25%",
     sub: `${tamanhoBB(0.25)} bb`,
     tecla: "1",
-    cor: "bg-[#a4545a] hover:bg-[#b4636a]",
+    cor: "bg-[#b7791f] hover:bg-[#c98a2b]",
   },
   {
     a: "B50",
     rotulo: "BET 50%",
     sub: `${tamanhoBB(0.5)} bb`,
     tecla: "2",
-    cor: "bg-[#8a3a41] hover:bg-[#9b4a52]",
+    cor: "bg-[#a63a3a] hover:bg-[#b84a4a]",
   },
 ]
 
@@ -345,9 +345,11 @@ export default function Pratica() {
 
   return (
     <main className="mx-auto max-w-[1080px] px-4 pt-6 pb-20 md:px-5">
-      <BarraAcoes opener={opener} agora={resp ? resp : "Tomar ação"} />
+      <div className="mx-auto mb-3 max-w-[880px]">
+        <BarraAcoes opener={opener} agora={resp ? resp : "Tomar ação"} />
+      </div>
 
-      <div className="mt-4">
+      <div>
         <Mesa
           opener={opener}
           board={atual.board}
@@ -359,7 +361,7 @@ export default function Pratica() {
         />
       </div>
 
-      <div className="mx-auto mt-4 grid max-w-[1000px] grid-cols-3 gap-2 md:gap-3">
+      <div className="mx-auto mt-4 grid max-w-[880px] grid-cols-3 gap-2 md:gap-3">
         {ACOES.map(({ a, rotulo, sub, tecla, cor }) => (
           <button
             key={a}

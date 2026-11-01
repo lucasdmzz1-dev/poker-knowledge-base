@@ -28,7 +28,7 @@ function Passo({
         </div>
         <div>
           <p className="text-sm text-muted-foreground">Passo {n}</p>
-          <h3 className="mt-1 text-2xl font-bold tracking-tight">{titulo}</h3>
+          <h2 className="mt-1 text-2xl font-bold tracking-tight">{titulo}</h2>
           <p className="mt-2 max-w-[34ch] text-muted-foreground">{texto}</p>
         </div>
         <span

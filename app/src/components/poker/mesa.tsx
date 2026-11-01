@@ -1,24 +1,25 @@
 import type { CSSProperties } from "react"
-import { Dices, Flame, Spade } from "lucide-react"
+import { Flame, Spade } from "lucide-react"
 import { Cards, RngPlate } from "@/components/poker/cards"
 import { cn } from "@/lib/utils"
 
 export type Pos = "UTG" | "UTG1" | "LJ" | "HJ" | "CO" | "BTN" | "SB" | "BB"
 export type Opener = "HJ" | "CO"
 
-// Ordem de ação no pré-flop, da esquerda para a direita.
+// Ordem de ação no pré-flop.
 const ORDEM: Pos[] = ["UTG", "UTG1", "LJ", "HJ", "CO", "BTN", "SB", "BB"]
 
-// Com o herói no BTN (embaixo, no centro), o resto da mesa gira a partir dele.
+// [x, y, x no celular], em % da mesa. Os assentos ficam sobre a borda do oval,
+// que vai de 6% a 94% na horizontal e de 12% a 88% na vertical.
 const POS_TELA: Record<Pos, [x: number, y: number, xCelular: number]> = {
-  BTN: [50, 84, 50],
-  SB: [26, 84, 28],
-  BB: [11, 50, 8],
-  UTG: [26, 16, 22],
-  UTG1: [50, 16, 50],
-  LJ: [74, 16, 78],
-  HJ: [89, 50, 92],
-  CO: [78, 84, 91],
+  BTN: [50, 88, 50],
+  SB: [26, 88, 24],
+  BB: [6, 50, 7],
+  UTG: [26, 12, 24],
+  UTG1: [50, 12, 50],
+  LJ: [74, 12, 76],
+  HJ: [94, 50, 93],
+  CO: [74, 88, 88],
 }
 
 const STACK = 40
@@ -38,8 +39,45 @@ function stackNaMesa(pos: Pos, opener: Opener): number {
   return STACK
 }
 
-function estaNoPote(pos: Pos, opener: Opener): boolean {
-  return pos === opener || pos === "BTN"
+function Ficha({
+  nome,
+  stack,
+  acao,
+  destaque,
+}: {
+  nome: string
+  stack?: number
+  acao: string
+  destaque?: "abriu" | "vez"
+}) {
+  return (
+    <span
+      className={cn(
+        "flex shrink-0 items-center gap-1.5 rounded-md border py-0.5 pr-0.5 pl-2 text-xs",
+        destaque === "vez" && "border-primary",
+        destaque === "abriu" && "border-b50"
+      )}
+    >
+      <span className="text-muted-foreground">
+        {nome}
+        {stack !== undefined && (
+          <b className="ml-1 font-bold text-foreground">{stack}</b>
+        )}
+      </span>
+      <span
+        className={cn(
+          "rounded px-2 py-0.5 font-medium",
+          destaque === "abriu"
+            ? "bg-b50 text-[#1a0907]"
+            : destaque === "vez"
+              ? "text-primary"
+              : "bg-muted text-muted-foreground"
+        )}
+      >
+        {acao}
+      </span>
+    </span>
+  )
 }
 
 export function BarraAcoes({
@@ -49,50 +87,47 @@ export function BarraAcoes({
   opener: Opener
   agora: string
 }) {
+  // Folds seguidos viram uma ficha só, para a barra caber numa linha curta.
+  const fichas: {
+    nome: string
+    stack?: number
+    acao: string
+    destaque?: "abriu"
+  }[] = []
+  let folds: Pos[] = []
+  const fechaFolds = () => {
+    if (folds.length === 0) return
+    const nome =
+      folds.length === 1 ? folds[0] : `${folds[0]} a ${folds[folds.length - 1]}`
+    fichas.push({ nome, acao: "Fold" })
+    folds = []
+  }
+  for (const p of ORDEM) {
+    if (p === opener) {
+      fechaFolds()
+      fichas.push({
+        nome: p,
+        stack: STACK,
+        acao: `Raise ${ABERTURA}`,
+        destaque: "abriu",
+      })
+    } else if (p === "BTN") {
+      fechaFolds()
+      fichas.push({ nome: p, stack: STACK, acao: "Call" })
+    } else folds.push(p)
+  }
+  fechaFolds()
   return (
     <div
-      className="flex [scrollbar-width:none] items-center gap-1.5 overflow-x-auto pb-1 text-sm whitespace-nowrap [&::-webkit-scrollbar]:hidden"
+      className="flex flex-wrap items-center gap-1.5"
       aria-label="Ações até aqui"
     >
-      {ORDEM.map((p) => {
-        const acao =
-          p === opener ? `Raise ${ABERTURA}` : p === "BTN" ? "Call" : "Fold"
-        return (
-          <span
-            key={p}
-            className="flex shrink-0 items-center gap-2 rounded-lg border bg-card py-1 pr-1 pl-2.5"
-          >
-            <span className="text-muted-foreground">
-              {p} <b className="font-bold text-foreground">{STACK}</b>
-            </span>
-            <span
-              className={cn(
-                "rounded-md px-2.5 py-1 font-medium",
-                p === opener ? "bg-secondary" : "bg-muted text-muted-foreground"
-              )}
-            >
-              {acao}
-            </span>
-          </span>
-        )
-      })}
-      <span className="shrink-0 px-1 text-muted-foreground">Flop</span>
-      <span className="flex shrink-0 items-center gap-2 rounded-lg border bg-card py-1 pr-1 pl-2.5">
-        <span className="text-muted-foreground">
-          {opener} <b className="font-bold text-foreground">{STACK_EFETIVO}</b>
-        </span>
-        <span className="rounded-md bg-muted px-2.5 py-1 font-medium">
-          Check
-        </span>
-      </span>
-      <span className="flex shrink-0 items-center gap-2 rounded-lg border border-primary py-1 pr-1 pl-2.5">
-        <span className="text-primary">
-          BTN <b className="font-bold">{STACK_EFETIVO}</b>
-        </span>
-        <span className="rounded-md px-2.5 py-1 text-muted-foreground">
-          {agora}
-        </span>
-      </span>
+      {fichas.map((f) => (
+        <Ficha key={f.nome} {...f} />
+      ))}
+      <span className="px-1 text-xs text-muted-foreground">Flop</span>
+      <Ficha nome={opener} stack={STACK_EFETIVO} acao="Check" />
+      <Ficha nome="BTN" stack={STACK_EFETIVO} acao={agora} destaque="vez" />
     </div>
   )
 }
@@ -100,12 +135,13 @@ export function BarraAcoes({
 function Assento({ pos, opener }: { pos: Pos; opener: Opener }) {
   const [x, y, xm] = POS_TELA[pos]
   const heroi = pos === "BTN"
-  const noPote = estaNoPote(pos, opener)
+  const abriu = pos === opener
+  const noPote = heroi || abriu
   return (
     <div
       className={cn(
         "absolute left-(--xm) flex flex-col items-center sm:left-(--x)",
-        !noPote && "opacity-40"
+        !noPote && "opacity-30"
       )}
       style={
         {
@@ -119,7 +155,10 @@ function Assento({ pos, opener }: { pos: Pos; opener: Opener }) {
       <div
         className={cn(
           "grid size-(--s) place-content-center rounded-full border-2 bg-card text-center leading-tight",
-          heroi ? "border-primary" : "border-border"
+          heroi && "border-primary",
+          abriu &&
+            "border-b50 shadow-[0_0_0_3px_color-mix(in_srgb,var(--color-b50)_25%,transparent)]",
+          !noPote && "border-border"
         )}
       >
         <span className="text-[clamp(0.6rem,1.35vw,0.95rem)] font-bold">
@@ -129,9 +168,14 @@ function Assento({ pos, opener }: { pos: Pos; opener: Opener }) {
           {stackNaMesa(pos, opener)}
         </span>
       </div>
-      {pos === opener && (
-        <span className="mt-1 rounded-full bg-secondary px-2 py-0.5 text-[clamp(0.6rem,1.1vw,0.8rem)] font-medium">
-          Check
+      {abriu && (
+        <span className="absolute top-full mt-1 flex flex-col items-center gap-0.5 whitespace-nowrap">
+          <span className="rounded-full bg-b50 px-2 py-0.5 text-[clamp(0.6rem,1.05vw,0.78rem)] font-bold text-[#1a0907]">
+            Abriu {ABERTURA}
+          </span>
+          <span className="rounded-full bg-secondary px-2 py-0.5 text-[clamp(0.6rem,1.05vw,0.78rem)] font-medium">
+            Check
+          </span>
         </span>
       )}
       {heroi && (
@@ -163,58 +207,54 @@ export function Mesa({
   total: number
   sequencia: number
 }) {
-  const estilo = { "--s": "clamp(44px, 8.2vw, 76px)" } as CSSProperties
+  const estilo = { "--s": "clamp(40px, 7.2vw, 66px)" } as CSSProperties
   return (
-    <div
-      className="relative mx-auto aspect-[1.25/1] w-full max-w-[1000px] sm:aspect-[2/1]"
-      style={estilo}
-      role="group"
-      aria-label={`Mesa: herói no BTN contra ${opener}, pote de ${POTE_BB} bb`}
-    >
-      <div
-        className="absolute inset-x-[7%] inset-y-[10%] rounded-[999px] border-2 border-felt-line bg-felt/50"
-        aria-hidden="true"
-      />
-
-      {ORDEM.map((p) => (
-        <Assento key={p} pos={p} opener={opener} />
-      ))}
-
-      <div className="absolute top-[46%] left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2">
-        <Cards codes={board} size="mesa" />
-        <p className="text-center text-[clamp(0.75rem,1.6vw,1.1rem)] leading-tight">
-          <span className="text-muted-foreground">Pote </span>
-          <b className="tabular-nums">{POTE_BB} bb</b>
-        </p>
-      </div>
-
-      <div className="absolute top-[84%] left-[calc(50%+var(--s)/2+8px)] -translate-y-1/2">
-        <Cards codes={hero} size="mesaHero" />
-      </div>
-
-      <span
-        className="absolute top-1 left-1 flex items-center gap-1.5 text-sm text-muted-foreground tabular-nums"
-        title="Acertos seguidos"
-      >
-        <Flame className="size-4" aria-hidden="true" />
-        {sequencia}
-      </span>
-      <span
-        className="absolute top-1 right-1 flex items-center gap-1.5 text-sm text-muted-foreground tabular-nums"
-        title="Progresso do treino"
-      >
-        <Spade className="size-4" aria-hidden="true" />
-        {mao} / {total}
-      </span>
-      <div
-        className="absolute bottom-0 left-0 flex items-center gap-2"
-        title="RNG de 1 a 100"
-      >
-        <Dices className="size-5 text-muted-foreground" aria-hidden="true" />
+    <div className="mx-auto w-full max-w-[880px]" style={estilo}>
+      <div className="mb-2 flex items-center justify-between">
         <RngPlate
           value={roll}
-          className="min-w-0 border-[3px] px-2.5 py-0.5 text-[clamp(1.4rem,3vw,2.2rem)]"
+          className="min-w-0 border-[3px] px-3 py-0.5 text-[clamp(1.4rem,3vw,2rem)]"
         />
+        <div className="flex items-center gap-4 text-sm text-muted-foreground tabular-nums">
+          <span className="flex items-center gap-1.5" title="Acertos seguidos">
+            <Flame className="size-4" aria-hidden="true" />
+            {sequencia}
+          </span>
+          <span
+            className="flex items-center gap-1.5"
+            title="Progresso do treino"
+          >
+            <Spade className="size-4" aria-hidden="true" />
+            {mao} / {total}
+          </span>
+        </div>
+      </div>
+
+      <div
+        className="relative aspect-[1.25/1] w-full sm:aspect-[2.2/1]"
+        role="group"
+        aria-label={`Mesa: herói no BTN contra ${opener}, pote de ${POTE_BB} bb`}
+      >
+        <div
+          className="absolute inset-x-[6%] inset-y-[12%] rounded-[999px] border-2 border-felt-line bg-felt/50"
+          aria-hidden="true"
+        />
+
+        {ORDEM.map((p) => (
+          <Assento key={p} pos={p} opener={opener} />
+        ))}
+
+        <div className="absolute top-[47%] left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1.5">
+          <Cards codes={board} size="mesa" />
+          <p className="text-center text-[clamp(0.75rem,1.6vw,1.05rem)] leading-tight">
+            <span className="text-muted-foreground">Pote </span>
+            <b className="tabular-nums">{POTE_BB} bb</b>
+          </p>
+        </div>
+
+        <div className="absolute top-[88%] left-[calc(50%+var(--s)/2+8px)] -translate-y-1/2">
+          <Cards codes={hero} size="mesaHero" />
+        </div>
       </div>
     </div>
   )

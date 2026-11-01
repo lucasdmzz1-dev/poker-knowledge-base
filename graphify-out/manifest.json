@@ -1752,15 +1752,15 @@
     "semantic_hash": ""
   },
   "app/src/pages/home.tsx": {
-    "mtime": 1793506564.35414,
-    "seen": 1793506647.3096583,
-    "ast_hash": "c03b04b468496baa4a4b521af700bb0a",
+    "mtime": 1793530584.1840782,
+    "seen": 1793530628.1442146,
+    "ast_hash": "024bce5631e748efa8379e380afe2fe6",
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793506981.7344868,
-    "seen": 1793529625.1910672,
-    "ast_hash": "bffac7103f44208a5750eabfaa073d6b",
+    "mtime": 1793530533.2059026,
+    "seen": 1793530628.1442146,
+    "ast_hash": "00ee1823ca9747b79b76de2d1224cbbc",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -1770,9 +1770,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/teoria-index.tsx": {
-    "mtime": 1793506086.0824826,
-    "seen": 1793506120.049523,
-    "ast_hash": "072156ff259adf80cf374e002efeee15",
+    "mtime": 1793530590.3933094,
+    "seen": 1793530628.1442146,
+    "ast_hash": "0b8137c21b24234f614b73bd89b4c0ef",
     "semantic_hash": ""
   },
   "app/tsconfig.app.json": {
@@ -2580,9 +2580,9 @@
     "semantic_hash": ""
   },
   "app/src/components/poker/mesa.tsx": {
-    "mtime": 1793507045.9077017,
-    "seen": 1793529625.1880665,
-    "ast_hash": "5a5d389535ed944cace819ccd2055147",
+    "mtime": 1793530590.4347987,
+    "seen": 1793530628.1402135,
+    "ast_hash": "abca55acedbedc79af15d4a28384d679",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {
