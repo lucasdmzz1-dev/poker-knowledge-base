@@ -1,17 +1,17 @@
 # Graph Report - project-visual-design-e7ad30  (2026-11-01)
 
 ## Corpus Check
-- 263 files · ~244,659 words
+- 293 files · ~247,384 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 6 file(s) not represented in the graph (top: .csv 3, (none) 2, .css 1)
+- Unclassified: 9 file(s) not represented in the graph (top: (none) 5, .csv 3, .css 1)
 
 ## Summary
-- 1727 nodes · 2756 edges · 160 communities (129 shown, 31 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 192 edges (avg confidence: 0.87)
+- 1972 nodes · 3207 edges · 181 communities (144 shown, 37 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 192 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c3d2fb79`
+- Built from commit: `baa01bf7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,22 +26,22 @@
 - Second Barrel IP
 - Regras Consolidadas — C-Bet OOP
 - Bet vs Missed C-Bet (Módulo 15)
-- 06 - XR SHORT GUIDELINE.md
+- Exercícios — XR Short Stack
 - Multiway Pot (EP abre, BTN paga, BB paga — 40bb)
 - Value Bet (regras)
 - Pendências – ICM e Risk Premium
 - Buckets de frequência 100% / 75% / 50% / 25%
 - C-Bet IP Short Stack (Módulo 01)
-- Poker Knowledge Base
+- pratica.tsx
 - 08 - 3BET POT GUIDELINE.md
 - Exemplo 88 river A dobrado (B70 value)
 - KB-003 — Module Template
-- 02 - CBET IP 40BB GUIDELINE.md
+- 00-Home.md
 - Rule
 - Third Barrel decisões
 - 07 - XR DEEP GUIDELINE.md
 - Índice de módulos
-- KB-001 — Project Architecture
+- App.tsx
 - XR Deep boards conectados
 - XR Deep boards secos
 - MAPA-PRE-POS.md
@@ -89,7 +89,7 @@
 - Regra 10 — Classifique o board antes de escolher o bucket
 - 🏠 Home — Poker Knowledge Base
 - Dicionário dos dados das árvores de RFI
-- Site do Poker KB (protótipo do módulo 15)
+- components.json
 - Vs Third Barrel
 - 10. DINÂMICO DOBRA DE CARTA
 - 7. DINÂMICO FLUSH
@@ -102,7 +102,7 @@
 - SPLIT ALL-IN
 - SPLIT B70
 - 5. BLANK
-- 3. XR por Valor
+- react
 - Parte 5 — Stack e risco de cair
 - Parte 2 — Os três tipos de stack
 - Guideline em imagem do instrutor (segunda versão)
@@ -114,7 +114,7 @@
 - Parte 1 — O ponto de partida: o range de check atrás do BTN
 - 01 - BB RAISED POT VS SB GUIDELINE.md
 - TURN — 3BET POT
-- 8. Turns após XR Flop
+- compilerOptions
 - Parte 2 — Shove vs open de posição tardia
 - Retomada do MAIN CHAT TEORIA
 - Parte 2 — As frequências (range classes)
@@ -124,27 +124,30 @@
 - Parte 8 — Como aplicar na mesa
 - Parte 3 — Os sizes
 - Parte 5 — Como dividir o bucket na mesa
-- 9. C-Bet após XR
+- 06 - XR SHORT GUIDELINE.md
 - Parte 6 — Squeeze
-- A HIGH CONECTADO
-- A HIGH SECO
+- dependencies
+- compilerOptions
 - Parte 3 — Quando você abriu e leva 3bet
-- K-Q HIGH
-- J-T HIGH
-- HIGH COM SEGUIDA
-- LOW COM SEGUIDA
-- Regras vivas: BTN contra 1 open em PKO
-- Critério de Prioridade das Fontes (C-Bet OOP)
+- teoria-15.tsx
+- eslint.config.js
+- devDependencies
+- mod15.ts
+- package.json
+- flashcards/README.md
 - Boards Pareados (XR Deep)
 - Ordem de prioridade das fontes (ICM)
 - Decisão 2 — Cada regra começa pelo que fazer (Faça/Por quê/Exemplo)
 - 17-BB-Raised-Pot-vs-SB-Limp/04-Exercicios.md
 - 17-BB-Raised-Pot-vs-SB-Limp/02-VideoAulas.md
-- PKO: BTN contra 1 open (Módulo 16)
+- vite.config.ts
 - Banco de Correções (3BET POT)
 - 17-BB-Raised-Pot-vs-SB-Limp/09-Decisoes.md
+- scripts
 - 17-BB-Raised-Pot-vs-SB-Limp/README.md
-- Parte 2 — O que alarga ou aperta o range
+- RFI · BTN · 15bb · Vanilla · Early
+- EP / HJ
+- CO / BU
 - Changelog — BB Raised Pot vs SB
 - 17-BB-Raised-Pot-vs-SB-Limp/03-Solver.md
 - Regra Principal — Antes de escolher o size, decida o grupo de mãos
@@ -162,10 +165,29 @@
 - Notas do usuário (conhecimento de mesa)
 - Cabeçalho da árvore (SI, KOI, % do field, posições pagas)
 - 17-BB-Raised-Pot-vs-SB-Limp/08-Referencias.md
-- BBX
-- LOW SEM SEGUIDA
-- Exercícios com mãos reais do Trainer (20 a 39)
+- Valor é relativo ao range adversário
+- Site do Poker KB
+- Estratégia Split para Boards Low
+- Introdução ao Second Barrel
+- allowBuilds
 - Parte 9 — Pós-flop em reta final
+- tsconfig.json
+- Referências – C-Bet IP Short Stack
+- 6. DINÂMICO AX
+- Lei 15 — A Função da Mão Importa Mais que a Força Absoluta
+- DIFERENÇA DE STACK
+- DIFERENÇA DE POSIÇÃO
+- GUIDELINE X SOLVER
+- 2. CONCEITO CENTRAL
+- C-Bet OOP Separado de Outros Módulos
+- Contexto Obrigatório (Stack, Spot, Posição, Ranges, Street, Fonte)
+- 01.1 — SHORT STACK
+- 01.2 — DEEP STACK
+- 02.1 — SHORT STACK
+- BOARD SECO
+- BOARD SECO
+- REGRA FINAL
+- 12. PRINCÍPIO FINAL
 
 ## God Nodes (most connected - your core abstractions)
 1. `Theory Index` - 51 edges
@@ -188,8 +210,8 @@
   theory/retomada-main-teoria.md → coaching/stats/estudos-de-ranges/gerar-indice.py
 - `Pending Validations` --semantically_similar_to--> `Pendências – C-Bet IP Short Stack`  [INFERRED] [semantically similar]
   docs/00-Architecture/KB-003-Module-Template.md → theory/01-CBet-IP-Short-Stack/06-Pendencias.md
-- `Decisão 7 — Construção da KB (Exercício → Correção → Regra Consolidada → Changelog)` --semantically_similar_to--> `Change Management`  [INFERRED] [semantically similar]
-  theory/01-CBet-IP-Short-Stack/09-Decisoes.md → docs/00-Architecture/KB-001-Project-Architecture.md
+- `Pending Validations` --semantically_similar_to--> `Pendências – C-Bet IP 40bb`  [INFERRED] [semantically similar]
+  docs/00-Architecture/KB-003-Module-Template.md → theory/02-CBet-IP-40bb/06-Pendencias.md
 
 ## Import Cycles
 - None detected.
@@ -207,7 +229,7 @@
 - **Fatores que ampliam o range do BTN em PKO** — theory_tools_pko_pko_conhecimento_help_value, theory_tools_pko_pko_conhecimento_cobertura, theory_tools_pko_pko_conhecimento_risk_premium, theory_tools_pko_pko_conhecimento_dead_money_bounty, theory_tools_pko_regras_vivas_pko_btn_largura_no [INFERRED 0.85]
 - **Sizing de river por textura: blank vs board que esquisitou (B70 vs Overbet)** — theory_11_value_bet_masterclass_05_regras_consolidadas_regra_3_board_completa_draw_size_menor, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_4_board_blank_size_alto, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_5_carta_alta_nao_e_blank, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_6_dois_sizes_river, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_7_river_blank_vs_muda_nuts [INFERRED 0.85]
 
-## Communities (160 total, 31 thin omitted)
+## Communities (181 total, 37 thin omitted)
 
 ### Community 0 - "Decisões – Probe Turn"
 Cohesion: 0.22
@@ -222,8 +244,8 @@ Cohesion: 0.23
 Nodes (11): Solver — ICM e Risk Premium (25% vs 16% field left), Spot 6 — BB (21bb) contra o open do CO (64bb), Spot 4 — BTN (125bb) contra o open do HJ, Spot 3 — BTN (26bb) contra o open do LJ, Spot 9 — Blind war: SB (36,5bb) coberto pelo BB, Spot 8 — Blind war: SB (45,5bb) cobrindo o BB, Spot 10 — Blind war: SB (10,5bb) contra o BB, Spot 7 — CO (34bb) contra o open do HJ (+3 more)
 
 ### Community 3 - "Regras vivas: BTN contra 1 open em PKO"
-Cohesion: 0.18
-Nodes (19): Ordem de entrada das mãos (terços ~24%, ~29%, ~41%), Como gravar daqui para frente, config_trainer: Facing RFI, RNG OFF, Close Decisions, Dicionário do registro de mãos do PKO, pko-maos-jogadas.csv (170 mãos, 42 colunas), Sessão 3 (100 mãos, v3), Sessões 1 e 2 (70 mãos, v1 e v2), Como não me enganar (validação fora da amostra) (+11 more)
+Cohesion: 0.17
+Nodes (20): Ordem de entrada das mãos (terços ~24%, ~29%, ~41%), Como gravar daqui para frente, config_trainer: Facing RFI, RNG OFF, Close Decisions, Dicionário do registro de mãos do PKO, pko-maos-jogadas.csv (170 mãos, 42 colunas), Sessão 3 (100 mãos, v3), Sessões 1 e 2 (70 mãos, v1 e v2), Como não me enganar (validação fora da amostra) (+12 more)
 
 ### Community 4 - "Exercícios – Third Barrel"
 Cohesion: 0.31
@@ -231,27 +253,27 @@ Nodes (9): Blockers (bloquear valor, desbloquear folds naturais), Ranking de blu
 
 ### Community 5 - "Exercícios Bet Check Bet"
 Cohesion: 0.16
-Nodes (13): Alvo do Bluff (qual parte do range adversário fazer foldar), Blockers dependem do alvo do bluff, Exercício 01 — A♣9♠ em T-7-3-3-Q (High Card, CHECK), Exercício 02 — K♠3♠ com Ás no river (Dinâmico Ax, CHECK), Exercício 04 — K♦9♦ em Q-2-5-6-T (Blank, BET B70 BLUFF), Exercício 05 — 8♥8♣ em 6♣A♠K♠2♦A♦ (Dobra, BET B70 VALUE), Exercício 06 — T♣6♣ em 5♦Q♣A♠7♦K♠ (High Card, BET B100 BLUFF), Exercícios Bet Check Bet (+5 more)
+Nodes (11): Alvo do Bluff (qual parte do range adversário fazer foldar), Blockers dependem do alvo do bluff, Exercício 01 — A♣9♠ em T-7-3-3-Q (High Card, CHECK), Exercício 02 — K♠3♠ com Ás no river (Dinâmico Ax, CHECK), Exercício 04 — K♦9♦ em Q-2-5-6-T (Blank, BET B70 BLUFF), Exercício 06 — T♣6♣ em 5♦Q♣A♠7♦K♠ (High Card, BET B100 BLUFF), Exercícios Bet Check Bet, B100 (Bet Check Bet) (+3 more)
 
 ### Community 6 - "16 - PKO GUIDELINE.md"
-Cohesion: 0.09
-Nodes (20): Flashcards — PKO, Como ler este guideline, Contexto, Em 30 segundos, Guideline — PKO: BTN contra 1 open, Ligações, Limites, Parte 1 — Como o bounty entra (+12 more)
+Cohesion: 0.07
+Nodes (58): 4BET Trainer (aba Solver e Trainer), VideoAulas — PKO (fontes, sem aula em vídeo), GTO Wizard ChipEV 40bb (baseline Vanilla), Árvores dos erros do Trainer (#23, #102, #7459, #3697, #8587), Comparação Vanilla vs PKO (BTN contra CO, #5844 e #7067), Efeitos dentro de uma mesma árvore, Solver — PKO, Exercícios — PKO (39 exercícios) (+50 more)
 
 ### Community 7 - "Second Barrel IP"
-Cohesion: 0.06
-Nodes (43): B70, VideoAulas – C-Bet IP + Second Barrel, Flush High Card (B40), Flush Low Card (B70), Flashcards — Second Barrel IP, C-Bet IP + Second Barrel, Conceito Central, Equity x Nuts Advantage (+35 more)
+Cohesion: 0.05
+Nodes (48): B70, VideoAulas – C-Bet IP + Second Barrel, Flush High Card (B40), Flush Low Card (B70), Flashcards — Second Barrel IP, C-Bet IP + Second Barrel, Conceito Central, Equity x Nuts Advantage (+40 more)
 
 ### Community 8 - "Regras Consolidadas — C-Bet OOP"
-Cohesion: 0.26
-Nodes (20): Construir Pote ou Realizar Equity?, VideoAulas — C-Bet OOP, EP com Range Mais Forte vs CO com Range Mais Amplo, Low Conectado vs Low Desconectado, Solver — C-Bet OOP, Gyazos (Outputs de Solver), Regras Extraídas do Solver (C-Bet OOP), Exercícios — C-Bet OOP (+12 more)
+Cohesion: 0.19
+Nodes (22): Construir Pote ou Realizar Equity?, VideoAulas — C-Bet OOP, EP com Range Mais Forte vs CO com Range Mais Amplo, Low Conectado vs Low Desconectado, Solver — C-Bet OOP, Gyazos (Outputs de Solver), Regras Extraídas do Solver (C-Bet OOP), Exercícios — C-Bet OOP (+14 more)
 
 ### Community 9 - "Bet vs Missed C-Bet (Módulo 15)"
 Cohesion: 0.28
 Nodes (15): Best of best method (multiway antigo), VideoAulas — Bet vs Missed C-Bet, Filtrar mãos de bet vs missed no Hand2Note, Revisão de mãos do flop (AJ no A-K-2, 8-8 em board low, A-J no J-J-9), Solver — Bet vs Missed C-Bet (guideline em imagem), Padrões: B25 em boards com thin value; sem 100% no conectado high, monotone e dobrado, Exercícios — Bet vs Missed C-Bet, 34 exercícios de conceito (Bet vs Missed) (+7 more)
 
-### Community 10 - "06 - XR SHORT GUIDELINE.md"
-Cohesion: 0.08
-Nodes (48): Regra 1 — C-Bet OOP é Construção de Range, C-Bet OOP Separado de Outros Módulos, Contexto Obrigatório (Stack, Spot, Posição, Ranges, Street, Fonte), VideoAulas — XR Short Stack, Erro Comum: Transformar Realização em Agressão, Second Pair Protege o Range de Call, A High (Ac9d8h) — Sem Range de XR, Broadways (KsTd4c) (+40 more)
+### Community 10 - "Exercícios — XR Short Stack"
+Cohesion: 0.25
+Nodes (22): VideoAulas — XR Short Stack, Erro Comum: Transformar Realização em Agressão, Second Pair Protege o Range de Call, A High (Ac9d8h) — Sem Range de XR, Broadways (KsTd4c), High Card (Js9d7c), Low Card (9s7d5d), Monotone (XR Short Stack) (+14 more)
 
 ### Community 11 - "Multiway Pot (EP abre, BTN paga, BB paga — 40bb)"
 Cohesion: 0.10
@@ -259,7 +281,7 @@ Nodes (35): Capado ou não capado define a estratégia, não a posição isolada
 
 ### Community 12 - "Value Bet (regras)"
 Cohesion: 0.08
-Nodes (35): Blank real vs carta alta que parece blank, Construção de range (qual grupo de mãos compõe cada size em cada street), VideoAulas Value Bet Masterclass (19 mãos reais dos alunos), Solver Value Bet Masterclass (pendente), Exercícios Value Bet Masterclass (pendente), Miss Value, Regras Consolidadas – Value Bet Masterclass, Pendência: aula específica sobre Check-Raise ofensivo (+27 more)
+Nodes (35): Blank real vs carta alta que parece blank, VideoAulas Value Bet Masterclass (19 mãos reais dos alunos), Solver Value Bet Masterclass (pendente), Exercícios Value Bet Masterclass (pendente), Miss Value, Regras Consolidadas – Value Bet Masterclass, Pendência: aula específica sobre Check-Raise ofensivo, Pendência: exercícios formais do módulo 11 (+27 more)
 
 ### Community 13 - "Pendências – ICM e Risk Premium"
 Cohesion: 0.20
@@ -273,41 +295,41 @@ Nodes (6): Aulas futuras: blind war e c-bet em posição, Método best of best (
 Cohesion: 0.29
 Nodes (15): Draws Off Suit bloqueando Flush Draw, VideoAulas – C-Bet IP Short Stack, Solver – C-Bet IP Short Stack, SPR baixo, Exercício 05 — Escolha de Draw, Exercícios – C-Bet IP Short Stack, Regra 6 — Blockers no Short Stack, Regra 8 — Trincas no Check (+7 more)
 
-### Community 16 - "Poker Knowledge Base"
-Cohesion: 0.13
-Nodes (16): graphify, Decision Engine, Hand Analyzer, Leak Finder, Poker App, Study Planner, Trainer, Hand Analysis (+8 more)
+### Community 16 - "pratica.tsx"
+Cohesion: 0.15
+Nodes (26): Button(), buttonVariants, Card(), Checkbox(), Label(), RadioGroup(), RadioGroupItem(), ItemSessao (+18 more)
 
 ### Community 17 - "08 - 3BET POT GUIDELINE.md"
-Cohesion: 0.05
-Nodes (37): Versões 1.0–1.3 do Módulo 3BET POT, 01.1 — SHORT STACK, 01.2 — DEEP STACK, 01 — 3BET POT OOP, 02.1 — SHORT STACK, 02.2 — DEEP STACK, 02 — 3BET POT IP, 3BET POT — GUIDELINE (+29 more)
+Cohesion: 0.12
+Nodes (16): Versões 1.0–1.3 do Módulo 3BET POT, 01 — 3BET POT OOP, 02.2 — DEEP STACK, 02 — 3BET POT IP, 3BET POT — GUIDELINE, B25, B40, B70 (+8 more)
 
 ### Community 19 - "KB-003 — Module Template"
-Cohesion: 0.16
-Nodes (9): KB-000 — Poker Knowledge Base Architecture, Module Standard, Confidence Levels (High / Medium / Low), Counterexamples, Decision Order, KB-003 — Module Template, Module Completion Checklist, Pending Validations (+1 more)
+Cohesion: 0.09
+Nodes (21): graphify, KB-000 — Poker Knowledge Base Architecture, Module Standard, Confidence Levels (High / Medium / Low), Decision Engine, KB-001 — Project Architecture, Leak Finder, Poker App (+13 more)
 
-### Community 20 - "02 - CBET IP 40BB GUIDELINE.md"
-Cohesion: 0.06
-Nodes (45): Flashcards — C-Bet IP 40bb, Ajustes para Short Stack (<15bb), Board A High, Board A High, Board Broadway, Board Broadway, Board Carregado, Board Conectado (+37 more)
+### Community 20 - "00-Home.md"
+Cohesion: 0.31
+Nodes (14): Flashcards — C-Bet IP 40bb, Ajustes para Short Stack (<15bb), Guideline – C-Bet IP 40bb, Objetivo, Videoaulas – C-Bet IP 40bb, Solver – C-Bet IP 40bb, Exercícios – C-Bet IP 40bb, Regras Consolidadas – C-Bet IP 40bb (+6 more)
 
 ### Community 21 - "Rule"
-Cohesion: 0.14
-Nodes (15): Strategy Profiles (GTO / Simplified Human / Population Exploit), Board Category, Concept, Example, Exercise, Mistake Category, Module, MODULE_FLOP_OOP_XR_SHORT — Check-Raise Flop Short Stack (+7 more)
+Cohesion: 0.09
+Nodes (21): Hand Analyzer, Strategy Profiles (GTO / Simplified Human / Population Exploit), Board Category, Concept, Example, Exercise, Hand Analysis, Hand Record (+13 more)
 
 ### Community 22 - "Third Barrel decisões"
 Cohesion: 0.20
 Nodes (12): Blockers Devem Considerar Folds, Defesa Baseada no Sizing, Decisões – Third Barrel, Separação entre Range Polar e Range Linear, Regras de Defesa Simplificadas, Bluff Catchers, Third Barrel — Módulo 04 (README), MDF (Minimum Defense Frequency) (+4 more)
 
 ### Community 23 - "07 - XR DEEP GUIDELINE.md"
-Cohesion: 0.10
-Nodes (21): Flashcards, Ligações, Flashcards — C-Bet IP Short Stack, Spot Solver: Hero BB vs BTN C-Bet, Flashcards — XR Deep Stack, 10. Proteção de Range, 11. SPR e Construção de Pote, 12. Conceito Central (+13 more)
+Cohesion: 0.09
+Nodes (25): Spot Solver: Hero BB vs BTN C-Bet, 10. Proteção de Range, 11. SPR e Construção de Pote, 12. Conceito Central, 1. Construção do XR Deep Stack, 2. Slowplay no Deep Stack, 3. XR por Valor, 4. Top Pair no XR Deep (+17 more)
 
 ### Community 24 - "Índice de módulos"
 Cohesion: 0.08
 Nodes (15): Decision Engine, Documentation Order (ordem de migração), Structural Board Classification (MODULE_FUNDAMENTALS_BOARD_STRUCTURE), C-Bet Flop IP (MODULE_SRP_IP_CBET_FLOP), Second Barrel IP (MODULE_SRP_IP_SECOND_BARREL), Third Barrel IP (MODULE_SRP_IP_THIRD_BARREL), C-Bet Flop OOP (MODULE_SRP_OOP_CBET_FLOP), Second Barrel OOP (MODULE_SRP_OOP_SECOND_BARREL) (+7 more)
 
-### Community 25 - "KB-001 — Project Architecture"
-Cohesion: 0.21
-Nodes (5): KB-001 — Project Architecture, Rule Lifecycle (Active / Simplified / Experimental / Pending Validation / Deprecated / Archived), Change Record, KB-002 — Domain Model, Rule Version
+### Community 25 - "App.tsx"
+Cohesion: 0.14
+Nodes (14): App(), AREAS, Layout(), BG, NOME, SUIT, SuitKey, WIDTH (+6 more)
 
 ### Community 26 - "XR Deep boards conectados"
 Cohesion: 0.13
@@ -350,12 +372,12 @@ Cohesion: 0.25
 Nodes (7): Ligações, Notas técnicas (Chrome conectado), O que existe, Pendências, Preferências do usuário, Resultados principais, Retomada do estudo de PKO (resumo para uma conversa nova)
 
 ### Community 37 - "05 - CBET OOP 40BB GUIDELINE.md"
-Cohesion: 0.11
-Nodes (17): Flashcards — C-Bet OOP 40bb, Blockers, CO vs BTN, Conceito Principal, Conceitos de Split, Construção por Categoria de Mão, Contexto do Módulo, Draws (+9 more)
+Cohesion: 0.05
+Nodes (40): A HIGH CONECTADO, A HIGH SECO, BBX, Blockers, CO vs BTN, CO vs BTN, CO vs BTN, CO vs BTN (+32 more)
 
 ### Community 39 - "Notas de PKO e como entram no modelo"
 Cohesion: 0.21
-Nodes (17): Campo rp: Risk Premium hero vs opener, Cobertura (cobrir o opener e SB/BB), Dead money do bounty, Distância da bolha (restantes ÷ pagas), Fase do torneio (Early, Mid, Bolha, Late), Tamanho do field (N0), Help Value, ICM e PKO (Risk Premium ~metade na mesa final) (+9 more)
+Nodes (16): Campo rp: Risk Premium hero vs opener, Cobertura (cobrir o opener e SB/BB), Dead money do bounty, Distância da bolha (restantes ÷ pagas), Fase do torneio (Early, Mid, Bolha, Late), Tamanho do field (N0), Help Value, ICM e PKO (Risk Premium ~metade na mesa final) (+8 more)
 
 ### Community 40 - "SPLIT B40"
 Cohesion: 0.29
@@ -370,16 +392,16 @@ Cohesion: 0.17
 Nodes (15): All-in não entra na grade, Campo cl: 10 classes de mão (Pa, Pm, Pb, As, Ks, QJs, Sc, Ao, Bo, Oo), Campo grid: 169 células r-c em passos de 5%, Dicionário dos dados das árvores (pko-arvores-btn.json), Nó (árvore + opener; chave única id + op), Nós excluídos #8954 e #7144 (sem RP), Vanilla 40bb ChipEV (métrica de comparação), 3bet dobra com bounties maiores (6,7% → 13,5%) (+7 more)
 
 ### Community 43 - "09 - BET CHECK BET GUIDELINE.md"
-Cohesion: 0.17
-Nodes (20): Solver BCB: validar frequência, sizes e composição dos ranges, Exercício 03 — J♣T♣ em 9♦5♦T♣K♠4♦ (Dinâmico Flush, BET B70), Regras Consolidadas Bet Check Bet, Valor é relativo ao range adversário, Pendências Bet Check Bet, Changelog Bet Check Bet — Versão 1.0, Referências Bet Check Bet, Flashcards — BET CHECK BET (+12 more)
+Cohesion: 0.29
+Nodes (14): Solver BCB: validar frequência, sizes e composição dos ranges, Regras Consolidadas Bet Check Bet, Pendências Bet Check Bet, Changelog Bet Check Bet — Versão 1.0, Referências Bet Check Bet, Flashcards — BET CHECK BET, 1. OBJETIVO DO MÓDULO, 3. PRINCÍPIO DOS BLUFFS (+6 more)
 
 ### Community 44 - "Parte 3 — Adaptações na prática"
 Cohesion: 0.14
 Nodes (14): Parte 3 — Adaptações na prática, Regra 19 — Conheça a referência antes de adaptar, Regra 20 — Antes de abrir, olhe BB, BTN e SB, Regra 21 — LJ cobrindo todos: expanda, Regra 22 — HJ coberto por todos: reduza, Regra 23 — Quem cobre você joga mais contra você, Regra 24 — Coberto e enfrentando um open: sem flat, Regra 25 — Coberto, jogar agressivo reduz a variância (+6 more)
 
 ### Community 45 - "estudos-de-ranges/README.md"
-Cohesion: 0.13
-Nodes (11): Índice das árvores, RFI · BTN · 15bb, Arquivos, Filtros usados, Leituras, Ligações, Pendências, RFI · BTN · 15bb · Vanilla · Early (+3 more)
+Cohesion: 0.23
+Nodes (4): Índice das árvores, RFI · BTN · 15bb, RFI · BTN · 20bb · Vanilla · Early, RFI · BTN · 20bb · Vanilla · Mid
 
 ### Community 46 - "17-BB-Raised-Pot-vs-SB-Limp/06-Pendencias.md"
 Cohesion: 0.06
@@ -430,7 +452,7 @@ Cohesion: 0.20
 Nodes (9): Classes, Grade 169 (raise/all-in, em %), Identificação do spot, Mesa (stack em bb), Observações, Range do BTN, Risk Premium (RP), Torneio (+1 more)
 
 ### Community 58 - "Árvore #10192"
-Cohesion: 0.22
+Cohesion: 0.20
 Nodes (9): Classes, Grade 169 (raise/all-in, em %), Identificação do spot, Mesa (stack em bb), Observações, Range do BTN, Risk Premium (RP), Torneio (+1 more)
 
 ### Community 59 - "Árvore #10546"
@@ -458,7 +480,7 @@ Cohesion: 0.31
 Nodes (10): Blind war no ICM, Cinco perguntas antes de agir (ICM), Curva do ICM, Módulo 13 — ICM e Risk Premium, Escala de RP de 5, 10 e 15%, Diferença ICM vs ChipEV, Quem cobre quem, Risk Premium (RP) (+2 more)
 
 ### Community 65 - "Árvore #5064"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (9): Classes, Grade 169 (raise/all-in, em %), Identificação do spot, Mesa (stack em bb), Observações, Range do BTN, Risk Premium (RP), Torneio (+1 more)
 
 ### Community 66 - "3. Board High Card Conectado"
@@ -493,9 +515,9 @@ Nodes (8): Arquitetura, Esta semana, Estudar por tema (tags), Flashcards, 🏠 H
 Cohesion: 0.25
 Nodes (8): Campos de cada registro, Cuidados, Derivadas (calculadas na análise, não gravadas), Dicionário dos dados das árvores de RFI, Fase (`fase`), Identificação do spot (obrigatória em toda árvore), Ligações, Vanilla e PKO: o que muda
 
-### Community 74 - "Site do Poker KB (protótipo do módulo 15)"
-Cohesion: 0.33
-Nodes (5): Como abrir, Como o trainer decide, Estrutura, Regras dos dados, Site do Poker KB (protótipo do módulo 15)
+### Community 74 - "components.json"
+Cohesion: 0.09
+Nodes (21): aliases, components, hooks, lib, ui, utils, iconLibrary, menuAccent (+13 more)
 
 ### Community 75 - "Vs Third Barrel"
 Cohesion: 0.25
@@ -542,12 +564,12 @@ Cohesion: 0.29
 Nodes (7): BLEFE, BOARD Tx / Jx / 98xs, CHECK CALL, CHECK RAISE, Estratégia:, SPLIT B70, VALOR
 
 ### Community 86 - "5. BLANK"
-Cohesion: 0.13
-Nodes (13): 2. CONCEITO CENTRAL, 5. BLANK, 6. DINÂMICO AX, BB, BLUFF, BLUFF, BTN, REGRA (+5 more)
+Cohesion: 0.40
+Nodes (5): 5. BLANK, BLUFF, REGRA, SIZE, VALUE
 
-### Community 87 - "3. XR por Valor"
-Cohesion: 0.50
-Nodes (4): 3. XR por Valor, Contra BU, Contra EP, Textura do Board
+### Community 87 - "react"
+Cohesion: 0.19
+Nodes (9): TabsList(), tabsListVariants, ToggleGroupContext, Toggle(), toggleVariants, class-variance-authority, cn, radix-ui (+1 more)
 
 ### Community 88 - "Parte 5 — Stack e risco de cair"
 Cohesion: 0.29
@@ -593,9 +615,9 @@ Nodes (19): Contexto, Critérios por board [aula], com os boards da atividade co
 Cohesion: 0.40
 Nodes (5): BLANK, CONECTA, FLUSH, HIGH CARD, TURN — 3BET POT
 
-### Community 99 - "8. Turns após XR Flop"
-Cohesion: 0.67
-Nodes (3): 8. Turns após XR Flop, Turns Blank, Turns Dinâmicos
+### Community 99 - "compilerOptions"
+Cohesion: 0.09
+Nodes (21): compilerOptions, allowArbitraryExtensions, allowImportingTsExtensions, erasableSyntaxOnly, jsx, lib, module, moduleDetection (+13 more)
 
 ### Community 100 - "Parte 2 — Shove vs open de posição tardia"
 Cohesion: 0.40
@@ -633,45 +655,49 @@ Nodes (4): Parte 3 — Os sizes, Regra 7 — Use só B25 e B50, Regra 8 — O si
 Cohesion: 0.50
 Nodes (4): Parte 5 — Como dividir o bucket na mesa, Regra 13 — Use o naipe ou um randomizador, sempre com a mão inteira, Regra 14 — Com flush draw no board, os pares com o naipe apostam, Regra 15 — Ajuste no jogo short stack
 
-### Community 109 - "9. C-Bet após XR"
-Cohesion: 0.67
-Nodes (3): 9. C-Bet após XR, Por blefe, Por valor
+### Community 109 - "06 - XR SHORT GUIDELINE.md"
+Cohesion: 0.10
+Nodes (19): Blockers, Bluff, Board Dinâmico, Board Seco, Brocas, Construção do Range, Contexto, Diferença BTN vs BB (+11 more)
 
 ### Community 110 - "Parte 6 — Squeeze"
 Cohesion: 0.67
 Nodes (3): Parte 6 — Squeeze, Regra 23 — O squeeze é a borda do range de call, com blockers, Regra 24 — Flat inesperado é oportunidade
 
-### Community 111 - "A HIGH CONECTADO"
-Cohesion: 0.67
-Nodes (3): A HIGH CONECTADO, CO vs BTN, EP vs BTN
+### Community 111 - "dependencies"
+Cohesion: 0.11
+Nodes (18): dependencies, class-variance-authority@^0.7.1, cn@^0.5.1, @fontsource-variable/schibsted-grotesk@^5.3.0, @fontsource-variable/source-serif-4@^5.3.1, lucide-react@^1.65.0, radix-ui@^1.8.1, react@^19.3.1 (+10 more)
 
-### Community 112 - "A HIGH SECO"
-Cohesion: 0.67
-Nodes (3): A HIGH SECO, CO vs BTN, EP vs BTN
+### Community 112 - "compilerOptions"
+Cohesion: 0.12
+Nodes (16): compilerOptions, allowImportingTsExtensions, erasableSyntaxOnly, lib, module, moduleDetection, noEmit, noFallthroughCasesInSwitch (+8 more)
 
 ### Community 113 - "Parte 3 — Quando você abriu e leva 3bet"
 Cohesion: 0.40
 Nodes (5): Parte 3 — Quando você abriu e leva 3bet, Regra 12 — O range de 3bet do BB na reta é curto e polarizado, Regra 13 — 4bet pequeno com borda e bons blockers, Regra 14 — Pares contra 3bet polarizado, Regra 15 — Contra 3bet linear-polar, mais pares e broadway suited
 
-### Community 114 - "K-Q HIGH"
-Cohesion: 0.67
-Nodes (3): CO vs BTN, EP vs BTN, K-Q HIGH
+### Community 114 - "teoria-15.tsx"
+Cohesion: 0.26
+Nodes (14): Cards(), PlayingCard(), RngStrip(), Badge(), badgeVariants, CardContent(), Collapsible(), CollapsibleContent() (+6 more)
 
-### Community 115 - "J-T HIGH"
-Cohesion: 0.67
-Nodes (3): CO vs BTN, EP vs BTN, J-T HIGH
+### Community 115 - "eslint.config.js"
+Cohesion: 0.15
+Nodes (12): eslint@^10, @eslint/js@^10, eslint-plugin-react-hooks@^7.1.1, eslint-plugin-react-refresh@^0.5.7, globals@^17, typescript-eslint@^8, eslint, @eslint/js (+4 more)
 
-### Community 116 - "HIGH COM SEGUIDA"
-Cohesion: 0.67
-Nodes (3): CO vs BTN, EP vs BTN, HIGH COM SEGUIDA
+### Community 116 - "devDependencies"
+Cohesion: 0.15
+Nodes (13): devDependencies, prettier@^3.9.10, prettier-plugin-tailwindcss@^0.8.1, @types/node@^24, @types/react@^19, @types/react-dom@^19, typescript@~6.0.2, prettier (+5 more)
 
-### Community 117 - "LOW COM SEGUIDA"
-Cohesion: 0.67
-Nodes (3): CO vs BTN, EP vs BTN, LOW COM SEGUIDA
+### Community 117 - "mod15.ts"
+Cohesion: 0.18
+Nodes (10): Bucket, CardCode, mod15, RefBoard, Situacao, Size, Suit, Tipo (+2 more)
 
-### Community 118 - "Regras vivas: BTN contra 1 open em PKO"
-Cohesion: 0.17
-Nodes (16): 4BET Trainer (aba Solver e Trainer), GTO Wizard ChipEV 40bb (baseline Vanilla), Comparação Vanilla vs PKO (BTN contra CO, #5844 e #7067), Efeitos dentro de uma mesma árvore, Sessão 3 do Trainer: regra v3 (100 mãos, 86%), Estudo PKO (BTN contra um open) em andamento, Notas de PKO e como entram no modelo, Variáveis do modelo (árvore + opener) (+8 more)
+### Community 118 - "package.json"
+Cohesion: 0.22
+Nodes (8): @fontsource-variable/geist@^5.3.0, tailwindcss@^4, name, private, type, version, @fontsource-variable/geist, tailwindcss
+
+### Community 119 - "flashcards/README.md"
+Cohesion: 0.22
+Nodes (5): Flashcards, Ligações, Flashcards — C-Bet IP Short Stack, Flashcards — XR Deep Stack, Flashcards — 3Bet Pot
 
 ### Community 120 - "Boards Pareados (XR Deep)"
 Cohesion: 0.67
@@ -685,21 +711,33 @@ Nodes (15): Contexto, Exercício 1 — Triple broadway, Exercício 2 — Dois br
 Cohesion: 0.13
 Nodes (14): A atividade inicial (07:45 a 14:45), Divisão do range, Exceções por board, Flush draw e execução, Monotone e dobrado, O que o vídeo mostrou na tela, O range do BB e o range do SB, Pontos que a aula não fechou (+6 more)
 
-### Community 126 - "PKO: BTN contra 1 open (Módulo 16)"
-Cohesion: 0.56
-Nodes (12): VideoAulas — PKO (fontes, sem aula em vídeo), Solver — PKO, Exercícios — PKO (39 exercícios), Regras Consolidadas – PKO, Pendência: bolha, late game e mesa final sem dados, Pendências – PKO, Changelog — PKO, Referências — PKO (+4 more)
+### Community 126 - "vite.config.ts"
+Cohesion: 0.25
+Nodes (6): @tailwindcss/vite@^4, vite@^8, @vitejs/plugin-react@^6, @tailwindcss/vite, vite, @vitejs/plugin-react
 
 ### Community 130 - "17-BB-Raised-Pot-vs-SB-Limp/09-Decisoes.md"
 Cohesion: 0.17
 Nodes (11): Decisão 10 — Correções da v1.0, Decisão 1 — Transcrição fica fora do repositório, Decisão 2 — Base de size pelo thin value, Decisão 3 — Conflitos com outros módulos não foram resolvidos, Decisão 4 — Termo "thin value", Decisão 5 — Prioridade das fontes neste módulo, Decisão 6 — IMG1 entra como "a confirmar", Decisão 7 — Posição e stack (+3 more)
 
+### Community 131 - "scripts"
+Cohesion: 0.29
+Nodes (7): scripts, build, dev, format, lint, preview, typecheck
+
 ### Community 132 - "17-BB-Raised-Pot-vs-SB-Limp/README.md"
 Cohesion: 0.20
 Nodes (9): BB Raised Pot vs SB — Módulo 17, Conceito Central, Contexto, Diferença Fundamental, Estrutura do Módulo, Ligações, Objetivo do Módulo, Resultado Esperado (+1 more)
 
-### Community 134 - "Parte 2 — O que alarga ou aperta o range"
-Cohesion: 0.25
-Nodes (8): Parte 2 — O que alarga ou aperta o range, Regra 10 — SB e BB curtos **[Notas]**, Regra 4 — Stack do opener **[Árvores]**, Regra 5 — Cobertura **[Notas] [Árvores]**, Regra 6 — Stack relativo à média e à fase **[Notas]**, Regra 7 — Posição do opener **[Árvores] [Notas]**, Regra 8 — Fase e tamanho do field **[Notas]**, Regra 9 — Risk Premium **[Árvores]**
+### Community 133 - "RFI · BTN · 15bb · Vanilla · Early"
+Cohesion: 0.29
+Nodes (7): Arquivos, Filtros usados, Leituras, Ligações, Pendências, RFI · BTN · 15bb · Vanilla · Early, Situação atual
+
+### Community 134 - "EP / HJ"
+Cohesion: 0.29
+Nodes (7): Board A High, Board Broadway, Board Conectado, Board Dobrado, Board Low, Board Monotone, EP / HJ
+
+### Community 135 - "CO / BU"
+Cohesion: 0.29
+Nodes (7): Board A High, Board Broadway, Board Conectado, Board Dobrado, Board Low, Board Monotone, CO / BU
 
 ### Community 136 - "Changelog — BB Raised Pot vs SB"
 Cohesion: 0.33
@@ -713,17 +751,61 @@ Nodes (4): O que apareceu no vídeo (não é dado de solver capturado), Quando h
 Cohesion: 0.40
 Nodes (4): Fontes, Ordem de prioridade, Referência cruzada, Referências — BB Raised Pot vs SB
 
-### Community 157 - "BBX"
-Cohesion: 0.67
-Nodes (3): BBX, CO vs BTN, EP vs BTN
+### Community 157 - "Valor é relativo ao range adversário"
+Cohesion: 0.29
+Nodes (7): Exercício 03 — J♣T♣ em 9♦5♦T♣K♠4♦ (Dinâmico Flush, BET B70), Exercício 05 — 8♥8♣ em 6♣A♠K♠2♦A♦ (Dobra, BET B70 VALUE), Valor é relativo ao range adversário, B70 (Bet Check Bet), Dinâmico Dobra de Carta, Dinâmico Flush, Construção de range (qual grupo de mãos compõe cada size em cada street)
 
-### Community 158 - "LOW SEM SEGUIDA"
-Cohesion: 0.67
-Nodes (3): CO vs BTN, EP vs BTN, LOW SEM SEGUIDA
+### Community 158 - "Site do Poker KB"
+Cohesion: 0.33
+Nodes (5): Como o trainer decide, Como rodar, Estrutura, Regras dos dados, Site do Poker KB
+
+### Community 160 - "Estratégia Split para Boards Low"
+Cohesion: 0.33
+Nodes (6): Board Carregado, Board Seco, Estratégia Split para Boards Low, Range de Bet Bluff, Range de Bet por Valor, Range de Check
+
+### Community 161 - "Introdução ao Second Barrel"
+Cohesion: 0.33
+Nodes (6): Flush completa com High Card, Flush completa com Low Card, Introdução ao Second Barrel, Ligações, Turn Blank, Turn que conecta
+
+### Community 162 - "allowBuilds"
+Cohesion: 0.40
+Nodes (4): allowBuilds, esbuild, msw, packages
 
 ### Community 163 - "Parte 9 — Pós-flop em reta final"
 Cohesion: 0.50
 Nodes (4): Parte 9 — Pós-flop em reta final, Regra 28 — Sizes de pós-flop: não inventar, Regra 29 — Mão forte não faz slowplay por hot card, Regra 30 — Mão forte aposta, mão fraca paga
+
+### Community 164 - "tsconfig.json"
+Cohesion: 0.40
+Nodes (4): compilerOptions, paths, files, references
+
+### Community 165 - "Referências – C-Bet IP Short Stack"
+Cohesion: 0.50
+Nodes (3): Guideline C-Bet IP 20bbs (fonte principal), Gyazos / Solver (A84r, KT6r, J84s, 985r), Referências – C-Bet IP Short Stack
+
+### Community 166 - "6. DINÂMICO AX"
+Cohesion: 0.40
+Nodes (5): 6. DINÂMICO AX, BLUFF, REGRA, SIZE, VALUE
+
+### Community 167 - "Lei 15 — A Função da Mão Importa Mais que a Força Absoluta"
+Cohesion: 0.67
+Nodes (3): Regra 1 — C-Bet OOP é Construção de Range, Escolher XR pela Função da Mão, Não pela Força, Lei 15 — A Função da Mão Importa Mais que a Força Absoluta
+
+### Community 168 - "DIFERENÇA DE STACK"
+Cohesion: 0.67
+Nodes (3): DEEP STACK, DIFERENÇA DE STACK, SHORT STACK
+
+### Community 169 - "DIFERENÇA DE POSIÇÃO"
+Cohesion: 0.67
+Nodes (3): DIFERENÇA DE POSIÇÃO, IP, OOP
+
+### Community 170 - "GUIDELINE X SOLVER"
+Cohesion: 0.67
+Nodes (3): GUIDELINE, GUIDELINE X SOLVER, SOLVER
+
+### Community 171 - "2. CONCEITO CENTRAL"
+Cohesion: 0.67
+Nodes (3): 2. CONCEITO CENTRAL, BB, BTN
 
 ## Ambiguous Edges - Review These
 - `Solver – C-Bet IP Short Stack` → `Changelog – C-Bet IP Short Stack (v1.0–1.2)`  [AMBIGUOUS]
@@ -733,22 +815,22 @@ Nodes (4): Parte 9 — Pós-flop em reta final, Regra 28 — Sizes de pós-flop:
 
 ## Knowledge Gaps
 - **123 isolated node(s):** `Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100)`, `O board mais errado: 875 com turn 9`, `Decisão 4 — O 875 é a base`, `Decisão 1 — Escopo: SRP heads-up BTN vs BB 40bb (multiway no módulo 10)`, `Erros que mais custam (probe turn)` (+118 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1010 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1109 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **37 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Regras vivas: BTN contra 1 open em PKO` connect `Regras vivas: BTN contra 1 open em PKO` to `retomada-pko.md`, `Notas de PKO e como entram no modelo`, `Playbook: coleta de árvores do 4BET Trainer por automação`, `07 - XR DEEP GUIDELINE.md`, `Índice de módulos`?**
-  _High betweenness centrality (0.033) - this node is a cross-community bridge._
+- **Why does `Value Bet Masterclass — Módulo 11` connect `Value Bet (regras)` to `Decisões – Probe Turn`, `14 - PROBE TURN GUIDELINE.md`, `12 - RETA FINAL GUIDELINE.md`, `05 - CBET OOP 40BB GUIDELINE.md`, `Regras Consolidadas — C-Bet OOP`, `C-Bet IP Short Stack (Módulo 01)`, `13 - ICM GUIDELINE.md`, `00-Home.md`, `Índice de módulos`, `MAPA-PRE-POS.md`?**
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
 - **What connects `Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100)`, `O board mais errado: 875 com turn 9`, `Decisão 4 — O 875 é a base` to the rest of the system?**
   _123 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `16 - PKO GUIDELINE.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
-- **Why does `Theory Index` connect `Índice de módulos` to `Decisões – Probe Turn`, `Reta Final — Módulo 12`, `Regras vivas: BTN contra 1 open em PKO`, `Second Barrel IP`, `Regras Consolidadas — C-Bet OOP`, `Bet vs Missed C-Bet (Módulo 15)`, `06 - XR SHORT GUIDELINE.md`, `Multiway Pot (EP abre, BTN paga, BB paga — 40bb)`, `Value Bet (regras)`, `C-Bet IP Short Stack (Módulo 01)`, `Poker Knowledge Base`, `08 - 3BET POT GUIDELINE.md`, `02 - CBET IP 40BB GUIDELINE.md`, `Third Barrel decisões`, `07 - XR DEEP GUIDELINE.md`, `MAPA-PRE-POS.md`, `retomada-pko.md`, `Notas de PKO e como entram no modelo`, `Playbook: coleta de árvores do 4BET Trainer por automação`, `09 - BET CHECK BET GUIDELINE.md`, `Módulo 13 — ICM e Risk Premium`, `PKO: BTN contra 1 open (Módulo 16)`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
+- **Why does `Theory Index` connect `Índice de módulos` to `Decisões – Probe Turn`, `Reta Final — Módulo 12`, `Regras vivas: BTN contra 1 open em PKO`, `16 - PKO GUIDELINE.md`, `Second Barrel IP`, `Regras Consolidadas — C-Bet OOP`, `Bet vs Missed C-Bet (Módulo 15)`, `Exercícios — XR Short Stack`, `Multiway Pot (EP abre, BTN paga, BB paga — 40bb)`, `Value Bet (regras)`, `C-Bet IP Short Stack (Módulo 01)`, `08 - 3BET POT GUIDELINE.md`, `KB-003 — Module Template`, `00-Home.md`, `Third Barrel decisões`, `07 - XR DEEP GUIDELINE.md`, `MAPA-PRE-POS.md`, `retomada-pko.md`, `Notas de PKO e como entram no modelo`, `Playbook: coleta de árvores do 4BET Trainer por automação`, `09 - BET CHECK BET GUIDELINE.md`, `Módulo 13 — ICM e Risk Premium`?**
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Should `Second Barrel IP` be split into smaller, more focused modules?**
-  _Cohesion score 0.06246799795186892 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05341614906832298 - nodes in this community are weakly interconnected._
 
 ### Low-confidence Hints
 _AMBIGUOUS edges — the extractor was unsure. Verify before acting on these._
