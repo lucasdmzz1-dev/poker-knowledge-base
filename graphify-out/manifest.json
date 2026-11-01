@@ -1014,9 +1014,9 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1793496530.379078,
-    "seen": 1793501717.4778602,
-    "ast_hash": "7144c633c373c854731b8106f46224bb",
+    "mtime": 1793533749.6908035,
+    "seen": 1793575722.9815624,
+    "ast_hash": "142b98000931958e0a128780893fe5c4",
     "semantic_hash": ""
   },
   "coaching/stats/retomada-stats.md": {
@@ -1752,9 +1752,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/home.tsx": {
-    "mtime": 1793530584.1840782,
-    "seen": 1793530628.1442146,
-    "ast_hash": "024bce5631e748efa8379e380afe2fe6",
+    "mtime": 1793575687.0790758,
+    "seen": 1793575722.9581048,
+    "ast_hash": "426f43c41229446560a7b1d472917f33",
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
@@ -2637,6 +2637,12 @@
     "mtime": 1793531707.5056245,
     "seen": 1793533534.8372452,
     "ast_hash": "7ffc6844022213fa24dfc023c9642b72",
+    "semantic_hash": ""
+  },
+  "docs/Site-Poker-KB.md": {
+    "mtime": 1793533749.2134142,
+    "seen": 1793575722.9895122,
+    "ast_hash": "76b2378bb8cef77dbbd983fff88314b7",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

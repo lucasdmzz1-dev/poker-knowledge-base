@@ -98,22 +98,25 @@ export default function Home() {
             texto="Seus leaks do mês e a evolução nos temas, para saber onde atacar."
             to="/analise"
           >
-            <div className="grid w-full max-w-[220px] gap-2.5">
+            <div className="grid w-full max-w-[240px] gap-2.5">
               {[
-                ["Semi", 71],
-                ["Seco", 54],
-                ["Mono", 38],
-              ].map(([nome, p]) => (
+                ["VPIP", 26],
+                ["PFR", 17],
+                ["3bet", 9.4],
+              ].map(([nome, v]) => (
                 <div
                   key={nome}
-                  className="grid grid-cols-[3.2rem_1fr] items-center gap-2 text-sm"
+                  className="grid grid-cols-[3rem_1fr_2.4rem] items-center gap-2 text-sm"
                 >
                   <span className="text-muted-foreground">{nome}</span>
                   <span className="h-2 overflow-hidden rounded-full bg-secondary">
                     <i
                       className="block h-full rounded-full bg-primary"
-                      style={{ width: `${p}%` }}
+                      style={{ width: `${(Number(v) / 40) * 100}%` }}
                     />
+                  </span>
+                  <span className="text-right font-bold tabular-nums">
+                    {String(v).replace(".", ",")}
                   </span>
                 </div>
               ))}
