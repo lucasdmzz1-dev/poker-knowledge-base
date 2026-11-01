@@ -8,7 +8,7 @@ tags:
   - tipo/guideline
 ---
 
-# Guideline — Bet vs Missed C-Bet
+# Guideline — Bet vs Missed C-Bet
 
 **Flashcards:** [[theory/15-Bet-vs-Missed/15 - BET VS MISSED FLASHCARDS|15 - BET VS MISSED FLASHCARDS]]
 

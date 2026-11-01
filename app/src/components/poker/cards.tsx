@@ -19,10 +19,20 @@ const WIDTH = {
 
 type SuitKey = keyof typeof SUIT
 
-export function PlayingCard({ code, size = "md" }: { code: string; size?: keyof typeof WIDTH }) {
+export function PlayingCard({
+  code,
+  size = "md",
+}: {
+  code: string
+  size?: keyof typeof WIDTH
+}) {
   const rank = code.charAt(0)
   const suit = code.charAt(1) as SuitKey
-  const style = { "--w": WIDTH[size], width: "var(--w)", aspectRatio: "5 / 7" } as CSSProperties
+  const style = {
+    "--w": WIDTH[size],
+    width: "var(--w)",
+    aspectRatio: "5 / 7",
+  } as CSSProperties
   return (
     <span
       role="img"
@@ -34,14 +44,28 @@ export function PlayingCard({ code, size = "md" }: { code: string; size?: keyof 
       style={style}
     >
       <span style={{ fontSize: "calc(var(--w) * 0.5)" }}>{rank}</span>
-      <span aria-hidden="true" style={{ fontSize: "calc(var(--w) * 0.3)", marginTop: "calc(var(--w) * 0.04)" }}>
+      <span
+        aria-hidden="true"
+        style={{
+          fontSize: "calc(var(--w) * 0.3)",
+          marginTop: "calc(var(--w) * 0.04)",
+        }}
+      >
         {SUIT[suit]}
       </span>
     </span>
   )
 }
 
-export function Cards({ codes, size = "md", className }: { codes: string[]; size?: keyof typeof WIDTH; className?: string }) {
+export function Cards({
+  codes,
+  size = "md",
+  className,
+}: {
+  codes: string[]
+  size?: keyof typeof WIDTH
+  className?: string
+}) {
   return (
     <div className={cn("inline-flex gap-2", className)}>
       {codes.map((c) => (
@@ -51,7 +75,15 @@ export function Cards({ codes, size = "md", className }: { codes: string[]; size
   )
 }
 
-export function RngStrip({ bucket, rng, size }: { bucket: number; rng?: number; size?: string }) {
+export function RngStrip({
+  bucket,
+  rng,
+  size,
+}: {
+  bucket: number
+  rng?: number
+  size?: string
+}) {
   const cells = Array.from({ length: 100 }, (_, i) => i + 1)
   return (
     <div className="mt-4">
@@ -67,23 +99,44 @@ export function RngStrip({ bucket, rng, size }: { bucket: number; rng?: number; 
             className={cn(
               "block rounded-[1px]",
               n <= bucket ? "bg-b50" : "bg-check",
-              rng === n && "relative z-10 outline-2 outline-offset-1 outline-white"
+              rng === n &&
+                "relative z-10 outline-2 outline-offset-1 outline-white"
             )}
           />
         ))}
       </div>
-      <div className="text-muted-foreground mt-2 flex flex-wrap gap-4 text-sm">
+      <div className="mt-2 flex flex-wrap gap-4 text-sm text-muted-foreground">
         <span className="inline-flex items-center gap-2">
-          <b className="bg-b50 inline-block size-2.5 rounded-sm" />
-          1 a {bucket}: aposta {size}
+          <b className="inline-block size-2.5 rounded-sm bg-b50" />1 a {bucket}:
+          aposta {size}
         </span>
         {bucket < 100 && (
           <span className="inline-flex items-center gap-2">
-            <b className="bg-check inline-block size-2.5 rounded-sm" />
+            <b className="inline-block size-2.5 rounded-sm bg-check" />
             {bucket + 1} a 100: check
           </span>
         )}
       </div>
+    </div>
+  )
+}
+
+export function RngPlate({
+  value,
+  className,
+}: {
+  value: number
+  className?: string
+}) {
+  return (
+    <div
+      aria-label={`RNG ${value}`}
+      className={cn(
+        "min-w-[104px] rounded-[10px] border-4 border-rng-line bg-white px-4 py-2 text-center text-[2.6rem] leading-[1.1] font-bold text-rng-ink tabular-nums",
+        className
+      )}
+    >
+      {value}
     </div>
   )
 }

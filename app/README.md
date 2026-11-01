@@ -37,3 +37,7 @@ A situação traz o bucket da mão (100%, 75%, 50% ou 25%). O RNG sorteado de 1 
 - As situações vêm das tabelas do guideline em imagem do instrutor (`theory/15-Bet-vs-Missed/03-Solver.md` e `12-Padroes.md`).
 - Só entram boards com classificação validada. O dobrado ficou de fora do trainer porque o subtipo seco ou carregado do K-K-7 ainda é inferência.
 - O histórico fica no navegador (`localStorage`). Nada é enviado a servidor.
+
+## Preview no app do Claude
+
+O `.claude/launch.json` chama o `node` do PATH. Depois de instalar o Node, reinicie o app do Claude para o preview achar o comando.

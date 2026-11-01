@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "app",
-      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeExecutable": "node",
       "runtimeArgs": ["app/node_modules/vite/bin/vite.js", "app", "--port", "5174"],
       "port": 5174
     }

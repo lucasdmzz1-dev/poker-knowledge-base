@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom"
-import { Cards } from "@/components/poker/cards"
+import { Cards, RngPlate } from "@/components/poker/cards"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { KEYS, readJSON } from "@/lib/storage"
-import type { Ultimo } from "@/lib/poker"
+import { lerUltimo } from "@/lib/storage"
 
 const CARD =
   "group h-full bg-card hover:border-primary hover:bg-secondary relative flex flex-col gap-5 overflow-hidden rounded-[22px] border p-6 transition-[transform,border-color,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.985] [@media(hover:hover)_and_(pointer:fine)]:hover:-translate-y-1 motion-reduce:[@media(hover:hover)_and_(pointer:fine)]:hover:translate-y-0"
@@ -44,7 +43,7 @@ function Passo({
 }
 
 export default function Home() {
-  const last = readJSON<Ultimo>(KEYS.last, {
+  const last = lerUltimo({
     to: "/teoria/bet-vs-missed",
     label: "Bet vs Missed C-Bet · Teoria",
   })
@@ -90,9 +89,7 @@ export default function Home() {
           >
             <div className="flex items-center gap-4">
               <Cards codes={["Ad", "Ac"]} size="md" />
-              <span className="rounded-[10px] border-4 border-[#2bb7d4] bg-white px-3 py-1 text-3xl leading-tight font-bold text-[#0b8aa6] tabular-nums">
-                64
-              </span>
+              <RngPlate value={64} className="min-w-0 px-3 py-1 text-3xl" />
             </div>
           </Passo>
           <Passo
@@ -129,7 +126,9 @@ export default function Home() {
             size="lg"
             className="h-12 rounded-full px-7 text-base font-bold active:scale-[0.97]"
           >
-            <Link to={last.to}>Continuar: {last.label}</Link>
+            <Link to={last.to}>
+              {last.verbo ?? "Continuar"}: {last.label}
+            </Link>
           </Button>
           <Button
             asChild

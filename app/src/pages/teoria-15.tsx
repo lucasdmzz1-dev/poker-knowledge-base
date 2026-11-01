@@ -59,6 +59,7 @@ export default function Teoria15() {
     writeJSON(KEYS.last, {
       to: "/teoria/bet-vs-missed",
       label: "Bet vs Missed C-Bet · Teoria",
+      verbo: "Continuar",
     })
   }, [])
 

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { mod15, tipoById, type TipoId } from "@/data/mod15"
 import type { Sessao } from "@/lib/poker"
-import { KEYS, readJSON, writeJSON } from "@/lib/storage"
+import { KEYS, lerSessoes, writeJSON } from "@/lib/storage"
 
 function Bloco({
   titulo,
@@ -24,9 +24,7 @@ function Bloco({
 }
 
 export default function Analise() {
-  const [todas, setTodas] = useState<Sessao[]>(() =>
-    readJSON<Sessao[]>(KEYS.sessions, [])
-  )
+  const [todas, setTodas] = useState<Sessao[]>(() => lerSessoes())
   const levadas = todas.filter((s) => s.levar)
 
   function tirar(id: number) {

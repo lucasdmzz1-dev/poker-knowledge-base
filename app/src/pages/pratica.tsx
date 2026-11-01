@@ -1,14 +1,14 @@
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Cards, RngStrip } from "@/components/poker/cards"
+import { Cards, RngPlate, RngStrip } from "@/components/poker/cards"
 import { mod15, tipoById, type Situacao, type TipoId } from "@/data/mod15"
 import { rng, shuffle, type ItemSessao, type Sessao } from "@/lib/poker"
-import { KEYS, readJSON, writeJSON } from "@/lib/storage"
+import { KEYS, lerSessoes, writeJSON } from "@/lib/storage"
 import { cn } from "@/lib/utils"
 
 type Fase = "setup" | "jogo" | "fim"
@@ -40,11 +40,14 @@ export default function Pratica() {
   const [resp, setResp] = useState<Acao | null>(null)
   const [sessId, setSessId] = useState(0)
   const [levada, setLevada] = useState(false)
+  // Guarda síncrona: duas teclas no mesmo quadro não podem registrar a mesma mão duas vezes.
+  const respondido = useRef(false)
 
   useEffect(() => {
     writeJSON(KEYS.last, {
       to: "/pratica",
-      label: "Prática · Bet vs Missed C-Bet",
+      label: "Bet vs Missed C-Bet",
+      verbo: "Treinar",
     })
   }, [])
 
@@ -59,7 +62,8 @@ export default function Pratica() {
 
   const responder = useCallback(
     (a: Acao) => {
-      if (!atual || !esperado || resp) return
+      if (!atual || !esperado || respondido.current) return
+      respondido.current = true
       const item: ItemSessao = {
         sid: atual.id,
         tipo: atual.tipo,
@@ -72,7 +76,7 @@ export default function Pratica() {
       setItens((prev) => [...prev, item])
       setResp(a)
     },
-    [atual, esperado, resp, roll]
+    [atual, esperado, roll]
   )
 
   useEffect(() => {
@@ -102,6 +106,7 @@ export default function Pratica() {
     setI(0)
     setItens([])
     setResp(null)
+    respondido.current = false
     setRoll(rng())
     setLevada(false)
     setFase("jogo")
@@ -118,18 +123,19 @@ export default function Pratica() {
         itens,
         levar: false,
       }
-      writeJSON(KEYS.sessions, [...readJSON<Sessao[]>(KEYS.sessions, []), sess])
+      writeJSON(KEYS.sessions, [...lerSessoes(), sess])
       setSessId(sess.id)
       setFase("fim")
       return
     }
     setI(i + 1)
     setResp(null)
+    respondido.current = false
     setRoll(rng())
   }
 
   function levar() {
-    const todas = readJSON<Sessao[]>(KEYS.sessions, []).map((s) =>
+    const todas = lerSessoes().map((s) =>
       s.id === sessId ? { ...s, levar: true } : s
     )
     writeJSON(KEYS.sessions, todas)
@@ -240,11 +246,9 @@ export default function Pratica() {
     const acertos = itens.filter((x) => x.ok).length
     const pct = Math.round((acertos / itens.length) * 100)
     return (
-      <main className="mx-auto max-w-[1080px] px-5 pt-10 pb-20">
-        <div className="enter mx-auto grid max-w-[560px] justify-items-center gap-4 pt-6 text-center">
-          <h1 className="text-[clamp(2rem,5vw,3.2rem)] leading-tight font-bold tracking-tight">
-            Treino concluído
-          </h1>
+      <main>
+        <PageHeader title="Treino concluído" />
+        <div className="enter mx-auto grid max-w-[560px] justify-items-center gap-4 px-5 pb-20 text-center">
           <div className="text-[clamp(2.4rem,6vw,3.4rem)] font-bold">
             {acertos} de {itens.length}{" "}
             <span className="text-2xl text-muted-foreground">{pct}%</span>
@@ -324,12 +328,7 @@ export default function Pratica() {
             <span className="text-sm text-muted-foreground">
               RNG de 1 a 100
             </span>
-            <div
-              aria-label={`RNG ${roll}`}
-              className="min-w-[104px] rounded-[10px] border-4 border-[#2bb7d4] bg-white px-4 py-2 text-center text-[2.6rem] leading-[1.1] font-bold text-[#0b8aa6] tabular-nums"
-            >
-              {roll}
-            </div>
+            <RngPlate value={roll} />
           </div>
         </div>
       </div>
