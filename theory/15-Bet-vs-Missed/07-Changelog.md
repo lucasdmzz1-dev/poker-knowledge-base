@@ -83,6 +83,7 @@ Fonte: esclarecimentos do autor do KB (01/11/2026).
 
 - `12-Padroes.md`: critério de altura e de possibilidades de gutshot e duas pontas, boards 9-6-2, T-6-2, 7-6-5 e 6-5-4, critério da terceira carta no dobrado, range base do TP e regra de usar só boards validados nos exercícios.
 - Decisão 10 complementada.
+- Exercício 05 ajustado: a pior trinca em 100% vale onde existe bucket de 100%.
 
 Nenhuma tabela de buckets mudou.
 
