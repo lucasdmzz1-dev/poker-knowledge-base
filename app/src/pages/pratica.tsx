@@ -338,6 +338,7 @@ export default function Pratica() {
   const ok = resp === esperado
   const ultimo = i === fila.length - 1
   const tipoNome = tipoAtual.nome.toLowerCase()
+  const tipoNegrito = <strong className="text-foreground">{tipoNome}</strong>
 
   const pct = <strong className="text-foreground">{atual.bucket}%</strong>
   let texto: ReactNode
@@ -345,7 +346,7 @@ export default function Pratica() {
     texto = apostar ? (
       <>
         Sua mão está no bucket de {pct} e o RNG {roll} cai na aposta. O size do{" "}
-        {tipoNome} é {tipoAtual.size}.
+        {tipoNegrito} é {tipoAtual.size}.
       </>
     ) : (
       <>
@@ -355,7 +356,7 @@ export default function Pratica() {
   } else if (resp !== "Check" && apostar) {
     texto = (
       <>
-        Apostar estava certo (RNG {roll} ≤ {pct}), mas o size do {tipoNome} é{" "}
+        Apostar estava certo (RNG {roll} ≤ {pct}), mas o size do {tipoNegrito} é{" "}
         {tipoAtual.size}.
       </>
     )
@@ -444,7 +445,7 @@ export default function Pratica() {
             </p>
             <p className="max-w-[64ch] text-lg text-muted-foreground">
               <strong className="text-foreground">{atual.classe}</strong> no
-              flop {tipoNome}: {negritoPct(atual.porque)}
+              flop {tipoNegrito}: {negritoPct(atual.porque)}
             </p>
             <RngStrip bucket={atual.bucket} rng={roll} size={tipoAtual.size} />
             <div className="mt-4">
