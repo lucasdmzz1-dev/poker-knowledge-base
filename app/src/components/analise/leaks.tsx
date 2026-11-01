@@ -2,6 +2,7 @@ import { useMemo, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ComparacaoHud, ExploradorHud } from "@/components/analise/hud"
+import { lerHud } from "@/lib/hud"
 import { PrintsDoMes } from "@/components/analise/prints"
 import { Secao, CAMPO } from "@/components/analise/secao"
 import {
@@ -203,8 +204,6 @@ function LeaksLista({
           </form>
         </Card>
       )}
-
-      <PrintsDoMes mes={mes || new Date().toISOString().slice(0, 7)} />
 
       {criticos && (
         <Card className="mb-6 rounded-[18px] p-5">
@@ -492,26 +491,42 @@ export function LeaksDoMes(props: {
   leaks: Leak[]
   salvar: (l: Leak[]) => void
 }) {
-  const [vista, setVista] = useState<"leaks" | "stats">("leaks")
+  const [vista, setVista] = useState<"leaks" | "stats">("stats")
+  const mesAtual =
+    [...lerHud()]
+      .map((m) => m.mes)
+      .sort()
+      .pop() ?? new Date().toISOString().slice(0, 7)
   return (
     <div>
       <Vista
         valor={vista}
         onChange={setVista}
         opcoes={[
+          ["stats", "Prints e stats do HUD"],
           ["leaks", "Leaks do mês"],
-          ["stats", "Todas as stats do HUD"],
         ]}
       />
       {vista === "leaks" ? (
         <LeaksLista {...props} />
       ) : (
-        <Secao
-          titulo="Todas as stats do mês"
-          lead="As stats gerais que você recebe todo mês, por seção. Busque pelo nome, filtre as que estão fora da meta e use a estrela para levar uma stat para a comparação."
-        >
-          <ExploradorHud />
-        </Secao>
+        <>
+          <Secao
+            titulo="Prints e stats do mês"
+            lead="Coloque aqui os prints do mês. Com eles, as stats do HUD são preenchidas por seção, com cores pela meta. Busque pelo nome, filtre as fora da meta e use a estrela para levar uma stat para a comparação."
+          >
+            <PrintsDoMes mes={mesAtual} />
+            <ExploradorHud />
+          </Secao>
+          <div className="mt-8 flex justify-center">
+            <Button
+              className="px-6 font-bold"
+              onClick={() => setVista("leaks")}
+            >
+              Ver os leaks do mês
+            </Button>
+          </div>
+        </>
       )}
     </div>
   )

@@ -1,17 +1,17 @@
 # Graph Report - project-visual-design-e7ad30  (2026-11-01)
 
 ## Corpus Check
-- 431 files · ~813,412 words
+- 431 files · ~813,455 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 39 file(s) not represented in the graph (top: .csv 27, (none) 6, .css 4)
 
 ## Summary
-- 4455 nodes · 7914 edges · 320 communities (281 shown, 39 thin omitted)
+- 4455 nodes · 7918 edges · 319 communities (280 shown, 39 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 346 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `075132d6`
+- Built from commit: `df93a051`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -105,7 +105,6 @@
 - teoria-15.tsx
 - Parte 5 — Stack e risco de cair
 - el
-- hud.tsx
 - Region map
 - Estudos de ranges
 - Playbook: coleta de árvores do 4BET Trainer por automação
@@ -368,7 +367,7 @@
 - **Fatores que ampliam o range do BTN em PKO** — theory_tools_pko_pko_conhecimento_help_value, theory_tools_pko_pko_conhecimento_cobertura, theory_tools_pko_pko_conhecimento_risk_premium, theory_tools_pko_pko_conhecimento_dead_money_bounty, theory_tools_pko_regras_vivas_pko_btn_largura_no [INFERRED 0.85]
 - **Sizing de river por textura: blank vs board que esquisitou (B70 vs Overbet)** — theory_11_value_bet_masterclass_05_regras_consolidadas_regra_3_board_completa_draw_size_menor, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_4_board_blank_size_alto, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_5_carta_alta_nao_e_blank, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_6_dois_sizes_river, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_7_river_blank_vs_muda_nuts [INFERRED 0.85]
 
-## Communities (320 total, 39 thin omitted)
+## Communities (319 total, 39 thin omitted)
 
 ### Community 0 - "Decisões – Probe Turn"
 Cohesion: 0.14
@@ -467,8 +466,8 @@ Cohesion: 0.08
 Nodes (15): Decision Engine, Documentation Order (ordem de migração), Structural Board Classification (MODULE_FUNDAMENTALS_BOARD_STRUCTURE), C-Bet Flop IP (MODULE_SRP_IP_CBET_FLOP), Second Barrel IP (MODULE_SRP_IP_SECOND_BARREL), Third Barrel IP (MODULE_SRP_IP_THIRD_BARREL), C-Bet Flop OOP (MODULE_SRP_OOP_CBET_FLOP), Second Barrel OOP (MODULE_SRP_OOP_SECOND_BARREL) (+7 more)
 
 ### Community 25 - "leaks.tsx"
-Cohesion: 0.14
-Nodes (28): Celula(), ComparacaoHud(), ExploradorHud(), definir(), numero(), Pilula(), Comparacao(), ComparacaoLeaks() (+20 more)
+Cohesion: 0.08
+Nodes (54): Celula(), ComparacaoHud(), ExploradorHud(), definir(), numero(), Pilula(), useHud(), Comparacao() (+46 more)
 
 ### Community 26 - "XR Deep boards conectados"
 Cohesion: 0.13
@@ -717,10 +716,6 @@ Nodes (7): Parte 5 — Stack e risco de cair, Regra 17 — Stack grande: mais m�
 ### Community 89 - "el"
 Cohesion: 0.07
 Nodes (57): actionLabel(), applyConfigureBarChrome(), bindConfigureCountPillTooltip(), bindConfigureInlineControlHover(), bindConfigureModifierPillHover(), buildConfigureActionControl(), buildConfigureCountControl(), buildConfigureRow() (+49 more)
-
-### Community 90 - "hud.tsx"
-Cohesion: 0.13
-Nodes (26): useHud(), Bloco, BLOCOS, CHAVE_FIXADAS, CHAVE_HUD, CHAVE_TOL, COR_NIVEL, distanciaMeta() (+18 more)
 
 ### Community 91 - "Region map"
 Cohesion: 0.40
