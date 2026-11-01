@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -327,17 +327,39 @@ export default function Pratica() {
   const ultimo = i === fila.length - 1
   const tipoNome = tipoAtual.nome.toLowerCase()
 
-  let texto: string
+  const pct = <strong className="text-foreground">{atual.bucket}%</strong>
+  let texto: ReactNode
   if (ok) {
-    texto = apostar
-      ? `Sua mão está no bucket de ${atual.bucket}% e o RNG ${roll} cai na aposta. O size do ${tipoNome} é ${tipoAtual.size}.`
-      : `Sua mão está no bucket de ${atual.bucket}%, mas o RNG ${roll} cai no check.`
+    texto = apostar ? (
+      <>
+        Sua mão está no bucket de {pct} e o RNG {roll} cai na aposta. O size do{" "}
+        {tipoNome} é {tipoAtual.size}.
+      </>
+    ) : (
+      <>
+        Sua mão está no bucket de {pct}, mas o RNG {roll} cai no check.
+      </>
+    )
   } else if (resp !== "Check" && apostar) {
-    texto = `Apostar estava certo (RNG ${roll} ≤ ${atual.bucket}), mas o size do ${tipoNome} é ${tipoAtual.size}.`
+    texto = (
+      <>
+        Apostar estava certo (RNG {roll} ≤ {pct}), mas o size do {tipoNome} é{" "}
+        {tipoAtual.size}.
+      </>
+    )
   } else if (resp === "Check") {
-    texto = `O RNG ${roll} cai na aposta (bucket de ${atual.bucket}%). O certo era ${tipoAtual.size}.`
+    texto = (
+      <>
+        O RNG {roll} cai na aposta (bucket de {pct}). O certo era{" "}
+        {tipoAtual.size}.
+      </>
+    )
   } else {
-    texto = `O RNG ${roll} fica acima de ${atual.bucket}%, então a mão dá check.`
+    texto = (
+      <>
+        O RNG {roll} fica acima de {pct}, então a mão dá check.
+      </>
+    )
   }
 
   let sequencia = 0
@@ -399,14 +421,16 @@ export default function Pratica() {
           >
             <h3
               className={cn(
-                "text-xl font-bold",
+                "text-3xl font-bold",
                 ok ? "text-primary" : "text-destructive"
               )}
             >
               {ok ? "Certo" : "Errado"}
             </h3>
-            <p className="max-w-[64ch] text-muted-foreground">{texto}</p>
-            <p className="max-w-[64ch] text-muted-foreground">
+            <p className="max-w-[64ch] text-lg text-muted-foreground">
+              {texto}
+            </p>
+            <p className="max-w-[64ch] text-lg text-muted-foreground">
               <strong className="text-foreground">{atual.classe}</strong> no
               flop {tipoNome}: {atual.porque}
             </p>

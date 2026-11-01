@@ -1,7 +1,7 @@
-# Graph Report - project-visual-design-e7ad30  (2026-11-01)
+# Graph Report - kb-pratica-384abd  (2026-11-01)
 
 ## Corpus Check
-- 432 files · ~813,973 words
+- 431 files · ~813,813 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 39 file(s) not represented in the graph (top: .csv 27, (none) 6, .css 4)
 
@@ -11,13 +11,13 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3604da8c`
+- Built from commit: `8955164f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Decisões – Probe Turn
-- Reta Final — Módulo 12
+- 12 - RETA FINAL GUIDELINE.md
 - Solver — ICM e Risk Premium (25% vs 16% field left)
 - Regras vivas: BTN contra 1 open em PKO
 - live-browser.js
@@ -29,15 +29,15 @@
 - Exercícios — XR Short Stack
 - Multiway Pot (EP abre, BTN paga, BB paga — 40bb)
 - Value Bet (regras)
-- Pendências – ICM e Risk Premium
+- Módulo 13 — ICM e Risk Premium
 - connectSSE
 - painel.tsx
 - pratica.tsx
 - 08 - 3BET POT GUIDELINE.md
 - Exemplo 88 river A dobrado (B70 value)
 - KB-003 — Module Template
-- 00-Home.md
-- Referências – C-Bet IP Short Stack
+- 02 - CBET IP 40BB GUIDELINE.md
+- Rule
 - documentRefForElement
 - 07 - XR DEEP GUIDELINE.md
 - Índice de módulos
@@ -60,7 +60,7 @@
 - Guideline em imagem do instrutor (segunda versão)
 - 09 - BET CHECK BET GUIDELINE.md
 - Parte 3 — Adaptações na prática
-- estudos-de-ranges/README.md
+- indice.md
 - 17-BB-Raised-Pot-vs-SB-Limp/06-Pendencias.md
 - Parte 1 — Teoria
 - 13 - ICM GUIDELINE.md
@@ -120,7 +120,7 @@
 - Parte 2 — As frequências (range classes)
 - Parte 7 — Turn e river (o que não muda)
 - Third Barrel — Módulo 04 (README)
-- 12-Padroes.md
+- 15-Bet-vs-Missed/12-Padroes.md
 - Parte 8 — Como aplicar na mesa
 - 00-Home.md
 - Parte 5 — Como dividir o bucket na mesa
@@ -190,7 +190,7 @@
 - Animation Audit Playbook
 - assets.mjs
 - text
-- adapt.md
+- Responsive Design
 - live.md
 - handleManualEditActivity
 - Imagery
@@ -371,7 +371,7 @@
 Cohesion: 0.22
 Nodes (26): Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100), O board mais errado: 875 com turn 9, VideoAulas — Probe Turn, Resumo da aula em cinco linhas (B70, B100, B40, B40, B70 + bluff), Anotações do instrutor (Bloco de Notas), Solver — Probe Turn (anotações do instrutor), Quadro por turn (anotações), Sigla 2P com dois sentidos (dois pares / duas pontas) (+18 more)
 
-### Community 1 - "Reta Final — Módulo 12"
+### Community 1 - "12 - RETA FINAL GUIDELINE.md"
 Cohesion: 0.12
 Nodes (30): Simulações do GTO Wizard da aula (não capturadas), VideoAulas — Reta Final, Mapas de RFI do BTN e CO (ChipEV vs 10% field left, 25/20/15bb), Solver — Reta Final, Convenções: efetivo é o menor stack, todo open é de 2bb, Exercícios — Reta Final (50 questões), Regras Consolidadas – Reta Final, Pendência: mapas de defesa BB e squeeze em 10% field left (+22 more)
 
@@ -419,7 +419,7 @@ Nodes (21): Capado ou não capado define a estratégia, não a posição isolada
 Cohesion: 0.14
 Nodes (18): Blank real vs carta alta que parece blank, VideoAulas Value Bet Masterclass (19 mãos reais dos alunos), Solver Value Bet Masterclass (pendente), Exercícios Value Bet Masterclass (pendente), Miss Value, Regras Consolidadas – Value Bet Masterclass, Pendência: aula específica sobre Check-Raise ofensivo, Pendência: exercícios formais do módulo 11 (+10 more)
 
-### Community 13 - "Pendências – ICM e Risk Premium"
+### Community 13 - "Módulo 13 — ICM e Risk Premium"
 Cohesion: 0.12
 Nodes (35): Curva do ICM comparada a um eletrocardiograma, VideoAulas — ICM e Risk Premium, Exercícios — ICM e Risk Premium (27 questões), Regras Consolidadas – ICM e Risk Premium, ChipEV do LJ e coluna do 8, 9 e 10 — a confirmar, Pendências – ICM e Risk Premium, 27 exercícios de conceito (ICM), Módulo 12 (Reta Final) (+27 more)
 
@@ -443,11 +443,11 @@ Nodes (37): Versões 1.0–1.3 do Módulo 3BET POT, 01.1 — SHORT STACK, 01.2 �
 Cohesion: 0.08
 Nodes (22): graphify, Site, KB-000 — Poker Knowledge Base Architecture, Module Standard, Confidence Levels (High / Medium / Low), Decision Engine, KB-001 — Project Architecture, Leak Finder (+14 more)
 
-### Community 20 - "00-Home.md"
+### Community 20 - "02 - CBET IP 40BB GUIDELINE.md"
 Cohesion: 0.31
 Nodes (14): Flashcards — C-Bet IP 40bb, Ajustes para Short Stack (<15bb), Guideline – C-Bet IP 40bb, Objetivo, Videoaulas – C-Bet IP 40bb, Solver – C-Bet IP 40bb, Exercícios – C-Bet IP 40bb, Regras Consolidadas – C-Bet IP 40bb (+6 more)
 
-### Community 21 - "Referências – C-Bet IP Short Stack"
+### Community 21 - "Rule"
 Cohesion: 0.08
 Nodes (24): Hand Analyzer, Strategy Profiles (GTO / Simplified Human / Population Exploit), Board Category, Concept, Example, Exercise, Hand Analysis, Hand Record (+16 more)
 
@@ -535,7 +535,7 @@ Nodes (23): Solver BCB: validar frequência, sizes e composição dos ranges, Ex
 Cohesion: 0.14
 Nodes (14): Parte 3 — Adaptações na prática, Regra 19 — Conheça a referência antes de adaptar, Regra 20 — Antes de abrir, olhe BB, BTN e SB, Regra 21 — LJ cobrindo todos: expanda, Regra 22 — HJ coberto por todos: reduza, Regra 23 — Quem cobre você joga mais contra você, Regra 24 — Coberto e enfrentando um open: sem flat, Regra 25 — Coberto, jogar agressivo reduz a variância (+6 more)
 
-### Community 45 - "estudos-de-ranges/README.md"
+### Community 45 - "indice.md"
 Cohesion: 0.23
 Nodes (4): Índice das árvores, RFI · BTN · 15bb, RFI · BTN · 20bb · Vanilla · Early, RFI · BTN · 20bb · Vanilla · Mid
 
@@ -775,7 +775,7 @@ Nodes (5): Parte 7 — Turn e river (o que não muda), Regra 19 — A frequênci
 Cohesion: 0.24
 Nodes (11): Blockers Devem Considerar Folds, Defesa Baseada no Sizing, Decisões – Third Barrel, Separação entre Range Polar e Range Linear, Regras de Defesa Simplificadas, Bluff Catchers, Third Barrel — Módulo 04 (README), MDF (Minimum Defense Frequency) (+3 more)
 
-### Community 105 - "12-Padroes.md"
+### Community 105 - "15-Bet-vs-Missed/12-Padroes.md"
 Cohesion: 0.12
 Nodes (16): 1. Como classificar um board, 2. Os cinco tipos, 3. Os buckets de cada tipo **[Imagem]**, 4. Classes de mão, 5. Ajuste pelo opener, 6. Boards de referência, 7. Dúvidas abertas, 8. Criação de exercícios (+8 more)
 
@@ -987,7 +987,7 @@ Nodes (23): AIC_FIELDS, AIC_HEADERS, ARCHIVE_LICENCE, args, argv, fail(), FLAGS,
 Cohesion: 0.17
 Nodes (22): base(), commonsLicence(), first(), fromAic(), fromArchive(), fromCommons(), fromCommonsVideo(), fromMet() (+14 more)
 
-### Community 186 - "adapt.md"
+### Community 186 - "Responsive Design"
 Cohesion: 0.08
 Nodes (25): Assess Adaptation Challenge, Breakpoints: Content-Driven, Content Adaptation, Desktop Adaptation (Mobile → Desktop), Detect Input Method, Not Just Screen Size, Email Adaptation (Web → Email), Implement Adaptations, Layout Adaptation Patterns (+17 more)
 
@@ -1517,7 +1517,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.111) - this node is a cross-community bridge._
 - **What connects `cmd`, `@playwright/mcp`, `Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100)` to the rest of the system?**
   _125 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Reta Final — Módulo 12` be split into smaller, more focused modules?**
+- **Should `12 - RETA FINAL GUIDELINE.md` be split into smaller, more focused modules?**
   _Cohesion score 0.12380952380952381 - nodes in this community are weakly interconnected._
 - **Why does `Commands` connect `impeccable/SKILL.md` to `Init flow`, `setLiveState`?**
   _High betweenness centrality (0.058) - this node is a cross-community bridge._
