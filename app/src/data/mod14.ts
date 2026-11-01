@@ -83,7 +83,7 @@ export const mod14 = {
   turns: [
     {
       id: "blank",
-      nome: "Turn 2, blank",
+      nome: "Blank, board conectado",
       size: "B70",
       flop: ["8s", "7d", "5s"],
       turn: "2c",
@@ -107,7 +107,7 @@ export const mod14 = {
     },
     {
       id: "seco",
-      nome: "Board seco (8-7-3)",
+      nome: "Blank, board seco",
       size: "B100",
       flop: ["8s", "7d", "3c"],
       turn: "2h",
@@ -123,7 +123,7 @@ export const mod14 = {
     },
     {
       id: "alta",
-      nome: "Turn Q, dinâmico",
+      nome: "Carta alta, dinâmico (J, 10, K também)",
       size: "B40",
       flop: ["8s", "7d", "5s"],
       turn: "Qd",
@@ -192,7 +192,7 @@ export const mod14 = {
     },
     {
       id: "sequencia",
-      nome: "Turn 9, sequência",
+      nome: "Sequência completa",
       size: "B70",
       flop: ["8s", "7d", "5s"],
       turn: "9c",
@@ -213,7 +213,7 @@ export const mod14 = {
     },
     {
       id: "pareia",
-      nome: "Turn que pareia",
+      nome: "Pareia o board",
       size: "B70",
       flop: ["8s", "7d", "5s"],
       turn: "8c",
