@@ -108,11 +108,7 @@ export default function Teoria14() {
         </Secao>
 
         <Secao titulo="O que o BTN tem no check atrás">
-          <ul className="grid max-w-[70ch] list-disc gap-1.5 pl-5 font-serif text-lg">
-            {mod14.checkAtras.map((c) => (
-              <li key={c}>{c}</li>
-            ))}
-          </ul>
+          <Lista itens={mod14.checkAtras} />
         </Secao>
 
         <Secao titulo="Como escolher o size">
@@ -200,11 +196,7 @@ export default function Teoria14() {
         </Secao>
 
         <Secao titulo="Erros mais comuns">
-          <ul className="grid max-w-[70ch] list-disc gap-1.5 pl-5 font-serif text-lg">
-            {mod14.erros.map((e) => (
-              <li key={e}>{e}</li>
-            ))}
-          </ul>
+          <Lista itens={mod14.erros} />
         </Secao>
 
         <Secao titulo="Regras de bolso">
