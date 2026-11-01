@@ -117,7 +117,7 @@ export default function Teoria14() {
               <Card key={s.para} className="gap-2.5 rounded-[14px] p-5">
                 <div className="flex items-center gap-3">
                   <SizeBadge size={s.size} />
-                  <strong className="text-lg">{s.para}</strong>
+                  <strong className="text-lg uppercase">{s.para}</strong>
                 </div>
                 <p className="text-muted-foreground">{s.quando}</p>
               </Card>
