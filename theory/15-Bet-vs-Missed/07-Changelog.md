@@ -65,6 +65,18 @@ Ordem de prioridade das fontes padronizada na ordem geral do `theory/CLAUDE.md` 
 
 ---
 
+# Versão 1.3
+
+Fonte: esclarecimentos do autor do KB (31/10/2026).
+
+- Criado `12-Padroes.md` (ficha de padrões): fluxo de classificação do board, critérios dos cinco tipos, buckets, classes de mão, boards de referência e dúvidas abertas.
+- Regra 4 (Guideline e Regras Consolidadas): esclarecimento de que a pior trinca em 100% vale só onde existe bucket de 100%. Pendência 5 resolvida, com ajuste do Exercício 05 ainda por fazer.
+- Decisão 10 registrada.
+
+Nenhuma tabela de buckets mudou.
+
+---
+
 # Próximas Atualizações
 
 Adicionar:

@@ -8,7 +8,7 @@ tags:
   - tipo/guideline
 ---
 
-# Guideline — Bet vs Missed C-Bet
+# Guideline — Bet vs Missed C-Bet
 
 **Flashcards:** [[theory/15-Bet-vs-Missed/15 - BET VS MISSED FLASHCARDS|15 - BET VS MISSED FLASHCARDS]]
 
@@ -104,6 +104,8 @@ Cada regra tem o mesmo formato: **Faça** (o que fazer), **Por quê** (uma ou du
 **Faça:** aposte a pior trinca em todas as vezes.
 
 **Exceção:** o board ultraconectado high (AKT, QJT, QJ9, KJ9). Nesses boards não existe mão em 100%. **[Aula]**
+
+**Esclarecimento do autor do KB (31/10/2026):** a regra vale nos boards que têm bucket de 100% (semi conectado e seco). Onde não existe bucket de 100% (conectado high, monotone e dobrado) não há como encaixar a trinca em 100%, e ela vai onde a tabela do board a põe. Ver `12-Padroes.md` e a Decisão 10.
 
 **Por quê:** nesses boards o range do vilão é muito mais robusto e tem mais equity. Se você aposta tudo, o seu range de check fica desprotegido: depois de check-check você nunca tem mão para dar raise, e depois de check-bet tem menos mãos para pagar. **[Aula]**
 

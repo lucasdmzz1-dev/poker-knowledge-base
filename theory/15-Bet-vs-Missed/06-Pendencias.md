@@ -57,6 +57,8 @@ Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026)
 
 Pela Decisão 3 a imagem prevalece sobre a fala, então as tabelas devem estar certas e o texto da Regra 4 incompleto. **Inferência:** a regra da pior trinca em 100% vale só nos boards que têm bucket de 100% (semi conectado e seco). Confirmar com o coach antes de corrigir a Regra 4 e o Exercício 05.
 
+**Resolvida em 31/10/2026 (esclarecimento do autor do KB):** a inferência está certa. Nos boards sem bucket de 100% não há como encaixar a trinca em 100%, então ela vai onde a tabela do board a põe. Regra 4 do Guideline e das Regras Consolidadas receberam o esclarecimento (Decisão 10). **Falta:** ajustar a explicação do Exercício 05, que ainda cita só o ultraconectado high como exceção.
+
 <!-- graphify-links:start -->
 
 ---

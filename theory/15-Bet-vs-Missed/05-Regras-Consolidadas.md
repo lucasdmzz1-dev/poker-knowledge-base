@@ -46,6 +46,8 @@ Em cada bucket entram mãos de valor e de bluff.
 
 A exceção é o board ultraconectado high (AKT, QJT, QJ9, KJ9), em que não existe mão em 100%.
 
+Esclarecimento do autor do KB (31/10/2026): a regra vale nos boards que têm bucket de 100% (semi conectado e seco). Nos boards sem esse bucket (conectado high, monotone e dobrado) a trinca vai onde a tabela do board a põe.
+
 ---
 
 # Regra 5 — Os draws ficam nos buckets do meio

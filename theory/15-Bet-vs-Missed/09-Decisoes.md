@@ -75,6 +75,18 @@ Em 28/10/2026, o autor do KB decidiu padronizar a ordem de prioridade das fontes
 
 ---
 
+# Decisão 10 — Ficha de padrões e esclarecimentos do autor (31/10/2026)
+
+Foi criada a ficha `12-Padroes.md`, com o fluxo de classificação do board e os boards de referência. O autor do KB esclareceu:
+
+- **A-K-2 é semi conectado**, e os boards secos são só Q-2-3, K-5-3, K-7-4 e A-7-2 (uma carta alta e duas baixas desconectadas).
+- A classificação entre seco, semi conectado e conectado high depende da **interação do range do opener** com o board.
+- No dobrado, o que decide entre seco e carregado é **quanto a terceira carta se conecta com o par** (K-K-J carregado, K-K-2 seco).
+- O **top pair forte, médio e fraco é relativo ao range que chega no spot**, e as mãos que vão para 3bet pré saem da conta.
+- A **pior trinca em 100%** vale nos boards que têm bucket de 100% (semi conectado e seco). Onde não existe esse bucket, a trinca vai onde a tabela do board a põe.
+
+---
+
 # Estado Atual
 
 Módulo estruturado com:
