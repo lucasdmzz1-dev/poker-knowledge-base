@@ -93,6 +93,7 @@ Complemento de 01/11/2026 (autor do KB):
 - **Boards baixos conectados** (7-6-5 e 6-5-4) entram no semi conectado. Os mais baixos e com mais gaps entram no seco.
 - **Dobrado carregado** é quando a terceira carta forma sequência e flush draw com o par.
 - O **range base do top pair** é o range com que o autor paga pré-flop em cada posição.
+- No K-9-2, os melhores kickers do top pair são KQ e KJ, e o pior pode ser o K8s, conforme a posição.
 - Na criação de exercícios, usar só boards com certeza de classificação.
 
 ---

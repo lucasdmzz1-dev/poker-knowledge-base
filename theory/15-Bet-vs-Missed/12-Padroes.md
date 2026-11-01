@@ -113,7 +113,7 @@ Critérios dos quatro primeiros tipos (menos o monotone) são **[Aula]** e **[Au
 
 **Pior trinca.** Vai em 100% **nos boards que têm bucket de 100%** (semi conectado e seco). Nos boards sem bucket de 100% (conectado high, monotone e dobrado) não há onde encaixá-la em 100%, e ela vai onde a tabela do board põe a trinca: 50% no conectado high, 75% no monotone e 75% no dobrado seco. **[Autor]**
 
-**TP forte, médio e fraco.** A força do top pair é **relativa ao range que chega no spot**, e não a um kicker fixo. Forte são geralmente os dois melhores kickers que de fato existem no range. Fraco são os piores kickers do range. O range base é o range com que o autor paga pré-flop em cada posição. Mãos que vão para 3bet pré-flop saem da conta (por exemplo, o AK quase não aparece num flop K-9-2). **[Autor]**
+**TP forte, médio e fraco.** A força do top pair é **relativa ao range que chega no spot**, e não a um kicker fixo. Forte são geralmente os dois melhores kickers que de fato existem no range. Fraco são os piores kickers do range. O range base é o range com que o autor paga pré-flop em cada posição. Mãos que vão para 3bet pré-flop saem da conta (por exemplo, o AK quase não aparece num flop K-9-2). No K-9-2, os melhores kickers são KQ e KJ, e o pior pode ser o K8s, conforme a posição. **[Autor]**
 
 **Demais classes** (overpair, underpair, segundo e terceiro par, dois pares, draws): as definições estão em "Como ler este guideline" do `15 - BET VS MISSED GUIDELINE.md`.
 
@@ -167,7 +167,7 @@ Contra EP e MP o range é outro que o do BB, então o tipo pode mudar (Regra 16 
 2. **Limite dos boards baixos:** 7-6-5 e 6-5-4 são semi conectados. Falta saber até onde vai (5-4-3, 7-5-4, 8-6-4).
 3. **Dobrado:** o critério é a terceira carta formar sequência e flush draw com o par. Falta confirmar as cartas do meio (K-K-9, K-K-8, K-K-T).
 4. **Fonte do range base do TP:** o range é o de call pré-flop do autor em cada posição. Falta esse range registrado no KB, por posição, para eu classificar o TP.
-5. **Exemplo do K-9-2:** o K9 seria dois pares nesse board. Confirmar qual board o autor tinha em mente para o kicker mais fraco.
+5. **Resolvida em 01/11/2026:** no K-9-2, os melhores kickers são KQ e KJ, e o pior pode ser o K8s, conforme a posição.
 
 Itens esclarecidos em 01/11/2026: o critério de altura e de possibilidades de gutshot e duas pontas, os boards 9-6-2 (semi), T-6-2 (seco), 7-6-5 e 6-5-4 (semi), o critério da terceira carta no dobrado e o range base do TP.
 
