@@ -1746,9 +1746,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/analise.tsx": {
-    "mtime": 1793503827.4365342,
-    "seen": 1793503911.5964103,
-    "ast_hash": "778ec40b8b82ad3e9bdb4a76f1478508",
+    "mtime": 1793506085.9684918,
+    "seen": 1793506120.049523,
+    "ast_hash": "35f64f1f0b973bc93b4738a59968ea14",
     "semantic_hash": ""
   },
   "app/src/pages/home.tsx": {
@@ -1758,21 +1758,21 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793505982.6185668,
-    "seen": 1793506022.0274522,
-    "ast_hash": "7b708ebf9452265c74f019b631a67afd",
+    "mtime": 1793506086.0476985,
+    "seen": 1793506120.049523,
+    "ast_hash": "0c368cca079febe131b000bc6e36cb19",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
-    "mtime": 1793503827.3357396,
-    "seen": 1793503911.5964103,
-    "ast_hash": "5ed49e8a6ed5d5bfe5e883763581b77b",
+    "mtime": 1793506086.0730586,
+    "seen": 1793506120.049523,
+    "ast_hash": "cb9ec5cc1f99276bcb7a2d1cb5a9adbc",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-index.tsx": {
-    "mtime": 1793503776.972572,
-    "seen": 1793503911.5964103,
-    "ast_hash": "adb13ff4d205109bca0e13906da4114f",
+    "mtime": 1793506086.0824826,
+    "seen": 1793506120.049523,
+    "ast_hash": "072156ff259adf80cf374e002efeee15",
     "semantic_hash": ""
   },
   "app/tsconfig.app.json": {
@@ -2565,6 +2565,12 @@
     "mtime": 1793504065.8189957,
     "seen": 1793506022.0319872,
     "ast_hash": "46f63a3f4bfc4c92b769996004ad3022",
+    "semantic_hash": ""
+  },
+  "app/src/components/page-header.tsx": {
+    "mtime": 1793506086.0998597,
+    "seen": 1793506120.0464816,
+    "ast_hash": "9cf17ee9a51ecdde3f1744e72c319cde",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

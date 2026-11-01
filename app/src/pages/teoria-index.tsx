@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { PageHeader } from "@/components/page-header"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 
@@ -24,24 +25,33 @@ const TEMAS: [string, string][] = [
 
 export default function TeoriaIndex() {
   return (
-    <main className="mx-auto max-w-[1080px] px-5 pt-10 pb-20">
-      <h1 className="text-[clamp(2rem,5vw,3.2rem)] leading-tight font-bold tracking-tight">Teoria</h1>
-      <p className="text-muted-foreground mt-3 text-lg">Escolha o tema que você quer estudar.</p>
-      <ul className="mt-7 grid gap-2">
+    <main>
+      <PageHeader title="Teoria" lead="Escolha o tema que você quer estudar." />
+      <ul className="mx-auto grid max-w-[1080px] gap-3 px-5 pb-20 md:grid-cols-2">
         {TEMAS.map(([n, nome]) => {
           const on = n === "15"
           const inner = (
             <>
-              <span className="text-muted-foreground min-w-[2ch] tabular-nums">{n}</span>
+              <span className="min-w-[2ch] text-muted-foreground tabular-nums">
+                {n}
+              </span>
               <span className="flex-1 font-medium">{nome}</span>
-              <Badge variant={on ? "default" : "outline"}>{on ? "Disponível" : "Em breve"}</Badge>
+              <Badge variant={on ? "default" : "outline"}>
+                {on ? "Disponível" : "Em breve"}
+              </Badge>
             </>
           )
-          const cls = cn("bg-card flex items-center gap-4 rounded-xl border px-4 py-4", !on && "opacity-50")
+          const cls = cn(
+            "flex items-center gap-4 rounded-[18px] border bg-card px-5 py-5",
+            !on && "opacity-50"
+          )
           return (
             <li key={n}>
               {on ? (
-                <Link to="/teoria/bet-vs-missed" className={cn(cls, "hover:border-primary hover:bg-secondary")}>
+                <Link
+                  to="/teoria/bet-vs-missed"
+                  className={cn(cls, "hover:border-primary hover:bg-secondary")}
+                >
                   {inner}
                 </Link>
               ) : (
