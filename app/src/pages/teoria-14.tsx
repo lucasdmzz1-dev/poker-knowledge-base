@@ -162,7 +162,12 @@ export default function Teoria14() {
                     key={a.nome}
                     className="grid gap-1 border-t py-3 md:grid-cols-[9rem_minmax(0,1fr)] md:gap-x-4"
                   >
-                    <span className={cn("text-lg font-bold", COR_ACAO[a.nome])}>
+                    <span
+                      className={cn(
+                        "text-lg font-bold uppercase",
+                        COR_ACAO[a.nome]
+                      )}
+                    >
                       {a.nome}
                     </span>
                     <span className="text-lg font-semibold text-foreground">
