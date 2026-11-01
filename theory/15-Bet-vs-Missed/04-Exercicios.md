@@ -147,13 +147,13 @@ Em qual bucket vai a pior trinca?
 a) 75%, para proteger o range de check
 b) 50%, para induzir a aposta do vilão
 c) 100%, em qualquer board sem exceção
-d) 100%, menos no board ultraconectado high
+d) 100%, nos boards que têm bucket de 100%
 
 **Correção**
 
-Resposta: d) 100%, menos no board ultraconectado high
+Resposta: d) 100%, nos boards que têm bucket de 100%
 
-A pior trinca vai sempre em 100%. A exceção é o board ultraconectado high (AKT, QJT, QJ9, KJ9), onde não existe mão em 100%.
+A pior trinca vai em 100% nos boards que têm esse bucket (semi conectado e seco). No conectado high (AKT, QJT, QJ9, KJ9), no monotone e no dobrado não existe mão em 100%, então a trinca vai onde a tabela do board a põe. Esclarecimento do autor do KB (31/10/2026).
 
 **Regra:** Regra 4
 
