@@ -191,7 +191,7 @@ export default function Teoria14() {
             {mod14.flushes.map((f) => (
               <Card key={f.tipo} className="gap-3 rounded-[14px] p-5">
                 <Cards codes={f.ex} size="sm" />
-                <strong className={cn("text-lg", COR_ACAO[f.acao])}>
+                <strong className={cn("text-lg uppercase", COR_ACAO[f.acao])}>
                   {f.acao}
                 </strong>
                 <small className="text-muted-foreground">{f.tipo}</small>
