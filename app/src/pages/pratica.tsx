@@ -193,7 +193,7 @@ export default function Pratica() {
     const pct = Math.round((acertos / itens.length) * 100)
     return (
       <main className="mx-auto max-w-[1080px] px-5 pt-10 pb-20">
-        <div className="grid max-w-[560px] gap-4">
+        <div className="enter grid max-w-[560px] gap-4">
           <h1 className="text-[clamp(2rem,5vw,3.2rem)] leading-tight font-bold tracking-tight">Treino concluído</h1>
           <div className="text-[clamp(2.4rem,6vw,3.4rem)] font-bold">
             {acertos} de {itens.length} <span className="text-muted-foreground text-2xl">{pct}%</span>
@@ -274,7 +274,7 @@ export default function Pratica() {
             disabled={resp !== null}
             onClick={() => responder(a)}
             className={cn(
-              "bg-secondary grid gap-0.5 rounded-[14px] border px-1.5 py-4 text-base font-bold transition-transform enabled:cursor-pointer enabled:hover:-translate-y-0.5 disabled:opacity-55 md:py-[18px] md:text-lg motion-reduce:transition-none",
+              "bg-secondary grid gap-0.5 rounded-[14px] border px-1.5 py-4 text-base font-bold transition-[transform,border-color,background-color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] enabled:cursor-pointer enabled:active:scale-[0.97] disabled:opacity-55 md:py-[18px] md:text-lg",
               resp === null && hover,
               resp !== null && a === esperado && "bg-primary text-primary-foreground border-primary opacity-100",
               resp === a && "outline-foreground opacity-100 outline-2"

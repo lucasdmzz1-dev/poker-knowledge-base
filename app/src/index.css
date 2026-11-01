@@ -156,3 +156,48 @@
     --ring: #7be7a3;
     --radius: 0.875rem;
 }
+
+/* Superfícies do navegador, tematizadas com a paleta */
+::selection { background: color-mix(in srgb, var(--primary) 35%, transparent); color: var(--foreground); }
+html { scrollbar-color: #2c4350 var(--background); scrollbar-width: thin; }
+a { text-underline-offset: 0.2em; }
+
+
+/* Movimento (Emil Kowalski): entrada suave, abrir e fechar com altura e opacidade */
+:root { --ease-out: cubic-bezier(0.23, 1, 0.32, 1); }
+
+.enter {
+    opacity: 1;
+    transform: none;
+    transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out);
+    transition-delay: calc(var(--i, 0) * 60ms);
+    @starting-style {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+[data-slot="collapsible-content"] { overflow: hidden; }
+[data-slot="collapsible-content"][data-state="open"] { animation: pkb-abre 200ms var(--ease-out); }
+[data-slot="collapsible-content"][data-state="closed"] { animation: pkb-fecha 160ms var(--ease-out); }
+@keyframes pkb-abre { from { height: 0; opacity: 0; } to { height: var(--radix-collapsible-content-height); opacity: 1; } }
+@keyframes pkb-fecha { from { height: var(--radix-collapsible-content-height); opacity: 1; } to { height: 0; opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+    .enter {
+        transition: opacity 200ms ease-out;
+        transition-delay: 0ms;
+        @starting-style { opacity: 0; transform: none; }
+    }
+    [data-slot="collapsible-content"][data-state="open"] { animation: pkb-fade-in 150ms ease-out; }
+    [data-slot="collapsible-content"][data-state="closed"] { animation: none; }
+    [data-slot="popover-content"] {
+        --tw-enter-scale: 1;
+        --tw-exit-scale: 1;
+        --tw-enter-translate-x: 0;
+        --tw-enter-translate-y: 0;
+        --tw-exit-translate-x: 0;
+        --tw-exit-translate-y: 0;
+    }
+}
+@keyframes pkb-fade-in { from { opacity: 0; } to { opacity: 1; } }

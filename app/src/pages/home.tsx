@@ -1,43 +1,150 @@
 import { Link } from "react-router-dom"
+import { Cards } from "@/components/poker/cards"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { KEYS, readJSON } from "@/lib/storage"
 import type { Ultimo } from "@/lib/poker"
 
-const PORTAS = [
-  { to: "/teoria", nome: "Teoria" },
-  { to: "/pratica", nome: "Prática" },
-  { to: "/analise", nome: "Análise" },
-]
+const CARD =
+  "group h-full bg-card hover:border-primary hover:bg-secondary relative flex flex-col gap-5 overflow-hidden rounded-[22px] border p-6 transition-[transform,border-color,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.985] [@media(hover:hover)_and_(pointer:fine)]:hover:-translate-y-1 motion-reduce:[@media(hover:hover)_and_(pointer:fine)]:hover:translate-y-0"
+
+function Passo({
+  n,
+  titulo,
+  texto,
+  to,
+  children,
+}: {
+  n: number
+  titulo: string
+  texto: string
+  to: string
+  children: React.ReactNode
+}) {
+  return (
+    <div className="enter" style={{ "--i": n - 1 } as React.CSSProperties}>
+      <Link to={to} className={CARD}>
+        <div className="grid min-h-[190px] place-items-center rounded-2xl border bg-background/60 p-4">
+          {children}
+        </div>
+        <div>
+          <p className="text-sm text-muted-foreground">Passo {n}</p>
+          <h3 className="mt-1 text-2xl font-bold tracking-tight">{titulo}</h3>
+          <p className="mt-2 max-w-[34ch] text-muted-foreground">{texto}</p>
+        </div>
+        <span
+          aria-hidden="true"
+          className="mt-auto text-2xl leading-none text-primary transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] [@media(hover:hover)_and_(pointer:fine)]:group-hover:translate-x-1 motion-reduce:[@media(hover:hover)_and_(pointer:fine)]:group-hover:translate-x-0"
+        >
+          ›
+        </span>
+      </Link>
+    </div>
+  )
+}
 
 export default function Home() {
-  const last = readJSON<Ultimo>(KEYS.last, { to: "/teoria/bet-vs-missed", label: "Bet vs Missed C-Bet · Teoria" })
+  const last = readJSON<Ultimo>(KEYS.last, {
+    to: "/teoria/bet-vs-missed",
+    label: "Bet vs Missed C-Bet · Teoria",
+  })
   return (
-    <main className="mx-auto flex min-h-[calc(100svh-61px)] max-w-[1080px] flex-col justify-center px-5 py-12">
-      <h1 className="mb-10 text-center text-[clamp(2rem,5vw,3.2rem)] leading-tight font-bold tracking-tight">
-        O que você quer fazer hoje?
-      </h1>
-      <div className="grid gap-4 md:grid-cols-3">
-        {PORTAS.map((p) => (
-          <Link
-            key={p.to}
-            to={p.to}
-            className="group bg-card hover:border-primary hover:bg-secondary focus-visible:border-primary relative flex min-h-32 items-end justify-between overflow-hidden rounded-[20px] border p-7 transition-all hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:translate-y-0 md:min-h-60"
-          >
-            <span className="bg-primary absolute inset-x-7 top-0 h-[3px] origin-left scale-x-0 transition-transform group-hover:scale-x-100 group-focus-visible:scale-x-100" />
-            <span className="text-[clamp(1.8rem,3.4vw,2.6rem)] font-bold tracking-tight">{p.nome}</span>
-            <span aria-hidden="true" className="text-primary text-3xl leading-none">
-              ›
-            </span>
-          </Link>
-        ))}
-      </div>
-      <p className="mt-8 text-center">
+    <main>
+      <section className="mx-auto flex max-w-[1080px] flex-col items-center px-5 pt-16 pb-14 text-center md:pt-24">
         <Link
-          to={last.to}
-          className="text-muted-foreground hover:text-foreground hover:border-primary inline-block rounded-full border px-5 py-2.5"
+          to="/teoria/bet-vs-missed"
+          className="inline-flex items-center gap-2 rounded-full border bg-card/60 py-1.5 pr-4 pl-1.5 text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground"
         >
-          Continuar: {last.label} ›
+          <Badge className="rounded-full">Novo</Badge>
+          Módulo 15 disponível: Bet vs Missed C-Bet ›
         </Link>
-      </p>
+        <h1 className="mt-8 max-w-[16ch] text-[clamp(2.6rem,7vw,5.6rem)] leading-[0.98] font-bold tracking-[-0.035em] text-balance">
+          O que você quer fazer hoje?
+        </h1>
+        <p className="mt-6 max-w-[46ch] text-[clamp(1.05rem,1.8vw,1.35rem)] leading-snug text-muted-foreground">
+          Entenda a teoria, treine a decisão e veja onde você perde. Um ciclo de
+          estudo feito para o seu jogo de torneio.
+        </p>
+      </section>
+
+      <section className="mx-auto max-w-[1080px] px-5 pb-28">
+        <div className="grid gap-4 md:grid-cols-3">
+          <Passo
+            n={1}
+            titulo="Teoria"
+            texto="Guidelines padronizados, com exemplos de mesa e os porquês de cada regra."
+            to="/teoria"
+          >
+            <div className="flex flex-col items-center gap-3">
+              <Cards codes={["Js", "9h", "6c"]} size="md" />
+              <span className="rounded-full bg-b50 px-3 py-1 text-sm font-bold text-[#1a0907]">
+                B50
+              </span>
+            </div>
+          </Passo>
+          <Passo
+            n={2}
+            titulo="Prática"
+            texto="Um trainer pós-flop com mão, board e RNG. Você decide e vê a conta."
+            to="/pratica"
+          >
+            <div className="flex items-center gap-4">
+              <Cards codes={["Ad", "Ac"]} size="md" />
+              <span className="rounded-[10px] border-4 border-[#2bb7d4] bg-white px-3 py-1 text-3xl leading-tight font-bold text-[#0b8aa6] tabular-nums">
+                64
+              </span>
+            </div>
+          </Passo>
+          <Passo
+            n={3}
+            titulo="Análise"
+            texto="Seus leaks do mês e a evolução nos temas, para saber onde atacar."
+            to="/analise"
+          >
+            <div className="grid w-full max-w-[220px] gap-2.5">
+              {[
+                ["Semi", 71],
+                ["Seco", 54],
+                ["Mono", 38],
+              ].map(([nome, p]) => (
+                <div
+                  key={nome}
+                  className="grid grid-cols-[3.2rem_1fr] items-center gap-2 text-sm"
+                >
+                  <span className="text-muted-foreground">{nome}</span>
+                  <span className="h-2 overflow-hidden rounded-full bg-secondary">
+                    <i
+                      className="block h-full rounded-full bg-primary"
+                      style={{ width: `${p}%` }}
+                    />
+                  </span>
+                </div>
+              ))}
+            </div>
+          </Passo>
+        </div>
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
+          <Button
+            asChild
+            size="lg"
+            className="h-12 rounded-full px-7 text-base font-bold active:scale-[0.97]"
+          >
+            <Link to={last.to}>Continuar: {last.label}</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="h-12 rounded-full px-7 text-base font-bold active:scale-[0.97]"
+          >
+            <Link to="/teoria">Ver os temas</Link>
+          </Button>
+        </div>
+      </section>
+
+      <footer className="mx-auto max-w-[1080px] px-5 pb-12 text-center text-sm text-muted-foreground">
+        Poker KB · protótipo do módulo 15
+      </footer>
     </main>
   )
 }
