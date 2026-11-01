@@ -64,6 +64,18 @@ const ACOES: {
   },
 ]
 
+function negritoPct(t: string): ReactNode {
+  return t.split(/(\d+%)/).map((parte, k) =>
+    /^\d+%$/.test(parte) ? (
+      <strong key={k} className="text-foreground">
+        {parte}
+      </strong>
+    ) : (
+      parte
+    )
+  )
+}
+
 export default function Pratica() {
   const [fase, setFase] = useState<Fase>("setup")
   const [tipos, setTipos] = useState<TipoId[]>(DISPONIVEIS)
@@ -292,7 +304,7 @@ export default function Pratica() {
             {acertos} de {itens.length}{" "}
             <span className="text-2xl text-muted-foreground">{pct}%</span>
           </div>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-xl text-muted-foreground">
             Quer levar esta sessão para a Análise? Sessões de teste ficam de
             fora.
           </p>
@@ -421,18 +433,18 @@ export default function Pratica() {
           >
             <h3
               className={cn(
-                "text-3xl font-bold",
+                "text-5xl font-extrabold tracking-tight",
                 ok ? "text-primary" : "text-destructive"
               )}
             >
-              {ok ? "Certo" : "Errado"}
+              {ok ? "CERTO" : "ERRADO"}
             </h3>
-            <p className="max-w-[64ch] text-lg text-muted-foreground">
+            <p className="max-w-[64ch] text-xl text-muted-foreground">
               {texto}
             </p>
-            <p className="max-w-[64ch] text-lg text-muted-foreground">
+            <p className="max-w-[64ch] text-xl text-muted-foreground">
               <strong className="text-foreground">{atual.classe}</strong> no
-              flop {tipoNome}: {atual.porque}
+              flop {tipoNome}: {negritoPct(atual.porque)}
             </p>
             <RngStrip bucket={atual.bucket} rng={roll} size={tipoAtual.size} />
             <div className="mt-4">
