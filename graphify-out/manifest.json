@@ -1428,9 +1428,9 @@
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/15 - BET VS MISSED GUIDELINE.md": {
-    "mtime": 1793506493.7391737,
-    "seen": 1793506647.370178,
-    "ast_hash": "7ad08807ff7f946df7aa7a7190dc6cb1",
+    "mtime": 1793506686.6741235,
+    "seen": 1793529625.2501242,
+    "ast_hash": "a95afbdcf0c223ae1a21449ee4c925c8",
     "semantic_hash": ""
   },
   "theory/16-PKO/16 - PKO GUIDELINE.md": {
@@ -1644,9 +1644,9 @@
     "semantic_hash": ""
   },
   "app/src/components/poker/cards.tsx": {
-    "mtime": 1793506564.1858547,
-    "seen": 1793506647.3066576,
-    "ast_hash": "75f25945ba3c6f9f7dbe9325743d1247",
+    "mtime": 1793506965.0106745,
+    "seen": 1793529625.1880665,
+    "ast_hash": "75e5871ecbc5618b2a369cf7216cf14e",
     "semantic_hash": ""
   },
   "app/src/components/ui/badge.tsx": {
@@ -1758,9 +1758,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793506563.7873485,
-    "seen": 1793506647.3096583,
-    "ast_hash": "256b1b06fffe3bbfb3e5d44d03a2ae3a",
+    "mtime": 1793506981.7344868,
+    "seen": 1793529625.1910672,
+    "ast_hash": "bffac7103f44208a5750eabfaa073d6b",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2577,6 +2577,12 @@
     "mtime": 1793506493.7401826,
     "seen": 1793506647.3772564,
     "ast_hash": "40ebebd04782a43d51685662bf3a002c",
+    "semantic_hash": ""
+  },
+  "app/src/components/poker/mesa.tsx": {
+    "mtime": 1793507045.9077017,
+    "seen": 1793529625.1880665,
+    "ast_hash": "5a5d389535ed944cace819ccd2055147",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

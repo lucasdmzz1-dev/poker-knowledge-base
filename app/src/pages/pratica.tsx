@@ -5,9 +5,21 @@ import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Cards, RngPlate, RngStrip } from "@/components/poker/cards"
+import { RngStrip } from "@/components/poker/cards"
+import {
+  BarraAcoes,
+  Mesa,
+  tamanhoBB,
+  type Opener,
+} from "@/components/poker/mesa"
 import { mod15, tipoById, type Situacao, type TipoId } from "@/data/mod15"
-import { rng, shuffle, type ItemSessao, type Sessao } from "@/lib/poker"
+import {
+  randomInt,
+  rng,
+  shuffle,
+  type ItemSessao,
+  type Sessao,
+} from "@/lib/poker"
 import { KEYS, lerSessoes, writeJSON } from "@/lib/storage"
 import { cn } from "@/lib/utils"
 
@@ -22,10 +34,34 @@ const DISPONIVEIS = mod15.tipos
   .filter((t) => (contagem[t.id] ?? 0) > 0)
   .map((t) => t.id)
 
-const ACOES: { a: Acao; tecla: string; hover: string }[] = [
-  { a: "Check", tecla: "C", hover: "hover:border-check" },
-  { a: "B25", tecla: "1", hover: "hover:border-b25" },
-  { a: "B50", tecla: "2", hover: "hover:border-b50" },
+const ACOES: {
+  a: Acao
+  rotulo: string
+  sub: string
+  tecla: string
+  cor: string
+}[] = [
+  {
+    a: "Check",
+    rotulo: "CHECK",
+    sub: "",
+    tecla: "C",
+    cor: "bg-[#37829b] hover:bg-[#3f92ae]",
+  },
+  {
+    a: "B25",
+    rotulo: "BET 25%",
+    sub: `${tamanhoBB(0.25)} bb`,
+    tecla: "1",
+    cor: "bg-[#a4545a] hover:bg-[#b4636a]",
+  },
+  {
+    a: "B50",
+    rotulo: "BET 50%",
+    sub: `${tamanhoBB(0.5)} bb`,
+    tecla: "2",
+    cor: "bg-[#8a3a41] hover:bg-[#9b4a52]",
+  },
 ]
 
 export default function Pratica() {
@@ -37,6 +73,7 @@ export default function Pratica() {
   const [i, setI] = useState(0)
   const [itens, setItens] = useState<ItemSessao[]>([])
   const [roll, setRoll] = useState(1)
+  const [opener, setOpener] = useState<Opener>("HJ")
   const [resp, setResp] = useState<Acao | null>(null)
   const [sessId, setSessId] = useState(0)
   const [levada, setLevada] = useState(false)
@@ -108,6 +145,7 @@ export default function Pratica() {
     setResp(null)
     respondido.current = false
     setRoll(rng())
+    setOpener(randomInt(2) === 0 ? "HJ" : "CO")
     setLevada(false)
     setFase("jogo")
   }
@@ -132,6 +170,7 @@ export default function Pratica() {
     setResp(null)
     respondido.current = false
     setRoll(rng())
+    setOpener(randomInt(2) === 0 ? "HJ" : "CO")
   }
 
   function levar() {
@@ -284,7 +323,6 @@ export default function Pratica() {
   }
 
   if (!atual || !tipoAtual || !esperado) return null
-  const acertos = itens.filter((x) => x.ok).length
   const ok = resp === esperado
   const ultimo = i === fila.length - 1
   const tipoNome = tipoAtual.nome.toLowerCase()
@@ -302,56 +340,48 @@ export default function Pratica() {
     texto = `O RNG ${roll} fica acima de ${atual.bucket}%, então a mão dá check.`
   }
 
+  let sequencia = 0
+  for (let k = itens.length - 1; k >= 0 && itens[k].ok; k--) sequencia++
+
   return (
-    <main className="mx-auto max-w-[1080px] px-5 pt-10 pb-20">
-      <div className="mb-3.5 flex justify-between text-muted-foreground tabular-nums">
-        <span>
-          Mão {i + 1} de {fila.length}
-        </span>
-        <span>{acertos} acertos</span>
+    <main className="mx-auto max-w-[1080px] px-4 pt-6 pb-20 md:px-5">
+      <BarraAcoes opener={opener} agora={resp ? resp : "Tomar ação"} />
+
+      <div className="mt-4">
+        <Mesa
+          opener={opener}
+          board={atual.board}
+          hero={atual.hero}
+          roll={roll}
+          mao={i + 1}
+          total={fila.length}
+          sequencia={sequencia}
+        />
       </div>
 
-      <div className="grid justify-items-center gap-6 rounded-[28px] border border-felt-line bg-felt px-5 pt-9 pb-8">
-        <p className="max-w-[52ch] text-center text-muted-foreground">
-          {mod15.spot}. Você aposta ou dá check?
-        </p>
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-sm text-muted-foreground">Flop</span>
-          <Cards codes={atual.board} size="xl" />
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-7">
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-sm text-muted-foreground">Sua mão</span>
-            <Cards codes={atual.hero} size="lg" />
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-sm text-muted-foreground">
-              RNG de 1 a 100
-            </span>
-            <RngPlate value={roll} />
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-5 grid grid-cols-3 gap-2 md:gap-3">
-        {ACOES.map(({ a, tecla, hover }) => (
+      <div className="mx-auto mt-4 grid max-w-[1000px] grid-cols-3 gap-2 md:gap-3">
+        {ACOES.map(({ a, rotulo, sub, tecla, cor }) => (
           <button
             key={a}
             type="button"
             disabled={resp !== null}
             onClick={() => responder(a)}
             className={cn(
-              "grid gap-0.5 rounded-[14px] border bg-secondary px-1.5 py-4 text-base font-bold transition-[transform,border-color,background-color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] enabled:cursor-pointer enabled:active:scale-[0.97] disabled:opacity-55 md:py-[18px] md:text-lg",
-              resp === null && hover,
+              "grid min-h-16 content-center gap-0.5 rounded-lg px-1.5 py-3 text-base font-bold text-white transition-[transform,background-color,opacity] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] enabled:cursor-pointer enabled:active:scale-[0.97] md:text-lg",
+              cor,
+              resp !== null && a !== esperado && a !== resp && "opacity-40",
               resp !== null &&
                 a === esperado &&
-                "border-primary bg-primary text-primary-foreground opacity-100",
-              resp === a && "opacity-100 outline-2 outline-foreground"
+                "outline-2 outline-offset-2 outline-primary",
+              resp !== null &&
+                resp === a &&
+                a !== esperado &&
+                "outline-2 outline-offset-2 outline-destructive"
             )}
           >
-            {a}
-            <small className="text-xs font-normal opacity-70">
-              tecla {tecla}
+            {rotulo}
+            <small className="text-xs font-normal opacity-80">
+              {sub ? `${sub} · tecla ${tecla}` : `tecla ${tecla}`}
             </small>
           </button>
         ))}

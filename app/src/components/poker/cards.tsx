@@ -15,6 +15,8 @@ const WIDTH = {
   md: "52px",
   lg: "clamp(54px, 15vw, 72px)",
   xl: "clamp(60px, 18vw, 88px)",
+  mesa: "clamp(30px, 6vw, 58px)",
+  mesaHero: "clamp(30px, 5.6vw, 54px)",
 } as const
 
 type SuitKey = keyof typeof SUIT
