@@ -52,12 +52,15 @@ function LeaksLista({
   const [escolhido, setEscolhido] = useState<string | null>(null)
   const mes =
     escolhido && meses.includes(escolhido) ? escolhido : (meses[0] ?? "")
-  const [fase, setFase] = useState<Fase>("preflop")
+  const [fase, setFase] = useState<Fase | "todas">("preflop")
   const [todos, setTodos] = useState(false)
   const [secao, setSecao] = useState<string | null>(null)
   const [criticas, setCriticas] = useState(false)
   const daFase = useMemo(
-    () => leaks.filter((l) => l.mes === mes && l.fase === fase),
+    () =>
+      leaks.filter(
+        (l) => l.mes === mes && (fase === "todas" || l.fase === fase)
+      ),
     [leaks, mes, fase]
   )
   const doMes = useMemo(() => {
@@ -66,8 +69,8 @@ function LeaksLista({
       .sort((a, b) => Math.abs(desvio(b)) - Math.abs(desvio(a)))
     return criticas ? ordenados.slice(0, CRITICAS) : ordenados
   }, [daFase, secao, criticas])
-  const total = (f: Fase) =>
-    leaks.filter((l) => l.mes === mes && l.fase === f).length
+  const total = (f: Fase | "todas") =>
+    leaks.filter((l) => l.mes === mes && (f === "todas" || l.fase === f)).length
   const mostrados = todos ? doMes : doMes.slice(0, VISIVEIS)
   const criticos = PONTOS_CRITICOS[mes]
   const [marcados, setMarcados] = useState<string[]>([])
@@ -129,7 +132,7 @@ function LeaksLista({
       },
     ])
     setEscolhido(mesNovo)
-    setFase(faseNova)
+    if (fase !== "todas") setFase(faseNova)
     setAberto(false)
     e.currentTarget.reset()
   }
@@ -183,7 +186,11 @@ function LeaksLista({
             </label>
             <label className="grid gap-1 text-sm">
               Fase
-              <select name="fase" defaultValue={fase} className={CAMPO}>
+              <select
+                name="fase"
+                defaultValue={fase === "todas" ? "preflop" : fase}
+                className={CAMPO}
+              >
                 <option value="preflop">Pré-flop</option>
                 <option value="posflop">Pós-flop</option>
               </select>
@@ -268,6 +275,7 @@ function LeaksLista({
       <div role="tablist" aria-label="Fase" className="mb-4 flex gap-2">
         {(
           [
+            ["todas", "Todos"],
             ["preflop", "Pré-flop"],
             ["posflop", "Pós-flop"],
           ] as const
@@ -372,8 +380,13 @@ function LeaksLista({
 
       {doMes.length === 0 ? (
         <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
-          Nenhum leak de {fase === "preflop" ? "pré-flop" : "pós-flop"} em{" "}
-          {rotuloMes(mes) || "este mês"} ainda. Use "Adicionar leak" com os
+          Nenhum leak{" "}
+          {fase === "preflop"
+            ? "de pré-flop "
+            : fase === "posflop"
+              ? "de pós-flop "
+              : ""}
+          em {rotuloMes(mes) || "este mês"} ainda. Use "Adicionar leak" com os
           números do mês.
         </div>
       ) : (
