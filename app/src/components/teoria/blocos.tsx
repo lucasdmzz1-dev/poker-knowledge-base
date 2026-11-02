@@ -73,7 +73,7 @@ export function Secao({
         <span className={cn("h-1 w-12 rounded-full", a.barra)} aria-hidden />
         <h2
           className={cn(
-            "text-[clamp(1.5rem,3.4vw,2.1rem)] leading-tight font-bold tracking-tight",
+            "text-[clamp(1.5rem,3.4vw,2.1rem)] leading-tight font-bold tracking-tight uppercase",
             a.texto
           )}
         >
@@ -110,7 +110,7 @@ function ItemTexto({ texto }: { texto: string }) {
   return (
     <div className="grid gap-1">
       {titulo && (
-        <p className="text-lg leading-snug font-bold text-foreground">
+        <p className="text-lg leading-snug font-bold text-foreground uppercase">
           <Rico>{titulo}</Rico>
         </p>
       )}
@@ -197,7 +197,7 @@ export function ListaPassos({ itens }: { itens: string[] }) {
           {i + 1}
         </span>
         {titulo && (
-          <p className="text-[clamp(1.3rem,2.6vw,1.7rem)] leading-snug font-bold text-foreground">
+          <p className="text-[clamp(1.3rem,2.6vw,1.7rem)] leading-snug font-bold text-foreground uppercase">
             <Rico>{titulo}</Rico>
           </p>
         )}
