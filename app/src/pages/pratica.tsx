@@ -5,6 +5,7 @@ import {
   CartaoResultado,
   estadoDe,
 } from "@/components/poker/resposta"
+import { RelatarErro } from "@/components/poker/relatar-erro"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -18,6 +19,8 @@ import {
   tamanhoBB,
   type Opener,
 } from "@/components/poker/mesa"
+import PraticaCbet from "@/pages/pratica-cbet"
+import PraticaCbet40 from "@/pages/pratica-cbet40"
 import PraticaProbe, { SeletorTema, type Tema } from "@/pages/pratica-probe"
 import { mod15, tipoById, type Situacao, type TipoId } from "@/data/mod15"
 import {
@@ -505,7 +508,7 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
               flop {tipoNegrito}: {negritoPct(atual.porque)}
             </p>
             <RngStrip bucket={atual.bucket} rng={roll} size={tipoAtual.size} />
-            <div className="mt-4">
+            <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
               <Button
                 autoFocus
                 size="lg"
@@ -514,6 +517,18 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
               >
                 {ultimo ? "Ver resultado" : "Próxima mão"}
               </Button>
+              <RelatarErro
+                tema="Bet vs Missed C-Bet"
+                questao={atual.id}
+                contexto={{
+                  board: atual.board.join(" "),
+                  mao: atual.hero.join(" "),
+                  opener,
+                  rng: String(roll),
+                  resposta: String(resp),
+                  certa: String(esperado),
+                }}
+              />
             </div>
           </CartaoResultado>
         )}
@@ -528,9 +543,8 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
 
 export default function Pratica() {
   const [tema, setTema] = useState<Tema>("bet")
-  return tema === "bet" ? (
-    <PraticaBet onTema={setTema} />
-  ) : (
-    <PraticaProbe onTema={setTema} />
-  )
+  if (tema === "probe") return <PraticaProbe onTema={setTema} />
+  if (tema === "cbet") return <PraticaCbet onTema={setTema} />
+  if (tema === "cbet40") return <PraticaCbet40 onTema={setTema} />
+  return <PraticaBet onTema={setTema} />
 }

@@ -69,7 +69,7 @@ const m10: ModuloTeoria = {
       tipo: "abas",
       titulo: "O que fazer em cada situação",
       intro:
-        "Escolha a sua posição e a situação. A mão passa na mesa, ação por ação, como no replayer. Quando chega a sua vez, aparece o que fazer, com um exemplo de cada grupo de mãos.",
+        "Escolha a sua posição e a situação. A mão passa na mesa, ação por ação, como no replayer. Quando chega a sua vez, aparece o que fazer, com um exemplo de cada grupo de mãos. Boards e mãos são ilustrativos, montados pela guideline.",
       abas: [
         {
           id: "oop",

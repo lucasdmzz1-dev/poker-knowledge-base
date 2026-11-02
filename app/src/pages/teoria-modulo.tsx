@@ -164,6 +164,8 @@ function Acoes({ acoes }: { acoes: AcaoT[] }) {
 function Abas({ abas }: { abas: AbaT[] }) {
   const [id, setId] = useState(abas[0].id)
   const aba = abas.find((a) => a.id === id) ?? abas[0]
+  // No replay da mesa (Multiway) tudo fica centralizado, inclusive o "Como pensar".
+  const replay = aba.blocos.every((b) => b.mesa)
 
   return (
     <>
@@ -187,7 +189,10 @@ function Abas({ abas }: { abas: AbaT[] }) {
       <Card className="rounded-[22px]">
         <CardContent className="grid gap-10 p-5 sm:p-7">
           <p
-            className="mx-auto max-w-[64ch] rounded-xl bg-primary/10 p-4 text-center font-serif text-lg leading-relaxed"
+            className={cn(
+              "max-w-[64ch] rounded-xl bg-primary/10 p-4 font-serif text-lg leading-relaxed",
+              replay && "mx-auto text-center"
+            )}
             aria-live="polite"
           >
             <strong className="mb-1 block text-sm font-bold tracking-wide text-primary uppercase">
@@ -195,7 +200,7 @@ function Abas({ abas }: { abas: AbaT[] }) {
             </strong>
             <Rico>{aba.criterio}</Rico>
           </p>
-          {aba.blocos.every((b) => b.mesa) ? (
+          {replay ? (
             <SituacoesMesa
               key={aba.id}
               blocos={aba.blocos}

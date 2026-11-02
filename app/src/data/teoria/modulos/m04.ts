@@ -121,21 +121,32 @@ const m04: ModuloTeoria = {
         {
           id: "turndin",
           nome: "Turn dinâmico",
-          criterio: "O turn conecta fortemente com o board.",
+          criterio:
+            "O turn conecta fortemente com o board: o board ganha sequência, conecta ou muda o nuts. O range de call fica mais restrito.",
           blocos: [
             {
               cartas: ["Qs", "8s", "3c"],
               turn: "Td",
-              rotulo: "Turn T: dinâmico",
+              rotulo: "Turn T: dinâmico (board ilustrativo)",
               acoes: [
                 {
                   nome: "Call",
                   cor: "branco",
                   texto:
-                    "Top pair, e second pair ou third pair com redraw relevante.",
+                    "Top pair com alguma interação ou redraw para o nuts, e pares com redraw direto.",
                   maos: [
                     { nome: "Top pair + duas pontas", cartas: ["Qh", "Jh"] },
                     { nome: "Second pair + broca", cartas: ["Tc", "9c"] },
+                  ],
+                },
+                {
+                  nome: "Fold",
+                  cor: "vermelho",
+                  texto:
+                    "Pares sem redraw, mesmo second pair. Na aula, até o top pair fraco sem redraw folda aqui, mesmo contra size padrão, e nunca foldaria no turn seco.",
+                  maos: [
+                    { nome: "Top pair fraco sem redraw", cartas: ["Qh", "6h"] },
+                    { nome: "Third pair sem redraw", cartas: ["Ah", "8h"] },
                   ],
                 },
               ],

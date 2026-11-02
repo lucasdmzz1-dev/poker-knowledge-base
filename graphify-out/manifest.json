@@ -1758,9 +1758,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793598200.348276,
-    "seen": 1793599600.5258152,
-    "ast_hash": "3503603d1c73d094d622fe9d0d5dde3f",
+    "mtime": 1793600912.2784228,
+    "seen": 1793600929.0386667,
+    "ast_hash": "fb3a01eb40b14da56face41ebefd23a0",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2574,9 +2574,9 @@
     "semantic_hash": ""
   },
   "app/src/components/poker/mesa.tsx": {
-    "mtime": 1793582485.58347,
-    "seen": 1793582505.4853523,
-    "ast_hash": "350add279ced4a8461820e521477fc20",
+    "mtime": 1793600912.2709458,
+    "seen": 1793600929.0274377,
+    "ast_hash": "5fd0bc2f48419deb603a9bf5858fe435",
     "semantic_hash": ""
   },
   "app/src/components/analise/hud.tsx": {
@@ -2634,9 +2634,9 @@
     "semantic_hash": ""
   },
   "docs/Site-Poker-KB.md": {
-    "mtime": 1793598200.351327,
-    "seen": 1793599600.5551987,
-    "ast_hash": "8bfa51884e416c166ab44774a51d9be3",
+    "mtime": 1793600912.2794557,
+    "seen": 1793600929.0682585,
+    "ast_hash": "0fa57d855ea671d93b88cf8034c77ad1",
     "semantic_hash": ""
   },
   "app/src/data/mod14.ts": {
@@ -2658,9 +2658,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-probe.tsx": {
-    "mtime": 1793598200.348276,
-    "seen": 1793599600.5258152,
-    "ast_hash": "f7e28b353aa95c337aa100b3e7e9e687",
+    "mtime": 1793600912.2773302,
+    "seen": 1793600929.0386667,
+    "ast_hash": "fdfc3fb4312f4db1495ecda746a815fa",
     "semantic_hash": ""
   },
   "app/src/components/teoria/blocos.tsx": {
@@ -2688,27 +2688,27 @@
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m02.ts": {
-    "mtime": 1793598945.7484696,
-    "seen": 1793599600.5225751,
-    "ast_hash": "e7dc8d12a662c8dd366e2a49e378b4c5",
+    "mtime": 1793612720.600112,
+    "seen": 1793612790.1414657,
+    "ast_hash": "365d250c3647c54811748ef20af5087f",
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m03.ts": {
-    "mtime": 1793598945.7633758,
-    "seen": 1793599600.5225751,
-    "ast_hash": "dcc10ea45777ae5bb2d336983199969a",
+    "mtime": 1793612720.5283399,
+    "seen": 1793612790.1414657,
+    "ast_hash": "a2a78646ce3fd0c34dc6e7bfb9ccbd27",
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m04.ts": {
-    "mtime": 1793598701.374498,
-    "seen": 1793599600.5225751,
-    "ast_hash": "9ca05b896806ed6cd2734868a63a2221",
+    "mtime": 1793612687.7140493,
+    "seen": 1793612790.1414657,
+    "ast_hash": "3b0a89aeb62fa5e8edfb436fb00ecc4e",
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m05.ts": {
-    "mtime": 1793598774.659288,
-    "seen": 1793599600.5225751,
-    "ast_hash": "c5b56834cebe4108130e209581a8e999",
+    "mtime": 1793612720.6297474,
+    "seen": 1793612790.1414657,
+    "ast_hash": "6e36d96030617fa0c8b75975cff87bc4",
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m06.ts": {
@@ -2724,21 +2724,21 @@
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m08.ts": {
-    "mtime": 1793599028.9692247,
-    "seen": 1793599600.5225751,
-    "ast_hash": "21ebcc0e663be835394f23f505b55ad5",
+    "mtime": 1793612728.3565996,
+    "seen": 1793612790.1414657,
+    "ast_hash": "f7651518029eb3946dadbca5618b4629",
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m09.ts": {
-    "mtime": 1793599108.7766533,
-    "seen": 1793599600.5225751,
-    "ast_hash": "c6016b78d3b51945bb959e053fe53ae5",
+    "mtime": 1793612728.32171,
+    "seen": 1793612790.1414657,
+    "ast_hash": "461b052b066dc7feff209fa7773d4224",
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m10.ts": {
-    "mtime": 1793600607.6390374,
-    "seen": 1793600877.8850884,
-    "ast_hash": "88c13bfbd6091580bce25698d0186464",
+    "mtime": 1793612720.6901388,
+    "seen": 1793612790.1414657,
+    "ast_hash": "0f4bc53cc093dc73baf2846691a5fa1e",
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m11.ts": {
@@ -2772,9 +2772,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/teoria-modulo.tsx": {
-    "mtime": 1793600722.4618027,
-    "seen": 1793600877.8901358,
-    "ast_hash": "630a7501155ece2482b7b05e7466602f",
+    "mtime": 1793612656.8866484,
+    "seen": 1793612790.1476066,
+    "ast_hash": "54e6a68f476cac1b4db58ac69530cf3f",
     "semantic_hash": ""
   },
   "app/src/components/analise/leitor.tsx": {
@@ -2865,6 +2865,60 @@
     "mtime": 1793600662.014704,
     "seen": 1793600877.8798172,
     "ast_hash": "633aaa5716cdcc0396f1ce6437619707",
+    "semantic_hash": ""
+  },
+  "app/src/components/poker/relatar-erro.tsx": {
+    "mtime": 1793600912.271946,
+    "seen": 1793600929.0274377,
+    "ast_hash": "0fe8284f31a43964fd915e5f924824d0",
+    "semantic_hash": ""
+  },
+  "app/src/components/poker/resultado-final.tsx": {
+    "mtime": 1793600912.2731028,
+    "seen": 1793600929.0274377,
+    "ast_hash": "98466d04cfaa8ad7967a5c98dbe22b68",
+    "semantic_hash": ""
+  },
+  "app/src/data/prat01.ts": {
+    "mtime": 1793600912.2731028,
+    "seen": 1793600929.0314755,
+    "ast_hash": "14fbba715eacc050b444fc2f861a25f4",
+    "semantic_hash": ""
+  },
+  "app/src/data/prat02.ts": {
+    "mtime": 1793600912.2743185,
+    "seen": 1793600929.0314755,
+    "ast_hash": "d14035527a109e0bd796bf6574802739",
+    "semantic_hash": ""
+  },
+  "app/src/lib/relatos.ts": {
+    "mtime": 1793600912.2753272,
+    "seen": 1793600929.037515,
+    "ast_hash": "a31284de7fb93ebca8fe830fc6b1a7de",
+    "semantic_hash": ""
+  },
+  "app/src/pages/pratica-cbet.tsx": {
+    "mtime": 1793600912.2753272,
+    "seen": 1793600929.0386667,
+    "ast_hash": "0984d48cf91b7f73a7f066f7255eb069",
+    "semantic_hash": ""
+  },
+  "app/src/pages/pratica-cbet40.tsx": {
+    "mtime": 1793600912.2763298,
+    "seen": 1793600929.0386667,
+    "ast_hash": "e8616151e742ad703193b4b45de224db",
+    "semantic_hash": ""
+  },
+  "docs/Pratica-Novo-Tema.md": {
+    "mtime": 1793600912.2794557,
+    "seen": 1793600929.0682585,
+    "ast_hash": "9766af4ec8544f76944b984bc8a937a8",
+    "semantic_hash": ""
+  },
+  "docs/Pendencias-Teoria-Site.md": {
+    "mtime": 1793612744.035979,
+    "seen": 1793612790.1743274,
+    "ast_hash": "8fdd70d2ff19d6e0525b5a4b713db85b",
     "semantic_hash": ""
   },
   "app/package-lock.json": {

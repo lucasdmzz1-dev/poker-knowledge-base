@@ -105,7 +105,7 @@ const m08: ModuloTeoria = {
     {
       tipo: "cartoes",
       titulo: "Size e estratégia por board (OOP)",
-      intro: "Um board de exemplo para cada caso.",
+      intro: "Um board ilustrativo para cada caso.",
       colunas: 3,
       itens: [
         {
@@ -157,7 +157,7 @@ const m08: ModuloTeoria = {
           "Board conectado em short stack.",
           "B40",
           ["Qs", "Js", "6d"],
-          "Q-J-6 com dois de espadas",
+          "Q-J-6 com dois de espadas (ilustrativo)",
           {
             texto: "TP ou melhor.",
             maos: [
@@ -195,7 +195,7 @@ const m08: ModuloTeoria = {
           "Board com sequência em short stack.",
           "All-in",
           ["8s", "7s", "6d"],
-          "8-7-6 com dois de espadas",
+          "8-7-6 com dois de espadas (ilustrativo)",
           {
             texto: "Os primeiros overpairs ao board e TP.",
             maos: [
@@ -231,7 +231,7 @@ const m08: ModuloTeoria = {
           "Board Tx, Jx ou 98x suited em deep stack.",
           "B70",
           ["Js", "9s", "4d"],
-          "J-9-4 com dois de espadas",
+          "J-9-4 com dois de espadas (ilustrativo)",
           {
             texto: "Os primeiros overpairs ao board e TP.",
             maos: [
@@ -269,7 +269,7 @@ const m08: ModuloTeoria = {
           "Board com sequência em deep stack.",
           "B40",
           ["8s", "7s", "6d"],
-          "8-7-6 com dois de espadas",
+          "8-7-6 com dois de espadas (ilustrativo)",
           {
             texto:
               "Todos os overpairs, bottom set, melhores TP e TP que conectam com o board.",

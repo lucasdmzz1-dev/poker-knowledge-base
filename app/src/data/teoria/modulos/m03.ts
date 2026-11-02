@@ -56,7 +56,7 @@ const m03: ModuloTeoria = {
             {
               cartas: ["Ks", "8d", "3c"],
               turn: "2h",
-              rotulo: "K-8-3 rainbow, turn 2",
+              rotulo: "K-8-3 rainbow, turn 2 (ilustrativo)",
               etiqueta: { texto: "Size alto", cor: "verde" },
               acoes: [
                 {
@@ -89,7 +89,7 @@ const m03: ModuloTeoria = {
             {
               cartas: ["Js", "9d", "4c"],
               turn: "Th",
-              rotulo: "J-9-4 rainbow, turn T",
+              rotulo: "J-9-4 rainbow, turn T (ilustrativo)",
               etiqueta: { texto: "Size médio", cor: "vermelho" },
               acoes: [
                 {
@@ -116,7 +116,7 @@ const m03: ModuloTeoria = {
             {
               cartas: ["9s", "6d", "3c"],
               turn: "Ah",
-              rotulo: "9-6-3 rainbow, turn A",
+              rotulo: "9-6-3 rainbow, turn A (ilustrativo)",
               etiqueta: { texto: "Size médio", cor: "vermelho" },
               acoes: [
                 {

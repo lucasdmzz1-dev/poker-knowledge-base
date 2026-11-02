@@ -104,7 +104,7 @@ const m09: ModuloTeoria = {
           "Blank",
           "O river não muda a distribuição. Só existe um size. O alvo do bluff é o Ax, então evite blefar com Ax.",
           ["Qs", "2c", "5h", "6d", "Tc"],
-          "Q-2-5-6-T: river blank",
+          "Q-2-5-6-T: river blank (aula)",
           [
             {
               size: "B70",
@@ -130,7 +130,7 @@ const m09: ModuloTeoria = {
           "Dinâmico Ax",
           "Quando bate um ás no river, o Ax vira valor. O alvo do bluff muda para Kx e pares médios, e não o Ax. Não blefe automaticamente com Ax ou Kx.",
           ["6c", "As", "Ks", "2d", "Ad"],
-          "6-A-K-2-A: o ás dobra no river",
+          "6-A-K-2-A: o ás dobra no river (aula)",
           [
             {
               size: "B70",
@@ -149,7 +149,7 @@ const m09: ModuloTeoria = {
           "Dinâmico flush",
           "Rivers dinâmicos permitem mais polarização, e as mãos mais fortes usam sizes maiores. Os bluffs de B100 precisam de blockers relevantes.",
           ["Ks", "9d", "4d", "2c", "7d"],
-          "K-9-4-2-7: o flush de ouros completa",
+          "K-9-4-2-7: o flush de ouros completa (ilustrativo)",
           [
             {
               size: "B70",
@@ -181,7 +181,7 @@ const m09: ModuloTeoria = {
           "Dinâmico high card",
           "Broadways usam o size maior e low cards usam o menor. Na aula, o T conta como broadway: a classificação segue a guideline, e não só a carta isolada.",
           ["5d", "Qc", "As", "7d", "Ks"],
-          "5-Q-A-7-K: carta alta no river",
+          "5-Q-A-7-K: carta alta no river (aula)",
           [
             {
               size: "B70",
@@ -206,7 +206,7 @@ const m09: ModuloTeoria = {
           "Dinâmico sequência",
           "Os blockers têm papel importante nos bluffs de size alto.",
           ["9s", "8d", "3c", "2h", "6c"],
-          "9-8-3-2-6: a sequência completa",
+          "9-8-3-2-6: a sequência completa (ilustrativo)",
           [
             {
               size: "B70",
@@ -234,7 +234,7 @@ const m09: ModuloTeoria = {
           "Dinâmico dobra de carta",
           "Quando a carta dobra, o size maior fica polarizado: valor muito forte e bluffs com cartas altas.",
           ["Ks", "9d", "4c", "2h", "9c"],
-          "K-9-4-2-9: o 9 dobra no river",
+          "K-9-4-2-9: o 9 dobra no river (ilustrativo)",
           [
             {
               size: "B70",

@@ -60,7 +60,7 @@ const m05: ModuloTeoria = {
       tipo: "cartoes",
       titulo: "Estratégia e size por textura",
       intro:
-        "Cada cartão mostra um board de exemplo e o que fazer abrindo de EP e de CO contra o BTN.",
+        "Cada cartão mostra um board ilustrativo e o que fazer abrindo de EP e de CO contra o BTN.",
       colunas: 3,
       itens: [
         {
@@ -214,7 +214,7 @@ const m05: ModuloTeoria = {
       tipo: "cartoes",
       titulo: "Second barrel fora de posição",
       intro:
-        "Guideline do instrutor. Cobre só o range de valor: bluffs, semi-bluffs e a composição do check no turn ainda não estão definidos. Um flop e um turn de exemplo em cada caso:",
+        "Guideline do instrutor. Cobre só o range de valor: bluffs, semi-bluffs e a composição do check no turn ainda não estão definidos. Um flop e um turn ilustrativos em cada caso:",
       itens: [
         {
           etiqueta: { texto: "B100", cor: "verde" },

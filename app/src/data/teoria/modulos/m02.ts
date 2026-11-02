@@ -121,7 +121,7 @@ const m02: ModuloTeoria = {
           blocos: [
             {
               cartas: ["8c", "4d", "2h"],
-              rotulo: "8-4-2 rainbow",
+              rotulo: "8-4-2 rainbow (ilustrativo)",
               etiqueta: { texto: "B70", cor: "verde" },
               acoes: [
                 {
@@ -168,7 +168,7 @@ const m02: ModuloTeoria = {
           blocos: [
             {
               cartas: ["8s", "7s", "5d"],
-              rotulo: "8-7-5 com dois de espadas",
+              rotulo: "8-7-5 com dois de espadas (ilustrativo)",
               etiqueta: { texto: "B70", cor: "verde" },
               acoes: [
                 {
