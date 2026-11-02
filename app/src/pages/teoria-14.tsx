@@ -179,11 +179,11 @@ export default function Teoria14() {
                     >
                       {a.nome}
                     </span>
-                    <ul className="grid auto-cols-[minmax(0,1fr)] grid-flow-col grid-rows-2 gap-x-6 gap-y-5">
+                    <ul className="flex flex-wrap content-start gap-x-6 gap-y-5">
                       {a.maos.map((m) => (
                         <li
                           key={m.texto}
-                          className="flex flex-col items-center gap-2"
+                          className="flex w-32 flex-col items-center gap-2"
                         >
                           <Cards codes={m.ex} size="sm" />
                           <span className="text-center text-sm leading-snug font-medium text-foreground">
