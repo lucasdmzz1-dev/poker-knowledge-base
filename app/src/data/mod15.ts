@@ -18,7 +18,7 @@ export interface Tipo {
   criterio: string
   nota: string
   buckets: Bucket[]
-  outrosExemplos?: { rotulo: string; codes: CardCode[] }[]
+  blocos?: { grupo: string; rotulo: string; codes: CardCode[] }[]
 }
 
 export interface Situacao {
@@ -131,8 +131,13 @@ export const mod15 = {
       criterio:
         "Board pareado, sempre. Seco: a terceira carta não forma sequência nem flush draw com o par (K-K-2, J-3-3). Carregado: forma (K-K-J, J-J-9).",
       nota: "O subtipo do K-K-7 como seco é inferência.",
-      outrosExemplos: [
-        { rotulo: "Carregado, com flush draw", codes: ["Kd", "Kh", "Jd"] },
+      blocos: [
+        { grupo: "Seco", rotulo: "Seco", codes: ["Ks", "Kh", "7c"] },
+        {
+          grupo: "Carregado",
+          rotulo: "Carregado, com flush draw",
+          codes: ["Kd", "Kh", "Jd"],
+        },
       ],
       buckets: [
         { p: 75, grupo: "Seco", maos: "Fulls e trincas" },
