@@ -197,14 +197,14 @@ export const mod15 = {
       id: "dob-4",
       grupo: "Carregado",
       p: 50,
-      classe: "QT de ouro",
+      classe: "Mãos com mais equity",
       hero: ["Qd", "Td"],
     },
     {
       id: "dob-5",
       grupo: "Carregado",
       p: 25,
-      classe: "98 de paus",
+      classe: "Todo o restante",
       hero: ["9c", "8c"],
     },
   ] as {
