@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react"
+import { useEffect, useState, type CSSProperties } from "react"
 import { cn } from "@/lib/utils"
 
 const SUIT = { s: "♠", h: "♥", d: "♦", c: "♣" } as const
@@ -77,6 +77,70 @@ export function Cards({
   )
 }
 
+// Barra do treino: o RNG vai enchendo de 1 até o número sorteado. Até o bucket é
+// aposta, depois é check. Cores neutras para não lembrar acerto ou erro.
+function RngBarra({
+  bucket,
+  rng,
+  size,
+}: {
+  bucket: number
+  rng: number
+  size?: string
+}) {
+  const [cheio, setCheio] = useState(false)
+  useEffect(() => {
+    const t = requestAnimationFrame(() => setCheio(true))
+    return () => cancelAnimationFrame(t)
+  }, [])
+  const segmentos = (
+    <>
+      <i className="h-full bg-rng-bet" style={{ width: `${bucket}%` }} />
+      <i className="h-full flex-1 bg-check" />
+    </>
+  )
+  return (
+    <div className="mt-5">
+      <div
+        className="relative"
+        role="img"
+        aria-label={`RNG ${rng}. De 1 a ${bucket} aposta ${size ?? ""}, de ${bucket + 1} a 100 dá check`}
+      >
+        <div className="flex h-5 overflow-hidden rounded-full opacity-25">
+          {segmentos}
+        </div>
+        <div
+          className="absolute inset-0 flex h-5 overflow-hidden rounded-full transition-[clip-path] duration-[1100ms] ease-out motion-reduce:transition-none"
+          style={{
+            clipPath: cheio
+              ? `inset(0 ${100 - rng}% 0 0)`
+              : "inset(0 100% 0 0)",
+          }}
+        >
+          {segmentos}
+        </div>
+        <span
+          className="absolute -top-1 h-7 w-0.5 -translate-x-1/2 rounded bg-white transition-[left] duration-[1100ms] ease-out motion-reduce:transition-none"
+          style={{ left: cheio ? `${rng}%` : "0%" }}
+          aria-hidden="true"
+        />
+      </div>
+      <div className="mt-2 flex flex-wrap gap-4 text-sm text-muted-foreground">
+        <span className="inline-flex items-center gap-2">
+          <b className="inline-block size-2.5 rounded-sm bg-rng-bet" />1 a{" "}
+          {bucket}: aposta {size}
+        </span>
+        {bucket < 100 && (
+          <span className="inline-flex items-center gap-2">
+            <b className="inline-block size-2.5 rounded-sm bg-check" />
+            {bucket + 1} a 100: check
+          </span>
+        )}
+      </div>
+    </div>
+  )
+}
+
 export function RngStrip({
   bucket,
   rng,
@@ -86,6 +150,8 @@ export function RngStrip({
   rng?: number
   size?: string
 }) {
+  if (rng !== undefined)
+    return <RngBarra bucket={bucket} rng={rng} size={size} />
   const cells = Array.from({ length: 100 }, (_, i) => i + 1)
   return (
     <div className="mt-4">

@@ -513,7 +513,7 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
           >
             <h3
               className={cn(
-                "text-4xl font-extrabold tracking-tight",
+                "text-center text-4xl font-extrabold tracking-tight",
                 ok ? "text-primary" : "text-destructive"
               )}
             >
