@@ -32,6 +32,17 @@ export function tamanhoBB(fracao: number): string {
   return (Math.round(POTE_BB * fracao * 10) / 10).toString()
 }
 
+// Lugares da mesa em ordem de rotação, começando no assento de baixo.
+const LUGARES: Pos[] = ["BTN", "SB", "BB", "UTG", "UTG1", "LJ", "HJ", "CO"]
+
+// No Probe Turn o herói do BB senta embaixo e as demais posições giram junto.
+function lugarDe(pos: Pos, probe: boolean): Pos {
+  if (!probe) return pos
+  const k =
+    (ORDEM.indexOf(pos) - ORDEM.indexOf("BB") + ORDEM.length) % ORDEM.length
+  return LUGARES[k]
+}
+
 function stackNaMesa(pos: Pos, opener: Pos, probe: boolean): number {
   if (pos === opener || pos === "BTN") return STACK_EFETIVO
   if (probe && pos === "BB") return STACK_EFETIVO
@@ -144,7 +155,7 @@ function Assento({
   heroPos: Pos
   probe: boolean
 }) {
-  const [x, y, xm] = POS_TELA[pos]
+  const [x, y, xm] = POS_TELA[lugarDe(pos, probe)]
   const heroi = pos === heroPos
   const abriu = pos === opener
   const noPote = heroi || abriu
@@ -286,9 +297,7 @@ export function Mesa({
         <div
           className={cn(
             "absolute -translate-y-1/2",
-            probe
-              ? "top-1/2 left-[calc(7%+var(--s)/2+8px)] sm:left-[calc(6%+var(--s)/2+8px)]"
-              : "top-[88%] left-[calc(50%+var(--s)/2+8px)]"
+            "top-[88%] left-[calc(50%+var(--s)/2+8px)]"
           )}
         >
           <Cards codes={hero} size="mesaHero" />
