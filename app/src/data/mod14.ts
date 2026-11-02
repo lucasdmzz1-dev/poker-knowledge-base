@@ -12,6 +12,7 @@ export type TurnId =
 
 export interface Acao {
   nome: "Bet" | "Check-call" | "Check-raise"
+  ex: CardCode[]
   maos: string
 }
 
@@ -92,14 +93,17 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
+          ex: ["Ah", "7c"],
           maos: "TP ou melhor, SP que cobram de piores (A7, K7) e que conectam (76, 97), 7x com flush draw, 5x do naipe, duas pontas, flush draws e brocas",
         },
         {
           nome: "Check-call",
+          ex: ["Qd", "5h"],
           maos: "7x, third pair e qualquer par com redraw",
         },
         {
           nome: "Check-raise",
+          ex: ["9h", "6c"],
           maos: "Sequências (sem o naipe do board), dois pares pontuais e combo draw (duas pontas + FD)",
         },
       ],
@@ -116,6 +120,7 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
+          ex: ["8h", "Kh"],
           maos: "As mãos de valor, com o 8x como absoluto, em B100 ou no geométrico",
         },
       ],
@@ -132,13 +137,19 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
+          ex: ["Qh", "9c"],
           maos: "Qx e 8x (menos os piores de cada), flush draws, duas pontas e brocas com mais equity",
         },
         {
           nome: "Check-call",
+          ex: ["Qc", "2h"],
           maos: "Os piores Qx (Q2, Q3, Q4), os piores 8x, second pair e par com redraw",
         },
-        { nome: "Check-raise", maos: "Sequências e dois pares" },
+        {
+          nome: "Check-raise",
+          ex: ["8h", "5h"],
+          maos: "Sequências e dois pares",
+        },
       ],
       nota: "Os piores de cada grupo desbloqueiam as mãos que pagam (9 e 10). Um 4x é broca de lixo aqui, e K9 ou A9 é broca com plano.",
     },
@@ -153,14 +164,17 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
+          ex: ["Js", "4s"],
           maos: "Flushes com uma carta alta e uma baixa, TP, os 2 melhores SP, SP que conectam, flush draws, duas pontas e brocas com mais equity",
         },
         {
           nome: "Check-call",
+          ex: ["4s", "3s"],
           maos: "Par com FD, flushes baixos, SP+ e par com draw",
         },
         {
           nome: "Check-raise",
+          ex: ["Js", "Ts"],
           maos: "Os melhores flushes (duas cartas altas) e combo draw",
         },
       ],
@@ -177,14 +191,17 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
+          ex: ["Ks", "3s"],
           maos: "Flushes com uma carta alta e uma baixa, os melhores TP, SP que conectam, flush draws, duas pontas e brocas com mais equity",
         },
         {
           nome: "Check-call",
+          ex: ["4s", "3s"],
           maos: "TP, SP, par com draw e os piores flushes",
         },
         {
           nome: "Check-raise",
+          ex: ["Js", "Ts"],
           maos: "Os melhores flushes (duas cartas altas) e combo draw",
         },
       ],
@@ -201,11 +218,17 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
+          ex: ["9h", "Jc"],
           maos: "Sequências, os melhores dois pares, TP que vão para o nuts (9J, 9T), duas pontas, brocas e flush draws",
         },
-        { nome: "Check-call", maos: "TP, SP e par com draw" },
+        {
+          nome: "Check-call",
+          ex: ["8h", "Kc"],
+          maos: "TP, SP e par com draw",
+        },
         {
           nome: "Check-raise",
+          ex: ["6h", "6c"],
           maos: "Sequência nuts, sequência com redraw e draw para o nuts",
         },
       ],
@@ -219,7 +242,13 @@ export const mod14 = {
       turn: "8c",
       criterio:
         "No 875 com o turn 8, aposte todos os 8x e a maior parte dos 7x em B70.",
-      acoes: [{ nome: "Bet", maos: "Todos os 8x e a maior parte dos 7x" }],
+      acoes: [
+        {
+          nome: "Bet",
+          ex: ["8h", "Kc"],
+          maos: "Todos os 8x e a maior parte dos 7x",
+        },
+      ],
       nota: "No 887 com turn 2, B70 para os 8x e os 7x. No 887 com turn J, B100 só com o 8: o vilão tem os melhores valetes e o seu 7x já não tem o que apostar.",
     },
   ] as TurnProbe[],
