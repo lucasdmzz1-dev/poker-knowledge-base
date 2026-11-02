@@ -435,6 +435,11 @@ export default function PraticaBB({ onTema }: { onTema: (t: Tema) => void }) {
               <strong className="text-foreground">{atual.boardNome}</strong>:{" "}
               {atual.porque}
             </p>
+            {atual.criterio && (
+              <p className="max-w-[64ch] text-muted-foreground">
+                {atual.criterio}
+              </p>
+            )}
             {atual.freq !== undefined && (
               <p className="max-w-[64ch] text-muted-foreground">
                 Frequência geral de aposta neste tipo de board:{" "}
