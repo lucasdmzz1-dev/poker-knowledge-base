@@ -102,11 +102,14 @@ export function SituacoesMesa({
 
   return (
     <div className="grid gap-6">
+      <p className="-mb-3 text-center text-sm font-bold tracking-wide text-muted-foreground uppercase">
+        Situação
+      </p>
       <ToggleGroup
         type="single"
         value={String(i)}
         onValueChange={(v) => v && reinicia(Number(v))}
-        className="flex flex-wrap justify-center gap-2"
+        className="flex w-full flex-wrap justify-center gap-2"
         aria-label="Escolha a situação"
       >
         {blocos.map((x, k) => (

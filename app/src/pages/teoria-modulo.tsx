@@ -171,11 +171,15 @@ function Abas({ abas }: { abas: AbaT[] }) {
         type="single"
         value={aba.id}
         onValueChange={(v) => v && setId(v)}
-        className="mb-6 flex flex-wrap justify-center gap-2"
+        className="mb-6 flex w-full flex-wrap justify-center gap-2.5"
         aria-label="Escolha o caso"
       >
         {abas.map((a) => (
-          <ToggleGroupItem key={a.id} value={a.id} className={ITEM}>
+          <ToggleGroupItem
+            key={a.id}
+            value={a.id}
+            className={cn(ITEM, "h-11 px-5 text-base")}
+          >
             {a.nome}
           </ToggleGroupItem>
         ))}
