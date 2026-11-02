@@ -77,6 +77,8 @@ Se o repositório virar privado, o GitHub Pages deixa de servir no plano gratuit
 
 O repositório é público: não coloque dados pessoais nele. Os dados de cada jogador ficam só na conta dele.
 
+Guia ilustrado para o jogador: `docs/Guia-Analise.md`.
+
 ## Fluxo mensal
 
 1. Receber os prints do HUD do mês e colocar em Leaks do mês.
