@@ -15,5 +15,7 @@ export const moduloPorSlug: Record<string, ModuloTeoria> = Object.fromEntries(
 )
 
 export const slugPorTema: Record<string, string> = Object.fromEntries(
-  modulos.map((m) => [m.tema, m.slug])
+  modulos.flatMap((m) =>
+    (Array.isArray(m.tema) ? m.tema : [m.tema]).map((t) => [t, m.slug])
+  )
 )

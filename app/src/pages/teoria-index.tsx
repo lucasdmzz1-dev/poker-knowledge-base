@@ -13,7 +13,11 @@ interface Tema {
 const GRUPOS: { nome: string; temas: Tema[] }[] = [
   {
     nome: "Geral",
-    temas: [{ nome: "Reta Final" }, { nome: "Introdução ao ICM" }],
+    temas: [
+      { nome: "Reta Final" },
+      { nome: "Introdução ao ICM" },
+      { nome: "Value Bet Masterclass" },
+    ],
   },
   {
     nome: "Pré-flop",

@@ -81,7 +81,8 @@ export interface ModuloTeoria {
   // Parte final da rota: /teoria/<slug>
   slug: string
   // Nome do tema no índice da Teoria (precisa ser igual ao nome do cartão).
-  tema: string
+  // Quando o módulo cobre mais de um cartão do índice, use uma lista.
+  tema: string | string[]
   nome: string
   spot: string
   tags: string[]
