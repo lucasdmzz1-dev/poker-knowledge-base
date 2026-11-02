@@ -2,8 +2,11 @@ import { useEffect, useMemo, useState, type ReactNode } from "react"
 import { Button } from "@/components/ui/button"
 import { CAMPO } from "@/components/analise/secao"
 import {
+  capturarRetornoGoogle,
   criarConta,
   entrar,
+  googleAtivo,
+  irParaGoogle,
   nuvemAtiva,
   sair,
   sessaoValida,
@@ -128,6 +131,23 @@ function Login({
         >
           {ocupado ? "Aguarde…" : modo === "entrar" ? "Entrar" : "Criar conta"}
         </Button>
+        {googleAtivo && (
+          <>
+            <div className="my-4 flex items-center gap-3 text-xs text-muted-foreground">
+              <span className="h-px flex-1 bg-border" />
+              ou
+              <span className="h-px flex-1 bg-border" />
+            </div>
+            <Button
+              type="button"
+              variant="outline"
+              className="h-11 w-full font-medium"
+              onClick={irParaGoogle}
+            >
+              Continuar com o Google
+            </Button>
+          </>
+        )}
         <p className="mt-4 text-xs text-muted-foreground">
           Seus leaks, stats e painel ficam na sua conta e só você vê. Teoria e
           Prática são abertas a todos que entram.
@@ -153,7 +173,13 @@ export function Portao({ children }: { children: ReactNode }) {
     if (!nuvemAtiva) return
     let vivo = true
     void (async () => {
-      const s = await sessaoValida()
+      const volta = await capturarRetornoGoogle()
+      if (volta && "erro" in volta) {
+        if (!vivo) return
+        setErro(volta.erro)
+        return setFase("fora")
+      }
+      const s = volta ?? (await sessaoValida())
       if (!vivo) return
       if (!s) return setFase("fora")
       try {

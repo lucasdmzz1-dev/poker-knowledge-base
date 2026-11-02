@@ -10,6 +10,11 @@ const CHAVE_PUBLICA = (
 
 export const nuvemAtiva = Boolean(URL_BASE && CHAVE_PUBLICA)
 
+// O botão do Google só aparece com VITE_LOGIN_GOOGLE=true (depois de ligar o
+// provedor no Supabase).
+export const googleAtivo =
+  nuvemAtiva && import.meta.env.VITE_LOGIN_GOOGLE === "true"
+
 const CHAVE_SESSAO = "pkb:sessao"
 const TABELA = "dados_usuario"
 
@@ -161,6 +166,60 @@ export async function criarConta(
   const s = comoSessao(corpo)
   guardar(s)
   return s
+}
+
+// Manda o jogador para a tela de login do Google. O Supabase devolve para o
+// endereço do site com a sessão no fragmento (#access_token=...).
+export function irParaGoogle(): void {
+  const volta = window.location.origin + window.location.pathname
+  window.location.href = `${URL_BASE}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(volta)}`
+}
+
+// Na volta do Google: lê a sessão do fragmento, guarda e limpa o endereço.
+// Devolve a sessão, uma mensagem de erro, ou null se não é uma volta do Google.
+export async function capturarRetornoGoogle(): Promise<
+  Sessao | { erro: string } | null
+> {
+  const hash = window.location.hash.replace(/^#\/?/, "")
+  if (!hash.includes("access_token=") && !hash.includes("error")) return null
+  const p = new URLSearchParams(hash)
+  const limpar = () =>
+    window.history.replaceState(
+      null,
+      "",
+      window.location.pathname + window.location.search + "#/"
+    )
+  const erro = p.get("error_description") ?? p.get("error")
+  if (erro && !p.get("access_token")) {
+    limpar()
+    return { erro: `Não consegui entrar com o Google: ${erro}` }
+  }
+  const access = p.get("access_token")
+  const refresh = p.get("refresh_token")
+  if (!access || !refresh) return null
+  try {
+    const u = (await chamar("/auth/v1/user", { token: access })) as {
+      id?: string
+      email?: string
+    }
+    const duracao = Number(p.get("expires_in")) || 3600
+    const s = comoSessao({
+      access_token: access,
+      refresh_token: refresh,
+      expires_at: Math.floor(Date.now() / 1000) + duracao,
+      user: { id: u?.id, email: u?.email },
+    })
+    limpar()
+    if (!s) return { erro: "Resposta inesperada do Google." }
+    guardar(s)
+    return s
+  } catch (e) {
+    limpar()
+    return {
+      erro:
+        e instanceof Error ? e.message : "Não consegui entrar com o Google.",
+    }
+  }
 }
 
 export async function sair(): Promise<void> {
