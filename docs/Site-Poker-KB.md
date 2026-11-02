@@ -104,6 +104,7 @@ Todo tema novo da Prática usa os mesmos blocos, para ficar igual aos outros:
 - O resultado do treino mostra o tipo de board que mais errou, o desempenho por tipo e o tipo de erro.
 - `components/poker/resultado-final.tsx`: `ResultadoFinal`, a tela final padrão (nota, onde mais errou, desempenho por tipo e tipo de erro).
 - `components/poker/relatar-erro.tsx`: botão "Relatar erro" no canto do card de resultado, com uma aba curta para contar o erro e enviar. Salva no aparelho (`pkb:relatos`) e, com conta, manda para a tabela `relatos_erro` (SQL em `docs/Supabase-Poker-KB.sql`; você lê os relatos pelo painel do Supabase).
+- Botão "Parar treino" (ao lado do "Voltar à seleção"): fecha a sessão e mostra o resultado das mãos já respondidas.
 - Botão "Voltar à seleção" no topo do jogo e seletor de tema na seleção (`SeletorTema`).
 - Textos em minúsculas, percentuais e tipo de board em negrito.
 
