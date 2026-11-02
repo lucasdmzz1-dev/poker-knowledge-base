@@ -193,6 +193,20 @@ export const mod15 = {
       classe: "Todo o restante",
       hero: ["Ad", "Qd"],
     },
+    {
+      id: "dob-4",
+      grupo: "Carregado",
+      p: 50,
+      classe: "QT de ouro",
+      hero: ["Qd", "Td"],
+    },
+    {
+      id: "dob-5",
+      grupo: "Carregado",
+      p: 25,
+      classe: "98 de paus",
+      hero: ["9c", "8c"],
+    },
   ] as {
     id: string
     grupo: string
