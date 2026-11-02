@@ -44,9 +44,9 @@ export function RelatarErro({
     <>
       <Button
         type="button"
-        variant="ghost"
+        variant="outline"
         size="sm"
-        className="self-end text-muted-foreground"
+        className="self-end border-foreground/30 text-foreground/80 hover:border-foreground/60 hover:text-foreground"
         aria-expanded={aberto}
         onClick={() => setAberto((v) => !v)}
       >
