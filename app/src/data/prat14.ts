@@ -1,0 +1,243 @@
+import type { TurnId } from "@/data/mod14"
+
+export type AcaoProbe = "B40" | "B70" | "B100" | "Check-call" | "Check-raise"
+
+export interface SituacaoProbe {
+  id: string
+  turn: TurnId
+  hero: [string, string]
+  certa: AcaoProbe
+  classe: string
+  porque: string
+}
+
+export const ROTULO_TURN: Record<TurnId, string> = {
+  blank: "Turn blank conectado",
+  seco: "Turn blank seco",
+  alta: "Turn carta alta",
+  flushBaixo: "Flush baixo",
+  flushAlto: "Flush alto",
+  sequencia: "Sequência",
+  pareia: "Pareia o board",
+}
+
+// Cada mão nasce de uma categoria que a teoria do módulo 14 cita explicitamente.
+export const situacoesProbe: SituacaoProbe[] = [
+  {
+    id: "blank-tp",
+    turn: "blank",
+    hero: ["Ah", "8c"],
+    certa: "B70",
+    classe: "Top pair",
+    porque: "TP ou melhor aposta B70 no board conectado.",
+  },
+  {
+    id: "blank-sp",
+    turn: "blank",
+    hero: ["Kc", "7h"],
+    certa: "B70",
+    classe: "Second pair que cobra de piores",
+    porque: "SP como K7 e A7 aposta B70 para cobrar de piores.",
+  },
+  {
+    id: "blank-fd",
+    turn: "blank",
+    hero: ["As", "3s"],
+    certa: "B70",
+    classe: "Flush draw",
+    porque: "Flush draw é bluff com equity direta e aposta B70.",
+  },
+  {
+    id: "blank-7x",
+    turn: "blank",
+    hero: ["Jc", "7c"],
+    certa: "Check-call",
+    classe: "7x",
+    porque: "7x sem kicker que cobra de piores dá check-call.",
+  },
+  {
+    id: "blank-seq",
+    turn: "blank",
+    hero: ["6c", "4d"],
+    certa: "Check-raise",
+    classe: "Sequência",
+    porque: "Sequência sem o naipe do board dá check-raise.",
+  },
+  {
+    id: "seco-tp",
+    turn: "seco",
+    hero: ["Ah", "8c"],
+    certa: "B100",
+    classe: "Top pair",
+    porque: "No board seco o 8x é o absoluto e aposta B100.",
+  },
+  {
+    id: "seco-kicker",
+    turn: "seco",
+    hero: ["Kd", "8h"],
+    certa: "B100",
+    classe: "Top pair",
+    porque: "No board seco o valor aposta B100, o range que paga é largo.",
+  },
+  {
+    id: "seco-trinca",
+    turn: "seco",
+    hero: ["8d", "8c"],
+    certa: "B100",
+    classe: "Trinca",
+    porque: "Trinca aposta B100 no board seco.",
+  },
+  {
+    id: "alta-qx",
+    turn: "alta",
+    hero: ["Kc", "Qh"],
+    certa: "B40",
+    classe: "Qx bom",
+    porque: "Qx que não é dos piores aposta B40 no turn de carta alta.",
+  },
+  {
+    id: "alta-qpior",
+    turn: "alta",
+    hero: ["Qc", "3h"],
+    certa: "Check-call",
+    classe: "Pior Qx",
+    porque: "Os piores Qx (Q2, Q3, Q4) dão check-call.",
+  },
+  {
+    id: "alta-8pior",
+    turn: "alta",
+    hero: ["8c", "3h"],
+    certa: "Check-call",
+    classe: "Pior 8x",
+    porque: "Os piores 8x dão check-call.",
+  },
+  {
+    id: "alta-seq",
+    turn: "alta",
+    hero: ["6c", "4d"],
+    certa: "Check-raise",
+    classe: "Sequência",
+    porque: "Sequências dão check-raise.",
+  },
+  {
+    id: "alta-fd",
+    turn: "alta",
+    hero: ["As", "3s"],
+    certa: "B40",
+    classe: "Flush draw",
+    porque: "Flush draw é bluff com equity e aposta B40.",
+  },
+  {
+    id: "fb-uma",
+    turn: "flushBaixo",
+    hero: ["Js", "4s"],
+    certa: "B40",
+    classe: "Flush com uma carta alta e uma baixa",
+    porque: "Flush com uma alta e uma baixa aposta B40.",
+  },
+  {
+    id: "fb-duas",
+    turn: "flushBaixo",
+    hero: ["Js", "Ts"],
+    certa: "Check-raise",
+    classe: "Flush com duas cartas altas",
+    porque: "Os melhores flushes, de duas cartas altas, dão check-raise.",
+  },
+  {
+    id: "fb-baixos",
+    turn: "flushBaixo",
+    hero: ["4s", "3s"],
+    certa: "Check-call",
+    classe: "Flush com duas cartas baixas",
+    porque: "Flush de duas cartas baixas dá check-call.",
+  },
+  {
+    id: "fb-tp",
+    turn: "flushBaixo",
+    hero: ["Ah", "8c"],
+    certa: "B40",
+    classe: "Top pair",
+    porque: "O B40 permite apostar todos os TP, é thin value.",
+  },
+  {
+    id: "fa-uma",
+    turn: "flushAlto",
+    hero: ["Js", "4s"],
+    certa: "B70",
+    classe: "Flush com uma carta alta e uma baixa",
+    porque: "Flush com uma alta e uma baixa aposta, e o size sobe para B70.",
+  },
+  {
+    id: "fa-duas",
+    turn: "flushAlto",
+    hero: ["Ks", "Js"],
+    certa: "Check-raise",
+    classe: "Flush com duas cartas altas",
+    porque: "Os melhores flushes dão check-raise.",
+  },
+  {
+    id: "fa-baixos",
+    turn: "flushAlto",
+    hero: ["4s", "3s"],
+    certa: "Check-call",
+    classe: "Flush baixo",
+    porque: "Os piores flushes dão check-call.",
+  },
+  {
+    id: "fa-tp",
+    turn: "flushAlto",
+    hero: ["Ac", "Qh"],
+    certa: "B70",
+    classe: "Melhor top pair",
+    porque: "Só os melhores TP apostam, em B70.",
+  },
+  {
+    id: "seq-nuts",
+    turn: "sequencia",
+    hero: ["Jd", "Tc"],
+    certa: "Check-raise",
+    classe: "Sequência nuts",
+    porque: "Sequência nuts dá check-raise.",
+  },
+  {
+    id: "seq-t6",
+    turn: "sequencia",
+    hero: ["Td", "6c"],
+    certa: "B70",
+    classe: "Sequência sem ser a nuts",
+    porque:
+      "Sequência que não é a nuts aposta B70, o check-raise fica para a nuts.",
+  },
+  {
+    id: "seq-tp",
+    turn: "sequencia",
+    hero: ["Jh", "9d"],
+    certa: "B70",
+    classe: "TP que vai para o nuts",
+    porque: "TP que vai para o nuts (9J, 9T) aposta B70.",
+  },
+  {
+    id: "seq-sp",
+    turn: "sequencia",
+    hero: ["Ah", "8c"],
+    certa: "Check-call",
+    classe: "Second pair",
+    porque: "TP e SP sem força extra dão check-call.",
+  },
+  {
+    id: "pare-8x",
+    turn: "pareia",
+    hero: ["Ad", "8h"],
+    certa: "B70",
+    classe: "8x",
+    porque: "Todos os 8x apostam B70.",
+  },
+  {
+    id: "pare-7x",
+    turn: "pareia",
+    hero: ["Kd", "7c"],
+    certa: "B70",
+    classe: "7x",
+    porque: "A maior parte dos 7x aposta B70.",
+  },
+]

@@ -12,6 +12,7 @@ import {
   tamanhoBB,
   type Opener,
 } from "@/components/poker/mesa"
+import PraticaProbe, { SeletorTema, type Tema } from "@/pages/pratica-probe"
 import { mod15, tipoById, type Situacao, type TipoId } from "@/data/mod15"
 import {
   randomInt,
@@ -76,7 +77,7 @@ function negritoPct(t: string): ReactNode {
   )
 }
 
-export default function Pratica() {
+function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
   const [fase, setFase] = useState<Fase>("setup")
   const [tipos, setTipos] = useState<TipoId[]>(DISPONIVEIS)
   const [qty, setQty] = useState("10")
@@ -205,19 +206,7 @@ export default function Pratica() {
             onSubmit={iniciar}
             className="mx-auto grid max-w-xl gap-7 rounded-[22px] border bg-card p-6 md:p-8"
           >
-            <fieldset className="grid gap-2.5">
-              <legend className="mb-1 font-medium text-muted-foreground">
-                Tema
-              </legend>
-              <div className="flex flex-wrap gap-2">
-                <span className="rounded-full border bg-card px-3.5 py-2">
-                  Bet vs Missed C-Bet
-                </span>
-                <span className="rounded-full border bg-card px-3.5 py-2 text-muted-foreground opacity-50">
-                  Misturar temas · em breve
-                </span>
-              </div>
-            </fieldset>
+            <SeletorTema tema="bet" onTema={onTema} />
 
             <fieldset className="grid gap-2.5">
               <legend className="mb-1 font-medium text-muted-foreground">
@@ -545,5 +534,14 @@ export default function Pratica() {
         aposta.
       </p>
     </main>
+  )
+}
+
+export default function Pratica() {
+  const [tema, setTema] = useState<Tema>("bet")
+  return tema === "bet" ? (
+    <PraticaBet onTema={setTema} />
+  ) : (
+    <PraticaProbe onTema={setTema} />
   )
 }
