@@ -20,7 +20,7 @@ const GRUPOS: { nome: string; temas: Tema[] }[] = [
   },
   {
     nome: "Blind war",
-    temas: [{ nome: "BB Raise Pot vs SB" }],
+    temas: [{ nome: "BB Raise Pot vs SB", to: "/teoria/bb-raise-pot-vs-sb" }],
   },
   {
     nome: "Flop",

@@ -5,51 +5,33 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Cards, PlayingCard, RngStrip } from "@/components/poker/cards"
+import {
+  Etiqueta,
+  Exemplo,
+  Exemplos,
+  Faixa,
+  Fonte,
+  Intro,
+  ITEM,
+  Lista,
+  Nota,
+  RotuloBoard,
+  Secao,
+  TextoMini,
+  TituloMini,
+} from "@/components/teoria/blocos"
 import { mod15, tipoById, type TipoId } from "@/data/mod15"
 import { KEYS, writeJSON } from "@/lib/storage"
-import { cn } from "@/lib/utils"
-
-const ITEM =
-  "rounded-full border px-4 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground data-[state=on]:border-primary"
-
-function Lista({ itens }: { itens: string[] }) {
-  return (
-    <ol className="grid max-w-[70ch] gap-2.5">
-      {itens.map((t, i) => (
-        <li
-          key={t}
-          className="grid grid-cols-[2.2ch_1fr] gap-3.5 font-serif text-lg leading-relaxed"
-        >
-          <span className="font-sans font-bold text-primary">{i + 1}</span>
-          <span>{t}</span>
-        </li>
-      ))}
-    </ol>
-  )
-}
-
-function Secao({
-  titulo,
-  children,
-}: {
-  titulo: string
-  children: React.ReactNode
-}) {
-  return (
-    <section className="mt-16">
-      <h2 className="mb-5 text-[clamp(1.4rem,3vw,1.9rem)] leading-tight font-bold tracking-tight">
-        {titulo}
-      </h2>
-      {children}
-    </section>
-  )
-}
 
 function exemplosDoBucket(tipo: TipoId, p: number, grupo?: string) {
   if (tipo === "dobrado") {
-    return mod15.exemplosDobrado.filter((e) => e.p === p && e.grupo === grupo)
+    return mod15.exemplosDobrado
+      .filter((e) => e.p === p && e.grupo === grupo)
+      .map((e) => ({ id: e.id, hero: e.hero, nome: e.classe }))
   }
-  return mod15.situacoes.filter((s) => s.tipo === tipo && s.bucket === p)
+  return mod15.situacoes
+    .filter((s) => s.tipo === tipo && s.bucket === p)
+    .map((s) => ({ id: s.id, hero: s.hero, nome: s.classe }))
 }
 
 export default function Teoria15() {
@@ -114,7 +96,7 @@ export default function Teoria15() {
             ))}
           </ToggleGroup>
           <Card className="rounded-[22px]">
-            <CardContent className="grid gap-10 p-7">
+            <CardContent className="grid gap-10 p-5 sm:p-7">
               <p className="max-w-[60ch] font-serif text-lg" aria-live="polite">
                 {tipo.criterio}
               </p>
@@ -129,19 +111,12 @@ export default function Teoria15() {
                 >
                   <div className="flex flex-col items-start gap-4">
                     <Cards codes={bloco.codes} size="lg" />
-                    {bloco.rotulo && (
-                      <span className="text-sm font-medium text-muted-foreground">
-                        {bloco.rotulo}
-                      </span>
-                    )}
-                    <Badge
-                      className={cn(
-                        "px-3.5 py-1 text-sm font-bold text-[#1a0907]",
-                        tipo.size === "B25" ? "bg-b25" : "bg-b50"
-                      )}
+                    {bloco.rotulo && <RotuloBoard>{bloco.rotulo}</RotuloBoard>}
+                    <Etiqueta
+                      className={tipo.size === "B25" ? "bg-b25" : "bg-b50"}
                     >
                       {tipo.size}
-                    </Badge>
+                    </Etiqueta>
                   </div>
                   <div>
                     {bloco.grupo && (
@@ -149,59 +124,41 @@ export default function Teoria15() {
                     )}
                     {tipo.buckets
                       .filter((b) => b.grupo === bloco.grupo)
-                      .map((b) => (
-                        <div
-                          key={`${b.p}-${b.maos}`}
-                          className="grid grid-cols-[4.2ch_minmax(0,1fr)] items-center gap-x-3.5 gap-y-1 border-t py-3"
-                        >
-                          <span className="text-lg font-bold tabular-nums">
-                            {b.p}%
-                          </span>
-                          <span className="h-2 overflow-hidden rounded-full bg-secondary">
-                            <i
-                              className="block h-full rounded-full bg-primary"
-                              style={{ width: `${b.p}%` }}
-                            />
-                          </span>
-                          {exemplosDoBucket(tipo.id, b.p, b.grupo).length >
-                          0 ? (
-                            <ul className="col-start-2 flex flex-wrap gap-x-6 gap-y-4">
-                              {exemplosDoBucket(tipo.id, b.p, b.grupo).map(
-                                (s) => (
-                                  <li
+                      .map((b) => {
+                        const exemplos = exemplosDoBucket(tipo.id, b.p, b.grupo)
+                        return (
+                          <Faixa key={`${b.p}-${b.maos}`} p={b.p}>
+                            {exemplos.length > 0 ? (
+                              <Exemplos>
+                                {exemplos.map((s) => (
+                                  <Exemplo
                                     key={s.id}
-                                    className="flex flex-col items-center gap-2"
-                                  >
-                                    <Cards codes={s.hero} size="sm" />
-                                    <span className="text-center text-sm leading-snug font-medium text-foreground">
-                                      {s.classe}
-                                    </span>
-                                  </li>
-                                )
-                              )}
-                            </ul>
-                          ) : (
-                            <span className="col-start-2 text-lg font-semibold text-foreground">
-                              {b.maos}
-                            </span>
-                          )}
-                        </div>
-                      ))}
+                                    cartas={s.hero}
+                                    nome={s.nome}
+                                  />
+                                ))}
+                              </Exemplos>
+                            ) : (
+                              <span className="text-lg font-semibold text-foreground">
+                                {b.maos}
+                              </span>
+                            )}
+                          </Faixa>
+                        )
+                      })}
                   </div>
                 </div>
               ))}
-              <p className="-mt-4 max-w-[60ch] text-muted-foreground">
-                {tipo.nota}
-              </p>
+              <Nota className="-mt-4">{tipo.nota}</Nota>
             </CardContent>
           </Card>
         </Secao>
 
         <Secao titulo="Como sortear a frequência">
-          <p className="-mt-3 mb-4 max-w-[60ch] text-lg text-muted-foreground">
+          <Intro>
             Cada mão tem uma frequência de aposta. O número do RNG (1 a 100)
             decide: até a frequência da mão, você aposta. Depois, dá check.
-          </p>
+          </Intro>
           <ToggleGroup
             type="single"
             value={String(freq)}
@@ -219,22 +176,22 @@ export default function Teoria15() {
         </Secao>
 
         <Secao titulo="Boards de referência">
-          <p className="-mt-3 mb-5 max-w-[60ch] text-lg text-muted-foreground">
+          <Intro>
             Classificações validadas. Os naipes dos boards sem fonte direta são
             ilustrativos.
-          </p>
-          <div className="grid [grid-template-columns:repeat(auto-fill,minmax(230px,1fr))] gap-3">
+          </Intro>
+          <div className="grid [grid-template-columns:repeat(auto-fill,minmax(250px,1fr))] gap-3">
             {mod15.refBoards.map((r) => (
-              <Card key={r.b.join("")} className="gap-2.5 rounded-[14px] p-4">
+              <Card key={r.b.join("")} className="gap-3 rounded-[14px] p-5">
                 <div className="flex gap-1.5">
                   {r.b.map((c) => (
                     <PlayingCard key={c} code={c} size="sm" />
                   ))}
                 </div>
-                <strong>{tipoById[r.t].nome}</strong>
-                <small className="text-muted-foreground">
+                <TituloMini>{tipoById[r.t].nome}</TituloMini>
+                <TextoMini>
                   {r.fixo ? "Naipes da fonte" : "Naipes ilustrativos"}
-                </small>
+                </TextoMini>
               </Card>
             ))}
           </div>
@@ -244,11 +201,7 @@ export default function Teoria15() {
           <Lista itens={mod15.pocket} />
         </Secao>
 
-        <section className="mt-16">
-          <p className="max-w-[60ch] text-muted-foreground">
-            Fonte: {mod15.fonte}.
-          </p>
-        </section>
+        <Fonte>Fonte: {mod15.fonte}.</Fonte>
       </div>
     </main>
   )
