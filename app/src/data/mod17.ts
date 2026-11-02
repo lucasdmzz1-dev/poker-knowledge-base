@@ -3,9 +3,15 @@ import type { CardCode } from "@/data/mod15"
 export type SizeBB = "B25" | "B40" | "B70"
 export type SplitId = "b25" | "b40" | "b70"
 
+export interface ExemploBB {
+  classe: string
+  hero: CardCode[]
+}
+
 export interface BucketBB {
   p: number
   maos: string
+  ex: ExemploBB[]
 }
 
 export interface SplitBB {
@@ -13,6 +19,8 @@ export interface SplitBB {
   size: SizeBB
   nome: string
   quando: string
+  board: CardCode[]
+  boardNome: string
   buckets: BucketBB[]
   nota: string
 }
@@ -72,10 +80,32 @@ export const mod17 = {
       size: "B25",
       nome: "Split B25",
       quando: "Board em que temos thin value.",
+      board: ["Qc", "6h", "3h"],
+      boardNome: "Q-6-3 com flush draw",
       buckets: [
-        { p: 100, maos: "Overpair e sets (menos o top set)" },
-        { p: 75, maos: "Dois pares, top set, TP e bons draws" },
-        { p: 50, maos: "Todo o restante" },
+        {
+          p: 100,
+          maos: "Overpair e sets (menos o top set)",
+          ex: [
+            { classe: "Overpair", hero: ["Ad", "As"] },
+            { classe: "Sets (menos o top set)", hero: ["6c", "6d"] },
+          ],
+        },
+        {
+          p: 75,
+          maos: "Dois pares, top set, TP e bons draws",
+          ex: [
+            { classe: "Dois pares", hero: ["Qd", "6d"] },
+            { classe: "Top set", hero: ["Qh", "Qd"] },
+            { classe: "TP", hero: ["Qs", "Jd"] },
+            { classe: "Bons draws", hero: ["Ah", "Kh"] },
+          ],
+        },
+        {
+          p: 50,
+          maos: "Todo o restante",
+          ex: [{ classe: "Todo o restante", hero: ["Js", "9d"] }],
+        },
       ],
       nota: "Em board muito favorável, o bucket de 25% vira 100% e a mão vira range.",
     },
@@ -84,11 +114,38 @@ export const mod17 = {
       size: "B40",
       nome: "Split B40",
       quando: "Board intermediário, o que sobrar.",
+      board: ["4c", "Jd", "Kc"],
+      boardNome: "K-J-4, dois broadways",
       buckets: [
-        { p: 75, maos: "Overpair, sets, dois pares, TP forte e flush draws" },
-        { p: 50, maos: "TPs e melhores draws" },
-        { p: 25, maos: "Todo o restante" },
-        { p: 0, maos: "Underpair" },
+        {
+          p: 75,
+          maos: "Overpair, sets, dois pares, TP forte e flush draws",
+          ex: [
+            { classe: "Overpair", hero: ["Ah", "As"] },
+            { classe: "Sets", hero: ["Kh", "Kd"] },
+            { classe: "Dois pares", hero: ["Kd", "Jh"] },
+            { classe: "TP forte", hero: ["Kh", "Qh"] },
+            { classe: "Flush draws", hero: ["Ac", "9c"] },
+          ],
+        },
+        {
+          p: 50,
+          maos: "TPs e melhores draws",
+          ex: [
+            { classe: "TPs", hero: ["Kd", "8d"] },
+            { classe: "Melhores draws", hero: ["Qc", "Tc"] },
+          ],
+        },
+        {
+          p: 25,
+          maos: "Todo o restante",
+          ex: [{ classe: "Todo o restante", hero: ["8h", "7h"] }],
+        },
+        {
+          p: 0,
+          maos: "Underpair",
+          ex: [{ classe: "Underpair", hero: ["9h", "9d"] }],
+        },
       ],
       nota: "Quanto maior o size, menor a frequência e maior a necessidade de split.",
     },
@@ -97,11 +154,36 @@ export const mod17 = {
       size: "B70",
       nome: "Split B70",
       quando: "Board em que não temos thin value.",
+      board: ["5c", "7h", "9d"],
+      boardNome: "9-7-5, low conectado",
       buckets: [
-        { p: 75, maos: "Overpair e TP forte" },
-        { p: 50, maos: "Dois pares, TPs e melhores draws" },
-        { p: 25, maos: "Todo o restante" },
-        { p: 0, maos: "Underpair" },
+        {
+          p: 75,
+          maos: "Overpair e TP forte",
+          ex: [
+            { classe: "Overpair", hero: ["Ah", "Ac"] },
+            { classe: "TP forte", hero: ["9h", "Ac"] },
+          ],
+        },
+        {
+          p: 50,
+          maos: "Dois pares, TPs e melhores draws",
+          ex: [
+            { classe: "Dois pares", hero: ["9c", "7c"] },
+            { classe: "TPs", hero: ["9s", "3s"] },
+            { classe: "Melhores draws", hero: ["Ts", "8s"] },
+          ],
+        },
+        {
+          p: 25,
+          maos: "Todo o restante",
+          ex: [{ classe: "Todo o restante", hero: ["Kc", "Qd"] }],
+        },
+        {
+          p: 0,
+          maos: "Underpair",
+          ex: [{ classe: "Underpair", hero: ["4h", "4d"] }],
+        },
       ],
       nota: "O top set vai no menor bucket possível, porque bloqueia os calls. Os outros sets ficam em 50% ou 75%. Second pair entra em 25%.",
     },

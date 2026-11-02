@@ -135,12 +135,21 @@ export default function Teoria17() {
             ))}
           </ToggleGroup>
           <Card className="rounded-[22px]">
-            <CardContent className="grid gap-4 p-7" aria-live="polite">
-              <div className="flex items-center gap-3">
+            <CardContent
+              className="grid gap-8 p-7 md:grid-cols-[minmax(0,320px)_minmax(0,1fr)]"
+              aria-live="polite"
+            >
+              <div className="flex flex-col items-start gap-4">
+                <Cards codes={split.board} size="lg" />
+                <span className="text-sm font-medium text-muted-foreground">
+                  {split.boardNome}
+                </span>
                 <SizeBadge size={split.size} />
-                <p className="font-serif text-lg">{split.quando}</p>
               </div>
               <div>
+                <p className="mb-2 max-w-[60ch] font-serif text-lg">
+                  {split.quando}
+                </p>
                 {split.buckets.map((b) => (
                   <div
                     key={`${b.p}-${b.maos}`}
@@ -155,13 +164,25 @@ export default function Teoria17() {
                         style={{ width: `${b.p}%` }}
                       />
                     </span>
-                    <span className="col-start-2 text-lg font-semibold text-foreground">
-                      {b.maos}
-                    </span>
+                    <ul className="col-start-2 flex flex-wrap gap-x-6 gap-y-4">
+                      {b.ex.map((e) => (
+                        <li
+                          key={e.classe}
+                          className="flex w-28 flex-col items-center gap-2"
+                        >
+                          <Cards codes={e.hero} size="sm" />
+                          <span className="text-center text-sm leading-snug font-medium text-foreground">
+                            {e.classe}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 ))}
+                <p className="mt-3 max-w-[60ch] text-muted-foreground">
+                  {split.nota}
+                </p>
               </div>
-              <p className="max-w-[60ch] text-muted-foreground">{split.nota}</p>
             </CardContent>
           </Card>
         </Secao>
