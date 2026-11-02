@@ -1758,9 +1758,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793577678.370764,
-    "seen": 1793577713.8289092,
-    "ast_hash": "64fdbeb05b287e797a6ad09a01e30198",
+    "mtime": 1793578045.8800027,
+    "seen": 1793578079.174937,
+    "ast_hash": "47521cccb24b07c64bf1d231623e82a0",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2652,9 +2652,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-probe.tsx": {
-    "mtime": 1793577868.8742094,
-    "seen": 1793577899.6463792,
-    "ast_hash": "b50a7277c7177ffb31eb086f26661874",
+    "mtime": 1793578045.9473195,
+    "seen": 1793578079.174937,
+    "ast_hash": "118410beaf57659935054a00983fef4e",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

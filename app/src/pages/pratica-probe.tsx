@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react"
+import { ArrowLeft } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -420,6 +421,16 @@ export default function PraticaProbe({
 
   return (
     <main className="mx-auto max-w-[1080px] px-4 pt-6 pb-20 md:px-5">
+      <div className="mx-auto mb-2 max-w-[880px]">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="-ml-2 text-muted-foreground"
+          onClick={() => setFase("setup")}
+        >
+          <ArrowLeft aria-hidden="true" /> Voltar à seleção
+        </Button>
+      </div>
       <div
         className="mx-auto mb-3 flex max-w-[880px] flex-wrap items-center gap-1.5"
         aria-label="Ações até aqui"
