@@ -127,6 +127,17 @@ export default function Teoria15() {
                 >
                   {tipo.size}
                 </Badge>
+                {tipo.outrosExemplos?.map((o) => (
+                  <div
+                    key={o.rotulo}
+                    className="flex flex-col items-start gap-2"
+                  >
+                    <Cards codes={o.codes} size="lg" />
+                    <span className="text-sm font-medium text-muted-foreground">
+                      {o.rotulo}
+                    </span>
+                  </div>
+                ))}
               </div>
               <div aria-live="polite">
                 <p className="mb-2 max-w-[60ch] font-serif text-lg">
