@@ -948,9 +948,9 @@
     "semantic_hash": ""
   },
   "theory/CLAUDE.md": {
-    "mtime": 1793599583.9077952,
-    "seen": 1793599600.595373,
-    "ast_hash": "12cc354061747dd72fe1eae46bd4e1da",
+    "mtime": 1793600839.0281222,
+    "seen": 1793600877.9604766,
+    "ast_hash": "c1f2bf9cc6679749f943eb8ba5fa1cb6",
     "semantic_hash": ""
   },
   "theory/README.md": {
@@ -2736,9 +2736,9 @@
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m10.ts": {
-    "mtime": 1793599239.63535,
-    "seen": 1793599600.5225751,
-    "ast_hash": "0ef59002fe40965724ef88dfa0ee0d00",
+    "mtime": 1793600607.6390374,
+    "seen": 1793600877.8850884,
+    "ast_hash": "88c13bfbd6091580bce25698d0186464",
     "semantic_hash": ""
   },
   "app/src/data/teoria/modulos/m11.ts": {
@@ -2766,15 +2766,15 @@
     "semantic_hash": ""
   },
   "app/src/data/teoria/tipos.ts": {
-    "mtime": 1793599162.3969197,
-    "seen": 1793599600.5225751,
-    "ast_hash": "f3cbfd66c87bc26758efd4c27e346569",
+    "mtime": 1793600607.044774,
+    "seen": 1793600877.8861344,
+    "ast_hash": "ab09253995e9a66ba9a9eba0abbfdaa2",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-modulo.tsx": {
-    "mtime": 1793599454.5741177,
-    "seen": 1793599600.5258152,
-    "ast_hash": "bbd16a87ff0bd3ec27a2e1f5e0669e1d",
+    "mtime": 1793600722.4618027,
+    "seen": 1793600877.8901358,
+    "ast_hash": "630a7501155ece2482b7b05e7466602f",
     "semantic_hash": ""
   },
   "app/src/components/analise/leitor.tsx": {
@@ -2856,9 +2856,15 @@
     "semantic_hash": ""
   },
   "app/src/components/teoria/mesa-teoria.tsx": {
-    "mtime": 1793599168.734244,
-    "seen": 1793599600.5195615,
-    "ast_hash": "b8b8555281ce666bf4c8b74080871208",
+    "mtime": 1793600366.671527,
+    "seen": 1793600877.8798172,
+    "ast_hash": "0d22a7e9cf5b3bbe1316ae0b9b56e027",
+    "semantic_hash": ""
+  },
+  "app/src/components/teoria/situacoes-mesa.tsx": {
+    "mtime": 1793600662.014704,
+    "seen": 1793600877.8798172,
+    "ast_hash": "633aaa5716cdcc0396f1ce6437619707",
     "semantic_hash": ""
   },
   "app/package-lock.json": {
