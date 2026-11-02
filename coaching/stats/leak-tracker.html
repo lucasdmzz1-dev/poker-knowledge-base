@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano de Correção de Leaks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --felt: #16332A;
+    --felt-2: #1D4034;
+    --card: #F1EAD6;
+    --card-2: #E8DFC4;
+    --ink: #1E1A12;
+    --ink-soft: #55503f;
+    --gold: #B08D3D;
+    --gold-soft: #d9c48c;
+    --brick: #9A4633;
+    --teal: #3E7C59;
+    --rule: rgba(30,26,18,0.14);
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+  :root:not([data-theme="light"]){
+    --felt: #0E211B;
+    --felt-2: #15302700;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --felt: #0E211B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --felt: #0E211B;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background: var(--felt);
+    background-image:
+      radial-gradient(ellipse at top, rgba(255,255,255,0.05), transparent 60%);
+    color: var(--card);
+    font-family: var(--sans);
+    min-height:100vh;
+    padding: 48px 20px 80px;
+  }
+  .wrap{ max-width: 760px; margin: 0 auto; }
+
+  header{ margin-bottom: 40px; }
+  .eyebrow{
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--gold-soft);
+    letter-spacing: 0.02em;
+    margin: 0 0 10px;
+  }
+  h1{
+    font-family: var(--serif);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(30px, 5vw, 42px);
+    line-height: 1.08;
+    margin: 0 0 14px;
+    color: #F8F4E8;
+  }
+  .sub{
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(241,234,214,0.72);
+    max-width: 56ch;
+    margin: 0;
+  }
+
+  .summary{
+    display:flex;
+    gap: 14px;
+    margin: 30px 0 44px;
+    flex-wrap: wrap;
+  }
+  .pill{
+    background: rgba(241,234,214,0.08);
+    border: 1px solid rgba(241,234,214,0.16);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 13px;
+    color: rgba(241,234,214,0.85);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .dot{ width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+  .dot.a{ background: var(--gold); }
+  .dot.b{ background: var(--teal); }
+
+  .leak{
+    background: var(--card);
+    color: var(--ink);
+    border-radius: 4px;
+    padding: 28px 30px 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 18px 30px -18px rgba(0,0,0,0.45);
+  }
+  .leak-top{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 6px;
+  }
+  .leak-name{
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0;
+    color: var(--ink);
+  }
+  .badge{
+    flex-shrink:0;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+    margin-top: 3px;
+  }
+  .badge.a{ background: rgba(176,141,61,0.18); color: #7a5f22; }
+  .badge.b{ background: rgba(62,124,89,0.16); color: #285c3d; }
+
+  .leak-desc{
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin: 4px 0 18px;
+    max-width: 58ch;
+  }
+
+  .gauge-row{
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .gauge-row .now{ font-weight:700; color: var(--brick); font-size: 15px; }
+  .gauge-row .target{ font-weight:700; color: var(--teal); font-size: 15px; }
+  .gauge{
+    height: 8px;
+    border-radius: 999px;
+    background: var(--card-2);
+    overflow: hidden;
+    margin-bottom: 22px;
+    position: relative;
+  }
+  .gauge-fill{
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--brick), var(--gold));
+  }
+  .gauge.pending .gauge-fill{ background: repeating-linear-gradient(45deg, var(--card-2), var(--card-2) 6px, #d8cda9 6px, #d8cda9 12px); }
+
+  .actions{ border-top: 1px solid var(--rule); padding-top: 16px; }
+  .actions-label{
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+  .action{
+    display:flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .action input{
+    margin-top: 3px;
+    width: 15px; height: 15px;
+    accent-color: var(--teal);
+    flex-shrink:0;
+    cursor: pointer;
+  }
+  .action span{ transition: color 0.15s, opacity 0.15s; }
+  .action input:checked + span{
+    color: var(--ink-soft);
+    text-decoration: line-through;
+    opacity: 0.65;
+  }
+
+  footer{
+    margin-top: 36px;
+    font-size: 12.5px;
+    color: rgba(241,234,214,0.5);
+    text-align: center;
+  }
+
+  @media (max-width: 480px){
+    .leak{ padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Feedback do instrutor · Setembro 2026</p>
+    <h1>Plano de correção de leaks</h1>
+    <p class="sub">Cinco pontos apontados pelo instrutor, organizados em duas frentes: leaks de execução (a regra já existe no KB) e leaks estruturais (o módulo ainda precisa ser construído).</p>
+  </header>
+
+  <div class="summary">
+    <div class="pill"><span class="dot a"></span> Tipo A — execução (KB já cobre)</div>
+    <div class="pill"><span class="dot b"></span> Tipo B — falta módulo no KB</div>
+  </div>
+
+  <!-- 1 -->
+  <div class="leak">
+    <div class="leak-top">
+      <p class="leak-name">Squeeze (jogo deep)</p>
+      <span class="badge b">Tipo B</span>
+    </div>
+    <p class="leak-desc">Frequência muito abaixo do esperado. No deep, mãos como TJs/QJs/KJs deveriam quase sempre virar squeeze quando rola raise + call — isso limpa o range de call pro pós-flop.</p>
+    <div class="gauge-row"><span>Atual: <span class="now">muito baixo</span></span><span>Meta: <span class="target">10–12%+</span></span></div>
+    <div class="gauge pending"><div class="gauge-fill" style="width:20%"></div></div>
+    <div class="actions">
+      <p class="actions-label">Próximos passos</p>
+      <label class="action"><input type="checkbox" data-key="squeeze-1"><span>Rodar spots de squeeze deep no GTOWizard por posição</span></label>
+      <label class="action"><input type="checkbox" data-key="squeeze-2"><span>Registrar regra TJs/QJs/KJs como ponto de partida no módulo 12</span></label>
+      <label class="action"><input type="checkbox" data-key="squeeze-3"><span>Montar módulo 12-Squeeze-Ranges no KB</span></label>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="leak">
+    <div class="leak-top">
+      <p class="leak-name">Raise First In (Open)</p>
+      <span class="badge b">Tipo B</span>
+    </div>
+    <p class="leak-desc">Abaixo do esperado considerando que você joga mais formato Bounty que o instrutor — o incentivo de KO deveria te deixar mais agressivo no open, não menos.</p>
+    <div class="gauge-row"><span>Referência dele: <span class="now">PFR ~20–21%</span> <span style="opacity:0.6;font-size:12px;">(VPIP dele ~28–29%)</span></span><span>Meta: <span class="target">acima disso</span></span></div>
+    <div class="gauge pending"><div class="gauge-fill" style="width:15%"></div></div>
+    <div class="actions">
+      <p class="actions-label">Próximos passos</p>
+      <label class="action"><input type="checkbox" data-key="rfi-1"><span>Rodar ranges de RFI no GTOWizard por posição e efetivo</span></label>
+      <label class="action"><input type="checkbox" data-key="rfi-2"><span>Comparar seu range atual contra o do solver, posição por posição</span></label>
+      <label class="action"><input type="checkbox" data-key="rfi-3"><span>Montar módulo 11-RFI-Ranges no KB</span></label>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="leak">
+    <div class="leak-top">
+      <p class="leak-name">C-Bet OOP + Check-Raise</p>
+      <span class="badge a">Tipo A</span>
+    </div>
+    <p class="leak-desc">C-Bet OOP no limite mínimo; Check-Raise deveria subir proporcionalmente e também está no mínimo. Risco apontado: escolher a mão pra dar check, em vez de check pela estratégia.</p>
+    <div class="gauge-row"><span>Regra do instrutor: <span class="now">CBet 35% → CR ~20%</span></span><span>Módulo: <span class="target">05 · 06 · 07</span></span></div>
+    <div class="gauge"><div class="gauge-fill" style="width:55%"></div></div>
+    <div class="actions">
+      <p class="actions-label">Próximos passos</p>
+      <label class="action"><input type="checkbox" data-key="cbet-1"><span>Separar lote de mãos com C-Bet OOP e Check da última semana</span></label>
+      <label class="action"><input type="checkbox" data-key="cbet-2"><span>Auditar cada uma contra o split do módulo 05</span></label>
+      <label class="action"><input type="checkbox" data-key="cbet-3"><span>Fazer quiz de reforço do range de Check-Raise (06/07)</span></label>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="leak">
+    <div class="leak-top">
+      <p class="leak-name">Check-Raise overall / BB</p>
+      <span class="badge a">Tipo A</span>
+    </div>
+    <p class="leak-desc">Não está dando Check-Raise o suficiente com equity no deep, nem com mãos que precisam comprometer stack no short. Diagnóstico: fator confiança, não falta de conceito.</p>
+    <div class="gauge-row"><span>Status: <span class="now">abaixo do range documentado</span></span><span>Módulo: <span class="target">06 · 07</span></span></div>
+    <div class="gauge"><div class="gauge-fill" style="width:40%"></div></div>
+    <div class="actions">
+      <p class="actions-label">Próximos passos</p>
+      <label class="action"><input type="checkbox" data-key="xr-1"><span>Revisar ranges de XR Short e XR Deep (módulos 06/07)</span></label>
+      <label class="action"><input type="checkbox" data-key="xr-2"><span>Quiz de decisão: bet vs check-raise em spots reais</span></label>
+      <label class="action"><input type="checkbox" data-key="xr-3"><span>Marcar mãos da semana em que hesitou apesar de saber a regra</span></label>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="leak">
+    <div class="leak-top">
+      <p class="leak-name">Third Barrel fora de posição</p>
+      <span class="badge a">Tipo A</span>
+    </div>
+    <p class="leak-desc">Abaixo de 50%. OOP você carrega blockers melhores nas 3 streets — está deixando spots de blefe bons na mesa. Priorizar equity real (duas pontas, blockers de top pair) sobre flush draws fracos.</p>
+    <div class="gauge-row"><span>Meta citada: <span class="now">próximo de 50%</span></span><span>Módulo: <span class="target">04</span></span></div>
+    <div class="gauge"><div class="gauge-fill" style="width:35%"></div></div>
+    <div class="actions">
+      <p class="actions-label">Próximos passos</p>
+      <label class="action"><input type="checkbox" data-key="tb-1"><span>Revisar regra Blefe Natural x Não-Natural (módulo 04)</span></label>
+      <label class="action"><input type="checkbox" data-key="tb-2"><span>Quiz: identificar quais mãos blefam o river OOP</span></label>
+      <label class="action"><input type="checkbox" data-key="tb-3"><span>Auditar mãos onde desistiu do Third Barrel com equity real</span></label>
+    </div>
+  </div>
+
+  <footer>Marque conforme for avançando — o progresso fica salvo neste navegador.</footer>
+</div>
+
+<script>
+  document.querySelectorAll('.action input[type="checkbox"]').forEach(cb => {
+    const key = 'leaktracker:' + cb.dataset.key;
+    try {
+      if (localStorage.getItem(key) === '1') cb.checked = true;
+    } catch(e) {}
+    cb.addEventListener('change', () => {
+      try { localStorage.setItem(key, cb.checked ? '1' : '0'); } catch(e) {}
+    });
+  });
+</script>
+</body>
+</html>
