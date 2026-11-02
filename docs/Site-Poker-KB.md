@@ -87,6 +87,7 @@ O repositório é público: não coloque dados pessoais nele. Os dados de cada j
 
 - Dúvidas da teoria para o coach: tabuleiros intermediários, limite de low board, cartas do meio em dobrado.
 - Pilotos dos módulos 14 e 17.
+- Análise: guia ilustrativo para o jogador, com prints de tela, de como usar a área e o que ele consegue fazer. Cobrir, nesta ordem: criar conta e entrar (e-mail ou Google); subir os prints do mês e "Ler os prints com o Claude" (chave da API própria); conferir as stats coloridas pela meta e "Editar valores"; "Gerar leaks pelas metas", filtros por divisão e "Mais críticas"; selecionar e "Levar selecionados para o painel semanal"; preencher e salvar a semana, e "Encerrar o mês e começar outro" (ciclos anteriores); Comparação entre meses e estrelas; Meus dados (exportar e importar). Guardar em `docs/Guia-Analise.md` com as imagens em `docs/img/analise/`.
 
 ## Padrão dos temas da Prática
 
