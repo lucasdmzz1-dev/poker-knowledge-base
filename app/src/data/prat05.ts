@@ -570,6 +570,55 @@ export function decidir(
   return null
 }
 
+// ---------- range de abertura ----------
+
+// Ranges de abertura usados para sortear a mão do herói. SÃO PROVISÓRIOS: o módulo
+// não traz o range de open de EP nem de CO, então ficam só as mãos que esses opens
+// abrem com folga. Troque aqui pelo range do coach quando ele chegar.
+export const RANGE_ABERTURA: Record<Cenario, string> = {
+  EP: "77+, ATs+, KJs+, QJs, JTs, T9s, AQo+, KQo",
+  CO: "22+, A2s+, ATo+, K9s+, KJo+, Q9s+, QJo, J9s+, T9s, 98s, 87s, 76s, 65s",
+}
+
+const ORDEM_RANKS = "AKQJT98765432"
+
+// "77+", "A2s+", "ATo+" ou uma mão exata como "T9s" viram o conjunto de classes.
+function expandirRange(texto: string): Set<string> {
+  const out = new Set<string>()
+  for (const t of texto.split(",").map((x) => x.trim())) {
+    const mais = t.endsWith("+")
+    const base = mais ? t.slice(0, -1) : t
+    const [a, b] = [base[0], base[1]]
+    const tipo = base[2] ?? ""
+    if (a === b) {
+      const i = ORDEM_RANKS.indexOf(a)
+      for (let k = mais ? 0 : i; k <= i; k++)
+        out.add(ORDEM_RANKS[k] + ORDEM_RANKS[k])
+    } else {
+      const ia = ORDEM_RANKS.indexOf(a)
+      const ib = ORDEM_RANKS.indexOf(b)
+      for (let k = mais ? ia + 1 : ib; k <= ib; k++)
+        out.add(a + ORDEM_RANKS[k] + tipo)
+    }
+  }
+  return out
+}
+
+const ABRE: Record<Cenario, Set<string>> = {
+  EP: expandirRange(RANGE_ABERTURA.EP),
+  CO: expandirRange(RANGE_ABERTURA.CO),
+}
+
+// A mão ("AhKd") como classe do range ("AKo").
+function classeDaMao(m: readonly [string, string]): string {
+  const [a, b] = m
+  const [r1, r2] = [a[0], b[0]].sort(
+    (x, y) => ORDEM_RANKS.indexOf(x) - ORDEM_RANKS.indexOf(y)
+  )
+  if (r1 === r2) return r1 + r2
+  return r1 + r2 + (a[1] === b[1] ? "s" : "o")
+}
+
 // ---------- situações ----------
 
 const SIMBOLO: Record<string, string> = { s: "♠", h: "♥", d: "♦", c: "♣" }
@@ -654,6 +703,8 @@ function gerar(): SituacaoOop[] {
         const grupos = new Map<string, SituacaoOop[]>()
         for (const m of maos) {
           if (m.some((c) => board.includes(c))) continue
+          // O herói só joga mãos que abre desta posição.
+          if (!ABRE[cenario].has(classeDaMao(m))) continue
           const d = decidir(jogada, board, m, variante === "doisNaipes")
           if (!d) continue
           const chave = d.classe + "|" + d.acao
