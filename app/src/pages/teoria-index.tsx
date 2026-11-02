@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { PageHeader } from "@/components/page-header"
 import { Badge } from "@/components/ui/badge"
+import { slugPorTema } from "@/data/teoria/registro"
 import { cn } from "@/lib/utils"
 
 interface Tema {
@@ -70,7 +71,10 @@ const GRUPOS: { nome: string; temas: Tema[] }[] = [
 ]
 
 function Cartao({ tema }: { tema: Tema }) {
-  const on = Boolean(tema.to)
+  const to =
+    tema.to ??
+    (slugPorTema[tema.nome] ? `/teoria/${slugPorTema[tema.nome]}` : undefined)
+  const on = Boolean(to)
   const cls = cn(
     "flex items-center gap-4 rounded-[18px] border bg-card px-5 py-4 transition-[border-color,background-color] duration-150",
     !on && "opacity-50",
@@ -87,7 +91,7 @@ function Cartao({ tema }: { tema: Tema }) {
     </>
   )
   return on ? (
-    <Link to={tema.to!} className={cls}>
+    <Link to={to!} className={cls}>
       {inner}
     </Link>
   ) : (
