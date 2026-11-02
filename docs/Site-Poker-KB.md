@@ -62,6 +62,17 @@ Com as variáveis de ambiente preenchidas, o site pede login (e-mail e senha) an
 
 Ao entrar, o que já está na conta vale; o que só existia no aparelho sobe. Ao sair, os dados do aparelho são apagados. A chave da API do Claude e os prints ficam só no aparelho. "Meus dados" na Análise continua exportando e importando um arquivo.
 
+## Publicar no GitHub Pages
+
+O workflow `.github/workflows/publicar-site.yml` constrói a pasta `app/` e publica a cada merge na main. Configuração única, no GitHub:
+
+1. Settings → Pages → Source: GitHub Actions.
+2. Settings → Secrets and variables → Actions → Variables: crie `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` (a chave pública `anon`).
+3. Rode o workflow uma vez (Actions → Publicar site → Run workflow). O endereço aparece no fim da execução.
+4. No Supabase, em Authentication → URL Configuration, ponha o endereço do site em Site URL.
+
+O repositório é público: não coloque dados pessoais nele. Os dados de cada jogador ficam só na conta dele.
+
 ## Fluxo mensal
 
 1. Receber os prints do HUD do mês e colocar em Leaks do mês.
