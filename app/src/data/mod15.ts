@@ -166,6 +166,32 @@ export const mod15 = {
     { b: ["Kd", "Kh", "Jc"], t: "dobrado", fixo: false },
   ] as RefBoard[],
 
+  // Só para a tela da teoria: o treino (situacoes) não usa estes exemplos.
+  // Board de referência do dobrado seco: K♠ K♥ 7♣.
+  exemplosDobrado: [
+    { id: "dob-1", grupo: "Seco", p: 75, classe: "Full", hero: ["7h", "7d"] },
+    {
+      id: "dob-2",
+      grupo: "Seco",
+      p: 75,
+      classe: "Trinca de K",
+      hero: ["Kd", "Qc"],
+    },
+    {
+      id: "dob-3",
+      grupo: "Seco",
+      p: 50,
+      classe: "Todo o restante",
+      hero: ["Ad", "Qd"],
+    },
+  ] as {
+    id: string
+    grupo: string
+    p: number
+    classe: string
+    hero: CardCode[]
+  }[],
+
   situacoes: [
     {
       id: "seco-1",
