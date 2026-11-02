@@ -114,7 +114,7 @@ export default function Teoria17() {
                   <SizeBadge size={s.size} />
                   <strong className="text-lg uppercase">{s.nome}</strong>
                 </div>
-                <p className="text-muted-foreground">{s.nota}</p>
+                <p className="text-lg text-muted-foreground">{s.nota}</p>
               </Card>
             ))}
           </div>
@@ -141,7 +141,7 @@ export default function Teoria17() {
             >
               <div className="flex flex-col items-start gap-4">
                 <Cards codes={split.board} size="lg" />
-                <span className="text-sm font-medium text-muted-foreground">
+                <span className="text-base font-medium text-muted-foreground">
                   {split.boardNome}
                 </span>
                 <SizeBadge size={split.size} />
@@ -171,7 +171,7 @@ export default function Teoria17() {
                           className="flex w-28 flex-col items-center gap-2"
                         >
                           <Cards codes={e.hero} size="sm" />
-                          <span className="text-center text-sm leading-snug font-medium text-foreground">
+                          <span className="text-center text-base leading-snug font-medium text-foreground">
                             {e.classe}
                           </span>
                         </li>
@@ -179,7 +179,7 @@ export default function Teoria17() {
                     </ul>
                   </div>
                 ))}
-                <p className="mt-3 max-w-[60ch] text-muted-foreground">
+                <p className="mt-3 max-w-[60ch] text-lg text-muted-foreground">
                   {split.nota}
                 </p>
               </div>
@@ -206,7 +206,7 @@ export default function Teoria17() {
             ))}
           </ToggleGroup>
           <RngStrip bucket={freq} />
-          <p className="mt-3 max-w-[60ch] text-muted-foreground">
+          <p className="mt-3 max-w-[60ch] text-lg text-muted-foreground">
             Com flush draw no board, a mão com carta do naipe aposta mais e a
             sem carta dá check. Sem flush draw, um RNG de 1 a 50 serve.
           </p>
@@ -222,7 +222,7 @@ export default function Teoria17() {
                 <SizeBadge size={t.size} />
                 <div>
                   <strong className="block text-lg uppercase">{t.nome}</strong>
-                  <small className="text-muted-foreground">
+                  <small className="text-base text-muted-foreground">
                     {t.estrategia}
                   </small>
                 </div>
@@ -241,9 +241,11 @@ export default function Teoria17() {
                 <Cards codes={b.cards} size="sm" />
                 <div className="flex items-center gap-2">
                   <SizeBadge size={b.size} />
-                  <strong>{b.nome}</strong>
+                  <strong className="text-lg">{b.nome}</strong>
                 </div>
-                <small className="text-muted-foreground">{b.nota}</small>
+                <small className="text-base text-muted-foreground">
+                  {b.nota}
+                </small>
               </Card>
             ))}
           </div>
@@ -257,7 +259,7 @@ export default function Teoria17() {
                   <SizeBadge size={e.size} />
                   <strong className="text-lg uppercase">{e.nome}</strong>
                 </div>
-                <ul className="grid list-disc gap-1.5 pl-5 text-muted-foreground">
+                <ul className="grid list-disc gap-1.5 pl-5 text-lg text-muted-foreground">
                   {e.textos.map((t) => (
                     <li key={t}>{t}</li>
                   ))}
