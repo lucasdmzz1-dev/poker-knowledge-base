@@ -455,12 +455,12 @@ export function Voltar() {
   return (
     <Link
       to="/teoria"
-      className="inline-flex items-center gap-2 rounded-full border bg-card px-5 py-2.5 text-base font-bold tracking-wide text-foreground uppercase transition-colors duration-150 hover:border-primary hover:text-primary"
+      className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3.5 py-1.5 text-sm font-semibold text-foreground transition-colors duration-150 hover:border-primary hover:text-primary"
     >
-      <span aria-hidden className="text-xl leading-none">
+      <span aria-hidden className="text-base leading-none">
         ‹
       </span>
-      Voltar para a Teoria
+      Teoria
     </Link>
   )
 }
