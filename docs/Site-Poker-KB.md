@@ -87,3 +87,14 @@ O repositório é público: não coloque dados pessoais nele. Os dados de cada j
 
 - Dúvidas da teoria para o coach: tabuleiros intermediários, limite de low board, cartas do meio em dobrado.
 - Pilotos dos módulos 14 e 17.
+
+## Padrão dos temas da Prática
+
+Todo tema novo da Prática usa os mesmos blocos, para ficar igual aos outros:
+
+- `components/poker/resposta.tsx`: `BotaoResposta` + `estadoDe` (contorno verde com selo de check no botão certo, vermelho com X no errado escolhido, os outros apagados) e `CartaoResultado` (título "CERTO" ou "ERRADO" centralizado, borda grossa e brilho na cor do resultado).
+- `components/poker/mesa.tsx`: a mesa com as 8 posições, as foldadas apagadas, o herói embaixo no centro e o dealer no BTN.
+- `components/poker/cards.tsx`: `RngStrip` com `rng` é a barra que enche até o número sorteado (roxo na aposta, azul no check, sem vermelho). Sem `rng` é a barra da Teoria.
+- O resultado do treino mostra o tipo de board que mais errou, o desempenho por tipo e o tipo de erro.
+- Botão "Voltar à seleção" no topo do jogo e seletor de tema na seleção (`SeletorTema`).
+- Textos em minúsculas, percentuais e tipo de board em negrito.

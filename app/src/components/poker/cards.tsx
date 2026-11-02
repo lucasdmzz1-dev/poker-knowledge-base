@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react"
+import { useEffect, useState, type CSSProperties } from "react"
 import { cn } from "@/lib/utils"
 
 const SUIT = { s: "♠", h: "♥", d: "♦", c: "♣" } as const
@@ -77,6 +77,75 @@ export function Cards({
   )
 }
 
+// Barra do treino: o RNG vai enchendo de 1 até o número sorteado. Até o bucket é
+// aposta, depois é check. Cores neutras para não lembrar acerto ou erro.
+function RngBarra({
+  bucket,
+  rng,
+  size,
+}: {
+  bucket: number
+  rng: number
+  size?: string
+}) {
+  // 0: vazia, 1: cheia até o RNG, 2: a barra inteira acesa.
+  const [passo, setPasso] = useState<0 | 1 | 2>(0)
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setPasso(2)
+      return
+    }
+    const t = requestAnimationFrame(() => setPasso(1))
+    const fim = window.setTimeout(() => setPasso(2), 1500)
+    return () => {
+      cancelAnimationFrame(t)
+      clearTimeout(fim)
+    }
+  }, [])
+  const rotulo =
+    "flex h-full items-center justify-center overflow-hidden px-3 text-sm font-bold whitespace-nowrap text-[#14121f] not-italic"
+  const segmentos = (
+    <>
+      <i className={cn(rotulo, "bg-rng-bet")} style={{ width: `${bucket}%` }}>
+        1 a {bucket} · aposta {size}
+      </i>
+      {bucket < 100 && (
+        <i className={cn(rotulo, "flex-1 bg-check")}>
+          {bucket + 1} a 100 · check
+        </i>
+      )}
+    </>
+  )
+  const corte = passo === 0 ? 100 : passo === 1 ? 100 - rng : 0
+  return (
+    <div className="mt-5">
+      <div
+        className="relative"
+        role="img"
+        aria-label={`RNG ${rng}. De 1 a ${bucket} aposta ${size ?? ""}, de ${bucket + 1} a 100 dá check`}
+      >
+        <div className="flex h-10 overflow-hidden rounded-full opacity-25">
+          {segmentos}
+        </div>
+        <div
+          className="absolute inset-0 flex h-10 overflow-hidden rounded-full ease-out motion-reduce:transition-none"
+          style={{
+            clipPath: `inset(0 ${corte}% 0 0 round 9999px)`,
+            transition: `clip-path ${passo === 2 ? 450 : 1100}ms ease-out`,
+          }}
+        >
+          {segmentos}
+        </div>
+        <span
+          className="absolute -top-1.5 h-[52px] w-0.5 -translate-x-1/2 rounded bg-white transition-[left] duration-[1100ms] ease-out motion-reduce:transition-none"
+          style={{ left: passo === 0 ? "0%" : `${rng}%` }}
+          aria-hidden="true"
+        />
+      </div>
+    </div>
+  )
+}
+
 export function RngStrip({
   bucket,
   rng,
@@ -86,6 +155,8 @@ export function RngStrip({
   rng?: number
   size?: string
 }) {
+  if (rng !== undefined)
+    return <RngBarra bucket={bucket} rng={rng} size={size} />
   const cells = Array.from({ length: 100 }, (_, i) => i + 1)
   return (
     <div className="mt-4">
