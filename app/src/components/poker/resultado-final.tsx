@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 
 // Nomes de tipo em minúsculas no meio da frase, menos o A HIGH, que fica sempre em maiúsculas.
 export function nomeNaFrase(nome: string): string {
-  return nome.toLowerCase().replace(/a high/g, "A HIGH")
+  return nome.toLowerCase().replace("a high", "A HIGH")
 }
 
 export interface Motivo {

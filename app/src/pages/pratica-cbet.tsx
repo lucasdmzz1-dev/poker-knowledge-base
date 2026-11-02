@@ -93,7 +93,7 @@ export default function PraticaCbet({ onTema }: { onTema: (t: Tema) => void }) {
           rng: 0,
           resp: a,
           esperado: atual.certa,
-          ok: a === atual.certa,
+          ok: a === atual.certa || !!atual.aceita?.includes(a),
         },
       ])
       setResp(a)
@@ -179,6 +179,7 @@ export default function PraticaCbet({ onTema }: { onTema: (t: Tema) => void }) {
               >
                 {[
                   ["10", "10"],
+                  ["20", "20"],
                   ["0", "Todas"],
                 ].map(([v, label]) => (
                   <Label
@@ -230,7 +231,9 @@ export default function PraticaCbet({ onTema }: { onTema: (t: Tema) => void }) {
   }
 
   if (!atual || !board) return null
-  const ok = resp === atual.certa
+  const ok = resp === atual.certa || !!(resp && atual.aceita?.includes(resp))
+  // O que o botão mostra como certo: a ação escolhida, se o instrutor também a aceita.
+  const certaNaTela = ok && resp ? resp : atual.certa
   const ultimo = i === fila.length - 1
   let sequencia = 0
   for (let k = itens.length - 1; k >= 0 && itens[k].ok; k--) sequencia++
@@ -277,7 +280,7 @@ export default function PraticaCbet({ onTema }: { onTema: (t: Tema) => void }) {
             sub={sub}
             tecla={tecla}
             cor={cor}
-            estado={estadoDe(a, resp, atual.certa)}
+            estado={estadoDe(a, resp, certaNaTela)}
             onClick={() => responder(a)}
           />
         ))}
@@ -290,7 +293,10 @@ export default function PraticaCbet({ onTema }: { onTema: (t: Tema) => void }) {
               {ok ? "A ação certa era " : "O certo era "}
               <strong className="text-foreground">
                 {NOME_ACAO[atual.certa]}
-              </strong>{" "}
+              </strong>
+              {ok && resp !== atual.certa && resp && (
+                <> (o {NOME_ACAO[resp]} também vale)</>
+              )}{" "}
               no board{" "}
               <strong className="text-foreground">
                 {nomeNaFrase(board.nome)}
