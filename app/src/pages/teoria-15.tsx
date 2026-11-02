@@ -145,7 +145,7 @@ export default function Teoria15() {
                   </div>
                   <div>
                     {bloco.grupo && (
-                      <p className="pb-1 font-medium">{bloco.grupo}</p>
+                      <p className="pb-2 text-lg font-bold">{bloco.grupo}</p>
                     )}
                     {tipo.buckets
                       .filter((b) => b.grupo === bloco.grupo)
