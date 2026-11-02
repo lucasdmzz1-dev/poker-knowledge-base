@@ -79,7 +79,13 @@ export default function Analise() {
           id={`painel-${aba}`}
           aria-labelledby={`aba-${aba}`}
         >
-          {aba === "leaks" && <LeaksDoMes leaks={leaks} salvar={salvar} />}
+          {aba === "leaks" && (
+            <LeaksDoMes
+              leaks={leaks}
+              salvar={salvar}
+              abrirPainel={() => setAba("painel")}
+            />
+          )}
           {aba === "comparacao" && <Comparacao leaks={leaks} />}
           {aba === "painel" && <PainelSemanal />}
           {aba === "treino" && (

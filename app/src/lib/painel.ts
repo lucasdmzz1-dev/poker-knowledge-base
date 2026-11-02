@@ -1,5 +1,5 @@
 import { novoId, rotuloMes, type Leak } from "@/lib/analise"
-import { readJSON } from "@/lib/storage"
+import { readJSON, writeJSON } from "@/lib/storage"
 
 export type Escopo = "semana" | "mes"
 export type Grupo = "Pré-flop" | "Pós-flop e resultado"
@@ -521,6 +521,40 @@ export function metricaDoLeak(l: Leak): Metrica {
     nota: l.fazer,
     fonte: rotuloMes(l.mes),
   }
+}
+
+export function leakNoPainel(l: Leak): boolean {
+  const id = metricaDoLeak(l).id
+  return metricasDe(lerPainel(), "semana").some((m) => m.id === id)
+}
+
+// Leva um leak do mês para as métricas do ciclo atual do painel semanal.
+export function levarLeak(l: Leak): void {
+  const d = lerPainel()
+  const m = metricaDoLeak(l)
+  const atuais = metricasDe(d, "semana")
+  if (atuais.some((x) => x.id === m.id)) return
+  writeJSON(
+    CHAVE_PAINEL,
+    serializarPainel({
+      ...d,
+      metricasSemana: [...atuais, m],
+      origemSemana: d.origemSemana ?? l.mes,
+    })
+  )
+}
+
+// Tira o leak das métricas atuais; os números já lançados nas semanas ficam.
+export function tirarLeak(l: Leak): void {
+  const d = lerPainel()
+  const id = metricaDoLeak(l).id
+  writeJSON(
+    CHAVE_PAINEL,
+    serializarPainel({
+      ...d,
+      metricasSemana: metricasDe(d, "semana").filter((x) => x.id !== id),
+    })
+  )
 }
 
 // Fecha o ciclo das semanas: guarda métricas e semanas no arquivo e abre um

@@ -17,6 +17,7 @@ import {
   type Fase,
   type Leak,
 } from "@/lib/analise"
+import { leakNoPainel, levarLeak, tirarLeak } from "@/lib/painel"
 import { writeJSON } from "@/lib/storage"
 import { cn } from "@/lib/utils"
 
@@ -35,12 +36,49 @@ export function useLeaks() {
   return { leaks, salvar }
 }
 
+function LevarParaPainel({
+  leak,
+  abrirPainel,
+}: {
+  leak: Leak
+  abrirPainel?: () => void
+}) {
+  const [no, setNo] = useState(() => leakNoPainel(leak))
+  return (
+    <span className="flex flex-wrap items-center gap-2">
+      <Button
+        variant={no ? "outline" : "default"}
+        className="h-9 px-4 font-bold"
+        aria-pressed={no}
+        onClick={() => {
+          if (no) tirarLeak(leak)
+          else levarLeak(leak)
+          setNo(!no)
+        }}
+      >
+        {no ? "No painel semanal · tirar" : "Levar para o painel semanal"}
+      </Button>
+      {no && abrirPainel && (
+        <button
+          type="button"
+          className="cursor-pointer text-primary underline-offset-4 hover:underline"
+          onClick={abrirPainel}
+        >
+          Abrir o painel
+        </button>
+      )}
+    </span>
+  )
+}
+
 function LeaksLista({
   leaks,
   salvar,
+  abrirPainel,
 }: {
   leaks: Leak[]
   salvar: (l: Leak[]) => void
+  abrirPainel?: () => void
 }) {
   const meses = mesesDe(leaks)
   const [escolhido, setEscolhido] = useState<string | null>(null)
@@ -289,7 +327,8 @@ function LeaksLista({
                       </p>
                     </div>
                     {l.fazer && <p className="mt-2 max-w-[70ch]">{l.fazer}</p>}
-                    <div className="mt-3 flex items-center justify-between gap-3 text-sm text-muted-foreground">
+                    <div className="mt-3 flex flex-wrap items-center justify-between gap-3 text-sm text-muted-foreground">
+                      <LevarParaPainel leak={l} abrirPainel={abrirPainel} />
                       <span>{l.fonte ?? "Registrado por você"}</span>
                       <button
                         type="button"
@@ -490,6 +529,7 @@ function Vista<T extends string>({
 export function LeaksDoMes(props: {
   leaks: Leak[]
   salvar: (l: Leak[]) => void
+  abrirPainel?: () => void
 }) {
   const [vista, setVista] = useState<"leaks" | "stats">("stats")
   const mesAtual =
