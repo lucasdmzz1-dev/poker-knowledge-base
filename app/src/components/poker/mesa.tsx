@@ -32,8 +32,9 @@ export function tamanhoBB(fracao: number): string {
   return (Math.round(POTE_BB * fracao * 10) / 10).toString()
 }
 
-function stackNaMesa(pos: Pos, opener: Opener): number {
+function stackNaMesa(pos: Pos, opener: Pos, probe: boolean): number {
   if (pos === opener || pos === "BTN") return STACK_EFETIVO
+  if (probe && pos === "BB") return STACK_EFETIVO
   if (pos === "SB") return STACK - 0.5
   if (pos === "BB") return STACK - 1
   return STACK
@@ -132,9 +133,19 @@ export function BarraAcoes({
   )
 }
 
-function Assento({ pos, opener }: { pos: Pos; opener: Opener }) {
+function Assento({
+  pos,
+  opener,
+  heroPos,
+  probe,
+}: {
+  pos: Pos
+  opener: Pos
+  heroPos: Pos
+  probe: boolean
+}) {
   const [x, y, xm] = POS_TELA[pos]
-  const heroi = pos === "BTN"
+  const heroi = pos === heroPos
   const abriu = pos === opener
   const noPote = heroi || abriu
   return (
@@ -165,7 +176,7 @@ function Assento({ pos, opener }: { pos: Pos; opener: Opener }) {
           {pos}
         </span>
         <span className="text-[clamp(0.58rem,1.2vw,0.85rem)] text-muted-foreground tabular-nums">
-          {stackNaMesa(pos, opener)}
+          {stackNaMesa(pos, opener, probe)}
         </span>
       </div>
       {abriu && (
@@ -183,7 +194,7 @@ function Assento({ pos, opener }: { pos: Pos; opener: Opener }) {
           </span>
         </span>
       )}
-      {heroi && (
+      {pos === "BTN" && (
         <span
           aria-label="Botão do dealer"
           className="absolute top-0 right-full mr-1 grid size-5 place-items-center rounded-full bg-white text-[11px] font-bold text-black"
@@ -203,23 +214,32 @@ export function Mesa({
   mao,
   total,
   sequencia,
+  probe = false,
 }: {
   opener: Opener
   board: string[]
   hero: string[]
-  roll: number
+  roll?: number
   mao: number
   total: number
   sequencia: number
+  // Probe Turn: o herói está no BB e o BTN abriu e deu check.
+  probe?: boolean
 }) {
+  const vilao: Pos = probe ? "BTN" : opener
+  const heroPos: Pos = probe ? "BB" : "BTN"
   const estilo = { "--s": "clamp(40px, 7.2vw, 66px)" } as CSSProperties
   return (
     <div className="mx-auto w-full max-w-[880px]" style={estilo}>
       <div className="mb-2 flex items-center justify-between">
-        <RngPlate
-          value={roll}
-          className="min-w-0 border-[3px] px-3 py-0.5 text-[clamp(1.4rem,3vw,2rem)]"
-        />
+        {roll !== undefined ? (
+          <RngPlate
+            value={roll}
+            className="min-w-0 border-[3px] px-3 py-0.5 text-[clamp(1.4rem,3vw,2rem)]"
+          />
+        ) : (
+          <span />
+        )}
         <div className="flex items-center gap-4 text-sm text-muted-foreground tabular-nums">
           <span className="flex items-center gap-1.5" title="Acertos seguidos">
             <Flame className="size-4" aria-hidden="true" />
@@ -238,7 +258,7 @@ export function Mesa({
       <div
         className="relative mb-5 aspect-[1.25/1] w-full sm:aspect-[2.2/1]"
         role="group"
-        aria-label={`Mesa: herói no BTN contra ${opener}, pote de ${POTE_BB} bb`}
+        aria-label={`Mesa: herói no ${heroPos} contra ${vilao}, pote de ${probe ? 4.5 : POTE_BB} bb`}
       >
         <div
           className="absolute inset-x-[6%] inset-y-[12%] rounded-[999px] border-2 border-felt-line bg-felt/50"
@@ -246,18 +266,31 @@ export function Mesa({
         />
 
         {ORDEM.map((p) => (
-          <Assento key={p} pos={p} opener={opener} />
+          <Assento
+            key={p}
+            pos={p}
+            opener={vilao}
+            heroPos={heroPos}
+            probe={probe}
+          />
         ))}
 
         <div className="absolute top-[47%] left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1.5">
           <Cards codes={board} size="mesa" />
           <p className="text-center text-[clamp(0.75rem,1.6vw,1.05rem)] leading-tight">
             <span className="text-muted-foreground">Pote </span>
-            <b className="tabular-nums">{POTE_BB} bb</b>
+            <b className="tabular-nums">{probe ? 4.5 : POTE_BB} bb</b>
           </p>
         </div>
 
-        <div className="absolute top-[88%] left-[calc(50%+var(--s)/2+8px)] -translate-y-1/2">
+        <div
+          className={cn(
+            "absolute -translate-y-1/2",
+            probe
+              ? "top-1/2 left-[calc(7%+var(--s)/2+8px)] sm:left-[calc(6%+var(--s)/2+8px)]"
+              : "top-[88%] left-[calc(50%+var(--s)/2+8px)]"
+          )}
+        >
           <Cards codes={hero} size="mesaHero" />
         </div>
       </div>

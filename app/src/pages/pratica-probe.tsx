@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Cards } from "@/components/poker/cards"
+import { Mesa } from "@/components/poker/mesa"
 import { mod14, turnById } from "@/data/mod14"
 import {
   ROTULO_TURN,
@@ -102,31 +102,6 @@ function Ficha({
         {acao}
       </span>
     </span>
-  )
-}
-
-function Assento({
-  pos,
-  nome,
-  heroi,
-}: {
-  pos: string
-  nome: string
-  heroi?: boolean
-}) {
-  return (
-    <div className="flex flex-col items-center gap-1">
-      <div
-        className={cn(
-          "grid size-16 place-content-center rounded-full border-2 bg-card text-center leading-tight",
-          heroi ? "border-primary" : "border-b50"
-        )}
-      >
-        <span className="font-bold">{pos}</span>
-        <span className="text-sm text-muted-foreground tabular-nums">38</span>
-      </div>
-      <span className="text-xs text-muted-foreground">{nome}</span>
-    </div>
   )
 }
 
@@ -459,36 +434,15 @@ export default function PraticaProbe({
         <Ficha nome="BB" acao={resp ? NOME_ACAO[resp] : "Tomar ação"} vez />
       </div>
 
-      <div className="mx-auto max-w-[880px]">
-        <div className="mb-2 flex items-center justify-end gap-4 text-sm text-muted-foreground tabular-nums">
-          <span title="Acertos seguidos">Sequência {sequencia}</span>
-          <span title="Progresso do treino">
-            {i + 1} / {fila.length}
-          </span>
-        </div>
-        <div className="mx-auto grid min-h-80 grid-rows-[auto_1fr_auto] justify-items-center rounded-[999px] border-2 border-felt-line bg-felt/50 px-6 py-6">
-          <div className="relative">
-            <Assento pos="BTN" nome="Abriu 2 · check" />
-            <span
-              aria-label="Botão do dealer"
-              className="absolute top-1 right-full mr-2 grid size-5 place-items-center rounded-full bg-white text-[11px] font-bold text-black"
-            >
-              D
-            </span>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-1.5 py-3">
-            <Cards codes={[...turn.flop, turn.turn]} size="mesa" />
-            <p className="text-center">
-              <span className="text-muted-foreground">Pote </span>
-              <b className="tabular-nums">{POTE} bb</b>
-            </p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Assento pos="BB" nome="Você" heroi />
-            <Cards codes={atual.hero} size="mesaHero" />
-          </div>
-        </div>
-      </div>
+      <Mesa
+        probe
+        opener="HJ"
+        board={[...turn.flop, turn.turn]}
+        hero={atual.hero}
+        mao={i + 1}
+        total={fila.length}
+        sequencia={sequencia}
+      />
 
       <div className="mx-auto mt-4 grid max-w-[880px] grid-cols-2 gap-2 sm:grid-cols-5 md:gap-3">
         {ACOES.map(({ a, rotulo, sub, tecla, cor }) => (
