@@ -130,7 +130,7 @@ export default function Teoria15() {
                 {tipo.outrosExemplos?.map((o) => (
                   <div
                     key={o.rotulo}
-                    className="flex flex-col items-start gap-2"
+                    className="mt-6 flex flex-col items-start gap-2"
                   >
                     <Cards codes={o.codes} size="lg" />
                     <span className="text-sm font-medium text-muted-foreground">
