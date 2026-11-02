@@ -330,7 +330,7 @@ export const mod15 = {
       id: "semi-6",
       tipo: "semi",
       board: ["Js", "9h", "6c"],
-      hero: ["Ad", "6h"],
+      hero: ["Ad", "6d"],
       classe: "Terceiro par",
       bucket: 25,
       porque: "Terceiro par vai em 25% no semi conectado.",

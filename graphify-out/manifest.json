@@ -1452,14 +1452,14 @@
     "semantic_hash": ""
   },
   "app/src/data/mod15.ts": {
-    "mtime": 1793642223.616077,
-    "seen": 1793642458.6896088,
-    "ast_hash": "e5fd5d970a865c0ca23702ae69b85bcb",
+    "mtime": 1793647442.0488217,
+    "seen": 1793647603.8793118,
+    "ast_hash": "60ef3b94b5c5c825d60694731d85d3b7",
     "semantic_hash": ""
   },
   "app/src/lib/poker.ts": {
-    "mtime": 1793575912.391101,
-    "seen": 1793614195.0181801,
+    "mtime": 1793646362.8413098,
+    "seen": 1793646423.4269266,
     "ast_hash": "4c019d8c9743ea897248d4af2a130c1b",
     "semantic_hash": ""
   },
@@ -1494,9 +1494,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793642443.3792155,
-    "seen": 1793642458.6977985,
-    "ast_hash": "d5dc9001c52dba50ba8a04fbff8e25b5",
+    "mtime": 1793647442.6513798,
+    "seen": 1793647603.8870103,
+    "ast_hash": "029ae15cf6995187ab4aa870aca1a3ce",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2388,14 +2388,14 @@
     "semantic_hash": ""
   },
   "app/src/data/prat14.ts": {
-    "mtime": 1793580663.2293742,
-    "seen": 1793614195.0181801,
-    "ast_hash": "b1aa40825433ba306ef9f198bc16a604",
+    "mtime": 1793647126.2203894,
+    "seen": 1793647175.9072018,
+    "ast_hash": "2ab5dd4ea612f9b790bd83c76f7d6b4c",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-probe.tsx": {
-    "mtime": 1793642443.3782158,
-    "seen": 1793642458.6977985,
+    "mtime": 1793646362.8436294,
+    "seen": 1793646423.4289272,
     "ast_hash": "1b4846e9b39bbef44767cf28e15a6744",
     "semantic_hash": ""
   },
@@ -2610,21 +2610,21 @@
     "semantic_hash": ""
   },
   "app/src/components/poker/resultado-final.tsx": {
-    "mtime": 1793642443.3752148,
-    "seen": 1793642458.6855807,
+    "mtime": 1793646362.8402853,
+    "seen": 1793646423.4174104,
     "ast_hash": "e4012677ac56fde8d4b3700ca63e6779",
     "semantic_hash": ""
   },
   "app/src/data/prat01.ts": {
-    "mtime": 1793599261.2244349,
-    "seen": 1793614195.0181801,
-    "ast_hash": "21244cbe1b2f153ce32cf9b81928faec",
+    "mtime": 1793646574.9437122,
+    "seen": 1793646604.1739287,
+    "ast_hash": "142e42a35ae8f16842755c0a201866cd",
     "semantic_hash": ""
   },
   "app/src/data/prat02.ts": {
-    "mtime": 1793599761.6567588,
-    "seen": 1793614195.0181801,
-    "ast_hash": "5a31de0c388d90e56a9097219197be77",
+    "mtime": 1793646586.4080184,
+    "seen": 1793646604.1739287,
+    "ast_hash": "05e5a1e1fe9d9a514e07f9cf400bfeb1",
     "semantic_hash": ""
   },
   "app/src/lib/relatos.ts": {
@@ -2634,21 +2634,21 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-cbet.tsx": {
-    "mtime": 1793599866.1195233,
-    "seen": 1793614195.0181801,
-    "ast_hash": "350b21d8e93da61a8c5386563dde4d52",
+    "mtime": 1793646362.8413098,
+    "seen": 1793646423.4289272,
+    "ast_hash": "0984d48cf91b7f73a7f066f7255eb069",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-cbet40.tsx": {
-    "mtime": 1793599866.159678,
-    "seen": 1793614195.0181801,
-    "ast_hash": "a73fc06241e4807a79919fe19c4dff25",
+    "mtime": 1793646362.842629,
+    "seen": 1793646423.4289272,
+    "ast_hash": "e8616151e742ad703193b4b45de224db",
     "semantic_hash": ""
   },
   "docs/Pratica-Novo-Tema.md": {
-    "mtime": 1793599915.8091471,
-    "seen": 1793614195.0181801,
-    "ast_hash": "9766af4ec8544f76944b984bc8a937a8",
+    "mtime": 1793647457.0360565,
+    "seen": 1793647603.9093118,
+    "ast_hash": "3dec5b4360a6eed07ae37109f84c09a1",
     "semantic_hash": ""
   },
   "docs/Pendencias-Teoria-Site.md": {
@@ -2664,15 +2664,21 @@
     "semantic_hash": ""
   },
   "app/src/data/prat05.ts": {
-    "mtime": 1793642443.3762152,
-    "seen": 1793642458.690613,
-    "ast_hash": "cf309e52fd653feb3d3182be79c661f9",
+    "mtime": 1793647061.25121,
+    "seen": 1793647175.9072018,
+    "ast_hash": "e410bf7db4cf6bf96a895b3ae587cf3f",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-oop.tsx": {
-    "mtime": 1793642443.3772154,
-    "seen": 1793642458.6977985,
+    "mtime": 1793646362.842629,
+    "seen": 1793646423.4289272,
     "ast_hash": "33c390ca0fa46abaa7cc325cd604636d",
+    "semantic_hash": ""
+  },
+  "app/src/data/ranges.ts": {
+    "mtime": 1793647453.3805711,
+    "seen": 1793647603.8804684,
+    "ast_hash": "19a7ac3e97a7485b3f6d095fb3bec362",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {
