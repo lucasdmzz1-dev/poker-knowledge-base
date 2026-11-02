@@ -1494,9 +1494,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793595795.3564315,
-    "seen": 1793596871.526563,
-    "ast_hash": "cb86dc7d35344e35d73dfa6238d49cd8",
+    "mtime": 1793598670.0766273,
+    "seen": 1793598724.56147,
+    "ast_hash": "684447c05519dd9cb9859e5ab79d9ff7",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2310,9 +2310,9 @@
     "semantic_hash": ""
   },
   "app/src/components/poker/mesa.tsx": {
-    "mtime": 1793580663.2267694,
-    "seen": 1793596871.526563,
-    "ast_hash": "350add279ced4a8461820e521477fc20",
+    "mtime": 1793598670.2116573,
+    "seen": 1793598724.5467021,
+    "ast_hash": "68c3d24955fa3b11abc03d86ebcacb7a",
     "semantic_hash": ""
   },
   "app/src/components/analise/hud.tsx": {
@@ -2370,9 +2370,9 @@
     "semantic_hash": ""
   },
   "docs/Site-Poker-KB.md": {
-    "mtime": 1793596852.5233667,
-    "seen": 1793596871.526563,
-    "ast_hash": "8bfa51884e416c166ab44774a51d9be3",
+    "mtime": 1793598709.8567853,
+    "seen": 1793598724.5852306,
+    "ast_hash": "6c4a23467c6142baee23da7c136d31b2",
     "semantic_hash": ""
   },
   "app/src/data/mod14.ts": {
@@ -2394,9 +2394,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-probe.tsx": {
-    "mtime": 1793595795.40187,
-    "seen": 1793596871.526563,
-    "ast_hash": "a504b615b95c88d6364e0fbf8f797fd9",
+    "mtime": 1793598670.1580145,
+    "seen": 1793598724.56147,
+    "ast_hash": "7d5a9b7aaa878ac488baf4a0ac2d0c2c",
     "semantic_hash": ""
   },
   "app/src/components/teoria/blocos.tsx": {
@@ -2589,6 +2589,24 @@
     "mtime": 1793595794.9302614,
     "seen": 1793596871.526563,
     "ast_hash": "21180e58a9cdbdf50d39f6b19343eefc",
+    "semantic_hash": ""
+  },
+  "app/src/components/poker/resultado-final.tsx": {
+    "mtime": 1793598700.5368176,
+    "seen": 1793598724.5480638,
+    "ast_hash": "773e9dac2eb6468537c6ac11096c61a5",
+    "semantic_hash": ""
+  },
+  "app/src/data/prat01.ts": {
+    "mtime": 1793598670.1759243,
+    "seen": 1793598724.5535984,
+    "ast_hash": "4d9aafffd851a27cca6d9f14289aa125",
+    "semantic_hash": ""
+  },
+  "app/src/pages/pratica-cbet.tsx": {
+    "mtime": 1793598670.110896,
+    "seen": 1793598724.56147,
+    "ast_hash": "51c8536b48b4f5bce57dc92d3cd05591",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

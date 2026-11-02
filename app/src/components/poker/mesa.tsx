@@ -43,7 +43,17 @@ function lugarDe(pos: Pos, probe: boolean): Pos {
   return LUGARES[k]
 }
 
-function stackNaMesa(pos: Pos, opener: Pos, probe: boolean): number {
+function stackNaMesa(
+  pos: Pos,
+  opener: Pos,
+  probe: boolean,
+  cbet: boolean
+): number {
+  // C-bet short stack: 20bb, BTN abriu 2 e o BB pagou.
+  if (cbet) {
+    if (pos === "BTN" || pos === "BB") return 18
+    return pos === "SB" ? 19.5 : 20
+  }
   if (pos === opener || pos === "BTN") return STACK_EFETIVO
   if (probe && pos === "BB") return STACK_EFETIVO
   if (pos === "SB") return STACK - 0.5
@@ -149,11 +159,13 @@ function Assento({
   opener,
   heroPos,
   probe,
+  cbet,
 }: {
   pos: Pos
   opener: Pos
   heroPos: Pos
   probe: boolean
+  cbet: boolean
 }) {
   const [x, y, xm] = POS_TELA[lugarDe(pos, probe)]
   const heroi = pos === heroPos
@@ -187,7 +199,7 @@ function Assento({
           {pos}
         </span>
         <span className="text-[clamp(0.58rem,1.2vw,0.85rem)] text-muted-foreground tabular-nums">
-          {stackNaMesa(pos, opener, probe)}
+          {stackNaMesa(pos, opener, probe, cbet)}
         </span>
       </div>
       {abriu && (
@@ -198,7 +210,7 @@ function Assento({
           )}
         >
           <span className="rounded-full bg-b50 px-2 py-0.5 text-[clamp(0.6rem,1.05vw,0.78rem)] font-bold text-[#1a0907]">
-            Abriu {ABERTURA}
+            {cbet ? "Pagou" : "Abriu"} {ABERTURA}
           </span>
           <span className="rounded-full bg-secondary px-2 py-0.5 text-[clamp(0.6rem,1.05vw,0.78rem)] font-medium">
             Check
@@ -226,6 +238,7 @@ export function Mesa({
   total,
   sequencia,
   probe = false,
+  cbet = false,
 }: {
   opener: Opener
   board: string[]
@@ -236,8 +249,10 @@ export function Mesa({
   sequencia: number
   // Probe Turn: o herói está no BB e o BTN abriu e deu check.
   probe?: boolean
+  // C-bet IP short stack: o herói abriu do BTN e o BB pagou, com 20bb.
+  cbet?: boolean
 }) {
-  const vilao: Pos = probe ? "BTN" : opener
+  const vilao: Pos = probe ? "BTN" : cbet ? "BB" : opener
   const heroPos: Pos = probe ? "BB" : "BTN"
   const estilo = { "--s": "clamp(40px, 7.2vw, 66px)" } as CSSProperties
   return (
@@ -269,7 +284,7 @@ export function Mesa({
       <div
         className="relative mb-5 aspect-[1.25/1] w-full sm:aspect-[2.2/1]"
         role="group"
-        aria-label={`Mesa: herói no ${heroPos} contra ${vilao}, pote de ${probe ? 4.5 : POTE_BB} bb`}
+        aria-label={`Mesa: herói no ${heroPos} contra ${vilao}, pote de ${probe || cbet ? 4.5 : POTE_BB} bb`}
       >
         <div
           className="absolute inset-x-[6%] inset-y-[12%] rounded-[999px] border-2 border-felt-line bg-felt/50"
@@ -283,6 +298,7 @@ export function Mesa({
             opener={vilao}
             heroPos={heroPos}
             probe={probe}
+            cbet={cbet}
           />
         ))}
 
@@ -290,7 +306,7 @@ export function Mesa({
           <Cards codes={board} size="mesa" />
           <p className="text-center text-[clamp(0.75rem,1.6vw,1.05rem)] leading-tight">
             <span className="text-muted-foreground">Pote </span>
-            <b className="tabular-nums">{probe ? 4.5 : POTE_BB} bb</b>
+            <b className="tabular-nums">{probe || cbet ? 4.5 : POTE_BB} bb</b>
           </p>
         </div>
 

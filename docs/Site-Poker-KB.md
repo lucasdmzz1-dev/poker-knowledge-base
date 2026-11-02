@@ -96,5 +96,8 @@ Todo tema novo da Prática usa os mesmos blocos, para ficar igual aos outros:
 - `components/poker/mesa.tsx`: a mesa com as 8 posições, as foldadas apagadas, o herói embaixo no centro e o dealer no BTN.
 - `components/poker/cards.tsx`: `RngStrip` com `rng` é a barra que enche até o número sorteado (roxo na aposta, azul no check, sem vermelho). Sem `rng` é a barra da Teoria.
 - O resultado do treino mostra o tipo de board que mais errou, o desempenho por tipo e o tipo de erro.
+- `components/poker/resultado-final.tsx`: `ResultadoFinal`, a tela final padrão (nota, onde mais errou, desempenho por tipo e tipo de erro).
 - Botão "Voltar à seleção" no topo do jogo e seletor de tema na seleção (`SeletorTema`).
 - Textos em minúsculas, percentuais e tipo de board em negrito.
+
+Temas da Prática hoje: Bet vs Missed C-Bet (`pratica.tsx`), Probe Turn (`pratica-probe.tsx`, `data/prat14.ts`) e C-Bet IP Short Stack (`pratica-cbet.tsx`, `data/prat01.ts`, mesa com `cbet`).

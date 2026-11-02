@@ -18,6 +18,7 @@ import {
   tamanhoBB,
   type Opener,
 } from "@/components/poker/mesa"
+import PraticaCbet from "@/pages/pratica-cbet"
 import PraticaProbe, { SeletorTema, type Tema } from "@/pages/pratica-probe"
 import { mod15, tipoById, type Situacao, type TipoId } from "@/data/mod15"
 import {
@@ -528,9 +529,7 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
 
 export default function Pratica() {
   const [tema, setTema] = useState<Tema>("bet")
-  return tema === "bet" ? (
-    <PraticaBet onTema={setTema} />
-  ) : (
-    <PraticaProbe onTema={setTema} />
-  )
+  if (tema === "probe") return <PraticaProbe onTema={setTema} />
+  if (tema === "cbet") return <PraticaCbet onTema={setTema} />
+  return <PraticaBet onTema={setTema} />
 }
