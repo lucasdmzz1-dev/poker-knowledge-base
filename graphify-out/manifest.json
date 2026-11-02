@@ -2586,9 +2586,9 @@
     "semantic_hash": ""
   },
   "app/src/components/analise/leaks.tsx": {
-    "mtime": 1793585743.757819,
-    "seen": 1793585785.961439,
-    "ast_hash": "f0d116d35bbf6563427c087c4b2514e8",
+    "mtime": 1793585920.58936,
+    "seen": 1793585964.988651,
+    "ast_hash": "17c708fdc748e5f1ff3c40a868d4a356",
     "semantic_hash": ""
   },
   "app/src/components/analise/painel.tsx": {
@@ -2634,9 +2634,21 @@
     "semantic_hash": ""
   },
   "docs/Site-Poker-KB.md": {
-    "mtime": 1793585770.6054826,
-    "seen": 1793585785.9981806,
-    "ast_hash": "ec47859c2d1a4cd0d8a5aed2c36cea4c",
+    "mtime": 1793585950.5113852,
+    "seen": 1793585965.0264618,
+    "ast_hash": "b7f6e0926033cd14326690b093d53d93",
+    "semantic_hash": ""
+  },
+  "app/src/components/analise/leitor.tsx": {
+    "mtime": 1793585920.508723,
+    "seen": 1793585964.988651,
+    "ast_hash": "cd7f87abbfb6455ec5bbd7f48d4e6292",
+    "semantic_hash": ""
+  },
+  "app/src/lib/leitura.ts": {
+    "mtime": 1793585920.4770482,
+    "seen": 1793585964.9932404,
+    "ast_hash": "674bfd21fefcc5d9c96ba2d7de800a4c",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

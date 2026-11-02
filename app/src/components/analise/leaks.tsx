@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ComparacaoHud, ExploradorHud } from "@/components/analise/hud"
 import { lerHud, leaksDasStats } from "@/lib/hud"
+import { LeitorDePrints } from "@/components/analise/leitor"
 import { PrintsDoMes } from "@/components/analise/prints"
 import { Secao, CAMPO } from "@/components/analise/secao"
 import {
@@ -685,12 +686,20 @@ export function LeaksDoMes(props: {
   abrirPainel?: () => void
 }) {
   const [vista, setVista] = useState<"leaks" | "stats">("stats")
-  const hud = lerHud()
-  const mesAtual =
+  const [versaoHud, setVersaoHud] = useState(0)
+  // versaoHud força reler o HUD depois que a leitura dos prints é aplicada
+  const hud = useMemo(
+    () => lerHud(),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [versaoHud]
+  )
+  const ultimoHud =
     hud
       .map((m) => m.mes)
       .sort()
       .pop() ?? new Date().toISOString().slice(0, 7)
+  const [mesPrints, setMesPrints] = useState<string | null>(null)
+  const mesAtual = mesPrints || ultimoHud
   const [comAmarelas, setComAmarelas] = useState(false)
   const doHud = hud.find((m) => m.mes === mesAtual)
   const novos = doHud
@@ -720,8 +729,21 @@ export function LeaksDoMes(props: {
             titulo="Prints e stats do mês"
             lead="Coloque aqui os prints do mês. Com eles, as stats do HUD são preenchidas por seção, com cores pela meta. Busque pelo nome, filtre as fora da meta e use a estrela para levar uma stat para a comparação."
           >
+            <label className="mb-4 flex items-center gap-2 text-sm text-muted-foreground">
+              Mês dos prints
+              <input
+                type="month"
+                value={mesAtual}
+                onChange={(e) => setMesPrints(e.target.value)}
+                className={cn(CAMPO, "w-auto")}
+              />
+            </label>
             <PrintsDoMes mes={mesAtual} />
-            <ExploradorHud />
+            <LeitorDePrints
+              mes={mesAtual}
+              aoAplicar={() => setVersaoHud((v) => v + 1)}
+            />
+            <ExploradorHud key={versaoHud} />
           </Secao>
           <div className="mt-8 flex flex-col items-center gap-3">
             <label className="flex items-center gap-2 text-sm text-muted-foreground">
