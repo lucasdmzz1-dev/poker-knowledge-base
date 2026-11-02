@@ -106,9 +106,11 @@ function RngBarra({
     "flex h-full items-center justify-center overflow-hidden px-3 text-sm font-bold whitespace-nowrap text-[#14121f] not-italic"
   const segmentos = (
     <>
-      <i className={cn(rotulo, "bg-rng-bet")} style={{ width: `${bucket}%` }}>
-        1 a {bucket} · aposta {size}
-      </i>
+      {bucket > 0 && (
+        <i className={cn(rotulo, "bg-rng-bet")} style={{ width: `${bucket}%` }}>
+          1 a {bucket} · aposta {size}
+        </i>
+      )}
       {bucket < 100 && (
         <i className={cn(rotulo, "flex-1 bg-check")}>
           {bucket + 1} a 100 · check
