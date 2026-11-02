@@ -43,7 +43,11 @@ function janelas(): number[][] {
 
 // Backdoor de sequência: três cartas dentro de uma janela de cinco, com ao menos uma
 // carta da mão, sem ser um draw direto.
-function temBDSD(board: string[], hero: string[], jaTemDraw: boolean): boolean {
+export function temBDSD(
+  board: string[],
+  hero: string[],
+  jaTemDraw: boolean
+): boolean {
   if (jaTemDraw) return false
   const todas = [...board, ...hero].map(rk)
   const heroR = hero.map(rk)

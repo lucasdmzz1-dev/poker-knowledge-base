@@ -1494,9 +1494,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793662094.3649063,
-    "seen": 1793662130.6764092,
-    "ast_hash": "478828381bab8e5c6eb5c7faf67e0d2f",
+    "mtime": 1793662739.173711,
+    "seen": 1793662758.1463835,
+    "ast_hash": "c0aeea1050dcfb4b247333795d88e07d",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2394,9 +2394,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-probe.tsx": {
-    "mtime": 1793662095.8310878,
-    "seen": 1793662130.6764092,
-    "ast_hash": "b10955a9c8bdabf20782fc2b12ce3159",
+    "mtime": 1793662739.1722198,
+    "seen": 1793662758.1463835,
+    "ast_hash": "a915d66be94fb458ef0e92b47d6d75ef",
     "semantic_hash": ""
   },
   "app/src/components/teoria/blocos.tsx": {
@@ -2634,20 +2634,20 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-cbet.tsx": {
-    "mtime": 1793662094.9574094,
-    "seen": 1793662130.6764092,
-    "ast_hash": "a650feadccc5c6fcf1429fd88f3598e1",
+    "mtime": 1793662739.1707149,
+    "seen": 1793662758.1463835,
+    "ast_hash": "1c20561cf17b9dece181f9488a660a1e",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-cbet40.tsx": {
-    "mtime": 1793662095.2434025,
-    "seen": 1793662130.6764092,
-    "ast_hash": "a9390891520fef3d4c8a0b37d3f8e1ef",
+    "mtime": 1793662739.1712177,
+    "seen": 1793662758.1463835,
+    "ast_hash": "c735880f06f46608b28a4b0477fa7abf",
     "semantic_hash": ""
   },
   "docs/Pratica-Novo-Tema.md": {
-    "mtime": 1793662116.2966566,
-    "seen": 1793662130.6969767,
+    "mtime": 1793662739.174729,
+    "seen": 1793662758.1708164,
     "ast_hash": "126870e2a8e400f182bdbc789b68fa9f",
     "semantic_hash": ""
   },
@@ -2670,9 +2670,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-oop.tsx": {
-    "mtime": 1793662095.5386045,
-    "seen": 1793662130.6764092,
-    "ast_hash": "69f670aa92c55a0f4399e3c218c971f7",
+    "mtime": 1793662739.1722198,
+    "seen": 1793662758.1463835,
+    "ast_hash": "6a7f338b572224d0eadc1e296868cf50",
     "semantic_hash": ""
   },
   "app/src/data/ranges.ts": {
@@ -2682,15 +2682,15 @@
     "semantic_hash": ""
   },
   "app/src/data/prat15.ts": {
-    "mtime": 1793657565.9962957,
-    "seen": 1793657722.515696,
-    "ast_hash": "e63ebd5ac36b58ed468246c849f85609",
+    "mtime": 1793662739.925909,
+    "seen": 1793662758.1402338,
+    "ast_hash": "d2bf0e37755ec1dfc2bdde163b05268c",
     "semantic_hash": ""
   },
   "app/src/data/prat17.ts": {
-    "mtime": 1793661512.9094474,
-    "seen": 1793661533.2372577,
-    "ast_hash": "b95217c2c4280a14c212e5eba0be731e",
+    "mtime": 1793662739.9284139,
+    "seen": 1793662758.1402338,
+    "ast_hash": "4e5490cb984c6548ff44defec96654be",
     "semantic_hash": ""
   },
   "app/src/lib/uso.ts": {
@@ -2706,15 +2706,15 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-bb.tsx": {
-    "mtime": 1793662094.6735256,
-    "seen": 1793662130.6764092,
-    "ast_hash": "3fc0e2256e38c91e94400ee8e5787ef9",
+    "mtime": 1793662739.1694803,
+    "seen": 1793662758.1463835,
+    "ast_hash": "0420371d1aeaf4dc6d77329afc2aac50",
     "semantic_hash": ""
   },
   "app/src/components/poker/destacar.tsx": {
-    "mtime": 1793662093.7432566,
-    "seen": 1793662130.662964,
-    "ast_hash": "5fe5fb9bdb0490f1d6b224d383d2056f",
+    "mtime": 1793662739.1664615,
+    "seen": 1793662758.1352558,
+    "ast_hash": "4b6658505a2847e947b4c75e84a6e14b",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {
