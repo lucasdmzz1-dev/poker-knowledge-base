@@ -21,7 +21,11 @@ export function Layout() {
   return (
     <div className="min-h-svh">
       <header className="sticky top-3 z-20 flex justify-center px-3 pt-3">
-        <div className="grid h-12 w-full max-w-[760px] grid-cols-[1fr_auto_1fr] items-center gap-2 rounded-full border bg-card/80 py-1.5 pr-1.5 pl-4 backdrop-blur-md">
+        <div className="relative isolate grid h-12 w-full max-w-[760px] grid-cols-[1fr_auto_1fr] items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] py-1.5 pr-1.5 pl-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.28),inset_0_-1px_0_rgba(255,255,255,0.06),0_10px_36px_rgba(0,0,0,0.5)] backdrop-blur-xl backdrop-saturate-[1.8]">
+          <span
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-gradient-to-b from-white/[0.14] via-transparent to-white/[0.04]"
+          />
           <Link to="/" className="flex w-fit items-center gap-2.5 font-bold">
             <span className="grid size-7 place-items-center rounded-lg bg-primary text-xs text-primary-foreground">
               PK
@@ -37,9 +41,9 @@ export function Layout() {
                 end={l.end}
                 className={({ isActive }) =>
                   cn(
-                    "rounded-full px-3.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors duration-150 hover:text-foreground max-[520px]:px-2 max-[520px]:text-[13px]",
+                    "rounded-full border border-transparent px-3.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors duration-150 hover:text-foreground max-[520px]:px-2 max-[520px]:text-[13px]",
                     isActive &&
-                      "bg-primary text-primary-foreground hover:text-primary-foreground"
+                      "border border-primary/40 bg-primary/25 text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_0_18px_rgba(143,240,168,0.28)] backdrop-blur-md hover:text-primary"
                   )
                 }
               >
@@ -52,7 +56,7 @@ export function Layout() {
             <Popover>
               <PopoverTrigger
                 aria-label="Abrir o seu perfil"
-                className="grid size-9 cursor-pointer place-items-center rounded-full border bg-secondary text-sm font-bold transition-[color,border-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] hover:border-primary active:scale-[0.97]"
+                className="grid size-9 cursor-pointer place-items-center rounded-full border border-white/20 bg-white/10 text-sm font-bold shadow-[inset_0_1px_0_rgba(255,255,255,0.3)] backdrop-blur-md transition-[color,border-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] hover:border-primary active:scale-[0.97]"
               >
                 {iniciais}
               </PopoverTrigger>
