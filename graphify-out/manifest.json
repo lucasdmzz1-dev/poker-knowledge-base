@@ -2388,9 +2388,9 @@
     "semantic_hash": ""
   },
   "app/src/data/prat14.ts": {
-    "mtime": 1793580663.2293742,
-    "seen": 1793614195.0181801,
-    "ast_hash": "b1aa40825433ba306ef9f198bc16a604",
+    "mtime": 1793647126.2203894,
+    "seen": 1793647175.9072018,
+    "ast_hash": "2ab5dd4ea612f9b790bd83c76f7d6b4c",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-probe.tsx": {
@@ -2646,9 +2646,9 @@
     "semantic_hash": ""
   },
   "docs/Pratica-Novo-Tema.md": {
-    "mtime": 1793646586.487559,
-    "seen": 1793646604.2029028,
-    "ast_hash": "057d2c4d1514d97228ed88df8bbef479",
+    "mtime": 1793647158.4506555,
+    "seen": 1793647175.938257,
+    "ast_hash": "a6ab8c5af63cb896870cf500e36b5b15",
     "semantic_hash": ""
   },
   "docs/Pendencias-Teoria-Site.md": {
@@ -2664,9 +2664,9 @@
     "semantic_hash": ""
   },
   "app/src/data/prat05.ts": {
-    "mtime": 1793646526.2374465,
-    "seen": 1793646604.1739287,
-    "ast_hash": "d31875c844bb59ebac92ae5123dbe394",
+    "mtime": 1793647061.25121,
+    "seen": 1793647175.9072018,
+    "ast_hash": "e410bf7db4cf6bf96a895b3ae587cf3f",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-oop.tsx": {
@@ -2676,9 +2676,9 @@
     "semantic_hash": ""
   },
   "app/src/data/ranges.ts": {
-    "mtime": 1793646526.1485193,
-    "seen": 1793646604.1739287,
-    "ast_hash": "10ca4f0c8b78a812babb9210238dadd6",
+    "mtime": 1793647092.0725944,
+    "seen": 1793647175.9072018,
+    "ast_hash": "9b72a83232c8740b6d565a3c5d76dc44",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {
