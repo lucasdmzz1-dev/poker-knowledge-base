@@ -1494,9 +1494,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793651217.5363975,
-    "seen": 1793651260.4358766,
-    "ast_hash": "aa9d41ec55bf80500ad899138909c0bc",
+    "mtime": 1793653514.9414322,
+    "seen": 1793653534.907729,
+    "ast_hash": "19055f0f76b18253cd650af4baa452d0",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2370,9 +2370,9 @@
     "semantic_hash": ""
   },
   "docs/Site-Poker-KB.md": {
-    "mtime": 1793651246.5769813,
-    "seen": 1793651260.4570277,
-    "ast_hash": "b327b3f31df461dc69cc37e1244915ff",
+    "mtime": 1793653514.9424338,
+    "seen": 1793653534.9297833,
+    "ast_hash": "89296ecb6cb2c003ba926c08f17bfd1f",
     "semantic_hash": ""
   },
   "app/src/data/mod14.ts": {
@@ -2395,7 +2395,7 @@
   },
   "app/src/pages/pratica-probe.tsx": {
     "mtime": 1793651217.8270805,
-    "seen": 1793651260.4358766,
+    "seen": 1793653534.907729,
     "ast_hash": "a6a5d6f69337189b68ee0aad872134e9",
     "semantic_hash": ""
   },
@@ -2635,19 +2635,19 @@
   },
   "app/src/pages/pratica-cbet.tsx": {
     "mtime": 1793651218.1247935,
-    "seen": 1793651260.4358766,
+    "seen": 1793653534.907729,
     "ast_hash": "a31f67dec08403650742aea24996e98e",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-cbet40.tsx": {
     "mtime": 1793651218.4057918,
-    "seen": 1793651260.4358766,
+    "seen": 1793653534.907729,
     "ast_hash": "399d9e49fdf3f5dedc345ec5b491e561",
     "semantic_hash": ""
   },
   "docs/Pratica-Novo-Tema.md": {
     "mtime": 1793651246.5713918,
-    "seen": 1793651260.4570277,
+    "seen": 1793653534.9297833,
     "ast_hash": "3dec5b4360a6eed07ae37109f84c09a1",
     "semantic_hash": ""
   },
@@ -2671,14 +2671,20 @@
   },
   "app/src/pages/pratica-oop.tsx": {
     "mtime": 1793651218.7002985,
-    "seen": 1793651260.4358766,
+    "seen": 1793653534.907729,
     "ast_hash": "b8d90de609ea1dd60868cc2128b05130",
     "semantic_hash": ""
   },
   "app/src/data/ranges.ts": {
-    "mtime": 1793651208.0531778,
-    "seen": 1793651260.428856,
-    "ast_hash": "c4897b9b207904a95279c84a43abd50d",
+    "mtime": 1793653514.9401376,
+    "seen": 1793653534.901209,
+    "ast_hash": "67f96c61001d06199c570c03a8a6151b",
+    "semantic_hash": ""
+  },
+  "app/src/data/prat15.ts": {
+    "mtime": 1793653514.9391284,
+    "seen": 1793653534.901209,
+    "ast_hash": "a4f43f718f6f90a14d9fdd4164b40c65",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {
