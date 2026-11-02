@@ -7,6 +7,7 @@ import {
 } from "@/components/poker/resposta"
 import { RelatarErro } from "@/components/poker/relatar-erro"
 import { ListaErros } from "@/components/poker/resultado-final"
+import { destacar } from "@/components/poker/destacar"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -92,18 +93,6 @@ const ACOES: {
     cor: "bg-[#a63a3a] hover:bg-[#b84a4a]",
   },
 ]
-
-function negritoPct(t: string): ReactNode {
-  return t.split(/(\d+%)/).map((parte, k) =>
-    /^\d+%$/.test(parte) ? (
-      <strong key={k} className="text-foreground">
-        {parte}
-      </strong>
-    ) : (
-      parte
-    )
-  )
-}
 
 function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
   const [fase, setFase] = useState<Fase>("setup")
@@ -564,7 +553,7 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
             </p>
             <p className="max-w-[64ch] text-lg text-muted-foreground">
               <strong className="text-foreground">{atual.classe}</strong> no
-              flop {tipoNegrito}: {negritoPct(atual.porque)}
+              flop {tipoNegrito}: {destacar(atual.porque)}
             </p>
             <RngStrip bucket={atual.bucket} rng={roll} size={tipoAtual.size} />
             <div className="mt-4 flex flex-wrap items-start justify-between gap-3">

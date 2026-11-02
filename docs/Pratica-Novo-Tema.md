@@ -40,7 +40,7 @@ Roteiro usado no Probe Turn (módulo 14) e no C-Bet IP Short Stack (módulo 01).
 
 ## 5. Convenções
 
-- Texto em português, em minúsculas no meio da frase, percentuais e tipo de board em negrito.
+- Texto em português, em minúsculas no meio da frase, percentuais e tipo de board em negrito (use `destacar()` de `components/poker/destacar.tsx` nas frases de explicação: ele põe em negrito os percentuais e os sizes B25, B40 e B70).
 - Título "CERTO" ou "ERRADO" centralizado. O A HIGH sempre em maiúsculas (use `nomeNaFrase`).
 - Nomes dos temas em maiúsculas no seletor.
 - Barra do RNG sem vermelho nem verde, para não lembrar acerto e erro.

@@ -7,6 +7,7 @@ import {
 } from "@/components/poker/resposta"
 import { ResultadoFinal, nomeNaFrase } from "@/components/poker/resultado-final"
 import { RelatarErro } from "@/components/poker/relatar-erro"
+import { destacar } from "@/components/poker/destacar"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
@@ -339,10 +340,10 @@ export default function PraticaCbet40({
             </p>
             <p className="max-w-[64ch] text-lg text-muted-foreground">
               <strong className="text-foreground">{atual.classe}</strong>:{" "}
-              {atual.porque}
+              {destacar(atual.porque)}
             </p>
             <p className="max-w-[64ch] text-muted-foreground">
-              {board.estrategia}
+              {destacar(board.estrategia)}
             </p>
             <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
               <Button
