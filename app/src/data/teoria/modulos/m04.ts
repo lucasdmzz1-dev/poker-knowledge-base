@@ -12,12 +12,12 @@ const m04: ModuloTeoria = {
       tipo: "lista",
       titulo: "Em 30 segundos",
       itens: [
-        "O river não é analisado sozinho: a decisão é consequência do que você construiu no flop e, principalmente, no turn.",
-        "A decisão de apostar ou desistir não vem só da força da mão, mas da composição do range e da história da mão.",
+        "River como consequência: a decisão vem do que você construiu no flop e, principalmente, no turn.",
+        "Força da mão não basta: apostar ou desistir depende da composição do range e da história da mão.",
         "Turn atacado com construção polar: no river você só continua blefando quando os draws completam.",
         "Turn atacado com construção linear: você continua blefando nos rivers blank.",
-        "Defendendo, o MDF é a referência para o range: contra aposta de pote, 50%.",
-        "Ataque e defesa se estudam juntos.",
+        "Defesa pelo MDF: o MDF é a referência para o range. Contra aposta de pote, 50%.",
+        "Ataque e defesa: se estudam juntos.",
       ],
     },
     {
@@ -33,11 +33,13 @@ const m04: ModuloTeoria = {
             "O turn foi atacado com uma construção polarizada. O objetivo é representar naturalmente os draws que chegaram ao river.",
           blocos: [
             {
+              cartas: ["Ks", "9s", "4d", "2c", "7s"],
+              rotulo: "O flush completa no river",
               acoes: [
                 {
-                  nome: "Bluff",
-                  cor: "verde",
-                  texto: "Só quando os draws completam.",
+                  nome: "Bet de bluff",
+                  cor: "amarelo",
+                  texto: "Só quando os draws completam, como neste river.",
                 },
               ],
             },
@@ -50,11 +52,13 @@ const m04: ModuloTeoria = {
             "O turn foi atacado com uma construção linear. O objetivo é continuar pressionando o range médio do adversário quando a carta do river não altera a distribuição de equity.",
           blocos: [
             {
+              cartas: ["Ks", "9d", "4c", "2h", "3d"],
+              rotulo: "River blank",
               acoes: [
                 {
-                  nome: "Bluff",
-                  cor: "verde",
-                  texto: "Nos rivers blank.",
+                  nome: "Bet de bluff",
+                  cor: "amarelo",
+                  texto: "Nos rivers blank, como este.",
                 },
               ],
             },
@@ -65,7 +69,8 @@ const m04: ModuloTeoria = {
     {
       tipo: "abas",
       titulo: "Defesa contra o third barrel",
-      intro: "A defesa é construída street por street.",
+      intro:
+        "A defesa é construída street por street. O mesmo board do flop ao river:",
       abas: [
         {
           id: "flop",
@@ -73,8 +78,19 @@ const m04: ModuloTeoria = {
           criterio: "Contra c-bet de cerca de 30% do pote.",
           blocos: [
             {
+              cartas: ["Qs", "8s", "3c"],
+              rotulo: "Q-8-3 com dois de espadas",
               acoes: [
-                { nome: "Continua", cor: "verde", texto: "Todos os pares." },
+                {
+                  nome: "Call",
+                  cor: "branco",
+                  texto: "Todos os pares.",
+                  maos: [
+                    { nome: "Top pair", cartas: ["Qh", "Th"] },
+                    { nome: "Second pair", cartas: ["8c", "7c"] },
+                    { nome: "Third pair", cartas: ["Ad", "3d"] },
+                  ],
+                },
               ],
             },
           ],
@@ -85,11 +101,18 @@ const m04: ModuloTeoria = {
           criterio: "O turn não muda a interação do board.",
           blocos: [
             {
+              cartas: ["Qs", "8s", "3c"],
+              turn: "2h",
+              rotulo: "Turn 2: blank",
               acoes: [
                 {
-                  nome: "Continua",
-                  cor: "verde",
+                  nome: "Call",
+                  cor: "branco",
                   texto: "Second pair ou melhor.",
+                  maos: [
+                    { nome: "Top pair", cartas: ["Qh", "Th"] },
+                    { nome: "Second pair", cartas: ["8c", "7c"] },
+                  ],
                 },
               ],
             },
@@ -101,12 +124,19 @@ const m04: ModuloTeoria = {
           criterio: "O turn conecta fortemente com o board.",
           blocos: [
             {
+              cartas: ["Qs", "8s", "3c"],
+              turn: "Td",
+              rotulo: "Turn T: dinâmico",
               acoes: [
                 {
-                  nome: "Continua",
-                  cor: "verde",
+                  nome: "Call",
+                  cor: "branco",
                   texto:
                     "Top pair, e second pair ou third pair com redraw relevante.",
+                  maos: [
+                    { nome: "Top pair + duas pontas", cartas: ["Qh", "Jh"] },
+                    { nome: "Second pair + broca", cartas: ["Tc", "9c"] },
+                  ],
                 },
               ],
             },
@@ -118,8 +148,18 @@ const m04: ModuloTeoria = {
           criterio: "A defesa no river depende do tamanho da aposta.",
           blocos: [
             {
+              cartas: ["Qs", "8s", "3c", "2h", "5d"],
+              rotulo: "River 5: o flush draw não chegou",
               acoes: [
-                { nome: "Defende", cor: "verde", texto: "Todos os top pairs." },
+                {
+                  nome: "Call",
+                  cor: "branco",
+                  texto: "Todos os top pairs.",
+                  maos: [
+                    { nome: "Top pair", cartas: ["Qh", "Th"] },
+                    { nome: "Top pair fraco", cartas: ["Qd", "9d"] },
+                  ],
+                },
               ],
             },
           ],
@@ -128,15 +168,25 @@ const m04: ModuloTeoria = {
           id: "riverpote",
           nome: "River contra pote ou mais",
           criterio:
-            "Com aposta grande, a defesa fica mais restrita: você protege o range sem pagar com mãos que ajudam o blefe dele.",
+            "Com aposta grande, a defesa fica mais restrita: você protege o range sem pagar com mãos que ajudam o blefe dele. Aqui os blefes naturais dele são os flush draws de espadas que não chegaram.",
           blocos: [
             {
+              cartas: ["Qs", "8s", "3c", "2h", "5d"],
+              rotulo: "River 5: o flush draw não chegou",
               acoes: [
                 {
-                  nome: "Defende",
-                  cor: "verde",
+                  nome: "Call",
+                  cor: "branco",
                   texto:
                     "Os top pairs que não bloqueiam os blefes naturais do adversário.",
+                  maos: [{ nome: "Top pair sem ♠", cartas: ["Qh", "Jh"] }],
+                },
+                {
+                  nome: "Cuidado",
+                  cor: "vermelho",
+                  texto:
+                    "Top pair que bloqueia os blefes dele deixa menos blefes no range que você enfrenta.",
+                  maos: [{ nome: "Top pair com A♠", cartas: ["As", "Qd"] }],
                 },
               ],
             },
@@ -165,12 +215,12 @@ const m04: ModuloTeoria = {
       tipo: "lista",
       titulo: "Regras de bolso",
       itens: [
-        "O river é consequência da estratégia do turn.",
-        "Range polar blefa só quando os draws completam. Range linear blefa nos rivers blank.",
-        "Defesa no flop: todos os pares. Turn blank: second pair ou melhor. Turn dinâmico: top pair e pares com redraw.",
-        "River contra B70: todos os top pairs. Contra pote ou mais: só os que não bloqueiam os blefes.",
-        "O MDF é a referência para o range defensivo, e a defesa muda com o tamanho da aposta.",
-        "Ataque e defesa se estudam em conjunto.",
+        "River: é consequência da estratégia do turn.",
+        "Bluff no river: range polar blefa só quando os draws completam. Range linear blefa nos rivers blank.",
+        "Defesa até o turn: no flop, todos os pares. Turn blank, second pair ou melhor. Turn dinâmico, top pair e pares com redraw.",
+        "Defesa no river: contra B70, todos os top pairs. Contra pote ou mais, só os que não bloqueiam os blefes.",
+        "MDF: é a referência para o range defensivo, e a defesa muda com o tamanho da aposta.",
+        "Ataque e defesa: se estudam em conjunto.",
       ],
     },
   ],

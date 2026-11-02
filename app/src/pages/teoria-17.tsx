@@ -12,6 +12,7 @@ import {
   Intro,
   ITEM,
   Lista,
+  ListaPassos,
   Nota,
   RotuloBoard,
   Secao,
@@ -49,7 +50,11 @@ export default function Teoria17() {
 
   return (
     <main>
-      <PageHeader title={mod17.nome} lead={mod17.spot} topo={<Voltar />}>
+      <PageHeader
+        title={mod17.nome}
+        lead={mod17.spot.toUpperCase()}
+        topo={<Voltar />}
+      >
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <Badge variant="outline">Flop</Badge>
           <Badge variant="outline">Em posição</Badge>
@@ -59,7 +64,7 @@ export default function Teoria17() {
       </PageHeader>
       <Secoes>
         <Secao titulo="Em 30 segundos">
-          <Lista itens={mod17.em30} />
+          <ListaPassos itens={mod17.em30} />
         </Secao>
 
         <Secao titulo="Por que este pote é diferente">

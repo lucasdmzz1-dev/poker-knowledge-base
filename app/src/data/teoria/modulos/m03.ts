@@ -12,13 +12,13 @@ const m03: ModuloTeoria = {
       tipo: "lista",
       titulo: "Em 30 segundos",
       itens: [
-        "Não analise o second barrel sem considerar a c-bet do flop: o range do turn nasce da construção do flop.",
-        "Quem pagou a c-bet chega ao turn com mais mãos conectadas e mais equity, mas você mantém mais mãos fortes e mais nuts.",
-        "Com vantagem de nuts, a estratégia é mais polarizada. Quando o board conecta o range do vilão, ela é mais linear.",
+        "C-bet e second barrel juntos: não analise o second barrel sem considerar a c-bet do flop. O range do turn nasce da construção do flop.",
+        "Range de quem pagou: chega ao turn com mais mãos conectadas e mais equity, mas você mantém mais mãos fortes e mais nuts.",
+        "Polarizado ou linear: com vantagem de nuts, a estratégia é mais polarizada. Quando o board conecta o range do vilão, ela é mais linear.",
         "Turn blank: polarize, com size alto, valor forte e bluffs selecionados.",
         "Turn que conecta: mais equity, mais frequência e size médio, para combater equity com equity.",
         "Turn de carta alta: expanda o valor com size médio, para apostar novos top pairs e os melhores second pairs.",
-        "Top pairs fracos precisam existir no check, para capturar bluffs no river.",
+        "Top pairs fracos no check: precisam existir, para capturar bluffs no river.",
       ],
     },
     {
@@ -54,13 +54,27 @@ const m03: ModuloTeoria = {
             "O turn não altera as interações do board. O objetivo é extrair o máximo das mãos fortes.",
           blocos: [
             {
+              cartas: ["Ks", "8d", "3c"],
+              turn: "2h",
+              rotulo: "K-8-3 rainbow, turn 2",
               etiqueta: { texto: "Size alto", cor: "verde" },
               acoes: [
                 {
-                  nome: "Estratégia",
+                  nome: "Bet por valor",
                   cor: "verde",
                   texto:
-                    "Mais polarizada, com menor frequência e size maior. Valor forte e bluffs selecionados.",
+                    "Estratégia mais polarizada, com menor frequência e size maior. Valor forte.",
+                  maos: [
+                    { nome: "Top pair top kicker", cartas: ["As", "Kd"] },
+                    { nome: "Trinca", cartas: ["8s", "8h"] },
+                  ],
+                },
+                {
+                  nome: "Check",
+                  cor: "branco",
+                  texto:
+                    "Top pairs fracos precisam existir no check, para capturar bluffs no river.",
+                  maos: [{ nome: "Top pair fraco", cartas: ["Kc", "9c"] }],
                 },
               ],
             },
@@ -73,13 +87,21 @@ const m03: ModuloTeoria = {
             "O turn melhora muitos draws do vilão. O objetivo é combater equity com equity.",
           blocos: [
             {
+              cartas: ["Js", "9d", "4c"],
+              turn: "Th",
+              rotulo: "J-9-4 rainbow, turn T",
               etiqueta: { texto: "Size médio", cor: "vermelho" },
               acoes: [
                 {
-                  nome: "Estratégia",
+                  nome: "Bet",
                   cor: "verde",
                   texto:
-                    "Mais linear, com mais mãos com equity e mais frequência.",
+                    "Estratégia mais linear, com mais mãos com equity e mais frequência.",
+                  maos: [
+                    { nome: "Sequência", cartas: ["Kh", "Qh"] },
+                    { nome: "Top pair + duas pontas", cartas: ["Qs", "Jd"] },
+                    { nome: "Top pair", cartas: ["Ad", "Jc"] },
+                  ],
                 },
               ],
             },
@@ -92,12 +114,19 @@ const m03: ModuloTeoria = {
             "Aparece uma carta alta, como o ás ou o rei. O objetivo é apostar novos top pairs e os melhores second pairs.",
           blocos: [
             {
+              cartas: ["9s", "6d", "3c"],
+              turn: "Ah",
+              rotulo: "9-6-3 rainbow, turn A",
               etiqueta: { texto: "Size médio", cor: "vermelho" },
               acoes: [
                 {
-                  nome: "Estratégia",
+                  nome: "Bet por valor",
                   cor: "verde",
                   texto: "Expanda o valor.",
+                  maos: [
+                    { nome: "Novo top pair", cartas: ["As", "Qd"] },
+                    { nome: "Melhor second pair", cartas: ["Th", "Tc"] },
+                  ],
                 },
               ],
             },
@@ -106,27 +135,41 @@ const m03: ModuloTeoria = {
       ],
     },
     {
-      tipo: "lista",
+      tipo: "cartoes",
       titulo: "Os grupos de turn",
-      intro: "Cada grupo tem estratégia, size e construção de range próprios:",
+      intro:
+        "Cada grupo tem estratégia, size e construção de range próprios. Um exemplo de cada:",
+      colunas: 3,
       itens: [
-        "Turn blank.",
-        "Turn de carta alta.",
-        "Turn conectado.",
-        "Flush completando em carta alta.",
-        "Flush completando em carta baixa.",
+        { titulo: "Turn blank", cartas: ["Ks", "8d", "3c"], turn: "2h" },
+        {
+          titulo: "Turn de carta alta",
+          cartas: ["9s", "6d", "3c"],
+          turn: "Ah",
+        },
+        { titulo: "Turn conectado", cartas: ["Js", "9d", "4c"], turn: "Th" },
+        {
+          titulo: "Flush completando em carta alta",
+          cartas: ["Ks", "8s", "3d"],
+          turn: "Qs",
+        },
+        {
+          titulo: "Flush completando em carta baixa",
+          cartas: ["Ks", "8s", "3d"],
+          turn: "5s",
+        },
       ],
     },
     {
       tipo: "lista",
-      titulo: "Regras do módulo",
+      titulo: "Regras de bolso",
       itens: [
-        "Não analise o second barrel sem considerar a c-bet inicial.",
+        "C-bet inicial: não analise o second barrel sem considerar a c-bet.",
         "Turn blank: polarização, size alto, valor forte e bluffs selecionados.",
         "Turn conectado: mais equity, mais frequência, size médio.",
-        "Top pairs fracos precisam existir no check, para capturar bluffs no river.",
-        "Em posição não há incentivo para sizes pequenos sem motivo: o IP realiza equity dando check.",
-        "Uma textura, uma estratégia, um size principal.",
+        "Top pairs fracos no check: precisam existir, para capturar bluffs no river.",
+        "Sizes pequenos: em posição não há incentivo para usar sem motivo, porque o IP realiza equity dando check.",
+        "Uma textura: uma estratégia e um size principal.",
       ],
     },
     {

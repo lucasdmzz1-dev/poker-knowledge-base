@@ -1,4 +1,32 @@
-import type { ModuloTeoria } from "@/data/teoria/tipos"
+import type { CardCode } from "@/data/mod15"
+import type { AssentoT, MesaT, ModuloTeoria } from "@/data/teoria/tipos"
+
+// Mesa do pote a três: o EP (sentado no UTG1) abre, o BTN paga e o BB paga.
+// O pote do flop é 6,5bb (2 + 2 + 2 + 0,5 do SB) e cada um fica com 38bb.
+function mesa(
+  board: CardCode[],
+  pote: number,
+  acoes: { ep?: string; btn?: string; bb?: string },
+  heroi: "EP" | "BTN" | "BB",
+  legenda: string,
+  stack = 38
+): MesaT {
+  const assentos: AssentoT[] = [
+    {
+      pos: "UTG1",
+      nome: "EP",
+      stack,
+      acao: acoes.ep,
+      heroi: heroi === "EP",
+    },
+    { pos: "BTN", stack, acao: acoes.btn, heroi: heroi === "BTN" },
+    { pos: "BB", stack, acao: acoes.bb, heroi: heroi === "BB" },
+  ]
+  return { assentos, board, pote, legenda }
+}
+
+const SECO: CardCode[] = ["Ks", "7d", "2c"]
+const CARREGADO: CardCode[] = ["Js", "Ts", "8d"]
 
 const m10: ModuloTeoria = {
   slug: "multiway",
@@ -12,18 +40,19 @@ const m10: ModuloTeoria = {
       tipo: "lista",
       titulo: "Em 30 segundos",
       itens: [
-        "Em pote a três, o range de quem aposta não está capado: ele ainda carrega overpairs, trincas e dois pares. A frequência média de c-bet do field é de cerca de 35%.",
-        "Fora de posição, nunca é range bet: use o split de c-bet OOP.",
+        "Range de quem aposta não está capado: em pote a três ele ainda carrega overpairs, trincas e dois pares. A frequência média de c-bet do field é de cerca de 35%.",
+        "Fora de posição: nunca é range bet. Use o split de c-bet OOP.",
         "Não overfolde: foldar top pair, second pair e mãos sem overcard contra qualquer agressão gera EV negativo.",
-        "Contra check do agressor pré-flop, o BB não dá check-raise: o range de check dele não está capado.",
-        "Quando o BB lidera o turn (lead), o size é B25. Só existe lead no multiway.",
-        "Se o flop foi check-check-check, não existe probe turn do BB.",
+        "BB contra o check do agressor: não dá check-raise, porque o range de check do agressor pré-flop não está capado.",
+        "Lead do BB no turn: o size é B25. Só existe lead no multiway.",
+        "Flop check-check-check: não existe probe turn do BB.",
       ],
     },
     {
       tipo: "abas",
       titulo: "O que fazer em cada situação",
-      intro: "Escolha a sua posição no pote a três.",
+      intro:
+        "Escolha a sua posição no pote a três. Cada situação mostra a mesa como no replayer, e as cartas mostram um exemplo de cada grupo de mãos.",
       abas: [
         {
           id: "oop",
@@ -32,41 +61,109 @@ const m10: ModuloTeoria = {
             "O EP abre, o BTN paga e o BB paga. No flop, use o split de c-bet OOP, nunca range bet.",
           blocos: [
             {
-              grupo: "Flop: o BTN aposta e o BB paga",
+              grupo: "Flop seco: você dá check, o BTN aposta e o BB paga",
+              mesa: mesa(
+                SECO,
+                9.7,
+                { ep: "Check", btn: "Bet 1,6", bb: "Call" },
+                "EP",
+                "K-7-2 rainbow. A ação está com você."
+              ),
               acoes: [
                 {
-                  nome: "Board seco",
+                  nome: "Check-raise",
                   cor: "vermelho",
                   texto:
-                    "Check-raise com tudo que vai continuar: qualquer par do board ou blockers com BDFD + BDST viram check-raise ou fold, sem check-call no meio.",
-                },
-                {
-                  nome: "Board carregado",
-                  cor: "vermelho",
-                  texto:
-                    "Check-raise com os melhores top pairs e os super draws. O resto que quer realizar equity (TP fracos, second pair + BDFD, bons draws) vai de call.",
+                    "Board seco: check-raise com tudo que vai continuar. Qualquer par do board ou blockers com BDFD + BDST viram check-raise ou fold, sem check-call no meio.",
+                  maos: [
+                    { nome: "Par do board", cartas: ["7h", "6h"] },
+                    { nome: "Blocker + BDFD + BDST", cartas: ["Ad", "5d"] },
+                  ],
                 },
               ],
             },
             {
-              grupo: "Turn",
+              grupo: "Flop carregado: você dá check, o BTN aposta e o BB paga",
+              mesa: mesa(
+                CARREGADO,
+                9.7,
+                { ep: "Check", btn: "Bet 1,6", bb: "Call" },
+                "EP",
+                "J-T-8 com dois de espadas. A ação está com você."
+              ),
               acoes: [
                 {
-                  nome: "Dinâmico",
-                  cor: "verde",
-                  texto: "B40, com os melhores second pairs ou melhor.",
-                },
-                {
-                  nome: "Blank",
-                  cor: "verde",
-                  texto:
-                    "B100, só com os 3 melhores top pairs ou melhor. Aqui o EP ainda tem a maioria das mãos fortes, então o objetivo é extrair.",
-                },
-                {
-                  nome: "Blefe",
+                  nome: "Check-raise",
                   cor: "vermelho",
                   texto:
+                    "Board carregado: check-raise com os melhores top pairs e os super draws.",
+                  maos: [
+                    { nome: "Melhor top pair", cartas: ["Ah", "Jd"] },
+                    { nome: "Super draw", cartas: ["As", "Qs"] },
+                  ],
+                },
+                {
+                  nome: "Call",
+                  cor: "branco",
+                  texto:
+                    "O resto que quer realizar equity: TP fracos, second pair + BDFD e bons draws.",
+                  maos: [
+                    { nome: "Second pair + BDFD", cartas: ["Td", "9d"] },
+                    { nome: "Bom draw", cartas: ["Kh", "Qh"] },
+                  ],
+                },
+              ],
+            },
+            {
+              grupo: "Turn blank: você apostou o flop e os dois pagaram",
+              mesa: mesa(
+                [...SECO, "3h"],
+                22.6,
+                { ep: "Bet 11,3" },
+                "EP",
+                "K-7-2, turn 3: blank.",
+                36.4
+              ),
+              acoes: [
+                {
+                  nome: "Bet por valor",
+                  cor: "verde",
+                  texto:
+                    "Blank: B100, só com os 3 melhores top pairs ou melhor. Aqui o EP ainda tem a maioria das mãos fortes, então o objetivo é extrair.",
+                  maos: [
+                    { nome: "Top pair", cartas: ["Ah", "Kd"] },
+                    { nome: "Trinca", cartas: ["7h", "7c"] },
+                  ],
+                },
+              ],
+            },
+            {
+              grupo: "Turn dinâmico: você apostou o flop e os dois pagaram",
+              mesa: mesa(
+                [...SECO, "8d"],
+                15.8,
+                { ep: "Bet 4,5" },
+                "EP",
+                "K-7-2, turn 8 de ouros: dinâmico.",
+                36.4
+              ),
+              acoes: [
+                {
+                  nome: "Bet por valor",
+                  cor: "verde",
+                  texto:
+                    "Dinâmico: B40, com os melhores second pairs ou melhor.",
+                  maos: [
+                    { nome: "Top pair", cartas: ["Kh", "Qc"] },
+                    { nome: "Second pair", cartas: ["Ac", "8c"] },
+                  ],
+                },
+                {
+                  nome: "Bet de bluff",
+                  cor: "amarelo",
+                  texto:
                     "Equity direta (broca, duas pontas, flush draw) com blockers que incluam pelo menos uma overcard ao top pair.",
+                  maos: [{ nome: "Flush draw + A", cartas: ["Ad", "5d"] }],
                 },
               ],
             },
@@ -80,13 +177,25 @@ const m10: ModuloTeoria = {
             "O EP abre, você paga e o BB paga. No flop, use o split de bet-vs-missed, com B25 como padrão.",
           blocos: [
             {
-              grupo: "Flop: o EP aposta",
+              grupo: "Flop: o BB dá check e o EP aposta",
+              mesa: mesa(
+                SECO,
+                8.1,
+                { ep: "Bet 1,6", bb: "Check" },
+                "BTN",
+                "K-7-2 rainbow. A ação está com você."
+              ),
               acoes: [
                 {
-                  nome: "Continua",
-                  cor: "verde",
+                  nome: "Call",
+                  cor: "branco",
                   texto:
                     "Qualquer par do board, pocket pairs e overcard sobre o second pair ou o terceiro par. Sem overcard sobre nenhum par, a mão é marginal.",
+                  maos: [
+                    { nome: "Par do board", cartas: ["7h", "6h"] },
+                    { nome: "Pocket pair", cartas: ["5h", "5c"] },
+                    { nome: "Third pair + overcard", cartas: ["Ah", "2h"] },
+                  ],
                 },
                 {
                   nome: "Board carregado",
@@ -97,29 +206,52 @@ const m10: ModuloTeoria = {
               ],
             },
             {
-              grupo: "Flop: check-raise do EP",
+              grupo: "Flop: você aposta e o EP dá check-raise",
+              mesa: mesa(
+                CARREGADO,
+                13.9,
+                { ep: "Check-raise 5,8", btn: "Bet 1,6", bb: "Fold" },
+                "BTN",
+                "J-T-8 com dois de espadas. A ação está com você."
+              ),
               acoes: [
                 {
-                  nome: "Não overfolde",
-                  cor: "verde",
+                  nome: "Call",
+                  cor: "branco",
                   texto:
-                    "Mãos com backdoor pagam, pares do board pagam, K-J e Q-x com backdoor pagam. Só folda o que não tem redraw para o nuts nem equity direta.",
+                    "Não overfolde: mãos com backdoor pagam, pares do board pagam, K-J e Q-x com backdoor pagam. Só folda o que não tem redraw para o nuts nem equity direta.",
+                  maos: [
+                    { nome: "K-J", cartas: ["Kh", "Jc"] },
+                    { nome: "Par do board", cartas: ["8h", "7h"] },
+                    { nome: "Q-x + backdoor", cartas: ["Qd", "5d"] },
+                  ],
                 },
               ],
             },
             {
-              grupo: "Turn",
+              grupo: "Turn blank: o EP dá check de novo",
+              mesa: mesa(
+                [...SECO, "3h"],
+                11.1,
+                { ep: "Check", bb: "Check", btn: "Bet 4,6" },
+                "BTN",
+                "Flop K-7-2 em check, turn 3: blank."
+              ),
               acoes: [
                 {
-                  nome: "Dinâmico",
-                  cor: "verde",
-                  texto: "B70, com os melhores top pairs ou melhor.",
-                },
-                {
-                  nome: "Blank",
+                  nome: "Bet por valor",
                   cor: "verde",
                   texto:
-                    "B70, com mãos que ganham do second pair: os top pairs mais fracos que deram check no flop e os melhores second pairs.",
+                    "Blank: B70, com mãos que ganham do second pair. Os top pairs mais fracos que deram check no flop e os melhores second pairs.",
+                  maos: [
+                    { nome: "Top pair fraco", cartas: ["Kc", "9c"] },
+                    { nome: "Melhor second pair", cartas: ["Ah", "7h"] },
+                  ],
+                },
+                {
+                  nome: "Turn dinâmico",
+                  cor: "verde",
+                  texto: "B70, com os melhores top pairs ou melhor.",
                 },
               ],
             },
@@ -132,24 +264,21 @@ const m10: ModuloTeoria = {
             "O EP abre, o BTN paga e você paga. A regra mais importante: não existe check-raise quando o agressor pré-flop dá check.",
           blocos: [
             {
-              grupo: "Flop",
+              grupo: "Flop: você dá check, o EP dá check e o BTN aposta",
+              mesa: mesa(
+                SECO,
+                8.1,
+                { bb: "Check", ep: "Check", btn: "Bet 1,6" },
+                "BB",
+                "K-7-2 rainbow. A ação volta para você."
+              ),
               acoes: [
                 {
-                  nome: "EP dá check",
+                  nome: "Call",
                   cor: "branco",
                   texto:
-                    "Sem check-raise: o range de check do EP ainda tem overpairs, trincas e dois pares.",
-                },
-                {
-                  nome: "EP aposta e o IP paga",
-                  cor: "vermelho",
-                  texto:
-                    "O check-raise volta a existir, e você joga como se fosse heads-up contra o agressor.",
-                },
-                {
-                  nome: "Board seco",
-                  cor: "verde",
-                  texto: "Nunca folde par do board nem equity direta.",
+                    "Sem check-raise: o range de check do EP ainda tem overpairs, trincas e dois pares. Em board seco, nunca folde par do board nem equity direta.",
+                  maos: [{ nome: "Par do board", cartas: ["7h", "5h"] }],
                 },
                 {
                   nome: "Board carregado",
@@ -157,33 +286,64 @@ const m10: ModuloTeoria = {
                   texto:
                     "Third pair ou draws que não vão para o nuts precisam de BDFD para continuar.",
                 },
+                {
+                  nome: "EP aposta e o BTN paga",
+                  cor: "vermelho",
+                  texto:
+                    "O check-raise volta a existir, e você joga como se fosse heads-up contra o agressor.",
+                },
               ],
             },
             {
-              grupo: "Turn: lead depois do bet-vs-missed",
+              grupo: "Turn blank: lead depois do bet-vs-missed",
+              mesa: mesa(
+                [...SECO, "3h"],
+                14.1,
+                { bb: "Bet 2,8" },
+                "BB",
+                "No flop, o BTN apostou e você e o EP pagaram. Turn 3: blank.",
+                36.4
+              ),
               acoes: [
                 {
-                  nome: "Blank",
+                  nome: "Lead B25",
                   cor: "verde",
                   texto:
-                    "Lead em B25: os melhores top pairs, alguns dois pares, equilibrando com a trinca, e o second pair sem overcard.",
+                    "Os melhores top pairs, alguns dois pares, equilibrando com a trinca, e o second pair sem overcard.",
+                  maos: [
+                    { nome: "Melhor top pair", cartas: ["Kh", "Qh"] },
+                    { nome: "Dois pares", cartas: ["Kc", "7c"] },
+                    { nome: "Second pair sem over", cartas: ["7h", "6h"] },
+                  ],
                 },
                 {
-                  nome: "Dinâmico",
+                  nome: "Lead no dinâmico",
                   cor: "verde",
                   texto:
-                    "Lead em B25: os melhores top pairs e qualquer par que conecte com o board.",
+                    "Em turn dinâmico, lead em B25 com os melhores top pairs e qualquer par que conecte com o board.",
                 },
               ],
             },
             {
               grupo: "Turn: o agressor aposta",
+              mesa: mesa(
+                [...SECO, "3h"],
+                20.3,
+                { bb: "Check", ep: "Bet 4,5", btn: "Call" },
+                "BB",
+                "Turn 3: o EP aposta, o BTN paga e a ação volta para você.",
+                36.4
+              ),
               acoes: [
                 {
                   nome: "Check-raise",
                   cor: "vermelho",
                   texto:
                     "Com os melhores top pairs ou melhor e os combo draws.",
+                  maos: [
+                    { nome: "Melhor top pair", cartas: ["Kh", "Qh"] },
+                    { nome: "Dois pares", cartas: ["Kc", "7c"] },
+                  ],
                 },
               ],
             },
@@ -276,12 +436,12 @@ const m10: ModuloTeoria = {
       tipo: "lista",
       titulo: "Regras de bolso",
       itens: [
-        "Nunca range bet OOP no multiway: use o split.",
-        "Não overfolde contra agressão: o range de quem aposta não está capado.",
-        "O BB não dá check-raise contra o check do agressor pré-flop.",
-        "O lead do BB no turn existe só no multiway, em B25.",
+        "OOP no multiway: nunca range bet. Use o split.",
+        "Contra agressão: não overfolde, porque o range de quem aposta não está capado.",
+        "BB contra o check do agressor pré-flop: sem check-raise.",
+        "Lead do BB no turn: existe só no multiway, em B25.",
         "Check-check-check no flop: sem probe turn.",
-        "Turn blank como agressor OOP: B100 com os melhores top pairs. Dinâmico: B40.",
+        "Turn como agressor OOP: blank em B100 com os melhores top pairs. Dinâmico em B40.",
       ],
     },
   ],

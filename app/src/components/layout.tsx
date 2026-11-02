@@ -43,7 +43,7 @@ export function Layout() {
                   cn(
                     "rounded-full border border-transparent px-3.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors duration-150 hover:text-foreground max-[520px]:px-2 max-[520px]:text-[13px]",
                     isActive &&
-                      "border border-primary/40 bg-primary/25 text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_0_18px_rgba(143,240,168,0.28)] backdrop-blur-md hover:text-primary"
+                      "border border-primary/40 bg-primary/25 text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] backdrop-blur-md hover:text-primary"
                   )
                 }
               >

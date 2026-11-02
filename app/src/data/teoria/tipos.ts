@@ -2,7 +2,7 @@ import type { CardCode } from "@/data/mod15"
 
 // Cores das etiquetas de size e dos nomes de ação. Cada módulo escolhe a sua.
 export type CorEtiqueta = "claro" | "vermelho" | "verde" | "branco" | "amarelo"
-export type CorAcao = "verde" | "branco" | "vermelho"
+export type CorAcao = "verde" | "branco" | "vermelho" | "amarelo"
 
 export interface Etiq {
   texto: string
@@ -30,9 +30,44 @@ export interface AcaoT {
   maos?: MaoEx[]
 }
 
+// Board de exemplo: flop e, se houver, turn e river.
+export interface BoardT {
+  cartas: CardCode[]
+  turn?: CardCode
+  river?: CardCode
+  rotulo?: string
+}
+
+// Item de lista com mãos de exemplo embaixo do texto.
+export interface ItemListaT {
+  texto: string
+  maos?: MaoEx[]
+}
+
+// Assento da mesa no formato do replayer.
+export interface AssentoT {
+  pos: string
+  // Nome mostrado no assento, quando difere da posição (EP no lugar de UTG1).
+  nome?: string
+  stack: number
+  acao?: string
+  heroi?: boolean
+  fora?: boolean
+}
+
+export interface MesaT {
+  assentos: AssentoT[]
+  board: CardCode[]
+  heroi?: CardCode[]
+  pote: number
+  legenda?: string
+}
+
 // Um board com as suas faixas ou ações. Sem `cartas`, a aba não tem board.
+// Com `mesa`, mostra a mesa do replayer no lugar do board.
 export interface BlocoT {
   grupo?: string
+  mesa?: MesaT
   rotulo?: string
   cartas?: CardCode[]
   turn?: CardCode
@@ -55,6 +90,8 @@ export interface CartaoT {
   texto?: string
   textos?: string[]
   cartas?: CardCode[]
+  turn?: CardCode
+  maos?: MaoEx[]
 }
 
 export interface BoardRefT {
@@ -69,7 +106,8 @@ export type SecaoT =
       tipo: "lista"
       titulo: string
       intro?: string
-      itens: string[]
+      itens: (string | ItemListaT)[]
+      board?: BoardT
       // negativo para erros, positivo para regras; sem tom, itens numerados.
       tom?: "neutro" | "negativo" | "positivo"
     }

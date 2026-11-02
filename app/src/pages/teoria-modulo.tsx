@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Cards, PlayingCard, RngStrip } from "@/components/poker/cards"
 import {
+  BoardExemplo,
   Etiqueta,
   Exemplo,
   Exemplos,
@@ -26,6 +27,7 @@ import {
   Voltar,
 } from "@/components/teoria/blocos"
 import { IcmRanges } from "@/components/teoria/icm-ranges"
+import { MesaTeoria } from "@/components/teoria/mesa-teoria"
 import { Rico } from "@/components/teoria/rico"
 import { moduloPorSlug } from "@/data/teoria/registro"
 import type {
@@ -52,6 +54,18 @@ const COR_ACAO: Record<CorAcao, string> = {
   verde: "text-primary",
   branco: "text-foreground",
   vermelho: "text-b50",
+  amarelo: "text-amber-300",
+}
+
+// A cor da ação sai do nome, para ficar igual em todos os módulos:
+// valor em verde, bluff em amarelo, check e call em branco, check-raise em vermelho.
+function corDaAcao(a: AcaoT): CorAcao {
+  const n = a.nome.toLowerCase()
+  if (/check-raise|^xr/.test(n)) return "vermelho"
+  if (/bluff|blefe/.test(n)) return "amarelo"
+  if (/^check|call|paga/.test(n)) return "branco"
+  if (/valor|value|^bet|aposta|3bet|4bet|shove/.test(n)) return "verde"
+  return a.cor
 }
 
 function Etq({ e }: { e: Etiq }) {
@@ -76,14 +90,18 @@ function Acoes({ acoes }: { acoes: AcaoT[] }) {
           key={a.nome}
           className="grid gap-2 border-t py-3 md:grid-cols-[9rem_minmax(0,1fr)] md:gap-x-4"
         >
-          <span className={cn("text-lg font-bold uppercase", COR_ACAO[a.cor])}>
+          <span
+            className={cn(
+              "text-lg font-bold uppercase",
+              COR_ACAO[corDaAcao(a)]
+            )}
+          >
             {a.nome}
           </span>
-          {a.maos && a.maos.length > 0 ? (
-            <ListaMaos maos={a.maos} />
-          ) : (
-            <TextoAcao texto={a.texto ?? ""} />
-          )}
+          <div className="grid gap-3">
+            {a.texto && <TextoAcao texto={a.texto} />}
+            {a.maos && a.maos.length > 0 && <ListaMaos maos={a.maos} />}
+          </div>
         </div>
       ))}
     </>
@@ -128,9 +146,18 @@ function Abas({ abas }: { abas: AbaT[] }) {
                 b.cartas && "md:grid-cols-[minmax(0,320px)_minmax(0,1fr)]"
               )}
             >
+              {b.mesa && b.grupo && (
+                <p className="text-center text-xl font-bold uppercase">
+                  {b.grupo}
+                </p>
+              )}
+              {b.mesa && <MesaTeoria mesa={b.mesa} />}
               {b.cartas && (
                 <div className="flex flex-col items-start gap-4">
-                  <Cards codes={b.cartas} size="lg" />
+                  <Cards
+                    codes={b.cartas}
+                    size={b.cartas.length > 3 ? "md" : "lg"}
+                  />
                   {b.turn && (
                     <div className="flex items-center gap-3">
                       <PlayingCard code={b.turn} size="lg" />
@@ -142,14 +169,17 @@ function Abas({ abas }: { abas: AbaT[] }) {
                 </div>
               )}
               <div>
-                {b.grupo && <p className="pb-2 text-lg font-bold">{b.grupo}</p>}
+                {b.grupo && !b.mesa && (
+                  <p className="pb-2 text-lg font-bold">{b.grupo}</p>
+                )}
                 {b.faixas?.map((f) => (
                   <Faixa key={`${f.p}-${f.texto}`} p={f.p}>
-                    {f.maos && f.maos.length > 0 ? (
-                      <ListaMaos maos={f.maos} />
-                    ) : (
+                    <div className="grid gap-3">
                       <TextoAcao texto={f.texto} />
-                    )}
+                      {f.maos && f.maos.length > 0 && (
+                        <ListaMaos maos={f.maos} />
+                      )}
+                    </div>
                   </Faixa>
                 ))}
                 {b.acoes && <Acoes acoes={b.acoes} />}
@@ -199,9 +229,13 @@ function Conteudo({ s }: { s: SecaoT }) {
         <>
           {s.intro && <Intro>{s.intro}</Intro>}
           {s.titulo === "Em 30 segundos" ? (
-            <ListaPassos itens={s.itens} />
+            <ListaPassos itens={s.itens} board={s.board} />
           ) : (
-            <Lista itens={s.itens} tom={s.tom ?? tomDoTitulo(s.titulo)} />
+            <Lista
+              itens={s.itens}
+              board={s.board}
+              tom={s.tom ?? tomDoTitulo(s.titulo)}
+            />
           )}
         </>
       )
@@ -227,7 +261,13 @@ function Conteudo({ s }: { s: SecaoT }) {
                     {c.titulo}
                   </TituloMini>
                 </div>
-                {c.cartas && <Cards codes={c.cartas} size="sm" />}
+                {c.cartas && (
+                  <BoardExemplo
+                    board={{ cartas: c.cartas, turn: c.turn }}
+                    size="sm"
+                    centro={false}
+                  />
+                )}
                 {c.texto && (
                   <TextoMini>
                     <Rico>{c.texto}</Rico>
@@ -247,6 +287,7 @@ function Conteudo({ s }: { s: SecaoT }) {
                     ))}
                   </ul>
                 )}
+                {c.maos && c.maos.length > 0 && <ListaMaos maos={c.maos} />}
               </Card>
             ))}
           </div>
@@ -322,7 +363,11 @@ export default function TeoriaModulo() {
 
   return (
     <main>
-      <PageHeader title={mod.nome} lead={mod.spot} topo={<Voltar />}>
+      <PageHeader
+        title={mod.nome}
+        lead={mod.spot.toUpperCase()}
+        topo={<Voltar />}
+      >
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           {mod.tags.map((t) => (
             <Badge key={t} variant="outline">

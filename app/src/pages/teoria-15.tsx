@@ -12,6 +12,7 @@ import {
   Intro,
   ITEM,
   Lista,
+  ListaPassos,
   Nota,
   RotuloBoard,
   Secao,
@@ -50,7 +51,11 @@ export default function Teoria15() {
 
   return (
     <main>
-      <PageHeader title={mod15.nome} lead={mod15.spot} topo={<Voltar />}>
+      <PageHeader
+        title={mod15.nome}
+        lead={mod15.spot.toUpperCase()}
+        topo={<Voltar />}
+      >
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <Badge variant="outline">Flop</Badge>
           <Badge variant="outline">Em posição</Badge>
@@ -60,7 +65,7 @@ export default function Teoria15() {
       </PageHeader>
       <Secoes>
         <Secao titulo="Em 30 segundos">
-          <Lista itens={mod15.em30} />
+          <ListaPassos itens={mod15.em30} />
         </Secao>
 
         <Secao titulo="Os cinco tipos de flop">

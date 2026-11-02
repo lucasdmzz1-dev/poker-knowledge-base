@@ -21,7 +21,7 @@ const AUTO = new RegExp(
   [
     "\\b(?:B\\d{2,3}(?:-B?\\d{2,3})?)\\b",
     "\\b\\d+(?:[,.]\\d+)?\\s?(?:%|bb)(?!\\w)",
-    "\\b(?:UTG\\+?\\d?|LJ|HJ|CO|BTN|SB|BB)\\b",
+    "\\b(?:UTG\\+?\\d?|EP|MP|LJ|HJ|CO|BTN|SB|BB)\\b",
     "\\b(?:[AKQJT][AKQJT2-9]|[2-9][AKQJT])[so]?\\b",
     "\\b([2-9])\\1[so]?\\b",
     "\\b[Aa]ll-in\\b",
@@ -88,12 +88,18 @@ export function Rico({
   )
 }
 
-// Separa a frase de abertura do resto: "Título: detalhe" ou a primeira frase.
+const maiuscula = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
+const comPonto = (s: string) => (/[.!?]$/.test(s) ? s : s + ".")
+
+// Separa o título do detalhe: "Título: detalhe" ou a primeira frase curta.
+// O título sempre termina com ponto e o detalhe começa com maiúscula.
 export function separa(texto: string): [string, string] {
   const dp = texto.indexOf(": ")
-  if (dp > 8 && dp < 70) return [texto.slice(0, dp), texto.slice(dp + 2)]
+  if (dp > 1 && dp < 70)
+    return [comPonto(texto.slice(0, dp)), maiuscula(texto.slice(dp + 2))]
   const pt = texto.search(/[.;] /)
-  if (pt > 8 && pt < 110) return [texto.slice(0, pt + 1), texto.slice(pt + 2)]
+  if (pt > 1 && pt < 60)
+    return [comPonto(texto.slice(0, pt)), maiuscula(texto.slice(pt + 2))]
   // Frase longa e sem corte: não vira título, fica toda como detalhe.
-  return texto.length > 110 ? ["", texto] : [texto, ""]
+  return texto.length > 60 ? ["", texto] : [comPonto(texto), ""]
 }

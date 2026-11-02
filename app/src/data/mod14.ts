@@ -39,13 +39,13 @@ export const mod14 = {
   fonte: "theory/14-Probe-Turn (guideline, regras e anotações do instrutor)",
 
   em30: [
-    "Parta do range de check atrás do BTN: Ax, KQ e KJ, middle pair, third pair, alguns give-ups, brocas e backdoor de flush.",
-    "O size nasce do grupo de mãos que você quer apostar: B70 para TP e SP, B100 para trinca e TP muito forte, B40 para thin value ou quando o vilão dá raise.",
-    "Board conectado pede B70. Board seco pede B100.",
-    "Bluff é sempre equity direta: duas pontas, flush draw e brocas com equity extra.",
-    "No check-call, nunca folde TP, SP nem par com draw.",
-    "No check-raise, valor forte e combo draw. Nada de bluff sem equity.",
-    "Um size por situação. Nada de B25 com o range inteiro.",
+    "Range de check atrás do BTN: parta dele. Ax, KQ e KJ, middle pair, third pair, alguns give-ups, brocas e backdoor de flush.",
+    "Size: nasce do grupo de mãos que você quer apostar. B70 para TP e SP, B100 para trinca e TP muito forte, B40 para thin value ou quando o vilão dá raise.",
+    "Board conectado ou seco: conectado pede B70. Seco pede B100.",
+    "Bluff: é sempre equity direta. Duas pontas, flush draw e brocas com equity extra.",
+    "Check-call: nunca folde TP, SP nem par com draw.",
+    "Check-raise: valor forte e combo draw. Nada de bluff sem equity.",
+    "Um size por situação: nada de B25 com o range inteiro.",
   ],
 
   sizes: [
@@ -333,10 +333,10 @@ export const mod14 = {
     "Range de check atrás do BTN: Ax, Kx, pares médios, brocas e give-ups.",
     "O size nasce do grupo de mãos que você aposta.",
     "Conectado B70, seco B100.",
-    "B40 só se o vilão dá raise ou se você quer thin value.",
+    "B40: só se o vilão dá raise ou se você quer thin value.",
     "Flush em carta baixa: B40. Flush em carta alta: B70, só os melhores TP.",
     "Sequência completando: B70, nunca B25.",
-    "Bluff com equity direta. Broca só com equity extra.",
+    "Bluff: com equity direta. Broca só com equity extra.",
     "Check-call: TP, SP e par com draw. Contra size grande, o par precisa de redraw.",
     "Check-raise: valor forte ou combo draw.",
     "Um size por situação.",

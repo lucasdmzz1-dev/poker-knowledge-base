@@ -12,12 +12,12 @@ const m01: ModuloTeoria = {
       tipo: "lista",
       titulo: "Em 30 segundos",
       itens: [
-        "A estratégia tem três pilares: vantagem de equity, vantagem de nuts e realização de equity.",
-        "Quanto maior a sua vantagem de range e menor a frequência de check-raise do adversário, maior a frequência de c-bet.",
-        "Nos boards em que você toma mais check-raise, monte um range de check behind para realizar equity.",
+        "Três pilares: vantagem de equity, vantagem de nuts e realização de equity.",
+        "Vantagem de range e frequência: quanto maior a sua vantagem de range e menor a frequência de check-raise do adversário, maior a frequência de c-bet.",
+        "Boards em que você toma mais check-raise: monte um range de check behind para realizar equity.",
         "Board A high: c-bet em 100% do range.",
         "Board broadway: c-bet em cerca de 84%.",
-        "Board high card conectado e board low: cerca de 52% e 55%, com split entre bet e check.",
+        "High card conectado e low: c-bet em cerca de 52% e 55%, com split entre bet e check.",
         "Só dois sizes: B25 como padrão e B40 como o maior. O SPR baixo não pede mais que isso.",
       ],
     },
@@ -63,6 +63,11 @@ const m01: ModuloTeoria = {
                   nome: "Bet",
                   cor: "verde",
                   texto: "O range inteiro, em B25.",
+                  maos: [
+                    { nome: "Top pair", cartas: ["As", "Kh"] },
+                    { nome: "Par abaixo", cartas: ["6s", "6h"] },
+                    { nome: "Overcards", cartas: ["Kc", "Qc"] },
+                  ],
                 },
               ],
             },
@@ -82,7 +87,12 @@ const m01: ModuloTeoria = {
                 {
                   nome: "Bet",
                   cor: "verde",
-                  texto: "Frequência muito alta do range.",
+                  texto: "Frequência muito alta do range, em B25.",
+                  maos: [
+                    { nome: "Top pair", cartas: ["Kh", "Qd"] },
+                    { nome: "Duas pontas", cartas: ["Qc", "Jc"] },
+                    { nome: "Ás alto", cartas: ["Ad", "5d"] },
+                  ],
                 },
               ],
             },
@@ -104,12 +114,25 @@ const m01: ModuloTeoria = {
                   cor: "verde",
                   texto:
                     "Draws da parte off do range, mãos que bloqueiam o flush draw e mãos confortáveis em jogar bet/fold.",
+                  maos: [
+                    { nome: "Duas pontas off", cartas: ["Td", "9c"] },
+                    { nome: "Bloqueia o FD", cartas: ["As", "Qd"] },
+                    { nome: "Bet/fold", cartas: ["Kh", "Qc"] },
+                  ],
                 },
                 {
                   nome: "Check",
                   cor: "branco",
                   texto:
-                    "Parte média do range, second pair, third pair, draws que querem realizar equity, high cards com backdoor flush draw, algumas trincas (trap) e, opcionalmente, alguns top pairs mais fracos.",
+                    "Parte média do range, second pair, third pair, draws que querem realizar equity, high cards com backdoor flush draw, algumas trincas (trap) e, como opção, alguns top pairs mais fracos.",
+                  maos: [
+                    { nome: "Second pair", cartas: ["Ac", "8c"] },
+                    { nome: "Third pair", cartas: ["Ah", "4h"] },
+                    { nome: "Flush draw fraco", cartas: ["7s", "6s"] },
+                    { nome: "High card + BDFD", cartas: ["Kd", "Qd"] },
+                    { nome: "Trinca (trap)", cartas: ["4d", "4c"] },
+                    { nome: "Top pair fraco", cartas: ["Jc", "9c"] },
+                  ],
                 },
               ],
             },
@@ -130,13 +153,25 @@ const m01: ModuloTeoria = {
                   nome: "Bet",
                   cor: "verde",
                   texto:
-                    "Draws da parte off do range, mãos que bloqueiam o flush draw e mãos confortáveis em jogar bet/fold.",
+                    "Draws da parte off do range e mãos confortáveis em jogar bet/fold.",
+                  maos: [
+                    { nome: "Duas pontas off", cartas: ["Jd", "Tc"] },
+                    { nome: "Bet/fold", cartas: ["Ah", "Kc"] },
+                  ],
                 },
                 {
                   nome: "Check",
                   cor: "branco",
                   texto:
-                    "Parte média do range, second pair, third pair, draws que querem realizar equity, high cards com backdoor flush draw, algumas trincas (trap) e, opcionalmente, alguns top pairs mais fracos.",
+                    "Parte média do range, second pair, third pair, draws que querem realizar equity, high cards com backdoor flush draw, algumas trincas (trap) e, como opção, alguns top pairs mais fracos.",
+                  maos: [
+                    { nome: "Second pair", cartas: ["Ad", "8h"] },
+                    { nome: "Third pair", cartas: ["Ac", "5h"] },
+                    { nome: "Duas pontas suited", cartas: ["Th", "7h"] },
+                    { nome: "High card + BDFD", cartas: ["Kd", "Qd"] },
+                    { nome: "Trinca (trap)", cartas: ["9h", "9c"] },
+                    { nome: "Top pair fraco", cartas: ["Qc", "9c"] },
+                  ],
                 },
               ],
             },
@@ -148,15 +183,44 @@ const m01: ModuloTeoria = {
       tipo: "lista",
       titulo: "Como montar o range de check",
       intro:
-        "Nos boards em que você toma mais check-raise, o range de check é feito de:",
+        "Nos boards em que você toma mais check-raise, o range de check é feito destes grupos. Exemplo no J-8-4 com dois de espadas:",
+      board: {
+        cartas: ["Js", "8d", "4s"],
+        rotulo: "J-8-4 com dois de espadas",
+      },
       itens: [
-        "Trincas, exceto em boards extremamente carregados.",
-        "Pares abaixo do top pair.",
-        "Flush draws fracos.",
-        "Duas pontas sem overcard.",
-        "Brocas.",
-        "Draws que querem realizar equity e high cards com backdoor flush draw.",
-        "Os piores top pairs, como opção.",
+        {
+          texto: "Trincas: exceto em boards extremamente carregados.",
+          maos: [{ nome: "Trinca", cartas: ["4d", "4c"] }],
+        },
+        {
+          texto: "Pares abaixo do top pair: second pair e third pair.",
+          maos: [
+            { nome: "Second pair", cartas: ["Ac", "8c"] },
+            { nome: "Third pair", cartas: ["Ah", "4h"] },
+          ],
+        },
+        {
+          texto: "Flush draws fracos: o flush draw que não é o nuts.",
+          maos: [{ nome: "Flush draw fraco", cartas: ["7s", "6s"] }],
+        },
+        {
+          texto: "Duas pontas sem overcard: draw que quer realizar equity.",
+          maos: [{ nome: "Duas pontas", cartas: ["Th", "9h"] }],
+        },
+        {
+          texto: "Brocas: draws de quatro outs.",
+          maos: [{ nome: "Broca", cartas: ["Qh", "Th"] }],
+        },
+        {
+          texto:
+            "High cards com backdoor flush draw: realizam equity com o check.",
+          maos: [{ nome: "High card + BDFD", cartas: ["Kd", "Qd"] }],
+        },
+        {
+          texto: "Piores top pairs: entram no check como opção.",
+          maos: [{ nome: "Top pair fraco", cartas: ["Jc", "9c"] }],
+        },
       ],
     },
     {
@@ -169,12 +233,14 @@ const m01: ModuloTeoria = {
           titulo: "Size padrão",
           texto:
             "Para o bet range e para os boards em que você tem vantagem ampla.",
+          cartas: ["Ad", "8c", "4s"],
         },
         {
           etiqueta: { texto: "B40", cor: "vermelho" },
           titulo: "O maior size",
           texto:
             "Para as estratégias de split e mãos selecionadas. Sizes maiores não entram por causa do SPR baixo.",
+          cartas: ["Js", "8d", "4s"],
         },
       ],
     },
@@ -182,13 +248,13 @@ const m01: ModuloTeoria = {
       tipo: "lista",
       titulo: "Regras de bolso",
       itens: [
-        "Realizar equity é a prioridade no short stack.",
-        "Mais check-raise do adversário significa mais check behind no seu range.",
-        "Draws da parte off podem apostar, porque bloqueiam parte da reação do adversário.",
-        "Mãos que querem realizar equity preferem controlar o pote com o check.",
+        "Short stack: realizar equity é a prioridade.",
+        "Mais check-raise do adversário: mais check behind no seu range.",
+        "Draws da parte off: podem apostar, porque bloqueiam parte da reação do adversário.",
+        "Mãos que querem realizar equity: preferem controlar o pote com o check.",
         "O check não é fraqueza: realiza equity, protege mãos médias e evita situações ruins contra raise.",
-        "A high: range bet. Broadway: cerca de 84%. High card e low: split.",
-        "Só B25 e B40.",
+        "Por tipo de board: A high, range bet. Broadway, cerca de 84%. High card e low, split.",
+        "Sizes: só B25 e B40.",
       ],
     },
   ],
