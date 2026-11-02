@@ -547,9 +547,8 @@ function ComparacaoLeaks({ leaks }: { leaks: Leak[] }) {
         lead="Compara o desvio de cada spot entre dois meses e diz se melhorou, piorou ou ficou igual."
       >
         <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
-          Falta um segundo mês. Quando você adicionar os leaks de outubro, com o
-          mesmo spot e a mesma estatística de setembro, a comparação aparece
-          aqui.
+          Falta um segundo mês. Quando você adicionar os leaks do mês seguinte,
+          com o mesmo spot e a mesma estatística, a comparação aparece aqui.
         </div>
       </Secao>
     )

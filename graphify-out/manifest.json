@@ -1722,20 +1722,20 @@
     "semantic_hash": ""
   },
   "app/src/lib/poker.ts": {
-    "mtime": 1793575920.547244,
-    "seen": 1793584304.904649,
+    "mtime": 1793586375.6196294,
+    "seen": 1793586458.9729347,
     "ast_hash": "4c019d8c9743ea897248d4af2a130c1b",
     "semantic_hash": ""
   },
   "app/src/lib/storage.ts": {
-    "mtime": 1793575920.547244,
-    "seen": 1793584304.904649,
+    "mtime": 1793586375.6206303,
+    "seen": 1793586458.9729347,
     "ast_hash": "b0e76610a0534b83010e3f6680b6bf95",
     "semantic_hash": ""
   },
   "app/src/lib/utils.ts": {
-    "mtime": 1793575920.5487862,
-    "seen": 1793584304.904649,
+    "mtime": 1793586375.6218033,
+    "seen": 1793586458.9729347,
     "ast_hash": "320fe7ec3a40945ebd2928f41662b92e",
     "semantic_hash": ""
   },
@@ -1746,9 +1746,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/analise.tsx": {
-    "mtime": 1793584631.1689339,
-    "seen": 1793584662.6691117,
-    "ast_hash": "4361421b081c90827bf54fc7047782fe",
+    "mtime": 1793586366.168371,
+    "seen": 1793586458.9729347,
+    "ast_hash": "ea1e1b0dd9b0278c38445c44949224e1",
     "semantic_hash": ""
   },
   "app/src/pages/home.tsx": {
@@ -2580,63 +2580,63 @@
     "semantic_hash": ""
   },
   "app/src/components/analise/hud.tsx": {
-    "mtime": 1793575920.523393,
-    "seen": 1793584304.904649,
+    "mtime": 1793586375.6174247,
+    "seen": 1793586458.9678905,
     "ast_hash": "8ff80c592f86d41eea32551a92af776d",
     "semantic_hash": ""
   },
   "app/src/components/analise/leaks.tsx": {
-    "mtime": 1793585920.58936,
-    "seen": 1793585964.988651,
-    "ast_hash": "17c708fdc748e5f1ff3c40a868d4a356",
+    "mtime": 1793586366.3401284,
+    "seen": 1793586458.9678905,
+    "ast_hash": "4e0c3d4d0e94706e42b97ff0803394ff",
     "semantic_hash": ""
   },
   "app/src/components/analise/painel.tsx": {
-    "mtime": 1793584261.2126958,
-    "seen": 1793584304.904649,
-    "ast_hash": "b97ee13cb2379cab5d22a05f83df4f3a",
+    "mtime": 1793586326.017599,
+    "seen": 1793586458.9689004,
+    "ast_hash": "8640936e85bd3090704644c6aed0dc0d",
     "semantic_hash": ""
   },
   "app/src/components/analise/prints.tsx": {
-    "mtime": 1793575920.5259721,
-    "seen": 1793584304.904649,
-    "ast_hash": "84abad039c2fa5b5376689c78c55963e",
+    "mtime": 1793586366.4472466,
+    "seen": 1793586458.9689004,
+    "ast_hash": "aab28c4751e2bd3f9d060fd73e5153bf",
     "semantic_hash": ""
   },
   "app/src/components/analise/secao.tsx": {
-    "mtime": 1793575920.526982,
-    "seen": 1793584304.904649,
+    "mtime": 1793586375.6184447,
+    "seen": 1793586458.9689004,
     "ast_hash": "a02b4d1d0b5002c2754487d2cee502e4",
     "semantic_hash": ""
   },
   "app/src/lib/analise.ts": {
-    "mtime": 1793585095.0946414,
-    "seen": 1793585114.9294424,
-    "ast_hash": "a187f6e8ca6b1341f2aa99919466f347",
+    "mtime": 1793586326.4108663,
+    "seen": 1793586458.9729347,
+    "ast_hash": "161a79d2b8fcbd3217fec815d918ba30",
     "semantic_hash": ""
   },
   "app/src/lib/hud.ts": {
-    "mtime": 1793585743.6268067,
-    "seen": 1793585785.966503,
-    "ast_hash": "ba06fe397191897cdd1a0e3c80bfa633",
+    "mtime": 1793586326.393605,
+    "seen": 1793586458.9729347,
+    "ast_hash": "912939b962a9c0be7f546c32ea0c5016",
     "semantic_hash": ""
   },
   "app/src/lib/painel.ts": {
-    "mtime": 1793584631.0669875,
-    "seen": 1793584662.668107,
-    "ast_hash": "38cb135d0212958b837f5fa6b3d2598e",
+    "mtime": 1793586366.5528502,
+    "seen": 1793586458.9729347,
+    "ast_hash": "27798bb7c7a05168221588171cd9c87d",
     "semantic_hash": ""
   },
   "app/src/lib/prints.ts": {
-    "mtime": 1793575920.547244,
-    "seen": 1793584304.904649,
+    "mtime": 1793586375.6206303,
+    "seen": 1793586458.9729347,
     "ast_hash": "9bfc74141b8fe33241f1cdcd2301e10a",
     "semantic_hash": ""
   },
   "docs/Site-Poker-KB.md": {
-    "mtime": 1793585950.5113852,
-    "seen": 1793585965.0264618,
-    "ast_hash": "b7f6e0926033cd14326690b093d53d93",
+    "mtime": 1793586441.8041868,
+    "seen": 1793586459.016254,
+    "ast_hash": "3895fe466ae91ac86ea6c3444303094a",
     "semantic_hash": ""
   },
   "app/src/components/analise/leitor.tsx": {
@@ -2649,6 +2649,18 @@
     "mtime": 1793585920.4770482,
     "seen": 1793585964.9932404,
     "ast_hash": "674bfd21fefcc5d9c96ba2d7de800a4c",
+    "semantic_hash": ""
+  },
+  "app/src/components/analise/meus-dados.tsx": {
+    "mtime": 1793586360.6993916,
+    "seen": 1793586458.9689004,
+    "ast_hash": "f0de9ca7c91caf191497694ff8a51936",
+    "semantic_hash": ""
+  },
+  "app/src/lib/backup.ts": {
+    "mtime": 1793586360.6175532,
+    "seen": 1793586458.9729347,
+    "ast_hash": "95676e227e18131d0ddc03eb2e8ec03b",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

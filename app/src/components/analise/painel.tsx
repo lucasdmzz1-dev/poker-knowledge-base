@@ -140,7 +140,7 @@ function Tabela({
       <p className="mb-4 max-w-[70ch] text-sm text-muted-foreground">
         {escopo === "semana"
           ? "Stats que você acompanha toda semana. Preencha a semana aberta e clique em Salvar para fechá-la e abrir a próxima. Stats de spot raro oscilam com amostra pequena: olhe a tendência de várias semanas."
-          : "Análises que só fazem sentido com amostra grande (HUD mensal). M1 é a base de setembro, com o HUD de 46 mil mãos. Preencha outubro quando tiver os números."}{" "}
+          : "Análises que só fazem sentido com amostra grande (HUD mensal). Preencha o mês aberto quando tiver os números do HUD."}{" "}
         "No alvo" é dentro da faixa, "Perto" é até 2 pontos fora e "Longe" é
         acima disso.
       </p>

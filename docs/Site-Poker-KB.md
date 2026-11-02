@@ -37,7 +37,7 @@ Vite, React 19, TypeScript estrito, Tailwind v4, shadcn/ui, react-router-dom, lu
 
 ## Onde os dados ficam
 
-Os dados são locais do navegador, não do repositório. Os valores iniciais (setembro de 2026) estão no código.
+Os dados são locais do navegador de cada pessoa, não do repositório. O site começa vazio: o código só tem as definições e as metas das stats. Em Análise → "Meus dados" dá para exportar e importar tudo em um arquivo (a chave da API e os prints não entram).
 
 | Dado | Chave |
 | --- | --- |
@@ -60,4 +60,3 @@ Arquivos principais de dados: `lib/hud.ts`, `lib/analise.ts`, `lib/painel.ts`, `
 
 - Dúvidas da teoria para o coach: tabuleiros intermediários, limite de low board, cartas do meio em dobrado.
 - Pilotos dos módulos 14 e 17.
-- Prints e números de outubro.
