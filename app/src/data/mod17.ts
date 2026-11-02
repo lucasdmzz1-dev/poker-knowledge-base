@@ -45,8 +45,8 @@ export const mod17 = {
     "Limp-call do SB: defende pouco offsuit baixo. Carta de valor 8 ou mais no board significa que o SB acerta par.",
     "Thin value define o size: B25 quando o board tem thin value, B70 quando não tem, B40 no que sobrar.",
     "Size maior: menor a frequência de aposta e maior a necessidade de split.",
-    "Duas cartas abaixo de 8 no board: B25. Duas de valor 8 ou mais: B40.",
-    "Sequência pesa mais que broadway: B40. As exceções em B70 são o triple broadway e o low conectado.",
+    "Altas e baixas no board: uma carta alta e duas baixas (abaixo do 8x), B25. Duas altas e uma baixa, B40. Duas altas com a terceira conectando, B70.",
+    "Range off do SB: seguida que ele tem offsuit (Q-J-8, J-T-8), B40. Seguida em board low, que ele não tem offsuit (9-7-5, T-8-5), B70.",
     "Dobrado seco e A high seco: range em B25.",
   ],
 
@@ -159,25 +159,29 @@ export const mod17 = {
       buckets: [
         {
           p: 75,
-          maos: "Overpair e TP forte",
+          maos: "Overpair, dois pares e TP forte",
           ex: [
             { classe: "Overpair", hero: ["Ah", "Ac"] },
+            { classe: "Dois pares", hero: ["9c", "7c"] },
             { classe: "TP forte", hero: ["9h", "Ac"] },
           ],
         },
         {
           p: 50,
-          maos: "Dois pares, TPs e melhores draws",
+          maos: "TPs e melhores draws",
           ex: [
-            { classe: "Dois pares", hero: ["9c", "7c"] },
             { classe: "TPs", hero: ["9s", "3s"] },
             { classe: "Melhores draws", hero: ["Ts", "8s"] },
           ],
         },
         {
           p: 25,
-          maos: "Todo o restante",
-          ex: [{ classe: "Todo o restante", hero: ["Kc", "Qd"] }],
+          maos: "Trincas, second pair e todo o restante",
+          ex: [
+            { classe: "Trinca", hero: ["7s", "7d"] },
+            { classe: "Second pair", hero: ["Ad", "7c"] },
+            { classe: "Todo o restante", hero: ["Kc", "Qd"] },
+          ],
         },
         {
           p: 0,
@@ -185,7 +189,7 @@ export const mod17 = {
           ex: [{ classe: "Underpair", hero: ["4h", "4d"] }],
         },
       ],
-      nota: "O top set vai no menor bucket possível, porque bloqueia os calls. Os outros sets ficam em 50% ou 75%. Second pair entra em 25%.",
+      nota: "No B70 a prioridade são as mãos fortes e vulneráveis nas próximas streets: dois pares, overpair e TP forte em 75%. A trinca vai em 25%: bloqueia pares e não ganha nada colocando dinheiro em frequência alta. Underpair é o par de bolso abaixo da carta mais baixa do board.",
     },
   ] as SplitBB[],
 
@@ -199,9 +203,37 @@ export const mod17 = {
       estrategia: "Split próprio de dobrado conectado",
     },
     { nome: "A high conectado", size: "B25", estrategia: "Split B25" },
-    { nome: "Com sequência", size: "B40", estrategia: "Split B40" },
+    {
+      nome: "Uma alta e duas baixas (abaixo do 8x)",
+      size: "B25",
+      estrategia: "Split B25, muito thin value (Q-6-3, T-4-2)",
+    },
+    {
+      nome: "Duas altas e uma baixa",
+      size: "B40",
+      estrategia: "Split B40 (K-J-4, Q-9-4, Q-9-2)",
+    },
+    {
+      nome: "Seguida que o SB tem offsuit",
+      size: "B40",
+      estrategia: "Split B40 (Q-J-8, J-T-8)",
+    },
     { nome: "Low desconectado", size: "B40", estrategia: "Split B40" },
-    { nome: "Low conectado", size: "B70", estrategia: "Split B70" },
+    {
+      nome: "Duas altas, a terceira conectando",
+      size: "B70",
+      estrategia: "Split B70 (K-Q-8, Q-9-7)",
+    },
+    {
+      nome: "Low conectado",
+      size: "B70",
+      estrategia: "Split B70 (9-7-5, T-8-5)",
+    },
+    {
+      nome: "Semi conectado com flush draw",
+      size: "B70",
+      estrategia: "Split B70 (Q-T-7, Q-8-7, J-7-6, K-9-8)",
+    },
   ] as { nome: string; size: SizeBB; estrategia: string }[],
 
   boards: [
@@ -227,7 +259,7 @@ export const mod17 = {
       cards: ["Jd", "Qc", "8c"],
       nome: "Q-J-8, com flush draw",
       size: "B40",
-      nota: "Flush draws de clubs em 50%. Certeza média na resposta do coach.",
+      nota: "B40 porque o SB tem a seguida offsuit. O bucket dos flush draws ainda tem certeza média (50% na fala, 75% nas tabelas).",
     },
     {
       cards: ["4c", "2c", "8d"],
@@ -239,7 +271,31 @@ export const mod17 = {
       cards: ["5c", "7h", "9d"],
       nome: "9-7-5, low conectado",
       size: "B70",
-      nota: "Sem thin value. Melhores draws em 50%.",
+      nota: "Seguida em board low, que o SB não tem offsuit. Dois pares, overpair e TP forte em 75%, trinca em 25%.",
+    },
+    {
+      cards: ["Ks", "Qs", "8h"],
+      nome: "K-Q-8, a terceira conecta",
+      size: "B70",
+      nota: "Duas altas com a terceira conectando. Frequência de 25%, e o SB não tem a seguida.",
+    },
+    {
+      cards: ["Qs", "9s", "7d"],
+      nome: "Q-9-7, muito dinâmico",
+      size: "B70",
+      nota: "Alta interação com o range do SB e sem incentivo de thin value.",
+    },
+    {
+      cards: ["Qd", "9c", "2h"],
+      nome: "Q-9-2, duas altas e uma baixa",
+      size: "B40",
+      nota: "Muitos 9x ainda querem apostar.",
+    },
+    {
+      cards: ["Td", "8d", "5c"],
+      nome: "T-8-5, low conectado com flush draw",
+      size: "B70",
+      nota: "Quanto mais conecta, pior: T-7-4 é B40, e o T-8-5 com flush draw já é B70.",
     },
     {
       cards: ["4h", "Qc", "9c"],
@@ -251,7 +307,7 @@ export const mod17 = {
       cards: ["3h", "6h", "Qc"],
       nome: "Q-6-3, com flush draw",
       size: "B25",
-      nota: "Frequência de 66% a 75%, quase range. O bucket de 25% vira 100%.",
+      nota: "Uma alta e duas baixas: muito thin value. Frequência de 66% a 75%, quase range. Nas tabelas por board do coach, dois pares e overpair em 100%, trinca, TP e air em 75%.",
     },
   ] as BoardBB[],
 
@@ -287,13 +343,14 @@ export const mod17 = {
   pocket: [
     "Thin value define o size: B25 com thin value, B70 sem, B40 no meio.",
     "Size maior: menor frequência e mais split.",
-    "Duas cartas abaixo de 8: B25. Duas de valor 8 ou mais: B40.",
-    "Sequência pesa mais que broadway: B40.",
-    "Triple broadway e low conectado: B70.",
+    "Altas e baixas: uma alta e duas baixas, B25. Duas altas e uma baixa, B40. Duas altas com a terceira conectando, B70.",
+    "Range off do SB: seguida que ele tem offsuit, B40. Seguida em board low, B70.",
+    "Triple broadway, low conectado e semi conectado com flush draw: B70.",
     "A high seco e dobrado seco: range em B25.",
     "Monotone: B25, buckets 25/50/75, frequência perto de 50%.",
     "Dobrado conectado: trinca, full e quadra em 75%, o restante em 50%.",
-    "Top set no B70: vai no menor bucket possível.",
+    "No B70: dois pares, overpair e TP forte em 75%. Trinca em 25%.",
+    "Pares de bolso: acima de todas as cartas é overpair, entre as cartas é segundo ou terceiro par, abaixo de todas é underpair.",
     "Flush draw no board: a mão com carta do naipe aposta mais e a sem carta dá check.",
     "Turn depois de check-check: size alto, B70 no mínimo.",
   ],

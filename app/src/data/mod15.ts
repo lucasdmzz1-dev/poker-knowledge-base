@@ -99,7 +99,7 @@ export const mod15 = {
       size: "B25",
       exemplo: ["Qs", "5h", "3c"],
       criterio:
-        "Poucas cartas altas, com gaps amplos e poucas possibilidades de gutshot e duas pontas (T-6-2, K-7-4). Quanto mais baixo o board e maiores os gaps, mais seco.",
+        "Poucas cartas altas, com gaps amplos e poucas possibilidades de gutshot e duas pontas (T-6-2, K-7-4). Quanto mais baixo o board e maiores os gaps, mais seco. T-7-3, T-7-5, 8-3-2 e 8-7-2 também são secos, pelos exemplos do trainer do coach.",
       nota: "Frequência média de 55% a 65%. Não existe bucket de 25%. A top trinca vai em 75% porque bloqueia o valor que você sempre dá check.",
       buckets: [
         { p: 100, maos: "Overpair e trincas (menos a top trinca)" },
@@ -155,6 +155,7 @@ export const mod15 = {
     "Thin value pede B25, e a falta dele pede B50.",
     "A pior trinca vai em 100% onde existe bucket de 100%.",
     "Segundo e terceiro par: ficam em 25% (e 50% nos boards secos).",
+    "Pares de bolso: acima de todas as cartas é overpair. No J-9-6, TT é segundo par, 77 é terceiro par e só 55 é underpair.",
     "Draw no meio: o com backdoor aposta, o sem dá check.",
     "Naipe do board ou randomizador, sempre com a mão inteira.",
     "Turn e river: não se frequenciam, seguem o que você já faz.",
