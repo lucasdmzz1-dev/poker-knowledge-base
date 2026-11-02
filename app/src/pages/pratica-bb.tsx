@@ -8,6 +8,7 @@ import {
 import { ResultadoFinal } from "@/components/poker/resultado-final"
 import { RelatarErro } from "@/components/poker/relatar-erro"
 import { RngStrip } from "@/components/poker/cards"
+import { destacar } from "@/components/poker/destacar"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -440,11 +441,11 @@ export default function PraticaBB({ onTema }: { onTema: (t: Tema) => void }) {
               <strong className="text-foreground">{atual.classe}</strong> no
               board{" "}
               <strong className="text-foreground">{atual.boardNome}</strong>:{" "}
-              {atual.porque}
+              {destacar(atual.porque)}
             </p>
             {atual.criterio && (
               <p className="max-w-[64ch] text-muted-foreground">
-                {atual.criterio}
+                {destacar(atual.criterio)}
               </p>
             )}
             {atual.freq !== undefined && (
