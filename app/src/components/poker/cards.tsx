@@ -88,28 +88,35 @@ function RngBarra({
   rng: number
   size?: string
 }) {
-  const [cheio, setCheio] = useState(false)
+  // 0: vazia, 1: cheia até o RNG, 2: a barra inteira acesa.
+  const [passo, setPasso] = useState<0 | 1 | 2>(0)
   useEffect(() => {
-    const t = requestAnimationFrame(() => setCheio(true))
-    return () => cancelAnimationFrame(t)
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setPasso(2)
+      return
+    }
+    const t = requestAnimationFrame(() => setPasso(1))
+    const fim = window.setTimeout(() => setPasso(2), 1500)
+    return () => {
+      cancelAnimationFrame(t)
+      clearTimeout(fim)
+    }
   }, [])
   const rotulo =
     "flex h-full items-center justify-center overflow-hidden px-3 text-sm font-bold whitespace-nowrap text-[#14121f] not-italic"
   const segmentos = (
     <>
-      <i
-        className={cn(rotulo, "rounded-full bg-rng-bet")}
-        style={{ width: `calc(${bucket}% - 2px)` }}
-      >
+      <i className={cn(rotulo, "bg-rng-bet")} style={{ width: `${bucket}%` }}>
         1 a {bucket} · aposta {size}
       </i>
       {bucket < 100 && (
-        <i className={cn(rotulo, "flex-1 rounded-full bg-check")}>
+        <i className={cn(rotulo, "flex-1 bg-check")}>
           {bucket + 1} a 100 · check
         </i>
       )}
     </>
   )
+  const corte = passo === 0 ? 100 : passo === 1 ? 100 - rng : 0
   return (
     <div className="mt-5">
       <div
@@ -117,20 +124,21 @@ function RngBarra({
         role="img"
         aria-label={`RNG ${rng}. De 1 a ${bucket} aposta ${size ?? ""}, de ${bucket + 1} a 100 dá check`}
       >
-        <div className="flex h-10 gap-1 opacity-25">{segmentos}</div>
+        <div className="flex h-10 overflow-hidden rounded-full opacity-25">
+          {segmentos}
+        </div>
         <div
-          className="absolute inset-0 flex h-10 gap-1 transition-[clip-path] duration-[1100ms] ease-out motion-reduce:transition-none"
+          className="absolute inset-0 flex h-10 overflow-hidden rounded-full ease-out motion-reduce:transition-none"
           style={{
-            clipPath: cheio
-              ? `inset(0 ${100 - rng}% 0 0)`
-              : "inset(0 100% 0 0)",
+            clipPath: `inset(0 ${corte}% 0 0 round 9999px)`,
+            transition: `clip-path ${passo === 2 ? 450 : 1100}ms ease-out`,
           }}
         >
           {segmentos}
         </div>
         <span
           className="absolute -top-1.5 h-[52px] w-0.5 -translate-x-1/2 rounded bg-white transition-[left] duration-[1100ms] ease-out motion-reduce:transition-none"
-          style={{ left: cheio ? `${rng}%` : "0%" }}
+          style={{ left: passo === 0 ? "0%" : `${rng}%` }}
           aria-hidden="true"
         />
       </div>
