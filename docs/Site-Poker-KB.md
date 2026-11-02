@@ -90,6 +90,8 @@ O repositório é público: não coloque dados pessoais nele. Os dados de cada j
 
 ## Padrão dos temas da Prática
 
+Passo a passo para criar um tema novo: `docs/Pratica-Novo-Tema.md`.
+
 Todo tema novo da Prática usa os mesmos blocos, para ficar igual aos outros:
 
 - `components/poker/resposta.tsx`: `BotaoResposta` + `estadoDe` (contorno verde com selo de check no botão certo, vermelho com X no errado escolhido, os outros apagados) e `CartaoResultado` (título "CERTO" ou "ERRADO" centralizado, borda grossa e brilho na cor do resultado).
