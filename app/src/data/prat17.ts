@@ -41,6 +41,46 @@ export const BOARDS_BB: BoardBBTreino[] = [
     grupo: "B70",
   },
   {
+    id: "t85",
+    nome: "T-8-5, low conectado com flush draw",
+    board: ["Ts", "8s", "5d"],
+    size: "B70",
+    estrategia: "split70",
+    grupo: "B70",
+  },
+  {
+    id: "qt7",
+    nome: "Q-T-7, semi conectado com flush draw",
+    board: ["Qh", "Th", "7c"],
+    size: "B70",
+    estrategia: "split70",
+    grupo: "B70",
+  },
+  {
+    id: "q87",
+    nome: "Q-8-7, semi conectado com flush draw",
+    board: ["Qc", "8d", "7d"],
+    size: "B70",
+    estrategia: "split70",
+    grupo: "B70",
+  },
+  {
+    id: "j76",
+    nome: "J-7-6, semi conectado com flush draw",
+    board: ["Jd", "7s", "6s"],
+    size: "B70",
+    estrategia: "split70",
+    grupo: "B70",
+  },
+  {
+    id: "k98",
+    nome: "K-9-8, semi conectado com flush draw",
+    board: ["Ks", "9s", "8d"],
+    size: "B70",
+    estrategia: "split70",
+    grupo: "B70",
+  },
+  {
     id: "kj4",
     nome: "K-J-4, dois broadways",
     board: ["4c", "Jd", "Kc"],
@@ -217,6 +257,7 @@ export function bucketBB(
     if (L.feita === "setAlto") return res(75, "Top set")
     if (L.feita === "doisPares") return res(75, "Dois pares")
     if (topPair) return res(75, "Top pair")
+    if (L.feita === "nada" && L.flushDraw) return res(75, "Flush draw")
     if (draw) return null
     const nome: Record<string, string> = {
       secondPair: "Segundo par",
@@ -234,6 +275,7 @@ export function bucketBB(
     if (L.feita === "doisPares") return res(75, "Dois pares")
     if (topPair) return forte ? res(75, "Top pair forte") : res(50, "Top pair")
     if (L.feita === "underpair") return res(0, "Underpair")
+    if (L.feita === "nada" && L.flushDraw) return res(75, "Flush draw")
     if (draw) return null
     const nome: Record<string, string> = {
       secondPair: "Segundo par",
@@ -249,6 +291,8 @@ export function bucketBB(
   if (L.feita === "doisPares") return res(50, "Dois pares")
   if (L.feita === "underpair") return res(0, "Underpair")
   if (["setAlto", "setMeio", "setBaixo"].includes(L.feita)) return null
+  // Os melhores draws (aqui, o flush draw) vão em 50%.
+  if (L.feita === "nada" && L.flushDraw) return res(50, "Flush draw")
   if (draw) return null
   const nome: Record<string, string> = {
     secondPair: "Segundo par",

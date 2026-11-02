@@ -1,7 +1,7 @@
 # Graph Report - kb-pratica-384abd  (2026-11-02)
 
 ## Corpus Check
-- 450 files · ~809,306 words
+- 450 files · ~809,452 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 39 file(s) not represented in the graph (top: .csv 25, (none) 6, .css 4)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2f036beb`
+- Built from commit: `2c1d3ace`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -1614,13 +1614,13 @@ Nodes (3): Parte 7 — Abrir e blind war, Regra 25 — Open BW (blind war), Regr
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `init()` connect `showToast` to `Init flow`, `live-browser.js`, `02.2 — DEEP STACK`, `createLiveBrowserDomHelpers`, `Write Swift`, `generate.md`, `connectSSE`, `syncPageChatFocus`, `impeccable/SKILL.md`, `handleManualEditActivity`?**
-  _High betweenness centrality (0.148) - this node is a cross-community bridge._
+  _High betweenness centrality (0.149) - this node is a cross-community bridge._
 - **What connects `cmd`, `@playwright/mcp`, `Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100)` to the rest of the system?**
   _124 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Decisões – Probe Turn` be split into smaller, more focused modules?**
   _Cohesion score 0.14114114114114115 - nodes in this community are weakly interconnected._
 - **Why does `Layout()` connect `react` to `Write Swift`, `Scan mode (approach C: auto-extract, then confirm descriptive language)`, `teoria-14.tsx`?**
-  _High betweenness centrality (0.107) - this node is a cross-community bridge._
+  _High betweenness centrality (0.104) - this node is a cross-community bridge._
 - **Should `Solver — ICM e Risk Premium (25% vs 16% field left)` be split into smaller, more focused modules?**
   _Cohesion score 0.1225296442687747 - nodes in this community are weakly interconnected._
 
