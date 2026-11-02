@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Cards } from "@/components/poker/cards"
 import type { CardCode } from "@/data/mod15"
+import type { BoardT, ItemListaT, MaoEx } from "@/data/teoria/tipos"
 import { cn } from "@/lib/utils"
 import { Rico, separa } from "./rico"
 
@@ -105,9 +106,35 @@ function Marcador({ tom, i }: { tom: TomLista; i: number }) {
   )
 }
 
-// Um item: a frase de abertura em destaque e o detalhe embaixo.
-function ItemTexto({ texto }: { texto: string }) {
-  const [titulo, resto] = separa(texto)
+type ItemLista = string | ItemListaT
+
+const textoDe = (it: ItemLista) => (typeof it === "string" ? it : it.texto)
+const maosDe = (it: ItemLista) => (typeof it === "string" ? undefined : it.maos)
+
+// Mãos de exemplo pequenas, com o nome embaixo.
+function MaosItem({ maos, centro }: { maos?: MaoEx[]; centro?: boolean }) {
+  if (!maos || maos.length === 0) return null
+  return (
+    <ul
+      className={cn(
+        "mt-2 flex flex-wrap gap-x-4 gap-y-3",
+        centro && "justify-center"
+      )}
+    >
+      {maos.map((m) => (
+        <Exemplo
+          key={m.nome + m.cartas.join("")}
+          cartas={m.cartas}
+          nome={m.nome}
+        />
+      ))}
+    </ul>
+  )
+}
+
+// Um item: o título curto em destaque e o detalhe embaixo.
+function ItemTexto({ item }: { item: ItemLista }) {
+  const [titulo, resto] = separa(textoDe(item))
   return (
     <div className="grid gap-1">
       {titulo && (
@@ -120,16 +147,17 @@ function ItemTexto({ texto }: { texto: string }) {
           <Rico>{resto}</Rico>
         </p>
       )}
+      <MaosItem maos={maosDe(item)} />
     </div>
   )
 }
 
 function CartaoItem({
-  texto,
+  item,
   i,
   tom,
 }: {
-  texto: string
+  item: ItemLista
   i: number
   tom: TomLista
 }) {
@@ -142,29 +170,85 @@ function CartaoItem({
       )}
     >
       <Marcador tom={tom} i={i} />
-      <ItemTexto texto={texto} />
+      <ItemTexto item={item} />
     </li>
+  )
+}
+
+// Board de exemplo: flop, turn e river lado a lado, com o rótulo embaixo.
+export function BoardExemplo({
+  board,
+  size = "md",
+  centro = true,
+}: {
+  board: BoardT
+  size?: "sm" | "md" | "lg"
+  centro?: boolean
+}) {
+  return (
+    <div
+      className={cn(
+        "flex flex-col gap-2",
+        centro ? "items-center" : "items-start"
+      )}
+    >
+      <div className="flex flex-wrap items-center gap-2">
+        <Cards codes={board.cartas} size={size} />
+        {board.turn && (
+          <>
+            <span className="text-muted-foreground" aria-hidden>
+              +
+            </span>
+            <Cards codes={[board.turn]} size={size} />
+          </>
+        )}
+        {board.river && (
+          <>
+            <span className="text-muted-foreground" aria-hidden>
+              +
+            </span>
+            <Cards codes={[board.river]} size={size} />
+          </>
+        )}
+      </div>
+      {board.rotulo && (
+        <span className="text-base font-medium text-muted-foreground">
+          {board.rotulo}
+        </span>
+      )}
+    </div>
   )
 }
 
 export function Lista({
   itens,
   tom = "neutro",
+  board,
 }: {
-  itens: string[]
+  itens: ItemLista[]
   tom?: TomLista
+  board?: BoardT
 }) {
   return (
-    <ol className="mx-auto grid max-w-[860px] gap-3 md:grid-cols-2">
-      {itens.map((t, i) => (
-        <CartaoItem key={t} texto={t} i={i} tom={tom} />
-      ))}
-    </ol>
+    <div className="grid gap-6">
+      {board && <BoardExemplo board={board} />}
+      <ol className="mx-auto grid w-full max-w-[860px] gap-3 md:grid-cols-2">
+        {itens.map((t, i) => (
+          <CartaoItem key={textoDe(t)} item={t} i={i} tom={tom} />
+        ))}
+      </ol>
+    </div>
   )
 }
 
 // Um ponto de cada vez, com navegação. "Ver tudo" abre a lista completa.
-export function ListaPassos({ itens }: { itens: string[] }) {
+export function ListaPassos({
+  itens,
+  board,
+}: {
+  itens: ItemLista[]
+  board?: BoardT
+}) {
   const [i, setI] = useState(0)
   const [tudo, setTudo] = useState(false)
   const a = useAcento()
@@ -172,7 +256,7 @@ export function ListaPassos({ itens }: { itens: string[] }) {
   if (tudo) {
     return (
       <div className="grid gap-5">
-        <Lista itens={itens} />
+        <Lista itens={itens} board={board} />
         <div className="flex justify-center">
           <Button variant="outline" onClick={() => setTudo(false)}>
             PASSO A PASSO
@@ -182,9 +266,10 @@ export function ListaPassos({ itens }: { itens: string[] }) {
     )
   }
 
-  const [titulo, resto] = separa(itens[i])
+  const [titulo, resto] = separa(textoDe(itens[i]))
   return (
     <div className="mx-auto grid max-w-[760px] gap-5">
+      {board && <BoardExemplo board={board} />}
       <div
         className="grid min-h-48 content-center gap-3 rounded-[22px] border bg-card p-6 text-center sm:p-9"
         aria-live="polite"
@@ -207,6 +292,7 @@ export function ListaPassos({ itens }: { itens: string[] }) {
             <Rico>{resto}</Rico>
           </p>
         )}
+        <MaosItem maos={maosDe(itens[i])} centro />
       </div>
       <div className="flex items-center justify-between gap-3">
         <Button
@@ -223,7 +309,7 @@ export function ListaPassos({ itens }: { itens: string[] }) {
         >
           {itens.map((t, k) => (
             <button
-              key={t}
+              key={textoDe(t)}
               type="button"
               aria-label={`Ponto ${k + 1}`}
               aria-current={k === i}
@@ -285,21 +371,11 @@ export function Nota({
   )
 }
 
-// Texto de uma ação ou faixa: a frase de abertura em destaque e o detalhe embaixo.
+// Texto de uma ação ou faixa: sempre no mesmo peso, com os destaques do Rico.
 export function TextoAcao({ texto }: { texto: string }) {
-  const [titulo, resto] = separa(texto)
   return (
-    <span className="grid gap-1">
-      {titulo && (
-        <span className="text-lg leading-snug font-bold text-foreground">
-          <Rico>{titulo}</Rico>
-        </span>
-      )}
-      {resto && (
-        <span className="text-base leading-relaxed text-muted-foreground">
-          <Rico>{resto}</Rico>
-        </span>
-      )}
+    <span className="text-lg leading-relaxed text-foreground/90">
+      <Rico>{texto}</Rico>
     </span>
   )
 }
@@ -323,19 +399,21 @@ export function Videos({
   return (
     <div className="mx-auto mt-8 grid w-full max-w-[720px] gap-3">
       {videos.length > 1 && (
-        <ToggleGroup
-          type="single"
-          value={atual.id}
-          onValueChange={(v) => v && setId(v)}
-          className="flex flex-wrap justify-center gap-2"
-          aria-label="Escolha a aula"
-        >
-          {videos.map((v, i) => (
-            <ToggleGroupItem key={v.id} value={v.id} className={ITEM}>
-              {v.nome ?? `Aula ${i + 1}`}
-            </ToggleGroupItem>
-          ))}
-        </ToggleGroup>
+        <div className="flex justify-center">
+          <ToggleGroup
+            type="single"
+            value={atual.id}
+            onValueChange={(v) => v && setId(v)}
+            className="flex flex-wrap justify-center gap-2"
+            aria-label="Escolha a aula"
+          >
+            {videos.map((v, i) => (
+              <ToggleGroupItem key={v.id} value={v.id} className={ITEM}>
+                {v.nome ?? `Aula ${i + 1}`}
+              </ToggleGroupItem>
+            ))}
+          </ToggleGroup>
+        </div>
       )}
       <a
         href={`https://www.youtube.com/watch?v=${atual.id}`}

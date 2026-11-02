@@ -41,19 +41,19 @@ export const mod17 = {
     "theory/17-BB-Raised-Pot-vs-SB-Limp (guideline, tabela dos splits e aula)",
 
   em30: [
-    "O range de BB neste pote é polarizado: topo e lixo, pouca mão média. Por isso não dá para apostar o range inteiro em size médio.",
-    "O limp-call do SB defende pouco offsuit baixo. Carta de valor 8 ou mais no board significa que o SB acerta par.",
+    "Range do BB polarizado: topo e lixo, pouca mão média. Por isso não dá para apostar o range inteiro em size médio.",
+    "Limp-call do SB: defende pouco offsuit baixo. Carta de valor 8 ou mais no board significa que o SB acerta par.",
     "Thin value define o size: B25 quando o board tem thin value, B70 quando não tem, B40 no que sobrar.",
-    "Quanto maior o size, menor a frequência de aposta e maior a necessidade de split.",
+    "Size maior: menor a frequência de aposta e maior a necessidade de split.",
     "Duas cartas abaixo de 8 no board: B25. Duas de valor 8 ou mais: B40.",
     "Sequência pesa mais que broadway: B40. As exceções em B70 são o triple broadway e o low conectado.",
     "Dobrado seco e A high seco: range em B25.",
   ],
 
   premissas: [
-    "O BB faz 3,5bb e fica em posição, mas o range dele é polarizado: sem cobertura linear, ele não consegue apostar range em size médio, como um range de EP contra o BB.",
-    "O limp-call do SB não defende 7-3, 7-5, 8-6, T-6 e 9-6. A parte offsuit começa em 8x.",
-    "Pergunte sempre qual é o range do SB: quanto menos ele acerta o board, mais o BB aposta mãos finas em frequência alta.",
+    "BB polarizado: faz 3,5bb e fica em posição, mas sem cobertura linear não consegue apostar range em size médio, como um range de EP contra o BB.",
+    "Limp-call do SB: não defende 7-3, 7-5, 8-6, T-6 e 9-6. A parte offsuit começa em 8x.",
+    "Range do SB: pergunte sempre qual é. Quanto menos ele acerta o board, mais o BB aposta mãos finas em frequência alta.",
   ],
 
   sizes: [
@@ -281,20 +281,20 @@ export const mod17 = {
   turn: [
     "Flop em check-check: o size do turn é sempre alto. B70 no mínimo, para apostar todos os TP, e B100 ou mais para apostar só TP com bom kicker.",
     "Flop apostado: blank é geométrico, e carta que conecta com o board tende a B70.",
-    "Quanto mais TP você quer apostar, menor o size.",
+    "Mais TP no valor: quanto mais TP você quer apostar, menor o size.",
   ],
 
   pocket: [
     "Thin value define o size: B25 com thin value, B70 sem, B40 no meio.",
-    "Quanto maior o size, menor a frequência e maior o split.",
+    "Size maior: menor frequência e mais split.",
     "Duas cartas abaixo de 8: B25. Duas de valor 8 ou mais: B40.",
     "Sequência pesa mais que broadway: B40.",
     "Triple broadway e low conectado: B70.",
     "A high seco e dobrado seco: range em B25.",
     "Monotone: B25, buckets 25/50/75, frequência perto de 50%.",
     "Dobrado conectado: trinca, full e quadra em 75%, o restante em 50%.",
-    "No B70 o top set vai no menor bucket possível.",
-    "Com flush draw no board, a mão com carta do naipe aposta mais e a sem carta dá check.",
+    "Top set no B70: vai no menor bucket possível.",
+    "Flush draw no board: a mão com carta do naipe aposta mais e a sem carta dá check.",
     "Turn depois de check-check: size alto, B70 no mínimo.",
   ],
 }

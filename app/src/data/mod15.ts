@@ -45,12 +45,12 @@ export const mod15 = {
   fonte: "theory/15-Bet-vs-Missed (guideline, regras, solver e 12-Padroes)",
 
   em30: [
-    "Pense a frequência de cada mão: 100%, 75%, 50% ou 25%. As mais fortes vão nas frequências mais altas, e as mais fracas nas mais baixas.",
-    "Nenhum board se aposta 100%. O agressor que deu check não está capado.",
+    "Frequência de cada mão: 100%, 75%, 50% ou 25%. As mais fortes vão nas frequências mais altas, e as mais fracas nas mais baixas.",
+    "Nenhum board se aposta 100%: o agressor que deu check não está capado.",
     "Só dois sizes: B25 e B50. B25 quando você quer thin value (muitas mãos apostando), B50 quando não quer.",
-    "O size acompanha o grupo de mãos que você aposta, e não a sua mão.",
+    "Size: acompanha o grupo de mãos que você aposta, e não a sua mão.",
     "Classifique o board: conectado high, semi conectado, seco, monotone ou dobrado.",
-    "A pior trinca vai em 100% nos boards que têm bucket de 100% (semi conectado e seco).",
+    "Pior trinca: vai em 100% nos boards que têm bucket de 100% (semi conectado e seco).",
     "Para sortear: use o naipe do board (mais equity) ou um randomizador, sempre com a mão inteira.",
   ],
 
@@ -154,10 +154,10 @@ export const mod15 = {
     "Só B25 e B50.",
     "Thin value pede B25, e a falta dele pede B50.",
     "A pior trinca vai em 100% onde existe bucket de 100%.",
-    "Segundo e terceiro par ficam em 25% (e 50% nos boards secos).",
+    "Segundo e terceiro par: ficam em 25% (e 50% nos boards secos).",
     "Draw no meio: o com backdoor aposta, o sem dá check.",
     "Naipe do board ou randomizador, sempre com a mão inteira.",
-    "Turn e river não se frequenciam: seguem o que você já faz.",
+    "Turn e river: não se frequenciam, seguem o que você já faz.",
   ],
 
   refBoards: [

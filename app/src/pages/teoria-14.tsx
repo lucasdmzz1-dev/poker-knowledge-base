@@ -11,6 +11,7 @@ import {
   Intro,
   ITEM,
   Lista,
+  ListaPassos,
   Nota,
   RotuloBoard,
   Secao,
@@ -54,7 +55,11 @@ export default function Teoria14() {
 
   return (
     <main>
-      <PageHeader title={mod14.nome} lead={mod14.spot} topo={<Voltar />}>
+      <PageHeader
+        title={mod14.nome}
+        lead={mod14.spot.toUpperCase()}
+        topo={<Voltar />}
+      >
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <Badge variant="outline">Turn</Badge>
           <Badge variant="outline">Fora de posição</Badge>
@@ -64,7 +69,7 @@ export default function Teoria14() {
       </PageHeader>
       <Secoes>
         <Secao titulo="Em 30 segundos">
-          <Lista itens={mod14.em30} />
+          <ListaPassos itens={mod14.em30} />
         </Secao>
 
         <Secao titulo="O que o BTN tem no check atrás">

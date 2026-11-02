@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Cards, PlayingCard, RngStrip } from "@/components/poker/cards"
 import {
+  BoardExemplo,
   Etiqueta,
   Exemplo,
   Exemplos,
@@ -26,6 +27,8 @@ import {
   Voltar,
 } from "@/components/teoria/blocos"
 import { IcmRanges } from "@/components/teoria/icm-ranges"
+import { MesaTeoria } from "@/components/teoria/mesa-teoria"
+import { SituacoesMesa } from "@/components/teoria/situacoes-mesa"
 import { Rico } from "@/components/teoria/rico"
 import { moduloPorSlug } from "@/data/teoria/registro"
 import type {
@@ -52,6 +55,18 @@ const COR_ACAO: Record<CorAcao, string> = {
   verde: "text-primary",
   branco: "text-foreground",
   vermelho: "text-b50",
+  amarelo: "text-amber-300",
+}
+
+// A cor da ação sai do nome, para ficar igual em todos os módulos:
+// valor em verde, bluff em amarelo, check e call em branco, check-raise em vermelho.
+function corDaAcao(a: AcaoT): CorAcao {
+  const n = a.nome.toLowerCase()
+  if (/check-raise|^xr/.test(n)) return "vermelho"
+  if (/bluff|blefe/.test(n)) return "amarelo"
+  if (/^check|call|paga/.test(n)) return "branco"
+  if (/valor|value|^bet|aposta|3bet|4bet|shove/.test(n)) return "verde"
+  return a.cor
 }
 
 function Etq({ e }: { e: Etiq }) {
@@ -68,6 +83,58 @@ function ListaMaos({ maos }: { maos: MaoEx[] }) {
   )
 }
 
+// Decisão do herói no fim do replay: cada ação centralizada, com o selo ONLY
+// quando ela é a única linha além do fold.
+function AcoesDecisao({ acoes }: { acoes: AcaoT[] }) {
+  return (
+    <div className="grid gap-4">
+      {acoes.map((a) => (
+        <div
+          key={a.nome}
+          className="flex flex-col items-center gap-3 border-t pt-4 text-center"
+        >
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <span
+              className={cn(
+                "text-2xl font-bold uppercase",
+                COR_ACAO[corDaAcao(a)]
+              )}
+            >
+              {a.nome}
+            </span>
+            {a.only && (
+              <span className="rounded-full border border-foreground/40 px-2.5 py-0.5 text-sm font-bold tracking-wide uppercase">
+                Only
+              </span>
+            )}
+          </div>
+          {a.only && (
+            <p className="text-base font-semibold text-muted-foreground uppercase">
+              {a.only}
+            </p>
+          )}
+          {a.texto && (
+            <p className="max-w-[60ch] text-lg leading-relaxed text-foreground/90">
+              <Rico>{a.texto}</Rico>
+            </p>
+          )}
+          {a.maos && a.maos.length > 0 && (
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-4">
+              {a.maos.map((m) => (
+                <Exemplo
+                  key={m.nome + m.cartas.join("")}
+                  cartas={m.cartas}
+                  nome={m.nome}
+                />
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 function Acoes({ acoes }: { acoes: AcaoT[] }) {
   return (
     <>
@@ -76,14 +143,18 @@ function Acoes({ acoes }: { acoes: AcaoT[] }) {
           key={a.nome}
           className="grid gap-2 border-t py-3 md:grid-cols-[9rem_minmax(0,1fr)] md:gap-x-4"
         >
-          <span className={cn("text-lg font-bold uppercase", COR_ACAO[a.cor])}>
+          <span
+            className={cn(
+              "text-lg font-bold uppercase",
+              COR_ACAO[corDaAcao(a)]
+            )}
+          >
             {a.nome}
           </span>
-          {a.maos && a.maos.length > 0 ? (
-            <ListaMaos maos={a.maos} />
-          ) : (
-            <TextoAcao texto={a.texto ?? ""} />
-          )}
+          <div className="grid gap-3">
+            {a.texto && <TextoAcao texto={a.texto} />}
+            {a.maos && a.maos.length > 0 && <ListaMaos maos={a.maos} />}
+          </div>
         </div>
       ))}
     </>
@@ -93,6 +164,8 @@ function Acoes({ acoes }: { acoes: AcaoT[] }) {
 function Abas({ abas }: { abas: AbaT[] }) {
   const [id, setId] = useState(abas[0].id)
   const aba = abas.find((a) => a.id === id) ?? abas[0]
+  // No replay da mesa (Multiway) tudo fica centralizado, inclusive o "Como pensar".
+  const replay = aba.blocos.every((b) => b.mesa)
 
   return (
     <>
@@ -100,11 +173,15 @@ function Abas({ abas }: { abas: AbaT[] }) {
         type="single"
         value={aba.id}
         onValueChange={(v) => v && setId(v)}
-        className="mb-6 flex flex-wrap justify-center gap-2"
+        className="mb-6 flex w-full flex-wrap justify-center gap-2.5"
         aria-label="Escolha o caso"
       >
         {abas.map((a) => (
-          <ToggleGroupItem key={a.id} value={a.id} className={ITEM}>
+          <ToggleGroupItem
+            key={a.id}
+            value={a.id}
+            className={cn(ITEM, "h-11 px-5 text-base")}
+          >
             {a.nome}
           </ToggleGroupItem>
         ))}
@@ -112,7 +189,10 @@ function Abas({ abas }: { abas: AbaT[] }) {
       <Card className="rounded-[22px]">
         <CardContent className="grid gap-10 p-5 sm:p-7">
           <p
-            className="max-w-[64ch] rounded-xl bg-primary/10 p-4 font-serif text-lg leading-relaxed"
+            className={cn(
+              "max-w-[64ch] rounded-xl bg-primary/10 p-4 font-serif text-lg leading-relaxed",
+              replay && "mx-auto text-center"
+            )}
             aria-live="polite"
           >
             <strong className="mb-1 block text-sm font-bold tracking-wide text-primary uppercase">
@@ -120,42 +200,62 @@ function Abas({ abas }: { abas: AbaT[] }) {
             </strong>
             <Rico>{aba.criterio}</Rico>
           </p>
-          {aba.blocos.map((b, i) => (
-            <div
-              key={b.grupo ?? b.rotulo ?? i}
-              className={cn(
-                "grid gap-8",
-                b.cartas && "md:grid-cols-[minmax(0,320px)_minmax(0,1fr)]"
-              )}
-            >
-              {b.cartas && (
-                <div className="flex flex-col items-start gap-4">
-                  <Cards codes={b.cartas} size="lg" />
-                  {b.turn && (
-                    <div className="flex items-center gap-3">
-                      <PlayingCard code={b.turn} size="lg" />
-                      <RotuloBoard>turn</RotuloBoard>
-                    </div>
-                  )}
-                  {b.rotulo && <RotuloBoard>{b.rotulo}</RotuloBoard>}
-                  {b.etiqueta && <Etq e={b.etiqueta} />}
-                </div>
-              )}
-              <div>
-                {b.grupo && <p className="pb-2 text-lg font-bold">{b.grupo}</p>}
-                {b.faixas?.map((f) => (
-                  <Faixa key={`${f.p}-${f.texto}`} p={f.p}>
-                    {f.maos && f.maos.length > 0 ? (
-                      <ListaMaos maos={f.maos} />
-                    ) : (
-                      <TextoAcao texto={f.texto} />
+          {replay ? (
+            <SituacoesMesa
+              key={aba.id}
+              blocos={aba.blocos}
+              renderAcoes={(acoes) => <AcoesDecisao acoes={acoes} />}
+            />
+          ) : (
+            aba.blocos.map((b, i) => (
+              <div
+                key={b.grupo ?? b.rotulo ?? i}
+                className={cn(
+                  "grid gap-8",
+                  b.cartas && "md:grid-cols-[minmax(0,320px)_minmax(0,1fr)]"
+                )}
+              >
+                {b.mesa && b.grupo && (
+                  <p className="text-center text-xl font-bold uppercase">
+                    {b.grupo}
+                  </p>
+                )}
+                {b.mesa && <MesaTeoria mesa={b.mesa} />}
+                {b.cartas && (
+                  <div className="flex flex-col items-start gap-4">
+                    <Cards
+                      codes={b.cartas}
+                      size={b.cartas.length > 3 ? "md" : "lg"}
+                    />
+                    {b.turn && (
+                      <div className="flex items-center gap-3">
+                        <PlayingCard code={b.turn} size="lg" />
+                        <RotuloBoard>turn</RotuloBoard>
+                      </div>
                     )}
-                  </Faixa>
-                ))}
-                {b.acoes && <Acoes acoes={b.acoes} />}
+                    {b.rotulo && <RotuloBoard>{b.rotulo}</RotuloBoard>}
+                    {b.etiqueta && <Etq e={b.etiqueta} />}
+                  </div>
+                )}
+                <div>
+                  {b.grupo && !b.mesa && (
+                    <p className="pb-2 text-lg font-bold">{b.grupo}</p>
+                  )}
+                  {b.faixas?.map((f) => (
+                    <Faixa key={`${f.p}-${f.texto}`} p={f.p}>
+                      <div className="grid gap-3">
+                        <TextoAcao texto={f.texto} />
+                        {f.maos && f.maos.length > 0 && (
+                          <ListaMaos maos={f.maos} />
+                        )}
+                      </div>
+                    </Faixa>
+                  ))}
+                  {b.acoes && <Acoes acoes={b.acoes} />}
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
           {aba.nota && <Nota className="-mt-4">{aba.nota}</Nota>}
         </CardContent>
       </Card>
@@ -199,9 +299,13 @@ function Conteudo({ s }: { s: SecaoT }) {
         <>
           {s.intro && <Intro>{s.intro}</Intro>}
           {s.titulo === "Em 30 segundos" ? (
-            <ListaPassos itens={s.itens} />
+            <ListaPassos itens={s.itens} board={s.board} />
           ) : (
-            <Lista itens={s.itens} tom={s.tom ?? tomDoTitulo(s.titulo)} />
+            <Lista
+              itens={s.itens}
+              board={s.board}
+              tom={s.tom ?? tomDoTitulo(s.titulo)}
+            />
           )}
         </>
       )
@@ -227,7 +331,13 @@ function Conteudo({ s }: { s: SecaoT }) {
                     {c.titulo}
                   </TituloMini>
                 </div>
-                {c.cartas && <Cards codes={c.cartas} size="sm" />}
+                {c.cartas && (
+                  <BoardExemplo
+                    board={{ cartas: c.cartas, turn: c.turn }}
+                    size="sm"
+                    centro={false}
+                  />
+                )}
                 {c.texto && (
                   <TextoMini>
                     <Rico>{c.texto}</Rico>
@@ -247,6 +357,7 @@ function Conteudo({ s }: { s: SecaoT }) {
                     ))}
                   </ul>
                 )}
+                {c.maos && c.maos.length > 0 && <ListaMaos maos={c.maos} />}
               </Card>
             ))}
           </div>
@@ -322,7 +433,11 @@ export default function TeoriaModulo() {
 
   return (
     <main>
-      <PageHeader title={mod.nome} lead={mod.spot} topo={<Voltar />}>
+      <PageHeader
+        title={mod.nome}
+        lead={mod.spot.toUpperCase()}
+        topo={<Voltar />}
+      >
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           {mod.tags.map((t) => (
             <Badge key={t} variant="outline">
