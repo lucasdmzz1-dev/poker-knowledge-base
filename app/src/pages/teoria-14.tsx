@@ -179,11 +179,14 @@ export default function Teoria14() {
                     >
                       {a.nome}
                     </span>
-                    <ul className="grid gap-3">
+                    <ul className="flex flex-wrap gap-x-5 gap-y-4">
                       {a.maos.map((m) => (
-                        <li key={m.texto} className="flex items-center gap-4">
+                        <li
+                          key={m.texto}
+                          className="flex flex-col items-start gap-1.5"
+                        >
                           <Cards codes={m.ex} size="sm" />
-                          <span className="text-lg font-semibold text-foreground">
+                          <span className="text-sm font-semibold text-foreground">
                             {m.texto}
                           </span>
                         </li>
