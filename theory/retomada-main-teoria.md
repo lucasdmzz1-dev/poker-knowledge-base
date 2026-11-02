@@ -42,16 +42,17 @@ Coordenar a teoria: dono do `theory/CLAUDE.md`, `theory/README.md`, `theory/MAPA
 
 ## 4. PRs
 
-- **#2** (mapa PRÉ/PÓS, retomada, economia de contexto) e **#3** (pendências, ordem de fontes) mergeados no `main` em 28/10/2026.
-- Nenhum PR do MAIN aberto.
+- **#2** (mapa PRÉ/PÓS, retomada, economia de contexto), **#3** (pendências, ordem de fontes) e **#4** (retomada) mergeados no `main` em 28/10/2026.
+- **Limpeza** (branch `theory/main-limpeza`): apagou `theory/16-PKO/CLAUDE.md` e `theory/16-PKO/tools/` (conferido com `diff`: as 70 mãos do CSV antigo estão no atual de 170, o JSON das árvores é idêntico, regras e dicionário antigos foram substituídos); `theory/CLAUDE_1.md` já não existia. Reescreveu o `theory/README.md` em português (16 módulos, lado e status, e "Como colar uma aula nova") e preencheu o `_TEMPLATE/` com o esqueleto dos 10 arquivos. PR aberto, aguardando revisão.
 
 ---
 
 ## 5. Próximos passos (em ordem)
 
-1. Rodar `/graphify --update` (semântico, com LLM) no `main`, para o grafo pegar o mapa, as pendências e a ordem de fontes. O `graphify` não vem instalado no ambiente na nuvem: `uv tool install graphifyy` e `export PATH="$HOME/.local/bin:$PATH"`.
-2. Limpeza (PR do MAIN): apagar `theory/16-PKO/CLAUDE.md`, `theory/16-PKO/tools/` (versão antiga de `theory/tools/pko/`) e `theory/CLAUDE_1.md`; atualizar `theory/README.md` (lista só até o 11, em inglês, status errado); preencher o `_TEMPLATE` (está vazio).
-3. Passar aos chats PRÉ e PÓS os itens de cada lado (ver seção 2 e os `06-Pendencias.md`).
+1. Revisar e mergear o PR da limpeza.
+2. Rodar `/graphify --update` (semântico) no `main`. Na sessão de 28/10 a instalação (`uv tool install graphifyy`) foi bloqueada pela permissão do ambiente: liberar antes ou rodar localmente.
+3. Próxima aula: colar no chat do lado do módulo (PRÉ ou PÓS), seguindo "Como colar uma aula nova" no `theory/README.md`. Módulo novo: o MAIN copia o `_TEMPLATE/`.
+4. Passar aos chats PRÉ e PÓS os itens de cada lado (seção 2 e os `06-Pendencias.md`), quando o Lucas pedir.
 
 ---
 
