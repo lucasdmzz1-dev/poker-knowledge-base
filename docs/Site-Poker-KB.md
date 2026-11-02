@@ -19,7 +19,7 @@ Vite, React 19, TypeScript estrito, Tailwind v4, shadcn/ui, react-router-dom, lu
 ## O que tem em cada área
 
 - **Teoria** (`pages/teoria-index.tsx`, `teoria-15.tsx`, `data/mod15.ts`): temas agrupados em Geral, Pré-flop, Flop, Turn, River, Blind war, 3bet pot e PKO, sem numeração.
-- **Prática** (`pages/pratica.tsx`, `components/poker/mesa.tsx`): treino de bet vs missed com mesa, hero no BTN, opener entre CO e HJ, 40bb. O RNG sorteia de 1 a 100 (`randomInt`), com botões B25, B50 e check.
+- **Prática** (`pages/pratica.tsx`, `components/poker/mesa.tsx`): treino de bet vs missed com mesa, hero no BTN, opener entre CO e HJ, 40bb. O RNG sorteia de 1 a 100 (`randomInt`), com botões B25, B50 e check. O tema Probe Turn (módulo 14) fica em `pages/pratica-probe.tsx` e `data/prat14.ts`: você no BB, turn definido, ações check-call, check-raise e bets de 40, 70 e 100%.
 - **Análise** (`pages/analise.tsx`), em quatro abas:
   - **Leaks do mês**: abre em "Prints e stats do HUD" (prints do mês e as 169 stats por seção). O botão "Ver os leaks do mês" leva à lista de leaks, separada em pré-flop e pós-flop.
   - **Comparação**: stats do HUD mês a mês e leaks, com as stats fixadas (estrela) primeiro.
