@@ -183,7 +183,16 @@ export function ler(board: string[], hero: string[]): Leitura {
     } else if (!pocket && br.includes(h1) && br.includes(h2)) {
       feita = "doisPares"
     } else if (pocket) {
-      feita = h1 > br[0] ? "overpair" : "underpair"
+      // Par de bolso: overpair acima do board; segundo par entre a primeira e a segunda
+      // carta; terceiro par entre a segunda e a terceira; underpair abaixo de todas.
+      feita =
+        h1 > br[0]
+          ? "overpair"
+          : h1 > br[1]
+            ? "secondPair"
+            : h1 > br[2]
+              ? "thirdPair"
+              : "underpair"
     } else {
       const par = hr.find((x) => br.includes(x))
       if (par !== undefined)
@@ -404,6 +413,22 @@ export function decidir(
     return null
   }
   if (L.flushDraw) return null
+
+  // Par de bolso abaixo do top pair fica no check-call, sem olhar os naipes.
+  if (
+    hero[0][0] === hero[1][0] &&
+    ["secondPair", "thirdPair", "underpair"].includes(L.feita)
+  )
+    return {
+      acao: "Check-call",
+      classe:
+        L.feita === "secondPair"
+          ? "Second pair (par de bolso)"
+          : L.feita === "thirdPair"
+            ? "Third pair (par de bolso)"
+            : "Underpair",
+      porque: "Pares com valor de showdown ficam no check-call.",
+    }
 
   if (est === "split") {
     if (L.feita === "topPair" || L.feita === "secondPair") {

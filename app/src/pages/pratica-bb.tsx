@@ -330,7 +330,14 @@ export default function PraticaBB({ onTema }: { onTema: (t: Tema) => void }) {
     <strong className="text-foreground">{NOME_ACAO[atual.size]}</strong>
   )
   let texto: ReactNode
-  if (ok) {
+  if (atual.bucket === 0) {
+    texto = (
+      <>
+        Esta mão nunca aposta neste split: o bucket dela é de {pct}, então dá
+        check, qualquer que seja o RNG.
+      </>
+    )
+  } else if (ok) {
     texto = apostar ? (
       <>
         Sua mão está no bucket de {pct} e o RNG {roll} cai na aposta. O size
