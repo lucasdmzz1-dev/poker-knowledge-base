@@ -17,7 +17,7 @@ export const ROTULO_TURN: Record<TurnId, string> = {
   alta: "Turn carta alta",
   flushBaixo: "Flush baixo",
   flushAlto: "Flush alto",
-  sequencia: "Sequência",
+  sequencia: "Turn que completa sequência",
   pareia: "Pareia o board",
 }
 
