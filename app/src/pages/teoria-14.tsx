@@ -179,7 +179,7 @@ export default function Teoria14() {
                     >
                       {a.nome}
                     </span>
-                    <ul className="grid grid-cols-2 gap-x-6 gap-y-5">
+                    <ul className="grid auto-cols-[9rem] grid-flow-col grid-rows-2 justify-start gap-x-6 gap-y-5">
                       {a.maos.map((m) => (
                         <li
                           key={m.texto}
