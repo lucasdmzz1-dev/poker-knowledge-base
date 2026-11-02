@@ -107,6 +107,11 @@ export default function PraticaCbet40({
           resp: a,
           esperado: atual.certa,
           ok: a === atual.certa,
+          board: board.board,
+          hero: atual.hero,
+          classe: atual.classe,
+          porque: atual.porque,
+          nota: `Abrindo do ${atual.pos}.`,
         },
       ])
       setResp(a)
