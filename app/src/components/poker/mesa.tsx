@@ -43,14 +43,36 @@ function lugarDe(pos: Pos, heroPos: Pos, gira: boolean): Pos {
   return LUGARES[k]
 }
 
+// Mesa genérica dos temas novos: herói e vilão em qualquer posição, com stacks, pote
+// e o texto da ação do vilão definidos pela questão.
+export interface MesaGen {
+  heroPos: Pos
+  vilaoPos: Pos
+  stack: number
+  stackHero?: number
+  stackVilao?: number
+  pote: number
+  rotuloVilao: string
+  // Vazio quando o vilão ainda não agiu.
+  acaoVilao: string
+}
+
 function stackNaMesa(
   pos: Pos,
   opener: Pos,
   probe: boolean,
   cbet: boolean,
   heroPos: Pos,
-  stackCbet: number
+  stackCbet: number,
+  gen?: MesaGen
 ): number {
+  if (gen) {
+    if (pos === gen.heroPos) return gen.stackHero ?? gen.stack
+    if (pos === gen.vilaoPos) return gen.stackVilao ?? gen.stack
+    if (pos === "SB") return gen.stack - 0.5
+    if (pos === "BB") return gen.stack - 1
+    return gen.stack
+  }
   // C-bet IP: o herói abriu 2 e o BB pagou. O SB pagou o blind morto de 0,5.
   if (cbet) {
     if (pos === heroPos || pos === "BB") return stackCbet - ABERTURA
@@ -163,6 +185,7 @@ function Assento({
   probe,
   cbet,
   stackCbet,
+  gen,
 }: {
   pos: Pos
   opener: Pos
@@ -170,8 +193,9 @@ function Assento({
   probe: boolean
   cbet: boolean
   stackCbet: number
+  gen?: MesaGen
 }) {
-  const [x, y, xm] = POS_TELA[lugarDe(pos, heroPos, probe || cbet)]
+  const [x, y, xm] = POS_TELA[lugarDe(pos, heroPos, probe || cbet || !!gen)]
   const heroi = pos === heroPos
   const abriu = pos === opener
   const noPote = heroi || abriu
@@ -203,7 +227,7 @@ function Assento({
           {pos}
         </span>
         <span className="text-[clamp(0.58rem,1.2vw,0.85rem)] text-muted-foreground tabular-nums">
-          {stackNaMesa(pos, opener, probe, cbet, heroPos, stackCbet)}
+          {stackNaMesa(pos, opener, probe, cbet, heroPos, stackCbet, gen)}
         </span>
       </div>
       {abriu && (
@@ -218,11 +242,13 @@ function Assento({
           )}
         >
           <span className="rounded-full bg-b50 px-2 py-0.5 text-[clamp(0.6rem,1.05vw,0.78rem)] font-bold text-[#1a0907]">
-            {cbet ? "Pagou" : "Abriu"} {ABERTURA}
+            {gen ? gen.rotuloVilao : `${cbet ? "Pagou" : "Abriu"} ${ABERTURA}`}
           </span>
-          <span className="rounded-full bg-secondary px-2 py-0.5 text-[clamp(0.6rem,1.05vw,0.78rem)] font-medium">
-            Check
-          </span>
+          {(!gen || gen.acaoVilao) && (
+            <span className="rounded-full bg-secondary px-2 py-0.5 text-[clamp(0.6rem,1.05vw,0.78rem)] font-medium">
+              {gen ? gen.acaoVilao : "Check"}
+            </span>
+          )}
         </span>
       )}
       {pos === "BTN" && (
@@ -249,6 +275,7 @@ export function Mesa({
   cbet = false,
   heroCbet = "BTN",
   stackCbet = 20,
+  gen,
 }: {
   opener: Opener
   board: string[]
@@ -264,9 +291,16 @@ export function Mesa({
   // Posição do herói no C-Bet IP (HJ, CO ou BTN) e o stack inicial de todos.
   heroCbet?: Pos
   stackCbet?: number
+  gen?: MesaGen
 }) {
-  const vilao: Pos = probe ? "BTN" : cbet ? "BB" : opener
-  const heroPos: Pos = probe ? "BB" : cbet ? heroCbet : "BTN"
+  const vilao: Pos = gen ? gen.vilaoPos : probe ? "BTN" : cbet ? "BB" : opener
+  const heroPos: Pos = gen
+    ? gen.heroPos
+    : probe
+      ? "BB"
+      : cbet
+        ? heroCbet
+        : "BTN"
   const estilo = { "--s": "clamp(40px, 7.2vw, 66px)" } as CSSProperties
   return (
     <div className="mx-auto w-full max-w-[880px]" style={estilo}>
@@ -297,7 +331,7 @@ export function Mesa({
       <div
         className="relative mb-5 aspect-[1.25/1] w-full sm:aspect-[2.2/1]"
         role="group"
-        aria-label={`Mesa: herói no ${heroPos} contra ${vilao}, pote de ${probe || cbet ? 4.5 : POTE_BB} bb`}
+        aria-label={`Mesa: herói no ${heroPos} contra ${vilao}, pote de ${gen ? gen.pote : probe || cbet ? 4.5 : POTE_BB} bb`}
       >
         <div
           className="absolute inset-x-[6%] inset-y-[12%] rounded-[999px] border-2 border-felt-line bg-felt/50"
@@ -313,6 +347,7 @@ export function Mesa({
             probe={probe}
             cbet={cbet}
             stackCbet={stackCbet}
+            gen={gen}
           />
         ))}
 
@@ -320,7 +355,9 @@ export function Mesa({
           <Cards codes={board} size="mesa" />
           <p className="text-center text-[clamp(0.75rem,1.6vw,1.05rem)] leading-tight">
             <span className="text-muted-foreground">Pote </span>
-            <b className="tabular-nums">{probe || cbet ? 4.5 : POTE_BB} bb</b>
+            <b className="tabular-nums">
+              {gen ? gen.pote : probe || cbet ? 4.5 : POTE_BB} bb
+            </b>
           </p>
         </div>
 

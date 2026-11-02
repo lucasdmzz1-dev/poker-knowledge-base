@@ -103,4 +103,4 @@ Todo tema novo da Prática usa os mesmos blocos, para ficar igual aos outros:
 - Botão "Voltar à seleção" no topo do jogo e seletor de tema na seleção (`SeletorTema`).
 - Textos em minúsculas, percentuais e tipo de board em negrito.
 
-Temas da Prática hoje: Bet vs Missed C-Bet (`pratica.tsx`), Probe Turn (`pratica-probe.tsx`, `data/prat14.ts`) C-Bet IP Short Stack (`pratica-cbet.tsx`, `data/prat01.ts`, mesa com `cbet`) e C-Bet IP 40bb (`pratica-cbet40.tsx`, `data/prat02.ts`, só o flop, herói no HJ, CO ou BTN).
+Temas da Prática hoje: Bet vs Missed C-Bet (`pratica.tsx`), Probe Turn (`pratica-probe.tsx`, `data/prat14.ts`) C-Bet IP Short Stack (`pratica-cbet.tsx`, `data/prat01.ts`, mesa com `cbet`) e C-Bet IP 40bb (`pratica-cbet40.tsx`, `data/prat02.ts`, só o flop, herói no HJ, CO ou BTN) e C-Bet OOP 40bb (`pratica-oop.tsx`, `data/prat05.ts`, só o flop, EP ou CO contra o BTN; a resposta de cada mão sai de regras que leem os naipes, em `decidir`).
