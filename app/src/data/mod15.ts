@@ -18,6 +18,7 @@ export interface Tipo {
   criterio: string
   nota: string
   buckets: Bucket[]
+  blocos?: { grupo: string; rotulo: string; codes: CardCode[] }[]
 }
 
 export interface Situacao {
@@ -130,6 +131,14 @@ export const mod15 = {
       criterio:
         "Board pareado, sempre. Seco: a terceira carta não forma sequência nem flush draw com o par (K-K-2, J-3-3). Carregado: forma (K-K-J, J-J-9).",
       nota: "O subtipo do K-K-7 como seco é inferência.",
+      blocos: [
+        { grupo: "Seco", rotulo: "Seco", codes: ["Ks", "Kh", "7c"] },
+        {
+          grupo: "Carregado",
+          rotulo: "Carregado, com flush draw",
+          codes: ["Kd", "Kh", "Jd"],
+        },
+      ],
       buckets: [
         { p: 75, grupo: "Seco", maos: "Fulls e trincas" },
         { p: 50, grupo: "Seco", maos: "Todo o restante" },
@@ -166,12 +175,45 @@ export const mod15 = {
     { b: ["Kd", "Kh", "Jc"], t: "dobrado", fixo: false },
   ] as RefBoard[],
 
-  duvidas: [
-    "Boards intermediários entre semi conectado e seco (9-6-3, 8-6-2).",
-    "Até onde vai o semi conectado nos boards baixos (5-4-3, 7-5-4, 8-6-4).",
-    "Cartas do meio no dobrado (K-K-9, K-K-8, K-K-T).",
-    "Seu range de call pré-flop por posição, para classificar o top pair.",
-  ],
+  // Só para a tela da teoria: o treino (situacoes) não usa estes exemplos.
+  // Board de referência do dobrado seco: K♠ K♥ 7♣.
+  exemplosDobrado: [
+    { id: "dob-1", grupo: "Seco", p: 75, classe: "Full", hero: ["7h", "7d"] },
+    {
+      id: "dob-2",
+      grupo: "Seco",
+      p: 75,
+      classe: "Trincas",
+      hero: ["Kd", "Qc"],
+    },
+    {
+      id: "dob-3",
+      grupo: "Seco",
+      p: 50,
+      classe: "Todo o restante",
+      hero: ["Ad", "Qd"],
+    },
+    {
+      id: "dob-4",
+      grupo: "Carregado",
+      p: 50,
+      classe: "Mãos com mais equity",
+      hero: ["Qd", "Td"],
+    },
+    {
+      id: "dob-5",
+      grupo: "Carregado",
+      p: 25,
+      classe: "Todo o restante",
+      hero: ["9c", "8c"],
+    },
+  ] as {
+    id: string
+    grupo: string
+    p: number
+    classe: string
+    hero: CardCode[]
+  }[],
 
   situacoes: [
     {

@@ -3,11 +3,6 @@ import { Link } from "react-router-dom"
 import { PageHeader } from "@/components/page-header"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Cards, PlayingCard, RngStrip } from "@/components/poker/cards"
 import { mod15, tipoById, type TipoId } from "@/data/mod15"
@@ -50,6 +45,13 @@ function Secao({
   )
 }
 
+function exemplosDoBucket(tipo: TipoId, p: number, grupo?: string) {
+  if (tipo === "dobrado") {
+    return mod15.exemplosDobrado.filter((e) => e.p === p && e.grupo === grupo)
+  }
+  return mod15.situacoes.filter((s) => s.tipo === tipo && s.bucket === p)
+}
+
 export default function Teoria15() {
   const [tipoId, setTipoId] = useState<TipoId>("semi")
   const [freq, setFreq] = useState(75)
@@ -62,8 +64,6 @@ export default function Teoria15() {
       verbo: "Continuar",
     })
   }, [])
-
-  let grupoAnterior: string | undefined
 
   return (
     <main>
@@ -83,6 +83,15 @@ export default function Teoria15() {
           <Badge variant="outline">Flop</Badge>
           <Badge variant="outline">Em posição</Badge>
           <Badge variant="outline">Sizes B25 e B50</Badge>
+        </div>
+        <div className="mx-auto mt-8 aspect-video w-full max-w-[720px] overflow-hidden rounded-[22px] border">
+          <iframe
+            src="https://www.youtube.com/embed/3sDt8hoFNYE"
+            title="Aula: Bet vs Missed C-Bet"
+            className="size-full"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowFullScreen
+          />
         </div>
       </PageHeader>
       <div className="mx-auto max-w-[1080px] px-5 pb-20">
@@ -105,51 +114,85 @@ export default function Teoria15() {
             ))}
           </ToggleGroup>
           <Card className="rounded-[22px]">
-            <CardContent className="grid gap-8 p-7 md:grid-cols-[minmax(0,320px)_minmax(0,1fr)]">
-              <div className="flex flex-col items-start gap-4">
-                <Cards codes={tipo.exemplo} size="lg" />
-                <Badge
-                  className={cn(
-                    "px-3.5 py-1 text-sm font-bold text-[#1a0907]",
-                    tipo.size === "B25" ? "bg-b25" : "bg-b50"
-                  )}
+            <CardContent className="grid gap-10 p-7">
+              <p className="max-w-[60ch] font-serif text-lg" aria-live="polite">
+                {tipo.criterio}
+              </p>
+              {(
+                tipo.blocos ?? [
+                  { grupo: undefined, rotulo: undefined, codes: tipo.exemplo },
+                ]
+              ).map((bloco) => (
+                <div
+                  key={bloco.grupo ?? "unico"}
+                  className="grid gap-8 md:grid-cols-[minmax(0,320px)_minmax(0,1fr)]"
                 >
-                  {tipo.size}
-                </Badge>
-              </div>
-              <div aria-live="polite">
-                <p className="mb-2 max-w-[60ch] font-serif text-lg">
-                  {tipo.criterio}
-                </p>
-                {tipo.buckets.map((b) => {
-                  const novoGrupo = b.grupo && b.grupo !== grupoAnterior
-                  grupoAnterior = b.grupo
-                  return (
-                    <div key={`${b.grupo ?? ""}-${b.p}-${b.maos}`}>
-                      {novoGrupo && (
-                        <div className="pt-3 font-medium">{b.grupo}</div>
+                  <div className="flex flex-col items-start gap-4">
+                    <Cards codes={bloco.codes} size="lg" />
+                    {bloco.rotulo && (
+                      <span className="text-sm font-medium text-muted-foreground">
+                        {bloco.rotulo}
+                      </span>
+                    )}
+                    <Badge
+                      className={cn(
+                        "px-3.5 py-1 text-sm font-bold text-[#1a0907]",
+                        tipo.size === "B25" ? "bg-b25" : "bg-b50"
                       )}
-                      <div className="grid grid-cols-[4.2ch_minmax(0,1fr)] items-center gap-x-3.5 gap-y-1 border-t py-3">
-                        <span className="text-lg font-bold tabular-nums">
-                          {b.p}%
-                        </span>
-                        <span className="h-2 overflow-hidden rounded-full bg-secondary">
-                          <i
-                            className="block h-full rounded-full bg-primary"
-                            style={{ width: `${b.p}%` }}
-                          />
-                        </span>
-                        <span className="col-start-2 text-muted-foreground">
-                          {b.maos}
-                        </span>
-                      </div>
-                    </div>
-                  )
-                })}
-                <p className="mt-3 max-w-[60ch] text-muted-foreground">
-                  {tipo.nota}
-                </p>
-              </div>
+                    >
+                      {tipo.size}
+                    </Badge>
+                  </div>
+                  <div>
+                    {bloco.grupo && (
+                      <p className="pb-2 text-lg font-bold">{bloco.grupo}</p>
+                    )}
+                    {tipo.buckets
+                      .filter((b) => b.grupo === bloco.grupo)
+                      .map((b) => (
+                        <div
+                          key={`${b.p}-${b.maos}`}
+                          className="grid grid-cols-[4.2ch_minmax(0,1fr)] items-center gap-x-3.5 gap-y-1 border-t py-3"
+                        >
+                          <span className="text-lg font-bold tabular-nums">
+                            {b.p}%
+                          </span>
+                          <span className="h-2 overflow-hidden rounded-full bg-secondary">
+                            <i
+                              className="block h-full rounded-full bg-primary"
+                              style={{ width: `${b.p}%` }}
+                            />
+                          </span>
+                          {exemplosDoBucket(tipo.id, b.p, b.grupo).length >
+                          0 ? (
+                            <ul className="col-start-2 flex flex-wrap gap-x-6 gap-y-4">
+                              {exemplosDoBucket(tipo.id, b.p, b.grupo).map(
+                                (s) => (
+                                  <li
+                                    key={s.id}
+                                    className="flex flex-col items-center gap-2"
+                                  >
+                                    <Cards codes={s.hero} size="sm" />
+                                    <span className="text-center text-sm leading-snug font-medium text-foreground">
+                                      {s.classe}
+                                    </span>
+                                  </li>
+                                )
+                              )}
+                            </ul>
+                          ) : (
+                            <span className="col-start-2 text-lg font-semibold text-foreground">
+                              {b.maos}
+                            </span>
+                          )}
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              ))}
+              <p className="-mt-4 max-w-[60ch] text-muted-foreground">
+                {tipo.nota}
+              </p>
             </CardContent>
           </Card>
         </Secao>
@@ -202,19 +245,7 @@ export default function Teoria15() {
         </Secao>
 
         <section className="mt-16">
-          <Collapsible className="rounded-xl border bg-card px-4 py-3.5">
-            <CollapsibleTrigger className="cursor-pointer font-medium">
-              Dúvidas abertas (levar ao coach)
-            </CollapsibleTrigger>
-            <CollapsibleContent>
-              <ul className="mt-3 list-disc pl-5 text-muted-foreground">
-                {mod15.duvidas.map((d) => (
-                  <li key={d}>{d}</li>
-                ))}
-              </ul>
-            </CollapsibleContent>
-          </Collapsible>
-          <p className="mt-3 max-w-[60ch] text-muted-foreground">
+          <p className="max-w-[60ch] text-muted-foreground">
             Fonte: {mod15.fonte}.
           </p>
         </section>
