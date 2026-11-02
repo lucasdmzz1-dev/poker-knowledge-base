@@ -1368,9 +1368,9 @@
     "semantic_hash": ""
   },
   "app/src/App.tsx": {
-    "mtime": 1793594606.5632648,
-    "seen": 1793614195.0181801,
-    "ast_hash": "c36de6e27f94728d170034cbc743875f",
+    "mtime": 1793657481.3317883,
+    "seen": 1793657722.5081875,
+    "ast_hash": "f9e66d2bdfb1dece84b2a06b06317f3e",
     "semantic_hash": ""
   },
   "app/src/components/layout.tsx": {
@@ -1494,9 +1494,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793653514.9414322,
-    "seen": 1793653534.907729,
-    "ast_hash": "19055f0f76b18253cd650af4baa452d0",
+    "mtime": 1793657654.6626015,
+    "seen": 1793657722.522965,
+    "ast_hash": "9dc09603d1bdb3683042fd84a7d8db67",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2370,9 +2370,9 @@
     "semantic_hash": ""
   },
   "docs/Site-Poker-KB.md": {
-    "mtime": 1793653514.9424338,
-    "seen": 1793653534.9297833,
-    "ast_hash": "89296ecb6cb2c003ba926c08f17bfd1f",
+    "mtime": 1793657706.364306,
+    "seen": 1793657722.54586,
+    "ast_hash": "6f4ff868aba73bd9c1831ef37f7d9f18",
     "semantic_hash": ""
   },
   "app/src/data/mod14.ts": {
@@ -2394,9 +2394,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-probe.tsx": {
-    "mtime": 1793651217.8270805,
-    "seen": 1793653534.907729,
-    "ast_hash": "a6a5d6f69337189b68ee0aad872134e9",
+    "mtime": 1793657664.0355415,
+    "seen": 1793657722.522965,
+    "ast_hash": "37a3e73ec3d62189eacaae2b7c69fa66",
     "semantic_hash": ""
   },
   "app/src/components/teoria/blocos.tsx": {
@@ -2526,9 +2526,9 @@
     "semantic_hash": ""
   },
   "app/src/components/portao.tsx": {
-    "mtime": 1793594606.6118186,
-    "seen": 1793614195.0181801,
-    "ast_hash": "462039443837257de01a4b97b9e83fb1",
+    "mtime": 1793657481.3317883,
+    "seen": 1793657722.5101898,
+    "ast_hash": "fe56e21f3509ba8ee4ce24ca1d0ee441",
     "semantic_hash": ""
   },
   "app/src/components/teoria/icm-ranges.tsx": {
@@ -2568,9 +2568,9 @@
     "semantic_hash": ""
   },
   "app/src/lib/nuvem.ts": {
-    "mtime": 1793594606.632037,
-    "seen": 1793614195.0181801,
-    "ast_hash": "522eabcd9bcc0cfd18f37a1446eb3ed6",
+    "mtime": 1793657481.3327904,
+    "seen": 1793657722.5192022,
+    "ast_hash": "eec4a1a5c8bd8f9918528624e21cf756",
     "semantic_hash": ""
   },
   "app/src/lib/sync.ts": {
@@ -2610,9 +2610,9 @@
     "semantic_hash": ""
   },
   "app/src/components/poker/resultado-final.tsx": {
-    "mtime": 1793648548.3237948,
-    "seen": 1793648571.451336,
-    "ast_hash": "aac27da69513f1b2836dae64ad60f7c2",
+    "mtime": 1793657702.6542933,
+    "seen": 1793657722.5101898,
+    "ast_hash": "010d0033664c2a642281bcab5afa2103",
     "semantic_hash": ""
   },
   "app/src/data/prat01.ts": {
@@ -2676,15 +2676,39 @@
     "semantic_hash": ""
   },
   "app/src/data/ranges.ts": {
-    "mtime": 1793653514.9401376,
-    "seen": 1793653534.901209,
-    "ast_hash": "67f96c61001d06199c570c03a8a6151b",
+    "mtime": 1793657566.0229864,
+    "seen": 1793657722.515696,
+    "ast_hash": "8ae702dbb4cb4ed543a32c2b6dc6d691",
     "semantic_hash": ""
   },
   "app/src/data/prat15.ts": {
-    "mtime": 1793653514.9391284,
-    "seen": 1793653534.901209,
-    "ast_hash": "a4f43f718f6f90a14d9fdd4164b40c65",
+    "mtime": 1793657565.9962957,
+    "seen": 1793657722.515696,
+    "ast_hash": "e63ebd5ac36b58ed468246c849f85609",
+    "semantic_hash": ""
+  },
+  "app/src/data/prat17.ts": {
+    "mtime": 1793657609.2885604,
+    "seen": 1793657722.515696,
+    "ast_hash": "6203f34e8925a5bb5c1d2e2515be8e98",
+    "semantic_hash": ""
+  },
+  "app/src/lib/uso.ts": {
+    "mtime": 1793657481.3327904,
+    "seen": 1793657722.5209575,
+    "ast_hash": "47a266d77a5109df3b41fac99a082339",
+    "semantic_hash": ""
+  },
+  "app/src/pages/admin.tsx": {
+    "mtime": 1793657481.3342981,
+    "seen": 1793657722.5219646,
+    "ast_hash": "7b6d204d68fac0963e2a893203fe6b3f",
+    "semantic_hash": ""
+  },
+  "app/src/pages/pratica-bb.tsx": {
+    "mtime": 1793657654.119678,
+    "seen": 1793657722.5219646,
+    "ast_hash": "a8c70870856dc335c3bc820dbb4c07a7",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

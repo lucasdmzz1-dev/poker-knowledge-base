@@ -60,13 +60,14 @@ function temBDSD(board: string[], hero: string[], jaTemDraw: boolean): boolean {
 
 // Força do top pair relativa ao range que chega: forte são os dois melhores kickers,
 // fraco são os piores, o resto é médio.
-function forcaDoTopPair(
+export function forcaDoTopPair(
   board: string[],
-  hero: string[]
+  hero: string[],
+  classes: string[] = classesQueOBTNPaga()
 ): "forte" | "medio" | "fraco" {
   const topo = Math.max(...board.map(rk))
   const kickers = new Set<number>()
-  for (const classe of classesQueOBTNPaga()) {
+  for (const classe of classes) {
     const [a, b] = [classe[0], classe[1]]
     if (classe.length === 2) continue
     const ra = R.indexOf(a) + 2
