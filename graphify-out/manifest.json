@@ -2586,9 +2586,9 @@
     "semantic_hash": ""
   },
   "app/src/components/analise/leaks.tsx": {
-    "mtime": 1793584986.5473638,
-    "seen": 1793585013.20506,
-    "ast_hash": "b913b7d350b84c22e3fc3a042ff78341",
+    "mtime": 1793585069.4672587,
+    "seen": 1793585114.9252126,
+    "ast_hash": "4e0610be909322f3cd908062b78b2999",
     "semantic_hash": ""
   },
   "app/src/components/analise/painel.tsx": {
@@ -2610,9 +2610,9 @@
     "semantic_hash": ""
   },
   "app/src/lib/analise.ts": {
-    "mtime": 1793584941.469089,
-    "seen": 1793584972.3859706,
-    "ast_hash": "0c9b6477f9709defa300369490c05bf4",
+    "mtime": 1793585095.0946414,
+    "seen": 1793585114.9294424,
+    "ast_hash": "a187f6e8ca6b1341f2aa99919466f347",
     "semantic_hash": ""
   },
   "app/src/lib/hud.ts": {

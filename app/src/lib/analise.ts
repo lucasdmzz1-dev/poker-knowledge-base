@@ -377,9 +377,9 @@ export function secaoDoLeak(l: Leak): string {
   if (l.secao && SECOES_LEAK.includes(l.secao)) return l.secao
   const t = `${l.spot} ${l.stat}`.toLowerCase()
   if (l.fase === "preflop") {
-    if (/steal|(sb|bb)/.test(t)) return "Blind war"
-    if (/3bet/.test(t)) return "SRP como 3beter"
+    if (/3-?bet/.test(t)) return "SRP como 3beter"
     if (/flat/.test(t)) return "SRP como caller"
+    if (/^(sb|bb)/.test(l.spot.toLowerCase())) return "Blind war"
     return "Pré-flop"
   }
   if (/3bet pot/.test(t)) return "3bet pot"

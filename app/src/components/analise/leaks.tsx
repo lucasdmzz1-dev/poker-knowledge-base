@@ -446,9 +446,7 @@ function LeaksLista({
                             Tirar
                           </button>
                         </span>
-                      ) : (
-                        <span />
-                      )}
+                      ) : null}
                       <span className="flex flex-wrap items-center gap-3">
                         <select
                           aria-label={`Divisão de ${l.spot} · ${l.stat}`}
