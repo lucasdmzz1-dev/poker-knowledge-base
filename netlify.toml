@@ -1,0 +1,10 @@
+# Alternativa ao GitHub Pages, para quando o repositório virar privado.
+# Netlify/Cloudflare Pages: aponte para este repositório e crie as variáveis
+# VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY no painel do serviço.
+[build]
+  base = "app"
+  command = "corepack enable && pnpm install --frozen-lockfile && pnpm build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

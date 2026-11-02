@@ -71,6 +71,8 @@ O workflow `.github/workflows/publicar-site.yml` constrói a pasta `app/` e publ
 3. Rode o workflow uma vez (Actions → Publicar site → Run workflow). O endereço aparece no fim da execução.
 4. No Supabase, em Authentication → URL Configuration, ponha o endereço do site em Site URL.
 
+Se o repositório virar privado, o GitHub Pages deixa de servir no plano gratuito. Nesse caso use o Netlify ou o Cloudflare Pages (aceitam repositório privado): o `netlify.toml` já tem o build (`pnpm build` em `app/`, saída `dist`); crie as duas variáveis do Supabase no painel do serviço e troque o Site URL no Supabase. Desligue o workflow do GitHub Pages para não falhar.
+
 O repositório é público: não coloque dados pessoais nele. Os dados de cada jogador ficam só na conta dele.
 
 ## Fluxo mensal
