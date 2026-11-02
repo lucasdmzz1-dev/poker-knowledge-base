@@ -183,7 +183,7 @@ export const mod15 = {
       id: "dob-2",
       grupo: "Seco",
       p: 75,
-      classe: "Trinca de K",
+      classe: "Trincas",
       hero: ["Kd", "Qc"],
     },
     {
