@@ -22,7 +22,7 @@ Roteiro usado no Probe Turn (módulo 14) e no C-Bet IP Short Stack (módulo 01).
 - Qual é a posição do herói, o que já aconteceu (ações até aqui), o stack e o pote.
 - Quais ações o botão oferece, com as teclas.
 - Quais tipos de board ou de turn existem e qual é a frequência de cada um.
-- A mão do herói tem que ser uma mão que ele abre (ou defende) daquela posição: use `app/src/data/ranges.ts` (`abre`, `btnPaga`, `bbPaga`). Os ranges de lá vêm do Poker Academy (Charts, ChipEV, Regular, 40bb e BTN de 20bb, lidos em 02/11/2026) e contam como "abre" a mão com 50% ou mais da ação. O EP do módulo 05 é o EP2 do site (9 jogadores).
+- A mão do herói tem que ser uma mão que ele abre (ou defende) daquela posição: use `app/src/data/ranges.ts` (`abre`, `btnPaga`, `bbPaga`). Os ranges de lá vêm do Poker Academy (Charts, ChipEV, Regular, 40bb e BTN de 20bb, lidos em 02/11/2026) e contam como "abre" ou "paga" a mão com qualquer frequência dessa ação, mesmo baixa. A mão que o site manda 100% para outra ação (fold ou 3bet) fica de fora. O EP do módulo 05 é o EP2 do site (9 jogadores).
 - Cada mão precisa vir de uma categoria que a teoria ou a transcrição cita de forma explícita. Não invente mão. Confira:
   - se a mão faz o que a classe diz (par, draw, backdoor, blocker);
   - se as cartas não repetem as do board.

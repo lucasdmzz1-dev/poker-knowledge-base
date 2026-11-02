@@ -29,7 +29,7 @@ export type PosRange = "EP2" | "HJ" | "CO" | "BTN" | "BTN20"
 
 // A mão ("AhKd") como classe do range ("AKo").
 const ORDEM_RANKS = "AKQJT98765432"
-export function classeDaMao(m: readonly [string, string]): string {
+export function classeDaMao(m: readonly string[]): string {
   const [a, b] = m
   const [r1, r2] = [a[0], b[0]].sort(
     (x, y) => ORDEM_RANKS.indexOf(x) - ORDEM_RANKS.indexOf(y)
@@ -72,8 +72,8 @@ const TEXTO_RFI: Record<PosRange, string> = {
 // A posição abre a mão em pelo menos `min`% das vezes?
 export function abre(
   pos: PosRange,
-  m: readonly [string, string],
-  min = 50
+  m: readonly string[],
+  min = 0.01
 ): boolean {
   return (tabela(TEXTO_RFI[pos]).get(classeDaMao(m))?.R ?? 0) >= min
 }
@@ -81,13 +81,13 @@ export function abre(
 // O BTN paga o open (call de pelo menos `min`%)?
 export function btnPaga(
   contra: "CO" | "HJ",
-  m: readonly [string, string],
-  min = 50
+  m: readonly string[],
+  min = 0.01
 ): boolean {
   return (tabela(BTN_CONTRA_OPEN[contra]).get(classeDaMao(m))?.C ?? 0) >= min
 }
 
 // O BB paga o open do BTN?
-export function bbPaga(m: readonly [string, string], min = 50): boolean {
+export function bbPaga(m: readonly string[], min = 0.01): boolean {
   return (tabela(BB_CONTRA_BTN).get(classeDaMao(m))?.C ?? 0) >= min
 }

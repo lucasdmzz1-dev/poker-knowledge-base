@@ -1452,9 +1452,9 @@
     "semantic_hash": ""
   },
   "app/src/data/mod15.ts": {
-    "mtime": 1793646575.00654,
-    "seen": 1793646604.1729238,
-    "ast_hash": "f85507830115c614bb98e7b45d43331b",
+    "mtime": 1793647442.0488217,
+    "seen": 1793647603.8793118,
+    "ast_hash": "60ef3b94b5c5c825d60694731d85d3b7",
     "semantic_hash": ""
   },
   "app/src/lib/poker.ts": {
@@ -1494,9 +1494,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793646362.8446298,
-    "seen": 1793646423.4289272,
-    "ast_hash": "d5dc9001c52dba50ba8a04fbff8e25b5",
+    "mtime": 1793647442.6513798,
+    "seen": 1793647603.8870103,
+    "ast_hash": "029ae15cf6995187ab4aa870aca1a3ce",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2646,9 +2646,9 @@
     "semantic_hash": ""
   },
   "docs/Pratica-Novo-Tema.md": {
-    "mtime": 1793647158.4506555,
-    "seen": 1793647175.938257,
-    "ast_hash": "a6ab8c5af63cb896870cf500e36b5b15",
+    "mtime": 1793647457.0360565,
+    "seen": 1793647603.9093118,
+    "ast_hash": "3dec5b4360a6eed07ae37109f84c09a1",
     "semantic_hash": ""
   },
   "docs/Pendencias-Teoria-Site.md": {
@@ -2676,9 +2676,9 @@
     "semantic_hash": ""
   },
   "app/src/data/ranges.ts": {
-    "mtime": 1793647092.0725944,
-    "seen": 1793647175.9072018,
-    "ast_hash": "9b72a83232c8740b6d565a3c5d76dc44",
+    "mtime": 1793647453.3805711,
+    "seen": 1793647603.8804684,
+    "ast_hash": "19a7ac3e97a7485b3f6d095fb3bec362",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {
