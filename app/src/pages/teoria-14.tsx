@@ -101,19 +101,17 @@ export default function Teoria14() {
           <Badge variant="outline">Fora de posição</Badge>
           <Badge variant="outline">Sizes B40, B70 e B100</Badge>
         </div>
+        <div className="mx-auto mt-8 aspect-video w-full max-w-[720px] overflow-hidden rounded-[22px] border">
+          <iframe
+            src="https://www.youtube.com/embed/CkP1v_BjJcU"
+            title="Aula: Probe Turn"
+            className="size-full"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowFullScreen
+          />
+        </div>
       </PageHeader>
       <div className="mx-auto max-w-[1080px] px-5 pb-20">
-        <Secao titulo="Aula">
-          <a
-            href="https://youtu.be/CkP1v_BjJcU"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-between gap-4 rounded-[18px] border bg-card px-5 py-4 transition-[border-color,background-color] duration-150 hover:border-primary hover:bg-secondary"
-          >
-            <span className="font-medium">Assistir a aula no YouTube</span>
-            <Badge variant="outline">Abre em outra aba</Badge>
-          </a>
-        </Secao>
         <Secao titulo="Em 30 segundos">
           <Lista itens={mod14.em30} />
         </Secao>
