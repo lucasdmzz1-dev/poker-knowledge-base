@@ -6,6 +6,7 @@ const m10: ModuloTeoria = {
   nome: "Multiway Pot",
   spot: "Pote a três · EP, BTN e BB · flop e turn · cerca de 40bb",
   tags: ["Flop e turn", "Pote a três", "40bb"],
+  videos: [{ id: "cafsU12tjM4" }],
   secoes: [
     {
       tipo: "lista",
@@ -284,8 +285,6 @@ const m10: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/10-MULTIWAY-POT (guideline e estudo com solver). A guideline não traz boards nem mãos de exemplo",
 }
 
 export default m10

@@ -30,6 +30,7 @@ const m13: ModuloTeoria = {
   nome: "ICM e Risk Premium",
   spot: "Do início do torneio até a mesa final, com ênfase de 30% do field até a FT · 11bb a 120bb",
   tags: ["Pré-flop", "ICM", "Risk premium", "Vanilla e PKO"],
+  videos: [{ id: "S3IhYiZAJPo" }],
   secoes: [
     {
       tipo: "lista",
@@ -103,18 +104,18 @@ const m13: ModuloTeoria = {
       colunas: 3,
       itens: [
         {
-          etiqueta: { texto: "5%", cor: "claro" },
+          etiqueta: { texto: "5%", cor: "branco" },
           titulo: "Padrão",
           texto:
             "Mãos normais. Quem treina em 10% do field já considera algo próximo.",
         },
         {
-          etiqueta: { texto: "10%", cor: "vermelho" },
+          etiqueta: { texto: "10%", cor: "amarelo" },
           titulo: "Risco e recompensa desfavoráveis",
           texto: "Você precisa dominar bem o adversário.",
         },
         {
-          etiqueta: { texto: "15%", cor: "verde" },
+          etiqueta: { texto: "15%", cor: "vermelho" },
           titulo: "Muito ruim",
           texto:
             "Você pode cair e beneficiar outro short stack. Precisa esmagar o adversário.",
@@ -325,6 +326,12 @@ const m13: ModuloTeoria = {
       ],
     },
     {
+      tipo: "icm-ranges",
+      titulo: "O mesmo spot com 25% e 16% do field",
+      intro:
+        "Compare o range do solver com **25% left** e com **16% left**, perto da bolha. Escolha a situação e ative as **diferenças** para ver o que entra, o que sai e o que muda de ação.",
+    },
+    {
       tipo: "lista",
       titulo: "Estrutura de pagamento",
       itens: [
@@ -367,8 +374,6 @@ const m13: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/13-ICM (guideline e aula). Pareia com o módulo 12 (Reta Final). Os números são os do GTO Wizard mostrados na aula, e dois deles (RP do SB cobrindo o BB) estão só na fala",
 }
 
 export default m13

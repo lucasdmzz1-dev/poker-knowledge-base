@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 import { PageHeader } from "@/components/page-header"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -10,13 +9,15 @@ import {
   Exemplo,
   Exemplos,
   Faixa,
-  Fonte,
   Intro,
   ITEM,
   Lista,
   Nota,
   RotuloBoard,
   Secao,
+  Secoes,
+  Voltar,
+  Videos,
   TextoMini,
   TituloMini,
 } from "@/components/teoria/blocos"
@@ -49,34 +50,15 @@ export default function Teoria15() {
 
   return (
     <main>
-      <PageHeader
-        title={mod15.nome}
-        lead={mod15.spot}
-        topo={
-          <Link
-            to="/teoria"
-            className="transition-colors duration-150 hover:text-foreground"
-          >
-            ‹ Teoria
-          </Link>
-        }
-      >
+      <PageHeader title={mod15.nome} lead={mod15.spot} topo={<Voltar />}>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <Badge variant="outline">Flop</Badge>
           <Badge variant="outline">Em posição</Badge>
           <Badge variant="outline">Sizes B25 e B50</Badge>
         </div>
-        <div className="mx-auto mt-8 aspect-video w-full max-w-[720px] overflow-hidden rounded-[22px] border">
-          <iframe
-            src="https://www.youtube.com/embed/3sDt8hoFNYE"
-            title="Aula: Bet vs Missed C-Bet"
-            className="size-full"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-            allowFullScreen
-          />
-        </div>
+        <Videos videos={[{ id: "3sDt8hoFNYE" }]} titulo={mod15.nome} />
       </PageHeader>
-      <div className="mx-auto max-w-[1080px] px-5 pb-20">
+      <Secoes>
         <Secao titulo="Em 30 segundos">
           <Lista itens={mod15.em30} />
         </Secao>
@@ -200,9 +182,7 @@ export default function Teoria15() {
         <Secao titulo="Regras de bolso">
           <Lista itens={mod15.pocket} />
         </Secao>
-
-        <Fonte>Fonte: {mod15.fonte}.</Fonte>
-      </div>
+      </Secoes>
     </main>
   )
 }

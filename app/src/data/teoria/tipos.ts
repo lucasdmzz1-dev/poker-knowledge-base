@@ -1,7 +1,7 @@
 import type { CardCode } from "@/data/mod15"
 
 // Cores das etiquetas de size e dos nomes de ação. Cada módulo escolhe a sua.
-export type CorEtiqueta = "claro" | "vermelho" | "verde"
+export type CorEtiqueta = "claro" | "vermelho" | "verde" | "branco" | "amarelo"
 export type CorAcao = "verde" | "branco" | "vermelho"
 
 export interface Etiq {
@@ -65,7 +65,14 @@ export interface BoardRefT {
 }
 
 export type SecaoT =
-  | { tipo: "lista"; titulo: string; intro?: string; itens: string[] }
+  | {
+      tipo: "lista"
+      titulo: string
+      intro?: string
+      itens: string[]
+      // negativo para erros, positivo para regras; sem tom, itens numerados.
+      tom?: "neutro" | "negativo" | "positivo"
+    }
   | {
       tipo: "cartoes"
       titulo: string
@@ -76,6 +83,8 @@ export type SecaoT =
   | { tipo: "abas"; titulo: string; intro?: string; abas: AbaT[] }
   | { tipo: "boards"; titulo: string; intro?: string; itens: BoardRefT[] }
   | { tipo: "rng"; titulo: string; intro?: string; nota?: string }
+  | { tipo: "icm-ranges"; titulo: string; intro?: string }
+  | { tipo: "icm-ranges"; titulo: string; intro?: string }
 
 export interface ModuloTeoria {
   // Parte final da rota: /teoria/<slug>
@@ -86,8 +95,7 @@ export interface ModuloTeoria {
   nome: string
   spot: string
   tags: string[]
-  // Id do vídeo do YouTube, quando houver aula.
-  video?: string
+  // Aulas do YouTube (id do vídeo), quando houver.
+  videos?: { id: string; nome?: string }[]
   secoes: SecaoT[]
-  fonte: string
 }
