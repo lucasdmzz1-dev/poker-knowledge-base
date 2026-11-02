@@ -45,6 +45,10 @@ function Secao({
   )
 }
 
+function exemplosDoBucket(tipo: TipoId, p: number) {
+  return mod15.situacoes.filter((s) => s.tipo === tipo && s.bucket === p)
+}
+
 export default function Teoria15() {
   const [tipoId, setTipoId] = useState<TipoId>("semi")
   const [freq, setFreq] = useState(75)
@@ -143,9 +147,25 @@ export default function Teoria15() {
                             style={{ width: `${b.p}%` }}
                           />
                         </span>
-                        <span className="col-start-2 text-lg font-semibold text-foreground">
-                          {b.maos}
-                        </span>
+                        {exemplosDoBucket(tipo.id, b.p).length > 0 ? (
+                          <ul className="col-start-2 flex flex-wrap gap-x-6 gap-y-4">
+                            {exemplosDoBucket(tipo.id, b.p).map((s) => (
+                              <li
+                                key={s.id}
+                                className="flex flex-col items-center gap-2"
+                              >
+                                <Cards codes={s.hero} size="sm" />
+                                <span className="text-center text-sm leading-snug font-medium text-foreground">
+                                  {s.classe}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <span className="col-start-2 text-lg font-semibold text-foreground">
+                            {b.maos}
+                          </span>
+                        )}
                       </div>
                     </div>
                   )
