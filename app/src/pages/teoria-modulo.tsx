@@ -187,7 +187,7 @@ function Abas({ abas }: { abas: AbaT[] }) {
       <Card className="rounded-[22px]">
         <CardContent className="grid gap-10 p-5 sm:p-7">
           <p
-            className="max-w-[64ch] rounded-xl bg-primary/10 p-4 font-serif text-lg leading-relaxed"
+            className="mx-auto max-w-[64ch] rounded-xl bg-primary/10 p-4 text-center font-serif text-lg leading-relaxed"
             aria-live="polite"
           >
             <strong className="mb-1 block text-sm font-bold tracking-wide text-primary uppercase">
