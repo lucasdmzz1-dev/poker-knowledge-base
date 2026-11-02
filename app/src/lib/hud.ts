@@ -1,3 +1,4 @@
+import { rotuloMes, type Leak } from "@/lib/analise"
 import { readJSON } from "@/lib/storage"
 
 // As stats gerais que você recebe todo mês no HUD (HUNTER). Cada stat tem o valor,
@@ -504,4 +505,41 @@ export function distanciaMeta(v: number, meta?: string): number | null {
 
 export function ehPequena(v: ValorStat | undefined): boolean {
   return v?.n !== undefined && v.n < 20
+}
+
+// Cria um leak para cada stat do mês fora da meta. Por padrão só as vermelhas
+// (além da tolerância); com `incluirPerto`, as amarelas também. Stats sem meta
+// numérica ou com amostra pequena ficam de fora.
+export function leaksDasStats(
+  mes: MesHud,
+  incluirPerto = false,
+  tolerancias: Record<string, number> = lerTol()
+): Leak[] {
+  const out: Leak[] = []
+  for (const st of STATS) {
+    const val = mes.valores[st.id]
+    const f = parseMeta(st.meta)
+    if (!f || typeof val?.v !== "number" || ehPequena(val)) continue
+    const nivel = nivelStat(val.v, st.meta, tolerancias[st.id])
+    if (nivel === "alvo" || nivel === null) continue
+    if (nivel === "perto" && !incluirPerto) continue
+    const antes = (val.v as number) < f.lo
+    out.push({
+      id: `hud:${mes.mes}:${st.id}`,
+      mes: mes.mes,
+      fase:
+        st.secao === "Pré-flop" || /pré-flop/i.test(st.bloco)
+          ? "preflop"
+          : "posflop",
+      spot: st.bloco,
+      stat: st.nome,
+      real: val.v,
+      solver: antes ? f.lo : f.hi,
+      contra: "Referência",
+      fazer: `A meta do HUD é ${st.meta}.`,
+      fonte: `HUD de ${rotuloMes(mes.mes)}, contra a meta do próprio HUD`,
+      secao: st.secao,
+    })
+  }
+  return out
 }

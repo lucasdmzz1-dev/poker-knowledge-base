@@ -2,7 +2,7 @@ import { useMemo, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ComparacaoHud, ExploradorHud } from "@/components/analise/hud"
-import { lerHud } from "@/lib/hud"
+import { lerHud, leaksDasStats } from "@/lib/hud"
 import { PrintsDoMes } from "@/components/analise/prints"
 import { Secao, CAMPO } from "@/components/analise/secao"
 import {
@@ -685,11 +685,23 @@ export function LeaksDoMes(props: {
   abrirPainel?: () => void
 }) {
   const [vista, setVista] = useState<"leaks" | "stats">("stats")
+  const hud = lerHud()
   const mesAtual =
-    [...lerHud()]
+    hud
       .map((m) => m.mes)
       .sort()
       .pop() ?? new Date().toISOString().slice(0, 7)
+  const [comAmarelas, setComAmarelas] = useState(false)
+  const doHud = hud.find((m) => m.mes === mesAtual)
+  const novos = doHud
+    ? leaksDasStats(doHud, comAmarelas).filter(
+        (n) => !props.leaks.some((l) => l.id === n.id)
+      )
+    : []
+  function gerar() {
+    props.salvar([...props.leaks, ...novos])
+    setVista("leaks")
+  }
   return (
     <div>
       <Vista
@@ -711,13 +723,30 @@ export function LeaksDoMes(props: {
             <PrintsDoMes mes={mesAtual} />
             <ExploradorHud />
           </Secao>
-          <div className="mt-8 flex justify-center">
-            <Button
-              className="px-6 font-bold"
-              onClick={() => setVista("leaks")}
-            >
-              Ver os leaks do mês
-            </Button>
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <label className="flex items-center gap-2 text-sm text-muted-foreground">
+              <input
+                type="checkbox"
+                checked={comAmarelas}
+                onChange={(e) => setComAmarelas(e.target.checked)}
+                className="accent-primary"
+              />
+              Incluir também as stats perto da meta (amarelas)
+            </label>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button
+                className="px-6 font-bold"
+                disabled={novos.length === 0}
+                onClick={gerar}
+              >
+                {novos.length === 0
+                  ? "Nenhuma stat nova fora da meta"
+                  : `Gerar ${novos.length} leaks pelas metas de ${rotuloMes(mesAtual)}`}
+              </Button>
+              <Button variant="outline" onClick={() => setVista("leaks")}>
+                Ver os leaks do mês
+              </Button>
+            </div>
           </div>
         </>
       )}

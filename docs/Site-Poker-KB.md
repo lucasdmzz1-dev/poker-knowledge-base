@@ -22,6 +22,7 @@ Vite, React 19, TypeScript estrito, Tailwind v4, shadcn/ui, react-router-dom, lu
 - **Prática** (`pages/pratica.tsx`, `components/poker/mesa.tsx`): treino de bet vs missed com mesa, hero no BTN, opener entre CO e HJ, 40bb. O RNG sorteia de 1 a 100 (`randomInt`), com botões B25, B50 e check.
 - **Análise** (`pages/analise.tsx`), em quatro abas:
   - **Leaks do mês**: abre em "Prints e stats do HUD" (prints do mês e as 169 stats por seção). O botão "Ver os leaks do mês" leva à lista de leaks, separada em pré-flop e pós-flop.
+    - O botão "Gerar N leaks pelas metas" cria um leak para cada stat fora da meta (vermelhas; amarelas se marcar a opção). Stats sem meta numérica ou com amostra pequena ficam de fora. Os prints continuam só guardados: os números das stats entram por Claude no chat ou por "Editar valores".
     - Dentro de Pré-flop e Pós-flop dá para filtrar os leaks pelas divisões da teoria (SRP como agressor, 3bet pot, Blind war etc.). A divisão é inferida pela stat e pode ser trocada em cada leak. O filtro "Mais críticas" mostra os 3 de maior desvio da fase (e da divisão escolhida).
   - **Comparação**: stats do HUD mês a mês e leaks, com as stats fixadas (estrela) primeiro.
   - **Painel semanal**: semanas, meses e comparação de períodos, com botão para salvar a semana e abrir a próxima.
