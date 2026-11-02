@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/pko
+  - tipo/ferramenta
+---
+
 # Retomada do estudo de PKO (resumo para uma conversa nova)
 
 Atualizado em 27 e 28/10/2026. Leia este arquivo primeiro, depois `regras-vivas-pko-btn.md`.
@@ -32,3 +38,19 @@ Explicações em português, com os termos de poker em inglês (node, range widt
 - Clicar em uma mão do histórico exige clique real (coordenadas), não `.click()` por script.
 - "View Solver Solution" abre a árvore em uma aba nova (`/tree/ID`). Na busca do Solver, `#ID` abre a árvore; a busca por % do field é exata.
 - Não há credenciais nem uso da API interna do site (ela exige login).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Mesma pasta:** [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]]
+
+**Módulos citados no texto:** [[theory/16-PKO/README|16-PKO]]
+
+<!-- graphify-links:end -->

@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/14-probe-turn
+  - spot/srp
+  - posicao/oop
+  - street/turn
+  - linha/probe
+  - stack/40bb
+  - tipo/pendencias
+---
+
 # Pendências – Probe Turn
 
 > Módulo 14 — Poker Knowledge Base
@@ -45,3 +56,19 @@ No Guideline (Cruzamento com o KB, primeira linha), o B40 no turn dinâmico de c
 Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
 
 O `08-Referencias.md` usa: esclarecimentos do autor do KB, anotações do instrutor, aula, exercícios. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. **Resolvida (28/10/2026):** o autor do KB decidiu seguir a ordem geral, com o autor do KB em 1º. Ver `08-Referencias.md` e `09-Decisoes.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/14-Probe-Turn/README|theory/14-Probe-Turn]]
+
+**Mesma pasta:** [[theory/14-Probe-Turn/14 - PROBE TURN GUIDELINE|01-Guideline]] · [[theory/14-Probe-Turn/02-VideoAulas|02-VideoAulas]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]] · [[theory/14-Probe-Turn/04-Exercicios|04-Exercicios]] · [[theory/14-Probe-Turn/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/14-Probe-Turn/07-Changelog|07-Changelog]] · [[theory/14-Probe-Turn/08-Referencias|08-Referencias]] · [[theory/14-Probe-Turn/09-Decisoes|09-Decisoes]] · [[theory/14-Probe-Turn/10-Como-Jogar|10-Como-Jogar]]
+
+**Módulos citados no texto:** [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]]
+
+<!-- graphify-links:end -->

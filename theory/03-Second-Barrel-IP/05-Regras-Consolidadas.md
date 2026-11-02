@@ -1,3 +1,15 @@
+---
+tags:
+  - modulo/03-second-barrel-ip
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - street/turn
+  - linha/cbet
+  - linha/second-barrel
+  - tipo/regras
+---
+
 # Regras Consolidadas – C-Bet IP + Second Barrel
 
 > Módulo de estudo Poker Knowledge Base
@@ -449,3 +461,17 @@ Ela vem da interação entre:
 - Equity.
 - Sizing.
 - Objetivo da aposta.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/03-Second-Barrel-IP/03 - SECOND BARREL IP GUIDELINE|theory/03-Second-Barrel-IP]]
+
+**Mesma pasta:** [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/03-Solver|03-Solver]] · [[theory/03-Second-Barrel-IP/04-Exercicios|04-Exercicios]] · [[theory/03-Second-Barrel-IP/06-Pendencias|06-Pendencias]] · [[theory/03-Second-Barrel-IP/07-Changelog|07-Changelog]] · [[theory/03-Second-Barrel-IP/08-Referencias|08-Referencias]] · [[theory/03-Second-Barrel-IP/09-Decisoes|09-Decisoes]] · [[theory/03-Second-Barrel-IP/README|README]]
+
+<!-- graphify-links:end -->

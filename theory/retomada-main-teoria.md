@@ -72,3 +72,17 @@ MAIN CHAT TEORIA do Poker Knowledge Base. Sou Lucas; respostas diretas, em portu
 Leia só `theory/CLAUDE.md`, `theory/MAPA-PRE-POS.md` e `theory/retomada-main-teoria.md`. Não releia os módulos inteiros: use `graphify query` e leia só o que for preciso.
 Hoje quero: [tarefa].
 ```
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Mesma pasta:** [[theory/CLAUDE|CLAUDE]] · [[theory/MAPA-PRE-POS|MAPA-PRE-POS]]
+
+<!-- graphify-links:end -->

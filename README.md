@@ -35,3 +35,27 @@ Current Phase:
 ## Repository Structure
 
 Coming soon.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Nesta pasta:**
+
+- [[00-Home|00-Home]]
+- [[CLAUDE|CLAUDE]]
+- [[coaching/stats/estudos-de-ranges/README|coaching/stats/estudos-de-ranges]]
+- [[coaching/stats/retomada-stats|coaching/stats/retomada-stats]]
+- [[docs/00-Architecture/KB-000-Architecture|docs/00-Architecture/KB-000-Architecture]]
+- [[docs/00-Architecture/KB-001-Project-Architecture|docs/00-Architecture/KB-001-Project-Architecture]]
+- [[docs/00-Architecture/KB-002-Domain-Model|docs/00-Architecture/KB-002-Domain-Model]]
+- [[docs/00-Architecture/KB-003-Module-Template|docs/00-Architecture/KB-003-Module-Template]]
+- [[flashcards/README|flashcards]]
+- [[graphify-out/GRAPH_REPORT|graphify-out/GRAPH_REPORT]]
+- [[theory/README|theory]]
+
+<!-- graphify-links:end -->

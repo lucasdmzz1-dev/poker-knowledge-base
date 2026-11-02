@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/decisoes
+---
+
 # Decisões – ICM e Risk Premium
 
 > Módulo 13 — Poker Knowledge Base
@@ -84,3 +93,21 @@ Módulo estruturado com:
 - Decisões.
 
 Pendente: ver 06-Pendencias.md.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/13-ICM/README|theory/13-ICM]]
+
+**Mesma pasta:** [[theory/13-ICM/13 - ICM GUIDELINE|01-Guideline]] · [[theory/13-ICM/02-VideoAulas|02-VideoAulas]] · [[theory/13-ICM/03-Solver|03-Solver]] · [[theory/13-ICM/04-Exercicios|04-Exercicios]] · [[theory/13-ICM/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/07-Changelog|07-Changelog]] · [[theory/13-ICM/08-Referencias|08-Referencias]]
+
+**Outros módulos:**
+
+- [[theory/14-Probe-Turn/09-Decisoes|14-Probe-Turn · 09-Decisoes]]
+
+<!-- graphify-links:end -->

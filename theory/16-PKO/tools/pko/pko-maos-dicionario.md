@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/nota
+---
+
 # Dicionário do registro de mãos do PKO (`pko-maos-jogadas.csv`)
 
 Cada linha é **uma decisão** do hero no BTN diante de um open. O objetivo é poder reconstruir o cenário, filtrar por ele e achar a árvore exata do solver, mesmo com milhares de mãos.
@@ -35,3 +45,17 @@ Cada linha é **uma decisão** do hero no BTN diante de um open. O objetivo é p
 
 ## Como gravar daqui para frente
 Antes de cada ação, ler e gravar o cabeçalho (ID, % restante, restantes, pagos, média, SI), todos os assentos (stack e bounty), o open e o pote. Depois da ação, ler o veredito, a ação certa e o EV. Se o erro for relevante, abrir a solução do solver para gravar o RP e o range do nó. Sempre registrar a `config_trainer`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/16-PKO/README|theory/16-PKO]]
+
+**Mesma pasta:** [[theory/16-PKO/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/16-PKO/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]]
+
+<!-- graphify-links:end -->

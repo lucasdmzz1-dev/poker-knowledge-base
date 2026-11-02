@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/07-xr-deep
+  - spot/srp
+  - posicao/oop
+  - street/flop
+  - linha/check-raise
+  - stack/deep
+  - tipo/regras
+---
+
 # 05-Regras-Consolidadas.md
 # XR Deep Stack
 
@@ -231,3 +242,20 @@ Perguntar:
 4. Preciso fazer mãos melhores foldarem?
 5. Estou XR para extrair ou apenas blefar?
 
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/07-XR-DEEP/README|theory/07-XR-DEEP]]
+
+**Mesma pasta:** [[theory/07-XR-DEEP/07 - XR DEEP GUIDELINE|01-Guideline]] · [[theory/07-XR-DEEP/02-VideoAulas|02-VideoAulas]] · [[theory/07-XR-DEEP/03-Solver|03-Solver]] · [[theory/07-XR-DEEP/04-Exercicios|04-Exercicios]] · [[theory/07-XR-DEEP/06-Pendencias|06-Pendencias]] · [[theory/07-XR-DEEP/07-Changelog|07-Changelog]] · [[theory/07-XR-DEEP/08-Referencias|08-Referencias]] · [[theory/07-XR-DEEP/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/08-3BET-POT/08 - 3BET POT GUIDELINE|08-3BET-POT · 01-Guideline]]
+
+<!-- graphify-links:end -->

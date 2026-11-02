@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/10-multiway-pot
+  - spot/multiway
+  - street/flop
+  - street/turn
+  - stack/40bb
+  - tipo/videoaulas
+---
+
 # VideoAulas — Multiway Pot
 
 ## Módulo 10 — Multiway Pot
@@ -78,3 +88,21 @@ O fio condutor de toda a aula é: **capado ou não capado define a estratégia, 
 - A frequência real de aposta do field (35%) é a prova de que o range multiway raramente está tão fraco quanto a antiga estratégia assumia.
 
 Esses três pilares — perspectiva do agressor, perspectiva do IP e perspectiva do Big Blind — resumem a reconstrução apresentada na aula. Divisão fina de combos e solver detalhado por textura ficam para uma próxima etapa do estudo.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/10-MULTIWAY-POT/README|theory/10-MULTIWAY-POT]]
+
+**Mesma pasta:** [[theory/10-MULTIWAY-POT/10 - MULTIWAY POT GUIDELINE|01-Guideline]] · [[theory/10-MULTIWAY-POT/03-Solver|03-Solver]] · [[theory/10-MULTIWAY-POT/04-Exercicios|04-Exercicios]] · [[theory/10-MULTIWAY-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/10-MULTIWAY-POT/06-Pendencias|06-Pendencias]] · [[theory/10-MULTIWAY-POT/07-Changelog|07-Changelog]] · [[theory/10-MULTIWAY-POT/08-Referencias|08-Referencias]] · [[theory/10-MULTIWAY-POT/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/09-BET-CHECK-BET/README|09-BET-CHECK-BET · README]]
+
+<!-- graphify-links:end -->

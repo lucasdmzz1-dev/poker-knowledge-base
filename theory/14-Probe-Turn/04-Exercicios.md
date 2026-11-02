@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/14-probe-turn
+  - spot/srp
+  - posicao/oop
+  - street/turn
+  - linha/probe
+  - stack/40bb
+  - tipo/exercicios
+---
+
 # Exercícios — Probe Turn
 
 ## Módulo 14 — Probe Turn
@@ -688,3 +699,17 @@ A construção muda pouco, porque está ligada ao size. O que muda é a frequên
 **Regra:** Regra 18
 
 ---
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/14-Probe-Turn/README|theory/14-Probe-Turn]]
+
+**Mesma pasta:** [[theory/14-Probe-Turn/14 - PROBE TURN GUIDELINE|01-Guideline]] · [[theory/14-Probe-Turn/02-VideoAulas|02-VideoAulas]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]] · [[theory/14-Probe-Turn/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/14-Probe-Turn/06-Pendencias|06-Pendencias]] · [[theory/14-Probe-Turn/07-Changelog|07-Changelog]] · [[theory/14-Probe-Turn/08-Referencias|08-Referencias]] · [[theory/14-Probe-Turn/09-Decisoes|09-Decisoes]] · [[theory/14-Probe-Turn/10-Como-Jogar|10-Como-Jogar]]
+
+<!-- graphify-links:end -->

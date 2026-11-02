@@ -1,4 +1,16 @@
-# PKO: BTN contra 1 open
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/modulo
+---
+
+# PKO: BTN contra 1 open
+
+**Flashcards:** [[theory/16-PKO/16 - PKO FLASHCARDS|16 - PKO FLASHCARDS]]
 
 ## Módulo 16 — PKO (Progressive Knockout)
 
@@ -92,3 +104,32 @@ Ao finalizar este módulo o jogador deve conseguir:
 # Status
 
 Módulo estruturado (v1.2). A regra foi testada em 170 mãos no Trainer (v2: 80% de acertos perfeitos em 50 mãos; v3: 79% em 100 mãos, 86% contando os quase perfeitos). Ainda não vale para outras posições, stack curto, bolha, mesa final ou contra 3bet. Ver 06-Pendencias.md.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Nesta pasta:**
+
+- [[theory/16-PKO/16 - PKO GUIDELINE|01-Guideline]]
+- [[theory/16-PKO/02-VideoAulas|02-VideoAulas]]
+- [[theory/16-PKO/03-Solver|03-Solver]]
+- [[theory/16-PKO/04-Exercicios|04-Exercicios]]
+- [[theory/16-PKO/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+- [[theory/16-PKO/06-Pendencias|06-Pendencias]]
+- [[theory/16-PKO/07-Changelog|07-Changelog]]
+- [[theory/16-PKO/08-Referencias|08-Referencias]]
+- [[theory/16-PKO/09-Decisoes|09-Decisoes]]
+- [[theory/16-PKO/CLAUDE|CLAUDE]]
+- [[theory/16-PKO/tools/pko/pko-conhecimento|tools/pko/pko-conhecimento]]
+- [[theory/16-PKO/tools/pko/pko-maos-dicionario|tools/pko/pko-maos-dicionario]]
+- [[theory/16-PKO/tools/pko/pko-solver-playbook|tools/pko/pko-solver-playbook]]
+- [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|tools/pko/regras-vivas-pko-btn]]
+
+<!-- graphify-links:end -->

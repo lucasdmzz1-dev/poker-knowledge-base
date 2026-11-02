@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/02-cbet-ip-40bb
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/40bb
+  - tipo/exercicios
+---
+
 # Exercícios – C-Bet IP 40bb
 
 > Este documento reúne os exercícios utilizados durante o estudo do módulo.
@@ -68,3 +79,21 @@ Ao concluir o módulo o aluno deve identificar automaticamente:
 - Construção do range de Valor.
 - Construção do range de Bluff.
 - Construção do range de Check.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/02-CBet-IP-40bb/README|theory/02-CBet-IP-40bb]]
+
+**Mesma pasta:** [[theory/02-CBet-IP-40bb/02 - CBET IP 40BB GUIDELINE|01-Guideline]] · [[theory/02-CBet-IP-40bb/02-VideoAulas|02-VideoAulas]] · [[theory/02-CBet-IP-40bb/03-Solver|03-Solver]] · [[theory/02-CBet-IP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/02-CBet-IP-40bb/06-Pendencias|06-Pendencias]] · [[theory/02-CBet-IP-40bb/07-Changelog|07-Changelog]] · [[theory/02-CBet-IP-40bb/08-Referencias|08-Referencias]] · [[theory/02-CBet-IP-40bb/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/01-CBet-IP-Short-Stack/04-Exercicios|01-CBet-IP-Short-Stack · 04-Exercicios]]
+
+<!-- graphify-links:end -->

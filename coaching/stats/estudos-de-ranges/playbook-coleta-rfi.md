@@ -1,11 +1,22 @@
+---
+tags:
+  - tema/stats
+  - tema/ranges
+---
+
 # Playbook: coleta de árvores de RFI no 4BET Trainer
 
 Como ler uma árvore de RFI completa (cabeçalho, stacks de todos os assentos, RP e range do hero) e gravar no padrão de `dicionario-arvores-rfi.md`. Baseado no playbook do PKO (`theory/tools/pko/pko-solver-playbook.md`), que tem as notas técnicas de navegação.
 
 ## Antes de começar
 1. Chrome com a extensão Claude in Chrome conectada, na sessão do usuário já logada. Abrir https://4bet-trainer.netlify.app/ numa aba nova do grupo da sessão e clicar em SOLVER.
-2. Conferir os filtros da situação no README dela (tipo, fase, stacks, busca). Não mudar os filtros no meio de uma situação. O tipo define a pasta: Vanilla em `vanilla/`, Bounty em `pko/` (com o fator progressivo, por exemplo 50%).
+2. Conferir os filtros da situação no README dela (tipo, fase, stacks, busca). Os filtros definem a pasta: `<acao>/<posicao>/<stack>bb/<formato>/<fase>/` (por exemplo `rfi/btn/20bb/vanilla/mid/`). Vanilla vai em `vanilla/`, Bounty em `pko/` (fator 50%; outro fator em `pko70`, `pko75`). Criar a pasta se não existir, com o README da combinação e, se faltar, o README do nível do stack (menu de formatos e fases, como `rfi/btn/15bb/README.md`).
 3. Dizer ao usuário qual situação será lida e quantas árvores.
+
+## Regra de mesa (obrigatória)
+- Só entram árvores de mesa cheia, com 8 ou 9 assentos (UTG a BB, ou UTG1 a BB em 8 jogadores). Mesas de 5 ou 6 jogadores são descartadas, mesmo que o BTN esteja na faixa de stack pedida.
+- Se a árvore tiver menos de 8 assentos, pular e pegar outra; não gravar a árvore nem anotar como null.
+- Assentos vazios numa mesa de 8 ou 9 são permitidos só se o total de jogadores ainda der 8 ou mais.
 
 ## Por árvore (nesta ordem)
 1. **Abrir a árvore pela lista** e anotar o `id`.
@@ -15,7 +26,7 @@ Como ler uma árvore de RFI completa (cabeçalho, stacks de todos os assentos, R
 5. **Matriz de RP:** ler o RP do hero contra SB e BB, e deles contra o hero.
 6. **Grade:** rodar o script abaixo. Na primeira árvore, conferir quais cores aparecem e qual é a do all-in. Conferir a soma contra os totais do passo 4.
 7. **Voltar à lista** pelo botão HHs (não o de compartilhar).
-8. **Gravar** a ficha em `arvores/<id>.md` e o registro em `dados/arvores.json`.
+8. **Gravar** a ficha em `arvores/<id>.md` e o registro em `dados/arvores.json` da pasta da combinação. Ao fim da rodada, rodar `python gerar-indice.py` na pasta `estudos-de-ranges` e atualizar o menu do nível do stack.
 
 ## Script: resumo da grade por cor e por classe
 Devolve, para cada classe de mão, o % ponderado por combos de cada cor encontrada. Cores conhecidas: raise = rgb(231, 76, 60), call = rgb(95, 163, 101). A cor do all-in ainda não foi registrada: o script lista toda cor que não é cinza, para identificá-la na primeira leitura. Saída curta (cabe no limite de ~1000 caracteres).
@@ -49,9 +60,24 @@ A grade célula a célula (campo `grid`) passa do limite de saída. Para gravá-
 - [ ] id, estrutura, pct, left, paid, media
 - [ ] tipo conferido (Vanilla → `vanilla/`, Bounty → `pko/`)
 - [ ] si, ante (ou `null` se não aparecem)
+- [ ] mesa com 8 ou 9 assentos (senão, descartar)
 - [ ] stacks dos 9 assentos
 - [ ] só PKO: koi, fator progressivo e bounty dos 9 assentos
 - [ ] f, r (e tamanho), ai
 - [ ] RP contra SB e BB
 - [ ] classes (10) e, se der, grade de 169
 - [ ] soma da grade confere com os totais
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[coaching/stats/estudos-de-ranges/README|coaching/stats/estudos-de-ranges]]
+
+**Mesma pasta:** [[coaching/stats/estudos-de-ranges/dicionario-arvores-rfi|dicionario-arvores-rfi]]
+
+<!-- graphify-links:end -->

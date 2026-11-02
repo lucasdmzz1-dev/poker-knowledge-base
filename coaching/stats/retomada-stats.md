@@ -1,3 +1,8 @@
+---
+tags:
+  - tema/stats
+---
+
 # Retomada do estudo de stats (painel de evolução e call open contra o solver)
 
 Atualizado em 28/10/2026 (inclui o estudo de RFI BTN 15bb). Leia este arquivo primeiro quando o assunto for stats, HUD, leaks ou evolução.
@@ -25,10 +30,11 @@ Acompanhamento das stats reais do jogador (prints do Hand2Note, semana a semana)
 4. BTN: pagar mais AQo e ATo, em vez de 3-betar.
 
 ## Estudos de ranges no solver (em andamento)
-Pasta `estudos-de-ranges/`: ranges lidos no solver do 4BET Trainer, uma pasta por situação, separadas em `vanilla/` (sem bounty) e `pko/` (com bounty de cada assento, KOI e fator progressivo). Padrão dos dados em `estudos-de-ranges/dicionario-arvores-rfi.md`; coleta em `estudos-de-ranges/playbook-coleta-rfi.md`.
-- **RFI BTN 15bb Vanilla** (`vanilla/rfi/btn/15bb/`, Early, busca "BTN 15"): 5 árvores lidas (#4772, #3336, #10057, #3411, #7211). Open total de 37% a 41% (média 38,9%), raise 2bb de 21,4% e all-in de 17,5% em média.
+Pasta `estudos-de-ranges/`: ranges lidos no solver do 4BET Trainer, organizados como os filtros do Trainer: `<acao>/<posicao>/<stack>bb/<formato>/<fase>/` (formato `vanilla` ou `pko`). Índice geral de todas as árvores em `estudos-de-ranges/indice.md` e `indice.csv`, gerados por `gerar-indice.py`. Padrão dos dados em `estudos-de-ranges/dicionario-arvores-rfi.md`; coleta em `estudos-de-ranges/playbook-coleta-rfi.md`.
+- **RFI BTN 15bb Vanilla** (`rfi/btn/15bb/vanilla/early/`, busca "BTN 15"): 5 árvores completas (#4772, #3336, #10057, #3411, #7211), com stacks dos 9 assentos registrados. Open total de 36,9% a 40,7% (média 38,9%), raise 2bb de 21,4% e all-in de 17,5% em média. SB vai de 10 a 80 bb e BB de 15 a 50 bb, por isso o range do BTN depende dos blinds.
+- **RFI BTN 20bb Vanilla** (`rfi/btn/20bb/`, busca "BTN 20", BTN de 18 a 22bb): 7 árvores com mesa de 8 jogadores (2 Early e 5 Mid). Open total médio de 41,5% (raise 31,3%, all-in 10,3%). Só Early contra Early: open de 37,8% em 20bb contra 38,9% em 15bb, com o jam caindo de 17,5% para 7,0%. Só #3036 tem jam alto (40%), com BB de 7,4bb e a 19 jogadores do ITM.
 - Comparação com o HUD (RFI do BTN com 15–25bb em 33%, open jam em 5,5%): é só indicativa, porque o HUD mistura 15 a 25bb. O jam é o maior desvio.
-- Próximo passo: completar as 5 árvores (stacks dos 9 assentos, SI, ante, pote, RP contra SB e BB, classes e grade) e ampliar para 15 a 20 árvores. Lista completa no README da situação. Nenhuma situação de PKO lida ainda.
+- Próximo passo: ampliar para 15 a 20 árvores (só com novo pedido). SI e ante seguem pendentes porque o cabeçalho não os mostra. Cada árvore agora tem a identificação completa do spot (formato, fase com % restante, field, blinds, efetivo, mesa); faltam ler fase mostrada, blinds e stack do hero em fichas. Em aberto: a "Média" do cabeçalho coincide com a média da mesa; falta o teste (SI ÷ BB em fichas × % restante) para saber se é do torneio. Lista completa no README da situação. Nenhuma situação de PKO lida ainda.
 
 Limite de leitura: contra opens mais cedo o range do solver é mais curto, então parte dos folds pode estar certa. Mãos com poucas ocorrências ficam em cinza no mapa.
 
@@ -43,3 +49,15 @@ Limite de leitura: contra opens mais cedo o range do solver é mais curto, entã
 
 ## Relação com o PKO
 O estudo de PKO (`retomada-pko.md`) usa essas mesmas stats do HUD como ponto de partida: o call open do BTN em ~10% contra ~18% a 19% estimado para um bom call open em PKO (gap de uns 8 pontos).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[README|Início]]
+
+<!-- graphify-links:end -->

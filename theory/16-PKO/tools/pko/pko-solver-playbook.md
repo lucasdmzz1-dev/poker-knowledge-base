@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/nota
+---
+
 # Playbook: coleta de árvores do 4BET Trainer (PKO) por automação
 
 Objetivo: coletar várias árvores do BTN contra open (variando stack, stacks atrás, bounties, pote e fase), guardar as variáveis e o range, e achar padrões que movem o fold, o call e o 3bet.
@@ -54,3 +64,17 @@ Hero (BTN): stack, bounty. Opener: posição, stack, bounty, tamanho do open. SB
 2. Usar a busca por posição e stack para varrer várias linhas por chamada (umas 5 árvores por chamada, devolvendo só o resumo por classe).
 3. Guardar cada árvore (variáveis + 10 classes) num arquivo JSON e, com ~40 árvores, ajustar regras: quais variáveis movem o 3bet, o call e as mãos.
 4. Cruzar as regras com as mãos reais do usuário no BTN (folds, calls e 3bets já lidos) e atualizar o painel com filtro por cenário.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/16-PKO/README|theory/16-PKO]]
+
+**Mesma pasta:** [[theory/16-PKO/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/16-PKO/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/16-PKO/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]]
+
+<!-- graphify-links:end -->

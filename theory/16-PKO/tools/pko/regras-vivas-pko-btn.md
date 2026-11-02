@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/nota
+---
+
 # Regras vivas: BTN contra 1 open em PKO (4BET Trainer)
 
 Versão atual: **v2** (27/10/2026). Este arquivo é a memória de trabalho do Claude para esse estudo. Atualize-o ao fim de cada sessão.
@@ -61,3 +71,17 @@ Ver `pko-maos-dicionario.md` (colunas, como achar um cenário e o que já está 
 - Configuração dos testes até aqui: **Facing RFI, RNG OFF, Close Decisions** (modo de decisões próximas: muitas mãos marginais). O placar não é comparável com o de um modo comum.
 - Sessões 1 e 2 juntas, segundo o Trainer: 70 mãos, precisão de 84%, 53 PERFEITO, 6 QUASE, 3 IMPRECISO, 0 ERRO e 8 BLUNDER, −0,80bb de EV perdido.
 - Cópia das 50 mãos da v2 no navegador: `claude_pko_hands_s2`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/16-PKO/README|theory/16-PKO]]
+
+**Mesma pasta:** [[theory/16-PKO/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/16-PKO/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/16-PKO/tools/pko/pko-solver-playbook|pko-solver-playbook]]
+
+<!-- graphify-links:end -->

@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/pko
+  - tipo/ferramenta
+---
+
 # Regras vivas: BTN contra 1 open em PKO (4BET Trainer)
 
 Versão atual: **v3** (27/10/2026, testada em 100 mãos; ver seção 8 para o que mudar na v3.1). Este arquivo é a memória de trabalho do Claude para esse estudo. Atualize-o ao fim de cada sessão.
@@ -77,3 +83,16 @@ Ver `pko-maos-dicionario.md` (colunas, como achar um cenário e o que já está 
 4. Suited broadways e Ax suited (A6s, J8s, AQo) podem dar raise contra LJ e MP quando o hero está mais fundo: testar antes de adotar.
 5. Stack curto do hero (25bb ou menos): ainda sem teste (nenhuma mão apareceu).
 6. Registrar sempre a `config_trainer` (a da sessão 3 não foi confirmada).
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Mesma pasta:** [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/tools/pko/retomada-pko|retomada-pko]]
+
+<!-- graphify-links:end -->

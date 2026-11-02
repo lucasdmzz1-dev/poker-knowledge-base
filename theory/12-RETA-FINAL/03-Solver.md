@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/12-reta-final
+  - tema/reta-final
+  - street/preflop
+  - tema/icm
+  - tipo/solver
+---
+
 # Solver — Reta Final
 
 ## Módulo 12 — Reta Final
@@ -37,3 +46,21 @@ Padrão observado:
 
 - Mapas de defesa (BB) e de squeeze em 10% field left.
 - Stacks de 30 a 40bb nos mapas de RFI.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/12-RETA-FINAL/README|theory/12-RETA-FINAL]]
+
+**Mesma pasta:** [[theory/12-RETA-FINAL/12 - RETA FINAL GUIDELINE|01-Guideline]] · [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]] · [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]] · [[theory/12-RETA-FINAL/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/12-RETA-FINAL/06-Pendencias|06-Pendencias]] · [[theory/12-RETA-FINAL/07-Changelog|07-Changelog]] · [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/13-ICM/13 - ICM GUIDELINE|13-ICM · 01-Guideline]]
+
+<!-- graphify-links:end -->

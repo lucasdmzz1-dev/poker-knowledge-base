@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/15-bet-vs-missed
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/bet-vs-missed
+  - tipo/solver
+---
+
 # Solver — Bet vs Missed C-Bet
 
 ## Módulo 15 — Bet vs Missed C-Bet
@@ -88,3 +98,17 @@ Exemplo: K♠ K♥ 7♣.
 - **Os boards em que se pode ter thin value usam B25:** seco, monotone e dobrado. Os outros usam B50.
 - **Conectado high, monotone e dobrado não têm bucket de 100%.**
 - **Os buckets baixos (25%) concentram as mãos fracas e os blefes:** underpair baixo, terceiro par, air e gutshot.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
+
+**Mesma pasta:** [[theory/15-Bet-vs-Missed/15 - BET VS MISSED GUIDELINE|01-Guideline]] · [[theory/15-Bet-vs-Missed/02-VideoAulas|02-VideoAulas]] · [[theory/15-Bet-vs-Missed/04-Exercicios|04-Exercicios]] · [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/15-Bet-vs-Missed/06-Pendencias|06-Pendencias]] · [[theory/15-Bet-vs-Missed/07-Changelog|07-Changelog]] · [[theory/15-Bet-vs-Missed/08-Referencias|08-Referencias]] · [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

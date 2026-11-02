@@ -1,0 +1,196 @@
+[
+ {
+  "id": "#5064",
+  "busca": "BTN 20",
+  "tipo": "Vanilla",
+  "fase_filtro": "Early",
+  "stacks_filtro": "Asymmetric",
+  "reta_final": "nenhum marcado",
+  "estrutura": "Regular",
+  "fase_header": null,
+  "fase": null,
+  "pct": 65,
+  "left": 228,
+  "paid": 36,
+  "ate_itm": 192,
+  "campo_n0": 351,
+  "campo_n0_fonte": null,
+  "media": 42.3,
+  "media_field": null,
+  "si": null,
+  "sb_fichas": null,
+  "bb_fichas": null,
+  "ante_fichas": null,
+  "ante_bb": null,
+  "pot": 2.5,
+  "seats": {
+   "UTG": null,
+   "UTG1": 9.7,
+   "MP": 80.1,
+   "LJ": 3.3,
+   "HJ": 94.4,
+   "CO": 64.5,
+   "BTN": 18.2,
+   "SB": 33.6,
+   "BB": 34.4
+  },
+  "n_mesa": 8,
+  "tavg": 42.3,
+  "hero": "BTN",
+  "hs": 18.2,
+  "hs_fichas": null,
+  "rp_sb": [
+   0.8,
+   0.8
+  ],
+  "rp_bb": [
+   0.8,
+   0.8
+  ],
+  "f": 65.7,
+  "r": 27.8,
+  "ai": 6.5,
+  "r_size": 3,
+  "cl": {
+   "Pa": [
+    100,
+    0
+   ],
+   "Pm": [
+    98,
+    2
+   ],
+   "Pb": [
+    20,
+    80
+   ],
+   "As": [
+    64,
+    36
+   ],
+   "Ks": [
+    71,
+    1
+   ],
+   "QJs": [
+    27,
+    13
+   ],
+   "Sc": [
+    3,
+    3
+   ],
+   "Ao": [
+    83,
+    17
+   ],
+   "Bo": [
+    85,
+    15
+   ],
+   "Oo": [
+    6,
+    0
+   ]
+  },
+  "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 100-0;A9s 100-0;A8s 100-0;A7s 100-0;A6s 65-35;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 100-0;KK 100-0;KQs 100-0;KJs 100-0;KTs 90-10;K9s 100-0;K8s 100-0;K7s 100-0;K6s 100-0;K5s 90-0;K4s 0-0;K3s 0-0;K2s 0-0;AQo 100-0;KQo 90-10;QQ 100-0;QJs 55-45;QTs 25-75;Q9s 100-0;Q8s 100-0;Q7s 30-0;Q6s 0-0;Q5s 0-0;Q4s 0-0;Q3s 0-0;Q2s 0-0;AJo 100-0;KJo 20-80;QJo 100-0;JJ 100-0;JTs 0-100;J9s 80-20;J8s 100-0;J7s 20-0;J6s 0-0;J5s 0-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 100-0;KTo 100-0;QTo 100-0;JTo 100-0;TT 100-0;T9s 5-95;T8s 100-0;T7s 0-0;T6s 0-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 60-40;K9o 100-0;Q9o 95-0;J9o 80-0;T9o 20-0;99 100-0;98s 5-0;97s 0-0;96s 0-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 60-0;Q8o 0-0;J8o 0-0;T8o 0-0;98o 0-0;88 100-0;87s 0-0;86s 0-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 40-60;K7o 0-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 100-0;76s 0-0;75s 0-0;74s 0-0;73s 0-0;72s 0-0;A6o 100-0;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 90-10;65s 0-0;64s 0-0;63s 0-0;62s 0-0;A5o 100-0;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 80-20;54s 0-0;53s 0-0;52s 0-0;A4o 100-0;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 100-0;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 100-0;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
+  "obs": "Mesa de 8 jogadores (UTG vazio). Stacks: SB 33,6 e BB 34,4 lidos no card e na matriz de RP (no anel: SB 33, BB 33,3). Pot 2,5 com BTN selecionado (no anel aparece 1 BB extra que não identifiquei). SI e ante não aparecem: pendente. Média do cabeçalho 42,3. Soma da grade: f 65,7 / r 27,8 / ai 6,5 (bate)."
+ },
+ {
+  "id": "#5579",
+  "busca": "BTN 20",
+  "tipo": "Vanilla",
+  "fase_filtro": "Early",
+  "stacks_filtro": "Asymmetric",
+  "reta_final": "nenhum marcado",
+  "estrutura": "Regular",
+  "fase_header": null,
+  "fase": null,
+  "pct": 70,
+  "left": 54,
+  "paid": 14,
+  "ate_itm": 40,
+  "campo_n0": 77,
+  "campo_n0_fonte": null,
+  "media": 45.8,
+  "media_field": null,
+  "si": null,
+  "sb_fichas": null,
+  "bb_fichas": null,
+  "ante_fichas": null,
+  "ante_bb": null,
+  "pot": 2.46,
+  "seats": {
+   "UTG": null,
+   "UTG1": 44.2,
+   "MP": 23.1,
+   "LJ": 80.4,
+   "HJ": 64.3,
+   "CO": 39.6,
+   "BTN": 18.2,
+   "SB": 46.6,
+   "BB": 49.9
+  },
+  "n_mesa": 8,
+  "tavg": 45.8,
+  "hero": "BTN",
+  "hs": 18.2,
+  "hs_fichas": null,
+  "rp_sb": [
+   1.7,
+   1.6
+  ],
+  "rp_bb": [
+   1.7,
+   1.6
+  ],
+  "f": 58.7,
+  "r": 33.9,
+  "ai": 7.4,
+  "r_size": 2,
+  "cl": {
+   "Pa": [
+    100,
+    0
+   ],
+   "Pm": [
+    100,
+    0
+   ],
+   "Pb": [
+    0,
+    100
+   ],
+   "As": [
+    67,
+    33
+   ],
+   "Ks": [
+    97,
+    0
+   ],
+   "QJs": [
+    49,
+    14
+   ],
+   "Sc": [
+    27,
+    2
+   ],
+   "Ao": [
+    78,
+    22
+   ],
+   "Bo": [
+    83,
+    17
+   ],
+   "Oo": [
+    10,
+    0
+   ]
+  },
+  "grid": "AA 100-0;AKs 100-0;AQs 100-0;AJs 100-0;ATs 100-0;A9s 100-0;A8s 100-0;A7s 100-0;A6s 100-0;A5s 0-100;A4s 0-100;A3s 0-100;A2s 0-100;AKo 100-0;KK 100-0;KQs 100-0;KJs 100-0;KTs 100-0;K9s 100-0;K8s 100-0;K7s 100-0;K6s 100-0;K5s 100-0;K4s 100-0;K3s 100-0;K2s 70-0;AQo 100-0;KQo 70-30;QQ 100-0;QJs 100-0;QTs 30-70;Q9s 80-20;Q8s 100-0;Q7s 100-0;Q6s 100-0;Q5s 100-0;Q4s 10-0;Q3s 0-0;Q2s 0-0;AJo 100-0;KJo 35-65;QJo 95-5;JJ 100-0;JTs 0-100;J9s 20-80;J8s 100-0;J7s 100-0;J6s 95-0;J5s 5-0;J4s 0-0;J3s 0-0;J2s 0-0;ATo 100-0;KTo 100-0;QTo 100-0;JTo 100-0;TT 100-0;T9s 10-90;T8s 100-0;T7s 100-0;T6s 80-0;T5s 0-0;T4s 0-0;T3s 0-0;T2s 0-0;A9o 0-100;K9o 100-0;Q9o 100-0;J9o 100-0;T9o 100-0;99 100-0;98s 100-0;97s 100-0;96s 100-0;95s 0-0;94s 0-0;93s 0-0;92s 0-0;A8o 0-100;K8o 100-0;Q8o 65-0;J8o 0-0;T8o 25-0;98o 0-0;88 100-0;87s 100-0;86s 100-0;85s 0-0;84s 0-0;83s 0-0;82s 0-0;A7o 35-65;K7o 10-0;Q7o 0-0;J7o 0-0;T7o 0-0;97o 0-0;87o 0-0;77 100-0;76s 100-0;75s 70-0;74s 0-0;73s 0-0;72s 0-0;A6o 100-0;K6o 0-0;Q6o 0-0;J6o 0-0;T6o 0-0;96o 0-0;86o 0-0;76o 0-0;66 100-0;65s 20-0;64s 0-0;63s 0-0;62s 0-0;A5o 100-0;K5o 0-0;Q5o 0-0;J5o 0-0;T5o 0-0;95o 0-0;85o 0-0;75o 0-0;65o 0-0;55 0-100;54s 0-0;53s 0-0;52s 0-0;A4o 100-0;K4o 0-0;Q4o 0-0;J4o 0-0;T4o 0-0;94o 0-0;84o 0-0;74o 0-0;64o 0-0;54o 0-0;44 0-100;43s 0-0;42s 0-0;A3o 100-0;K3o 0-0;Q3o 0-0;J3o 0-0;T3o 0-0;93o 0-0;83o 0-0;73o 0-0;63o 0-0;53o 0-0;43o 0-0;33 0-100;32s 0-0;A2o 100-0;K2o 0-0;Q2o 0-0;J2o 0-0;T2o 0-0;92o 0-0;82o 0-0;72o 0-0;62o 0-0;52o 0-0;42o 0-0;32o 0-0;22 0-100",
+  "obs": "Mesa de 8 jogadores (UTG vazio). Stacks: SB 46,6 no card (no anel 46,1); BB 49,9 na matriz de RP (no anel 48,9). Pot 2,46 com BTN selecionado. SI e ante não aparecem: pendente. Média do cabeçalho 45,8. Soma da grade: f 58,7 / r 33,9 / ai 7,4 (bate)."
+ }
+]

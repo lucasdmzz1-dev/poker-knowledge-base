@@ -6,3 +6,7 @@ graphify-out/.graphify_build_state.json
 graphify-out/.graphify_labels.json.sig
 graphify-out/.graphify_labels.pending.json
 graphify-out/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+
+# Obsidian: layout local (arquivos abertos, painéis), muda a cada uso
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json

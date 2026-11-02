@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/12-reta-final
+  - tema/reta-final
+  - street/preflop
+  - tema/icm
+  - tipo/regras
+---
+
 # Regras Consolidadas – Reta Final
 
 > Este documento reúne apenas as regras finais consolidadas durante o estudo do módulo.
@@ -221,3 +230,21 @@ Stack grande joga mais mãos e flata mais. Stack médio ou curto é 3bet ou fold
 # Regra Principal do Módulo
 
 O stack e o risco de cair definem o plano. Antes de qualquer decisão, pergunte: qual é o meu stack em relação ao dos outros, qual mão eu tenho para executar essa oportunidade e se os blockers aumentam a chance de o adversário reagir como eu quero.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/12-RETA-FINAL/README|theory/12-RETA-FINAL]]
+
+**Mesma pasta:** [[theory/12-RETA-FINAL/12 - RETA FINAL GUIDELINE|01-Guideline]] · [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]] · [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]] · [[theory/12-RETA-FINAL/06-Pendencias|06-Pendencias]] · [[theory/12-RETA-FINAL/07-Changelog|07-Changelog]] · [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/13-ICM/05-Regras-Consolidadas|13-ICM · 05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

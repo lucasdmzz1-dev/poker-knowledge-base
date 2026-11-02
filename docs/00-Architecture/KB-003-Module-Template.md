@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/arquitetura
+---
+
 # KB-003 — Module Template
 
 **Version:** 1.0  
@@ -928,3 +933,24 @@ The template may evolve as new modules reveal additional requirements.
 - Added suit logic section
 - Added operational simplifications and exploit separation
 - Added completion checklist
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[README|Início]]
+
+**Mesma pasta:** [[docs/00-Architecture/KB-000-Architecture|KB-000-Architecture]] · [[docs/00-Architecture/KB-001-Project-Architecture|KB-001-Project-Architecture]] · [[docs/00-Architecture/KB-002-Domain-Model|KB-002-Domain-Model]]
+
+**Outros módulos:**
+
+- [[theory/01-CBet-IP-Short-Stack/03-Solver|01-CBet-IP-Short-Stack · 03-Solver]]
+- [[theory/01-CBet-IP-Short-Stack/06-Pendencias|01-CBet-IP-Short-Stack · 06-Pendencias]]
+- [[theory/02-CBet-IP-40bb/06-Pendencias|02-CBet-IP-40bb · 06-Pendencias]]
+- [[theory/01-CBet-IP-Short-Stack/09-Decisoes|01-CBet-IP-Short-Stack · 09-Decisoes]]
+
+<!-- graphify-links:end -->

@@ -1,3 +1,15 @@
+---
+tags:
+  - modulo/04-third-barrel-e-vs-third-barrel
+  - spot/srp
+  - posicao/ip
+  - posicao/oop
+  - street/river
+  - linha/third-barrel
+  - linha/defesa
+  - tipo/decisoes
+---
+
 # Decisões – Third Barrel
 
 > Módulo 04
@@ -172,3 +184,22 @@ Adicionar futuramente:
 - Árvores de decisão.
 - Soluções específicas de Solver.
 - Exemplos classificados por textura de board.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|theory/04-Third-Barrel-e-vs-Third-Barrel]]
+
+**Mesma pasta:** [[theory/04-Third-Barrel-e-vs-Third-Barrel/04 - THIRD BARREL GUIDELINE|01-Guideline]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/02-VideoAulas|02-VideoAulas]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/03-Solver|03-Solver]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/04-Exercicios|04-Exercicios]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/06-Pendencias|06-Pendencias]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/07-Changelog|07-Changelog]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/08-Referencias|08-Referencias]]
+
+**Outros módulos:**
+
+- [[theory/05-CBet-OOP-40bb/09-Decisoes|05-CBet-OOP-40bb · 09-Decisoes]]
+- [[theory/06-XR-SHORT/06 - XR SHORT GUIDELINE|06-XR-SHORT · 01-Guideline]]
+
+<!-- graphify-links:end -->

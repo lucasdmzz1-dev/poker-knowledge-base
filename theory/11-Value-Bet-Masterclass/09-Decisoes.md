@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/11-value-bet-masterclass
+  - tema/value-bet
+  - street/river
+  - tema/transversal
+  - tipo/decisoes
+---
+
 # Decisões – Value Bet Masterclass
 
 > Módulo 11 — Poker Knowledge Base
@@ -59,3 +68,19 @@ Pendente: Solver e Exercícios (ver 06-Pendencias.md).
 # Conclusão
 
 Este módulo funciona como a "camada de cima" do KB — os módulos de spot dizem o que fazer; este módulo explica o raciocínio de sizing e seleção de valor que deveria estar presente em qualquer um deles.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
+
+**Mesma pasta:** [[theory/11-Value-Bet-Masterclass/11 - VALUE BET GUIDELINE|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]] · [[theory/11-Value-Bet-Masterclass/03-Solver|03-Solver]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]] · [[theory/11-Value-Bet-Masterclass/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]] · [[theory/11-Value-Bet-Masterclass/08-Referencias|08-Referencias]]
+
+**Módulos citados no texto:** [[theory/01-CBet-IP-Short-Stack/README|01-CBet-IP-Short-Stack]] · [[theory/04-Third-Barrel-e-vs-Third-Barrel/README|04-Third-Barrel-e-vs-Third-Barrel]]
+
+<!-- graphify-links:end -->

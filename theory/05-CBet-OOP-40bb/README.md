@@ -1,4 +1,19 @@
-# C-Bet OOP
+---
+tags:
+  - modulo/05-cbet-oop-40bb
+  - spot/srp
+  - posicao/oop
+  - street/flop
+  - street/turn
+  - linha/cbet
+  - linha/second-barrel
+  - stack/40bb
+  - tipo/modulo
+---
+
+# C-Bet OOP
+
+**Flashcards:** [[theory/05-CBet-OOP-40bb/05 - CBET OOP 40BB FLASHCARDS|05 - CBET OOP 40BB FLASHCARDS]]
 
 ## Módulo — SRP OOP C-Bet Flop
 
@@ -155,3 +170,27 @@ Ao finalizar o módulo o jogador deve conseguir:
 - Construir bet e check.
 - Entender quais mãos entram em cada parte.
 - Escolher size e range de valor do Second Barrel conforme a textura do turn.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Nesta pasta:**
+
+- [[theory/05-CBet-OOP-40bb/05 - CBET OOP 40BB GUIDELINE|01-Guideline]]
+- [[theory/05-CBet-OOP-40bb/02-VideoAulas|02-VideoAulas]]
+- [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]]
+- [[theory/05-CBet-OOP-40bb/04-Exercicios|04-Exercicios]]
+- [[theory/05-CBet-OOP-40bb/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+- [[theory/05-CBet-OOP-40bb/06-Pendencias|06-Pendencias]]
+- [[theory/05-CBet-OOP-40bb/07-Changelog|07-Changelog]]
+- [[theory/05-CBet-OOP-40bb/08-Referencias|08-Referencias]]
+- [[theory/05-CBet-OOP-40bb/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

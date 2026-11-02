@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/solver
+---
+
 # Solver — ICM e Risk Premium
 
 ## Módulo 13 — ICM e Risk Premium
@@ -223,3 +232,17 @@ Nunca existe limp, nas duas fases.
 - **O call é o primeiro a sumir quando o RP sobe.** Nos spots do BTN contra o LJ e do CO coberto o range de call vira 3bet, shove ou fold. No BB cai de 45,7% para 21%.
 - **O topo muda de ação, e não sai.** AA, AK, QQ e JJ passam de raise a shove (BB contra CO) ou a limp (SB coberto).
 - **O limp desaparece com SB cobrindo o BB e com SB curto.** Quando coberto pelo BB, o raise some e o range protege o call.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/13-ICM/README|theory/13-ICM]]
+
+**Mesma pasta:** [[theory/13-ICM/13 - ICM GUIDELINE|01-Guideline]] · [[theory/13-ICM/02-VideoAulas|02-VideoAulas]] · [[theory/13-ICM/04-Exercicios|04-Exercicios]] · [[theory/13-ICM/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/07-Changelog|07-Changelog]] · [[theory/13-ICM/08-Referencias|08-Referencias]] · [[theory/13-ICM/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->
