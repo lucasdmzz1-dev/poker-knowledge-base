@@ -2,7 +2,7 @@ import type { ModuloTeoria } from "@/data/teoria/tipos"
 
 const m05: ModuloTeoria = {
   slug: "cbet-oop",
-  tema: "C-Bet OOP",
+  tema: ["C-Bet OOP", "2nd Barrel OOP"],
   nome: "C-Bet OOP",
   spot: "Pote single raised · você fora de posição, como agressor · 40bb · EP e CO contra o BTN",
   tags: [
