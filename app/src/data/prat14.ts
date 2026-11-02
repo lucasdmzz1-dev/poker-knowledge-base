@@ -82,15 +82,15 @@ export const situacoesProbe: SituacaoProbe[] = [
   {
     id: "seco-trinca",
     turn: "seco",
-    hero: ["8d", "8c"],
+    hero: ["2c", "2d"],
     certa: "B100",
-    classe: "Trinca",
+    classe: "Trinca baixa",
     porque: "Trinca aposta B100 no board seco.",
   },
   {
     id: "alta-qx",
     turn: "alta",
-    hero: ["Kc", "Qh"],
+    hero: ["Qc", "Jh"],
     certa: "B40",
     classe: "Qx bom",
     porque: "Qx que não é dos piores aposta B40 no turn de carta alta.",
@@ -106,7 +106,7 @@ export const situacoesProbe: SituacaoProbe[] = [
   {
     id: "alta-8pior",
     turn: "alta",
-    hero: ["8c", "3h"],
+    hero: ["8c", "3c"],
     certa: "Check-call",
     classe: "Pior 8x",
     porque: "Os piores 8x dão check-call.",
@@ -186,9 +186,9 @@ export const situacoesProbe: SituacaoProbe[] = [
   {
     id: "fa-tp",
     turn: "flushAlto",
-    hero: ["Ac", "Qh"],
+    hero: ["Qh", "Jh"],
     certa: "B70",
-    classe: "Melhor top pair",
+    classe: "Top pair com bom kicker",
     porque: "Só os melhores TP apostam, em B70.",
   },
   {

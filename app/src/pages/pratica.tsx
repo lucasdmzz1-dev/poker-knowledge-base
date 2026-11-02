@@ -24,6 +24,7 @@ import PraticaCbet from "@/pages/pratica-cbet"
 import PraticaCbet40 from "@/pages/pratica-cbet40"
 import PraticaOop from "@/pages/pratica-oop"
 import PraticaProbe, { SeletorTema, type Tema } from "@/pages/pratica-probe"
+import { btnPaga } from "@/data/ranges"
 import { mod15, tipoById, type Situacao, type TipoId } from "@/data/mod15"
 import {
   randomInt,
@@ -38,7 +39,13 @@ import { cn } from "@/lib/utils"
 type Fase = "setup" | "jogo" | "fim"
 type Acao = "Check" | "B25" | "B50"
 
-const contagem = mod15.situacoes.reduce<Record<string, number>>((c, s) => {
+// O treino só usa mãos que o BTN paga contra o open do CO e do HJ (Poker Academy,
+// 40bb). As que ele só 3beta ficam de fora, mas continuam nos exemplos da Teoria.
+const situacoesTreino = mod15.situacoes.filter(
+  (s) => btnPaga("CO", s.hero) && btnPaga("HJ", s.hero)
+)
+
+const contagem = situacoesTreino.reduce<Record<string, number>>((c, s) => {
   c[s.tipo] = (c[s.tipo] ?? 0) + 1
   return c
 }, {})
@@ -166,7 +173,7 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
       return
     }
     const n = Number(qty)
-    let pool = shuffle(mod15.situacoes.filter((s) => tipos.includes(s.tipo)))
+    let pool = shuffle(situacoesTreino.filter((s) => tipos.includes(s.tipo)))
     if (n && pool.length > n) pool = pool.slice(0, n)
     setErro("")
     setFila(pool)

@@ -3,6 +3,8 @@
 // do board e da mão (flush draw, backdoor, blocker). Mão que as regras do módulo não
 // cobrem de forma clara devolve null e não entra no treino.
 
+import { abre } from "@/data/ranges"
+
 export type Cenario = "EP" | "CO"
 export type EstrategiaOop = "range" | "split" | "split25" | "check"
 export type AcaoOop = "Check-call" | "Check-raise" | "B25" | "B40" | "B70"
@@ -638,7 +640,8 @@ function semente(texto: string): () => number {
   }
 }
 
-const EP_POS: SituacaoOop["heroPos"][] = ["UTG", "UTG1", "LJ"]
+// O EP do módulo é o EP2 do Poker Academy (UTG+1), que é o UTG1 da nossa mesa.
+const EP_POS: SituacaoOop["heroPos"][] = ["UTG1"]
 
 function gerar(): SituacaoOop[] {
   const maos = todasAsMaos()
@@ -654,6 +657,8 @@ function gerar(): SituacaoOop[] {
         const grupos = new Map<string, SituacaoOop[]>()
         for (const m of maos) {
           if (m.some((c) => board.includes(c))) continue
+          // O herói só joga mãos que abre desta posição.
+          if (!abre(cenario === "EP" ? "EP2" : "CO", m)) continue
           const d = decidir(jogada, board, m, variante === "doisNaipes")
           if (!d) continue
           const chave = d.classe + "|" + d.acao
