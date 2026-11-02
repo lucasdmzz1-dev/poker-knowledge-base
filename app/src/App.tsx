@@ -1,5 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom"
 import { Layout } from "@/components/layout"
+import Admin from "@/pages/admin"
 import Analise from "@/pages/analise"
 import Home from "@/pages/home"
 import Pratica from "@/pages/pratica"
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="teoria/:slug" element={<TeoriaModulo />} />
           <Route path="pratica" element={<Pratica />} />
           <Route path="analise" element={<Analise />} />
+          <Route path="admin" element={<Admin />} />
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>

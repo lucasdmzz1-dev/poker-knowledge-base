@@ -13,6 +13,7 @@ import {
   type Sessao,
 } from "@/lib/nuvem"
 import { comecarSincronia, limparLocal, sincronizarAoEntrar } from "@/lib/sync"
+import { comecarRegistroDeUso } from "@/lib/uso"
 import { UsuarioContext } from "@/lib/usuario"
 import { cn } from "@/lib/utils"
 
@@ -150,7 +151,8 @@ function Login({
         )}
         <p className="mt-4 text-xs text-muted-foreground">
           Seus leaks, stats e painel ficam na sua conta e só você vê. Teoria e
-          Prática são abertas a todos que entram.
+          Prática são abertas a todos que entram. Registramos só quais áreas do
+          site você abre, para saber como ele é usado; nunca o conteúdo.
         </p>
       </form>
     </main>
@@ -196,6 +198,10 @@ export function Portao({ children }: { children: ReactNode }) {
   }, [])
 
   useEffect(() => (fase === "dentro" ? comecarSincronia() : undefined), [fase])
+  useEffect(
+    () => (fase === "dentro" ? comecarRegistroDeUso() : undefined),
+    [fase]
+  )
 
   const usuario = useMemo(
     () =>

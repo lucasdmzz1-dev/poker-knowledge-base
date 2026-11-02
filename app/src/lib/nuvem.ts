@@ -263,3 +263,51 @@ export async function enviar(chave: string, valor: unknown): Promise<void> {
     ]),
   })
 }
+
+// Uso do site: uma linha por abertura de área, sem conteúdo.
+export async function enviarEvento(area: string): Promise<void> {
+  const s = await sessaoValida()
+  if (!s) return
+  await chamar("/rest/v1/eventos", {
+    method: "POST",
+    token: s.access_token,
+    headers: { prefer: "return=minimal" },
+    body: JSON.stringify({ user_id: s.user.id, area }),
+  })
+}
+
+export async function ehAdmin(): Promise<boolean> {
+  const s = await sessaoValida()
+  if (!s) return false
+  const linhas = await chamar(
+    `/rest/v1/admins?select=user_id&user_id=eq.${s.user.id}`,
+    { token: s.access_token }
+  )
+  return Array.isArray(linhas) && linhas.length > 0
+}
+
+export interface ResumoUsuario {
+  email: string
+  provedor: string
+  cadastro: string
+  ultimo_login: string | null
+  ultima_atividade: string | null
+  aberturas_inicio: number
+  aberturas_teoria: number
+  aberturas_pratica: number
+  aberturas_analise: number
+  treinos: number
+  leaks: number
+  semanas: number
+}
+
+export async function resumoUsuarios(): Promise<ResumoUsuario[]> {
+  const s = await sessaoValida()
+  if (!s) throw new Error("Sessão vencida. Entre de novo.")
+  const r = await chamar("/rest/v1/rpc/resumo_usuarios", {
+    method: "POST",
+    token: s.access_token,
+    body: "{}",
+  })
+  return Array.isArray(r) ? (r as ResumoUsuario[]) : []
+}

@@ -77,6 +77,12 @@ Se o repositório virar privado, o GitHub Pages deixa de servir no plano gratuit
 
 O repositório é público: não coloque dados pessoais nele. Os dados de cada jogador ficam só na conta dele.
 
+## Administração (uso do site)
+
+O site registra só qual área cada jogador abre (início, teoria, prática ou análise) e quando, sem conteúdo, na tabela `eventos`. A página `/#/admin` mostra, para administradores, uma linha por usuário: e-mail, como entra, cadastro, último login e última atividade, aberturas por área e contagens do que ele registrou (treinos, leaks, semanas). Os leaks, stats e painel de cada um não aparecem. O aviso aparece na tela de login.
+
+Para ligar: rode `docs/Supabase-Admin.sql` no SQL Editor e inclua o seu usuário em `admins` (comando no fim do arquivo). Para outro administrador, repita o `insert` com o e-mail dele. Sem o SQL, o registro de uso falha em silêncio e a página mostra "só para administradores".
+
 ## Fluxo mensal
 
 1. Receber os prints do HUD do mês e colocar em Leaks do mês.
