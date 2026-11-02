@@ -136,7 +136,7 @@ export function SeletorTema({
             aria-pressed={tema === id}
             onClick={() => onTema(id)}
             className={cn(
-              "cursor-pointer rounded-full border px-3.5 py-2 transition-colors",
+              "cursor-pointer rounded-full border px-3.5 py-2 uppercase transition-colors",
               tema === id
                 ? "border-primary bg-primary text-primary-foreground"
                 : "bg-card text-muted-foreground hover:text-foreground"
@@ -145,7 +145,7 @@ export function SeletorTema({
             {nome}
           </button>
         ))}
-        <span className="rounded-full border bg-card px-3.5 py-2 text-muted-foreground opacity-50">
+        <span className="rounded-full border bg-card px-3.5 py-2 text-muted-foreground uppercase opacity-50">
           Misturar temas · em breve
         </span>
       </div>
