@@ -28,6 +28,7 @@ function mesesDe(leaks: Leak[]): string[] {
 }
 
 const VISIVEIS = 6
+const CRITICAS = 3 // os mesmos que levam o selo "Atacar"
 
 export function useLeaks() {
   const [leaks, setLeaks] = useState<Leak[]>(lerLeaks)
@@ -54,17 +55,17 @@ function LeaksLista({
   const [fase, setFase] = useState<Fase>("preflop")
   const [todos, setTodos] = useState(false)
   const [secao, setSecao] = useState<string | null>(null)
+  const [criticas, setCriticas] = useState(false)
   const daFase = useMemo(
     () => leaks.filter((l) => l.mes === mes && l.fase === fase),
     [leaks, mes, fase]
   )
-  const doMes = useMemo(
-    () =>
-      daFase
-        .filter((l) => !secao || secaoDoLeak(l) === secao)
-        .sort((a, b) => Math.abs(desvio(b)) - Math.abs(desvio(a))),
-    [daFase, secao]
-  )
+  const doMes = useMemo(() => {
+    const ordenados = daFase
+      .filter((l) => !secao || secaoDoLeak(l) === secao)
+      .sort((a, b) => Math.abs(desvio(b)) - Math.abs(desvio(a)))
+    return criticas ? ordenados.slice(0, CRITICAS) : ordenados
+  }, [daFase, secao, criticas])
   const total = (f: Fase) =>
     leaks.filter((l) => l.mes === mes && l.fase === f).length
   const mostrados = todos ? doMes : doMes.slice(0, VISIVEIS)
@@ -326,6 +327,22 @@ function LeaksLista({
         aria-label="Divisão"
         className="mb-4 flex flex-wrap gap-2"
       >
+        <button
+          type="button"
+          aria-pressed={criticas}
+          onClick={() => {
+            setCriticas((v) => !v)
+            setTodos(false)
+          }}
+          className={cn(
+            "cursor-pointer rounded-full border px-4 py-1.5 text-sm font-bold transition-[background-color,border-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.97]",
+            criticas
+              ? "border-primary bg-primary text-primary-foreground"
+              : "border-primary text-primary hover:bg-primary/10"
+          )}
+        >
+          Mais críticas
+        </button>
         {[null, ...SECOES_LEAK].map((sec) => {
           const n = sec
             ? daFase.filter((l) => secaoDoLeak(l) === sec).length
