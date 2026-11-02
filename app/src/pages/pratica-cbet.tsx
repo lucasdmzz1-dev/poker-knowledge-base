@@ -6,6 +6,7 @@ import {
   estadoDe,
 } from "@/components/poker/resposta"
 import { ResultadoFinal, nomeNaFrase } from "@/components/poker/resultado-final"
+import { RelatarErro } from "@/components/poker/relatar-erro"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
@@ -311,7 +312,7 @@ export default function PraticaCbet({ onTema }: { onTema: (t: Tema) => void }) {
             <p className="max-w-[64ch] text-muted-foreground">
               {board.estrategia}
             </p>
-            <div className="mt-4">
+            <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
               <Button
                 autoFocus
                 size="lg"
@@ -320,6 +321,16 @@ export default function PraticaCbet({ onTema }: { onTema: (t: Tema) => void }) {
               >
                 {ultimo ? "Ver resultado" : "Próxima mão"}
               </Button>
+              <RelatarErro
+                tema="C-Bet IP Short Stack"
+                questao={atual.id}
+                contexto={{
+                  board: board.board.join(" "),
+                  mao: atual.hero.join(" "),
+                  resposta: String(resp),
+                  certa: atual.certa,
+                }}
+              />
             </div>
           </CartaoResultado>
         )}

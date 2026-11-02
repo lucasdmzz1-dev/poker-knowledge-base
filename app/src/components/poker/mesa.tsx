@@ -35,11 +35,11 @@ export function tamanhoBB(fracao: number): string {
 // Lugares da mesa em ordem de rotação, começando no assento de baixo.
 const LUGARES: Pos[] = ["BTN", "SB", "BB", "UTG", "UTG1", "LJ", "HJ", "CO"]
 
-// No Probe Turn o herói do BB senta embaixo e as demais posições giram junto.
-function lugarDe(pos: Pos, probe: boolean): Pos {
-  if (!probe) return pos
+// No Probe Turn e no C-Bet IP o herói senta embaixo e as demais posições giram junto.
+function lugarDe(pos: Pos, heroPos: Pos, gira: boolean): Pos {
+  if (!gira) return pos
   const k =
-    (ORDEM.indexOf(pos) - ORDEM.indexOf("BB") + ORDEM.length) % ORDEM.length
+    (ORDEM.indexOf(pos) - ORDEM.indexOf(heroPos) + ORDEM.length) % ORDEM.length
   return LUGARES[k]
 }
 
@@ -47,12 +47,14 @@ function stackNaMesa(
   pos: Pos,
   opener: Pos,
   probe: boolean,
-  cbet: boolean
+  cbet: boolean,
+  heroPos: Pos,
+  stackCbet: number
 ): number {
-  // C-bet short stack: 20bb, BTN abriu 2 e o BB pagou.
+  // C-bet IP: o herói abriu 2 e o BB pagou. O SB pagou o blind morto de 0,5.
   if (cbet) {
-    if (pos === "BTN" || pos === "BB") return 18
-    return pos === "SB" ? 19.5 : 20
+    if (pos === heroPos || pos === "BB") return stackCbet - ABERTURA
+    return pos === "SB" ? stackCbet - 0.5 : stackCbet
   }
   if (pos === opener || pos === "BTN") return STACK_EFETIVO
   if (probe && pos === "BB") return STACK_EFETIVO
@@ -160,14 +162,16 @@ function Assento({
   heroPos,
   probe,
   cbet,
+  stackCbet,
 }: {
   pos: Pos
   opener: Pos
   heroPos: Pos
   probe: boolean
   cbet: boolean
+  stackCbet: number
 }) {
-  const [x, y, xm] = POS_TELA[lugarDe(pos, probe)]
+  const [x, y, xm] = POS_TELA[lugarDe(pos, heroPos, probe || cbet)]
   const heroi = pos === heroPos
   const abriu = pos === opener
   const noPote = heroi || abriu
@@ -199,14 +203,18 @@ function Assento({
           {pos}
         </span>
         <span className="text-[clamp(0.58rem,1.2vw,0.85rem)] text-muted-foreground tabular-nums">
-          {stackNaMesa(pos, opener, probe, cbet)}
+          {stackNaMesa(pos, opener, probe, cbet, heroPos, stackCbet)}
         </span>
       </div>
       {abriu && (
         <span
           className={cn(
             "absolute flex flex-col items-center gap-0.5 whitespace-nowrap",
-            y > 70 ? "bottom-full mb-1 flex-col-reverse" : "top-full mt-1"
+            y > 70
+              ? "bottom-full mb-1 flex-col-reverse"
+              : y < 30
+                ? "top-1/2 left-full ml-2 -translate-y-1/2 items-start"
+                : "top-full mt-1"
           )}
         >
           <span className="rounded-full bg-b50 px-2 py-0.5 text-[clamp(0.6rem,1.05vw,0.78rem)] font-bold text-[#1a0907]">
@@ -239,6 +247,8 @@ export function Mesa({
   sequencia,
   probe = false,
   cbet = false,
+  heroCbet = "BTN",
+  stackCbet = 20,
 }: {
   opener: Opener
   board: string[]
@@ -251,9 +261,12 @@ export function Mesa({
   probe?: boolean
   // C-bet IP short stack: o herói abriu do BTN e o BB pagou, com 20bb.
   cbet?: boolean
+  // Posição do herói no C-Bet IP (HJ, CO ou BTN) e o stack inicial de todos.
+  heroCbet?: Pos
+  stackCbet?: number
 }) {
   const vilao: Pos = probe ? "BTN" : cbet ? "BB" : opener
-  const heroPos: Pos = probe ? "BB" : "BTN"
+  const heroPos: Pos = probe ? "BB" : cbet ? heroCbet : "BTN"
   const estilo = { "--s": "clamp(40px, 7.2vw, 66px)" } as CSSProperties
   return (
     <div className="mx-auto w-full max-w-[880px]" style={estilo}>
@@ -299,6 +312,7 @@ export function Mesa({
             heroPos={heroPos}
             probe={probe}
             cbet={cbet}
+            stackCbet={stackCbet}
           />
         ))}
 

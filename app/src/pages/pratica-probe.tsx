@@ -6,6 +6,7 @@ import {
   estadoDe,
 } from "@/components/poker/resposta"
 import { ResultadoFinal } from "@/components/poker/resultado-final"
+import { RelatarErro } from "@/components/poker/relatar-erro"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
@@ -111,7 +112,7 @@ export function Ficha({
   )
 }
 
-export type Tema = "bet" | "probe" | "cbet"
+export type Tema = "bet" | "probe" | "cbet" | "cbet40"
 
 export function SeletorTema({
   tema,
@@ -124,6 +125,7 @@ export function SeletorTema({
     ["bet", "Bet vs Missed C-Bet"],
     ["probe", "Probe Turn"],
     ["cbet", "C-Bet IP Short Stack"],
+    ["cbet40", "C-Bet IP 40bb"],
   ]
   return (
     <fieldset className="grid gap-2.5">
@@ -402,7 +404,7 @@ export default function PraticaProbe({
             <p className="max-w-[64ch] text-muted-foreground">
               {turn.criterio}
             </p>
-            <div className="mt-4">
+            <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
               <Button
                 autoFocus
                 size="lg"
@@ -411,6 +413,16 @@ export default function PraticaProbe({
               >
                 {ultimo ? "Ver resultado" : "Próxima mão"}
               </Button>
+              <RelatarErro
+                tema="Probe Turn"
+                questao={atual.id}
+                contexto={{
+                  board: [...turn.flop, turn.turn].join(" "),
+                  mao: atual.hero.join(" "),
+                  resposta: String(resp),
+                  certa: atual.certa,
+                }}
+              />
             </div>
           </CartaoResultado>
         )}

@@ -43,7 +43,8 @@ Roteiro usado no Probe Turn (módulo 14) e no C-Bet IP Short Stack (módulo 01).
 - Título "CERTO" ou "ERRADO" centralizado. O A HIGH sempre em maiúsculas (use `nomeNaFrase`).
 - Nomes dos temas em maiúsculas no seletor.
 - Barra do RNG sem vermelho nem verde, para não lembrar acerto e erro.
-- Reuse `BotaoResposta`, `CartaoResultado` e `ResultadoFinal`. Não copie o visual.
+- Reuse `BotaoResposta`, `CartaoResultado`, `ResultadoFinal` e `RelatarErro`. Não copie o visual.
+- Ponha o `RelatarErro` ao lado do botão "Próxima mão", com o tema, o id da questão e o contexto (board, mão, resposta e ação certa).
 
 ## 6. Conferir antes de entregar
 
