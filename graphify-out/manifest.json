@@ -1380,9 +1380,9 @@
     "semantic_hash": ""
   },
   "app/src/components/poker/cards.tsx": {
-    "mtime": 1793659418.4149158,
-    "seen": 1793659455.3198707,
-    "ast_hash": "e3c44ccfef0e82d095ff8138260615b8",
+    "mtime": 1793661465.7039661,
+    "seen": 1793661484.186344,
+    "ast_hash": "89d2c94817984e12cae696e902528e23",
     "semantic_hash": ""
   },
   "app/src/components/ui/badge.tsx": {
@@ -1452,9 +1452,9 @@
     "semantic_hash": ""
   },
   "app/src/data/mod15.ts": {
-    "mtime": 1793648548.9997206,
-    "seen": 1793648571.4556086,
-    "ast_hash": "60ef3b94b5c5c825d60694731d85d3b7",
+    "mtime": 1793661465.251137,
+    "seen": 1793661484.1908555,
+    "ast_hash": "9e1a9483267222b28925cdb4ae569961",
     "semantic_hash": ""
   },
   "app/src/lib/poker.ts": {
@@ -2664,9 +2664,9 @@
     "semantic_hash": ""
   },
   "app/src/data/prat05.ts": {
-    "mtime": 1793648549.0019872,
-    "seen": 1793648571.4556086,
-    "ast_hash": "7a213cf6abac103ee042add25f4500dd",
+    "mtime": 1793661465.252477,
+    "seen": 1793661484.1918566,
+    "ast_hash": "10b5433a10479ecd241d067eb8a4f654",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-oop.tsx": {
@@ -2688,9 +2688,9 @@
     "semantic_hash": ""
   },
   "app/src/data/prat17.ts": {
-    "mtime": 1793658227.8735614,
-    "seen": 1793658246.45025,
-    "ast_hash": "700ed6c20838254cf88e5804014a7dfc",
+    "mtime": 1793661465.252477,
+    "seen": 1793661484.1918566,
+    "ast_hash": "d65a8d5f74ca8b62bca6d02493e1c9a9",
     "semantic_hash": ""
   },
   "app/src/lib/uso.ts": {
@@ -2706,9 +2706,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-bb.tsx": {
-    "mtime": 1793659418.470071,
-    "seen": 1793659455.3334274,
-    "ast_hash": "bce79cf8d7b94e989b3cf7a6bf32a30d",
+    "mtime": 1793661465.7049665,
+    "seen": 1793661484.199473,
+    "ast_hash": "6c033599ef98650fe70393d240e79ce9",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {
