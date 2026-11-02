@@ -226,3 +226,49 @@ Pela regra do `MAPA-PRE-POS.md`, o módulo 12 (Parte 7) e o 13 (Regras 28 a 30) 
 A aula não cita esse board. Pela regra "duas cartas de valor 8 ou mais = B40" (T e 8) e pelo Q-8-4, que é B40, a leitura é B40 (inferência). Não há sequência possível com duas cartas. O T-7-4 com flush draw é B40 e o T-8-5 com flush draw é B70, então, se o T-8-4 tiver flush draw, ele pode puxar para B70 (inferência). Os naipes não foram definidos.
 
 **Status:** aberta. Pergunta ao coach: o T-8-4 é B40 ou B70, com e sem flush draw?
+
+---
+
+# Atualizações de 02/11/2026
+
+Fontes: resposta do coach no Discord (colada pelo autor do KB), nota do Yago no Discord, as duas imagens do coach (IMG1, guideline por board, e IMG2, tabelas dos splits, agora com todos os naipes) e esclarecimentos do autor do KB. Os itens abaixo atualizam o status dos itens acima. O texto original de cada item fica como estava.
+
+## Item 13 — K-Q-8
+
+**Status:** resolvida em B70. O IMG1 #1 dá K♠ Q♠ 8♥ em B70 com frequência de 25%, e o autor do KB confirmou que nesse board o SB não tem a seguida.
+
+## Item 14 — "Size alto" para 2 broadways e semi-conectado
+
+**Status:** resolvida em parte. Critério do coach: duas cartas altas e uma baixa tendem ao B40 (K-J-4, Q-9-4, Q-9-2); duas altas com a terceira conectando mais vão para B70 (K-Q-8, Q-9-7); semi-conectado, B70.
+
+## Item 16 — Status do IMG1 e do IMG2
+
+**Status:** aberta, com uso definido. O autor do KB usou o IMG1 como referência board a board (sizes, frequências e buckets) e o IMG2 como tabela geral dos splits. Onde os dois divergem nos buckets, vale o IMG1 nos 10 boards dele e o IMG2 nos demais (Decisão 13). A pergunta ao coach sobre qual é o esboço e qual é o refinamento continua aberta.
+
+## Item 17 — Sets que não são top set
+
+**Status:** resolvida para o B70. O Yago explicou: num spot que aposta muito alto o vilão folda muito mais, e a trinca, principalmente por bloquear pares, não ganha nada em colocar dinheiro em frequência alta. No B70 a trinca vai em 25%, como no IMG1 #1 e #2. Para o B40 continua aberto (o IMG2 põe sets em 75%).
+
+## Item 23 — Mão 4 da atividade (Q-J-8 com flush draw)
+
+**Status:** resolvida no size. Q-J-8 e J-T-8 são B40: o SB tem a seguida offsuit (a linha offsuit que ele defende começa em 8x). O bucket dos flush draws continua com certeza média: a fala diz 50% e o IMG2 e o TXT dizem 75%.
+
+## Item 25 — Inconsistências entre IMG1 e IMG2
+
+**Status:** resolvida em parte. Dois pares no B70: o Yago diz que a prioridade, quando o size é muito alto, são as mãos fortes e vulneráveis nas próximas streets (dois pares, overpair e top pair forte), então dois pares vão em 75% (IMG1) e não em 50% (IMG2). No Q-6-3 e no 7-5-2 do IMG1, dois pares e overpair vão em 100%, e trinca, top pair e air em 75%. As outras divergências da lista continuam abertas.
+
+## Item 30 — Pares de bolso (novo)
+
+**Status:** resolvida (autor do KB). Underpair é o par de bolso abaixo do terceiro par, ou seja, abaixo da carta mais baixa do board. Par de bolso entre cartas do board conta como segundo ou terceiro par: no J-9-6, TT é segundo par, 77 é terceiro par e 55 é underpair. Overpair é acima de todas as cartas.
+
+## Item 31 — Boards com flush draw em B70 (novo)
+
+**Status:** resolvida (autor do KB). Em split B70: low conectado com flush draw (9-7-5, T-8-5) e semi conectado com flush draw (Q-T-7, Q-8-7 com dois de ouros, J-7-6 com dois de espadas, K-9-8 com dois de espadas).
+
+## Item 32 — Critério pelo range off do SB (novo)
+
+**Status:** registrada (coach). O que decide o size é o range de limp-call do SB, principalmente a parte offsuit, que ele defende de 8x para cima. Seguida que ele tem offsuit: B40. Seguida em board low, onde ele não tem a seguida offsuit: B70. Uma carta alta e duas baixas (abaixo do 8x, porque ele quase não defende 7x offsuit ou menos): size baixo, muito thin value, B25. No Q-9-2 muitos 9x ainda querem apostar, então B40. O Q-9-7 é muito dinâmico, com alta interação com o range do SB e sem incentivo de thin value, então B70.
+
+## Item 11 — Q-6-3 e T-7-4 (nota)
+
+O critério do coach explica o Q-6-3 em B25 (uma alta e duas baixas), mas o T-7-4 com flush draw continua B40 na fala, e por essa regra seria B25. Continua aberta.

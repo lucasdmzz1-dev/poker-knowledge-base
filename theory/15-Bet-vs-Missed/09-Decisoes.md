@@ -115,6 +115,14 @@ Módulo estruturado com:
 
 Pendente: ver 06-Pendencias.md.
 
+---
+
+# Decisão 11 — Pares de bolso, top set e range do treino (02/11/2026)
+
+Underpair é o par de bolso abaixo do terceiro par, e o par de bolso entre cartas do board é segundo ou terceiro par (autor do KB). O top set vai em 75% no flop seco (imagem do instrutor). O treino da Prática só sorteia mãos que o BTN paga contra o open do CO e do HJ.
+
+**Status:** definitiva.
+
 <!-- graphify-links:start -->
 
 ---

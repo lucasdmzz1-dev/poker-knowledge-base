@@ -1,5 +1,13 @@
 # Changelog — BB Raised Pot vs SB
 
+## Versão 1.4 (02/11/2026)
+
+Fontes: resposta do coach e nota do Yago no Discord, IMG1 e IMG2 com todos os naipes e esclarecimentos do autor do KB.
+
+- Regras: acrescentadas as Regras 21 a 25 (range off do SB, altas e baixas no board, prioridade no B70, pares de bolso e boards de B70 com flush draw).
+- Decisões: acrescentadas as Decisões 11 a 14.
+- Pendências: seção "Atualizações de 02/11/2026" com o novo status dos itens 11, 13, 14, 16, 17, 23 e 25 e os itens novos 30, 31 e 32.
+
 ## Versão 1.3 (31/10/2026)
 
 - Pendências: adicionado o item 29 (T-8-4), board que a aula não cita, com a leitura provisória marcada como inferência.

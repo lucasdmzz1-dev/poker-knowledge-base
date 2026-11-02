@@ -151,6 +151,7 @@ Contra EP e MP o range é outro que o do BB, então o tipo pode mudar (Regra 16 
 | Q-2-3, K-5-3, K-7-4, A-7-2 | Seco | Autor | Validado |
 | A-5-3, 9-4-2, T-3-2, Q-6-4 | Seco | Aula | Validado |
 | T-6-2 | Seco | Autor | Validado |
+| T-7-3, T-7-5, 8-3-2, 8-7-2 | Seco | Autor (exemplos do trainer do coach, 02/11/2026) | Validado |
 | 8-5-4 | Seco (tratado como) | Aula | Validado |
 | A♠ 9♠ 8♠ | Monotone | Imagem | Validado |
 | J-3-3 | Dobrado seco | Aula | Validado |
@@ -180,6 +181,13 @@ Itens esclarecidos em 31/10/2026: A-K-2 é semi conectado, a lista dos boards se
 Por enquanto, os exercícios e as situações do trainer usam **só boards com status Validado** (seção 6). Boards intermediários ou com status Inferência ficam de fora até serem confirmados.
 
 ---
+
+# 9. Esclarecimentos de 02/11/2026
+
+- **Boards secos:** T-7-3, T-7-5, 8-3-2 e 8-7-2 são secos, segundo exemplos do trainer do coach. Isso responde em parte a dúvida 1 (boards intermediários entre semi conectado e seco).
+- **Top set:** a imagem do flop seco (Q-5-3) lista overpair e trincas em 100% e "2 pares, TPs e TS" em 75%. A top trinca (TS) fica em 75%.
+- **Pares de bolso (autor):** overpair é acima de todas as cartas. Entre a primeira e a segunda carta é segundo par, entre a segunda e a terceira é terceiro par, e só abaixo de todas é underpair. No J-9-6, TT é segundo par, 77 é terceiro par e 55 é underpair.
+- **Range do treino:** a Prática só sorteia mãos que o BTN paga contra o open do CO e do HJ, a 40bb (Poker Academy). Os ranges estão em `theory/tools/ranges-poker-academy.md`. Mãos que o BTN só 3beta (AA, QQ, AKs) ou folda (53s, 96s) ficam fora do treino.
 
 # Ligações
 

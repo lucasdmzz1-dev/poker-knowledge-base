@@ -124,6 +124,49 @@ T-7-4 é B40, T-7-5 "piora um pouco" e T-8-5 com flush draw é B70.
 
 ---
 
+# Regra 21 — O range off do SB define o size (02/11/2026)
+
+**Faça:** pense no range de limp-call do SB, principalmente na parte offsuit, que ele defende de 8x para cima.
+
+- Seguida que o SB tem offsuit: B40 (Q-J-8, J-T-8).
+- Seguida em board low, onde ele não tem a seguida offsuit: B70 (9-7-5, T-8-5).
+
+**Por quê:** onde ele acerta mais, não dá para apostar em frequência alta, e o size varia entre o médio e o muito alto. **[Coach]**
+
+---
+
+# Regra 22 — Altas e baixas no board (02/11/2026)
+
+**Faça:**
+
+- Duas cartas altas e uma baixa: B40 (K-J-4, Q-9-4, Q-9-2).
+- Duas cartas altas com a terceira conectando mais: B70 (K-Q-8, Q-9-7).
+- Uma carta alta e duas baixas, abaixo do 8x: B25, muito thin value (Q-6-3, T-4-2, J-4-2).
+
+**Por quê:** o SB quase não defende 7x offsuit ou menos, então o board dá muito thin value. **[Coach]**
+
+---
+
+# Regra 23 — Nos boards de B70, a prioridade são as mãos vulneráveis (02/11/2026)
+
+**Faça:** no B70 aposte em 75% os dois pares, o overpair e o top pair forte. A trinca vai em 25%.
+
+**Por quê:** apostando muito alto o vilão folda muito mais, e a trinca, por bloquear pares, não ganha em colocar dinheiro em frequência alta. As mãos fortes e vulneráveis para as próximas streets passam a ser a prioridade. **[Yago]**
+
+---
+
+# Regra 24 — Pares de bolso (02/11/2026)
+
+**Faça:** classifique o par de bolso pela posição no board. Acima de todas as cartas é overpair. Entre a primeira e a segunda, segundo par. Entre a segunda e a terceira, terceiro par. Abaixo de todas, underpair.
+
+**Exemplo:** no J-9-6, TT é segundo par, 77 é terceiro par e 55 é underpair. **[Autor]**
+
+---
+
+# Regra 25 — Boards de B70 com flush draw (02/11/2026)
+
+**Faça:** use o split B70 no low conectado (9-7-5, T-8-5) e no semi conectado com flush draw (Q-T-7, Q-8-7, J-7-6, K-9-8). **[Autor]**
+
 # Regra principal do módulo
 
 Ao escolher o size, pergunte primeiro quanto thin value o board dá para este range de SB. O resto segue dessa resposta.
