@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 export function nomeNaFrase(nome: string): string {
   return nome
     .split(" ")
-    .map((p) => (/^[A-Z][A-Z0-9-]*$/.test(p) ? p : p.toLowerCase()))
+    .map((p) => (/^[A-Z][A-Z0-9-]*[,.;:]?$/.test(p) ? p : p.toLowerCase()))
     .join(" ")
 }
 

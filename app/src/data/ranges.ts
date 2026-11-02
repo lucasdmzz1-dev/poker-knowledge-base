@@ -96,3 +96,16 @@ export function classesQueOBTNPaga(): string[] {
     (k) => (co.get(k)?.C ?? 0) > 0 && (hj.get(k)?.C ?? 0) > 0
   )
 }
+
+// BB contra o limp do SB (40bb): o que o BB aumenta (raise 3,5x, 44,1% das mãos).
+export const BB_RAISE_CONTRA_LIMP =
+  "AA:R100 AKs:R100 AQs:R100 AJs:R100 ATs:R100 A9s:R100 A8s:R100 A7s:R100 A6s:R100 A5s:R100 A4s:R5 A3s:R78 A2s:R92 AKo:R100 KK:R100 KQs:R100 KJs:R100 KTs:R100 K9s:R1 K7s:R53 AQo:R100 KQo:R100 QQ:R100 QJs:R100 QTs:R9 Q9s:R37 Q8s:R71 Q7s:R47 Q6s:R23 Q2s:R15 AJo:R100 KJo:R77 QJo:R53 JJ:R100 JTs:R100 J8s:R8 J7s:R2 ATo:R100 KTo:R45 QTo:R35 JTo:R13 TT:R100 A9o:R100 K9o:R55 Q9o:R19 J9o:R39 T9o:R21 99:R100 92s:R12 A8o:R94 K8o:R75 Q8o:R9 J8o:R24 T8o:R35 98o:R6 88:R100 87s:R55 83s:R1 82s:R99 A7o:R54 K7o:R10 Q7o:R9 J7o:R58 T7o:R69 97o:R61 87o:R9 77:R100 76s:R100 75s:R57 73s:R100 72s:R100 A6o:R8 Q6o:R1 J6o:R23 T6o:R54 96o:R69 86o:R49 76o:R14 66:R100 65s:R100 64s:R100 63s:R81 62s:R100 Q5o:R25 J5o:R34 T5o:R46 95o:R50 85o:R54 75o:R41 65o:R39 55:R100 54s:R100 53s:R99 52s:R100 K4o:R8 Q4o:R55 J4o:R45 T4o:R76 94o:R66 84o:R86 74o:R32 64o:R10 54o:R2 44:R5 43s:R6 42s:R84 K3o:R38 Q3o:R69 J3o:R62 T3o:R55 93o:R62 83o:R67 73o:R28 63o:R34 53o:R17 43o:R14 32s:R8 K2o:R33 Q2o:R66 J2o:R68 T2o:R56 92o:R50 82o:R26 72o:R54 62o:R55 52o:R20 42o:R10 32o:R86"
+
+// O BB aumenta a mão contra o limp do SB (qualquer frequência)?
+export function bbRaisa(m: readonly string[]): boolean {
+  return (tabela(BB_RAISE_CONTRA_LIMP).get(classeDaMao(m))?.R ?? 0) > 0
+}
+
+export function classesQueOBBRaisa(): string[] {
+  return [...tabela(BB_RAISE_CONTRA_LIMP).keys()]
+}
