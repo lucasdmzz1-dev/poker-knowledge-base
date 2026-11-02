@@ -1,24 +1,24 @@
 # Graph Report - kb-pratica-384abd  (2026-11-02)
 
 ## Corpus Check
-- 426 files · ~777,230 words
+- 427 files · ~777,396 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 39 file(s) not represented in the graph (top: .csv 25, (none) 6, .css 4)
 
 ## Summary
-- 4567 nodes · 8530 edges · 324 communities (277 shown, 47 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 344 edges (avg confidence: 0.87)
+- 4573 nodes · 8562 edges · 318 communities (282 shown, 36 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 350 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5d2ae62c`
+- Built from commit: `4e3311fa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Decisões – Probe Turn
 - Parte 2 — Shove vs open de posição tardia
-- render
+- Solver — ICM e Risk Premium (25% vs 16% field left)
 - with
 - live-browser.js
 - leaks.tsx
@@ -48,7 +48,7 @@
 - 01 - CBET IP SHORT GUIDELINE.md
 - generate.md
 - Probe Turn: guia visual (infografia)
-- 14 - PROBE TURN GUIDELINE.md
+- Parte 6 — Como aplicar na mesa
 - Notas de PKO e como entram no modelo
 - pko-stats.md
 - mesa.tsx
@@ -105,27 +105,27 @@
 - teoria-15.tsx
 - Parte 5 — Stack e risco de cair
 - el
-- Aula prática: Third Barrel e Vs Third Barrel – Prática
-- mesa.tsx
+- Fontes Oficiais (Guideline, Videoaulas, Solver, Exercícios, Correções do instrutor)
+- mod14.ts
 - Lei 15 — A Função da Mão Importa Mais que a Força Absoluta
-- DIFERENÇA DE STACK
+- Regras vivas: BTN contra 1 open em PKO
 - 4BET Trainer (aba Solver e Trainer)
 - Parte 2 — Como escolher o size
 - Parte 1 — O ponto de partida: o range de check atrás do BTN
 - 01 - BB RAISED POT VS SB GUIDELINE.md
-- main
+- backup.ts
 - compilerOptions
-- Extract Flow
+- nuvem.ts
 - Retomada do MAIN CHAT TEORIA
 - Parte 2 — As frequências (range classes)
 - Parte 7 — Turn e river (o que não muda)
 - C-Bet OOP Separado de Outros Módulos
 - 15-Bet-vs-Missed/12-Padroes.md
-- Parte 8 — Como aplicar na mesa
+- layout.tsx
 - Responsive Design
 - Parte 5 — Como dividir o bucket na mesa
 - Contexto Obrigatório (Stack, Spot, Posição, Ranges, Street, Fonte)
-- 01.2 — DEEP STACK
+- Playbook: coleta de árvores do 4BET Trainer por automação
 - dependencies
 - compilerOptions
 - Parte 3 — Quando você abriu e leva 3bet
@@ -141,12 +141,12 @@
 - 6. Recipes
 - 17-BB-Raised-Pot-vs-SB-Limp/04-Exercicios.md
 - 17-BB-Raised-Pot-vs-SB-Limp/02-VideoAulas.md
-- 02.1 — SHORT STACK
+- MAPA-PRE-POS.md
 - Banco de Correções (3BET POT)
 - 17-BB-Raised-Pot-vs-SB-Limp/09-Decisoes.md
-- scripts
+- colorize.md
 - 17-BB-Raised-Pot-vs-SB-Limp/README.md
-- 02.2 — DEEP STACK
+- doctor.md
 - EP / HJ
 - CO / BU
 - Changelog — BB Raised Pot vs SB
@@ -164,7 +164,7 @@
 - Exemplo K9 river Blank (B70 bluff)
 - Exemplo T6 river K (B100 bluff)
 - Notas do usuário (conhecimento de mesa)
-- BOARD SECO
+- retomada-pko.md
 - 17-BB-Raised-Pot-vs-SB-Limp/08-Referencias.md
 - Worst-Case Catalog
 - Site do Poker KB
@@ -178,20 +178,23 @@
 - 6. DINÂMICO AX
 - Lei 15 — A Função da Mão Importa Mais que a Força Absoluta
 - DIFERENÇA DE STACK
-- /impeccable hooks
+- Button
 - Parte 2 — O que alarga ou aperta o range
 - SPLIT B70
-- BOARD SECO
-- PRINCÍPIOS FUNDAMENTAIS
+- Impeccable Documenter
+- 01-Guideline.md
 - 12. PRINCÍPIO FINAL
 - Efeitos dentro de uma mesma árvore
+- _TEMPLATE/03-Solver.md
 - Impeccable Documenter
 - Rule
+- _TEMPLATE/07-Changelog.md
 - initGlobalBar
 - getOne
 - TURN — 3BET POT
 - Animation Audit Playbook
 - assets.mjs
+- Parte 1 — Como o bounty entra
 - Responsive Design
 - live.md
 - handleManualEditActivity
@@ -200,7 +203,7 @@
 - 03 - SECOND BARREL IP GUIDELINE.md
 - Apple Design
 - The Fixes
-- portao.tsx
+- Write Swift
 - The Toolkit
 - Prototyping Variants
 - design_system.py
@@ -219,8 +222,7 @@
 - The study
 - animate.md
 - Animation Standards Reference
-- Estratégia Split para Boards Low
-- DIFERENÇA DE POSIÇÃO
+- _TEMPLATE/09-Decisoes.md
 - getJson
 - 01.2 — DEEP STACK
 - Generate Report
@@ -231,7 +233,6 @@
 - Layout
 - Init flow
 - Scan mode (approach C: auto-extract, then confirm descriptive language)
-- Parte 4 — Largura do nó e sinais de aperto
 - New visual work
 - Parte 5 — A ação
 - Colour
@@ -256,10 +257,9 @@
 - Stage
 - 7. Tables and lists
 - Words
-- Operate mode depth (and Read notes)
 - Generate Combined Critique Report
 - core.py
-- App.tsx
+- portao.tsx
 - search.py
 - 2. The run for an app screen
 - Critique — judging the render
@@ -285,7 +285,6 @@
 - live-browser-ignores.js
 - Ce
 - x
-- Referências – C-Bet IP + Second Barrel
 - app.json
 - 9. Type and colour
 - The Animation Decision Framework
@@ -326,20 +325,15 @@
 - Visualize: Direction Comps & Asset Production
 - _TEMPLATE/04-Exercicios.md
 - _TEMPLATE/08-Referencias.md
-- Persuade and Experience
-- 01.1 — SHORT STACK
-- Ordem de prioridade: correções da instrutora > consenso do grupo > guideline
-- Ordem de prioridade das fontes (ICM)
-- Regra Principal — Antes de escolher o size, decida o grupo de mãos
 
 ## God Nodes (most connected - your core abstractions)
 1. `Theory Index` - 51 edges
 2. `connectSSE()` - 34 edges
 3. `setLiveState()` - 33 edges
 4. `resumeSession()` - 33 edges
-5. `getOne()` - 31 edges
-6. `showToast()` - 31 edges
-7. `react` - 31 edges
+5. `react` - 32 edges
+6. `getOne()` - 31 edges
+7. `showToast()` - 31 edges
 8. `writeJSON()` - 31 edges
 9. `el()` - 30 edges
 10. `initGlobalBar()` - 30 edges
@@ -347,14 +341,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `Pitfalls` --references--> `Layout()`  [INFERRED]
   .claude/skills/impeccable/reference/document.md → app/src/components/layout.tsx
-- `6. Concurrency in SwiftUI` --references--> `Layout()`  [INFERRED]
-  .claude/skills/write-swift/SKILL.md → app/src/components/layout.tsx
 - `O que tem em cada área` --references--> `randomInt()`  [INFERRED]
   docs/Site-Poker-KB.md → app/src/lib/poker.ts
+- `6. Concurrency in SwiftUI` --references--> `Layout()`  [INFERRED]
+  .claude/skills/write-swift/SKILL.md → app/src/components/layout.tsx
+- `Padrão dos temas da Prática` --references--> `RngStrip()`  [INFERRED]
+  docs/Site-Poker-KB.md → app/src/components/poker/cards.tsx
 - `Pending Validations` --semantically_similar_to--> `Pendências – C-Bet IP Short Stack`  [INFERRED] [semantically similar]
   docs/00-Architecture/KB-003-Module-Template.md → theory/01-CBet-IP-Short-Stack/06-Pendencias.md
-- `Pending Validations` --semantically_similar_to--> `Pendências – C-Bet IP 40bb`  [INFERRED] [semantically similar]
-  docs/00-Architecture/KB-003-Module-Template.md → theory/02-CBet-IP-40bb/06-Pendencias.md
 
 ## Import Cycles
 - None detected.
@@ -372,19 +366,19 @@
 - **Fatores que ampliam o range do BTN em PKO** — theory_tools_pko_pko_conhecimento_help_value, theory_tools_pko_pko_conhecimento_cobertura, theory_tools_pko_pko_conhecimento_risk_premium, theory_tools_pko_pko_conhecimento_dead_money_bounty, theory_tools_pko_regras_vivas_pko_btn_largura_no [INFERRED 0.85]
 - **Sizing de river por textura: blank vs board que esquisitou (B70 vs Overbet)** — theory_11_value_bet_masterclass_05_regras_consolidadas_regra_3_board_completa_draw_size_menor, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_4_board_blank_size_alto, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_5_carta_alta_nao_e_blank, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_6_dois_sizes_river, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_7_river_blank_vs_muda_nuts [INFERRED 0.85]
 
-## Communities (324 total, 47 thin omitted)
+## Communities (318 total, 36 thin omitted)
 
 ### Community 0 - "Decisões – Probe Turn"
-Cohesion: 0.22
-Nodes (26): Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100), O board mais errado: 875 com turn 9, VideoAulas — Probe Turn, Resumo da aula em cinco linhas (B70, B100, B40, B40, B70 + bluff), Anotações do instrutor (Bloco de Notas), Solver — Probe Turn (anotações do instrutor), Quadro por turn (anotações), Sigla 2P com dois sentidos (dois pares / duas pontas) (+18 more)
+Cohesion: 0.14
+Nodes (35): Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100), O board mais errado: 875 com turn 9, VideoAulas — Probe Turn, Resumo da aula em cinco linhas (B70, B100, B40, B40, B70 + bluff), Anotações do instrutor (Bloco de Notas), Solver — Probe Turn (anotações do instrutor), Quadro por turn (anotações), Sigla 2P com dois sentidos (dois pares / duas pontas) (+27 more)
 
 ### Community 1 - "Parte 2 — Shove vs open de posição tardia"
 Cohesion: 0.22
 Nodes (16): Simulações do GTO Wizard da aula (não capturadas), VideoAulas — Reta Final, Mapas de RFI do BTN e CO (ChipEV vs 10% field left, 25/20/15bb), Solver — Reta Final, Convenções: efetivo é o menor stack, todo open é de 2bb, Exercícios — Reta Final (50 questões), Regras Consolidadas – Reta Final, Pendência: mapas de defesa BB e squeeze em 10% field left (+8 more)
 
-### Community 2 - "render"
-Cohesion: 0.24
-Nodes (4): D (dados dos 10 spots: grids g25/g16, frequências, stacks), Ranges do solver: 25% e 16% do field left (página interativa), render(), ROWS (seletor de situações)
+### Community 2 - "Solver — ICM e Risk Premium (25% vs 16% field left)"
+Cohesion: 0.12
+Nodes (15): D (dados dos 10 spots: grids g25/g16, frequências, stacks), Ranges do solver: 25% e 16% do field left (página interativa), render(), ROWS (seletor de situações), Solver — ICM e Risk Premium (25% vs 16% field left), Spot 6 — BB (21bb) contra o open do CO (64bb), Spot 4 — BTN (125bb) contra o open do HJ, Spot 3 — BTN (26bb) contra o open do LJ (+7 more)
 
 ### Community 3 - "with"
 Cohesion: 0.05
@@ -400,11 +394,11 @@ Nodes (11): Alvo do Bluff (qual parte do range adversário fazer foldar), Blocke
 
 ### Community 6 - "16 - PKO GUIDELINE.md"
 Cohesion: 0.10
-Nodes (35): VideoAulas — PKO (fontes, sem aula em vídeo), GTO Wizard ChipEV 40bb (baseline Vanilla), Árvores dos erros do Trainer (#23, #102, #7459, #3697, #8587), Comparação Vanilla vs PKO (BTN contra CO, #5844 e #7067), Solver — PKO, Exercícios — PKO (39 exercícios), Exercícios com mãos reais do Trainer (20 a 39), Regras Consolidadas – PKO (+27 more)
+Nodes (34): Flashcards, Ligações, Flashcards — C-Bet IP Short Stack, VideoAulas — PKO (fontes, sem aula em vídeo), GTO Wizard ChipEV 40bb (baseline Vanilla), Árvores dos erros do Trainer (#23, #102, #7459, #3697, #8587), Comparação Vanilla vs PKO (BTN contra CO, #5844 e #7067), Solver — PKO (+26 more)
 
 ### Community 7 - "Second Barrel IP"
-Cohesion: 0.13
-Nodes (20): B70, VideoAulas – C-Bet IP + Second Barrel, Flush High Card (B40), Flush Low Card (B70), Boards A High (B25, alta frequência), Boards BBX (EP-HJ B40 / CO-BU B25), Boards Conectados (EP-HJ B40 / CO-BU B25), Boards Low – B70 Split (Valor / Bluff / Check) (+12 more)
+Cohesion: 0.12
+Nodes (21): B70, VideoAulas – C-Bet IP + Second Barrel, Flush High Card (B40), Flush Low Card (B70), Flashcards — Second Barrel IP, Boards A High (B25, alta frequência), Boards BBX (EP-HJ B40 / CO-BU B25), Boards Conectados (EP-HJ B40 / CO-BU B25) (+13 more)
 
 ### Community 8 - "Regras Consolidadas — C-Bet OOP"
 Cohesion: 0.19
@@ -412,7 +406,7 @@ Nodes (22): Construir Pote ou Realizar Equity?, VideoAulas — C-Bet OOP, EP com
 
 ### Community 9 - "15 - BET VS MISSED GUIDELINE.md"
 Cohesion: 0.09
-Nodes (36): Flashcards, Ligações, Flashcards — Second Barrel IP, Flashcards — XR Deep Stack, Flashcards — ICM e Risk Premium, Best of best method (multiway antigo), VideoAulas — Bet vs Missed C-Bet, Filtrar mãos de bet vs missed no Hand2Note (+28 more)
+Nodes (37): Regra Principal — Antes de escolher o size, decida o grupo de mãos, Best of best method (multiway antigo), VideoAulas — Bet vs Missed C-Bet, Filtrar mãos de bet vs missed no Hand2Note, Revisão de mãos do flop (AJ no A-K-2, 8-8 em board low, A-J no J-J-9), Solver — Bet vs Missed C-Bet (guideline em imagem), Padrões: B25 em boards com thin value; sem 100% no conectado high, monotone e dobrado, Exercícios — Bet vs Missed C-Bet (+29 more)
 
 ### Community 10 - "Exercícios — XR Short Stack"
 Cohesion: 0.25
@@ -423,12 +417,12 @@ Cohesion: 0.15
 Nodes (25): Capado ou não capado define a estratégia, não a posição isolada, GTOWizard (função 3-way), MDA (Massive Data Analysis) do field, VideoAulas Multiway Pot, Solver Multiway Pot (validações GTOWizard 3-way), Exercícios Multiway Pot (pendente), Regras Consolidadas Multiway Pot, Divisão fina de combos (próxima etapa do instrutor) (+17 more)
 
 ### Community 12 - "Value Bet (regras)"
-Cohesion: 0.14
-Nodes (18): Blank real vs carta alta que parece blank, VideoAulas Value Bet Masterclass (19 mãos reais dos alunos), Solver Value Bet Masterclass (pendente), Exercícios Value Bet Masterclass (pendente), Miss Value, Regras Consolidadas – Value Bet Masterclass, Pendência: aula específica sobre Check-Raise ofensivo, Pendência: exercícios formais do módulo 11 (+10 more)
+Cohesion: 0.08
+Nodes (35): Blank real vs carta alta que parece blank, VideoAulas Value Bet Masterclass (19 mãos reais dos alunos), Solver Value Bet Masterclass (pendente), Exercícios Value Bet Masterclass (pendente), Miss Value, Regras Consolidadas – Value Bet Masterclass, Pendência: aula específica sobre Check-Raise ofensivo, Pendência: exercícios formais do módulo 11 (+27 more)
 
 ### Community 13 - "Módulo 13 — ICM e Risk Premium"
-Cohesion: 0.08
-Nodes (51): Curva do ICM comparada a um eletrocardiograma, VideoAulas — ICM e Risk Premium, Solver — ICM e Risk Premium (25% vs 16% field left), Spot 6 — BB (21bb) contra o open do CO (64bb), Spot 4 — BTN (125bb) contra o open do HJ, Spot 3 — BTN (26bb) contra o open do LJ, Spot 9 — Blind war: SB (36,5bb) coberto pelo BB, Spot 8 — Blind war: SB (45,5bb) cobrindo o BB (+43 more)
+Cohesion: 0.09
+Nodes (43): Curva do ICM comparada a um eletrocardiograma, VideoAulas — ICM e Risk Premium, Exercícios — ICM e Risk Premium (27 questões), Regras Consolidadas – ICM e Risk Premium, ChipEV do LJ e coluna do 8, 9 e 10 — a confirmar, Pendências – ICM e Risk Premium, 27 exercícios de conceito (ICM), Módulo 12 (Reta Final) (+35 more)
 
 ### Community 14 - "connectSSE"
 Cohesion: 0.06
@@ -436,43 +430,43 @@ Nodes (83): applyPlaceholderDimensions(), applySavedSessionMeta(), buildParamsPa
 
 ### Community 15 - "painel.tsx"
 Cohesion: 0.08
-Nodes (54): levar(), CiclosAnteriores(), Comparar(), COR_ESTADO, corValor(), EncerrarCiclo(), adicionar(), maosCurto() (+46 more)
+Nodes (56): levar(), CiclosAnteriores(), Comparar(), COR_ESTADO, corValor(), EncerrarCiclo(), EscolherLeaks(), adicionar() (+48 more)
 
 ### Community 16 - "pratica.tsx"
-Cohesion: 0.10
-Nodes (44): Mesa(), Checkbox(), Label(), RadioGroup(), RadioGroupItem(), TurnId, AcaoProbe, ROTULO_TURN (+36 more)
+Cohesion: 0.11
+Nodes (43): BotaoResposta(), CartaoResultado(), estadoDe(), EstadoResposta, Checkbox(), Label(), RadioGroup(), RadioGroupItem() (+35 more)
 
 ### Community 17 - "08 - 3BET POT GUIDELINE.md"
-Cohesion: 0.13
-Nodes (15): Versões 1.0–1.3 do Módulo 3BET POT, Flashcards — 3Bet Pot, 01 — 3BET POT OOP, 02 — 3BET POT IP, 3BET POT — GUIDELINE, B25, B40, B70 (+7 more)
+Cohesion: 0.05
+Nodes (43): Versões 1.0–1.3 do Módulo 3BET POT, Flashcards — 3Bet Pot, 01.1 — SHORT STACK, 01.2 — DEEP STACK, 01 — 3BET POT OOP, 02.1 — SHORT STACK, 02.2 — DEEP STACK, 02 — 3BET POT IP (+35 more)
 
 ### Community 19 - "KB-003 — Module Template"
-Cohesion: 0.10
-Nodes (14): KB-000 — Poker Knowledge Base Architecture, Module Standard, Confidence Levels (High / Medium / Low), KB-001 — Project Architecture, Rule Lifecycle (Active / Simplified / Experimental / Pending Validation / Deprecated / Archived), Change Record, KB-002 — Domain Model, Rule Version (+6 more)
+Cohesion: 0.09
+Nodes (17): graphify, Site, KB-000 — Poker Knowledge Base Architecture, Module Standard, Confidence Levels (High / Medium / Low), KB-001 — Project Architecture, Rule Lifecycle (Active / Simplified / Experimental / Pending Validation / Deprecated / Archived), Change Record (+9 more)
 
 ### Community 20 - "02 - CBET IP 40BB GUIDELINE.md"
-Cohesion: 0.29
+Cohesion: 0.37
 Nodes (14): Flashcards — C-Bet IP 40bb, Ajustes para Short Stack (<15bb), Guideline – C-Bet IP 40bb, Objetivo, Videoaulas – C-Bet IP 40bb, Solver – C-Bet IP 40bb, Exercícios – C-Bet IP 40bb, Regras Consolidadas – C-Bet IP 40bb (+6 more)
 
 ### Community 21 - "Poker Knowledge Base"
-Cohesion: 0.13
-Nodes (17): graphify, Site, Decision Engine, Hand Analyzer, Leak Finder, Poker App, Study Planner, Trainer (+9 more)
+Cohesion: 0.11
+Nodes (21): Decision Engine, Hand Analyzer, Leak Finder, Poker App, Strategy Profiles (GTO / Simplified Human / Population Exploit), Study Planner, Trainer, Board Category (+13 more)
 
 ### Community 22 - "normalizeManualContextText"
 Cohesion: 0.09
 Nodes (34): abandonForeignSession(), abandonSupersededGo(), applyOriginalAttrsToSvelteAnchor(), clearMountErrorCard(), commitAcceptedSvelteComponentToDom(), componentModuleCandidates(), describeMountFailure(), detectDevServerBase() (+26 more)
 
 ### Community 23 - "07 - XR DEEP GUIDELINE.md"
-Cohesion: 0.09
-Nodes (25): Spot Solver: Hero BB vs BTN C-Bet, 10. Proteção de Range, 11. SPR e Construção de Pote, 12. Conceito Central, 1. Construção do XR Deep Stack, 2. Slowplay no Deep Stack, 3. XR por Valor, 4. Top Pair no XR Deep (+17 more)
+Cohesion: 0.08
+Nodes (26): Spot Solver: Hero BB vs BTN C-Bet, Flashcards — XR Deep Stack, 10. Proteção de Range, 11. SPR e Construção de Pote, 12. Conceito Central, 1. Construção do XR Deep Stack, 2. Slowplay no Deep Stack, 3. XR por Valor (+18 more)
 
 ### Community 24 - "Theory Index"
-Cohesion: 0.04
-Nodes (48): CLAUDE.md — Poker Knowledge Base (theory), Estudo PKO (BTN contra um open) em andamento, Padrão de um módulo (10 arquivos), Chat PRÉ-FLOP, Chat PÓS-FLOP, Ligações, MAIN CHAT TEORIA, Mapa da teoria — Pré-flop e Pós-flop (+40 more)
+Cohesion: 0.08
+Nodes (21): CLAUDE.md — Poker Knowledge Base (theory), Estudo PKO (BTN contra um open) em andamento, Padrão de um módulo (10 arquivos), Decision Engine, Documentation Order (ordem de migração), Structural Board Classification (MODULE_FUNDAMENTALS_BOARD_STRUCTURE), C-Bet Flop IP (MODULE_SRP_IP_CBET_FLOP), Second Barrel IP (MODULE_SRP_IP_SECOND_BARREL) (+13 more)
 
 ### Community 25 - "pratica-probe.tsx"
-Cohesion: 0.07
-Nodes (24): m01, m02, m03, m04, m05, m06, m07, m08 (+16 more)
+Cohesion: 0.05
+Nodes (36): CardCode, BoardBB, BucketBB, ExemploBB, mod17, SizeBB, SplitBB, splitById (+28 more)
 
 ### Community 26 - "XR Deep boards conectados"
 Cohesion: 0.13
@@ -483,8 +477,8 @@ Cohesion: 0.28
 Nodes (8): Boards Secos (XR Deep), Showdown Value e Escolha entre XR e XC, Board A♠6♦4♣, Board K♣7♦2♠, Board K♠8♦3♣, Exercício A5s x 96s em K♣7♦2♠, Exercício Q5o em A♠6♦4♣, BDFD + BDSTR8
 
 ### Community 29 - "hud.tsx"
-Cohesion: 0.11
-Nodes (38): Celula(), ComparacaoHud(), ExploradorHud(), definir(), numero(), Pilula(), useHud(), EscolherLeaks() (+30 more)
+Cohesion: 0.12
+Nodes (30): Celula(), ExploradorHud(), definir(), numero(), Pilula(), useHud(), Bloco, BLOCOS (+22 more)
 
 ### Community 30 - "01 - CBET IP SHORT GUIDELINE.md"
 Cohesion: 0.06
@@ -495,24 +489,24 @@ Cohesion: 0.06
 Nodes (39): addManualContextText(), canRestoreManualEditElement(), collectEditableTextRows(), visit(), collectManualContextPieces(), walk(), contextElementForManualEdit(), copyEditContainerContext() (+31 more)
 
 ### Community 32 - "Probe Turn: guia visual (infografia)"
-Cohesion: 0.19
-Nodes (19): B100: trinca, TP muito forte, board seco, B40: vilão dá raise, thin value, B70: TP e SP, board conectado, sequência, Apostar por bluff: equity direta (duas pontas, FDs, melhores brocas), Board atípico: menos TP dele = mais bet, Como escolher o size (B100, B70, B40; nunca B25 com range inteiro), Divisão dos flushes (bet alta+baixa, XR duas altas, X-call duas baixas), Probe Turn: guia visual (infografia) (+11 more)
+Cohesion: 0.17
+Nodes (20): Decisão 8 — Guia visual, B100: trinca, TP muito forte, board seco, B40: vilão dá raise, thin value, B70: TP e SP, board conectado, sequência, Apostar por bluff: equity direta (duas pontas, FDs, melhores brocas), Board atípico: menos TP dele = mais bet, Como escolher o size (B100, B70, B40; nunca B25 com range inteiro), Divisão dos flushes (bet alta+baixa, XR duas altas, X-call duas baixas) (+12 more)
 
-### Community 33 - "14 - PROBE TURN GUIDELINE.md"
-Cohesion: 0.12
-Nodes (14): Flashcards — Probe Turn, Antes de agir, responda, Como ler este guideline, Contexto, Cruzamento com o KB, Em 30 segundos, Erros mais comuns, Guideline — Probe Turn (+6 more)
+### Community 33 - "Parte 6 — Como aplicar na mesa"
+Cohesion: 0.50
+Nodes (4): Antes de agir, responda, Erros mais comuns, Parte 6 — Como aplicar na mesa, Regras de bolso
 
 ### Community 34 - "Notas de PKO e como entram no modelo"
-Cohesion: 0.06
-Nodes (65): All-in não entra na grade, Campo cl: 10 classes de mão (Pa, Pm, Pb, As, Ks, QJs, Sc, Ao, Bo, Oo), Campo grid: 169 células r-c em passos de 5%, Campo rp: Risk Premium hero vs opener, Coleta antiga claude_pko_btn (descartada), Dicionário dos dados das árvores (pko-arvores-btn.json), 4BET Trainer — aba Solver (HRC Library), Nó (árvore + opener; chave única id + op) (+57 more)
+Cohesion: 0.14
+Nodes (23): Campo rp: Risk Premium hero vs opener, Coleta antiga claude_pko_btn (descartada), 4BET Trainer — aba Solver (HRC Library), dados/pko-arvores-btn.json (208 nós, 52 árvores), localStorage claude_pko_v2, Cobertura (cobrir o opener e SB/BB), Dead money do bounty, Distância da bolha (restantes ÷ pagas) (+15 more)
 
 ### Community 35 - "pko-stats.md"
 Cohesion: 0.29
 Nodes (6): Antes de qualquer coisa, leia nesta ordem, Estilo, Onde cada coisa fica (não misture), Pendências conhecidas (confirme nos arquivos de retomada antes de usar), Regras de trabalho, Solver
 
 ### Community 36 - "mesa.tsx"
-Cohesion: 0.10
-Nodes (23): BG, NOME, RngBarra(), RngPlate(), SUIT, SuitKey, WIDTH, Assento() (+15 more)
+Cohesion: 0.07
+Nodes (32): BG, NOME, RngBarra(), RngPlate(), SUIT, SuitKey, WIDTH, Assento() (+24 more)
 
 ### Community 37 - "05 - CBET OOP 40BB GUIDELINE.md"
 Cohesion: 0.05
@@ -543,8 +537,8 @@ Cohesion: 0.14
 Nodes (14): Parte 3 — Adaptações na prática, Regra 19 — Conheça a referência antes de adaptar, Regra 20 — Antes de abrir, olhe BB, BTN e SB, Regra 21 — LJ cobrindo todos: expanda, Regra 22 — HJ coberto por todos: reduza, Regra 23 — Quem cobre você joga mais contra você, Regra 24 — Coberto e enfrentando um open: sem flat, Regra 25 — Coberto, jogar agressivo reduz a variância (+6 more)
 
 ### Community 45 - "leaks.tsx"
-Cohesion: 0.16
-Nodes (22): Comparacao(), ComparacaoLeaks(), LeaksDoMes(), LeaksLista(), adicionar(), mesesDe(), Vista(), CAMPO (+14 more)
+Cohesion: 0.15
+Nodes (28): ComparacaoHud(), Comparacao(), ComparacaoLeaks(), LeaksDoMes(), LeaksLista(), adicionar(), mesesDe(), useLeaks() (+20 more)
 
 ### Community 46 - "17-BB-Raised-Pot-vs-SB-Limp/06-Pendencias.md"
 Cohesion: 0.06
@@ -559,8 +553,8 @@ Cohesion: 0.29
 Nodes (7): Parte 2 — Os três tipos de stack, Regra 13 — Big stack é o predador: menor RP e poder de pressão, Regra 14 — Os quatro erros do big stack, Regra 15 — Mid stack é a vítima: maior RP e pressão dupla, Regra 16 — Short stack precisa se mexer, Regra 17 — O shove vs open é a principal arma do short e do mid stack, Regra 18 — Só expanda gradualmente, e só quando há pressão a favor
 
 ### Community 49 - "analise.tsx"
-Cohesion: 0.17
-Nodes (17): useLeaks(), MeusDados(), PrimeirosPassos(), Button(), buttonVariants, Bucket, mod15, RefBoard (+9 more)
+Cohesion: 0.12
+Nodes (11): Bucket, mod15, RefBoard, Situacao, Size, Suit, Tipo, tipoById (+3 more)
 
 ### Community 50 - "04 - THIRD BARREL GUIDELINE.md"
 Cohesion: 0.15
@@ -575,8 +569,8 @@ Cohesion: 0.14
 Nodes (19): averageRgb01(), captureAndEmit(), captureElementFromRenderedAncestor(), captureElementToBlob(), compileShader(), cssColorToRgb01(), dominantRgb01(), findBackdropAncestor() (+11 more)
 
 ### Community 53 - "C-Bet IP Short Stack (Módulo 01)"
-Cohesion: 0.25
-Nodes (16): Flashcards — C-Bet IP Short Stack, Draws Off Suit bloqueando Flush Draw, VideoAulas – C-Bet IP Short Stack, Solver – C-Bet IP Short Stack, SPR baixo, Exercício 05 — Escolha de Draw, Exercícios – C-Bet IP Short Stack, Regra 6 — Blockers no Short Stack (+8 more)
+Cohesion: 0.29
+Nodes (15): Draws Off Suit bloqueando Flush Draw, VideoAulas – C-Bet IP Short Stack, Solver – C-Bet IP Short Stack, SPR baixo, Exercício 05 — Escolha de Draw, Exercícios – C-Bet IP Short Stack, Regra 6 — Blockers no Short Stack, Regra 8 — Trincas no Check (+7 more)
 
 ### Community 54 - "06 - XR SHORT GUIDELINE.md"
 Cohesion: 0.10
@@ -587,8 +581,8 @@ Cohesion: 0.24
 Nodes (15): beginEditPin(), buildAnnotationsForCapture(), buildPinElement(), cancelEditingPin(), finalizeEditingPin(), initAnnotOverlay(), localCoords(), onAnnotDown() (+7 more)
 
 ### Community 56 - "leitor.tsx"
-Cohesion: 0.26
-Nodes (11): LeitorDePrints(), ler(), lerChave(), ValorStat, aplicarLeitura(), base64(), CHAVE_API, Leitura (+3 more)
+Cohesion: 0.21
+Nodes (13): LeitorDePrints(), ler(), lerChave(), CAMPO, CHAVE_HUD, ValorStat, aplicarLeitura(), base64() (+5 more)
 
 ### Community 57 - "Responsive Design"
 Cohesion: 0.20
@@ -711,8 +705,8 @@ Cohesion: 0.40
 Nodes (5): 5. BLANK, BLUFF, REGRA, SIZE, VALUE
 
 ### Community 87 - "teoria-15.tsx"
-Cohesion: 0.08
-Nodes (17): Layout(), LINKS, badgeVariants, Popover(), PopoverContent(), PopoverTrigger(), TabsList(), tabsListVariants (+9 more)
+Cohesion: 0.14
+Nodes (10): badgeVariants, TabsList(), tabsListVariants, ToggleGroupContext, Toggle(), toggleVariants, class-variance-authority, cn (+2 more)
 
 ### Community 88 - "Parte 5 — Stack e risco de cair"
 Cohesion: 0.29
@@ -722,17 +716,21 @@ Nodes (7): Parte 5 — Stack e risco de cair, Regra 17 — Stack grande: mais m�
 Cohesion: 0.07
 Nodes (57): actionLabel(), applyConfigureBarChrome(), bindConfigureCountPillTooltip(), bindConfigureInlineControlHover(), bindConfigureModifierPillHover(), buildConfigureActionControl(), buildConfigureCountControl(), buildConfigureRow() (+49 more)
 
-### Community 91 - "mesa.tsx"
-Cohesion: 0.13
-Nodes (18): Acao, Mao, mod14, SizeProbe, turnById, TurnProbe, CardCode, BoardBB (+10 more)
+### Community 90 - "Fontes Oficiais (Guideline, Videoaulas, Solver, Exercícios, Correções do instrutor)"
+Cohesion: 0.22
+Nodes (5): Referências – C-Bet IP + Second Barrel, Guideline C-Bet IP 2025 (EP-HJ / CO-BU por textura; Monotone e Dobrado B25), Videoaula Second Barrel IP, Aula prática: Third Barrel e Vs Third Barrel – Prática, Referências – Third Barrel
+
+### Community 91 - "mod14.ts"
+Cohesion: 0.18
+Nodes (11): Acao, Mao, mod14, SizeProbe, turnById, TurnId, TurnProbe, AcaoProbe (+3 more)
 
 ### Community 92 - "Lei 15 — A Função da Mão Importa Mais que a Força Absoluta"
 Cohesion: 0.67
 Nodes (3): Regra 1 — C-Bet OOP é Construção de Range, Escolher XR pela Função da Mão, Não pela Força, Lei 15 — A Função da Mão Importa Mais que a Força Absoluta
 
-### Community 93 - "DIFERENÇA DE STACK"
-Cohesion: 0.67
-Nodes (3): DEEP STACK, DIFERENÇA DE STACK, SHORT STACK
+### Community 93 - "Regras vivas: BTN contra 1 open em PKO"
+Cohesion: 0.17
+Nodes (20): Ordem de entrada das mãos (terços ~24%, ~29%, ~41%), Como gravar daqui para frente, config_trainer: Facing RFI, RNG OFF, Close Decisions, Dicionário do registro de mãos do PKO, pko-maos-jogadas.csv (170 mãos, 42 colunas), Sessão 3 (100 mãos, v3), Sessões 1 e 2 (70 mãos, v1 e v2), Como não me enganar (validação fora da amostra) (+12 more)
 
 ### Community 95 - "Parte 2 — Como escolher o size"
 Cohesion: 0.33
@@ -746,17 +744,17 @@ Nodes (12): @fontsource-variable/geist@^5.3.0, prettier@^3.9.10, @types/node@^24
 Cohesion: 0.10
 Nodes (19): Contexto, Critérios por board [aula], com os boards da atividade conferidos no vídeo, Dobrado conectado [aula], Execução [aula], Guideline — BB Raised Pot vs SB, Guideline por board [IMG1] — a confirmar, Mensagem 1, Mensagem 2 (+11 more)
 
-### Community 98 - "main"
-Cohesion: 0.40
-Nodes (5): BLANK, CONECTA, FLUSH, HIGH CARD, TURN — 3BET POT
+### Community 98 - "backup.ts"
+Cohesion: 0.17
+Nodes (16): importar(), Arquivo, baixarBackup(), CHAVES_BACKUP, montarBackup(), restaurarBackup(), enviar(), nuvemAtiva (+8 more)
 
 ### Community 99 - "compilerOptions"
 Cohesion: 0.09
 Nodes (21): compilerOptions, allowArbitraryExtensions, allowImportingTsExtensions, erasableSyntaxOnly, jsx, lib, module, moduleDetection (+13 more)
 
-### Community 100 - "Extract Flow"
-Cohesion: 0.40
-Nodes (5): Parte 2 — Shove vs open de posição tardia, Regra 10 — Treinar pela lógica do range do adversário, Regra 11 — O field dá raise-fold mais do que o solver, Regra 8 — O shove vs open é a principal arma da reta final, Regra 9 — Mãos que dão shove vs open contra BTN ou CO
+### Community 100 - "nuvem.ts"
+Cohesion: 0.29
+Nodes (16): Login(), enviar(), cabecalhos(), capturarRetornoGoogle(), chamar(), CHAVE_PUBLICA, comoSessao(), criarConta() (+8 more)
 
 ### Community 101 - "Retomada do MAIN CHAT TEORIA"
 Cohesion: 0.22
@@ -774,17 +772,21 @@ Nodes (5): Parte 7 — Turn e river (o que não muda), Regra 19 — A frequênci
 Cohesion: 0.12
 Nodes (16): 1. Como classificar um board, 2. Os cinco tipos, 3. Os buckets de cada tipo **[Imagem]**, 4. Classes de mão, 5. Ajuste pelo opener, 6. Boards de referência, 7. Dúvidas abertas, 8. Criação de exercícios (+8 more)
 
-### Community 106 - "Parte 8 — Como aplicar na mesa"
-Cohesion: 0.50
-Nodes (4): Antes de apostar o flop, responda, Erros mais comuns, Parte 8 — Como aplicar na mesa, Regras de bolso
+### Community 106 - "layout.tsx"
+Cohesion: 0.21
+Nodes (8): Layout(), LINKS, Popover(), PopoverContent(), PopoverTrigger(), useUsuario(), Usuario, 6. Concurrency in SwiftUI
 
 ### Community 107 - "Responsive Design"
-Cohesion: 0.21
-Nodes (17): base(), commonsLicence(), first(), fromAic(), fromArchive(), fromCommons(), fromCommonsVideo(), fromMet() (+9 more)
+Cohesion: 0.17
+Nodes (22): base(), commonsLicence(), first(), fromAic(), fromArchive(), fromCommons(), fromCommonsVideo(), fromMet() (+14 more)
 
 ### Community 108 - "Parte 5 — Como dividir o bucket na mesa"
 Cohesion: 0.50
 Nodes (4): Parte 5 — Como dividir o bucket na mesa, Regra 13 — Use o naipe ou um randomizador, sempre com a mão inteira, Regra 14 — Com flush draw no board, os pares com o naipe apostam, Regra 15 — Ajuste no jogo short stack
+
+### Community 110 - "Playbook: coleta de árvores do 4BET Trainer por automação"
+Cohesion: 0.17
+Nodes (15): All-in não entra na grade, Campo cl: 10 classes de mão (Pa, Pm, Pb, As, Ks, QJs, Sc, Ao, Bo, Oo), Campo grid: 169 células r-c em passos de 5%, Dicionário dos dados das árvores (pko-arvores-btn.json), Nó (árvore + opener; chave única id + op), Nós excluídos #8954 e #7144 (sem RP), Vanilla 40bb ChipEV (métrica de comparação), 3bet dobra com bounties maiores (6,7% → 13,5%) (+7 more)
 
 ### Community 111 - "dependencies"
 Cohesion: 0.11
@@ -846,17 +848,25 @@ Nodes (15): Contexto, Exercício 1 — Triple broadway, Exercício 2 — Dois br
 Cohesion: 0.13
 Nodes (14): A atividade inicial (07:45 a 14:45), Divisão do range, Exceções por board, Flush draw e execução, Monotone e dobrado, O que o vídeo mostrou na tela, O range do BB e o range do SB, Pontos que a aula não fechou (+6 more)
 
+### Community 126 - "MAPA-PRE-POS.md"
+Cohesion: 0.15
+Nodes (12): Chat PRÉ-FLOP, Chat PÓS-FLOP, Ligações, MAIN CHAT TEORIA, Mapa da teoria — Pré-flop e Pós-flop, Mensagens iniciais, Módulos por chat, Os chats (+4 more)
+
 ### Community 130 - "17-BB-Raised-Pot-vs-SB-Limp/09-Decisoes.md"
 Cohesion: 0.17
 Nodes (11): Decisão 10 — Correções da v1.0, Decisão 1 — Transcrição fica fora do repositório, Decisão 2 — Base de size pelo thin value, Decisão 3 — Conflitos com outros módulos não foram resolvidos, Decisão 4 — Termo "thin value", Decisão 5 — Prioridade das fontes neste módulo, Decisão 6 — IMG1 entra como "a confirmar", Decisão 7 — Posição e stack (+3 more)
 
-### Community 131 - "scripts"
-Cohesion: 0.11
-Nodes (16): Flashcards — Value Bet Masterclass, Filosofia do Módulo, Guideline — Value Bet Masterclass, Ligações, Regra 10 — Flop check-raise é polarizado; turn não é, Regra 11 — Check-Raise de flop como arma ofensiva, não só defensiva, Regra 12 — Formato Bounty amplifica o custo do Miss Value, Regra 1 — Range de valor por conectividade do board (+8 more)
+### Community 131 - "colorize.md"
+Cohesion: 0.25
+Nodes (7): Apply at system scale, Audit before choosing, Choose a strategy, Contrast and perception, Live-mode signature params, Verify, Visitor mode
 
 ### Community 132 - "17-BB-Raised-Pot-vs-SB-Limp/README.md"
 Cohesion: 0.20
 Nodes (9): BB Raised Pot vs SB — Módulo 17, Conceito Central, Contexto, Diferença Fundamental, Estrutura do Módulo, Ligações, Objetivo do Módulo, Resultado Esperado (+1 more)
+
+### Community 133 - "doctor.md"
+Cohesion: 0.25
+Nodes (7): Monorepo notes, Opting out of the boot check, Step 1: Run the pass, Step 2: Act by severity, Step 3: Deprecated fields are binding, Step 4: Do not overclaim on truth drift, What this owns, and what it does not
 
 ### Community 134 - "EP / HJ"
 Cohesion: 0.29
@@ -878,6 +888,10 @@ Nodes (4): O que apareceu no vídeo (não é dado de solver capturado), Quando h
 Cohesion: 0.14
 Nodes (30): ae(), Ct(), de(), dt(), _e(), Et(), ft(), Gt() (+22 more)
 
+### Community 155 - "retomada-pko.md"
+Cohesion: 0.25
+Nodes (7): Ligações, Notas técnicas (Chrome conectado), O que existe, Pendências, Preferências do usuário, Resultados principais, Retomada do estudo de PKO (resumo para uma conversa nova)
+
 ### Community 156 - "17-BB-Raised-Pot-vs-SB-Limp/08-Referencias.md"
 Cohesion: 0.40
 Nodes (4): Fontes, Ordem de prioridade, Referência cruzada, Referências — BB Raised Pot vs SB
@@ -891,8 +905,8 @@ Cohesion: 0.29
 Nodes (6): Como o trainer decide, Como rodar, Estrutura, Preview no app do Claude, Regras dos dados, Site do Poker KB
 
 ### Community 159 - "new-work.md"
-Cohesion: 0.08
-Nodes (22): Recommended Actions, Craft (deprecated alias), Impeccable Documenter, Input Contract, Output Contract, Workflow, Apply, Live-mode signature params (+14 more)
+Cohesion: 0.07
+Nodes (27): 1. Accessibility (VoiceOver / TalkBack), 2. Performance, 3. Appearance & Theming, 4. Platform Conformance (CRITICAL), 5. Adaptivity, Diagnostic Scan, Recommended Actions, Craft (deprecated alias) (+19 more)
 
 ### Community 160 - "Buckets de frequência 100% / 75% / 50% / 25%"
 Cohesion: 0.33
@@ -907,8 +921,8 @@ Cohesion: 0.40
 Nodes (4): allowBuilds, esbuild, msw, packages
 
 ### Community 163 - "Parte 9 — Pós-flop em reta final"
-Cohesion: 0.21
-Nodes (41): Cards(), PlayingCard(), RngStrip(), Etiqueta(), Exemplo(), Exemplos(), Faixa(), Fonte() (+33 more)
+Cohesion: 0.20
+Nodes (43): App(), PageHeader(), Cards(), PlayingCard(), RngStrip(), Etiqueta(), Exemplo(), Exemplos() (+35 more)
 
 ### Community 164 - "tsconfig.json"
 Cohesion: 0.40
@@ -930,9 +944,9 @@ Nodes (8): Parte 2 — O que alarga ou aperta o range, Regra 10 — SB e BB curt
 Cohesion: 0.29
 Nodes (7): scripts, build, dev, format, lint, preview, typecheck
 
-### Community 169 - "/impeccable hooks"
-Cohesion: 0.15
-Nodes (11): Step 1: Parse the request, Step 2: Reuse the page, then start, Step 3: Generate, Step 4: Accept and close, append-arrays, append-string, Config drift, Consent prompt (use this phrasing) (+3 more)
+### Community 169 - "Button"
+Cohesion: 0.53
+Nodes (5): MeusDados(), PrimeirosPassos(), Button(), buttonVariants, analiseVazia()
 
 ### Community 170 - "Parte 2 — O que alarga ou aperta o range"
 Cohesion: 0.33
@@ -942,20 +956,36 @@ Nodes (7): off(), Constraints, Failure modes, Flow, /impeccable hooks, Routing, 
 Cohesion: 0.67
 Nodes (3): 2. CONCEITO CENTRAL, BB, BTN
 
+### Community 172 - "Impeccable Documenter"
+Cohesion: 0.40
+Nodes (4): Impeccable Documenter, Input Contract, Output Contract, Workflow
+
+### Community 173 - "01-Guideline.md"
+Cohesion: 0.40
+Nodes (4): Contexto, Guideline — [Nome do Módulo], Textura 1 — [nome da textura ou posição], Textura 2 — [nome]
+
+### Community 176 - "_TEMPLATE/03-Solver.md"
+Cohesion: 0.40
+Nodes (4): Board 1 — [board com naipes], Contexto, Módulo NN — [Nome do Módulo], Solver — [Nome do Módulo]
+
 ### Community 177 - "Impeccable Documenter"
 Cohesion: 0.22
 Nodes (8): Conceito Central, Contexto, Estrutura, Módulo NN — [Nome do Módulo], [Nome do Módulo], Objetivo, Resultado Esperado, Status
 
 ### Community 178 - "Rule"
-Cohesion: 0.12
-Nodes (15): Strategy Profiles (GTO / Simplified Human / Population Exploit), Board Category, Concept, Example, Exercise, Mistake Category, Module, MODULE_FLOP_OOP_XR_SHORT — Check-Raise Flop Short Stack (+7 more)
+Cohesion: 0.22
+Nodes (8): Concept, Module, MODULE_FLOP_OOP_XR_SHORT — Check-Raise Flop Short Stack, RULE_FLOP_OOP_XR_SHORT_014 — Broca com BDFD prefere check-call, Source, Guideline C-Bet IP 20bbs (fonte principal), Gyazos / Solver (A84r, KT6r, J84s, 985r), Referências – C-Bet IP Short Stack
+
+### Community 179 - "_TEMPLATE/07-Changelog.md"
+Cohesion: 0.40
+Nodes (4): Changelog — [Nome do Módulo], Conteúdos adicionados, Criação do módulo, Versão 0.1
 
 ### Community 180 - "initGlobalBar"
 Cohesion: 0.13
 Nodes (24): agentHasWorkInFlight(), agentStatusText(), barPaletteForTheme(), brandMarkSvg(), detectPageTheme(), ensureAgentPollTooltip(), ensureSpinKeyframes(), hideAgentPollTooltip() (+16 more)
 
 ### Community 181 - "getOne"
-Cohesion: 0.18
+Cohesion: 0.21
 Nodes (25): clock(), credit(), creditRequired(), creditsPath(), dims(), esc(), getAll(), getOne() (+17 more)
 
 ### Community 182 - "TURN — 3BET POT"
@@ -970,13 +1000,17 @@ Nodes (22): 1. Purpose & frequency, 2. Easing & duration, 3. Physicality & origi
 Cohesion: 0.09
 Nodes (23): AIC_FIELDS, AIC_HEADERS, ARCHIVE_LICENCE, args, argv, fail(), FLAGS, LICENCE_ALIAS (+15 more)
 
+### Community 185 - "Parte 1 — Como o bounty entra"
+Cohesion: 0.50
+Nodes (4): Parte 1 — Como o bounty entra, Regra 1 — Dead money do bounty **[Notas]**, Regra 2 — Valor do KO inicial por fase **[Notas]**, Regra 3 — Help Value **[Notas]**
+
 ### Community 186 - "Responsive Design"
 Cohesion: 0.08
 Nodes (22): Assess Adaptation Challenge, Content Adaptation, Desktop Adaptation (Mobile → Desktop), Email Adaptation (Web → Email), Implement Adaptations, Layout Adaptation Techniques, Mobile Adaptation (Desktop → Mobile), Adaptation Strategies (+14 more)
 
 ### Community 187 - "live.md"
-Cohesion: 0.08
-Nodes (22): Apply at system scale, Audit before choosing, Choose a strategy, Contrast and perception, Live-mode signature params, Verify, Visitor mode, Cleanup (+14 more)
+Cohesion: 0.07
+Nodes (26): Step 1: Parse the request, Step 2: Reuse the page, then start, Step 3: Generate, Step 4: Accept and close, Cleanup, Exit, First-time setup, Handle `accept` (+18 more)
 
 ### Community 188 - "handleManualEditActivity"
 Cohesion: 0.19
@@ -1002,9 +1036,9 @@ Nodes (21): 10. Gesture design details (the "feel" checklist), 11. Frame-level s
 Cohesion: 0.09
 Nodes (21): 10. Status bar color doesn't match, 11. Right in Chrome, wrong on phone, 1. Hover state stuck after tap, 2. Gray/blue flash on tap, 3. Layout has the wrong height, 4. Page zooms into the input, 5. Tap feels laggy, 6. Pull-to-refresh hijacks scroll (+13 more)
 
-### Community 194 - "portao.tsx"
-Cohesion: 0.06
-Nodes (62): importar(), Fase, Login(), enviar(), Portao(), entrouComSessao(), Arquivo, baixarBackup() (+54 more)
+### Community 194 - "Write Swift"
+Cohesion: 0.09
+Nodes (21): 10. ARC and object lifetime, 11. Testing — Swift Testing by default, 12. Macros, 13. Logging and debugging, 14. Unsafe code and interop, 15. Modern syntax you should be using, 16. Migrating an existing codebase to Swift 6, 1. Model data with value types (+13 more)
 
 ### Community 195 - "The Toolkit"
 Cohesion: 0.10
@@ -1074,17 +1108,13 @@ Nodes (14): Accessibility and control, Choose material by meaning, Find the job,
 Cohesion: 0.12
 Nodes (16): Accessibility, Animation Standards Reference, Asymmetric timing, Cohesion, Debugging (recommend in reviews when feel is uncertain), Duration, Easing, Gestures & drag (+8 more)
 
-### Community 213 - "Estratégia Split para Boards Low"
-Cohesion: 0.67
-Nodes (3): DIFERENÇA DE POSIÇÃO, IP, OOP
-
-### Community 214 - "DIFERENÇA DE POSIÇÃO"
-Cohesion: 0.67
-Nodes (3): GUIDELINE, GUIDELINE X SOLVER, SOLVER
+### Community 213 - "_TEMPLATE/09-Decisoes.md"
+Cohesion: 0.50
+Nodes (3): Decisão 1 — Escopo do módulo, Decisão 2 — [tema], Decisões – [Nome do Módulo]
 
 ### Community 215 - "getJson"
 Cohesion: 0.24
-Nodes (17): applyThumb(), commonsApi(), commonsInfo(), getJson(), keyOf(), mapLimit(), noQuery(), onSubject() (+9 more)
+Nodes (12): applyThumb(), commonsApi(), commonsInfo(), fromOpenverse(), getJson(), keyOf(), noQuery(), searchCommons() (+4 more)
 
 ### Community 217 - "Generate Report"
 Cohesion: 0.13
@@ -1111,16 +1141,12 @@ Cohesion: 0.15
 Nodes (12): 10. How pages fail, 1. What strong pages do, 2. Margins and the grid, 3. Where text sits, 4. Empty space, 5. The frame: margins, balance and titles, 6. Sections: carry the idea, vary the arrangement, 7. Navigation (+4 more)
 
 ### Community 224 - "Init flow"
-Cohesion: 0.15
-Nodes (13): fits(), shape(), Completion gate, Init flow, Step 1: Load current state, Step 2: Explore the project, Step 3: Interview for product truth, Step 4: Write PRODUCT.md (+5 more)
+Cohesion: 0.14
+Nodes (14): fits(), shape(), Completion gate, Init flow, Step 1: Load current state, Step 2: Explore the project, Step 3: Interview for product truth, Step 4: Write PRODUCT.md (+6 more)
 
 ### Community 225 - "Scan mode (approach C: auto-extract, then confirm descriptive language)"
 Cohesion: 0.08
 Nodes (23): Component translation rules, Narrative mapping, Pitfalls, Scan mode (approach C: auto-extract, then confirm descriptive language), Schema, Seed mode, Step 1: Find the design assets, Step 1: Route through new-work's workshop (+15 more)
-
-### Community 226 - "Parte 4 — Largura do nó e sinais de aperto"
-Cohesion: 0.33
-Nodes (6): 1. Accessibility (VoiceOver / TalkBack), 2. Performance, 3. Appearance & Theming, 4. Platform Conformance (CRITICAL), 5. Adaptivity, Diagnostic Scan
 
 ### Community 227 - "New visual work"
 Cohesion: 0.15
@@ -1206,10 +1232,6 @@ Nodes (10): 7.1 Rows, 7.2 Header, 7.3 Dividers, 7.4 Figures and alignment, 7.5 I
 Cohesion: 0.20
 Nodes (9): 1. Write the argument first, 2. The two-line headline, 3. Headline shapes that work, 4. Supporting line, body, buttons, 5. Proof without inventing it, 6. Things that read as generated, 7. Micro-typography, Contents (+1 more)
 
-### Community 252 - "Operate mode depth (and Read notes)"
-Cohesion: 0.22
-Nodes (9): Color, Components, Layout, Motion, Operate mode depth (and Read notes), Product constraints, Product permissions, The product slop test (+1 more)
-
 ### Community 253 - "Generate Combined Critique Report"
 Cohesion: 0.20
 Nodes (10): Design Health Score, Design Specificity Verdict, Generate Combined Critique Report, Minor Observations, Overall Impression, Persona Red Flags, Priority Issues, Questions to Consider (+2 more)
@@ -1218,9 +1240,9 @@ Nodes (10): Design Health Score, Design Specificity Verdict, Generate Combined C
 Cohesion: 0.18
 Nodes (3): detect_domain(), _load_csv(), search()
 
-### Community 256 - "App.tsx"
-Cohesion: 0.18
-Nodes (11): App(), PageHeader(), arquivos, moduloPorSlug, modulos, slugPorTema, Pratica(), Cartao() (+3 more)
+### Community 256 - "portao.tsx"
+Cohesion: 0.25
+Nodes (8): Fase, Portao(), entrouComSessao(), googleAtivo, irParaGoogle(), Sessao, sincronizarAoEntrar(), UsuarioContext
 
 ### Community 258 - "2. The run for an app screen"
 Cohesion: 0.22
@@ -1248,7 +1270,7 @@ Nodes (9): Color & materials, Components & controls, iOS platform, Layout & stru
 
 ### Community 264 - "impeccable/SKILL.md"
 Cohesion: 0.09
-Nodes (19): Before you finish, Scope is sovereign, The amplification, The skeleton test, Why it reads flat, Craft floor, Refuse, Verify (+11 more)
+Nodes (20): Before you finish, Scope is sovereign, The amplification, The skeleton test, Why it reads flat, Craft floor, Refuse, Verify (+12 more)
 
 ### Community 265 - "Shape"
 Cohesion: 0.22
@@ -1314,10 +1336,6 @@ Nodes (6): Ce(), Ee(), pt(), u(), Rt(), vt()
 Cohesion: 0.48
 Nodes (7): er(), fe(), k(), Kt(), tr(), x(), Zt()
 
-### Community 282 - "Referências – C-Bet IP + Second Barrel"
-Cohesion: 0.67
-Nodes (3): Referências – C-Bet IP + Second Barrel, Guideline C-Bet IP 2025 (EP-HJ / CO-BU por textura; Monotone e Dobrado B25), Videoaula Second Barrel IP
-
 ### Community 283 - "app.json"
 Cohesion: 0.33
 Nodes (5): about, patterns, shells, styles, version
@@ -1347,8 +1365,8 @@ Cohesion: 0.25
 Nodes (7): Filosofia Geral, Parte 1 — [tema], Regra 1 — [enunciado curto], Regra 2 — [enunciado curto], Regra Principal do Módulo, Regras Consolidadas – [Nome do Módulo], Resumo Operacional
 
 ### Community 290 - "12 - RETA FINAL GUIDELINE.md"
-Cohesion: 0.08
-Nodes (24): Como ler este guideline, Contexto, Cruzamento com o KB, Filosofia do módulo, Guideline — Reta Final, Ligações, Parte 10 — Leitura e adaptação, Parte 4 — Pagar 3bet e o mito da reta final (+16 more)
+Cohesion: 0.07
+Nodes (29): Como ler este guideline, Contexto, Cruzamento com o KB, Filosofia do módulo, Guideline — Reta Final, Ligações, Parte 10 — Leitura e adaptação, Parte 2 — Shove vs open de posição tardia (+21 more)
 
 ### Community 291 - "Ordem de prioridade: correções da instrutora > consenso do grupo > guideline"
 Cohesion: 0.29
@@ -1478,10 +1496,6 @@ Nodes (5): Contexto, Exercício 1, Exercícios — [Nome do Módulo], Módulo NN
 Cohesion: 0.40
 Nodes (4): 1. [Fonte], Fontes utilizadas, Ordem de prioridade, Referências — [Nome do Módulo]
 
-### Community 331 - "Persuade and Experience"
-Cohesion: 0.50
-Nodes (3): Comps, Directions, Persuade and Experience
-
 ## Ambiguous Edges - Review These
 - `Solver – C-Bet IP Short Stack` → `Changelog – C-Bet IP Short Stack (v1.0–1.2)`  [AMBIGUOUS]
   theory/01-CBet-IP-Short-Stack/07-Changelog.md · relation: conceptually_related_to
@@ -1490,22 +1504,22 @@ Nodes (3): Comps, Directions, Persuade and Experience
 
 ## Knowledge Gaps
 - **124 isolated node(s):** `cmd`, `@playwright/mcp`, `Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100)`, `O board mais errado: 875 com turn 9`, `Decisão 4 — O 875 é a base` (+119 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2284 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **47 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2285 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **36 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `init()` connect `setLiveState` to `Init flow`, `portao.tsx`, `live-browser.js`, `impeccable/SKILL.md`, `/impeccable hooks`, `connectSSE`, `syncPageChatFocus`, `initGlobalBar`, `onAnnotDown`, `el`, `handleManualEditActivity`?**
-  _High betweenness centrality (0.127) - this node is a cross-community bridge._
+- **Why does `init()` connect `setLiveState` to `Init flow`, `Write Swift`, `live-browser.js`, `doctor.md`, `connectSSE`, `syncPageChatFocus`, `initGlobalBar`, `onAnnotDown`, `el`, `live.md`, `handleManualEditActivity`?**
+  _High betweenness centrality (0.130) - this node is a cross-community bridge._
 - **What connects `cmd`, `@playwright/mcp`, `Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100)` to the rest of the system?**
   _124 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `with` be split into smaller, more focused modules?**
-  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
-- **Why does `Layout()` connect `teoria-15.tsx` to `App.tsx`, `Scan mode (approach C: auto-extract, then confirm descriptive language)`, `portao.tsx`?**
-  _High betweenness centrality (0.062) - this node is a cross-community bridge._
-- **Should `live-browser.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.027874902874902876 - nodes in this community are weakly interconnected._
+- **Should `Decisões – Probe Turn` be split into smaller, more focused modules?**
+  _Cohesion score 0.14114114114114115 - nodes in this community are weakly interconnected._
+- **Why does `Layout()` connect `layout.tsx` to `Scan mode (approach C: auto-extract, then confirm descriptive language)`, `Parte 9 — Pós-flop em reta final`?**
+  _High betweenness centrality (0.064) - this node is a cross-community bridge._
+- **Should `Solver — ICM e Risk Premium (25% vs 16% field left)` be split into smaller, more focused modules?**
+  _Cohesion score 0.1225296442687747 - nodes in this community are weakly interconnected._
 
 ### Low-confidence Hints
 _AMBIGUOUS edges — the extractor was unsure. Verify before acting on these._

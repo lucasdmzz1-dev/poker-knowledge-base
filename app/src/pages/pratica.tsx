@@ -1,5 +1,10 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
-import { ArrowLeft, Check, X } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
+import {
+  BotaoResposta,
+  CartaoResultado,
+  estadoDe,
+} from "@/components/poker/resposta"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -477,67 +482,21 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
 
       <div className="mx-auto mt-4 grid max-w-[880px] grid-cols-3 gap-2 md:gap-3">
         {ACOES.map(({ a, rotulo, sub, tecla, cor }) => (
-          <button
+          <BotaoResposta
             key={a}
-            type="button"
-            disabled={resp !== null}
+            rotulo={rotulo}
+            sub={sub}
+            tecla={tecla}
+            cor={cor}
+            estado={estadoDe(a, resp, esperado)}
             onClick={() => responder(a)}
-            className={cn(
-              "relative grid min-h-16 content-center gap-0.5 rounded-lg px-1.5 py-3 text-base font-bold text-white transition-[transform,background-color,opacity] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] enabled:cursor-pointer enabled:active:scale-[0.97] md:text-lg",
-              cor,
-              resp !== null && a !== esperado && a !== resp && "opacity-40",
-              resp !== null &&
-                a === esperado &&
-                "shadow-[0_0_28px_color-mix(in_srgb,var(--primary)_55%,transparent)] outline-4 outline-offset-2 outline-primary",
-              resp !== null &&
-                resp === a &&
-                a !== esperado &&
-                "shadow-[0_0_28px_color-mix(in_srgb,var(--destructive)_55%,transparent)] outline-4 outline-offset-2 outline-destructive"
-            )}
-          >
-            {resp !== null && (a === esperado || resp === a) && (
-              <span
-                aria-hidden="true"
-                className={cn(
-                  "absolute -top-3 -right-2 grid size-7 place-items-center rounded-full",
-                  a === esperado
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-destructive text-white"
-                )}
-              >
-                {a === esperado ? (
-                  <Check className="size-4" strokeWidth={3} />
-                ) : (
-                  <X className="size-4" strokeWidth={3} />
-                )}
-              </span>
-            )}
-            {rotulo}
-            <small className="text-xs font-normal opacity-80">
-              {sub ? `${sub} · tecla ${tecla}` : `tecla ${tecla}`}
-            </small>
-          </button>
+          />
         ))}
       </div>
 
       <div aria-live="polite">
         {resp && (
-          <Card
-            className={cn(
-              "mt-5 rounded-2xl border-2 p-5",
-              ok
-                ? "border-primary shadow-[0_0_32px_color-mix(in_srgb,var(--primary)_30%,transparent)]"
-                : "border-destructive shadow-[0_0_32px_color-mix(in_srgb,var(--destructive)_30%,transparent)]"
-            )}
-          >
-            <h3
-              className={cn(
-                "text-center text-4xl font-extrabold tracking-tight",
-                ok ? "text-primary" : "text-destructive"
-              )}
-            >
-              {ok ? "CERTO" : "ERRADO"}
-            </h3>
+          <CartaoResultado ok={ok}>
             <p className="max-w-[64ch] text-lg text-muted-foreground">
               {texto}
             </p>
@@ -556,7 +515,7 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
                 {ultimo ? "Ver resultado" : "Próxima mão"}
               </Button>
             </div>
-          </Card>
+          </CartaoResultado>
         )}
       </div>
       <p className="mt-3.5 text-sm text-muted-foreground">

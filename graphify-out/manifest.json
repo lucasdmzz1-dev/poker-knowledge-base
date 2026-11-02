@@ -1494,9 +1494,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793595409.3198957,
-    "seen": 1793595440.121622,
-    "ast_hash": "e7bfe0b59109152cc46a4b5b040f9cc5",
+    "mtime": 1793595795.3564315,
+    "seen": 1793595833.327363,
+    "ast_hash": "cb86dc7d35344e35d73dfa6238d49cd8",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2370,9 +2370,9 @@
     "semantic_hash": ""
   },
   "docs/Site-Poker-KB.md": {
-    "mtime": 1793594606.6415854,
-    "seen": 1793594904.6891031,
-    "ast_hash": "baabd5ed4af91e25aa98341e4a879e83",
+    "mtime": 1793595806.9933932,
+    "seen": 1793595833.3544865,
+    "ast_hash": "266665d10852d5faa7b17b102fd16f3b",
     "semantic_hash": ""
   },
   "app/src/data/mod14.ts": {
@@ -2394,9 +2394,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-probe.tsx": {
-    "mtime": 1793595409.3741727,
-    "seen": 1793595440.121622,
-    "ast_hash": "17e0604618f169cc31f33ef9648e3572",
+    "mtime": 1793595795.40187,
+    "seen": 1793595833.327363,
+    "ast_hash": "a504b615b95c88d6364e0fbf8f797fd9",
     "semantic_hash": ""
   },
   "app/src/components/teoria/blocos.tsx": {
@@ -2571,6 +2571,12 @@
     "mtime": 1793594606.6353593,
     "seen": 1793594904.688103,
     "ast_hash": "adc51e5bd40a81dc5dc0243a1b9561ba",
+    "semantic_hash": ""
+  },
+  "app/src/components/poker/resposta.tsx": {
+    "mtime": 1793595794.9302614,
+    "seen": 1793595833.3171895,
+    "ast_hash": "21180e58a9cdbdf50d39f6b19343eefc",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {
