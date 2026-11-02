@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Children, createContext, useContext, useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -446,5 +447,20 @@ export function Faixa({
       </span>
       <div className="col-span-2 sm:col-span-1 sm:col-start-2">{children}</div>
     </div>
+  )
+}
+
+// Volta ao índice da Teoria: botão grande, para não passar despercebido.
+export function Voltar() {
+  return (
+    <Link
+      to="/teoria"
+      className="inline-flex items-center gap-2 rounded-full border bg-card px-5 py-2.5 text-base font-bold tracking-wide text-foreground uppercase transition-colors duration-150 hover:border-primary hover:text-primary"
+    >
+      <span aria-hidden className="text-xl leading-none">
+        ‹
+      </span>
+      Voltar para a Teoria
+    </Link>
   )
 }

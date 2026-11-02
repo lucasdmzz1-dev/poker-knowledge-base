@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 import { PageHeader } from "@/components/page-header"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -17,6 +16,7 @@ import {
   RotuloBoard,
   Secao,
   Secoes,
+  Voltar,
   Videos,
   TextoMini,
   TituloMini,
@@ -50,18 +50,7 @@ export default function Teoria15() {
 
   return (
     <main>
-      <PageHeader
-        title={mod15.nome}
-        lead={mod15.spot}
-        topo={
-          <Link
-            to="/teoria"
-            className="transition-colors duration-150 hover:text-foreground"
-          >
-            ‹ Teoria
-          </Link>
-        }
-      >
+      <PageHeader title={mod15.nome} lead={mod15.spot} topo={<Voltar />}>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <Badge variant="outline">Flop</Badge>
           <Badge variant="outline">Em posição</Badge>

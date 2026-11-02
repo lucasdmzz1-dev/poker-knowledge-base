@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, Navigate, useParams } from "react-router-dom"
+import { Navigate, useParams } from "react-router-dom"
 import { PageHeader } from "@/components/page-header"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -23,6 +23,7 @@ import {
   TituloMini,
   useAcento,
   Videos,
+  Voltar,
 } from "@/components/teoria/blocos"
 import { IcmRanges } from "@/components/teoria/icm-ranges"
 import { Rico } from "@/components/teoria/rico"
@@ -321,18 +322,7 @@ export default function TeoriaModulo() {
 
   return (
     <main>
-      <PageHeader
-        title={mod.nome}
-        lead={mod.spot}
-        topo={
-          <Link
-            to="/teoria"
-            className="transition-colors duration-150 hover:text-foreground"
-          >
-            ‹ Teoria
-          </Link>
-        }
-      >
+      <PageHeader title={mod.nome} lead={mod.spot} topo={<Voltar />}>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           {mod.tags.map((t) => (
             <Badge key={t} variant="outline">
