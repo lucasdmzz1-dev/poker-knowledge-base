@@ -22,6 +22,7 @@ Roteiro usado no Probe Turn (módulo 14) e no C-Bet IP Short Stack (módulo 01).
 - Qual é a posição do herói, o que já aconteceu (ações até aqui), o stack e o pote.
 - Quais ações o botão oferece, com as teclas.
 - Quais tipos de board ou de turn existem e qual é a frequência de cada um.
+- A mão do herói tem que ser uma mão que ele abre (ou defende) daquela posição: use `app/src/data/ranges.ts` (`abre(range, mão)`). Os ranges de lá são provisórios até o coach passar os dele.
 - Cada mão precisa vir de uma categoria que a teoria ou a transcrição cita de forma explícita. Não invente mão. Confira:
   - se a mão faz o que a classe diz (par, draw, backdoor, blocker);
   - se as cartas não repetem as do board.

@@ -1452,9 +1452,9 @@
     "semantic_hash": ""
   },
   "app/src/data/mod15.ts": {
-    "mtime": 1793642223.616077,
-    "seen": 1793642458.6896088,
-    "ast_hash": "e5fd5d970a865c0ca23702ae69b85bcb",
+    "mtime": 1793646575.00654,
+    "seen": 1793646604.1729238,
+    "ast_hash": "f85507830115c614bb98e7b45d43331b",
     "semantic_hash": ""
   },
   "app/src/lib/poker.ts": {
@@ -2616,15 +2616,15 @@
     "semantic_hash": ""
   },
   "app/src/data/prat01.ts": {
-    "mtime": 1793599261.2244349,
-    "seen": 1793614195.0181801,
-    "ast_hash": "21244cbe1b2f153ce32cf9b81928faec",
+    "mtime": 1793646574.9437122,
+    "seen": 1793646604.1739287,
+    "ast_hash": "142e42a35ae8f16842755c0a201866cd",
     "semantic_hash": ""
   },
   "app/src/data/prat02.ts": {
-    "mtime": 1793599761.6567588,
-    "seen": 1793614195.0181801,
-    "ast_hash": "5a31de0c388d90e56a9097219197be77",
+    "mtime": 1793646586.4080184,
+    "seen": 1793646604.1739287,
+    "ast_hash": "05e5a1e1fe9d9a514e07f9cf400bfeb1",
     "semantic_hash": ""
   },
   "app/src/lib/relatos.ts": {
@@ -2646,9 +2646,9 @@
     "semantic_hash": ""
   },
   "docs/Pratica-Novo-Tema.md": {
-    "mtime": 1793599915.8091471,
-    "seen": 1793614195.0181801,
-    "ast_hash": "9766af4ec8544f76944b984bc8a937a8",
+    "mtime": 1793646586.487559,
+    "seen": 1793646604.2029028,
+    "ast_hash": "057d2c4d1514d97228ed88df8bbef479",
     "semantic_hash": ""
   },
   "docs/Pendencias-Teoria-Site.md": {
@@ -2664,15 +2664,21 @@
     "semantic_hash": ""
   },
   "app/src/data/prat05.ts": {
-    "mtime": 1793646392.4378445,
-    "seen": 1793646423.421925,
-    "ast_hash": "2b41c2e3135c1d6323799c820e029e54",
+    "mtime": 1793646526.2374465,
+    "seen": 1793646604.1739287,
+    "ast_hash": "d31875c844bb59ebac92ae5123dbe394",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-oop.tsx": {
     "mtime": 1793646362.842629,
     "seen": 1793646423.4289272,
     "ast_hash": "33c390ca0fa46abaa7cc325cd604636d",
+    "semantic_hash": ""
+  },
+  "app/src/data/ranges.ts": {
+    "mtime": 1793646526.1485193,
+    "seen": 1793646604.1739287,
+    "ast_hash": "10ca4f0c8b78a812babb9210238dadd6",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

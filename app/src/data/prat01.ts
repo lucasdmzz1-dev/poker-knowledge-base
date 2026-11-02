@@ -102,7 +102,7 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "a-low",
     tipo: "ahigh",
-    hero: ["5h", "3h"],
+    hero: ["Th", "9h"],
     certa: "B25",
     aceita: ["B40"],
     classe: "Mão fraca",
@@ -157,7 +157,7 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "h-k2-blocker",
     tipo: "highcard",
-    hero: ["Ks", "2c"],
+    hero: ["Ks", "Tc"],
     certa: "B40",
     classe: "High card da parte off com o blocker do flush",
     porque:
@@ -166,11 +166,10 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "h-lixo",
     tipo: "highcard",
-    hero: ["Qc", "5h"],
+    hero: ["Ac", "9h"],
     certa: "B40",
-    classe: "Lixo da parte off",
-    porque:
-      "Sem backdoor e sem showdown value, a mão aceita o bet/fold e aposta B40.",
+    classe: "Mão da parte off sem backdoor",
+    porque: "Sem backdoor e sem draw, a mão aceita o bet/fold e aposta B40.",
   },
   {
     id: "h-combo",
@@ -218,7 +217,7 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "h-sp",
     tipo: "highcard",
-    hero: ["Kc", "8c"],
+    hero: ["Ac", "8c"],
     certa: "Check",
     classe: "Second pair",
     porque:
@@ -227,7 +226,7 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "h-tp3",
     tipo: "highcard",
-    hero: ["Qh", "4h"],
+    hero: ["Ah", "4h"],
     certa: "Check",
     classe: "Third pair",
     porque: "Third pair dá check para realizar equity.",
@@ -244,9 +243,9 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "h-pior-tp",
     tipo: "highcard",
-    hero: ["Jc", "5d"],
+    hero: ["Jh", "9h"],
     certa: "Check",
-    classe: "Pior top pair",
+    classe: "Top pair com kicker fraco",
     porque: "Os piores top pairs vão para o check, por linearidade.",
   },
   {
@@ -261,7 +260,7 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "h-k5-bdfd",
     tipo: "highcard",
-    hero: ["Kd", "5d"],
+    hero: ["Kd", "9d"],
     certa: "Check",
     classe: "High card com backdoor flush draw",
     porque:
@@ -298,7 +297,7 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "l-oesd2",
     tipo: "low",
-    hero: ["Th", "7c"],
+    hero: ["Jd", "Td"],
     certa: "B40",
     classe: "Duas pontas",
     porque: "Draw direto que dá para colocar o stack aposta B40.",
@@ -306,7 +305,7 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "l-tp",
     tipo: "low",
-    hero: ["9h", "Kd"],
+    hero: ["Ah", "9d"],
     certa: "B40",
     classe: "Top pair",
     porque: "Top pair aposta por valor, em B40.",
@@ -314,7 +313,7 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "l-sp-conecta",
     tipo: "low",
-    hero: ["8h", "7c"],
+    hero: ["8h", "7h"],
     certa: "B40",
     classe: "Second pair que conecta",
     porque:
@@ -332,7 +331,7 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "l-tp3",
     tipo: "low",
-    hero: ["Kd", "5h"],
+    hero: ["Ad", "5d"],
     certa: "Check",
     classe: "Third pair",
     porque: "Third pair dá check para realizar equity.",
@@ -358,17 +357,9 @@ export const situacoesCbet: SituacaoCbet[] = [
   {
     id: "l-broca",
     tipo: "low",
-    hero: ["Kd", "6h"],
+    hero: ["Ad", "6d"],
     certa: "Check",
     classe: "Broca",
     porque: "Broca não é boa para atolar. Dá check.",
-  },
-  {
-    id: "l-pior-tp",
-    tipo: "low",
-    hero: ["9c", "3h"],
-    certa: "Check",
-    classe: "Pior top pair",
-    porque: "Os piores top pairs vão para o check.",
   },
 ]
