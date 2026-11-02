@@ -1380,8 +1380,8 @@
     "semantic_hash": ""
   },
   "app/src/components/poker/cards.tsx": {
-    "mtime": 1793661465.7039661,
-    "seen": 1793661484.186344,
+    "mtime": 1793661513.3744159,
+    "seen": 1793661533.2311592,
     "ast_hash": "89d2c94817984e12cae696e902528e23",
     "semantic_hash": ""
   },
@@ -1452,8 +1452,8 @@
     "semantic_hash": ""
   },
   "app/src/data/mod15.ts": {
-    "mtime": 1793661465.251137,
-    "seen": 1793661484.1908555,
+    "mtime": 1793661513.3754158,
+    "seen": 1793661533.2362506,
     "ast_hash": "9e1a9483267222b28925cdb4ae569961",
     "semantic_hash": ""
   },
@@ -2664,8 +2664,8 @@
     "semantic_hash": ""
   },
   "app/src/data/prat05.ts": {
-    "mtime": 1793661465.252477,
-    "seen": 1793661484.1918566,
+    "mtime": 1793661513.3764167,
+    "seen": 1793661533.2372577,
     "ast_hash": "10b5433a10479ecd241d067eb8a4f654",
     "semantic_hash": ""
   },
@@ -2688,9 +2688,9 @@
     "semantic_hash": ""
   },
   "app/src/data/prat17.ts": {
-    "mtime": 1793661465.252477,
-    "seen": 1793661484.1918566,
-    "ast_hash": "d65a8d5f74ca8b62bca6d02493e1c9a9",
+    "mtime": 1793661512.9094474,
+    "seen": 1793661533.2372577,
+    "ast_hash": "b95217c2c4280a14c212e5eba0be731e",
     "semantic_hash": ""
   },
   "app/src/lib/uso.ts": {
@@ -2706,9 +2706,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-bb.tsx": {
-    "mtime": 1793661465.7049665,
-    "seen": 1793661484.199473,
-    "ast_hash": "6c033599ef98650fe70393d240e79ce9",
+    "mtime": 1793661513.3774166,
+    "seen": 1793661533.2439616,
+    "ast_hash": "b83c945d804315503f03da3f2a9959cf",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

@@ -20,6 +20,8 @@ export interface BoardBBTreino {
   grupo: GrupoBB
   // Frequência geral de aposta do board no guideline por board (IMG1), em %.
   freq?: number
+  // Por que o board tem esse size, nas palavras do coach.
+  criterio?: string
   // Board monotone: segue a tabela B25 (IMG2), sem flush nem flush draw.
   monotone?: boolean
 }
@@ -43,6 +45,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B70",
     estrategia: "split70",
     grupo: "B70",
+    criterio:
+      "Seguida em board low: o SB não tem a sequência offsuit, então B70.",
   },
   {
     id: "t85",
@@ -51,6 +55,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B70",
     estrategia: "split70",
     grupo: "B70",
+    criterio:
+      "Seguida em board low: o SB não tem a sequência offsuit, então B70.",
   },
   {
     id: "qt7",
@@ -137,6 +143,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     estrategia: "split25",
     grupo: "B25",
     freq: 66,
+    criterio:
+      "Uma carta alta e duas baixas (abaixo do 8x, que o SB quase não defende offsuit): size baixo, muito thin value, B25.",
   },
   {
     id: "k94",
@@ -176,12 +184,34 @@ export const BOARDS_BB: BoardBBTreino[] = [
     freq: 55,
   },
   {
+    id: "q92",
+    nome: "Q-9-2, high card",
+    board: ["Qs", "9h", "2c"],
+    size: "B40",
+    estrategia: "split40",
+    grupo: "B40",
+    criterio:
+      "No Q-9-2 muitos 9x ainda querem apostar, entre outras mãos: B40.",
+  },
+  {
+    id: "q97",
+    nome: "Q-9-7, muito dinâmico",
+    board: ["Qs", "9d", "7c"],
+    size: "B70",
+    estrategia: "split70",
+    grupo: "B70",
+    criterio:
+      "Board muito dinâmico, com alta interação com o range do SB e sem incentivo de thin value: B70.",
+  },
+  {
     id: "kj4",
     nome: "K-J-4, dois broadways",
     board: ["4c", "Jd", "Kc"],
     size: "B40",
     estrategia: "split40",
     grupo: "B40",
+    criterio:
+      "Duas cartas altas e uma baixa tendem ao B40: o 4 não é defendido pelo SB.",
   },
   {
     id: "jt8",
@@ -190,6 +220,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B40",
     estrategia: "split40",
     grupo: "B40",
+    criterio:
+      "Seguida que o SB tem offsuit: B40. O offsuit que ele defende começa em 8x.",
   },
   {
     id: "qj8",
@@ -198,6 +230,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B40",
     estrategia: "split40",
     grupo: "B40",
+    criterio:
+      "Seguida que o SB tem offsuit (T-9): B40. O offsuit que ele defende começa em 8x.",
   },
   {
     id: "842",
@@ -214,6 +248,7 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B40",
     estrategia: "split40",
     grupo: "B40",
+    criterio: "Duas cartas altas e uma baixa tendem ao B40.",
   },
   {
     id: "t74",
@@ -230,6 +265,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B25",
     estrategia: "split25",
     grupo: "B25",
+    criterio:
+      "Uma carta alta e duas baixas (abaixo do 8x, que o SB quase não defende offsuit): size baixo, muito thin value, B25.",
   },
   {
     id: "j42",
@@ -238,6 +275,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B25",
     estrategia: "split25",
     grupo: "B25",
+    criterio:
+      "Uma carta alta e duas baixas (abaixo do 8x, que o SB quase não defende offsuit): size baixo, muito thin value, B25.",
   },
   {
     id: "aq3",
@@ -362,7 +401,9 @@ export function bucketBB(
   // split B70
   if (L.feita === "overpair") return res(75, "Overpair")
   if (topPair) return forte ? res(75, "Top pair forte") : res(50, "Top pair")
-  if (L.feita === "doisPares") return res(50, "Dois pares")
+  // Sizes muito altos: a prioridade são as mãos fortes e vulneráveis (dois pares,
+  // overpair e top pair forte), e as trincas bloqueiam os pares (coach).
+  if (L.feita === "doisPares") return res(75, "Dois pares")
   if (L.feita === "underpair") return res(0, "Underpair")
   // No B70 as trincas vão em 25%: o top set bloqueia quem paga (guideline por board).
   if (["setAlto", "setMeio", "setBaixo"].includes(L.feita))
@@ -393,6 +434,7 @@ export interface SituacaoBB {
   classe: string
   porque: string
   freq?: number
+  criterio?: string
 }
 
 function todasAsMaos(): [string, string][] {
@@ -440,6 +482,7 @@ function gerar(): SituacaoBB[] {
         classe: r.classe,
         porque: `${r.porque} (${classeDaMao(m)})`,
         freq: b.freq,
+        criterio: b.criterio,
       }
       const g = grupos.get(chave) ?? []
       g.push(sit)
