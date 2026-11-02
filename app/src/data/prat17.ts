@@ -18,6 +18,10 @@ export interface BoardBBTreino {
   size: SizeBB
   estrategia: EstrategiaBB
   grupo: GrupoBB
+  // Frequência geral de aposta do board no guideline por board (IMG1), em %.
+  freq?: number
+  // Board monotone: segue a tabela B25 (IMG2), sem flush nem flush draw.
+  monotone?: boolean
 }
 
 // Boards da aula (guideline, "Critérios por board"). O size e a estratégia são os que
@@ -81,6 +85,97 @@ export const BOARDS_BB: BoardBBTreino[] = [
     grupo: "B70",
   },
   {
+    id: "kq8",
+    nome: "K-Q-8, broadway",
+    board: ["Ks", "Qs", "8h"],
+    size: "B70",
+    estrategia: "split70",
+    grupo: "B70",
+    freq: 25,
+  },
+  {
+    id: "j96",
+    nome: "J-9-6, semi conectado",
+    board: ["Js", "9s", "6h"],
+    size: "B70",
+    estrategia: "split70",
+    grupo: "B70",
+    freq: 33,
+  },
+  {
+    id: "j97",
+    nome: "J-9-7, conectado",
+    board: ["Js", "9s", "7h"],
+    size: "B40",
+    estrategia: "split40",
+    grupo: "B40",
+    freq: 45,
+  },
+  {
+    id: "752",
+    nome: "7-5-2, low desconectado",
+    board: ["7c", "5d", "2h"],
+    size: "B40",
+    estrategia: "split40",
+    grupo: "B40",
+    freq: 66,
+  },
+  {
+    id: "q83",
+    nome: "Q-8-3, high card com duas de valor",
+    board: ["Qs", "8h", "3h"],
+    size: "B40",
+    estrategia: "split40",
+    grupo: "B40",
+    freq: 50,
+  },
+  {
+    id: "q63",
+    nome: "Q-6-3, high card com duas baixas",
+    board: ["Qs", "6d", "3d"],
+    size: "B25",
+    estrategia: "split25",
+    grupo: "B25",
+    freq: 66,
+  },
+  {
+    id: "k94",
+    nome: "K-9-4, monotone",
+    board: ["Ks", "9s", "4s"],
+    size: "B25",
+    estrategia: "split25",
+    grupo: "B25",
+    freq: 50,
+    monotone: true,
+  },
+  {
+    id: "a82",
+    nome: "A-8-2, A high seco",
+    board: ["Ad", "8s", "2h"],
+    size: "B25",
+    estrategia: "range",
+    grupo: "Range",
+    freq: 100,
+  },
+  {
+    id: "883",
+    nome: "8-8-3, dobrado seco",
+    board: ["8c", "8h", "3s"],
+    size: "B25",
+    estrategia: "range",
+    grupo: "Range",
+    freq: 100,
+  },
+  {
+    id: "998",
+    nome: "9-9-8, dobrado conectado",
+    board: ["9s", "9h", "8d"],
+    size: "B25",
+    estrategia: "dobradoConectado",
+    grupo: "B25",
+    freq: 55,
+  },
+  {
     id: "kj4",
     nome: "K-J-4, dois broadways",
     board: ["4c", "Jd", "Kc"],
@@ -129,14 +224,6 @@ export const BOARDS_BB: BoardBBTreino[] = [
     grupo: "B40",
   },
   {
-    id: "q63",
-    nome: "Q-6-3, com flush draw",
-    board: ["3h", "6h", "Qc"],
-    size: "B25",
-    estrategia: "split25",
-    grupo: "B25",
-  },
-  {
     id: "t42",
     nome: "T-4-2, high card",
     board: ["Td", "4c", "2h"],
@@ -169,25 +256,9 @@ export const BOARDS_BB: BoardBBTreino[] = [
     grupo: "B25",
   },
   {
-    id: "998",
-    nome: "9-9-8, dobrado conectado",
-    board: ["9h", "9d", "8c"],
-    size: "B25",
-    estrategia: "dobradoConectado",
-    grupo: "B25",
-  },
-  {
     id: "ak2",
     nome: "A-K-2, A high seco",
     board: ["Ad", "Kh", "2c"],
-    size: "B25",
-    estrategia: "range",
-    grupo: "Range",
-  },
-  {
-    id: "883",
-    nome: "8-8-3, dobrado seco",
-    board: ["8h", "8d", "3c"],
     size: "B25",
     estrategia: "range",
     grupo: "Range",
@@ -231,6 +302,9 @@ export function bucketBB(
   }
 
   const L = ler(b.board, hero)
+  // No monotone, a mão com uma carta do naipe tem flush draw, e a tabela não a cobre.
+  if (b.monotone && hero.filter((c) => c[1] === b.board[0][1]).length === 1)
+    return null
   const comPar = ["topPair", "secondPair", "thirdPair", "underpair"].includes(
     L.feita
   )
@@ -316,6 +390,7 @@ export interface SituacaoBB {
   bucket: number
   classe: string
   porque: string
+  freq?: number
 }
 
 function todasAsMaos(): [string, string][] {
@@ -362,6 +437,7 @@ function gerar(): SituacaoBB[] {
         bucket: r.bucket,
         classe: r.classe,
         porque: `${r.porque} (${classeDaMao(m)})`,
+        freq: b.freq,
       }
       const g = grupos.get(chave) ?? []
       g.push(sit)

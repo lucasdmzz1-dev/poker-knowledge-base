@@ -435,6 +435,12 @@ export default function PraticaBB({ onTema }: { onTema: (t: Tema) => void }) {
               <strong className="text-foreground">{atual.boardNome}</strong>:{" "}
               {atual.porque}
             </p>
+            {atual.freq !== undefined && (
+              <p className="max-w-[64ch] text-muted-foreground">
+                Frequência geral de aposta neste tipo de board:{" "}
+                <strong className="text-foreground">{atual.freq}%</strong>.
+              </p>
+            )}
             <RngStrip bucket={atual.bucket} rng={roll} size={atual.size} />
             <div className="mt-4 flex flex-wrap items-start justify-between gap-3">
               <Button

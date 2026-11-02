@@ -2688,9 +2688,9 @@
     "semantic_hash": ""
   },
   "app/src/data/prat17.ts": {
-    "mtime": 1793657926.9892035,
-    "seen": 1793657952.5053198,
-    "ast_hash": "d30db6db833fd1c01c01f197a5e4ed21",
+    "mtime": 1793658103.9628935,
+    "seen": 1793658121.986155,
+    "ast_hash": "7196f82d0feaaec2f599c5de13583d47",
     "semantic_hash": ""
   },
   "app/src/lib/uso.ts": {
@@ -2706,9 +2706,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-bb.tsx": {
-    "mtime": 1793657654.119678,
-    "seen": 1793657722.5219646,
-    "ast_hash": "a8c70870856dc335c3bc820dbb4c07a7",
+    "mtime": 1793658087.5305302,
+    "seen": 1793658121.9941185,
+    "ast_hash": "6210b62d7a0cf4defee7bd9610971e39",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {
