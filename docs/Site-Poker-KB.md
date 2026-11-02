@@ -60,6 +60,8 @@ Com as variáveis de ambiente preenchidas, o site pede login (e-mail e senha) an
 4. Em Project Settings → API, copie a URL e a chave `anon` (pública) para `app/.env.local`, no formato de `app/.env.example`. Nunca use a `service_role`.
 5. Para publicar, configure as mesmas duas variáveis no serviço de hospedagem antes do build.
 
+Login com o Google (opcional): crie um ID de cliente OAuth (tipo "Aplicativo da Web") no Google Cloud, com o URI de redirecionamento `https://<projeto>.supabase.co/auth/v1/callback`; em Supabase → Authentication → Sign In / Providers → Google, ligue e cole o ID e a chave secreta do cliente; em URL Configuration → Redirect URLs, acrescente o endereço do site e, para testar localmente, `http://localhost:5174/`; por fim, crie `VITE_LOGIN_GOOGLE=true` em `app/.env.local` e nas variáveis do repositório (o botão só aparece com isso).
+
 Ao entrar, o que já está na conta vale; o que só existia no aparelho sobe. Ao sair, os dados do aparelho são apagados. A chave da API do Claude e os prints ficam só no aparelho. "Meus dados" na Análise continua exportando e importando um arquivo.
 
 ## Publicar no GitHub Pages
