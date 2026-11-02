@@ -28,6 +28,8 @@ export interface AcaoT {
   cor: CorAcao
   texto?: string
   maos?: MaoEx[]
+  // Linha pura: a ação é a única opção além do fold ("sem check-call").
+  only?: string
 }
 
 // Board de exemplo: flop e, se houver, turn e river.

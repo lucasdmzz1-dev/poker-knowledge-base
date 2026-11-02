@@ -95,8 +95,9 @@ const m10: ModuloTeoria = {
                 {
                   nome: "Check-raise",
                   cor: "vermelho",
+                  only: "Check-raise ou fold, sem check-call",
                   texto:
-                    "Board seco: check-raise com tudo que vai continuar. Qualquer par do board ou blockers com BDFD + BDST viram check-raise ou fold, sem check-call no meio.",
+                    "Board seco: check-raise com tudo que vai continuar. Qualquer par do board ou blockers com BDFD + BDST viram check-raise.",
                   maos: [
                     { nome: "Par do board", cartas: ["7h", "6h"] },
                     { nome: "Blocker + BDFD + BDST", cartas: ["Ad", "5d"] },
@@ -234,7 +235,8 @@ const m10: ModuloTeoria = {
               ],
             },
             {
-              grupo: "EP dá check-raise: você aposta o flop e o EP dá check-raise",
+              grupo:
+                "EP dá check-raise: você aposta o flop e o EP dá check-raise",
               mesa: mesa(
                 CARREGADO,
                 [
@@ -321,8 +323,9 @@ const m10: ModuloTeoria = {
                 {
                   nome: "Call",
                   cor: "branco",
+                  only: "Call ou fold, sem check-raise",
                   texto:
-                    "Sem check-raise: o range de check do EP ainda tem overpairs, trincas e dois pares. Em board seco, nunca folde par do board nem equity direta.",
+                    "O range de check do EP ainda tem overpairs, trincas e dois pares. Em board seco, nunca folde par do board nem equity direta.",
                   maos: [{ nome: "Par do board", cartas: ["7h", "5h"] }],
                 },
                 {

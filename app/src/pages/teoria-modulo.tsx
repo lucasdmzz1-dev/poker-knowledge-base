@@ -83,6 +83,58 @@ function ListaMaos({ maos }: { maos: MaoEx[] }) {
   )
 }
 
+// Decisão do herói no fim do replay: cada ação centralizada, com o selo ONLY
+// quando ela é a única linha além do fold.
+function AcoesDecisao({ acoes }: { acoes: AcaoT[] }) {
+  return (
+    <div className="grid gap-4">
+      {acoes.map((a) => (
+        <div
+          key={a.nome}
+          className="flex flex-col items-center gap-3 border-t pt-4 text-center"
+        >
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <span
+              className={cn(
+                "text-2xl font-bold uppercase",
+                COR_ACAO[corDaAcao(a)]
+              )}
+            >
+              {a.nome}
+            </span>
+            {a.only && (
+              <span className="rounded-full border border-foreground/40 px-2.5 py-0.5 text-sm font-bold tracking-wide uppercase">
+                Only
+              </span>
+            )}
+          </div>
+          {a.only && (
+            <p className="text-base font-semibold text-muted-foreground uppercase">
+              {a.only}
+            </p>
+          )}
+          {a.texto && (
+            <p className="max-w-[60ch] text-lg leading-relaxed text-foreground/90">
+              <Rico>{a.texto}</Rico>
+            </p>
+          )}
+          {a.maos && a.maos.length > 0 && (
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-4">
+              {a.maos.map((m) => (
+                <Exemplo
+                  key={m.nome + m.cartas.join("")}
+                  cartas={m.cartas}
+                  nome={m.nome}
+                />
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 function Acoes({ acoes }: { acoes: AcaoT[] }) {
   return (
     <>
@@ -143,7 +195,7 @@ function Abas({ abas }: { abas: AbaT[] }) {
             <SituacoesMesa
               key={aba.id}
               blocos={aba.blocos}
-              renderAcoes={(acoes) => <Acoes acoes={acoes} />}
+              renderAcoes={(acoes) => <AcoesDecisao acoes={acoes} />}
             />
           ) : (
             aba.blocos.map((b, i) => (
