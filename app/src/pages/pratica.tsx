@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, Square } from "lucide-react"
 import {
   BotaoResposta,
   CartaoResultado,
@@ -188,20 +188,33 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
     setFase("jogo")
   }
 
+  // Fecha a sessão com as mãos respondidas até aqui e abre o resultado.
+  function encerrar() {
+    const acertos = itens.filter((x) => x.ok).length
+    const sess: Sessao = {
+      id: Date.now(),
+      modulo: mod15.id,
+      total: itens.length,
+      acertos,
+      itens,
+      levar: false,
+    }
+    writeJSON(KEYS.sessions, [...lerSessoes(), sess])
+    setSessId(sess.id)
+    setFase("fim")
+  }
+
+  function parar() {
+    if (itens.length === 0) {
+      setFase("setup")
+      return
+    }
+    encerrar()
+  }
+
   function proxima() {
     if (i === fila.length - 1) {
-      const acertos = itens.filter((x) => x.ok).length
-      const sess: Sessao = {
-        id: Date.now(),
-        modulo: mod15.id,
-        total: itens.length,
-        acertos,
-        itens,
-        levar: false,
-      }
-      writeJSON(KEYS.sessions, [...lerSessoes(), sess])
-      setSessId(sess.id)
-      setFase("fim")
+      encerrar()
       return
     }
     setI(i + 1)
@@ -490,7 +503,7 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
 
   return (
     <main className="mx-auto max-w-[1080px] px-4 pt-6 pb-20 md:px-5">
-      <div className="mx-auto mb-2 max-w-[880px]">
+      <div className="mx-auto mb-2 flex max-w-[880px] items-center justify-between gap-3">
         <Button
           variant="ghost"
           size="sm"
@@ -498,6 +511,9 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
           onClick={() => setFase("setup")}
         >
           <ArrowLeft aria-hidden="true" /> Voltar à seleção
+        </Button>
+        <Button variant="outline" size="sm" onClick={parar}>
+          <Square aria-hidden="true" /> Parar treino
         </Button>
       </div>
       <div className="mx-auto mb-3 max-w-[880px]">
