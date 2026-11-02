@@ -144,6 +144,9 @@ export default function Teoria15() {
                     </Badge>
                   </div>
                   <div>
+                    {bloco.grupo && (
+                      <p className="pb-1 font-medium">{bloco.grupo}</p>
+                    )}
                     {tipo.buckets
                       .filter((b) => b.grupo === bloco.grupo)
                       .map((b) => (
