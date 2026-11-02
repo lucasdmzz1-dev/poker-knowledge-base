@@ -1632,9 +1632,9 @@
     "semantic_hash": ""
   },
   "app/src/App.tsx": {
-    "mtime": 1793582485.5821867,
-    "seen": 1793582505.4853523,
-    "ast_hash": "118266c5fdb7782bd0f8d4cb95c82a5d",
+    "mtime": 1793583582.6563427,
+    "seen": 1793583635.378546,
+    "ast_hash": "c36de6e27f94728d170034cbc743875f",
     "semantic_hash": ""
   },
   "app/src/components/layout.tsx": {
@@ -1770,9 +1770,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/teoria-index.tsx": {
-    "mtime": 1793582485.5913868,
-    "seen": 1793582505.4853523,
-    "ast_hash": "46893d1370ef33e5e2eee528faeb9838",
+    "mtime": 1793583582.67088,
+    "seen": 1793583635.386555,
+    "ast_hash": "2dfbc0548e2053d126f0a5312527a4a8",
     "semantic_hash": ""
   },
   "app/tsconfig.app.json": {
@@ -2676,9 +2676,111 @@
     "semantic_hash": ""
   },
   "app/src/pages/teoria-17.tsx": {
-    "mtime": 1793582485.5913868,
-    "seen": 1793582505.4853523,
-    "ast_hash": "d044e0df2dd534564d6471ba4c3a47b2",
+    "mtime": 1793582724.5417325,
+    "seen": 1793583635.386555,
+    "ast_hash": "3319959d033b01a9520a00d48afb5096",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m01.ts": {
+    "mtime": 1793583582.657346,
+    "seen": 1793583635.384051,
+    "ast_hash": "8d87d2216a10de47ff1c208370d361bf",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m02.ts": {
+    "mtime": 1793583582.658346,
+    "seen": 1793583635.384051,
+    "ast_hash": "88ba869eedfdd0cedc1a2a46c81f50bf",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m03.ts": {
+    "mtime": 1793583582.6593487,
+    "seen": 1793583635.384051,
+    "ast_hash": "51c69e3ed71a2ea3c3fccd46726af18a",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m04.ts": {
+    "mtime": 1793583582.6597373,
+    "seen": 1793583635.384051,
+    "ast_hash": "69d56d14b718697be2f728ee5dfaebc1",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m05.ts": {
+    "mtime": 1793583582.66074,
+    "seen": 1793583635.384051,
+    "ast_hash": "ca723958830f8a584598650444f6eb96",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m06.ts": {
+    "mtime": 1793583582.6617482,
+    "seen": 1793583635.384051,
+    "ast_hash": "6aa5190b8bb6f1a5189b8b21717b701b",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m07.ts": {
+    "mtime": 1793583582.6627479,
+    "seen": 1793583635.384051,
+    "ast_hash": "2b2102336ae3f1ae38c6ae7340c2273f",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m08.ts": {
+    "mtime": 1793583582.6627479,
+    "seen": 1793583635.384051,
+    "ast_hash": "a4f4794ae6e3b1b3e88086010d77eb01",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m09.ts": {
+    "mtime": 1793583582.6642513,
+    "seen": 1793583635.384051,
+    "ast_hash": "750802d33d406977e7254967f031af58",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m10.ts": {
+    "mtime": 1793583582.6642513,
+    "seen": 1793583635.384051,
+    "ast_hash": "25274000ab3e934371dae01c18eaaddf",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m11.ts": {
+    "mtime": 1793583582.6654263,
+    "seen": 1793583635.384051,
+    "ast_hash": "c008520c4268e3273748ae5289d22d46",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m12.ts": {
+    "mtime": 1793583582.6664264,
+    "seen": 1793583635.384051,
+    "ast_hash": "c42111d9c6942db586ef36edc69f7251",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m13.ts": {
+    "mtime": 1793583582.6664264,
+    "seen": 1793583635.384051,
+    "ast_hash": "c2601d10c50cceb5bc0f0daa2a0c1a96",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/modulos/m16.ts": {
+    "mtime": 1793583582.6677394,
+    "seen": 1793583635.384051,
+    "ast_hash": "93d5052701bdc9ab5f70e49a6db88a52",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/registro.ts": {
+    "mtime": 1793583582.6687887,
+    "seen": 1793583635.384051,
+    "ast_hash": "d17b31711bc2d56a4f5feff061d57ce4",
+    "semantic_hash": ""
+  },
+  "app/src/data/teoria/tipos.ts": {
+    "mtime": 1793583582.6687887,
+    "seen": 1793583635.384051,
+    "ast_hash": "25ca0b9d89eaca9141888a58ffbe1e74",
+    "semantic_hash": ""
+  },
+  "app/src/pages/teoria-modulo.tsx": {
+    "mtime": 1793583582.67088,
+    "seen": 1793583635.386555,
+    "ast_hash": "f9bed27894143031787e8bdd64ea1073",
     "semantic_hash": ""
   },
   "app/package-lock.json": {
