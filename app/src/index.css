@@ -136,6 +136,9 @@
   html {
     @apply font-sans;
     }
+  p {
+    text-wrap: pretty;
+    }
 }
 
 /* Tema do Poker KB: sempre escuro, grafite neutro com destaque verde */
