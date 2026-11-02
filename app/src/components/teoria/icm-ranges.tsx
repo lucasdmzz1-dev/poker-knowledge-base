@@ -275,6 +275,12 @@ function Botao({
 // Compara o mesmo spot com 25% e com 16% do field left, direto dos frames da aula.
 export function IcmRanges() {
   const [chave, setChave] = useState("LJ")
+  const [linha, setLinha] = useState(0)
+  const atual = LINHAS_ICM[linha]
+  const escolheLinha = (i: number) => {
+    setLinha(i)
+    setChave(LINHAS_ICM[i].abre[0] || LINHAS_ICM[i].reage[0] || chave)
+  }
   const [destaque, setDestaque] = useState(false)
   const spot = SPOTS_ICM[chave]
 
@@ -324,43 +330,43 @@ export function IcmRanges() {
   return (
     <div className="grid gap-6">
       <div className="grid gap-4">
-        {LINHAS_ICM.map((l) => (
-          <div key={l.nome} className="grid gap-2">
-            <p className="text-base">
-              <b>{l.nome}</b>
-              <span className="text-muted-foreground"> · {l.stack}</span>
-            </p>
-            <div className="flex flex-wrap items-center gap-2">
-              {l.abre[0] ? (
-                <Botao
-                  ativo={chave === l.abre[0]}
-                  onClick={() => setChave(l.abre[0])}
-                >
-                  {l.abre[1]}
-                </Botao>
-              ) : (
-                <Botao ativo={false} disabled onClick={() => {}}>
-                  {l.abre[1]}
-                </Botao>
-              )}
-              <span className="text-muted-foreground" aria-hidden>
-                →
-              </span>
-              {l.reage[0] ? (
-                <Botao
-                  ativo={chave === l.reage[0]}
-                  onClick={() => setChave(l.reage[0]!)}
-                >
-                  {l.reage[1]}
-                </Botao>
-              ) : (
-                <Botao ativo={false} disabled onClick={() => {}}>
-                  {l.reage[1]} (sem dados)
-                </Botao>
-              )}
-            </div>
-          </div>
-        ))}
+        <ToggleGroup
+          type="single"
+          value={String(linha)}
+          onValueChange={(v) => v && escolheLinha(Number(v))}
+          className="flex flex-wrap justify-center gap-2"
+          aria-label="Escolha a situação"
+        >
+          {LINHAS_ICM.map((l, i) => (
+            <ToggleGroupItem key={l.nome} value={String(i)} className={ITEM}>
+              {l.nome}
+            </ToggleGroupItem>
+          ))}
+        </ToggleGroup>
+        <p className="text-center text-base text-muted-foreground">
+          {atual.stack}
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <Botao
+            ativo={chave === atual.abre[0]}
+            disabled={!atual.abre[0]}
+            onClick={() => setChave(atual.abre[0])}
+          >
+            {atual.abre[1]}
+            {!atual.abre[0] && " (sem dados)"}
+          </Botao>
+          <span className="text-muted-foreground" aria-hidden>
+            →
+          </span>
+          <Botao
+            ativo={chave === atual.reage[0]}
+            disabled={!atual.reage[0]}
+            onClick={() => setChave(atual.reage[0]!)}
+          >
+            {atual.reage[1]}
+            {!atual.reage[0] && " (sem dados)"}
+          </Botao>
+        </div>
       </div>
 
       <div className="grid gap-4 rounded-[22px] border bg-card p-4 sm:p-6">
