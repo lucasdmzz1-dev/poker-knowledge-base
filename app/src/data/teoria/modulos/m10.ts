@@ -1,29 +1,46 @@
 import type { CardCode } from "@/data/mod15"
-import type { AssentoT, MesaT, ModuloTeoria } from "@/data/teoria/tipos"
+import type {
+  AssentoT,
+  HistoriaT,
+  MesaT,
+  ModuloTeoria,
+} from "@/data/teoria/tipos"
 
 // Mesa do pote a três: o EP (sentado no UTG1) abre, o BTN paga e o BB paga.
 // O pote do flop é 6,5bb (2 + 2 + 2 + 0,5 do SB) e cada um fica com 38bb.
+// A historia é o replay da mão até a vez do herói.
 function mesa(
   board: CardCode[],
-  pote: number,
-  acoes: { ep?: string; btn?: string; bb?: string },
+  historia: HistoriaT[],
   heroi: "EP" | "BTN" | "BB",
   legenda: string,
   stack = 38
 ): MesaT {
   const assentos: AssentoT[] = [
-    {
-      pos: "UTG1",
-      nome: "EP",
-      stack,
-      acao: acoes.ep,
-      heroi: heroi === "EP",
-    },
-    { pos: "BTN", stack, acao: acoes.btn, heroi: heroi === "BTN" },
-    { pos: "BB", stack, acao: acoes.bb, heroi: heroi === "BB" },
+    { pos: "UTG1", nome: "EP", stack, heroi: heroi === "EP" },
+    { pos: "BTN", stack, heroi: heroi === "BTN" },
+    { pos: "BB", stack, heroi: heroi === "BB" },
   ]
-  return { assentos, board, pote, legenda }
+  const pote = [...historia].reverse().find((h) => h.pote)?.pote ?? 6.5
+  return { assentos, board, pote, legenda, historia }
 }
+
+// Pré-flop comum a todas as situações.
+const PRE: HistoriaT[] = [
+  { pos: "UTG1", acao: "Raise 2", pote: 3.5 },
+  { pos: "BTN", acao: "Call", pote: 5.5 },
+  { pos: "BB", acao: "Call", pote: 6.5 },
+  { mostra: "flop" },
+]
+
+// Flop apostado pelo EP e pago pelos dois.
+const FLOP_PAGO: HistoriaT[] = [
+  { pos: "BB", acao: "Check" },
+  { pos: "UTG1", acao: "Bet 1,6", pote: 8.1 },
+  { pos: "BTN", acao: "Call", pote: 9.7 },
+  { pos: "BB", acao: "Call", pote: 11.3 },
+  { mostra: "turn" },
+]
 
 const SECO: CardCode[] = ["Ks", "7d", "2c"]
 const CARREGADO: CardCode[] = ["Js", "Ts", "8d"]
@@ -52,7 +69,7 @@ const m10: ModuloTeoria = {
       tipo: "abas",
       titulo: "O que fazer em cada situação",
       intro:
-        "Escolha a sua posição no pote a três. Cada situação mostra a mesa como no replayer, e as cartas mostram um exemplo de cada grupo de mãos.",
+        "Escolha a sua posição e a situação. A mão passa na mesa, ação por ação, como no replayer. Quando chega a sua vez, aparece o que fazer, com um exemplo de cada grupo de mãos.",
       abas: [
         {
           id: "oop",
@@ -64,10 +81,15 @@ const m10: ModuloTeoria = {
               grupo: "Flop seco: você dá check, o BTN aposta e o BB paga",
               mesa: mesa(
                 SECO,
-                9.7,
-                { ep: "Check", btn: "Bet 1,6", bb: "Call" },
+                [
+                  ...PRE,
+                  { pos: "BB", acao: "Check" },
+                  { pos: "UTG1", acao: "Check" },
+                  { pos: "BTN", acao: "Bet 1,6", pote: 8.1 },
+                  { pos: "BB", acao: "Call", pote: 9.7 },
+                ],
                 "EP",
-                "K-7-2 rainbow. A ação está com você."
+                "K-7-2 rainbow. O BTN apostou, o BB pagou e a ação voltou para você."
               ),
               acoes: [
                 {
@@ -86,10 +108,15 @@ const m10: ModuloTeoria = {
               grupo: "Flop carregado: você dá check, o BTN aposta e o BB paga",
               mesa: mesa(
                 CARREGADO,
-                9.7,
-                { ep: "Check", btn: "Bet 1,6", bb: "Call" },
+                [
+                  ...PRE,
+                  { pos: "BB", acao: "Check" },
+                  { pos: "UTG1", acao: "Check" },
+                  { pos: "BTN", acao: "Bet 1,6", pote: 8.1 },
+                  { pos: "BB", acao: "Call", pote: 9.7 },
+                ],
                 "EP",
-                "J-T-8 com dois de espadas. A ação está com você."
+                "J-T-8 com dois de espadas. O BTN apostou, o BB pagou e a ação voltou para você."
               ),
               acoes: [
                 {
@@ -118,10 +145,9 @@ const m10: ModuloTeoria = {
               grupo: "Turn blank: você apostou o flop e os dois pagaram",
               mesa: mesa(
                 [...SECO, "3h"],
-                22.6,
-                { ep: "Bet 11,3" },
+                [...PRE, ...FLOP_PAGO, { pos: "BB", acao: "Check" }],
                 "EP",
-                "K-7-2, turn 3: blank.",
+                "K-7-2, turn 3: blank. O BB deu check e a ação está com você.",
                 36.4
               ),
               acoes: [
@@ -141,10 +167,9 @@ const m10: ModuloTeoria = {
               grupo: "Turn dinâmico: você apostou o flop e os dois pagaram",
               mesa: mesa(
                 [...SECO, "8d"],
-                15.8,
-                { ep: "Bet 4,5" },
+                [...PRE, ...FLOP_PAGO, { pos: "BB", acao: "Check" }],
                 "EP",
-                "K-7-2, turn 8 de ouros: dinâmico.",
+                "K-7-2, turn 8 de ouros: dinâmico. O BB deu check e a ação está com você.",
                 36.4
               ),
               acoes: [
@@ -177,13 +202,16 @@ const m10: ModuloTeoria = {
             "O EP abre, você paga e o BB paga. No flop, use o split de bet-vs-missed, com B25 como padrão.",
           blocos: [
             {
-              grupo: "Flop: o BB dá check e o EP aposta",
+              grupo: "EP aposta: o BB dá check e o EP aposta o flop",
               mesa: mesa(
                 SECO,
-                8.1,
-                { ep: "Bet 1,6", bb: "Check" },
+                [
+                  ...PRE,
+                  { pos: "BB", acao: "Check" },
+                  { pos: "UTG1", acao: "Bet 1,6", pote: 8.1 },
+                ],
                 "BTN",
-                "K-7-2 rainbow. A ação está com você."
+                "K-7-2 rainbow. O EP apostou e a ação está com você."
               ),
               acoes: [
                 {
@@ -206,13 +234,19 @@ const m10: ModuloTeoria = {
               ],
             },
             {
-              grupo: "Flop: você aposta e o EP dá check-raise",
+              grupo: "EP dá check-raise: você aposta o flop e o EP dá check-raise",
               mesa: mesa(
                 CARREGADO,
-                13.9,
-                { ep: "Check-raise 5,8", btn: "Bet 1,6", bb: "Fold" },
+                [
+                  ...PRE,
+                  { pos: "BB", acao: "Check" },
+                  { pos: "UTG1", acao: "Check" },
+                  { pos: "BTN", acao: "Bet 1,6", pote: 8.1 },
+                  { pos: "BB", acao: "Fold" },
+                  { pos: "UTG1", acao: "Check-raise 5,8", pote: 13.9 },
+                ],
                 "BTN",
-                "J-T-8 com dois de espadas. A ação está com você."
+                "J-T-8 com dois de espadas. O EP deu check-raise e a ação voltou para você."
               ),
               acoes: [
                 {
@@ -229,13 +263,20 @@ const m10: ModuloTeoria = {
               ],
             },
             {
-              grupo: "Turn blank: o EP dá check de novo",
+              grupo: "Turn blank: o flop foi em check e o EP dá check de novo",
               mesa: mesa(
                 [...SECO, "3h"],
-                11.1,
-                { ep: "Check", bb: "Check", btn: "Bet 4,6" },
+                [
+                  ...PRE,
+                  { pos: "BB", acao: "Check" },
+                  { pos: "UTG1", acao: "Check" },
+                  { pos: "BTN", acao: "Check" },
+                  { mostra: "turn" },
+                  { pos: "BB", acao: "Check" },
+                  { pos: "UTG1", acao: "Check" },
+                ],
                 "BTN",
-                "Flop K-7-2 em check, turn 3: blank."
+                "Flop K-7-2 em check, turn 3: blank. Os dois deram check e a ação está com você."
               ),
               acoes: [
                 {
@@ -267,10 +308,14 @@ const m10: ModuloTeoria = {
               grupo: "Flop: você dá check, o EP dá check e o BTN aposta",
               mesa: mesa(
                 SECO,
-                8.1,
-                { bb: "Check", ep: "Check", btn: "Bet 1,6" },
+                [
+                  ...PRE,
+                  { pos: "BB", acao: "Check" },
+                  { pos: "UTG1", acao: "Check" },
+                  { pos: "BTN", acao: "Bet 1,6", pote: 8.1 },
+                ],
                 "BB",
-                "K-7-2 rainbow. A ação volta para você."
+                "K-7-2 rainbow. O EP deu check, o BTN apostou e a ação voltou para você."
               ),
               acoes: [
                 {
@@ -295,13 +340,20 @@ const m10: ModuloTeoria = {
               ],
             },
             {
-              grupo: "Turn blank: lead depois do bet-vs-missed",
+              grupo: "Lead no turn: turn blank depois do bet-vs-missed",
               mesa: mesa(
                 [...SECO, "3h"],
-                14.1,
-                { bb: "Bet 2,8" },
+                [
+                  ...PRE,
+                  { pos: "BB", acao: "Check" },
+                  { pos: "UTG1", acao: "Check" },
+                  { pos: "BTN", acao: "Bet 1,6", pote: 8.1 },
+                  { pos: "BB", acao: "Call", pote: 9.7 },
+                  { pos: "UTG1", acao: "Call", pote: 11.3 },
+                  { mostra: "turn" },
+                ],
                 "BB",
-                "No flop, o BTN apostou e você e o EP pagaram. Turn 3: blank.",
+                "No flop, o BTN apostou e você e o EP pagaram. Turn 3: blank, e você age primeiro.",
                 36.4
               ),
               acoes: [
@@ -325,13 +377,18 @@ const m10: ModuloTeoria = {
               ],
             },
             {
-              grupo: "Turn: o agressor aposta",
+              grupo: "Agressor aposta o turn: o EP aposta e o BTN paga",
               mesa: mesa(
                 [...SECO, "3h"],
-                20.3,
-                { bb: "Check", ep: "Bet 4,5", btn: "Call" },
+                [
+                  ...PRE,
+                  ...FLOP_PAGO,
+                  { pos: "BB", acao: "Check" },
+                  { pos: "UTG1", acao: "Bet 4,5", pote: 15.8 },
+                  { pos: "BTN", acao: "Call", pote: 20.3 },
+                ],
                 "BB",
-                "Turn 3: o EP aposta, o BTN paga e a ação volta para você.",
+                "Turn 3: o EP apostou, o BTN pagou e a ação voltou para você.",
                 36.4
               ),
               acoes: [

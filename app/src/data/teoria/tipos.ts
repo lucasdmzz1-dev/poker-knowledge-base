@@ -55,12 +55,22 @@ export interface AssentoT {
   fora?: boolean
 }
 
+// Um passo do replay da mão: uma ação de um assento, ou as cartas do flop/turn.
+export interface HistoriaT {
+  pos?: string
+  acao?: string
+  mostra?: "flop" | "turn"
+  pote?: number
+}
+
 export interface MesaT {
   assentos: AssentoT[]
   board: CardCode[]
   heroi?: CardCode[]
   pote: number
   legenda?: string
+  // Replay da mão até a decisão do herói. Sem histórico, a mesa é estática.
+  historia?: HistoriaT[]
 }
 
 // Um board com as suas faixas ou ações. Sem `cartas`, a aba não tem board.

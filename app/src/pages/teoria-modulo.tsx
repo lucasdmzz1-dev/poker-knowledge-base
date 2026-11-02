@@ -28,6 +28,7 @@ import {
 } from "@/components/teoria/blocos"
 import { IcmRanges } from "@/components/teoria/icm-ranges"
 import { MesaTeoria } from "@/components/teoria/mesa-teoria"
+import { SituacoesMesa } from "@/components/teoria/situacoes-mesa"
 import { Rico } from "@/components/teoria/rico"
 import { moduloPorSlug } from "@/data/teoria/registro"
 import type {
@@ -138,54 +139,62 @@ function Abas({ abas }: { abas: AbaT[] }) {
             </strong>
             <Rico>{aba.criterio}</Rico>
           </p>
-          {aba.blocos.map((b, i) => (
-            <div
-              key={b.grupo ?? b.rotulo ?? i}
-              className={cn(
-                "grid gap-8",
-                b.cartas && "md:grid-cols-[minmax(0,320px)_minmax(0,1fr)]"
-              )}
-            >
-              {b.mesa && b.grupo && (
-                <p className="text-center text-xl font-bold uppercase">
-                  {b.grupo}
-                </p>
-              )}
-              {b.mesa && <MesaTeoria mesa={b.mesa} />}
-              {b.cartas && (
-                <div className="flex flex-col items-start gap-4">
-                  <Cards
-                    codes={b.cartas}
-                    size={b.cartas.length > 3 ? "md" : "lg"}
-                  />
-                  {b.turn && (
-                    <div className="flex items-center gap-3">
-                      <PlayingCard code={b.turn} size="lg" />
-                      <RotuloBoard>turn</RotuloBoard>
-                    </div>
-                  )}
-                  {b.rotulo && <RotuloBoard>{b.rotulo}</RotuloBoard>}
-                  {b.etiqueta && <Etq e={b.etiqueta} />}
-                </div>
-              )}
-              <div>
-                {b.grupo && !b.mesa && (
-                  <p className="pb-2 text-lg font-bold">{b.grupo}</p>
+          {aba.blocos.every((b) => b.mesa) ? (
+            <SituacoesMesa
+              key={aba.id}
+              blocos={aba.blocos}
+              renderAcoes={(acoes) => <Acoes acoes={acoes} />}
+            />
+          ) : (
+            aba.blocos.map((b, i) => (
+              <div
+                key={b.grupo ?? b.rotulo ?? i}
+                className={cn(
+                  "grid gap-8",
+                  b.cartas && "md:grid-cols-[minmax(0,320px)_minmax(0,1fr)]"
                 )}
-                {b.faixas?.map((f) => (
-                  <Faixa key={`${f.p}-${f.texto}`} p={f.p}>
-                    <div className="grid gap-3">
-                      <TextoAcao texto={f.texto} />
-                      {f.maos && f.maos.length > 0 && (
-                        <ListaMaos maos={f.maos} />
-                      )}
-                    </div>
-                  </Faixa>
-                ))}
-                {b.acoes && <Acoes acoes={b.acoes} />}
+              >
+                {b.mesa && b.grupo && (
+                  <p className="text-center text-xl font-bold uppercase">
+                    {b.grupo}
+                  </p>
+                )}
+                {b.mesa && <MesaTeoria mesa={b.mesa} />}
+                {b.cartas && (
+                  <div className="flex flex-col items-start gap-4">
+                    <Cards
+                      codes={b.cartas}
+                      size={b.cartas.length > 3 ? "md" : "lg"}
+                    />
+                    {b.turn && (
+                      <div className="flex items-center gap-3">
+                        <PlayingCard code={b.turn} size="lg" />
+                        <RotuloBoard>turn</RotuloBoard>
+                      </div>
+                    )}
+                    {b.rotulo && <RotuloBoard>{b.rotulo}</RotuloBoard>}
+                    {b.etiqueta && <Etq e={b.etiqueta} />}
+                  </div>
+                )}
+                <div>
+                  {b.grupo && !b.mesa && (
+                    <p className="pb-2 text-lg font-bold">{b.grupo}</p>
+                  )}
+                  {b.faixas?.map((f) => (
+                    <Faixa key={`${f.p}-${f.texto}`} p={f.p}>
+                      <div className="grid gap-3">
+                        <TextoAcao texto={f.texto} />
+                        {f.maos && f.maos.length > 0 && (
+                          <ListaMaos maos={f.maos} />
+                        )}
+                      </div>
+                    </Faixa>
+                  ))}
+                  {b.acoes && <Acoes acoes={b.acoes} />}
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
           {aba.nota && <Nota className="-mt-4">{aba.nota}</Nota>}
         </CardContent>
       </Card>
