@@ -20,10 +20,6 @@ const GRUPOS: { nome: string; temas: Tema[] }[] = [
     ],
   },
   {
-    nome: "Pré-flop",
-    temas: [{ nome: "RFI 10bb CEV" }, { nome: "RFI 12bb CEV" }],
-  },
-  {
     nome: "Blind war",
     temas: [{ nome: "BB Raise Pot vs SB", to: "/teoria/bb-raise-pot-vs-sb" }],
   },
@@ -67,10 +63,6 @@ const GRUPOS: { nome: string; temas: Tema[] }[] = [
       { nome: "3Bet Pot OOP no BB Short" },
       { nome: "3Bet Pot OOP no BB Deep" },
     ],
-  },
-  {
-    nome: "PKO",
-    temas: [{ nome: "BTN contra 1 open" }],
   },
 ]
 

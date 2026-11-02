@@ -6,6 +6,7 @@ const m02: ModuloTeoria = {
   nome: "C-Bet IP 40bb",
   spot: "Pote single raised · você em posição, como agressor · cerca de 40bb efetivos",
   tags: ["Flop", "Em posição", "40bb", "Sizes B25, B40 e B70"],
+  videos: [{ id: "4ZjyOgd-5Tg" }],
   secoes: [
     {
       tipo: "lista",
@@ -213,8 +214,6 @@ const m02: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/02-CBet-IP-40bb (guideline). A guideline não traz boards nem mãos de exemplo, então esta página usa só texto e etiquetas de size",
 }
 
 export default m02

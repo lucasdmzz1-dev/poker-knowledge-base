@@ -6,6 +6,7 @@ const m07: ModuloTeoria = {
   nome: "Check-Raise Deep Stack",
   spot: "Pote single raised · você no BB, fora de posição · deep stack · contra EP e contra BU",
   tags: ["Flop e turn", "Fora de posição", "Deep stack", "Check-raise"],
+  videos: [{ id: "wF-CmrRLvR8" }],
   secoes: [
     {
       tipo: "lista",
@@ -163,8 +164,6 @@ const m07: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/07-XR-DEEP (guideline). A guideline não traz boards nem mãos de exemplo",
 }
 
 export default m07

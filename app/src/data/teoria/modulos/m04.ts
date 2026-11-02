@@ -6,6 +6,7 @@ const m04: ModuloTeoria = {
   nome: "Third Barrel e vs Third Barrel",
   spot: "Pote single raised · river · o ataque do agressor e a defesa de quem paga",
   tags: ["River", "Ataque e defesa", "MDF"],
+  videos: [{ id: "2N_ifMb1kP0" }],
   secoes: [
     {
       tipo: "lista",
@@ -173,8 +174,6 @@ const m04: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/04-Third-Barrel-e-vs-Third-Barrel (guideline). A guideline não traz boards nem mãos de exemplo",
 }
 
 export default m04

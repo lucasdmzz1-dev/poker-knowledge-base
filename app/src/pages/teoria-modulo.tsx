@@ -10,16 +10,22 @@ import {
   Exemplo,
   Exemplos,
   Faixa,
-  Fonte,
   Intro,
   ITEM,
   Lista,
+  ListaPassos,
   Nota,
   RotuloBoard,
   Secao,
+  Secoes,
+  TextoAcao,
   TextoMini,
   TituloMini,
+  useAcento,
+  Videos,
 } from "@/components/teoria/blocos"
+import { IcmRanges } from "@/components/teoria/icm-ranges"
+import { Rico } from "@/components/teoria/rico"
 import { moduloPorSlug } from "@/data/teoria/registro"
 import type {
   AbaT,
@@ -37,6 +43,8 @@ const COR_ETIQUETA: Record<CorEtiqueta, string> = {
   claro: "bg-b25",
   vermelho: "bg-b50",
   verde: "bg-primary",
+  branco: "bg-foreground",
+  amarelo: "bg-amber-300",
 }
 
 const COR_ACAO: Record<CorAcao, string> = {
@@ -73,9 +81,7 @@ function Acoes({ acoes }: { acoes: AcaoT[] }) {
           {a.maos && a.maos.length > 0 ? (
             <ListaMaos maos={a.maos} />
           ) : (
-            <span className="text-lg font-semibold text-foreground">
-              {a.texto}
-            </span>
+            <TextoAcao texto={a.texto ?? ""} />
           )}
         </div>
       ))}
@@ -93,7 +99,7 @@ function Abas({ abas }: { abas: AbaT[] }) {
         type="single"
         value={aba.id}
         onValueChange={(v) => v && setId(v)}
-        className="mb-5 flex flex-wrap justify-start gap-2"
+        className="mb-6 flex flex-wrap justify-center gap-2"
         aria-label="Escolha o caso"
       >
         {abas.map((a) => (
@@ -104,8 +110,14 @@ function Abas({ abas }: { abas: AbaT[] }) {
       </ToggleGroup>
       <Card className="rounded-[22px]">
         <CardContent className="grid gap-10 p-5 sm:p-7">
-          <p className="max-w-[60ch] font-serif text-lg" aria-live="polite">
-            {aba.criterio}
+          <p
+            className="max-w-[64ch] rounded-xl bg-primary/10 p-4 font-serif text-lg leading-relaxed"
+            aria-live="polite"
+          >
+            <strong className="mb-1 block text-sm font-bold tracking-wide text-primary uppercase">
+              Como pensar
+            </strong>
+            <Rico>{aba.criterio}</Rico>
           </p>
           {aba.blocos.map((b, i) => (
             <div
@@ -135,9 +147,7 @@ function Abas({ abas }: { abas: AbaT[] }) {
                     {f.maos && f.maos.length > 0 ? (
                       <ListaMaos maos={f.maos} />
                     ) : (
-                      <span className="text-lg font-semibold text-foreground">
-                        {f.texto}
-                      </span>
+                      <TextoAcao texto={f.texto} />
                     )}
                   </Faixa>
                 ))}
@@ -160,7 +170,7 @@ function Rng() {
         type="single"
         value={String(freq)}
         onValueChange={(v) => v && setFreq(Number(v))}
-        className="flex flex-wrap justify-start gap-2"
+        className="flex flex-wrap justify-center gap-2"
         aria-label="Frequência da mão"
       >
         {[100, 75, 50, 25].map((p) => (
@@ -174,13 +184,24 @@ function Rng() {
   )
 }
 
+function tomDoTitulo(t: string) {
+  if (/erro|vazamento/i.test(t)) return "negativo"
+  if (/regras? de bolso/i.test(t)) return "positivo"
+  return "neutro"
+}
+
 function Conteudo({ s }: { s: SecaoT }) {
+  const acento = useAcento()
   switch (s.tipo) {
     case "lista":
       return (
         <>
           {s.intro && <Intro>{s.intro}</Intro>}
-          <Lista itens={s.itens} />
+          {s.titulo === "Em 30 segundos" ? (
+            <ListaPassos itens={s.itens} />
+          ) : (
+            <Lista itens={s.itens} tom={s.tom ?? tomDoTitulo(s.titulo)} />
+          )}
         </>
       )
     case "cartoes":
@@ -194,17 +215,34 @@ function Conteudo({ s }: { s: SecaoT }) {
             )}
           >
             {s.itens.map((c) => (
-              <Card key={c.titulo} className="gap-3 rounded-[14px] p-5">
+              <Card key={c.titulo} className={cn("gap-3 rounded-[14px] p-5")}>
+                <span
+                  className={cn("h-1 w-10 rounded-full", acento.barra)}
+                  aria-hidden
+                />
                 <div className="flex items-center gap-3">
                   {c.etiqueta && <Etq e={c.etiqueta} />}
-                  <TituloMini className="uppercase">{c.titulo}</TituloMini>
+                  <TituloMini className={cn("uppercase", acento.texto)}>
+                    {c.titulo}
+                  </TituloMini>
                 </div>
                 {c.cartas && <Cards codes={c.cartas} size="sm" />}
-                {c.texto && <TextoMini>{c.texto}</TextoMini>}
+                {c.texto && (
+                  <TextoMini>
+                    <Rico>{c.texto}</Rico>
+                  </TextoMini>
+                )}
                 {c.textos && (
-                  <ul className="grid list-disc gap-2 pl-5 text-base text-muted-foreground">
+                  <ul
+                    className={cn(
+                      "grid list-disc gap-2 pl-5 text-lg text-muted-foreground",
+                      acento.marca
+                    )}
+                  >
                     {c.textos.map((t) => (
-                      <li key={t}>{t}</li>
+                      <li key={t}>
+                        <Rico>{t}</Rico>
+                      </li>
                     ))}
                   </ul>
                 )}
@@ -235,10 +273,21 @@ function Conteudo({ s }: { s: SecaoT }) {
                   {b.etiqueta && <Etq e={b.etiqueta} />}
                   <TituloMini>{b.nome}</TituloMini>
                 </div>
-                {b.nota && <TextoMini>{b.nota}</TextoMini>}
+                {b.nota && (
+                  <TextoMini>
+                    <Rico>{b.nota}</Rico>
+                  </TextoMini>
+                )}
               </Card>
             ))}
           </div>
+        </>
+      )
+    case "icm-ranges":
+      return (
+        <>
+          {s.intro && <Intro>{s.intro}</Intro>}
+          <IcmRanges />
         </>
       )
     case "rng":
@@ -291,26 +340,15 @@ export default function TeoriaModulo() {
             </Badge>
           ))}
         </div>
-        {mod.video && (
-          <div className="mx-auto mt-8 aspect-video w-full max-w-[720px] overflow-hidden rounded-[22px] border">
-            <iframe
-              src={`https://www.youtube.com/embed/${mod.video}`}
-              title={`Aula: ${mod.nome}`}
-              className="size-full"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-              allowFullScreen
-            />
-          </div>
-        )}
+        {mod.videos && <Videos videos={mod.videos} titulo={mod.nome} />}
       </PageHeader>
-      <div className="mx-auto max-w-[1080px] px-5 pb-20">
+      <Secoes>
         {mod.secoes.map((s) => (
           <Secao key={s.titulo} titulo={s.titulo}>
             <Conteudo s={s} />
           </Secao>
         ))}
-        <Fonte>Fonte: {mod.fonte}.</Fonte>
-      </div>
+      </Secoes>
     </main>
   )
 }

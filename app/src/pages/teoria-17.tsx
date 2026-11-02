@@ -10,13 +10,14 @@ import {
   Exemplo,
   Exemplos,
   Faixa,
-  Fonte,
   Intro,
   ITEM,
   Lista,
   Nota,
   RotuloBoard,
   Secao,
+  Secoes,
+  Videos,
   TextoMini,
   TituloMini,
 } from "@/components/teoria/blocos"
@@ -65,17 +66,9 @@ export default function Teoria17() {
           <Badge variant="outline">Em posição</Badge>
           <Badge variant="outline">Sizes B25, B40 e B70</Badge>
         </div>
-        <div className="mx-auto mt-8 aspect-video w-full max-w-[720px] overflow-hidden rounded-[22px] border">
-          <iframe
-            src="https://www.youtube.com/embed/0fanABMWSkE"
-            title="Aula: BB Raise Pot vs SB"
-            className="size-full"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-            allowFullScreen
-          />
-        </div>
+        <Videos videos={[{ id: "0fanABMWSkE" }]} titulo={mod17.nome} />
       </PageHeader>
-      <div className="mx-auto max-w-[1080px] px-5 pb-20">
+      <Secoes>
         <Secao titulo="Em 30 segundos">
           <Lista itens={mod17.em30} />
         </Secao>
@@ -229,9 +222,7 @@ export default function Teoria17() {
         <Secao titulo="Regras de bolso">
           <Lista itens={mod17.pocket} />
         </Secao>
-
-        <Fonte>Fonte: {mod17.fonte}.</Fonte>
-      </div>
+      </Secoes>
     </main>
   )
 }
