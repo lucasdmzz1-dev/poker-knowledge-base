@@ -171,20 +171,24 @@ export default function Teoria14() {
                     key={a.nome}
                     className="grid gap-1 border-t py-3 md:grid-cols-[9rem_minmax(0,1fr)] md:gap-x-4"
                   >
-                    <div className="flex flex-col items-start gap-2">
-                      <span
-                        className={cn(
-                          "text-lg font-bold uppercase",
-                          COR_ACAO[a.nome]
-                        )}
-                      >
-                        {a.nome}
-                      </span>
-                      <Cards codes={a.ex} size="sm" />
-                    </div>
-                    <span className="text-lg font-semibold text-foreground">
-                      {a.maos}
+                    <span
+                      className={cn(
+                        "text-lg font-bold uppercase",
+                        COR_ACAO[a.nome]
+                      )}
+                    >
+                      {a.nome}
                     </span>
+                    <ul className="grid gap-3">
+                      {a.maos.map((m) => (
+                        <li key={m.texto} className="flex items-center gap-4">
+                          <Cards codes={m.ex} size="sm" />
+                          <span className="text-lg font-semibold text-foreground">
+                            {m.texto}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 ))}
                 <p className="mt-3 max-w-[60ch] text-muted-foreground">

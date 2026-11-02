@@ -10,10 +10,14 @@ export type TurnId =
   | "sequencia"
   | "pareia"
 
+export interface Mao {
+  texto: string
+  ex: CardCode[]
+}
+
 export interface Acao {
   nome: "Bet" | "Check-call" | "Check-raise"
-  ex: CardCode[]
-  maos: string
+  maos: Mao[]
 }
 
 export interface TurnProbe {
@@ -93,18 +97,32 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
-          ex: ["Ah", "7c"],
-          maos: "TP ou melhor, SP que cobram de piores (A7, K7) e que conectam (76, 97), 7x com flush draw, 5x do naipe, duas pontas, flush draws e brocas",
+          maos: [
+            { texto: "TP ou melhor", ex: ["Kh", "8c"] },
+            { texto: "SP que cobram de piores (A7, K7)", ex: ["Ah", "7c"] },
+            { texto: "SP que conectam (76, 97)", ex: ["7h", "6c"] },
+            { texto: "7x com flush draw", ex: ["7s", "Ks"] },
+            { texto: "5x do naipe", ex: ["5h", "Ts"] },
+            { texto: "Duas pontas", ex: ["9h", "Tc"] },
+            { texto: "Flush draws", ex: ["Ks", "Qs"] },
+            { texto: "Brocas", ex: ["Jh", "9c"] },
+          ],
         },
         {
           nome: "Check-call",
-          ex: ["Qd", "5h"],
-          maos: "7x, third pair e qualquer par com redraw",
+          maos: [
+            { texto: "7x", ex: ["7h", "Qc"] },
+            { texto: "Third pair", ex: ["5h", "Qd"] },
+            { texto: "Qualquer par com redraw", ex: ["5h", "9s"] },
+          ],
         },
         {
           nome: "Check-raise",
-          ex: ["9h", "6c"],
-          maos: "Sequências (sem o naipe do board), dois pares pontuais e combo draw (duas pontas + FD)",
+          maos: [
+            { texto: "Sequências (sem o naipe do board)", ex: ["9h", "6c"] },
+            { texto: "Dois pares pontuais", ex: ["8h", "2d"] },
+            { texto: "Combo draw (duas pontas + FD)", ex: ["9s", "Ts"] },
+          ],
         },
       ],
       nota: "Aposte um size único. O B100 aqui faria você perder os 7x do range de bet.",
@@ -120,8 +138,12 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
-          ex: ["8h", "Kh"],
-          maos: "As mãos de valor, com o 8x como absoluto, em B100 ou no geométrico",
+          maos: [
+            {
+              texto: "8x como absoluto, em B100 ou no geométrico",
+              ex: ["8h", "Kh"],
+            },
+          ],
         },
       ],
       nota: "O range que paga é largo e com pouca equity, então o size alto é permitido.",
@@ -137,18 +159,29 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
-          ex: ["Qh", "9c"],
-          maos: "Qx e 8x (menos os piores de cada), flush draws, duas pontas e brocas com mais equity",
+          maos: [
+            { texto: "Qx", ex: ["Qh", "9c"] },
+            { texto: "8x", ex: ["8h", "Kc"] },
+            { texto: "Flush draws", ex: ["Ks", "Js"] },
+            { texto: "Duas pontas", ex: ["9h", "Tc"] },
+            { texto: "Brocas com mais equity", ex: ["Kc", "9d"] },
+          ],
         },
         {
           nome: "Check-call",
-          ex: ["Qc", "2h"],
-          maos: "Os piores Qx (Q2, Q3, Q4), os piores 8x, second pair e par com redraw",
+          maos: [
+            { texto: "Piores Qx (Q2, Q3, Q4)", ex: ["Qc", "2h"] },
+            { texto: "Piores 8x", ex: ["8c", "4h"] },
+            { texto: "Second pair", ex: ["7h", "2h"] },
+            { texto: "Par com redraw", ex: ["5h", "9s"] },
+          ],
         },
         {
           nome: "Check-raise",
-          ex: ["8h", "5h"],
-          maos: "Sequências e dois pares",
+          maos: [
+            { texto: "Sequências", ex: ["9h", "6c"] },
+            { texto: "Dois pares", ex: ["8h", "5h"] },
+          ],
         },
       ],
       nota: "Os piores de cada grupo desbloqueiam as mãos que pagam (9 e 10). Um 4x é broca de lixo aqui, e K9 ou A9 é broca com plano.",
@@ -164,18 +197,33 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
-          ex: ["Js", "4s"],
-          maos: "Flushes com uma carta alta e uma baixa, TP, os 2 melhores SP, SP que conectam, flush draws, duas pontas e brocas com mais equity",
+          maos: [
+            { texto: "Flush com uma carta alta e uma baixa", ex: ["Js", "4s"] },
+            { texto: "TP", ex: ["8h", "Kc"] },
+            { texto: "Os 2 melhores SP", ex: ["7h", "Kc"] },
+            { texto: "SP que conectam", ex: ["6h", "7c"] },
+            { texto: "Flush draws", ex: ["Ks", "Qh"] },
+            { texto: "Duas pontas", ex: ["9h", "Tc"] },
+            { texto: "Brocas com mais equity", ex: ["Kc", "9d"] },
+          ],
         },
         {
           nome: "Check-call",
-          ex: ["4s", "3s"],
-          maos: "Par com FD, flushes baixos, SP+ e par com draw",
+          maos: [
+            { texto: "Par com FD", ex: ["9s", "5h"] },
+            { texto: "Flushes baixos", ex: ["4s", "3s"] },
+            { texto: "SP+", ex: ["7h", "Kd"] },
+          ],
         },
         {
           nome: "Check-raise",
-          ex: ["Js", "Ts"],
-          maos: "Os melhores flushes (duas cartas altas) e combo draw",
+          maos: [
+            {
+              texto: "Os melhores flushes (duas cartas altas)",
+              ex: ["Js", "Ts"],
+            },
+            { texto: "Combo draw", ex: ["9s", "Tc"] },
+          ],
         },
       ],
       nota: "Veja a divisão dos flushes mais abaixo.",
@@ -191,18 +239,33 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
-          ex: ["Ks", "3s"],
-          maos: "Flushes com uma carta alta e uma baixa, os melhores TP, SP que conectam, flush draws, duas pontas e brocas com mais equity",
+          maos: [
+            { texto: "Flush com uma carta alta e uma baixa", ex: ["Ks", "3s"] },
+            { texto: "Os melhores TP", ex: ["Qh", "Kc"] },
+            { texto: "SP que conectam", ex: ["6h", "7c"] },
+            { texto: "Flush draws", ex: ["Ts", "2d"] },
+            { texto: "Duas pontas", ex: ["9h", "Tc"] },
+            { texto: "Brocas com mais equity", ex: ["Kc", "9d"] },
+          ],
         },
         {
           nome: "Check-call",
-          ex: ["4s", "3s"],
-          maos: "TP, SP, par com draw e os piores flushes",
+          maos: [
+            { texto: "TP", ex: ["Qd", "2c"] },
+            { texto: "SP", ex: ["7h", "Kd"] },
+            { texto: "Par com draw", ex: ["5h", "9s"] },
+            { texto: "Os piores flushes", ex: ["4s", "3s"] },
+          ],
         },
         {
           nome: "Check-raise",
-          ex: ["Js", "Ts"],
-          maos: "Os melhores flushes (duas cartas altas) e combo draw",
+          maos: [
+            {
+              texto: "Os melhores flushes (duas cartas altas)",
+              ex: ["Js", "Ts"],
+            },
+            { texto: "Combo draw", ex: ["9s", "Tc"] },
+          ],
         },
       ],
       nota: "Como o grupo é mais restrito, o size sobe, até pote se quiser (e então só TP com o naipe do flush).",
@@ -218,18 +281,29 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
-          ex: ["9h", "Jc"],
-          maos: "Sequências, os melhores dois pares, TP que vão para o nuts (9J, 9T), duas pontas, brocas e flush draws",
+          maos: [
+            { texto: "Sequências", ex: ["6h", "6c"] },
+            { texto: "Os melhores dois pares", ex: ["9h", "8h"] },
+            { texto: "TP que vão para o nuts (9J, 9T)", ex: ["9h", "Jc"] },
+            { texto: "Duas pontas", ex: ["Th", "Ac"] },
+            { texto: "Brocas", ex: ["Jh", "9d"] },
+            { texto: "Flush draws", ex: ["Ts", "2s"] },
+          ],
         },
         {
           nome: "Check-call",
-          ex: ["8h", "Kc"],
-          maos: "TP, SP e par com draw",
+          maos: [
+            { texto: "TP", ex: ["9h", "Kc"] },
+            { texto: "SP", ex: ["8h", "Kc"] },
+            { texto: "Par com draw", ex: ["5h", "Ts"] },
+          ],
         },
         {
           nome: "Check-raise",
-          ex: ["6h", "6c"],
-          maos: "Sequência nuts, sequência com redraw e draw para o nuts",
+          maos: [
+            { texto: "Sequência nuts", ex: ["6h", "6c"] },
+            { texto: "Sequência com redraw", ex: ["Ts", "Jc"] },
+          ],
         },
       ],
       nota: "Nunca B25 aqui: ele não faz o vilão foldar, e com o range inteiro apostando o river vira uma árvore que ninguém sabe jogar.",
@@ -245,8 +319,10 @@ export const mod14 = {
       acoes: [
         {
           nome: "Bet",
-          ex: ["8h", "Kc"],
-          maos: "Todos os 8x e a maior parte dos 7x",
+          maos: [
+            { texto: "8x", ex: ["8h", "Kc"] },
+            { texto: "7x", ex: ["7h", "Kc"] },
+          ],
         },
       ],
       nota: "No 887 com turn 2, B70 para os 8x e os 7x. No 887 com turn J, B100 só com o 8: o vilão tem os melhores valetes e o seu 7x já não tem o que apostar.",
