@@ -3,7 +3,7 @@
 // cada mão sai das tabelas de split do guideline (B25, B40 e B70), e o size vem do
 // board. Mão que as tabelas não resolvem de forma clara devolve null.
 import { ler } from "@/data/prat05"
-import { forcaDoTopPair } from "@/data/prat15"
+import { forcaDoTopPair, temBDSD } from "@/data/prat15"
 import { bbRaisa, classeDaMao, classesQueOBBRaisa } from "@/data/ranges"
 
 export type SizeBB = "B25" | "B40" | "B70"
@@ -22,6 +22,8 @@ export interface BoardBBTreino {
   freq?: number
   // Por que o board tem esse size, nas palavras do coach.
   criterio?: string
+  // Tabela do guideline por board (IMG1) deste board, quando o coach deu uma.
+  img1?: "alto70" | "conectado40" | "high40" | "low" | "mono"
   // Board monotone: segue a tabela B25 (IMG2), sem flush nem flush draw.
   monotone?: boolean
 }
@@ -96,6 +98,7 @@ export const BOARDS_BB: BoardBBTreino[] = [
     board: ["Ks", "Qs", "8h"],
     size: "B70",
     estrategia: "split70",
+    img1: "alto70",
     grupo: "B70",
     freq: 25,
   },
@@ -105,6 +108,7 @@ export const BOARDS_BB: BoardBBTreino[] = [
     board: ["Js", "9s", "6h"],
     size: "B70",
     estrategia: "split70",
+    img1: "alto70",
     grupo: "B70",
     freq: 33,
   },
@@ -114,6 +118,7 @@ export const BOARDS_BB: BoardBBTreino[] = [
     board: ["Js", "9s", "7h"],
     size: "B40",
     estrategia: "split40",
+    img1: "conectado40",
     grupo: "B40",
     freq: 45,
   },
@@ -123,6 +128,7 @@ export const BOARDS_BB: BoardBBTreino[] = [
     board: ["7c", "5d", "2h"],
     size: "B40",
     estrategia: "split40",
+    img1: "low",
     grupo: "B40",
     freq: 66,
   },
@@ -132,6 +138,7 @@ export const BOARDS_BB: BoardBBTreino[] = [
     board: ["Qs", "8h", "3h"],
     size: "B40",
     estrategia: "split40",
+    img1: "high40",
     grupo: "B40",
     freq: 50,
   },
@@ -141,6 +148,7 @@ export const BOARDS_BB: BoardBBTreino[] = [
     board: ["Qs", "6d", "3d"],
     size: "B25",
     estrategia: "split25",
+    img1: "low",
     grupo: "B25",
     freq: 66,
     criterio:
@@ -152,6 +160,7 @@ export const BOARDS_BB: BoardBBTreino[] = [
     board: ["Ks", "9s", "4s"],
     size: "B25",
     estrategia: "split25",
+    img1: "mono",
     grupo: "B25",
     freq: 50,
     monotone: true,
@@ -313,6 +322,103 @@ interface Resultado {
   porque: string
 }
 
+// Buckets do guideline por board (IMG1) dos boards que o coach montou um a um. Mão que
+// a tabela não cita devolve null.
+function bucketImg1(
+  b: BoardBBTreino,
+  hero: [string, string],
+  L: ReturnType<typeof ler>
+): Resultado | null {
+  const forca =
+    L.feita === "topPair"
+      ? forcaDoTopPair(b.board, hero, classesQueOBBRaisa())
+      : null
+  const draw = L.oesd || L.gutshot || L.flushDraw
+  const bdsd = temBDSD(b.board, hero, draw)
+  const air = L.feita === "nada" && !draw
+  const airBD = air && L.bdfd && bdsd
+  const set = ["setAlto", "setMeio", "setBaixo"].includes(L.feita)
+  const nfd = L.feita === "nada" && L.nutFlushDraw
+  const fdPior = L.feita === "nada" && L.flushDraw && !L.nutFlushDraw
+  const res = (bucket: number, classe: string): Resultado => ({
+    bucket,
+    classe,
+    porque: `${classe} vai em ${bucket}% neste board (guideline por board).`,
+  })
+  const doisOuOP =
+    L.feita === "doisPares"
+      ? "Dois pares"
+      : L.feita === "overpair"
+        ? "Overpair"
+        : ""
+
+  switch (b.img1) {
+    case "alto70":
+      if (doisOuOP) return res(75, doisOuOP)
+      if (forca === "forte") return res(75, "Top pair forte")
+      if (forca === "medio") return res(50, "Top pair")
+      if (forca === "fraco") return res(25, "Top pair fraco")
+      if (nfd) return res(50, "Nut flush draw")
+      if (set) return res(25, "Trinca")
+      if (L.feita === "secondPair") return res(25, "Segundo par")
+      if (L.feita === "underpair") return res(0, "Underpair")
+      if (fdPior) return res(25, "Flush draw")
+      if (airBD) return res(25, "Air com BDFD e BDST")
+      return null
+    case "conectado40":
+      if (L.feita === "sequencia") return res(75, "Sequência")
+      if (doisOuOP) return res(75, doisOuOP)
+      if (forca === "forte") return res(75, "Top pair forte")
+      if (set) return res(50, "Trinca")
+      if (forca) return res(50, "Top pair")
+      if (nfd) return res(50, "Nut flush draw")
+      if (L.feita === "secondPair") return res(25, "Segundo par")
+      if (L.feita === "underpair") return res(0, "Underpair")
+      if (fdPior) return res(25, "Flush draw")
+      if (airBD) return res(25, "Air com BDFD e BDST")
+      return null
+    case "high40":
+      if (doisOuOP) return res(75, doisOuOP)
+      if (forca === "forte") return res(75, "Top pair forte")
+      if (set) return res(50, "Trinca")
+      if (forca) return res(50, "Top pair")
+      if (nfd) return res(50, "Nut flush draw")
+      if (L.feita === "secondPair") return res(25, "Segundo par")
+      if (L.feita === "thirdPair") return res(25, "Terceiro par")
+      if (L.feita === "underpair") return res(0, "Underpair")
+      if (fdPior) return res(25, "Flush draw")
+      if (airBD) return res(25, "Air com BDFD e BDST")
+      return null
+    case "low":
+      if (doisOuOP) return res(100, doisOuOP)
+      if (set) return res(75, "Trinca")
+      if (forca) return res(75, "Top pair")
+      if (air) return res(75, "Air")
+      if (L.feita === "secondPair") return res(50, "Segundo par")
+      if (L.feita === "thirdPair") return res(50, "Terceiro par")
+      if (L.feita === "nada" && draw) return res(50, "Draw")
+      if (L.feita === "underpair")
+        return b.size === "B40" ? res(0, "Underpair") : res(50, "Underpair")
+      return null
+    case "mono": {
+      if (set || doisOuOP) return res(75, set ? "Trinca" : doisOuOP)
+      if (L.feita === "flush") return res(50, "Flush")
+      if (forca === "forte") return res(50, "Top pair forte")
+      if (forca) return res(25, "Top pair")
+      if (L.feita === "secondPair") return res(25, "Segundo par")
+      if (air) {
+        const rs = hero.map(rk)
+        return rs.includes(14) && rs.includes(13)
+          ? res(25, "A-K high")
+          : res(50, "Air")
+      }
+      return null
+    }
+    default:
+      return null
+  }
+}
+
 export function bucketBB(
   b: BoardBBTreino,
   hero: [string, string]
@@ -348,6 +454,7 @@ export function bucketBB(
     L.feita
   )
   if (comPar && (L.oesd || L.gutshot || L.flushDraw)) return null
+  if (b.img1) return bucketImg1(b, hero, L)
   if (L.feita === "sequencia" || L.feita === "flush") return null
   const draw = L.oesd || L.gutshot || L.flushDraw
   const topPair = L.feita === "topPair"
