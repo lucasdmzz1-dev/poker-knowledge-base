@@ -14,6 +14,7 @@ export interface Leak {
   unidade?: "%" | "bb"
   fazer: string
   fonte?: string
+  secao?: string // divisão da teoria; sem isso, vale a inferida por secaoDoLeak
 }
 
 export const CHAVES = { leaks: "pkb:leaks" }
@@ -357,6 +358,35 @@ export function rotuloMes(mes: string): string {
 
 export function capitalizar(texto: string): string {
   return texto.charAt(0).toUpperCase() + texto.slice(1)
+}
+
+// Divisões da teoria, as mesmas do HUD.
+export const SECOES_LEAK = [
+  "Pré-flop",
+  "SRP como agressor",
+  "SRP como 3beter",
+  "SRP como caller",
+  "3bet pot",
+  "Blind war",
+  "Flop, turn e river",
+  "Multiway e combatividade",
+]
+
+// Palpite pela estatística; dá para trocar a divisão de cada leak na lista.
+export function secaoDoLeak(l: Leak): string {
+  if (l.secao && SECOES_LEAK.includes(l.secao)) return l.secao
+  const t = `${l.spot} ${l.stat}`.toLowerCase()
+  if (l.fase === "preflop") {
+    if (/steal|(sb|bb)/.test(t)) return "Blind war"
+    if (/3bet/.test(t)) return "SRP como 3beter"
+    if (/flat/.test(t)) return "SRP como caller"
+    return "Pré-flop"
+  }
+  if (/3bet pot/.test(t)) return "3bet pot"
+  if (/multiway/.test(t)) return "Multiway e combatividade"
+  if (/c-bet|delayed|vs check-raise/.test(t)) return "SRP como agressor"
+  if (/raise de flop|2nd barrel|x\/r/.test(t)) return "SRP como caller"
+  return "Flop, turn e river"
 }
 
 export function desvio(l: Leak): number {

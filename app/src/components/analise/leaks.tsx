@@ -14,6 +14,8 @@ import {
   novoId,
   capitalizar,
   rotuloMes,
+  SECOES_LEAK,
+  secaoDoLeak,
   type Fase,
   type Leak,
 } from "@/lib/analise"
@@ -51,12 +53,17 @@ function LeaksLista({
     escolhido && meses.includes(escolhido) ? escolhido : (meses[0] ?? "")
   const [fase, setFase] = useState<Fase>("preflop")
   const [todos, setTodos] = useState(false)
+  const [secao, setSecao] = useState<string | null>(null)
+  const daFase = useMemo(
+    () => leaks.filter((l) => l.mes === mes && l.fase === fase),
+    [leaks, mes, fase]
+  )
   const doMes = useMemo(
     () =>
-      leaks
-        .filter((l) => l.mes === mes && l.fase === fase)
+      daFase
+        .filter((l) => !secao || secaoDoLeak(l) === secao)
         .sort((a, b) => Math.abs(desvio(b)) - Math.abs(desvio(a))),
-    [leaks, mes, fase]
+    [daFase, secao]
   )
   const total = (f: Fase) =>
     leaks.filter((l) => l.mes === mes && l.fase === f).length
@@ -117,6 +124,7 @@ function LeaksLista({
         solver,
         contra: "Referência",
         fazer: String(f.get("fazer")).trim(),
+        secao: String(f.get("secao")) || undefined,
       },
     ])
     setEscolhido(mesNovo)
@@ -177,6 +185,17 @@ function LeaksLista({
               <select name="fase" defaultValue={fase} className={CAMPO}>
                 <option value="preflop">Pré-flop</option>
                 <option value="posflop">Pós-flop</option>
+              </select>
+            </label>
+            <label className="grid gap-1 text-sm">
+              Divisão
+              <select name="secao" defaultValue="" className={CAMPO}>
+                <option value="">Automática</option>
+                {SECOES_LEAK.map((sec) => (
+                  <option key={sec} value={sec}>
+                    {sec}
+                  </option>
+                ))}
               </select>
             </label>
             <label className="grid gap-1 text-sm">
@@ -302,6 +321,38 @@ function LeaksLista({
         )}
       </div>
 
+      <div
+        role="group"
+        aria-label="Divisão"
+        className="mb-4 flex flex-wrap gap-2"
+      >
+        {[null, ...SECOES_LEAK].map((sec) => {
+          const n = sec
+            ? daFase.filter((l) => secaoDoLeak(l) === sec).length
+            : daFase.length
+          return (
+            <button
+              key={sec ?? "todas"}
+              type="button"
+              aria-pressed={secao === sec}
+              disabled={n === 0 && secao !== sec}
+              onClick={() => {
+                setSecao(sec)
+                setTodos(false)
+              }}
+              className={cn(
+                "cursor-pointer rounded-full border px-4 py-1.5 text-sm transition-[background-color,border-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.97] disabled:cursor-default disabled:opacity-40",
+                secao === sec
+                  ? "border-foreground bg-card text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              {sec ?? "Todas"} · {n}
+            </button>
+          )
+        })}
+      </div>
+
       {doMes.length === 0 ? (
         <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
           Nenhum leak de {fase === "preflop" ? "pré-flop" : "pós-flop"} em{" "}
@@ -381,7 +432,29 @@ function LeaksLista({
                       ) : (
                         <span />
                       )}
-                      <span>{l.fonte ?? "Registrado por você"}</span>
+                      <span className="flex flex-wrap items-center gap-3">
+                        <select
+                          aria-label={`Divisão de ${l.spot} · ${l.stat}`}
+                          value={secaoDoLeak(l)}
+                          onChange={(e) =>
+                            salvar(
+                              leaks.map((x) =>
+                                x.id === l.id
+                                  ? { ...x, secao: e.target.value }
+                                  : x
+                              )
+                            )
+                          }
+                          className="cursor-pointer rounded-full border bg-transparent px-3 py-1 text-sm"
+                        >
+                          {SECOES_LEAK.map((sec) => (
+                            <option key={sec} value={sec}>
+                              {sec}
+                            </option>
+                          ))}
+                        </select>
+                        {l.fonte ?? "Registrado por você"}
+                      </span>
                       <button
                         type="button"
                         className="cursor-pointer underline-offset-4 hover:text-foreground hover:underline"
