@@ -1494,9 +1494,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica.tsx": {
-    "mtime": 1793594871.0850506,
-    "seen": 1793594904.688103,
-    "ast_hash": "dad2a4b9d0eddd5e015953c372281f23",
+    "mtime": 1793595409.3198957,
+    "seen": 1793595440.121622,
+    "ast_hash": "e7bfe0b59109152cc46a4b5b040f9cc5",
     "semantic_hash": ""
   },
   "app/src/pages/teoria-15.tsx": {
@@ -2394,9 +2394,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/pratica-probe.tsx": {
-    "mtime": 1793594871.1334739,
-    "seen": 1793594904.688103,
-    "ast_hash": "9b52963dd1b16788d91c083f87a4c85a",
+    "mtime": 1793595409.3741727,
+    "seen": 1793595440.121622,
+    "ast_hash": "17e0604618f169cc31f33ef9648e3572",
     "semantic_hash": ""
   },
   "app/src/components/teoria/blocos.tsx": {
