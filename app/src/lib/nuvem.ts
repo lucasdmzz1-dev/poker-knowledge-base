@@ -1,0 +1,206 @@
+// Conta e dados na nuvem (Supabase), por chamadas diretas à API. A chave pública
+// (anon) é feita para ficar no navegador: quem protege os dados é a regra de
+// acesso da tabela (docs/Supabase-Poker-KB.sql).
+const URL_BASE = (import.meta.env.VITE_SUPABASE_URL as string | undefined)
+  ?.trim()
+  .replace(/\/$/, "")
+const CHAVE_PUBLICA = (
+  import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined
+)?.trim()
+
+export const nuvemAtiva = Boolean(URL_BASE && CHAVE_PUBLICA)
+
+const CHAVE_SESSAO = "pkb:sessao"
+const TABELA = "dados_usuario"
+
+export interface Sessao {
+  access_token: string
+  refresh_token: string
+  expires_at: number // segundos desde 1970
+  user: { id: string; email: string }
+}
+
+function cabecalhos(token?: string): Record<string, string> {
+  return {
+    "content-type": "application/json",
+    apikey: CHAVE_PUBLICA ?? "",
+    authorization: `Bearer ${token ?? CHAVE_PUBLICA ?? ""}`,
+  }
+}
+
+function traduzir(corpo: unknown, status: number): string {
+  const o = (
+    typeof corpo === "object" && corpo !== null ? corpo : {}
+  ) as Record<string, unknown>
+  const texto = String(
+    o.msg ?? o.error_description ?? o.message ?? o.error ?? ""
+  ).toLowerCase()
+  if (texto.includes("invalid login")) return "E-mail ou senha incorretos."
+  if (texto.includes("already registered"))
+    return "Esse e-mail já tem conta. Use Entrar."
+  if (texto.includes("at least"))
+    return "A senha precisa de pelo menos 6 letras."
+  if (texto.includes("not confirmed"))
+    return "Confirme o e-mail pelo link que enviamos antes de entrar."
+  if (texto.includes("valid email") || texto.includes("invalid email"))
+    return "Esse e-mail não parece válido."
+  if (texto.includes("rate limit") || status === 429)
+    return "Muitas tentativas. Espere um pouco e tente de novo."
+  return texto
+    ? `Não deu certo: ${texto}`
+    : `Não deu certo (erro ${status}). Tente de novo.`
+}
+
+async function chamar(
+  caminho: string,
+  init: RequestInit & { token?: string } = {}
+): Promise<unknown> {
+  const { token, ...resto } = init
+  let resposta: Response
+  try {
+    resposta = await fetch(`${URL_BASE}${caminho}`, {
+      ...resto,
+      headers: { ...cabecalhos(token), ...(resto.headers ?? {}) },
+    })
+  } catch {
+    throw new Error("Sem conexão com o servidor. Confira a internet.")
+  }
+  const texto = await resposta.text()
+  let corpo: unknown = null
+  try {
+    corpo = texto ? JSON.parse(texto) : null
+  } catch {
+    corpo = null
+  }
+  if (!resposta.ok) throw new Error(traduzir(corpo, resposta.status))
+  return corpo
+}
+
+function guardar(s: Sessao | null) {
+  try {
+    if (s) localStorage.setItem(CHAVE_SESSAO, JSON.stringify(s))
+    else localStorage.removeItem(CHAVE_SESSAO)
+  } catch {
+    /* sem armazenamento: a sessão vale só até recarregar */
+  }
+}
+
+function comoSessao(o: unknown): Sessao | null {
+  if (typeof o !== "object" || o === null) return null
+  const x = o as Record<string, unknown>
+  const u = x.user as Record<string, unknown> | undefined
+  if (
+    typeof x.access_token !== "string" ||
+    typeof x.refresh_token !== "string" ||
+    typeof u?.id !== "string"
+  )
+    return null
+  const expira =
+    typeof x.expires_at === "number"
+      ? x.expires_at
+      : Math.floor(Date.now() / 1000) +
+        (typeof x.expires_in === "number" ? x.expires_in : 3600)
+  return {
+    access_token: x.access_token,
+    refresh_token: x.refresh_token,
+    expires_at: expira,
+    user: { id: u.id, email: typeof u.email === "string" ? u.email : "" },
+  }
+}
+
+function lerSessaoGuardada(): Sessao | null {
+  try {
+    const bruto = localStorage.getItem(CHAVE_SESSAO)
+    return bruto ? comoSessao(JSON.parse(bruto)) : null
+  } catch {
+    return null
+  }
+}
+
+// Devolve a sessão válida (renovando se estiver perto de vencer) ou null.
+export async function sessaoValida(): Promise<Sessao | null> {
+  const s = lerSessaoGuardada()
+  if (!s) return null
+  if (s.expires_at - 60 > Date.now() / 1000) return s
+  try {
+    const nova = comoSessao(
+      await chamar("/auth/v1/token?grant_type=refresh_token", {
+        method: "POST",
+        body: JSON.stringify({ refresh_token: s.refresh_token }),
+      })
+    )
+    guardar(nova)
+    return nova
+  } catch {
+    guardar(null)
+    return null
+  }
+}
+
+export async function entrar(email: string, senha: string): Promise<Sessao> {
+  const s = comoSessao(
+    await chamar("/auth/v1/token?grant_type=password", {
+      method: "POST",
+      body: JSON.stringify({ email, password: senha }),
+    })
+  )
+  if (!s) throw new Error("Resposta inesperada do servidor.")
+  guardar(s)
+  return s
+}
+
+// Devolve a sessão, ou null quando o projeto exige confirmar o e-mail primeiro.
+export async function criarConta(
+  email: string,
+  senha: string
+): Promise<Sessao | null> {
+  const corpo = await chamar("/auth/v1/signup", {
+    method: "POST",
+    body: JSON.stringify({ email, password: senha }),
+  })
+  const s = comoSessao(corpo)
+  guardar(s)
+  return s
+}
+
+export async function sair(): Promise<void> {
+  const s = lerSessaoGuardada()
+  guardar(null)
+  if (!s) return
+  try {
+    await chamar("/auth/v1/logout", { method: "POST", token: s.access_token })
+  } catch {
+    /* já saiu deste aparelho; o token expira sozinho */
+  }
+}
+
+export async function puxar(): Promise<Record<string, unknown>> {
+  const s = await sessaoValida()
+  if (!s) throw new Error("Sessão vencida. Entre de novo.")
+  const linhas = await chamar(`/rest/v1/${TABELA}?select=chave,valor`, {
+    token: s.access_token,
+  })
+  const out: Record<string, unknown> = {}
+  if (Array.isArray(linhas))
+    for (const l of linhas as { chave?: unknown; valor?: unknown }[])
+      if (typeof l.chave === "string") out[l.chave] = l.valor
+  return out
+}
+
+export async function enviar(chave: string, valor: unknown): Promise<void> {
+  const s = await sessaoValida()
+  if (!s) throw new Error("Sessão vencida. Entre de novo.")
+  await chamar(`/rest/v1/${TABELA}?on_conflict=user_id,chave`, {
+    method: "POST",
+    token: s.access_token,
+    headers: { prefer: "resolution=merge-duplicates,return=minimal" },
+    body: JSON.stringify([
+      {
+        user_id: s.user.id,
+        chave,
+        valor,
+        atualizado: new Date().toISOString(),
+      },
+    ]),
+  })
+}

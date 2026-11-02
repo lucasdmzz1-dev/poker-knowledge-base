@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Comparacao, LeaksDoMes, useLeaks } from "@/components/analise/leaks"
+import { MeusDados, PrimeirosPassos } from "@/components/analise/meus-dados"
 import { PainelSemanal } from "@/components/analise/painel"
 import { Secao } from "@/components/analise/secao"
 import { mod15, tipoById, type TipoId } from "@/data/mod15"
@@ -48,6 +49,7 @@ export default function Analise() {
         lead="Escolha o que você quer ver: os leaks do mês, a comparação com o mês anterior, o painel semanal ou o seu treino."
       />
       <div className="mx-auto max-w-[1080px] px-5 pb-24">
+        <PrimeirosPassos aoComecar={() => setAba("leaks")} />
         <div
           role="tablist"
           aria-label="Seções da Análise"
@@ -79,7 +81,13 @@ export default function Analise() {
           id={`painel-${aba}`}
           aria-labelledby={`aba-${aba}`}
         >
-          {aba === "leaks" && <LeaksDoMes leaks={leaks} salvar={salvar} />}
+          {aba === "leaks" && (
+            <LeaksDoMes
+              leaks={leaks}
+              salvar={salvar}
+              abrirPainel={() => setAba("painel")}
+            />
+          )}
           {aba === "comparacao" && <Comparacao leaks={leaks} />}
           {aba === "painel" && <PainelSemanal />}
           {aba === "treino" && (
@@ -160,6 +168,7 @@ export default function Analise() {
             </Secao>
           )}
         </div>
+        <MeusDados />
       </div>
     </main>
   )

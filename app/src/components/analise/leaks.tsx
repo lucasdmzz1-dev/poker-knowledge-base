@@ -2,7 +2,8 @@ import { useMemo, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ComparacaoHud, ExploradorHud } from "@/components/analise/hud"
-import { lerHud } from "@/lib/hud"
+import { lerHud, leaksDasStats } from "@/lib/hud"
+import { LeitorDePrints } from "@/components/analise/leitor"
 import { PrintsDoMes } from "@/components/analise/prints"
 import { Secao, CAMPO } from "@/components/analise/secao"
 import {
@@ -14,9 +15,12 @@ import {
   novoId,
   capitalizar,
   rotuloMes,
+  SECOES_LEAK,
+  secaoDoLeak,
   type Fase,
   type Leak,
 } from "@/lib/analise"
+import { leakNoPainel, levarLeak, tirarLeak } from "@/lib/painel"
 import { writeJSON } from "@/lib/storage"
 import { cn } from "@/lib/utils"
 
@@ -25,6 +29,7 @@ function mesesDe(leaks: Leak[]): string[] {
 }
 
 const VISIVEIS = 6
+const CRITICAS = 3 // os mesmos que levam o selo "Atacar"
 
 export function useLeaks() {
   const [leaks, setLeaks] = useState<Leak[]>(lerLeaks)
@@ -38,27 +43,57 @@ export function useLeaks() {
 function LeaksLista({
   leaks,
   salvar,
+  abrirPainel,
 }: {
   leaks: Leak[]
   salvar: (l: Leak[]) => void
+  abrirPainel?: () => void
 }) {
   const meses = mesesDe(leaks)
   const [escolhido, setEscolhido] = useState<string | null>(null)
   const mes =
     escolhido && meses.includes(escolhido) ? escolhido : (meses[0] ?? "")
-  const [fase, setFase] = useState<Fase>("preflop")
+  const [fase, setFase] = useState<Fase | "todas">("preflop")
   const [todos, setTodos] = useState(false)
-  const doMes = useMemo(
+  const [secao, setSecao] = useState<string | null>(null)
+  const [criticas, setCriticas] = useState(false)
+  const daFase = useMemo(
     () =>
-      leaks
-        .filter((l) => l.mes === mes && l.fase === fase)
-        .sort((a, b) => Math.abs(desvio(b)) - Math.abs(desvio(a))),
+      leaks.filter(
+        (l) => l.mes === mes && (fase === "todas" || l.fase === fase)
+      ),
     [leaks, mes, fase]
   )
-  const total = (f: Fase) =>
-    leaks.filter((l) => l.mes === mes && l.fase === f).length
+  const doMes = useMemo(() => {
+    const ordenados = daFase
+      .filter((l) => !secao || secaoDoLeak(l) === secao)
+      .sort((a, b) => Math.abs(desvio(b)) - Math.abs(desvio(a)))
+    return criticas ? ordenados.slice(0, CRITICAS) : ordenados
+  }, [daFase, secao, criticas])
+  const total = (f: Fase | "todas") =>
+    leaks.filter((l) => l.mes === mes && (f === "todas" || l.fase === f)).length
   const mostrados = todos ? doMes : doMes.slice(0, VISIVEIS)
   const criticos = PONTOS_CRITICOS[mes]
+  const [marcados, setMarcados] = useState<string[]>([])
+  const [versao, setVersao] = useState(0)
+  const noPainel = useMemo(
+    () => new Set(leaks.filter(leakNoPainel).map((l) => l.id)),
+    // versao força reler o painel depois de levar ou tirar leaks
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [leaks, versao]
+  )
+  const selecionados = leaks.filter(
+    (l) => l.mes === mes && marcados.includes(l.id) && !noPainel.has(l.id)
+  )
+  const contar = (f: Fase) => selecionados.filter((l) => l.fase === f).length
+  const [levados, setLevados] = useState(0)
+
+  function levar() {
+    selecionados.forEach(levarLeak)
+    setLevados(selecionados.length)
+    setMarcados([])
+    setVersao((v) => v + 1)
+  }
   const [aberto, setAberto] = useState(false)
   const [erro, setErro] = useState("")
 
@@ -94,10 +129,11 @@ function LeaksLista({
         solver,
         contra: "Referência",
         fazer: String(f.get("fazer")).trim(),
+        secao: String(f.get("secao")) || undefined,
       },
     ])
     setEscolhido(mesNovo)
-    setFase(faseNova)
+    if (fase !== "todas") setFase(faseNova)
     setAberto(false)
     e.currentTarget.reset()
   }
@@ -114,7 +150,11 @@ function LeaksLista({
             <select
               className={cn(CAMPO, "w-auto")}
               value={mes}
-              onChange={(e) => setEscolhido(e.target.value)}
+              onChange={(e) => {
+                setEscolhido(e.target.value)
+                setMarcados([])
+                setLevados(0)
+              }}
             >
               {meses.map((m) => (
                 <option key={m} value={m}>
@@ -147,9 +187,24 @@ function LeaksLista({
             </label>
             <label className="grid gap-1 text-sm">
               Fase
-              <select name="fase" defaultValue={fase} className={CAMPO}>
+              <select
+                name="fase"
+                defaultValue={fase === "todas" ? "preflop" : fase}
+                className={CAMPO}
+              >
                 <option value="preflop">Pré-flop</option>
                 <option value="posflop">Pós-flop</option>
+              </select>
+            </label>
+            <label className="grid gap-1 text-sm">
+              Divisão
+              <select name="secao" defaultValue="" className={CAMPO}>
+                <option value="">Automática</option>
+                {SECOES_LEAK.map((sec) => (
+                  <option key={sec} value={sec}>
+                    {sec}
+                  </option>
+                ))}
               </select>
             </label>
             <label className="grid gap-1 text-sm">
@@ -221,6 +276,7 @@ function LeaksLista({
       <div role="tablist" aria-label="Fase" className="mb-4 flex gap-2">
         {(
           [
+            ["todas", "Todos"],
             ["preflop", "Pré-flop"],
             ["posflop", "Pós-flop"],
           ] as const
@@ -246,10 +302,92 @@ function LeaksLista({
         ))}
       </div>
 
+      <div className="mb-4 flex flex-wrap items-center gap-3 rounded-2xl border bg-card/40 p-3">
+        <Button
+          className="h-10 px-5 font-bold"
+          disabled={selecionados.length === 0}
+          onClick={levar}
+        >
+          Levar selecionados para o painel semanal
+        </Button>
+        <span className="text-sm text-muted-foreground">
+          {selecionados.length === 0
+            ? "Marque os leaks de pré-flop e pós-flop que quer acompanhar por semana."
+            : `${selecionados.length} selecionados · ${contar("preflop")} pré-flop · ${contar("posflop")} pós-flop`}
+        </span>
+        {levados > 0 && (
+          <span className="text-sm text-primary">
+            {levados} {levados === 1 ? "leak levado" : "leaks levados"}.
+            {abrirPainel && (
+              <button
+                type="button"
+                className="ml-2 cursor-pointer underline-offset-4 hover:underline"
+                onClick={abrirPainel}
+              >
+                Abrir o painel
+              </button>
+            )}
+          </span>
+        )}
+      </div>
+
+      <div
+        role="group"
+        aria-label="Divisão"
+        className="mb-4 flex flex-wrap gap-2"
+      >
+        <button
+          type="button"
+          aria-pressed={criticas}
+          onClick={() => {
+            setCriticas((v) => !v)
+            setTodos(false)
+          }}
+          className={cn(
+            "cursor-pointer rounded-full border px-4 py-1.5 text-sm font-bold transition-[background-color,border-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.97]",
+            criticas
+              ? "border-primary bg-primary text-primary-foreground"
+              : "border-primary text-primary hover:bg-primary/10"
+          )}
+        >
+          Mais críticas
+        </button>
+        {[null, ...SECOES_LEAK].map((sec) => {
+          const n = sec
+            ? daFase.filter((l) => secaoDoLeak(l) === sec).length
+            : daFase.length
+          return (
+            <button
+              key={sec ?? "todas"}
+              type="button"
+              aria-pressed={secao === sec}
+              disabled={n === 0 && secao !== sec}
+              onClick={() => {
+                setSecao(sec)
+                setTodos(false)
+              }}
+              className={cn(
+                "cursor-pointer rounded-full border px-4 py-1.5 text-sm transition-[background-color,border-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.97] disabled:cursor-default disabled:opacity-40",
+                secao === sec
+                  ? "border-foreground bg-card text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              {sec ?? "Todas"} · {n}
+            </button>
+          )
+        })}
+      </div>
+
       {doMes.length === 0 ? (
         <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
-          Nenhum leak de {fase === "preflop" ? "pré-flop" : "pós-flop"} em{" "}
-          {rotuloMes(mes) || "este mês"} ainda. Use "Adicionar leak" com os
+          Nenhum leak{" "}
+          {fase === "preflop"
+            ? "de pré-flop "
+            : fase === "posflop"
+              ? "de pós-flop "
+              : ""}
+          em {rotuloMes(mes) || "este mês"} ainda. Use "Adicionar leak" com os
           números do mês.
         </div>
       ) : (
@@ -262,7 +400,23 @@ function LeaksLista({
                 <li key={l.id}>
                   <Card className="rounded-[18px] p-5">
                     <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                      <h3 className="text-lg font-bold">
+                      <h3 className="flex items-center gap-3 text-lg font-bold">
+                        <input
+                          type="checkbox"
+                          aria-label={`Selecionar ${l.spot} · ${l.stat}`}
+                          disabled={noPainel.has(l.id)}
+                          checked={
+                            noPainel.has(l.id) || marcados.includes(l.id)
+                          }
+                          onChange={(e) =>
+                            setMarcados(
+                              e.target.checked
+                                ? [...marcados, l.id]
+                                : marcados.filter((x) => x !== l.id)
+                            )
+                          }
+                          className="size-5 accent-primary"
+                        />
                         {l.spot} · {l.stat}
                         {i < 3 && (
                           <span className="ml-2 rounded-full bg-primary px-2.5 py-0.5 align-middle text-xs font-bold text-primary-foreground">
@@ -289,8 +443,47 @@ function LeaksLista({
                       </p>
                     </div>
                     {l.fazer && <p className="mt-2 max-w-[70ch]">{l.fazer}</p>}
-                    <div className="mt-3 flex items-center justify-between gap-3 text-sm text-muted-foreground">
-                      <span>{l.fonte ?? "Registrado por você"}</span>
+                    <div className="mt-3 flex flex-wrap items-center justify-between gap-3 text-sm text-muted-foreground">
+                      {noPainel.has(l.id) ? (
+                        <span className="flex items-center gap-3">
+                          <span className="text-primary">
+                            No painel semanal
+                          </span>
+                          <button
+                            type="button"
+                            className="cursor-pointer underline-offset-4 hover:text-foreground hover:underline"
+                            onClick={() => {
+                              tirarLeak(l)
+                              setVersao((v) => v + 1)
+                            }}
+                          >
+                            Tirar
+                          </button>
+                        </span>
+                      ) : null}
+                      <span className="flex flex-wrap items-center gap-3">
+                        <select
+                          aria-label={`Divisão de ${l.spot} · ${l.stat}`}
+                          value={secaoDoLeak(l)}
+                          onChange={(e) =>
+                            salvar(
+                              leaks.map((x) =>
+                                x.id === l.id
+                                  ? { ...x, secao: e.target.value }
+                                  : x
+                              )
+                            )
+                          }
+                          className="cursor-pointer rounded-full border bg-transparent px-3 py-1 text-sm"
+                        >
+                          {SECOES_LEAK.map((sec) => (
+                            <option key={sec} value={sec}>
+                              {sec}
+                            </option>
+                          ))}
+                        </select>
+                        {l.fonte ?? "Registrado por você"}
+                      </span>
                       <button
                         type="button"
                         className="cursor-pointer underline-offset-4 hover:text-foreground hover:underline"
@@ -354,9 +547,8 @@ function ComparacaoLeaks({ leaks }: { leaks: Leak[] }) {
         lead="Compara o desvio de cada spot entre dois meses e diz se melhorou, piorou ou ficou igual."
       >
         <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
-          Falta um segundo mês. Quando você adicionar os leaks de outubro, com o
-          mesmo spot e a mesma estatística de setembro, a comparação aparece
-          aqui.
+          Falta um segundo mês. Quando você adicionar os leaks do mês seguinte,
+          com o mesmo spot e a mesma estatística, a comparação aparece aqui.
         </div>
       </Secao>
     )
@@ -490,13 +682,34 @@ function Vista<T extends string>({
 export function LeaksDoMes(props: {
   leaks: Leak[]
   salvar: (l: Leak[]) => void
+  abrirPainel?: () => void
 }) {
   const [vista, setVista] = useState<"leaks" | "stats">("stats")
-  const mesAtual =
-    [...lerHud()]
+  const [versaoHud, setVersaoHud] = useState(0)
+  // versaoHud força reler o HUD depois que a leitura dos prints é aplicada
+  const hud = useMemo(
+    () => lerHud(),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [versaoHud]
+  )
+  const ultimoHud =
+    hud
       .map((m) => m.mes)
       .sort()
       .pop() ?? new Date().toISOString().slice(0, 7)
+  const [mesPrints, setMesPrints] = useState<string | null>(null)
+  const mesAtual = mesPrints || ultimoHud
+  const [comAmarelas, setComAmarelas] = useState(false)
+  const doHud = hud.find((m) => m.mes === mesAtual)
+  const novos = doHud
+    ? leaksDasStats(doHud, comAmarelas).filter(
+        (n) => !props.leaks.some((l) => l.id === n.id)
+      )
+    : []
+  function gerar() {
+    props.salvar([...props.leaks, ...novos])
+    setVista("leaks")
+  }
   return (
     <div>
       <Vista
@@ -515,16 +728,46 @@ export function LeaksDoMes(props: {
             titulo="Prints e stats do mês"
             lead="Coloque aqui os prints do mês. Com eles, as stats do HUD são preenchidas por seção, com cores pela meta. Busque pelo nome, filtre as fora da meta e use a estrela para levar uma stat para a comparação."
           >
+            <label className="mb-4 flex items-center gap-2 text-sm text-muted-foreground">
+              Mês dos prints
+              <input
+                type="month"
+                value={mesAtual}
+                onChange={(e) => setMesPrints(e.target.value)}
+                className={cn(CAMPO, "w-auto")}
+              />
+            </label>
             <PrintsDoMes mes={mesAtual} />
-            <ExploradorHud />
+            <LeitorDePrints
+              mes={mesAtual}
+              aoAplicar={() => setVersaoHud((v) => v + 1)}
+            />
+            <ExploradorHud key={versaoHud} />
           </Secao>
-          <div className="mt-8 flex justify-center">
-            <Button
-              className="px-6 font-bold"
-              onClick={() => setVista("leaks")}
-            >
-              Ver os leaks do mês
-            </Button>
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <label className="flex items-center gap-2 text-sm text-muted-foreground">
+              <input
+                type="checkbox"
+                checked={comAmarelas}
+                onChange={(e) => setComAmarelas(e.target.checked)}
+                className="accent-primary"
+              />
+              Incluir também as stats perto da meta (amarelas)
+            </label>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button
+                className="px-6 font-bold"
+                disabled={novos.length === 0}
+                onClick={gerar}
+              >
+                {novos.length === 0
+                  ? "Nenhuma stat nova fora da meta"
+                  : `Gerar ${novos.length} leaks pelas metas de ${rotuloMes(mesAtual)}`}
+              </Button>
+              <Button variant="outline" onClick={() => setVista("leaks")}>
+                Ver os leaks do mês
+              </Button>
+            </div>
           </div>
         </>
       )}

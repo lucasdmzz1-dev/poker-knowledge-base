@@ -3,9 +3,12 @@ import { createRoot } from "react-dom/client"
 
 import "./index.css"
 import App from "./App.tsx"
+import { Portao } from "@/components/portao"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <Portao>
+      <App />
+    </Portao>
   </StrictMode>
 )
