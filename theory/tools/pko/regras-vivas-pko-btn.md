@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/pko
+  - tipo/ferramenta
+---
+
 # Regras vivas: BTN contra 1 open em PKO (4BET Trainer)
 
 Versão atual: **v3** (27/10/2026, testada em 100 mãos; ver seção 8 para o que mudar na v3.1). Este arquivo é a memória de trabalho do Claude para esse estudo. Atualize-o ao fim de cada sessão.
@@ -77,3 +83,17 @@ Ver `pko-maos-dicionario.md` (colunas, como achar um cenário e o que já está 
 - Configuração dos testes até aqui: **Facing RFI, RNG OFF, Close Decisions** (modo de decisões próximas: muitas mãos marginais). O placar não é comparável com o de um modo comum.
 - Sessões 1 e 2 juntas, segundo o Trainer: 70 mãos, precisão de 84%, 53 PERFEITO, 6 QUASE, 3 IMPRECISO, 0 ERRO e 8 BLUNDER, −0,80bb de EV perdido.
 - Cópia das 50 mãos da v2 no navegador: `claude_pko_hands_s2`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Mesma pasta:** [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]] · [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/tools/pko/retomada-pko|retomada-pko]]
+
+<!-- graphify-links:end -->

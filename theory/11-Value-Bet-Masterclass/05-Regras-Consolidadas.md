@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/11-value-bet-masterclass
+  - tema/value-bet
+  - street/river
+  - tema/transversal
+  - tipo/regras
+---
+
 # Regras Consolidadas – Value Bet Masterclass
 
 > Este documento reúne apenas as regras finais consolidadas durante a masterclass.
@@ -107,3 +116,21 @@ Vem de equity futura real, bloqueia valor, desbloqueia os folds naturais do vil�
 # Regra Principal do Módulo
 
 O size certo é sempre aquele que acompanha a composição real do seu range de valor — nunca o instinto de "board esquisitou, então aposta mais alto" ou "carta alta, então é blank". Antes de escolher o size, pergunte sempre: contra qual grupo de mãos do vilão eu realmente quero apostar, e esse size ataca esse grupo sem perder o que deveria continuar pagando?
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/11-Value-Bet-Masterclass/README|theory/11-Value-Bet-Masterclass]]
+
+**Mesma pasta:** [[theory/11-Value-Bet-Masterclass/11 - VALUE BET GUIDELINE|01-Guideline]] · [[theory/11-Value-Bet-Masterclass/02-VideoAulas|02-VideoAulas]] · [[theory/11-Value-Bet-Masterclass/03-Solver|03-Solver]] · [[theory/11-Value-Bet-Masterclass/04-Exercicios|04-Exercicios]] · [[theory/11-Value-Bet-Masterclass/06-Pendencias|06-Pendencias]] · [[theory/11-Value-Bet-Masterclass/07-Changelog|07-Changelog]] · [[theory/11-Value-Bet-Masterclass/08-Referencias|08-Referencias]] · [[theory/11-Value-Bet-Masterclass/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/12-RETA-FINAL/12 - RETA FINAL GUIDELINE|12-RETA-FINAL · 01-Guideline]]
+
+<!-- graphify-links:end -->

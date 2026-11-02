@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/15-bet-vs-missed
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/bet-vs-missed
+  - tipo/regras
+---
+
 # Regras Consolidadas – Bet vs Missed C-Bet
 
 > Este documento reúne apenas as regras finais consolidadas durante o estudo do módulo.
@@ -35,6 +45,8 @@ Em cada bucket entram mãos de valor e de bluff.
 # Regra 4 — A pior trinca vai sempre em 100%
 
 A exceção é o board ultraconectado high (AKT, QJT, QJ9, KJ9), em que não existe mão em 100%.
+
+Esclarecimento do autor do KB (31/10/2026): a regra vale nos boards que têm bucket de 100% (semi conectado e seco). Nos boards sem esse bucket (conectado high, monotone e dobrado) a trinca vai onde a tabela do board a põe.
 
 ---
 
@@ -155,3 +167,21 @@ Mãos mais fortes nos buckets mais altos. Nenhum board se aposta 100%. Só B25 e
 # Regra Principal do Módulo
 
 Pense em frequências: o bucket mais alto de cada board tem as mãos mais fortes, e o size sai do grupo de mãos que você aposta.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
+
+**Mesma pasta:** [[theory/15-Bet-vs-Missed/15 - BET VS MISSED GUIDELINE|01-Guideline]] · [[theory/15-Bet-vs-Missed/02-VideoAulas|02-VideoAulas]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]] · [[theory/15-Bet-vs-Missed/04-Exercicios|04-Exercicios]] · [[theory/15-Bet-vs-Missed/06-Pendencias|06-Pendencias]] · [[theory/15-Bet-vs-Missed/07-Changelog|07-Changelog]] · [[theory/15-Bet-vs-Missed/08-Referencias|08-Referencias]] · [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/14-Probe-Turn/05-Regras-Consolidadas|14-Probe-Turn · 05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

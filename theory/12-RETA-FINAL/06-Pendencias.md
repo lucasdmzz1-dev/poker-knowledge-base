@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/12-reta-final
+  - tema/reta-final
+  - street/preflop
+  - tema/icm
+  - tipo/pendencias
+---
+
 # Pendências – Reta Final
 
 > Módulo 12 — Poker Knowledge Base
@@ -58,3 +67,17 @@ O Contexto do Guideline, o README e a tabela do Resumo operacional falam em **80
 Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
 
 O `08-Referencias.md` usa: esclarecimentos do autor do KB e correções do instrutor (juntos), solver, aula, exercícios. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. **Resolvida (28/10/2026):** o autor do KB decidiu seguir a ordem geral, com o autor do KB em 1º. Ver `08-Referencias.md` e `09-Decisoes.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/12-RETA-FINAL/README|theory/12-RETA-FINAL]]
+
+**Mesma pasta:** [[theory/12-RETA-FINAL/12 - RETA FINAL GUIDELINE|01-Guideline]] · [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]] · [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]] · [[theory/12-RETA-FINAL/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/12-RETA-FINAL/07-Changelog|07-Changelog]] · [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

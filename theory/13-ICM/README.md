@@ -1,4 +1,15 @@
-# ICM e Risk Premium
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/modulo
+---
+
+# ICM e Risk Premium
+
+**Flashcards:** [[theory/13-ICM/13 - ICM FLASHCARDS|13 - ICM FLASHCARDS]]
 
 ## Módulo 13 — ICM e Risk Premium
 
@@ -90,3 +101,27 @@ Ao finalizar este módulo o jogador deve conseguir:
 # Status
 
 Módulo estruturado e consolidado, com 27 exercícios de conceito. PKO e short stack na bolha serão cobertos em aulas futuras (ver 06-Pendencias.md).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Nesta pasta:**
+
+- [[theory/13-ICM/13 - ICM GUIDELINE|01-Guideline]]
+- [[theory/13-ICM/02-VideoAulas|02-VideoAulas]]
+- [[theory/13-ICM/03-Solver|03-Solver]]
+- [[theory/13-ICM/04-Exercicios|04-Exercicios]]
+- [[theory/13-ICM/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+- [[theory/13-ICM/06-Pendencias|06-Pendencias]]
+- [[theory/13-ICM/07-Changelog|07-Changelog]]
+- [[theory/13-ICM/08-Referencias|08-Referencias]]
+- [[theory/13-ICM/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/10-multiway-pot
+  - spot/multiway
+  - street/flop
+  - street/turn
+  - stack/40bb
+  - tipo/decisoes
+---
+
 # Decisões – Multiway Pot
 
 > Módulo 10 — Poker Knowledge Base
@@ -73,3 +83,17 @@ Pendente: Solver detalhado e Exercícios (ver 06-Pendencias.md).
 - Adicionar resoluções de solver por textura específica.
 - Criar exercícios práticos a partir de mãos reais.
 - Expandir para River e efetivos menores.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/10-MULTIWAY-POT/README|theory/10-MULTIWAY-POT]]
+
+**Mesma pasta:** [[theory/10-MULTIWAY-POT/10 - MULTIWAY POT GUIDELINE|01-Guideline]] · [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]] · [[theory/10-MULTIWAY-POT/03-Solver|03-Solver]] · [[theory/10-MULTIWAY-POT/04-Exercicios|04-Exercicios]] · [[theory/10-MULTIWAY-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/10-MULTIWAY-POT/06-Pendencias|06-Pendencias]] · [[theory/10-MULTIWAY-POT/07-Changelog|07-Changelog]] · [[theory/10-MULTIWAY-POT/08-Referencias|08-Referencias]]
+
+<!-- graphify-links:end -->

@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/14-probe-turn
+  - spot/srp
+  - posicao/oop
+  - street/turn
+  - linha/probe
+  - stack/40bb
+  - tipo/videoaulas
+---
+
 # VideoAulas — Probe Turn
 
 ## Módulo 14 — Probe Turn
@@ -117,3 +128,17 @@ O instrutor fecha a aula com este resumo:
 Um aluno pergunta como adaptar ao field, já que os jogadores bons dão check atrás com TP. O instrutor responde que a construção não muda muito, porque está ligada ao size. Contra jogadores mais fracos, assuma menos TP no check atrás. Nos buy-ins mais altos (US$ 250) boa parte já faz check atrás com TP, e nos mais baixos (US$ 70 e 100) boa parte não faz.
 
 Sobre testar vários sizes, o instrutor explica que o GTO Wizard permite cadastrar muitos sizes e dá o size médio da estratégia. Ele usa essa referência para ter uma estratégia de size único, que é praticável.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/14-Probe-Turn/README|theory/14-Probe-Turn]]
+
+**Mesma pasta:** [[theory/14-Probe-Turn/14 - PROBE TURN GUIDELINE|01-Guideline]] · [[theory/14-Probe-Turn/03-Solver|03-Solver]] · [[theory/14-Probe-Turn/04-Exercicios|04-Exercicios]] · [[theory/14-Probe-Turn/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/14-Probe-Turn/06-Pendencias|06-Pendencias]] · [[theory/14-Probe-Turn/07-Changelog|07-Changelog]] · [[theory/14-Probe-Turn/08-Referencias|08-Referencias]] · [[theory/14-Probe-Turn/09-Decisoes|09-Decisoes]] · [[theory/14-Probe-Turn/10-Como-Jogar|10-Como-Jogar]]
+
+<!-- graphify-links:end -->

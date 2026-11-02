@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/videoaulas
+---
+
 # VideoAulas — PKO
 
 ## Módulo 16 — PKO
@@ -53,3 +63,17 @@ Prints do GTO Wizard (ChipEV, 40bb, contra o open da posição à direita): HJ c
 - As notas definem as variáveis e as hipóteses.
 - As árvores medem a direção e o tamanho dos efeitos e a ordem de entrada das mãos.
 - O Trainer testa se a regra funciona fora das árvores usadas para montá-la.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/16-PKO/README|theory/16-PKO]]
+
+**Mesma pasta:** [[theory/16-PKO/16 - PKO GUIDELINE|01-Guideline]] · [[theory/16-PKO/03-Solver|03-Solver]] · [[theory/16-PKO/04-Exercicios|04-Exercicios]] · [[theory/16-PKO/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/16-PKO/06-Pendencias|06-Pendencias]] · [[theory/16-PKO/07-Changelog|07-Changelog]] · [[theory/16-PKO/08-Referencias|08-Referencias]] · [[theory/16-PKO/09-Decisoes|09-Decisoes]] · [[theory/16-PKO/CLAUDE|CLAUDE]]
+
+<!-- graphify-links:end -->

@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/pko
+  - tipo/ferramenta
+---
+
 # Dicionário dos dados das árvores (`dados/pko-arvores-btn.json`)
 
 Origem: 4BET Trainer, aba Solver (HRC Library), lido pelo Chrome em 27/10/2026. Filtros: tipo Bounty, fator progressivo 50%. Cada registro é um **nó**: uma árvore com o BTN diante de um open de uma posição.
@@ -30,3 +36,17 @@ Cobertura: 208 nós, 52 árvores únicas, 41 nós com a grade de 169 mãos. Fiel
 - **Nós com problema:** o #8954 (opener HJ) e o #7144 (opener CO) saíram sem RP e foram excluídos das análises.
 - **Etiqueta de fase:** o campo `term` não é fase. A fase vem de `pct`, `left` e `paid`.
 - **Coleta antiga (`claude_pko_btn`):** tinha etiqueta de fase inválida e árvores repetidas. Não é incluída.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Mesma pasta:** [[theory/tools/pko/pko-conhecimento|pko-conhecimento]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/retomada-pko|retomada-pko]]
+
+<!-- graphify-links:end -->

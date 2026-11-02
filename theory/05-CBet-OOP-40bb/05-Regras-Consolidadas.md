@@ -1,3 +1,16 @@
+---
+tags:
+  - modulo/05-cbet-oop-40bb
+  - spot/srp
+  - posicao/oop
+  - street/flop
+  - street/turn
+  - linha/cbet
+  - linha/second-barrel
+  - stack/40bb
+  - tipo/regras
+---
+
 # Regras Consolidadas — C-Bet OOP
 
 ## Módulo — SRP OOP C-Bet Flop
@@ -407,3 +420,21 @@ Porém, a divisão por grupos permite uma estratégia mais prática:
 - Cada grupo cumpre uma função específica.
 - Facilita execução humana.
 - Mantém a frequência próxima da solução do solver.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/05-CBet-OOP-40bb/README|theory/05-CBet-OOP-40bb]]
+
+**Mesma pasta:** [[theory/05-CBet-OOP-40bb/05 - CBET OOP 40BB GUIDELINE|01-Guideline]] · [[theory/05-CBet-OOP-40bb/02-VideoAulas|02-VideoAulas]] · [[theory/05-CBet-OOP-40bb/03-Solver|03-Solver]] · [[theory/05-CBet-OOP-40bb/04-Exercicios|04-Exercicios]] · [[theory/05-CBet-OOP-40bb/06-Pendencias|06-Pendencias]] · [[theory/05-CBet-OOP-40bb/07-Changelog|07-Changelog]] · [[theory/05-CBet-OOP-40bb/08-Referencias|08-Referencias]] · [[theory/05-CBet-OOP-40bb/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/06-XR-SHORT/05-Regras-Consolidadas|06-XR-SHORT · 05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

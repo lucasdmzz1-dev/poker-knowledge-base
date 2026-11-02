@@ -1,3 +1,15 @@
+---
+tags:
+  - modulo/03-second-barrel-ip
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - street/turn
+  - linha/cbet
+  - linha/second-barrel
+  - tipo/pendencias
+---
+
 # Pendências – C-Bet IP + Second Barrel
 
 > Módulo de estudo Poker Knowledge Base
@@ -141,3 +153,21 @@ Quando novos conteúdos forem adicionados:
 2. Validar a informação.
 3. Atualizar Regras Consolidadas se necessário.
 4. Registrar no Changelog.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/03-Second-Barrel-IP/03 - SECOND BARREL IP GUIDELINE|theory/03-Second-Barrel-IP]]
+
+**Mesma pasta:** [[theory/03-Second-Barrel-IP/02-VideoAulas|02-VideoAulas]] · [[theory/03-Second-Barrel-IP/03-Solver|03-Solver]] · [[theory/03-Second-Barrel-IP/04-Exercicios|04-Exercicios]] · [[theory/03-Second-Barrel-IP/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/03-Second-Barrel-IP/07-Changelog|07-Changelog]] · [[theory/03-Second-Barrel-IP/08-Referencias|08-Referencias]] · [[theory/03-Second-Barrel-IP/09-Decisoes|09-Decisoes]] · [[theory/03-Second-Barrel-IP/README|README]]
+
+**Outros módulos:**
+
+- [[theory/04-Third-Barrel-e-vs-Third-Barrel/04 - THIRD BARREL GUIDELINE|04-Third-Barrel-e-vs-Third-Barrel · 01-Guideline]]
+
+<!-- graphify-links:end -->

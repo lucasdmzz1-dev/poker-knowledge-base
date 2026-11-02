@@ -1,4 +1,15 @@
-# Reta Final
+---
+tags:
+  - modulo/12-reta-final
+  - tema/reta-final
+  - street/preflop
+  - tema/icm
+  - tipo/modulo
+---
+
+# Reta Final
+
+**Flashcards:** [[theory/12-RETA-FINAL/12 - RETA FINAL FLASHCARDS|12 - RETA FINAL FLASHCARDS]]
 
 ## Módulo 12 — Reta Final
 
@@ -126,3 +137,27 @@ Ao finalizar este módulo o jogador deve conseguir:
 # Status
 
 Módulo estruturado e consolidado, com 50 exercícios. Solver detalhado pendente (ver 06-Pendencias.md).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Nesta pasta:**
+
+- [[theory/12-RETA-FINAL/12 - RETA FINAL GUIDELINE|01-Guideline]]
+- [[theory/12-RETA-FINAL/02-VideoAulas|02-VideoAulas]]
+- [[theory/12-RETA-FINAL/03-Solver|03-Solver]]
+- [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]]
+- [[theory/12-RETA-FINAL/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+- [[theory/12-RETA-FINAL/06-Pendencias|06-Pendencias]]
+- [[theory/12-RETA-FINAL/07-Changelog|07-Changelog]]
+- [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]]
+- [[theory/12-RETA-FINAL/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

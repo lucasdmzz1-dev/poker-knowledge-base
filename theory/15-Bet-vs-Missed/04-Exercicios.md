@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/15-bet-vs-missed
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/bet-vs-missed
+  - tipo/exercicios
+---
+
 # Exercícios — Bet vs Missed C-Bet
 
 ## Módulo 15 — Bet vs Missed C-Bet
@@ -137,13 +147,13 @@ Em qual bucket vai a pior trinca?
 a) 75%, para proteger o range de check
 b) 50%, para induzir a aposta do vilão
 c) 100%, em qualquer board sem exceção
-d) 100%, menos no board ultraconectado high
+d) 100%, nos boards que têm bucket de 100%
 
 **Correção**
 
-Resposta: d) 100%, menos no board ultraconectado high
+Resposta: d) 100%, nos boards que têm bucket de 100%
 
-A pior trinca vai sempre em 100%. A exceção é o board ultraconectado high (AKT, QJT, QJ9, KJ9), onde não existe mão em 100%.
+A pior trinca vai em 100% nos boards que têm esse bucket (semi conectado e seco). No conectado high (AKT, QJT, QJ9, KJ9), no monotone e no dobrado não existe mão em 100%, então a trinca vai onde a tabela do board a põe. Esclarecimento do autor do KB (31/10/2026).
 
 **Regra:** Regra 4
 
@@ -835,3 +845,17 @@ Se a mão faz parte do topo do seu range de check no turn, ela sempre aposta o r
 **Regra:** Regra 22
 
 ---
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
+
+**Mesma pasta:** [[theory/15-Bet-vs-Missed/15 - BET VS MISSED GUIDELINE|01-Guideline]] · [[theory/15-Bet-vs-Missed/02-VideoAulas|02-VideoAulas]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]] · [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/15-Bet-vs-Missed/06-Pendencias|06-Pendencias]] · [[theory/15-Bet-vs-Missed/07-Changelog|07-Changelog]] · [[theory/15-Bet-vs-Missed/08-Referencias|08-Referencias]] · [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

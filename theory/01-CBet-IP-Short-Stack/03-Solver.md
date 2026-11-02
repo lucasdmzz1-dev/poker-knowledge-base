@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/01-cbet-ip-short-stack
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/short
+  - tipo/solver
+---
+
 # Solver – C-Bet IP Short Stack
 
 > Este documento registra apenas as conclusões obtidas através do Solver utilizadas na construção da estratégia.
@@ -117,3 +128,22 @@ E sim construir uma estratégia:
 - com mínima perda de EV.
 
 Essa é a filosofia utilizada durante todo o módulo.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/01-CBet-IP-Short-Stack/README|theory/01-CBet-IP-Short-Stack]]
+
+**Mesma pasta:** [[theory/01-CBet-IP-Short-Stack/01 - CBET IP SHORT GUIDELINE|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]] · [[theory/01-CBet-IP-Short-Stack/04-Exercicios|04-Exercicios]] · [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/01-CBet-IP-Short-Stack/06-Pendencias|06-Pendencias]] · [[theory/01-CBet-IP-Short-Stack/07-Changelog|07-Changelog]] · [[theory/01-CBet-IP-Short-Stack/08-Referencias|08-Referencias]] · [[theory/01-CBet-IP-Short-Stack/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[docs/00-Architecture/KB-003-Module-Template|00-Architecture/KB-003-Module-Template]]
+- [[theory/02-CBet-IP-40bb/03-Solver|02-CBet-IP-40bb · 03-Solver]]
+
+<!-- graphify-links:end -->

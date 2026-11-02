@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/12-reta-final
+  - tema/reta-final
+  - street/preflop
+  - tema/icm
+  - tipo/videoaulas
+---
+
 # VideoAulas — Reta Final
 
 ## Módulo 12 — Reta Final
@@ -92,3 +101,17 @@ Spots de blind war e de 3-handed com diferença de stacks. No BTN o range de ope
 # Fechamento da Aula
 
 O instrutor volta ao ponto de partida: o stack ditando a estratégia, a mão certa para executar cada oportunidade, e o shove vs open como a ferramenta que a turma mais não pode falhar. Para fixar, ele recomenda drill nos ranges e entender por que cada mão vai, em vez de decorar.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/12-RETA-FINAL/README|theory/12-RETA-FINAL]]
+
+**Mesma pasta:** [[theory/12-RETA-FINAL/12 - RETA FINAL GUIDELINE|01-Guideline]] · [[theory/12-RETA-FINAL/03-Solver|03-Solver]] · [[theory/12-RETA-FINAL/04-Exercicios|04-Exercicios]] · [[theory/12-RETA-FINAL/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/12-RETA-FINAL/06-Pendencias|06-Pendencias]] · [[theory/12-RETA-FINAL/07-Changelog|07-Changelog]] · [[theory/12-RETA-FINAL/08-Referencias|08-Referencias]] · [[theory/12-RETA-FINAL/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

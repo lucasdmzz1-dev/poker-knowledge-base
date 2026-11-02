@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/01-cbet-ip-short-stack
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/cbet
+  - stack/short
+  - tipo/exercicios
+---
+
 # Exercícios – C-Bet IP Short Stack
 
 > Este documento reúne os exercícios utilizados durante o estudo do módulo.
@@ -266,3 +277,22 @@ Quais mãos entram no check?
 No Short Stack:
 
 Ver o Turn frequentemente possui valor superior a apostar automaticamente.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/01-CBet-IP-Short-Stack/README|theory/01-CBet-IP-Short-Stack]]
+
+**Mesma pasta:** [[theory/01-CBet-IP-Short-Stack/01 - CBET IP SHORT GUIDELINE|01-Guideline]] · [[theory/01-CBet-IP-Short-Stack/02-VideoAulas|02-VideoAulas]] · [[theory/01-CBet-IP-Short-Stack/03-Solver|03-Solver]] · [[theory/01-CBet-IP-Short-Stack/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/01-CBet-IP-Short-Stack/06-Pendencias|06-Pendencias]] · [[theory/01-CBet-IP-Short-Stack/07-Changelog|07-Changelog]] · [[theory/01-CBet-IP-Short-Stack/08-Referencias|08-Referencias]] · [[theory/01-CBet-IP-Short-Stack/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[docs/00-Architecture/KB-002-Domain-Model|00-Architecture/KB-002-Domain-Model]]
+- [[theory/02-CBet-IP-40bb/04-Exercicios|02-CBet-IP-40bb · 04-Exercicios]]
+
+<!-- graphify-links:end -->

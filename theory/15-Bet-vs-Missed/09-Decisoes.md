@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/15-bet-vs-missed
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/bet-vs-missed
+  - tipo/decisoes
+---
+
 # Decisões – Bet vs Missed C-Bet
 
 > Módulo 15 — Poker Knowledge Base
@@ -65,6 +75,29 @@ Em 28/10/2026, o autor do KB decidiu padronizar a ordem de prioridade das fontes
 
 ---
 
+# Decisão 10 — Ficha de padrões e esclarecimentos do autor (31/10/2026)
+
+Foi criada a ficha `12-Padroes.md`, com o fluxo de classificação do board e os boards de referência. O autor do KB esclareceu:
+
+- **A-K-2 é semi conectado**, e os boards secos são só Q-2-3, K-5-3, K-7-4 e A-7-2 (uma carta alta e duas baixas desconectadas).
+- A classificação entre seco, semi conectado e conectado high depende da **interação do range do opener** com o board.
+- No dobrado, o que decide entre seco e carregado é **quanto a terceira carta se conecta com o par** (K-K-J carregado, K-K-2 seco).
+- O **top pair forte, médio e fraco é relativo ao range que chega no spot**, e as mãos que vão para 3bet pré saem da conta.
+- A **pior trinca em 100%** vale nos boards que têm bucket de 100% (semi conectado e seco). Onde não existe esse bucket, a trinca vai onde a tabela do board a põe.
+
+---
+
+Complemento de 01/11/2026 (autor do KB):
+
+- **Quanto mais alto o board, mais conectado**, e quanto mais possibilidades de gutshot e duas pontas, mais conectado também. 9-6-2 é semi conectado e T-6-2 é seco, por ter um espaço mais amplo.
+- **Boards baixos conectados** (7-6-5 e 6-5-4) entram no semi conectado. Os mais baixos e com mais gaps entram no seco.
+- **Dobrado carregado** é quando a terceira carta forma sequência e flush draw com o par.
+- O **range base do top pair** é o range com que o autor paga pré-flop em cada posição.
+- No K-9-2, os melhores kickers do top pair são KQ e KJ, e o pior pode ser o K8s, conforme a posição.
+- Na criação de exercícios, usar só boards com certeza de classificação.
+
+---
+
 # Estado Atual
 
 Módulo estruturado com:
@@ -81,3 +114,19 @@ Módulo estruturado com:
 - Decisões.
 
 Pendente: ver 06-Pendencias.md.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
+
+**Mesma pasta:** [[theory/15-Bet-vs-Missed/15 - BET VS MISSED GUIDELINE|01-Guideline]] · [[theory/15-Bet-vs-Missed/02-VideoAulas|02-VideoAulas]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]] · [[theory/15-Bet-vs-Missed/04-Exercicios|04-Exercicios]] · [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/15-Bet-vs-Missed/06-Pendencias|06-Pendencias]] · [[theory/15-Bet-vs-Missed/07-Changelog|07-Changelog]] · [[theory/15-Bet-vs-Missed/08-Referencias|08-Referencias]]
+
+**Módulos citados no texto:** [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]]
+
+<!-- graphify-links:end -->

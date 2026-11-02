@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/10-multiway-pot
+  - spot/multiway
+  - street/flop
+  - street/turn
+  - stack/40bb
+  - tipo/solver
+---
+
 # Solver — Multiway Pot
 
 ## Módulo 10 — Multiway Pot
@@ -28,3 +38,17 @@ A ferramenta usada para validar este módulo foi o GTOWizard, na função 3-way 
 - Frequências exatas por textura específica (A-high, Broadway, Low, Monotone, Pareado).
 - Distribuição completa de combos por bucket.
 - Validação em efetivos de 20bb e abaixo.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/10-MULTIWAY-POT/README|theory/10-MULTIWAY-POT]]
+
+**Mesma pasta:** [[theory/10-MULTIWAY-POT/10 - MULTIWAY POT GUIDELINE|01-Guideline]] · [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]] · [[theory/10-MULTIWAY-POT/04-Exercicios|04-Exercicios]] · [[theory/10-MULTIWAY-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/10-MULTIWAY-POT/06-Pendencias|06-Pendencias]] · [[theory/10-MULTIWAY-POT/07-Changelog|07-Changelog]] · [[theory/10-MULTIWAY-POT/08-Referencias|08-Referencias]] · [[theory/10-MULTIWAY-POT/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

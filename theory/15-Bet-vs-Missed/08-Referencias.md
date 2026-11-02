@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/15-bet-vs-missed
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/bet-vs-missed
+  - tipo/referencias
+---
+
 # Referências — Bet vs Missed C-Bet
 
 ---
@@ -62,3 +72,23 @@ Como as fontes deste módulo entram nela:
 # Regra
 
 Não adicionar conhecimento externo ao módulo. O que veio de interpretação ficou marcado como inferência.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
+
+**Mesma pasta:** [[theory/15-Bet-vs-Missed/15 - BET VS MISSED GUIDELINE|01-Guideline]] · [[theory/15-Bet-vs-Missed/02-VideoAulas|02-VideoAulas]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]] · [[theory/15-Bet-vs-Missed/04-Exercicios|04-Exercicios]] · [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/15-Bet-vs-Missed/06-Pendencias|06-Pendencias]] · [[theory/15-Bet-vs-Missed/07-Changelog|07-Changelog]] · [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
+
+**Módulos citados no texto:** [[theory/02-CBet-IP-40bb/README|02-CBet-IP-40bb]]
+
+**Outros módulos:**
+
+- [[theory/16-PKO/08-Referencias|16-PKO · 08-Referencias]]
+
+<!-- graphify-links:end -->

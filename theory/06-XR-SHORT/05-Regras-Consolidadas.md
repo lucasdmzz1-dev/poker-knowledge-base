@@ -1,3 +1,14 @@
+---
+tags:
+  - modulo/06-xr-short
+  - spot/srp
+  - posicao/oop
+  - street/flop
+  - linha/check-raise
+  - stack/short
+  - tipo/regras
+---
+
 # Regras Consolidadas — XR Short Stack
 
 ## Módulo 06 — XR Short Stack
@@ -272,3 +283,21 @@ A pergunta não é:
 A pergunta é:
 
 "Qual função ela exerce no range?"
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/06-XR-SHORT/README|theory/06-XR-SHORT]]
+
+**Mesma pasta:** [[theory/06-XR-SHORT/06 - XR SHORT GUIDELINE|01-Guideline]] · [[theory/06-XR-SHORT/02-VideoAulas|02-VideoAulas]] · [[theory/06-XR-SHORT/03-Solver|03-Solver]] · [[theory/06-XR-SHORT/04-Exercicios|04-Exercicios]] · [[theory/06-XR-SHORT/06-Pendencias|06-Pendencias]] · [[theory/06-XR-SHORT/07-Changelog|07-Changelog]] · [[theory/06-XR-SHORT/08-Referencias|08-Referencias]] · [[theory/06-XR-SHORT/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/05-CBet-OOP-40bb/05-Regras-Consolidadas|05-CBet-OOP-40bb · 05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->

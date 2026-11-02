@@ -1,4 +1,19 @@
-# 3BET POT — ARQUITETURA DO MÓDULO
+---
+tags:
+  - modulo/08-3bet-pot
+  - spot/3bp
+  - posicao/ip
+  - posicao/oop
+  - street/flop
+  - street/turn
+  - stack/short
+  - stack/deep
+  - tipo/modulo
+---
+
+# 3BET POT — ARQUITETURA DO MÓDULO
+
+**Flashcards:** [[theory/08-3BET-POT/08 - 3BET POT FLASHCARDS|08 - 3BET POT FLASHCARDS]]
 
 
 ## Estrutura
@@ -234,3 +249,27 @@ Em andamento:
 - Solver;
 - Exercícios;
 - Exemplos finais.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Nesta pasta:**
+
+- [[theory/08-3BET-POT/08 - 3BET POT GUIDELINE|01-Guideline]]
+- [[theory/08-3BET-POT/02-VideoAulas|02-VideoAulas]]
+- [[theory/08-3BET-POT/03-Solver|03-Solver]]
+- [[theory/08-3BET-POT/04-Exercicios|04-Exercicios]]
+- [[theory/08-3BET-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+- [[theory/08-3BET-POT/06-Pendencias|06-Pendencias]]
+- [[theory/08-3BET-POT/07-Changelog|07-Changelog]]
+- [[theory/08-3BET-POT/08-Referencias|08-Referencias]]
+- [[theory/08-3BET-POT/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

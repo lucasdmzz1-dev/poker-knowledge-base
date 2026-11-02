@@ -1,3 +1,9 @@
+---
+tags:
+  - tema/pko
+  - tipo/ferramenta
+---
+
 # Notas de PKO (fornecidas pelo usuário) e como entram no modelo
 
 ## 1. Valor do KO inicial por fase (PKO 50%), em fração do stack inicial (SI)
@@ -108,3 +114,17 @@ Ordem de entrada das mãos (terços da frequência que continua: ~24%, ~29%, ~41
 - Só nos ranges mais largos: K2s, Q6s a Q2s, J6s a J4s, T6s, K9o, Q9o, J9o, T9o, 96s, 95s, 85s, 74s, 53s, 43s e Ax offsuit de A8o a A4o.
 
 Cuidados: nós com hero curto têm all-in na grade (cor diferente), por isso 10 grades foram descartadas; os totais (fold e call) vêm do resumo do site e são confiáveis.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Mesma pasta:** [[theory/tools/pko/pko-arvores-dicionario|pko-arvores-dicionario]] · [[theory/tools/pko/pko-maos-dicionario|pko-maos-dicionario]] · [[theory/tools/pko/pko-solver-playbook|pko-solver-playbook]] · [[theory/tools/pko/regras-vivas-pko-btn|regras-vivas-pko-btn]] · [[theory/tools/pko/retomada-pko|retomada-pko]]
+
+<!-- graphify-links:end -->

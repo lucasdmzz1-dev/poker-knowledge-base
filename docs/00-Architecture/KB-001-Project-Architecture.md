@@ -1,3 +1,8 @@
+---
+tags:
+  - tipo/arquitetura
+---
+
 # KB-001 — Project Architecture
 
 **Version:** 1.0  
@@ -451,3 +456,21 @@ Knowledge survives time.
 > We are not documenting poker.
 
 > We are modeling poker knowledge.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[README|Início]]
+
+**Mesma pasta:** [[docs/00-Architecture/KB-000-Architecture|KB-000-Architecture]] · [[docs/00-Architecture/KB-002-Domain-Model|KB-002-Domain-Model]] · [[docs/00-Architecture/KB-003-Module-Template|KB-003-Module-Template]]
+
+**Outros módulos:**
+
+- [[theory/01-CBet-IP-Short-Stack/09-Decisoes|01-CBet-IP-Short-Stack · 09-Decisoes]]
+
+<!-- graphify-links:end -->

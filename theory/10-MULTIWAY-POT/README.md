@@ -1,4 +1,16 @@
-# Multiway Pot
+---
+tags:
+  - modulo/10-multiway-pot
+  - spot/multiway
+  - street/flop
+  - street/turn
+  - stack/40bb
+  - tipo/modulo
+---
+
+# Multiway Pot
+
+**Flashcards:** [[theory/10-MULTIWAY-POT/10 - MULTIWAY POT FLASHCARDS|10 - MULTIWAY POT FLASHCARDS]]
 
 ## Módulo 10 — Multiway Pot
 
@@ -95,3 +107,27 @@ Ao finalizar este módulo o jogador deve conseguir:
 # Status
 
 🚧 Em documentação — primeira passada baseada na aula prática. Divisão fina de combos, Solver detalhado e exercícios ainda pendentes.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/README|theory]]
+
+**Nesta pasta:**
+
+- [[theory/10-MULTIWAY-POT/10 - MULTIWAY POT GUIDELINE|01-Guideline]]
+- [[theory/10-MULTIWAY-POT/02-VideoAulas|02-VideoAulas]]
+- [[theory/10-MULTIWAY-POT/03-Solver|03-Solver]]
+- [[theory/10-MULTIWAY-POT/04-Exercicios|04-Exercicios]]
+- [[theory/10-MULTIWAY-POT/05-Regras-Consolidadas|05-Regras-Consolidadas]]
+- [[theory/10-MULTIWAY-POT/06-Pendencias|06-Pendencias]]
+- [[theory/10-MULTIWAY-POT/07-Changelog|07-Changelog]]
+- [[theory/10-MULTIWAY-POT/08-Referencias|08-Referencias]]
+- [[theory/10-MULTIWAY-POT/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

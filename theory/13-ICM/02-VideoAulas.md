@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/videoaulas
+---
+
 # VideoAulas — ICM e Risk Premium
 
 ## Módulo 13 — ICM e Risk Premium
@@ -122,3 +131,17 @@ Com o SB cobrindo o BB, o limp quase desaparece com 16% left (de 44,4% para 2,1%
 # Fechamento da Aula
 
 O instrutor volta à ideia de que a teoria é a base, e que é preciso entendê-la antes de desviar contra um adversário específico. Ele avisa que há ainda assuntos para outras aulas, como o PKO e o short stack na bolha.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/13-ICM/README|theory/13-ICM]]
+
+**Mesma pasta:** [[theory/13-ICM/13 - ICM GUIDELINE|01-Guideline]] · [[theory/13-ICM/03-Solver|03-Solver]] · [[theory/13-ICM/04-Exercicios|04-Exercicios]] · [[theory/13-ICM/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/07-Changelog|07-Changelog]] · [[theory/13-ICM/08-Referencias|08-Referencias]] · [[theory/13-ICM/09-Decisoes|09-Decisoes]]
+
+<!-- graphify-links:end -->

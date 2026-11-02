@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/16-pko
+  - tema/pko
+  - street/preflop
+  - posicao/ip
+  - tema/icm
+  - tipo/pendencias
+---
+
 # Pendências – PKO
 
 > Módulo 16 — Poker Knowledge Base
@@ -107,3 +117,17 @@ Atualizar os arquivos para a v1.2 e explicar a diferença de 203 para 208 nós (
 Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
 
 O `08-Referencias.md` usa: esclarecimentos do autor do KB, notas do usuário, árvores do Trainer, testes no Trainer. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. **Resolvida (28/10/2026):** o autor do KB decidiu seguir a ordem geral, com o autor do KB em 1º. Ver `08-Referencias.md` e `09-Decisoes.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/16-PKO/README|theory/16-PKO]]
+
+**Mesma pasta:** [[theory/16-PKO/16 - PKO GUIDELINE|01-Guideline]] · [[theory/16-PKO/02-VideoAulas|02-VideoAulas]] · [[theory/16-PKO/03-Solver|03-Solver]] · [[theory/16-PKO/04-Exercicios|04-Exercicios]] · [[theory/16-PKO/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/16-PKO/07-Changelog|07-Changelog]] · [[theory/16-PKO/08-Referencias|08-Referencias]] · [[theory/16-PKO/09-Decisoes|09-Decisoes]] · [[theory/16-PKO/CLAUDE|CLAUDE]]
+
+<!-- graphify-links:end -->

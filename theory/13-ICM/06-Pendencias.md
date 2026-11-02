@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/pendencias
+---
+
 # Pendências – ICM e Risk Premium
 
 > Módulo 13 — Poker Knowledge Base
@@ -74,3 +83,19 @@ Quando houver nova aula ou correção do instrutor, atualizar:
 Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026).
 
 O `08-Referencias.md` usa: esclarecimentos do autor do KB, solver (números lidos nos frames), aula, anotações do instrutor, exercícios. A ordem geral do `theory/CLAUDE.md` é: correção do instrutor, solver, videoaula, guideline, exercícios. **Resolvida (28/10/2026):** o autor do KB decidiu seguir a ordem geral, com o autor do KB em 1º. Ver `08-Referencias.md` e `09-Decisoes.md`.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/13-ICM/README|theory/13-ICM]]
+
+**Mesma pasta:** [[theory/13-ICM/13 - ICM GUIDELINE|01-Guideline]] · [[theory/13-ICM/02-VideoAulas|02-VideoAulas]] · [[theory/13-ICM/03-Solver|03-Solver]] · [[theory/13-ICM/04-Exercicios|04-Exercicios]] · [[theory/13-ICM/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/13-ICM/07-Changelog|07-Changelog]] · [[theory/13-ICM/08-Referencias|08-Referencias]] · [[theory/13-ICM/09-Decisoes|09-Decisoes]]
+
+**Módulos citados no texto:** [[theory/05-CBet-OOP-40bb/README|05-CBet-OOP-40bb]] · [[theory/12-RETA-FINAL/README|12-RETA-FINAL]]
+
+<!-- graphify-links:end -->

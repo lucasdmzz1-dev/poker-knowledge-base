@@ -1,3 +1,13 @@
+---
+tags:
+  - modulo/15-bet-vs-missed
+  - spot/srp
+  - posicao/ip
+  - street/flop
+  - linha/bet-vs-missed
+  - tipo/pendencias
+---
+
 # Pendências – Bet vs Missed C-Bet
 
 > Módulo 15 — Poker Knowledge Base
@@ -46,3 +56,21 @@ Conflito registrado na leitura completa da teoria (MAIN CHAT TEORIA, 28/10/2026)
 - As tabelas do guideline em imagem dizem outra coisa: no **monotone** (A♠ 9♠ 8♠) a trinca vai em 75%, e no **dobrado** (K♠ K♥ 7♣) fulls e trincas vão em 75% no seco (50% no carregado). O próprio `03-Solver.md` (Padrões) e o Exercício 06 dizem que conectado high, monotone e dobrado não têm bucket de 100%.
 
 Pela Decisão 3 a imagem prevalece sobre a fala, então as tabelas devem estar certas e o texto da Regra 4 incompleto. **Inferência:** a regra da pior trinca em 100% vale só nos boards que têm bucket de 100% (semi conectado e seco). Confirmar com o coach antes de corrigir a Regra 4 e o Exercício 05.
+
+**Resolvida em 31/10/2026 (esclarecimento do autor do KB):** a inferência está certa. Nos boards sem bucket de 100% não há como encaixar a trinca em 100%, então ela vai onde a tabela do board a põe. Regra 4 do Guideline e das Regras Consolidadas receberam o esclarecimento (Decisão 10). O Exercício 05 também foi ajustado (01/11/2026).
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/15-Bet-vs-Missed/README|theory/15-Bet-vs-Missed]]
+
+**Mesma pasta:** [[theory/15-Bet-vs-Missed/15 - BET VS MISSED GUIDELINE|01-Guideline]] · [[theory/15-Bet-vs-Missed/02-VideoAulas|02-VideoAulas]] · [[theory/15-Bet-vs-Missed/03-Solver|03-Solver]] · [[theory/15-Bet-vs-Missed/04-Exercicios|04-Exercicios]] · [[theory/15-Bet-vs-Missed/05-Regras-Consolidadas|05-Regras-Consolidadas]] · [[theory/15-Bet-vs-Missed/07-Changelog|07-Changelog]] · [[theory/15-Bet-vs-Missed/08-Referencias|08-Referencias]] · [[theory/15-Bet-vs-Missed/09-Decisoes|09-Decisoes]]
+
+**Módulos citados no texto:** [[theory/10-MULTIWAY-POT/README|10-MULTIWAY-POT]]
+
+<!-- graphify-links:end -->

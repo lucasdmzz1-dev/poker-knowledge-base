@@ -1,3 +1,12 @@
+---
+tags:
+  - modulo/13-icm
+  - tema/icm
+  - street/preflop
+  - tema/reta-final
+  - tipo/regras
+---
+
 # Regras Consolidadas – ICM e Risk Premium
 
 > Este documento reúne apenas as regras finais consolidadas durante o estudo do módulo.
@@ -225,3 +234,21 @@ SB cobrindo o BB: sem limp. SB coberto: protege o call. SB curto: sem limp.
 # Regra Principal do Módulo
 
 Antes de qualquer decisão, pergunte: quem me cobre, e há pressão a favor? Quem cobre expande, quem é coberto aperta, e sem pressão ninguém precisa expandir.
+
+<!-- graphify-links:start -->
+
+---
+
+## Ligações
+
+_Gerado a partir do grafo do graphify. Não editar à mão: é sobrescrito na próxima geração._
+
+**Pasta:** [[theory/13-ICM/README|theory/13-ICM]]
+
+**Mesma pasta:** [[theory/13-ICM/13 - ICM GUIDELINE|01-Guideline]] · [[theory/13-ICM/02-VideoAulas|02-VideoAulas]] · [[theory/13-ICM/03-Solver|03-Solver]] · [[theory/13-ICM/04-Exercicios|04-Exercicios]] · [[theory/13-ICM/06-Pendencias|06-Pendencias]] · [[theory/13-ICM/07-Changelog|07-Changelog]] · [[theory/13-ICM/08-Referencias|08-Referencias]] · [[theory/13-ICM/09-Decisoes|09-Decisoes]]
+
+**Outros módulos:**
+
+- [[theory/12-RETA-FINAL/05-Regras-Consolidadas|12-RETA-FINAL · 05-Regras-Consolidadas]]
+
+<!-- graphify-links:end -->
