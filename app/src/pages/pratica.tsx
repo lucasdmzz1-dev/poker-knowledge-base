@@ -21,6 +21,7 @@ import {
 } from "@/components/poker/mesa"
 import PraticaCbet from "@/pages/pratica-cbet"
 import PraticaCbet40 from "@/pages/pratica-cbet40"
+import PraticaOop from "@/pages/pratica-oop"
 import PraticaProbe, { SeletorTema, type Tema } from "@/pages/pratica-probe"
 import { mod15, tipoById, type Situacao, type TipoId } from "@/data/mod15"
 import {
@@ -546,5 +547,6 @@ export default function Pratica() {
   if (tema === "probe") return <PraticaProbe onTema={setTema} />
   if (tema === "cbet") return <PraticaCbet onTema={setTema} />
   if (tema === "cbet40") return <PraticaCbet40 onTema={setTema} />
+  if (tema === "oop") return <PraticaOop onTema={setTema} />
   return <PraticaBet onTema={setTema} />
 }
