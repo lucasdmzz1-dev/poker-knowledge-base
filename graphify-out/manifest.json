@@ -294,9 +294,9 @@
     "semantic_hash": ""
   },
   "theory/05-CBet-OOP-40bb/09-Decisoes.md": {
-    "mtime": 1793575912.8781025,
-    "seen": 1793614195.0181801,
-    "ast_hash": "c7edd6784b0806a2330f45a1828f029b",
+    "mtime": 1793663701.8188806,
+    "seen": 1793663725.2659373,
+    "ast_hash": "75d6a956f6b332e1ae9347b485ac9671",
     "semantic_hash": ""
   },
   "theory/05-CBet-OOP-40bb/README.md": {
@@ -834,9 +834,9 @@
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/07-Changelog.md": {
-    "mtime": 1793575912.9493408,
-    "seen": 1793614195.0181801,
-    "ast_hash": "d0f8d2c109f0359cc85fdcb12b8d3651",
+    "mtime": 1793663701.8188806,
+    "seen": 1793663725.2867064,
+    "ast_hash": "f34cf193b894ea2fd6810139fe899db0",
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/08-Referencias.md": {
@@ -846,9 +846,9 @@
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/09-Decisoes.md": {
-    "mtime": 1793575912.9503436,
-    "seen": 1793614195.0181801,
-    "ast_hash": "336c2ebd29103e3f0bacf9f97cfd5d42",
+    "mtime": 1793663701.8178713,
+    "seen": 1793663725.2867064,
+    "ast_hash": "e72f5e4921e452de6589c79b59daef58",
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/README.md": {
@@ -1272,9 +1272,9 @@
     "semantic_hash": ""
   },
   "theory/15-Bet-vs-Missed/12-Padroes.md": {
-    "mtime": 1793575912.9515412,
-    "seen": 1793614195.0181801,
-    "ast_hash": "a54ca8a1d121b027d5cac5e552657703",
+    "mtime": 1793663701.8178713,
+    "seen": 1793663725.2867064,
+    "ast_hash": "ad301e4b1369ed52089f128c4cb00ffe",
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/01 - BB RAISED POT VS SB GUIDELINE.md": {
@@ -1302,21 +1302,21 @@
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/05-Regras-Consolidadas.md": {
-    "mtime": 1793575912.9679723,
-    "seen": 1793614195.0181801,
-    "ast_hash": "8d9038c1c8dbc4c43db9be8dad65ff67",
+    "mtime": 1793663701.8115332,
+    "seen": 1793663725.290785,
+    "ast_hash": "98538b8654c683d3dbb2753a4023fa04",
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/06-Pendencias.md": {
-    "mtime": 1793575912.969457,
-    "seen": 1793614195.0181801,
-    "ast_hash": "d5fe63112db0bbd09dc7e6fb6bd57a75",
+    "mtime": 1793663701.810533,
+    "seen": 1793663725.290785,
+    "ast_hash": "ff878e9b6a1d39a1f0bf5aad6ca967ef",
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/07-Changelog.md": {
-    "mtime": 1793575912.969457,
-    "seen": 1793614195.0181801,
-    "ast_hash": "46569061293e7a7b8193f9e6c3a8f28b",
+    "mtime": 1793663701.8115332,
+    "seen": 1793663725.290785,
+    "ast_hash": "e3aafa7f292fa161bf33889cebdbcf24",
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/08-Referencias.md": {
@@ -1326,9 +1326,9 @@
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/09-Decisoes.md": {
-    "mtime": 1793575912.9704652,
-    "seen": 1793614195.0181801,
-    "ast_hash": "da860cc13dc9340c810db71a9de1391a",
+    "mtime": 1793663701.810533,
+    "seen": 1793663725.290785,
+    "ast_hash": "39df3e28814f6d7c022bb245ab016964",
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/README.md": {
@@ -2715,6 +2715,12 @@
     "mtime": 1793662739.1664615,
     "seen": 1793662758.1352558,
     "ast_hash": "4b6658505a2847e947b4c75e84a6e14b",
+    "semantic_hash": ""
+  },
+  "theory/tools/ranges-poker-academy.md": {
+    "mtime": 1793663701.8198857,
+    "seen": 1793663725.2948112,
+    "ast_hash": "7c8b8de5a8ae37f22ce3e24df5f4c04e",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

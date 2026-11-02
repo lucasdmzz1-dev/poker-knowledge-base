@@ -79,3 +79,35 @@ Os módulos 01, 02, 05, 11, 12, 13, 14 e 15, o `theory/CLAUDE.md` e o `theory/MA
 O monotone e o dobrado conectado passam a B25 (a v1.0 dava B70 ou B40 e B40). A correção segue o IMG2 e a fala. As mudanças estão no `07-Changelog.md`.
 
 **Status:** definitiva.
+
+---
+
+# Decisão 11 — O range off do SB decide o size (02/11/2026)
+
+O size sai de quanto o range de limp-call do SB acerta o board, principalmente a parte offsuit (de 8x para cima). A regra do coach está nas Regras 21 e 22.
+
+**Status:** definitiva.
+
+---
+
+# Decisão 12 — B70: trincas em 25% e dois pares em 75% (02/11/2026)
+
+Nos boards de B70 a trinca vai em 25% e os dois pares em 75%, junto com overpair e top pair forte. A fonte é o Yago (Discord) e o IMG1 #1 e #2. Isso muda o split B70 do IMG2 (dois pares em 50%) e a lista de sets do B70.
+
+**Status:** definitiva para o B70. O B40 segue o IMG2.
+
+---
+
+# Decisão 13 — IMG1 por board e IMG2 no resto (02/11/2026)
+
+Nos 10 boards do IMG1 valem os buckets do próprio board. Nos demais boards valem as tabelas do IMG2. O underpair em 0% (B40 e B70) vem do IMG2, porque o IMG1 não o cita.
+
+**Status:** provisória, até o coach confirmar o status do IMG1 (item 16).
+
+---
+
+# Decisão 14 — Definição de pares de bolso (02/11/2026)
+
+Underpair é o par de bolso abaixo do terceiro par. Par de bolso entre cartas do board conta como segundo ou terceiro par. A decisão vale também para os módulos 05 e 15.
+
+**Status:** definitiva (autor do KB).

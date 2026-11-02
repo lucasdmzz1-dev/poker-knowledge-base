@@ -96,6 +96,14 @@ Com:
 - Regras.
 - Histórico.
 
+---
+
+# Decisão 7 — EP no treino da Prática (02/11/2026)
+
+Na Prática, o "EP" do módulo é o EP2 do Poker Academy (UTG+1 de uma mesa de 9 jogadores, o UTG1 da mesa do site). O CO é o CO do Poker Academy. Os ranges de abertura estão em `theory/tools/ranges-poker-academy.md`. Par de bolso abaixo do top pair dá check-call e segue a definição do módulo 17 (Decisão 14).
+
+**Status:** definitiva para a Prática.
+
 <!-- graphify-links:start -->
 
 ---
