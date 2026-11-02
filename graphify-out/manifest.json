@@ -2592,21 +2592,21 @@
     "semantic_hash": ""
   },
   "app/src/components/poker/resultado-final.tsx": {
-    "mtime": 1793598700.5368176,
-    "seen": 1793598724.5480638,
-    "ast_hash": "773e9dac2eb6468537c6ac11096c61a5",
+    "mtime": 1793598809.39277,
+    "seen": 1793598835.9125261,
+    "ast_hash": "4c810a9e53c965bb2b4fa62a9a2ccddf",
     "semantic_hash": ""
   },
   "app/src/data/prat01.ts": {
-    "mtime": 1793598670.1759243,
-    "seen": 1793598724.5535984,
-    "ast_hash": "4d9aafffd851a27cca6d9f14289aa125",
+    "mtime": 1793598817.6301255,
+    "seen": 1793598835.9165637,
+    "ast_hash": "a13af42128b4aad93617ada1064697c6",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-cbet.tsx": {
-    "mtime": 1793598670.110896,
-    "seen": 1793598724.56147,
-    "ast_hash": "51c8536b48b4f5bce57dc92d3cd05591",
+    "mtime": 1793598809.4451334,
+    "seen": 1793598835.9225175,
+    "ast_hash": "71e531385c12464f50c639012f56130e",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

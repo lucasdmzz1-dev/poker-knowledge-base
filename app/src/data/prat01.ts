@@ -6,7 +6,7 @@ export const BOARD_CBET: Record<
   { nome: string; freq: string; board: string[]; estrategia: string }
 > = {
   ahigh: {
-    nome: "A high",
+    nome: "A HIGH",
     freq: "100%",
     board: ["Ad", "8c", "4s"],
     estrategia: "Bet range: o range inteiro aposta B25.",

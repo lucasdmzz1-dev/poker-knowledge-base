@@ -4,6 +4,11 @@ import { Card } from "@/components/ui/card"
 import type { ItemSessao } from "@/lib/poker"
 import { cn } from "@/lib/utils"
 
+// Nomes de tipo em minúsculas no meio da frase, menos o A HIGH, que fica sempre em maiúsculas.
+export function nomeNaFrase(nome: string): string {
+  return nome.toLowerCase().replace(/a high/g, "A HIGH")
+}
+
 export interface Motivo {
   nome: string
   n: number
@@ -56,7 +61,7 @@ export function ResultadoFinal({
             <>
               Você mais errou em{" "}
               <strong className="text-foreground">
-                {pior.nome.toLowerCase()}
+                {nomeNaFrase(pior.nome)}
               </strong>
               : {pior.total - pior.certos} erro
               {pior.total - pior.certos > 1 ? "s" : ""} em {pior.total} mãos.

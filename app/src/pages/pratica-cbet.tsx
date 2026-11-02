@@ -5,7 +5,7 @@ import {
   CartaoResultado,
   estadoDe,
 } from "@/components/poker/resposta"
-import { ResultadoFinal } from "@/components/poker/resultado-final"
+import { ResultadoFinal, nomeNaFrase } from "@/components/poker/resultado-final"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
@@ -293,7 +293,7 @@ export default function PraticaCbet({ onTema }: { onTema: (t: Tema) => void }) {
               </strong>{" "}
               no board{" "}
               <strong className="text-foreground">
-                {board.nome.toLowerCase()}
+                {nomeNaFrase(board.nome)}
               </strong>
               , onde o c-bet fica perto de{" "}
               <strong className="text-foreground">{board.freq}</strong>.
