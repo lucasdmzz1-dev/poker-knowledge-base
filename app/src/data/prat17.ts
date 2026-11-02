@@ -401,7 +401,9 @@ export function bucketBB(
   // split B70
   if (L.feita === "overpair") return res(75, "Overpair")
   if (topPair) return forte ? res(75, "Top pair forte") : res(50, "Top pair")
-  if (L.feita === "doisPares") return res(50, "Dois pares")
+  // Sizes muito altos: a prioridade são as mãos fortes e vulneráveis (dois pares,
+  // overpair e top pair forte), e as trincas bloqueiam os pares (coach).
+  if (L.feita === "doisPares") return res(75, "Dois pares")
   if (L.feita === "underpair") return res(0, "Underpair")
   // No B70 as trincas vão em 25%: o top set bloqueia quem paga (guideline por board).
   if (["setAlto", "setMeio", "setBaixo"].includes(L.feita))
