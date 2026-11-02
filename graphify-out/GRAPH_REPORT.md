@@ -1,7 +1,7 @@
 # Graph Report - kb-pratica-384abd  (2026-11-02)
 
 ## Corpus Check
-- 445 files · ~804,766 words
+- 445 files · ~804,842 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 39 file(s) not represented in the graph (top: .csv 25, (none) 6, .css 4)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a21e7230`
+- Built from commit: `4f9eb914`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -1533,7 +1533,7 @@ Nodes (5): After approval: the comp becomes a spec, Generate three compositional
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `init()` connect `setLiveState` to `Init flow`, `live-browser.js`, `02.2 — DEEP STACK`, `Write Swift`, `onAnnotDown`, `generate.md`, `connectSSE`, `syncPageChatFocus`, `initGlobalBar`, `impeccable/SKILL.md`, `el`, `handleManualEditActivity`?**
-  _High betweenness centrality (0.138) - this node is a cross-community bridge._
+  _High betweenness centrality (0.140) - this node is a cross-community bridge._
 - **What connects `cmd`, `@playwright/mcp`, `Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100)` to the rest of the system?**
   _124 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Solver — ICM e Risk Premium (25% vs 16% field left)` be split into smaller, more focused modules?**

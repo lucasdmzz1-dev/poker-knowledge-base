@@ -20,6 +20,11 @@ const BOARDS: { tipo: TipoId; board: string[] }[] = [
   { tipo: "seco", board: ["Qs", "5h", "3c"] },
   { tipo: "seco", board: ["Kd", "7h", "4c"] },
   { tipo: "seco", board: ["Td", "6h", "2c"] },
+  // Boards que o coach classificou como secos nos exemplos do trainer (02/11/2026).
+  { tipo: "seco", board: ["Td", "7s", "3h"] },
+  { tipo: "seco", board: ["7c", "Ts", "5h"] },
+  { tipo: "seco", board: ["8c", "2d", "3h"] },
+  { tipo: "seco", board: ["8c", "2d", "7h"] },
   { tipo: "monotone", board: ["As", "9s", "8s"] },
 ]
 
