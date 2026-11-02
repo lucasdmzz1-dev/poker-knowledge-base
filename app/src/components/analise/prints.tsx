@@ -97,8 +97,8 @@ export function PrintsDoMes({ mes }: { mes: string }) {
           Arraste os prints do mês até aqui ou clique para escolher
         </span>
         <span className="text-sm text-muted-foreground">
-          Ficam guardados só neste navegador. Mande os mesmos prints no chat
-          para eu extrair os números.
+          Ficam guardados só neste navegador. Para extrair os números, use "Ler
+          os prints com o Claude" logo abaixo.
         </span>
         <input
           type="file"

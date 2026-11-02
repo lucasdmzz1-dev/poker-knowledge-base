@@ -4,6 +4,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import { useUsuario } from "@/lib/usuario"
 import { cn } from "@/lib/utils"
 
 const LINKS = [
@@ -14,6 +15,9 @@ const LINKS = [
 ]
 
 export function Layout() {
+  const usuario = useUsuario()
+  const nome = usuario?.email ?? "Você"
+  const iniciais = usuario ? usuario.email.slice(0, 2).toUpperCase() : "VC"
   return (
     <div className="min-h-svh">
       <header className="sticky top-3 z-20 flex justify-center px-3 pt-3">
@@ -50,13 +54,14 @@ export function Layout() {
                 aria-label="Abrir o seu perfil"
                 className="grid size-9 cursor-pointer place-items-center rounded-full border bg-secondary text-sm font-bold transition-[color,border-color,transform] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] hover:border-primary active:scale-[0.97]"
               >
-                LU
+                {iniciais}
               </PopoverTrigger>
               <PopoverContent align="end" className="w-64 rounded-2xl">
-                <p className="font-bold">Lucas</p>
+                <p className="font-bold break-all">{nome}</p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Seu histórico do trainer fica salvo só neste navegador. Não
-                  existe login por enquanto.
+                  {usuario
+                    ? "Seus dados ficam salvos na sua conta, em qualquer aparelho."
+                    : "Seu histórico do trainer fica salvo só neste navegador."}
                 </p>
                 <div className="mt-3 grid gap-1">
                   <Link
@@ -71,6 +76,15 @@ export function Layout() {
                   >
                     Ver os temas
                   </Link>
+                  {usuario && (
+                    <button
+                      type="button"
+                      onClick={usuario.sair}
+                      className="cursor-pointer rounded-lg px-2 py-1.5 text-left text-sm font-medium hover:bg-secondary"
+                    >
+                      Sair
+                    </button>
+                  )}
                 </div>
               </PopoverContent>
             </Popover>

@@ -22,8 +22,11 @@ Vite, React 19, TypeScript estrito, Tailwind v4, shadcn/ui, react-router-dom, lu
 - **Prática** (`pages/pratica.tsx`, `components/poker/mesa.tsx`): treino de bet vs missed com mesa, hero no BTN, opener entre CO e HJ, 40bb. O RNG sorteia de 1 a 100 (`randomInt`), com botões B25, B50 e check. O tema Probe Turn (módulo 14) fica em `pages/pratica-probe.tsx` e `data/prat14.ts`: você no BB, turn definido, ações check-call, check-raise e bets de 40, 70 e 100%.
 - **Análise** (`pages/analise.tsx`), em quatro abas:
   - **Leaks do mês**: abre em "Prints e stats do HUD" (prints do mês e as 169 stats por seção). O botão "Ver os leaks do mês" leva à lista de leaks, separada em pré-flop e pós-flop.
+    - O botão "Gerar N leaks pelas metas" cria um leak para cada stat fora da meta (vermelhas; amarelas se marcar a opção). Stats sem meta numérica ou com amostra pequena ficam de fora. Os números das stats entram de três jeitos: "Ler os prints com o Claude" (chave da API sua, guardada só no navegador em `pkb:api-key`, chamada direta à API; mostra quantas stats leu antes de aplicar), pelo Claude no chat ou por "Editar valores". O campo "Mês dos prints" aceita um mês novo, como outubro.
+    - Dentro de Pré-flop e Pós-flop dá para filtrar os leaks pelas divisões da teoria (SRP como agressor, 3bet pot, Blind war etc.). A divisão é inferida pela stat e pode ser trocada em cada leak. O filtro "Mais críticas" mostra os 3 de maior desvio da fase (e da divisão escolhida).
   - **Comparação**: stats do HUD mês a mês e leaks, com as stats fixadas (estrela) primeiro.
   - **Painel semanal**: semanas, meses e comparação de períodos, com botão para salvar a semana e abrir a próxima.
+    - As métricas semanais são os leaks do mês marcados em Leaks do mês (pré-flop e pós-flop) e levados com "Levar selecionados para o painel semanal" ou escolhidos em "Adicionar leaks do mês ao painel". "Encerrar o mês e começar outro" guarda as métricas e as semanas em "Ciclos anteriores" (nada é apagado, e dá para comparar em Comparar períodos) e abre um ciclo vazio para os leaks do mês seguinte. Leaks que continuam voltam na atualização mensal e entram de novo.
   - **Treino**: resultado do treino.
 
 ## Regras de exibição das stats
@@ -34,7 +37,7 @@ Vite, React 19, TypeScript estrito, Tailwind v4, shadcn/ui, react-router-dom, lu
 
 ## Onde os dados ficam
 
-Os dados são locais do navegador, não do repositório. Os valores iniciais (setembro de 2026) estão no código.
+Os dados são locais do navegador de cada pessoa, não do repositório. O site começa vazio: o código só tem as definições e as metas das stats. Em Análise → "Meus dados" dá para exportar e importar tudo em um arquivo (a chave da API e os prints não entram).
 
 | Dado | Chave |
 | --- | --- |
@@ -42,9 +45,35 @@ Os dados são locais do navegador, não do repositório. Os valores iniciais (se
 | Leaks | `pkb:leaks` |
 | Painel | `pkb:painel2` |
 | Stats do HUD, fixadas, tolerância | `pkb:hud`, `pkb:hud-fixadas`, `pkb:hud-tol` |
+| Chave da API (leitura dos prints) | `pkb:api-key` |
 | Prints (imagens) | IndexedDB `pkb-prints` |
 
 Arquivos principais de dados: `lib/hud.ts`, `lib/analise.ts`, `lib/painel.ts`, `lib/poker.ts`.
+
+## Contas dos jogadores (Supabase)
+
+Com as variáveis de ambiente preenchidas, o site pede login (e-mail e senha) antes de abrir. Todos os jogadores veem as quatro áreas; o que cada um digita fica na conta dele (stats, leaks, painel, sessões do trainer) e só ele lê, pela regra de acesso da tabela. Sem as variáveis, o site abre sem login e guarda tudo no navegador.
+
+1. Crie um projeto grátis em supabase.com.
+2. No SQL Editor, rode `docs/Supabase-Poker-KB.sql`.
+3. Em Authentication, decida se exige confirmar o e-mail (padrão: exige). Para um grupo pequeno, pode desligar em Providers → Email → Confirm email.
+4. Em Project Settings → API, copie a URL e a chave `anon` (pública) para `app/.env.local`, no formato de `app/.env.example`. Nunca use a `service_role`.
+5. Para publicar, configure as mesmas duas variáveis no serviço de hospedagem antes do build.
+
+Ao entrar, o que já está na conta vale; o que só existia no aparelho sobe. Ao sair, os dados do aparelho são apagados. A chave da API do Claude e os prints ficam só no aparelho. "Meus dados" na Análise continua exportando e importando um arquivo.
+
+## Publicar no GitHub Pages
+
+O workflow `.github/workflows/publicar-site.yml` constrói a pasta `app/` e publica a cada merge na main. Configuração única, no GitHub:
+
+1. Settings → Pages → Source: GitHub Actions.
+2. Settings → Secrets and variables → Actions → Variables: crie `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` (a chave pública `anon`).
+3. Rode o workflow uma vez (Actions → Publicar site → Run workflow). O endereço aparece no fim da execução.
+4. No Supabase, em Authentication → URL Configuration, ponha o endereço do site em Site URL.
+
+Se o repositório virar privado, o GitHub Pages deixa de servir no plano gratuito. Nesse caso use o Netlify ou o Cloudflare Pages (aceitam repositório privado): o `netlify.toml` já tem o build (`pnpm build` em `app/`, saída `dist`); crie as duas variáveis do Supabase no painel do serviço e troque o Site URL no Supabase. Desligue o workflow do GitHub Pages para não falhar.
+
+O repositório é público: não coloque dados pessoais nele. Os dados de cada jogador ficam só na conta dele.
 
 ## Fluxo mensal
 
@@ -56,4 +85,3 @@ Arquivos principais de dados: `lib/hud.ts`, `lib/analise.ts`, `lib/painel.ts`, `
 
 - Dúvidas da teoria para o coach: tabuleiros intermediários, limite de low board, cartas do meio em dobrado.
 - Pilotos dos módulos 14 e 17.
-- Prints e números de outubro.
