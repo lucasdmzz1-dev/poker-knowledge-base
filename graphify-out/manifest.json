@@ -2688,9 +2688,9 @@
     "semantic_hash": ""
   },
   "app/src/data/prat17.ts": {
-    "mtime": 1793658103.9628935,
-    "seen": 1793658121.986155,
-    "ast_hash": "7196f82d0feaaec2f599c5de13583d47",
+    "mtime": 1793658227.8735614,
+    "seen": 1793658246.45025,
+    "ast_hash": "700ed6c20838254cf88e5804014a7dfc",
     "semantic_hash": ""
   },
   "app/src/lib/uso.ts": {

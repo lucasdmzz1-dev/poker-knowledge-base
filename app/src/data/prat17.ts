@@ -364,7 +364,9 @@ export function bucketBB(
   if (topPair) return forte ? res(75, "Top pair forte") : res(50, "Top pair")
   if (L.feita === "doisPares") return res(50, "Dois pares")
   if (L.feita === "underpair") return res(0, "Underpair")
-  if (["setAlto", "setMeio", "setBaixo"].includes(L.feita)) return null
+  // No B70 as trincas vão em 25%: o top set bloqueia quem paga (guideline por board).
+  if (["setAlto", "setMeio", "setBaixo"].includes(L.feita))
+    return res(25, "Trinca")
   // Os melhores draws (aqui, o flush draw) vão em 50%.
   if (L.feita === "nada" && L.flushDraw) return res(50, "Flush draw")
   if (draw) return null
