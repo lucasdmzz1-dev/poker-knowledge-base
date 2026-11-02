@@ -72,6 +72,7 @@ Uso: variável `help` por registro = (bounty do opener ÷ KOi) ÷ (stack do open
 Exemplo (#2247): 30% do field restante, 38 jogadores restantes, Média 70,5 bb, SI 25K, KOI $250, 15 posições pagas.
 - SI (stack inicial, em fichas), KOI (bounty inicial), % do field restante, jogadores restantes, stack médio em bb e posições pagas ficam no cabeçalho.
 - Stack inicial em bb = Média × % do field restante (70,5 × 0,30 = 21,2 bb). Confirmado pelo usuário: o cabeçalho tem SI e KOI.
+- Em aberto (28/10/2026): nas 52 árvores coletadas, a "Média" fica a menos de 1bb da média dos stacks da mesa (#2247: 70,5 contra 69,6). Pode ser a média da mesa, ou o solver monta a mesa com a média do torneio. Ver o teste na pendência 7 de `retomada-pko.md`.
 - Proximidade da bolha = jogadores restantes ÷ posições pagas (variável nova, para fase e ICM).
 
 ## 7. Decisões de escopo e definições (respostas do usuário, 27/10/2026)
@@ -97,6 +98,8 @@ Exemplo (#2247): 30% do field restante, 38 jogadores restantes, Média 70,5 bb, 
 
 ## 9. Resultados da coleta (27/10/2026): BTN contra 1 open, PKO 50%
 Amostra: 52 árvores, 203 nós (árvore + opener), 30 grades de 169 mãos com leitura consistente. Field restante de 15% a 80% (nenhuma árvore abaixo de 15%: buscas por FT, 10% e 5% voltaram vazias). Campos de ~100 a mais de 1k jogadores. Dados no navegador do usuário, chave `claude_pko_v2`.
+
+Nota (28/10/2026): o arquivo versionado `dados/pko-arvores-btn.json` tem 208 nós e 41 grades (ver `pko-arvores-dicionario.md`). Os números desta seção foram calculados sobre 203 nós e 30 grades. Ao refazer a análise com o arquivo, conferir se os efeitos mudam.
 
 Efeitos dentro da mesma árvore (isola o opener; efeitos em pontos percentuais do range do BTN):
 - Help Value do opener +1,0 (mediana 0,8; 10% a 90%: 0,4 a 1,9): call +3,1, continua +3,8, 3bet +0,7.
