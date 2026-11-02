@@ -130,6 +130,11 @@ export default function PraticaOop({ onTema }: { onTema: (t: Tema) => void }) {
           resp: a,
           esperado: atual.certa,
           ok: a === atual.certa,
+          board: atual.board,
+          hero: atual.hero,
+          classe: atual.classe,
+          porque: atual.porque,
+          nota: `${atual.naipes} ${atual.cenario} contra o BTN.`,
         },
       ])
       setResp(a)

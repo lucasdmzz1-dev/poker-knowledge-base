@@ -30,6 +30,12 @@ export interface ItemSessao {
   resp: string
   esperado: string
   ok: boolean
+  // Detalhes da questão, para a lista "Ver erros" (sessões antigas não têm).
+  board?: string[]
+  hero?: string[]
+  classe?: string
+  porque?: string
+  nota?: string
 }
 
 export interface Sessao {

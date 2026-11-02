@@ -1,3 +1,5 @@
+import { useState } from "react"
+import { Cards } from "@/components/poker/cards"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -10,6 +12,58 @@ export function nomeNaFrase(nome: string): string {
     .split(" ")
     .map((p) => (/^[A-Z][A-Z0-9-]*$/.test(p) ? p : p.toLowerCase()))
     .join(" ")
+}
+
+// "B25" vira "bet 25%", "Check-call" vira "check-call".
+export function nomeAcao(a: string): string {
+  const m = /^B(\d+)$/.exec(a)
+  return m ? `bet ${m[1]}%` : a.toLowerCase()
+}
+
+// Lista das questões erradas da sessão, com o board, a mão e a explicação.
+export function ListaErros({
+  itens,
+  nomeTipo = (t) => t,
+}: {
+  itens: ItemSessao[]
+  nomeTipo?: (t: string) => string
+}) {
+  const erros = itens.filter((x) => !x.ok)
+  return (
+    <section
+      aria-label="Erros da sessão"
+      className="grid w-full gap-3 text-left"
+    >
+      <h3 className="text-center font-bold">Seus erros ({erros.length})</h3>
+      {erros.map((x, k) => (
+        <Card key={`${x.sid}-${k}`} className="grid gap-2 rounded-xl p-4">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <strong>{nomeTipo(x.tipo)}</strong>
+            <span className="text-sm text-muted-foreground">
+              Você:{" "}
+              <strong className="text-destructive">{nomeAcao(x.resp)}</strong> ·
+              Certo:{" "}
+              <strong className="text-primary">{nomeAcao(x.esperado)}</strong>
+            </span>
+          </div>
+          {x.board && x.hero && (
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <Cards codes={x.board} size="sm" />
+              <span className="text-sm text-muted-foreground">sua mão</span>
+              <Cards codes={x.hero} size="sm" />
+            </div>
+          )}
+          {x.classe && (
+            <p className="text-muted-foreground">
+              <strong className="text-foreground">{x.classe}</strong>
+              {x.porque ? `: ${x.porque}` : ""}
+            </p>
+          )}
+          {x.nota && <p className="text-sm text-muted-foreground">{x.nota}</p>}
+        </Card>
+      ))}
+    </section>
+  )
 }
 
 export interface Motivo {
@@ -26,6 +80,7 @@ export function ResultadoFinal({
   levada,
   onLevar,
   onNovo,
+  nomeTipo,
 }: {
   itens: ItemSessao[]
   tituloTipos: string
@@ -33,7 +88,9 @@ export function ResultadoFinal({
   levada: boolean
   onLevar: () => void
   onNovo: () => void
+  nomeTipo?: (t: string) => string
 }) {
+  const [verErros, setVerErros] = useState(false)
   const acertos = itens.filter((x) => x.ok).length
   const pct = Math.round((acertos / itens.length) * 100)
   const tipos = [...new Set(itens.map((x) => x.tipo))]
@@ -122,6 +179,17 @@ export function ResultadoFinal({
           >
             Levar para a Análise
           </Button>
+          {itens.some((x) => !x.ok) && (
+            <Button
+              size="lg"
+              variant="outline"
+              className="h-12 px-6 font-bold"
+              aria-expanded={verErros}
+              onClick={() => setVerErros((v) => !v)}
+            >
+              {verErros ? "Esconder erros" : "Ver erros"}
+            </Button>
+          )}
           <Button
             size="lg"
             variant="outline"
@@ -131,6 +199,7 @@ export function ResultadoFinal({
             Novo treino
           </Button>
         </div>
+        {verErros && <ListaErros itens={itens} nomeTipo={nomeTipo} />}
         <p role="status" className="text-muted-foreground">
           {levada ? "Sessão enviada para a Análise." : ""}
         </p>

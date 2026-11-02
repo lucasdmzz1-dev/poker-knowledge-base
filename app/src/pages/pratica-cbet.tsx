@@ -95,6 +95,10 @@ export default function PraticaCbet({ onTema }: { onTema: (t: Tema) => void }) {
           resp: a,
           esperado: atual.certa,
           ok: a === atual.certa || !!atual.aceita?.includes(a),
+          board: board.board,
+          hero: atual.hero,
+          classe: atual.classe,
+          porque: atual.porque,
         },
       ])
       setResp(a)

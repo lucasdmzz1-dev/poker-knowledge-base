@@ -6,6 +6,7 @@ import {
   estadoDe,
 } from "@/components/poker/resposta"
 import { RelatarErro } from "@/components/poker/relatar-erro"
+import { ListaErros } from "@/components/poker/resultado-final"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -107,6 +108,7 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
   const [resp, setResp] = useState<Acao | null>(null)
   const [sessId, setSessId] = useState(0)
   const [levada, setLevada] = useState(false)
+  const [verErros, setVerErros] = useState(false)
   // Guarda síncrona: duas teclas no mesmo quadro não podem registrar a mesma mão duas vezes.
   const respondido = useRef(false)
 
@@ -139,6 +141,11 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
         resp: a,
         esperado,
         ok: a === esperado,
+        board: atual.board,
+        hero: atual.hero,
+        classe: atual.classe,
+        porque: atual.porque,
+        nota: `RNG ${roll}, bucket de ${atual.bucket}%.`,
       }
       setItens((prev) => [...prev, item])
       setResp(a)
@@ -177,6 +184,7 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
     setRoll(rng())
     setOpener(randomInt(2) === 0 ? "HJ" : "CO")
     setLevada(false)
+    setVerErros(false)
     setFase("jogo")
   }
 
@@ -402,6 +410,17 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
             >
               Levar para a Análise
             </Button>
+            {erros.length > 0 && (
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-12 px-6 font-bold"
+                aria-expanded={verErros}
+                onClick={() => setVerErros((v) => !v)}
+              >
+                {verErros ? "Esconder erros" : "Ver erros"}
+              </Button>
+            )}
             <Button
               size="lg"
               variant="outline"
@@ -411,6 +430,12 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
               Novo treino
             </Button>
           </div>
+          {verErros && (
+            <ListaErros
+              itens={itens}
+              nomeTipo={(t) => tipoById[t as TipoId]?.nome ?? t}
+            />
+          )}
           <p role="status" className="text-muted-foreground">
             {levada ? "Sessão enviada para a Análise." : ""}
           </p>

@@ -189,6 +189,10 @@ export default function PraticaProbe({
           resp: a,
           esperado: atual.certa,
           ok: a === atual.certa,
+          board: [...turnById[atual.turn].flop, turnById[atual.turn].turn],
+          hero: atual.hero,
+          classe: atual.classe,
+          porque: atual.porque,
         },
       ])
       setResp(a)
