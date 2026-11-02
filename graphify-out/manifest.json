@@ -2586,9 +2586,9 @@
     "semantic_hash": ""
   },
   "app/src/components/analise/leaks.tsx": {
-    "mtime": 1793584631.142572,
-    "seen": 1793584662.6635804,
-    "ast_hash": "d02215551d9989cfbbda7e7a578dfb77",
+    "mtime": 1793584743.613063,
+    "seen": 1793584773.8950531,
+    "ast_hash": "618440a637233eeba25336a77e1eccbb",
     "semantic_hash": ""
   },
   "app/src/components/analise/painel.tsx": {
@@ -2634,9 +2634,9 @@
     "semantic_hash": ""
   },
   "docs/Site-Poker-KB.md": {
-    "mtime": 1793584647.756476,
-    "seen": 1793584662.6987288,
-    "ast_hash": "4c6a1cde3041975c09d61551bc862570",
+    "mtime": 1793584759.1901894,
+    "seen": 1793584773.9301865,
+    "ast_hash": "d060161cd464917c113ab4bcce06a12c",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

@@ -36,41 +36,6 @@ export function useLeaks() {
   return { leaks, salvar }
 }
 
-function LevarParaPainel({
-  leak,
-  abrirPainel,
-}: {
-  leak: Leak
-  abrirPainel?: () => void
-}) {
-  const [no, setNo] = useState(() => leakNoPainel(leak))
-  return (
-    <span className="flex flex-wrap items-center gap-2">
-      <Button
-        variant={no ? "outline" : "default"}
-        className="h-9 px-4 font-bold"
-        aria-pressed={no}
-        onClick={() => {
-          if (no) tirarLeak(leak)
-          else levarLeak(leak)
-          setNo(!no)
-        }}
-      >
-        {no ? "No painel semanal · tirar" : "Levar para o painel semanal"}
-      </Button>
-      {no && abrirPainel && (
-        <button
-          type="button"
-          className="cursor-pointer text-primary underline-offset-4 hover:underline"
-          onClick={abrirPainel}
-        >
-          Abrir o painel
-        </button>
-      )}
-    </span>
-  )
-}
-
 function LeaksLista({
   leaks,
   salvar,
@@ -97,6 +62,26 @@ function LeaksLista({
     leaks.filter((l) => l.mes === mes && l.fase === f).length
   const mostrados = todos ? doMes : doMes.slice(0, VISIVEIS)
   const criticos = PONTOS_CRITICOS[mes]
+  const [marcados, setMarcados] = useState<string[]>([])
+  const [versao, setVersao] = useState(0)
+  const noPainel = useMemo(
+    () => new Set(leaks.filter(leakNoPainel).map((l) => l.id)),
+    // versao força reler o painel depois de levar ou tirar leaks
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [leaks, versao]
+  )
+  const selecionados = leaks.filter(
+    (l) => l.mes === mes && marcados.includes(l.id) && !noPainel.has(l.id)
+  )
+  const contar = (f: Fase) => selecionados.filter((l) => l.fase === f).length
+  const [levados, setLevados] = useState(0)
+
+  function levar() {
+    selecionados.forEach(levarLeak)
+    setLevados(selecionados.length)
+    setMarcados([])
+    setVersao((v) => v + 1)
+  }
   const [aberto, setAberto] = useState(false)
   const [erro, setErro] = useState("")
 
@@ -152,7 +137,11 @@ function LeaksLista({
             <select
               className={cn(CAMPO, "w-auto")}
               value={mes}
-              onChange={(e) => setEscolhido(e.target.value)}
+              onChange={(e) => {
+                setEscolhido(e.target.value)
+                setMarcados([])
+                setLevados(0)
+              }}
             >
               {meses.map((m) => (
                 <option key={m} value={m}>
@@ -284,6 +273,35 @@ function LeaksLista({
         ))}
       </div>
 
+      <div className="mb-4 flex flex-wrap items-center gap-3 rounded-2xl border bg-card/40 p-3">
+        <Button
+          className="h-10 px-5 font-bold"
+          disabled={selecionados.length === 0}
+          onClick={levar}
+        >
+          Levar selecionados para o painel semanal
+        </Button>
+        <span className="text-sm text-muted-foreground">
+          {selecionados.length === 0
+            ? "Marque os leaks de pré-flop e pós-flop que quer acompanhar por semana."
+            : `${selecionados.length} selecionados · ${contar("preflop")} pré-flop · ${contar("posflop")} pós-flop`}
+        </span>
+        {levados > 0 && (
+          <span className="text-sm text-primary">
+            {levados} {levados === 1 ? "leak levado" : "leaks levados"}.
+            {abrirPainel && (
+              <button
+                type="button"
+                className="ml-2 cursor-pointer underline-offset-4 hover:underline"
+                onClick={abrirPainel}
+              >
+                Abrir o painel
+              </button>
+            )}
+          </span>
+        )}
+      </div>
+
       {doMes.length === 0 ? (
         <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
           Nenhum leak de {fase === "preflop" ? "pré-flop" : "pós-flop"} em{" "}
@@ -300,7 +318,23 @@ function LeaksLista({
                 <li key={l.id}>
                   <Card className="rounded-[18px] p-5">
                     <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                      <h3 className="text-lg font-bold">
+                      <h3 className="flex items-center gap-3 text-lg font-bold">
+                        <input
+                          type="checkbox"
+                          aria-label={`Selecionar ${l.spot} · ${l.stat}`}
+                          disabled={noPainel.has(l.id)}
+                          checked={
+                            noPainel.has(l.id) || marcados.includes(l.id)
+                          }
+                          onChange={(e) =>
+                            setMarcados(
+                              e.target.checked
+                                ? [...marcados, l.id]
+                                : marcados.filter((x) => x !== l.id)
+                            )
+                          }
+                          className="size-5 accent-primary"
+                        />
                         {l.spot} · {l.stat}
                         {i < 3 && (
                           <span className="ml-2 rounded-full bg-primary px-2.5 py-0.5 align-middle text-xs font-bold text-primary-foreground">
@@ -328,7 +362,25 @@ function LeaksLista({
                     </div>
                     {l.fazer && <p className="mt-2 max-w-[70ch]">{l.fazer}</p>}
                     <div className="mt-3 flex flex-wrap items-center justify-between gap-3 text-sm text-muted-foreground">
-                      <LevarParaPainel leak={l} abrirPainel={abrirPainel} />
+                      {noPainel.has(l.id) ? (
+                        <span className="flex items-center gap-3">
+                          <span className="text-primary">
+                            No painel semanal
+                          </span>
+                          <button
+                            type="button"
+                            className="cursor-pointer underline-offset-4 hover:text-foreground hover:underline"
+                            onClick={() => {
+                              tirarLeak(l)
+                              setVersao((v) => v + 1)
+                            }}
+                          >
+                            Tirar
+                          </button>
+                        </span>
+                      ) : (
+                        <span />
+                      )}
                       <span>{l.fonte ?? "Registrado por você"}</span>
                       <button
                         type="button"

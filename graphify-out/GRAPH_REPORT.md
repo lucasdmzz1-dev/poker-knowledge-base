@@ -1,17 +1,17 @@
 # Graph Report - kb-analise-f98939  (2026-11-01)
 
 ## Corpus Check
-- 431 files · ~815,391 words
+- 431 files · ~815,552 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 39 file(s) not represented in the graph (top: .csv 27, (none) 6, .css 4)
 
 ## Summary
-- 4484 nodes · 8025 edges · 315 communities (280 shown, 35 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 351 edges (avg confidence: 0.87)
+- 4484 nodes · 8023 edges · 314 communities (279 shown, 35 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 353 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7e89b249`
+- Built from commit: `4aa7aa5b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -106,7 +106,6 @@
 - Parte 5 — Stack e risco de cair
 - el
 - dependencies
-- mesa.tsx
 - Estudos de ranges
 - colorize.md
 - Construção do Split Range
@@ -362,7 +361,7 @@
 - **Fatores que ampliam o range do BTN em PKO** — theory_tools_pko_pko_conhecimento_help_value, theory_tools_pko_pko_conhecimento_cobertura, theory_tools_pko_pko_conhecimento_risk_premium, theory_tools_pko_pko_conhecimento_dead_money_bounty, theory_tools_pko_regras_vivas_pko_btn_largura_no [INFERRED 0.85]
 - **Sizing de river por textura: blank vs board que esquisitou (B70 vs Overbet)** — theory_11_value_bet_masterclass_05_regras_consolidadas_regra_3_board_completa_draw_size_menor, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_4_board_blank_size_alto, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_5_carta_alta_nao_e_blank, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_6_dois_sizes_river, theory_11_value_bet_masterclass_05_regras_consolidadas_regra_7_river_blank_vs_muda_nuts [INFERRED 0.85]
 
-## Communities (315 total, 35 thin omitted)
+## Communities (314 total, 35 thin omitted)
 
 ### Community 0 - "Decisões – Probe Turn"
 Cohesion: 0.22
@@ -426,11 +425,11 @@ Nodes (117): abortSvelteComponentInjection(), applyPlaceholderDimensions(), appl
 
 ### Community 15 - "painel.tsx"
 Cohesion: 0.08
-Nodes (47): Comparar(), COR_ESTADO, corValor(), EncerrarCiclo(), adicionar(), maosCurto(), numeros(), sinal() (+39 more)
+Nodes (48): levar(), Comparar(), COR_ESTADO, corValor(), EncerrarCiclo(), adicionar(), maosCurto(), numeros() (+40 more)
 
 ### Community 16 - "pratica.tsx"
 Cohesion: 0.09
-Nodes (43): useLeaks(), PainelSemanal(), PageHeader(), Checkbox(), Label(), RadioGroup(), RadioGroupItem(), Bucket (+35 more)
+Nodes (38): lucide-react@^1.65.0, Assento(), BarraAcoes(), Ficha(), Mesa(), Opener, ORDEM, Pos (+30 more)
 
 ### Community 17 - "08 - 3BET POT GUIDELINE.md"
 Cohesion: 0.05
@@ -461,8 +460,8 @@ Cohesion: 0.05
 Nodes (30): Padrão de um módulo (10 arquivos), CLAUDE.md — Poker Knowledge Base (theory), Padrão de um módulo (10 arquivos), Chat PRÉ-FLOP, Chat PÓS-FLOP, Ligações, MAIN CHAT TEORIA, Mapa da teoria — Pré-flop e Pós-flop (+22 more)
 
 ### Community 25 - "leaks.tsx"
-Cohesion: 0.15
-Nodes (29): ComparacaoHud(), Comparacao(), ComparacaoLeaks(), LeaksDoMes(), LeaksLista(), adicionar(), LevarParaPainel(), mesesDe() (+21 more)
+Cohesion: 0.16
+Nodes (28): ComparacaoHud(), Comparacao(), ComparacaoLeaks(), LeaksDoMes(), LeaksLista(), adicionar(), mesesDe(), Vista() (+20 more)
 
 ### Community 26 - "XR Deep boards conectados"
 Cohesion: 0.13
@@ -609,8 +608,8 @@ Cohesion: 0.20
 Nodes (10): Flop, Ligações, Range Linear, Range Polar, Resumo Operacional, River, Third Barrel, Turn Blank (+2 more)
 
 ### Community 64 - "teoria-15.tsx"
-Cohesion: 0.18
-Nodes (13): Cards(), PlayingCard(), RngStrip(), Card(), CardContent(), Collapsible(), CollapsibleContent(), CollapsibleTrigger() (+5 more)
+Cohesion: 0.09
+Nodes (32): useLeaks(), PainelSemanal(), PageHeader(), Cards(), PlayingCard(), RngStrip(), Card(), CardContent() (+24 more)
 
 ### Community 65 - "Árvore #5064"
 Cohesion: 0.22
@@ -715,10 +714,6 @@ Nodes (55): actionLabel(), applyConfigureBarChrome(), bindConfigureCountPillTool
 ### Community 90 - "dependencies"
 Cohesion: 0.10
 Nodes (20): dependencies, class-variance-authority@^0.7.1, cn@^0.5.1, @fontsource-variable/geist@^5.3.0, @fontsource-variable/schibsted-grotesk@^5.3.0, @fontsource-variable/source-serif-4@^5.3.1, radix-ui@^1.8.1, react@^19.3.1 (+12 more)
-
-### Community 91 - "mesa.tsx"
-Cohesion: 0.16
-Nodes (14): lucide-react@^1.65.0, Assento(), BarraAcoes(), Ficha(), Mesa(), Opener, ORDEM, Pos (+6 more)
 
 ### Community 92 - "Estudos de ranges"
 Cohesion: 0.33
@@ -1499,13 +1494,13 @@ Nodes (4): Backdoors, Draws, SPLIT 25%, Top Pairs
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `init()` connect `showToast` to `Init flow`, `Write Swift`, `live-browser.js`, `createLiveBrowserDomHelpers`, `impeccable/SKILL.md`, `connectSSE`, `syncPageChatFocus`, `live.md`, `handleManualEditActivity`, `doctor.md`?**
-  _High betweenness centrality (0.125) - this node is a cross-community bridge._
+  _High betweenness centrality (0.123) - this node is a cross-community bridge._
 - **What connects `cmd`, `@playwright/mcp`, `Perguntas dos alunos — adaptação ao field (buy-ins US$ 250 vs 70/100)` to the rest of the system?**
   _125 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Reta Final — Módulo 12` be split into smaller, more focused modules?**
   _Cohesion score 0.12380952380952381 - nodes in this community are weakly interconnected._
 - **Why does `Commands` connect `impeccable/SKILL.md` to `Init flow`, `showToast`?**
-  _High betweenness centrality (0.071) - this node is a cross-community bridge._
+  _High betweenness centrality (0.068) - this node is a cross-community bridge._
 - **Should `Solver — ICM e Risk Premium (25% vs 16% field left)` be split into smaller, more focused modules?**
   _Cohesion score 0.1225296442687747 - nodes in this community are weakly interconnected._
 
