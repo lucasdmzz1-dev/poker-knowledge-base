@@ -98,6 +98,31 @@ Os erros mais comuns ao montar exemplos de mão, que já foram apontados pelo do
 - **Nunca confundir métricas de HUD.** VPIP e PFR vêm nessa ordem. Antes de usar um número, confirme a notação (WWSF, AP, Pfa) e qual stat ele representa.
 - Exercício segue o padrão: contexto, pergunta, correção e a regra extraída, referenciando as Regras Consolidadas.
 
+## Página de teoria no site (padrão)
+
+Todo módulo que ganha página no site segue o modelo dos módulos 14 (Probe Turn), 15 (Bet vs Missed) e 17 (BB Raise Pot vs SB). Um módulo por vez, e o merge é do dono.
+
+**Arquivos** (em `app/src/`): dados em `data/modNN.ts`, página em `pages/teoria-NN.tsx`, rota em `App.tsx` e `to` no tema de `pages/teoria-index.tsx`. Copie a estrutura de `teoria-14.tsx` ou `teoria-17.tsx`.
+
+**Ordem da página:**
+
+1. Cabeçalho com o spot e as tags (street, posição, sizes). Aula do YouTube em iframe logo abaixo, como no módulo 15. Se o vídeo tiver restrição de idade, o embed não toca: avise o dono.
+2. "Em 30 segundos": lista numerada em serifa, uns 7 itens.
+3. Contexto do módulo (range do vilão, premissas) e "Como escolher o size": cartões com o size em etiqueta e o título em maiúsculas.
+4. O núcleo, em abas (`ToggleGroup`): tipo de board, de turn ou de split. Cada aba é um cartão com o board à esquerda (cartas grandes, nome do board e size) e à direita as faixas (barras de 100/75/50/25) ou as ações.
+5. Boards de referência, regras de bolso (lista numerada) e a fonte.
+
+**Exemplos com cartas:**
+
+- Para cada tipo de mão (TP, SP, dois pares, draws, o restante), um par de cartas pequenas com o nome embaixo, centralizado. Cada ação ou faixa é independente: lista com `flex-wrap`, itens de largura fixa, sem colunas compartilhadas entre ações.
+- Ações em maiúsculas e em cores: BET (verde), CHECK-CALL (branco) e CHECK-RAISE (vermelho).
+- Quando uma faixa tem subgrupos (como seco e carregado no dobrado), cada subgrupo vira um bloco separado, com o board e o nome em negrito.
+- As mãos vêm da fonte. Se for preciso criar exemplos, confira carta a carta com o board (seção acima), marque como ilustrativos e pergunte ao dono quando faltar a mão de uma faixa. Não invente.
+
+**Texto:** português, minúsculas no meio da frase, tema escuro com acento verde. Títulos de cartão em maiúsculas.
+
+**Antes de entregar:** `prettier`, `tsc -b` em `app/`, conferir no navegador, commit e PR para `main`.
+
 ## Dados de stats e leaks
 
 Tabelas de HUD (LeakScope, Preflop Academy) e acompanhamentos semanais do dono não fazem parte dos módulos de teoria. Se forem versionados, ficam fora de `theory/` (por exemplo numa pasta `coaching/`) e nunca alteram regras sozinhos. Só uma correção do coach ou do solver muda uma regra.
