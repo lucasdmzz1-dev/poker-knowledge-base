@@ -1,16 +1,21 @@
 import { Fragment, useMemo, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Secao, CAMPO } from "@/components/analise/secao"
-import { fmt } from "@/lib/analise"
+import { capitalizar, fmt, lerLeaks, rotuloMes, type Leak } from "@/lib/analise"
 import {
   CHAVE_PAINEL,
-  METRICAS,
   comparar,
+  encerrarCiclo,
   estado,
   faixa,
   lerPainel,
   limiteAmostra,
+  metricaDoLeak,
+  metricasDe,
   proximaData,
+  serializarPainel,
+  todasMetricas,
+  type Ciclo,
   type DadosPainel,
   type Escopo,
   type Estado,
@@ -81,7 +86,7 @@ function Tabela({
   salvar: (d: DadosPainel) => void
 }) {
   const periodos = dados[escopo]
-  const metricas = METRICAS.filter((m) => m.escopo === escopo)
+  const metricas = metricasDe(dados, escopo)
   const aberto = periodos.find((p) => !p.fechado)
   const prefixo = escopo === "semana" ? "S" : "M"
   const nome = escopo === "semana" ? "semana" : "mês"
@@ -140,155 +145,170 @@ function Tabela({
         acima disso.
       </p>
 
-      <div className="overflow-x-auto rounded-2xl border">
-        <table className="w-full min-w-[720px] border-collapse text-left">
-          <thead className="bg-card text-sm text-muted-foreground">
-            <tr>
-              <th className="p-3 font-medium">Métrica (%)</th>
-              <th className="p-3 font-medium">Alvo</th>
-              {periodos.map((p, i) => (
-                <th
-                  key={p.id}
-                  className="p-3 align-top font-medium whitespace-nowrap"
-                >
-                  <span className="font-bold text-foreground">
-                    {prefixo}
-                    {i + 1}
-                  </span>
-                  {!p.fechado && (
-                    <span className="ml-2 rounded-full border border-primary px-2 py-0.5 text-xs text-primary">
-                      aberta
-                    </span>
-                  )}
-                  {p.fechado ? (
-                    <>
-                      <div className="text-xs">{p.data}</div>
-                      <div className="text-xs">
-                        {maosCurto(p.maos)}
-                        {p.maos !== null && p.maos < limite && (
-                          <span className="ml-1 text-[#fcc419]">
-                            · amostra pequena
-                          </span>
-                        )}
-                      </div>
-                    </>
-                  ) : (
-                    <div className="mt-1 grid gap-1">
-                      <input
-                        defaultValue={p.data}
-                        aria-label={`Data da ${nome} ${prefixo}${i + 1}`}
-                        onBlur={(e) =>
-                          atualiza(p.id, (x) => ({
-                            ...x,
-                            data: e.target.value.trim(),
-                          }))
-                        }
-                        placeholder={escopo === "semana" ? "dd/mm" : "mm/aaaa"}
-                        className={cn(CAMPO, "h-8 w-24")}
-                      />
-                      <input
-                        inputMode="numeric"
-                        defaultValue={p.maos ?? ""}
-                        aria-label={`Mãos da ${nome} ${prefixo}${i + 1}`}
-                        placeholder="mãos"
-                        onBlur={(e) => {
-                          const n = Number(e.target.value.replace(/\D/g, ""))
-                          atualiza(p.id, (x) => ({
-                            ...x,
-                            maos: e.target.value.trim() === "" || !n ? null : n,
-                          }))
-                        }}
-                        className={cn(CAMPO, "h-8 w-24")}
-                      />
-                    </div>
-                  )}
-                </th>
-              ))}
-              <th className="p-3 font-medium">Tendência</th>
-            </tr>
-          </thead>
-          <tbody>
-            {grupos.map((g) => (
-              <Fragment key={g}>
-                <tr className="border-t bg-card/60">
+      {escopo === "semana" && <EscolherLeaks dados={dados} salvar={salvar} />}
+
+      {metricas.length === 0 ? (
+        <div className="rounded-2xl border border-dashed p-5 text-muted-foreground">
+          Este ciclo ainda não tem métricas. Escolha acima os leaks do mês que
+          você vai acompanhar semana a semana.
+        </div>
+      ) : (
+        <div className="overflow-x-auto rounded-2xl border">
+          <table className="w-full min-w-[720px] border-collapse text-left">
+            <thead className="bg-card text-sm text-muted-foreground">
+              <tr>
+                <th className="p-3 font-medium">Métrica (%)</th>
+                <th className="p-3 font-medium">Alvo</th>
+                {periodos.map((p, i) => (
                   <th
-                    colSpan={periodos.length + 3}
-                    className="p-3 text-left text-sm font-bold"
+                    key={p.id}
+                    className="p-3 align-top font-medium whitespace-nowrap"
                   >
-                    {g}
-                  </th>
-                </tr>
-                {metricas
-                  .filter((m) => m.grupo === g)
-                  .map((m) => {
-                    const v = numeros(periodos, m)
-                    return (
-                      <tr key={m.id} className="border-t align-top">
-                        <th
-                          scope="row"
-                          className="min-w-56 p-3 text-left font-medium"
-                        >
-                          {m.nome}
-                          {m.fonte && (
-                            <span className="ml-2 text-xs font-normal text-muted-foreground">
-                              {m.fonte}
+                    <span className="font-bold text-foreground">
+                      {prefixo}
+                      {i + 1}
+                    </span>
+                    {!p.fechado && (
+                      <span className="ml-2 rounded-full border border-primary px-2 py-0.5 text-xs text-primary">
+                        aberta
+                      </span>
+                    )}
+                    {p.fechado ? (
+                      <>
+                        <div className="text-xs">{p.data}</div>
+                        <div className="text-xs">
+                          {maosCurto(p.maos)}
+                          {p.maos !== null && p.maos < limite && (
+                            <span className="ml-1 text-[#fcc419]">
+                              · amostra pequena
                             </span>
                           )}
-                          <p className="mt-1 max-w-[44ch] text-xs font-normal text-muted-foreground">
-                            {m.nota}
-                          </p>
-                        </th>
-                        <td className="p-3 text-sm whitespace-nowrap tabular-nums">
-                          <div>{faixa(m)}</div>
-                          {m.meta && (
-                            <div className="mt-1 max-w-40 text-xs whitespace-normal text-muted-foreground">
-                              {m.meta}
-                            </div>
-                          )}
-                        </td>
-                        {periodos.map((p) => (
-                          <td key={p.id} className="p-2">
-                            {p.fechado ? (
-                              <span
-                                className={cn(
-                                  "block px-3 py-2 font-medium tabular-nums",
-                                  corValor(p.valores[m.id], m)
-                                )}
-                              >
-                                {typeof p.valores[m.id] === "number"
-                                  ? fmt(p.valores[m.id] as number)
-                                  : "–"}
+                        </div>
+                      </>
+                    ) : (
+                      <div className="mt-1 grid gap-1">
+                        <input
+                          defaultValue={p.data}
+                          aria-label={`Data da ${nome} ${prefixo}${i + 1}`}
+                          onBlur={(e) =>
+                            atualiza(p.id, (x) => ({
+                              ...x,
+                              data: e.target.value.trim(),
+                            }))
+                          }
+                          placeholder={
+                            escopo === "semana" ? "dd/mm" : "mm/aaaa"
+                          }
+                          className={cn(CAMPO, "h-8 w-24")}
+                        />
+                        <input
+                          inputMode="numeric"
+                          defaultValue={p.maos ?? ""}
+                          aria-label={`Mãos da ${nome} ${prefixo}${i + 1}`}
+                          placeholder="mãos"
+                          onBlur={(e) => {
+                            const n = Number(e.target.value.replace(/\D/g, ""))
+                            atualiza(p.id, (x) => ({
+                              ...x,
+                              maos:
+                                e.target.value.trim() === "" || !n ? null : n,
+                            }))
+                          }}
+                          className={cn(CAMPO, "h-8 w-24")}
+                        />
+                      </div>
+                    )}
+                  </th>
+                ))}
+                <th className="p-3 font-medium">Tendência</th>
+              </tr>
+            </thead>
+            <tbody>
+              {grupos.map((g) => (
+                <Fragment key={g}>
+                  <tr className="border-t bg-card/60">
+                    <th
+                      colSpan={periodos.length + 3}
+                      className="p-3 text-left text-sm font-bold"
+                    >
+                      {g}
+                    </th>
+                  </tr>
+                  {metricas
+                    .filter((m) => m.grupo === g)
+                    .map((m) => {
+                      const v = numeros(periodos, m)
+                      return (
+                        <tr key={m.id} className="border-t align-top">
+                          <th
+                            scope="row"
+                            className="min-w-56 p-3 text-left font-medium"
+                          >
+                            {m.nome}
+                            {m.fonte && (
+                              <span className="ml-2 text-xs font-normal text-muted-foreground">
+                                {m.fonte}
                               </span>
-                            ) : (
-                              <input
-                                inputMode="decimal"
-                                aria-label={`${m.nome}, ${prefixo}${periodos.indexOf(p) + 1}`}
-                                defaultValue={
-                                  typeof p.valores[m.id] === "number"
-                                    ? String(p.valores[m.id]).replace(".", ",")
-                                    : ""
-                                }
-                                onBlur={(e) => definir(p, m, e.target.value)}
-                                className={cn(
-                                  CAMPO,
-                                  "w-24 tabular-nums",
-                                  corValor(p.valores[m.id], m)
-                                )}
-                              />
+                            )}
+                            <p className="mt-1 max-w-[44ch] text-xs font-normal text-muted-foreground">
+                              {m.nota}
+                            </p>
+                          </th>
+                          <td className="p-3 text-sm whitespace-nowrap tabular-nums">
+                            <div>{faixa(m)}</div>
+                            {m.meta && (
+                              <div className="mt-1 max-w-40 text-xs whitespace-normal text-muted-foreground">
+                                {m.meta}
+                              </div>
                             )}
                           </td>
-                        ))}
-                        <td className="p-3 text-sm">
-                          <Tendencia valores={v} m={m} />
-                        </td>
-                      </tr>
-                    )
-                  })}
-              </Fragment>
-            ))}
-          </tbody>
-        </table>
-      </div>
+                          {periodos.map((p) => (
+                            <td key={p.id} className="p-2">
+                              {p.fechado ? (
+                                <span
+                                  className={cn(
+                                    "block px-3 py-2 font-medium tabular-nums",
+                                    corValor(p.valores[m.id], m)
+                                  )}
+                                >
+                                  {typeof p.valores[m.id] === "number"
+                                    ? fmt(p.valores[m.id] as number)
+                                    : "–"}
+                                </span>
+                              ) : (
+                                <input
+                                  inputMode="decimal"
+                                  aria-label={`${m.nome}, ${prefixo}${periodos.indexOf(p) + 1}`}
+                                  defaultValue={
+                                    typeof p.valores[m.id] === "number"
+                                      ? String(p.valores[m.id]).replace(
+                                          ".",
+                                          ","
+                                        )
+                                      : ""
+                                  }
+                                  onBlur={(e) => definir(p, m, e.target.value)}
+                                  className={cn(
+                                    CAMPO,
+                                    "w-24 tabular-nums",
+                                    corValor(p.valores[m.id], m)
+                                  )}
+                                />
+                              )}
+                            </td>
+                          ))}
+                          <td className="p-3 text-sm">
+                            <Tendencia valores={v} m={m} />
+                          </td>
+                        </tr>
+                      )
+                    })}
+                </Fragment>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
 
       <div className="mt-5 flex flex-wrap items-center gap-3">
         <Button
@@ -313,18 +333,274 @@ function Tabela({
         >
           Reabrir a última salva
         </Button>
+        {escopo === "semana" && <EncerrarCiclo dados={dados} salvar={salvar} />}
         <span className="text-sm text-muted-foreground">
           Os números ficam salvos assim que você sai de cada campo.
         </span>
       </div>
+
+      {escopo === "semana" && <CiclosAnteriores ciclos={dados.ciclos ?? []} />}
     </>
+  )
+}
+
+function EncerrarCiclo({
+  dados,
+  salvar,
+}: {
+  dados: DadosPainel
+  salvar: (d: DadosPainel) => void
+}) {
+  const [confirmar, setConfirmar] = useState(false)
+  if (!confirmar)
+    return (
+      <Button
+        variant="outline"
+        className="h-11 px-5"
+        onClick={() => setConfirmar(true)}
+      >
+        Encerrar o mês e começar outro
+      </Button>
+    )
+  return (
+    <span className="flex flex-wrap items-center gap-2 rounded-2xl border border-primary/60 p-2 pl-4 text-sm">
+      Guarda as {dados.semana.length} semanas e as métricas no arquivo e abre um
+      ciclo novo e vazio. Nada é apagado.
+      <Button
+        className="h-9 px-4 font-bold"
+        onClick={() => {
+          salvar(encerrarCiclo(dados))
+          setConfirmar(false)
+        }}
+      >
+        Encerrar e guardar
+      </Button>
+      <Button
+        variant="ghost"
+        className="h-9 px-3"
+        onClick={() => setConfirmar(false)}
+      >
+        Cancelar
+      </Button>
+    </span>
+  )
+}
+
+function EscolherLeaks({
+  dados,
+  salvar,
+}: {
+  dados: DadosPainel
+  salvar: (d: DadosPainel) => void
+}) {
+  const leaks = useMemo(() => lerLeaks(), [])
+  const meses = [...new Set(leaks.map((l) => l.mes))].sort().reverse()
+  const [escolhido, setAberto] = useState(false)
+  const vazio = metricasDe(dados, "semana").length === 0
+  const aberto = escolhido || vazio
+  const [mes, setMes] = useState(meses[0] ?? "")
+  const [marcados, setMarcados] = useState<string[]>([])
+  const atuais = new Set(metricasDe(dados, "semana").map((m) => m.id))
+  const doMes = leaks.filter((l) => l.mes === mes)
+
+  function adicionar() {
+    const novas = doMes
+      .filter((l) => marcados.includes(l.id))
+      .map(metricaDoLeak)
+      .filter((m) => !atuais.has(m.id))
+    if (novas.length === 0) return
+    salvar({
+      ...dados,
+      metricasSemana: [...metricasDe(dados, "semana"), ...novas],
+      origemSemana: dados.origemSemana ?? mes,
+    })
+    setMarcados([])
+  }
+
+  if (!aberto)
+    return (
+      <div className="mb-4">
+        <Button
+          variant="outline"
+          className="h-10 px-4"
+          onClick={() => setAberto(true)}
+        >
+          Adicionar leaks do mês ao painel
+        </Button>
+      </div>
+    )
+
+  const linha = (l: Leak) => {
+    const ja = atuais.has(`semana:${l.mes}:${l.id}`)
+    return (
+      <label
+        key={l.id}
+        className={cn(
+          "flex items-start gap-3 rounded-xl border p-3 text-sm",
+          ja ? "opacity-50" : "cursor-pointer hover:bg-card"
+        )}
+      >
+        <input
+          type="checkbox"
+          disabled={ja}
+          checked={ja || marcados.includes(l.id)}
+          onChange={(e) =>
+            setMarcados(
+              e.target.checked
+                ? [...marcados, l.id]
+                : marcados.filter((x) => x !== l.id)
+            )
+          }
+          className="mt-1 accent-primary"
+        />
+        <span>
+          <span className="font-medium">
+            {l.stat} — {l.spot}
+          </span>
+          <span className="ml-2 text-muted-foreground tabular-nums">
+            {fmt(l.real)} contra {fmt(l.solver)}
+          </span>
+          {ja && <span className="ml-2 text-primary">já no painel</span>}
+        </span>
+      </label>
+    )
+  }
+
+  return (
+    <div className="mb-5 rounded-2xl border bg-card/40 p-4">
+      <div className="mb-3 flex flex-wrap items-center gap-3">
+        <h3 className="font-bold">Leaks do mês para acompanhar por semana</h3>
+        <label className="flex items-center gap-2 text-sm text-muted-foreground">
+          Mês
+          <select
+            className={cn(CAMPO, "w-auto")}
+            value={mes}
+            onChange={(e) => {
+              setMes(e.target.value)
+              setMarcados([])
+            }}
+          >
+            {meses.map((m) => (
+              <option key={m} value={m}>
+                {capitalizar(rotuloMes(m))}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+      {doMes.length === 0 ? (
+        <p className="text-sm text-muted-foreground">
+          Sem leaks neste mês ainda. Eles aparecem aqui quando a atualização
+          mensal entrar em Leaks do mês.
+        </p>
+      ) : (
+        <div className="grid gap-2 sm:grid-cols-2">{doMes.map(linha)}</div>
+      )}
+      <div className="mt-3 flex gap-2">
+        <Button
+          className="h-10 px-5 font-bold"
+          disabled={marcados.length === 0}
+          onClick={adicionar}
+        >
+          Adicionar ao painel
+        </Button>
+        {!vazio && (
+          <Button
+            variant="ghost"
+            className="h-10 px-4"
+            onClick={() => setAberto(false)}
+          >
+            Fechar
+          </Button>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function CiclosAnteriores({ ciclos }: { ciclos: Ciclo[] }) {
+  if (ciclos.length === 0) return null
+  return (
+    <div className="mt-8">
+      <h3 className="mb-1 text-lg font-bold">Ciclos anteriores</h3>
+      <p className="mb-3 max-w-[70ch] text-sm text-muted-foreground">
+        Os meses que você já encerrou ficam guardados aqui, com as métricas e as
+        semanas como eram. Também dá para compará-los em Comparar períodos.
+      </p>
+      <div className="grid gap-3">
+        {[...ciclos].reverse().map((c) => (
+          <details key={c.id} className="rounded-2xl border">
+            <summary className="cursor-pointer p-4 font-medium">
+              {c.rotulo}
+              {c.origem && (
+                <span className="ml-2 text-sm font-normal text-muted-foreground">
+                  leaks de {rotuloMes(c.origem)}
+                </span>
+              )}
+              <span className="ml-2 text-sm font-normal text-muted-foreground">
+                · encerrado em {c.encerradoEm} · {c.metricas.length} métricas
+              </span>
+            </summary>
+            <div className="overflow-x-auto border-t">
+              <table className="w-full min-w-[560px] border-collapse text-left text-sm">
+                <thead className="bg-card text-muted-foreground">
+                  <tr>
+                    <th className="p-3 font-medium">Métrica</th>
+                    <th className="p-3 font-medium">Alvo</th>
+                    {c.periodos.map((p, i) => (
+                      <th key={p.id} className="p-3 font-medium">
+                        S{i + 1}
+                        <div className="text-xs font-normal">{p.data}</div>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {c.metricas.map((m) => (
+                    <tr key={m.id} className="border-t">
+                      <th scope="row" className="p-3 text-left font-medium">
+                        {m.nome}
+                      </th>
+                      <td className="p-3 whitespace-nowrap text-muted-foreground tabular-nums">
+                        {faixa(m)}
+                      </td>
+                      {c.periodos.map((p) => (
+                        <td
+                          key={p.id}
+                          className={cn(
+                            "p-3 font-medium tabular-nums",
+                            corValor(p.valores[m.id], m)
+                          )}
+                        >
+                          {typeof p.valores[m.id] === "number"
+                            ? fmt(p.valores[m.id] as number)
+                            : "–"}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
   )
 }
 
 function Comparar({ dados }: { dados: DadosPainel }) {
   const lista = useMemo(
-    () =>
-      (["semana", "mes"] as const).flatMap((escopo) =>
+    () => [
+      ...(dados.ciclos ?? []).flatMap((c) =>
+        c.periodos.map((p, i) => ({
+          chave: `semana|${c.id}|${p.id}`,
+          rotulo: `Semana S${i + 1} · ${p.data} (${c.rotulo.toLowerCase()})`,
+          escopo: "semana" as const,
+          p,
+        }))
+      ),
+      ...(["semana", "mes"] as const).flatMap((escopo) =>
         dados[escopo].map((p, i) => ({
           chave: `${escopo}|${p.id}`,
           rotulo: `${escopo === "semana" ? "Semana S" : "Mês M"}${i + 1} · ${p.data}`,
@@ -332,6 +608,7 @@ function Comparar({ dados }: { dados: DadosPainel }) {
           p,
         }))
       ),
+    ],
     [dados]
   )
   const comDados = lista.filter((x) =>
@@ -351,7 +628,7 @@ function Comparar({ dados }: { dados: DadosPainel }) {
   const A = lista.find((x) => x.chave === a)
   const B = lista.find((x) => x.chave === b)
 
-  const linhas = METRICAS.filter((m) => {
+  const linhas = todasMetricas(dados).filter((m) => {
     const va = A?.p.valores[m.id]
     const vb = B?.p.valores[m.id]
     return typeof va === "number" || typeof vb === "number"
@@ -463,7 +740,7 @@ export function PainelSemanal() {
 
   const salvar = (d: DadosPainel) => {
     setDados(d)
-    writeJSON(CHAVE_PAINEL, d)
+    writeJSON(CHAVE_PAINEL, serializarPainel(d))
   }
 
   return (

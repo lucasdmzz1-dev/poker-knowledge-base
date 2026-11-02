@@ -1,3 +1,4 @@
+import { novoId, rotuloMes, type Leak } from "@/lib/analise"
 import { readJSON } from "@/lib/storage"
 
 export type Escopo = "semana" | "mes"
@@ -23,9 +24,24 @@ export interface Periodo {
   valores: Record<string, number | null>
 }
 
+// Um ciclo é o conjunto de métricas semanais de um mês com as semanas dele.
+// Ao encerrar, o ciclo vai para o arquivo e continua guardado para consulta.
+export interface Ciclo {
+  id: string
+  rotulo: string // "Semanas 06/10 a 26/10"
+  origem?: string // mês dos leaks que originaram as métricas
+  encerradoEm: string // "01/11/2026"
+  metricas: Metrica[]
+  periodos: Periodo[]
+}
+
 export interface DadosPainel {
   semana: Periodo[]
   mes: Periodo[]
+  // Métricas semanais do ciclo atual. Sem isso, vale a lista inicial (SEMANAIS).
+  metricasSemana?: Metrica[]
+  origemSemana?: string
+  ciclos?: Ciclo[]
 }
 
 export const CHAVE_PAINEL = "pkb:painel2"
@@ -398,13 +414,145 @@ function periodosValidos(v: unknown): Periodo[] | null {
   )
 }
 
+// JSON não guarda Infinity: no armazenamento o "sem limite" vira ±SEM_LIMITE.
+const SEM_LIMITE = 1e9
+
+const limiteParaSalvar = (n: number) =>
+  n === Infinity ? SEM_LIMITE : n === -Infinity ? -SEM_LIMITE : n
+const limiteLido = (n: number) =>
+  n >= SEM_LIMITE ? Infinity : n <= -SEM_LIMITE ? -Infinity : n
+
+function metricasValidas(v: unknown): Metrica[] | null {
+  if (!Array.isArray(v)) return null
+  return v
+    .filter(
+      (m): m is Metrica =>
+        ehObj(m) &&
+        typeof m.id === "string" &&
+        typeof m.nome === "string" &&
+        typeof m.lo === "number" &&
+        typeof m.hi === "number" &&
+        typeof m.nota === "string"
+    )
+    .map((m) => ({ ...m, lo: limiteLido(m.lo), hi: limiteLido(m.hi) }))
+}
+
+function ciclosValidos(v: unknown): Ciclo[] {
+  if (!Array.isArray(v)) return []
+  return v.flatMap((c) => {
+    if (!ehObj(c) || typeof c.id !== "string") return []
+    const metricas = metricasValidas(c.metricas)
+    const periodos = periodosValidos(c.periodos)
+    if (!metricas || !periodos) return []
+    return [
+      {
+        id: c.id,
+        rotulo: typeof c.rotulo === "string" ? c.rotulo : "Ciclo anterior",
+        origem: typeof c.origem === "string" ? c.origem : undefined,
+        encerradoEm: typeof c.encerradoEm === "string" ? c.encerradoEm : "",
+        metricas,
+        periodos,
+      },
+    ]
+  })
+}
+
 export function lerPainel(): DadosPainel {
   const bruto = readJSON<unknown>(CHAVE_PAINEL, null, ehObj)
   if (!ehObj(bruto)) return PAINEL_INICIAL
   const semana = periodosValidos(bruto.semana)
   const mes = periodosValidos(bruto.mes)
   if (!semana || !mes) return PAINEL_INICIAL
-  return { semana, mes }
+  return {
+    semana,
+    mes,
+    metricasSemana: metricasValidas(bruto.metricasSemana) ?? undefined,
+    origemSemana:
+      typeof bruto.origemSemana === "string" ? bruto.origemSemana : undefined,
+    ciclos: ciclosValidos(bruto.ciclos),
+  }
+}
+
+const paraSalvar = (m: Metrica): Metrica => ({
+  ...m,
+  lo: limiteParaSalvar(m.lo),
+  hi: limiteParaSalvar(m.hi),
+})
+
+export function serializarPainel(d: DadosPainel): DadosPainel {
+  return {
+    ...d,
+    metricasSemana: d.metricasSemana?.map(paraSalvar),
+    ciclos: d.ciclos?.map((c) => ({
+      ...c,
+      metricas: c.metricas.map(paraSalvar),
+    })),
+  }
+}
+
+export function metricasDe(d: DadosPainel, escopo: Escopo): Metrica[] {
+  if (escopo === "semana" && d.metricasSemana) return d.metricasSemana
+  return METRICAS.filter((m) => m.escopo === escopo)
+}
+
+// Todas as métricas que já existiram, para comparar períodos de ciclos diferentes.
+export function todasMetricas(d: DadosPainel): Metrica[] {
+  const vistas = new Map<string, Metrica>()
+  for (const m of [
+    ...(d.ciclos ?? []).flatMap((c) => c.metricas),
+    ...metricasDe(d, "semana"),
+    ...metricasDe(d, "mes"),
+  ])
+    vistas.set(m.id, m)
+  return [...vistas.values()]
+}
+
+// Transforma um leak do mês numa métrica semanal. O alvo é o lado da referência
+// em que o leak deveria estar.
+export function metricaDoLeak(l: Leak): Metrica {
+  const abaixo = l.real < l.solver
+  return {
+    id: `semana:${l.mes}:${l.id}`,
+    escopo: "semana",
+    grupo: l.fase === "preflop" ? PRE : POS,
+    nome: `${l.stat} — ${l.spot}`,
+    lo: abaixo ? l.solver : -Infinity,
+    hi: abaixo ? Infinity : l.solver,
+    nota: l.fazer,
+    fonte: rotuloMes(l.mes),
+  }
+}
+
+// Fecha o ciclo das semanas: guarda métricas e semanas no arquivo e abre um
+// ciclo novo, sem métricas, para receber os leaks do mês seguinte.
+export function encerrarCiclo(d: DadosPainel): DadosPainel {
+  const primeira = d.semana[0]
+  const ultima = d.semana[d.semana.length - 1]
+  const hoje = new Date().toLocaleDateString("pt-BR")
+  const ciclo: Ciclo = {
+    id: novoId(),
+    rotulo: primeira
+      ? `Semanas ${primeira.data} a ${ultima.data}`
+      : "Ciclo sem semanas",
+    origem: d.origemSemana,
+    encerradoEm: hoje,
+    metricas: metricasDe(d, "semana"),
+    periodos: d.semana.map((p) => ({ ...p, fechado: true })),
+  }
+  const nova: Periodo = {
+    id: `semana-${Date.now().toString(36)}`,
+    data: ultima ? proximaData("semana", ultima.data) : "",
+    maos: null,
+    fechado: false,
+    valores: {},
+  }
+  return {
+    ...d,
+    semana: [nova],
+    metricasSemana: [],
+    origemSemana: undefined,
+    ciclos: [...(d.ciclos ?? []), ciclo],
+  }
 }
 
 // Distância até a faixa-alvo: 0 dentro do alvo.

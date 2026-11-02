@@ -24,6 +24,7 @@ Vite, React 19, TypeScript estrito, Tailwind v4, shadcn/ui, react-router-dom, lu
   - **Leaks do mês**: abre em "Prints e stats do HUD" (prints do mês e as 169 stats por seção). O botão "Ver os leaks do mês" leva à lista de leaks, separada em pré-flop e pós-flop.
   - **Comparação**: stats do HUD mês a mês e leaks, com as stats fixadas (estrela) primeiro.
   - **Painel semanal**: semanas, meses e comparação de períodos, com botão para salvar a semana e abrir a próxima.
+    - As métricas semanais são os leaks do mês escolhidos em "Adicionar leaks do mês ao painel". "Encerrar o mês e começar outro" guarda as métricas e as semanas em "Ciclos anteriores" (nada é apagado, e dá para comparar em Comparar períodos) e abre um ciclo vazio para os leaks do mês seguinte. Leaks que continuam voltam na atualização mensal e entram de novo.
   - **Treino**: resultado do treino.
 
 ## Regras de exibição das stats
