@@ -11,6 +11,11 @@ const m05: ModuloTeoria = {
     "40bb",
     "Sizes B25, B40, B70 e B100",
   ],
+  videos: [
+    { id: "9HYSNZPf464", nome: "C-Bet OOP 1" },
+    { id: "GZ22MZ0AkCk", nome: "C-Bet OOP 2" },
+    { id: "uuxtxkIsfrw", nome: "2nd Barrel OOP" },
+  ],
   secoes: [
     {
       tipo: "lista",
@@ -190,8 +195,6 @@ const m05: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/05-CBet-OOP-40bb (guideline). A guideline não traz boards nem mãos de exemplo",
 }
 
 export default m05

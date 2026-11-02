@@ -33,6 +33,7 @@ const m09: ModuloTeoria = {
   nome: "Bet Check Bet",
   spot: "Pote single raised · river · bet no flop, check no turn e bet no river",
   tags: ["River", "Range capado", "Value e bluff"],
+  videos: [{ id: "_3RgKL4j8RE" }],
   secoes: [
     {
       tipo: "lista",
@@ -197,8 +198,6 @@ const m09: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/09-BET-CHECK-BET (guideline). A guideline não traz boards nem mãos de exemplo",
 }
 
 export default m09

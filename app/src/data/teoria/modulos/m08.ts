@@ -264,8 +264,6 @@ const m08: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/08-3BET-POT (guideline). A guideline não traz boards nem mãos de exemplo",
 }
 
 export default m08

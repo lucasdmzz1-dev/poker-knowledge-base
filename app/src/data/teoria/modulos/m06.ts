@@ -6,6 +6,7 @@ const m06: ModuloTeoria = {
   nome: "Check-Raise Short Stack",
   spot: "Pote single raised · você no BB, fora de posição · 20bb · contra EP e contra BTN",
   tags: ["Flop", "Fora de posição", "20bb", "Check-raise"],
+  videos: [{ id: "wpL6lMyYjSo" }],
   secoes: [
     {
       tipo: "lista",
@@ -214,8 +215,6 @@ const m06: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/06-XR-SHORT (guideline). O board Q-9-5 é o da guideline, com naipes ilustrativos. As outras mãos ficam só em texto, porque a fonte não traz exemplos",
 }
 
 export default m06

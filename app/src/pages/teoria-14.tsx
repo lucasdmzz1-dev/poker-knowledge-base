@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 import { PageHeader } from "@/components/page-header"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -9,13 +8,15 @@ import {
   Etiqueta,
   Exemplo,
   Exemplos,
-  Fonte,
   Intro,
   ITEM,
   Lista,
   Nota,
   RotuloBoard,
   Secao,
+  Secoes,
+  Voltar,
+  Videos,
   TextoMini,
   TituloMini,
 } from "@/components/teoria/blocos"
@@ -53,34 +54,15 @@ export default function Teoria14() {
 
   return (
     <main>
-      <PageHeader
-        title={mod14.nome}
-        lead={mod14.spot}
-        topo={
-          <Link
-            to="/teoria"
-            className="transition-colors duration-150 hover:text-foreground"
-          >
-            ‹ Teoria
-          </Link>
-        }
-      >
+      <PageHeader title={mod14.nome} lead={mod14.spot} topo={<Voltar />}>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <Badge variant="outline">Turn</Badge>
           <Badge variant="outline">Fora de posição</Badge>
           <Badge variant="outline">Sizes B40, B70 e B100</Badge>
         </div>
-        <div className="mx-auto mt-8 aspect-video w-full max-w-[720px] overflow-hidden rounded-[22px] border">
-          <iframe
-            src="https://www.youtube.com/embed/CkP1v_BjJcU"
-            title="Aula: Probe Turn"
-            className="size-full"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-            allowFullScreen
-          />
-        </div>
+        <Videos videos={[{ id: "CkP1v_BjJcU" }]} titulo={mod14.nome} />
       </PageHeader>
-      <div className="mx-auto max-w-[1080px] px-5 pb-20">
+      <Secoes>
         <Secao titulo="Em 30 segundos">
           <Lista itens={mod14.em30} />
         </Secao>
@@ -187,9 +169,7 @@ export default function Teoria14() {
         <Secao titulo="Regras de bolso">
           <Lista itens={mod14.pocket} />
         </Secao>
-
-        <Fonte>Fonte: {mod14.fonte}.</Fonte>
-      </div>
+      </Secoes>
     </main>
   )
 }

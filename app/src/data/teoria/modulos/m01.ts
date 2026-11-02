@@ -6,6 +6,7 @@ const m01: ModuloTeoria = {
   nome: "C-Bet IP Short Stack",
   spot: "Pote single raised · você em posição, como agressor · cerca de 20bb efetivos",
   tags: ["Flop", "Em posição", "20bb", "Sizes B25 e B40"],
+  videos: [{ id: "0AXc1R64PXU" }],
   secoes: [
     {
       tipo: "lista",
@@ -191,8 +192,6 @@ const m01: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/01-CBet-IP-Short-Stack (guideline, videoaula e solver). Os boards são os da guideline; as mãos de cada grupo ficam só em texto, porque a fonte não traz mãos de exemplo",
 }
 
 export default m01

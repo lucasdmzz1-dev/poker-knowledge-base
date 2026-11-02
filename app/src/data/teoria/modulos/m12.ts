@@ -178,6 +178,7 @@ const m12: ModuloTeoria = {
   nome: "Reta Final",
   spot: "Reta final do torneio · cerca de 10% do field restante, até a mesa final e o 3-handed · 15bb a 40bb",
   tags: ["Pré-flop", "Reta final", "ICM", "15bb a 40bb"],
+  videos: [{ id: "B3nBGrRGvtM" }],
   secoes: [
     {
       tipo: "lista",
@@ -359,8 +360,6 @@ const m12: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/12-RETA-FINAL (guideline e aula). Pareia com o módulo 13 (ICM e risk premium). Os naipes das mãos de exemplo só marcam suited e offsuit",
 }
 
 export default m12

@@ -6,6 +6,7 @@ const m03: ModuloTeoria = {
   nome: "C-Bet IP + Second Barrel",
   spot: "Pote single raised · você em posição, como agressor · do flop ao turn, depois de receber call",
   tags: ["Flop e turn", "Em posição", "Second barrel"],
+  videos: [{ id: "jYVMQnA24NM" }],
   secoes: [
     {
       tipo: "lista",
@@ -141,8 +142,6 @@ const m03: ModuloTeoria = {
       ],
     },
   ],
-  fonte:
-    "theory/03-Second-Barrel-IP (guideline). A guideline é conceitual: não traz boards nem mãos de exemplo",
 }
 
 export default m03
