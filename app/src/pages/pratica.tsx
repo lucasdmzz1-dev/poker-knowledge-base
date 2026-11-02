@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
+import { ArrowLeft } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -12,6 +13,7 @@ import {
   tamanhoBB,
   type Opener,
 } from "@/components/poker/mesa"
+import PraticaProbe, { SeletorTema, type Tema } from "@/pages/pratica-probe"
 import { mod15, tipoById, type Situacao, type TipoId } from "@/data/mod15"
 import {
   randomInt,
@@ -64,7 +66,19 @@ const ACOES: {
   },
 ]
 
-export default function Pratica() {
+function negritoPct(t: string): ReactNode {
+  return t.split(/(\d+%)/).map((parte, k) =>
+    /^\d+%$/.test(parte) ? (
+      <strong key={k} className="text-foreground">
+        {parte}
+      </strong>
+    ) : (
+      parte
+    )
+  )
+}
+
+function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
   const [fase, setFase] = useState<Fase>("setup")
   const [tipos, setTipos] = useState<TipoId[]>(DISPONIVEIS)
   const [qty, setQty] = useState("10")
@@ -193,19 +207,7 @@ export default function Pratica() {
             onSubmit={iniciar}
             className="mx-auto grid max-w-xl gap-7 rounded-[22px] border bg-card p-6 md:p-8"
           >
-            <fieldset className="grid gap-2.5">
-              <legend className="mb-1 font-medium text-muted-foreground">
-                Tema
-              </legend>
-              <div className="flex flex-wrap gap-2">
-                <span className="rounded-full border bg-card px-3.5 py-2">
-                  Bet vs Missed C-Bet
-                </span>
-                <span className="rounded-full border bg-card px-3.5 py-2 text-muted-foreground opacity-50">
-                  Misturar temas · em breve
-                </span>
-              </div>
-            </fieldset>
+            <SeletorTema tema="bet" onTema={onTema} />
 
             <fieldset className="grid gap-2.5">
               <legend className="mb-1 font-medium text-muted-foreground">
@@ -284,14 +286,93 @@ export default function Pratica() {
   if (fase === "fim") {
     const acertos = itens.filter((x) => x.ok).length
     const pct = Math.round((acertos / itens.length) * 100)
+    const porTipo = mod15.tipos
+      .map((t) => {
+        const doTipo = itens.filter((x) => x.tipo === t.id)
+        const certos = doTipo.filter((x) => x.ok).length
+        return { nome: t.nome, total: doTipo.length, certos }
+      })
+      .filter((x) => x.total > 0)
+      .sort(
+        (a, b) => a.certos / a.total - b.certos / b.total || b.total - a.total
+      )
+    const piorTipo = porTipo.find((x) => x.certos < x.total)
+    const erros = itens.filter((x) => !x.ok)
+    const motivos = [
+      {
+        nome: "Check quando era para apostar",
+        n: erros.filter((x) => x.resp === "Check").length,
+      },
+      {
+        nome: "Apostou quando era check",
+        n: erros.filter((x) => x.esperado === "Check").length,
+      },
+      {
+        nome: "Apostou com o size errado",
+        n: erros.filter((x) => x.resp !== "Check" && x.esperado !== "Check")
+          .length,
+      },
+    ].filter((m) => m.n > 0)
     return (
       <main>
         <PageHeader title="Treino concluído" />
-        <div className="enter mx-auto grid max-w-[560px] justify-items-center gap-4 px-5 pb-20 text-center">
+        <div className="enter mx-auto grid max-w-[620px] justify-items-center gap-4 px-5 pb-20 text-center">
           <div className="text-[clamp(2.4rem,6vw,3.4rem)] font-bold">
             {acertos} de {itens.length}{" "}
             <span className="text-2xl text-muted-foreground">{pct}%</span>
           </div>
+          {piorTipo ? (
+            <p className="text-lg text-muted-foreground">
+              Você mais errou no flop{" "}
+              <strong className="text-foreground">
+                {piorTipo.nome.toLowerCase()}
+              </strong>
+              : {piorTipo.total - piorTipo.certos} erro
+              {piorTipo.total - piorTipo.certos > 1 ? "s" : ""} em{" "}
+              {piorTipo.total} mãos.
+            </p>
+          ) : (
+            <p className="text-lg text-muted-foreground">
+              Nenhum erro nesta sessão.
+            </p>
+          )}
+          <Card className="grid w-full gap-3 rounded-2xl p-5 text-left">
+            <h3 className="font-bold">Por tipo de board</h3>
+            {porTipo.map((x) => {
+              const p = Math.round((x.certos / x.total) * 100)
+              return (
+                <div key={x.nome} className="grid gap-1">
+                  <div className="flex justify-between gap-3">
+                    <span>{x.nome}</span>
+                    <span className="text-muted-foreground">
+                      {x.certos} de {x.total} ·{" "}
+                      <strong className="text-foreground">{p}%</strong>
+                    </span>
+                  </div>
+                  <div className="h-2 overflow-hidden rounded-full bg-muted">
+                    <div
+                      className={cn(
+                        "h-full rounded-full",
+                        p >= 70 ? "bg-primary" : "bg-destructive"
+                      )}
+                      style={{ width: `${p}%` }}
+                    />
+                  </div>
+                </div>
+              )
+            })}
+            {motivos.length > 0 && (
+              <>
+                <h3 className="mt-2 font-bold">Tipo de erro</h3>
+                {motivos.map((m) => (
+                  <div key={m.nome} className="flex justify-between gap-3">
+                    <span>{m.nome}</span>
+                    <strong>{m.n}</strong>
+                  </div>
+                ))}
+              </>
+            )}
+          </Card>
           <p className="text-lg text-muted-foreground">
             Quer levar esta sessão para a Análise? Sessões de teste ficam de
             fora.
@@ -326,18 +407,41 @@ export default function Pratica() {
   const ok = resp === esperado
   const ultimo = i === fila.length - 1
   const tipoNome = tipoAtual.nome.toLowerCase()
+  const tipoNegrito = <strong className="text-foreground">{tipoNome}</strong>
 
-  let texto: string
+  const pct = <strong className="text-foreground">{atual.bucket}%</strong>
+  let texto: ReactNode
   if (ok) {
-    texto = apostar
-      ? `Sua mão está no bucket de ${atual.bucket}% e o RNG ${roll} cai na aposta. O size do ${tipoNome} é ${tipoAtual.size}.`
-      : `Sua mão está no bucket de ${atual.bucket}%, mas o RNG ${roll} cai no check.`
+    texto = apostar ? (
+      <>
+        Sua mão está no bucket de {pct} e o RNG {roll} cai na aposta. O size do{" "}
+        {tipoNegrito} é {tipoAtual.size}.
+      </>
+    ) : (
+      <>
+        Sua mão está no bucket de {pct}, mas o RNG {roll} cai no check.
+      </>
+    )
   } else if (resp !== "Check" && apostar) {
-    texto = `Apostar estava certo (RNG ${roll} ≤ ${atual.bucket}), mas o size do ${tipoNome} é ${tipoAtual.size}.`
+    texto = (
+      <>
+        Apostar estava certo (RNG {roll} ≤ {pct}), mas o size do {tipoNegrito} é{" "}
+        {tipoAtual.size}.
+      </>
+    )
   } else if (resp === "Check") {
-    texto = `O RNG ${roll} cai na aposta (bucket de ${atual.bucket}%). O certo era ${tipoAtual.size}.`
+    texto = (
+      <>
+        O RNG {roll} cai na aposta (bucket de {pct}). O certo era{" "}
+        {tipoAtual.size}.
+      </>
+    )
   } else {
-    texto = `O RNG ${roll} fica acima de ${atual.bucket}%, então a mão dá check.`
+    texto = (
+      <>
+        O RNG {roll} fica acima de {pct}, então a mão dá check.
+      </>
+    )
   }
 
   let sequencia = 0
@@ -345,6 +449,16 @@ export default function Pratica() {
 
   return (
     <main className="mx-auto max-w-[1080px] px-4 pt-6 pb-20 md:px-5">
+      <div className="mx-auto mb-2 max-w-[880px]">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="-ml-2 text-muted-foreground"
+          onClick={() => setFase("setup")}
+        >
+          <ArrowLeft aria-hidden="true" /> Voltar à seleção
+        </Button>
+      </div>
       <div className="mx-auto mb-3 max-w-[880px]">
         <BarraAcoes opener={opener} agora={resp ? resp : "Tomar ação"} />
       </div>
@@ -399,16 +513,18 @@ export default function Pratica() {
           >
             <h3
               className={cn(
-                "text-xl font-bold",
+                "text-4xl font-extrabold tracking-tight",
                 ok ? "text-primary" : "text-destructive"
               )}
             >
-              {ok ? "Certo" : "Errado"}
+              {ok ? "CERTO" : "ERRADO"}
             </h3>
-            <p className="max-w-[64ch] text-muted-foreground">{texto}</p>
-            <p className="max-w-[64ch] text-muted-foreground">
+            <p className="max-w-[64ch] text-lg text-muted-foreground">
+              {texto}
+            </p>
+            <p className="max-w-[64ch] text-lg text-muted-foreground">
               <strong className="text-foreground">{atual.classe}</strong> no
-              flop {tipoNome}: {atual.porque}
+              flop {tipoNegrito}: {negritoPct(atual.porque)}
             </p>
             <RngStrip bucket={atual.bucket} rng={roll} size={tipoAtual.size} />
             <div className="mt-4">
@@ -429,5 +545,14 @@ export default function Pratica() {
         aposta.
       </p>
     </main>
+  )
+}
+
+export default function Pratica() {
+  const [tema, setTema] = useState<Tema>("bet")
+  return tema === "bet" ? (
+    <PraticaBet onTema={setTema} />
+  ) : (
+    <PraticaProbe onTema={setTema} />
   )
 }
