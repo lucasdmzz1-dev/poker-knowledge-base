@@ -87,6 +87,9 @@ O repositório é público: não coloque dados pessoais nele. Os dados de cada j
 
 - Dúvidas da teoria para o coach: tabuleiros intermediários, limite de low board, cartas do meio em dobrado.
 - Pilotos dos módulos 14 e 17.
+- Rodar o SQL da tabela `relatos_erro` (fim de `docs/Supabase-Poker-KB.sql`) no SQL Editor do Supabase. Sem isso, o botão "Relatar erro" salva só no aparelho de quem relata.
+- Prática: dúvidas para o coach do módulo 01 (second pair no split, trincas no check, B40 no A high) e do módulo 02 (boards de exemplo do conectado e do low seco, AA e KK no low carregado).
+- Prática: second barrel do módulo 02 (e o turn depois de check-check do módulo 01), em tema separado.
 
 ## Padrão dos temas da Prática
 
