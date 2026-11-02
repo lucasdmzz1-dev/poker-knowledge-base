@@ -1,15 +1,12 @@
 import { lerLeaks } from "@/lib/analise"
 import { lerHud } from "@/lib/hud"
+import { CHAVES_NUVEM, enviarTudo } from "@/lib/sync"
+import { nuvemAtiva } from "@/lib/nuvem"
 
 // Os dados da Análise ficam no navegador. O backup leva tudo isso para um arquivo.
-// A chave da API e os prints (imagens) não entram.
-export const CHAVES_BACKUP = [
-  "pkb:hud",
-  "pkb:hud-fixadas",
-  "pkb:hud-tol",
-  "pkb:leaks",
-  "pkb:painel2",
-] as const
+// A chave da API e os prints (imagens) não entram. As chaves são as mesmas que
+// sobem para a conta de cada jogador.
+export const CHAVES_BACKUP = CHAVES_NUVEM
 
 interface Arquivo {
   app: "poker-kb"
@@ -76,6 +73,7 @@ export async function restaurarBackup(arquivo: File): Promise<number> {
     }
   }
   if (n === 0) throw new Error("O backup está vazio.")
+  if (nuvemAtiva) await enviarTudo().catch(() => {})
   return n
 }
 

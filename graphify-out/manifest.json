@@ -1638,9 +1638,9 @@
     "semantic_hash": ""
   },
   "app/src/components/layout.tsx": {
-    "mtime": 1793575920.526982,
-    "seen": 1793584304.904649,
-    "ast_hash": "8f802021e6e5263f40f7c497e7c046ed",
+    "mtime": 1793586818.7406125,
+    "seen": 1793586837.5789225,
+    "ast_hash": "ad7afce7a6a58e49d32e68870e9c3683",
     "semantic_hash": ""
   },
   "app/src/components/poker/cards.tsx": {
@@ -1728,9 +1728,9 @@
     "semantic_hash": ""
   },
   "app/src/lib/storage.ts": {
-    "mtime": 1793586375.6206303,
-    "seen": 1793586458.9729347,
-    "ast_hash": "b0e76610a0534b83010e3f6680b6bf95",
+    "mtime": 1793586725.4060185,
+    "seen": 1793586837.5834382,
+    "ast_hash": "12f8d0c25ab204ddb78bc6e8cf2c9cd3",
     "semantic_hash": ""
   },
   "app/src/lib/utils.ts": {
@@ -1740,9 +1740,9 @@
     "semantic_hash": ""
   },
   "app/src/main.tsx": {
-    "mtime": 1793575920.5498085,
-    "seen": 1793584304.904649,
-    "ast_hash": "2449a3330e97b0f68c6c3a4daf1f75a3",
+    "mtime": 1793586725.376909,
+    "seen": 1793586837.5834382,
+    "ast_hash": "a005dcaf64294f6fed561485f46d0d84",
     "semantic_hash": ""
   },
   "app/src/pages/analise.tsx": {
@@ -2634,9 +2634,9 @@
     "semantic_hash": ""
   },
   "docs/Site-Poker-KB.md": {
-    "mtime": 1793586441.8041868,
-    "seen": 1793586459.016254,
-    "ast_hash": "3895fe466ae91ac86ea6c3444303094a",
+    "mtime": 1793586818.4728925,
+    "seen": 1793586837.618499,
+    "ast_hash": "407befe9c458e172221dd30d757b7bc0",
     "semantic_hash": ""
   },
   "app/src/components/analise/leitor.tsx": {
@@ -2658,9 +2658,33 @@
     "semantic_hash": ""
   },
   "app/src/lib/backup.ts": {
-    "mtime": 1793586360.6175532,
-    "seen": 1793586458.9729347,
-    "ast_hash": "95676e227e18131d0ddc03eb2e8ec03b",
+    "mtime": 1793586725.3700635,
+    "seen": 1793586837.5824256,
+    "ast_hash": "c8c31952b0c7929a1cedd48e801fc5b8",
+    "semantic_hash": ""
+  },
+  "app/src/components/portao.tsx": {
+    "mtime": 1793586725.2881794,
+    "seen": 1793586837.579923,
+    "ast_hash": "4052d9ded309baadeebd6238ee9adcde",
+    "semantic_hash": ""
+  },
+  "app/src/lib/nuvem.ts": {
+    "mtime": 1793586725.337155,
+    "seen": 1793586837.5824256,
+    "ast_hash": "24a8b61055e42ddd627b03fd873c4192",
+    "semantic_hash": ""
+  },
+  "app/src/lib/sync.ts": {
+    "mtime": 1793586692.00324,
+    "seen": 1793586837.5834382,
+    "ast_hash": "47cf08b2bcd598e3a046bc0c743ad895",
+    "semantic_hash": ""
+  },
+  "app/src/lib/usuario.ts": {
+    "mtime": 1793586700.546622,
+    "seen": 1793586837.5834382,
+    "ast_hash": "06b01578d3e0e789d3d1bd684035a16d",
     "semantic_hash": ""
   },
   "app/pnpm-lock.yaml": {

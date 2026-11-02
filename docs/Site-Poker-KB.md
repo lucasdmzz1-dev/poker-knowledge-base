@@ -50,6 +50,18 @@ Os dados são locais do navegador de cada pessoa, não do repositório. O site c
 
 Arquivos principais de dados: `lib/hud.ts`, `lib/analise.ts`, `lib/painel.ts`, `lib/poker.ts`.
 
+## Contas dos jogadores (Supabase)
+
+Com as variáveis de ambiente preenchidas, o site pede login (e-mail e senha) antes de abrir. Todos os jogadores veem as quatro áreas; o que cada um digita fica na conta dele (stats, leaks, painel, sessões do trainer) e só ele lê, pela regra de acesso da tabela. Sem as variáveis, o site abre sem login e guarda tudo no navegador.
+
+1. Crie um projeto grátis em supabase.com.
+2. No SQL Editor, rode `docs/Supabase-Poker-KB.sql`.
+3. Em Authentication, decida se exige confirmar o e-mail (padrão: exige). Para um grupo pequeno, pode desligar em Providers → Email → Confirm email.
+4. Em Project Settings → API, copie a URL e a chave `anon` (pública) para `app/.env.local`, no formato de `app/.env.example`. Nunca use a `service_role`.
+5. Para publicar, configure as mesmas duas variáveis no serviço de hospedagem antes do build.
+
+Ao entrar, o que já está na conta vale; o que só existia no aparelho sobe. Ao sair, os dados do aparelho são apagados. A chave da API do Claude e os prints ficam só no aparelho. "Meus dados" na Análise continua exportando e importando um arquivo.
+
 ## Fluxo mensal
 
 1. Receber os prints do HUD do mês e colocar em Leaks do mês.

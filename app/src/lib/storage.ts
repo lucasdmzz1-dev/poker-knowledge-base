@@ -18,6 +18,7 @@ export function readJSON<T>(
 export function writeJSON(key: string, value: unknown): void {
   try {
     localStorage.setItem(key, JSON.stringify(value))
+    window.dispatchEvent(new CustomEvent("pkb:salvo", { detail: { key } }))
   } catch {
     // armazenamento indisponível: a página segue funcionando sem histórico
   }
