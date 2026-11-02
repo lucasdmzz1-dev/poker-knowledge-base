@@ -143,6 +143,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     estrategia: "split25",
     grupo: "B25",
     freq: 66,
+    criterio:
+      "Uma carta alta e duas baixas (abaixo do 8x, que o SB quase não defende offsuit): size baixo, muito thin value, B25.",
   },
   {
     id: "k94",
@@ -208,6 +210,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B40",
     estrategia: "split40",
     grupo: "B40",
+    criterio:
+      "Duas cartas altas e uma baixa tendem ao B40: o 4 não é defendido pelo SB.",
   },
   {
     id: "jt8",
@@ -244,6 +248,7 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B40",
     estrategia: "split40",
     grupo: "B40",
+    criterio: "Duas cartas altas e uma baixa tendem ao B40.",
   },
   {
     id: "t74",
@@ -260,6 +265,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B25",
     estrategia: "split25",
     grupo: "B25",
+    criterio:
+      "Uma carta alta e duas baixas (abaixo do 8x, que o SB quase não defende offsuit): size baixo, muito thin value, B25.",
   },
   {
     id: "j42",
@@ -268,6 +275,8 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B25",
     estrategia: "split25",
     grupo: "B25",
+    criterio:
+      "Uma carta alta e duas baixas (abaixo do 8x, que o SB quase não defende offsuit): size baixo, muito thin value, B25.",
   },
   {
     id: "aq3",
