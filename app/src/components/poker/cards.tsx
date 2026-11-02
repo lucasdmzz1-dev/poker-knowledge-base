@@ -93,10 +93,21 @@ function RngBarra({
     const t = requestAnimationFrame(() => setCheio(true))
     return () => cancelAnimationFrame(t)
   }, [])
+  const rotulo =
+    "flex h-full items-center justify-center overflow-hidden px-3 text-sm font-bold whitespace-nowrap text-[#14121f] not-italic"
   const segmentos = (
     <>
-      <i className="h-full bg-rng-bet" style={{ width: `${bucket}%` }} />
-      <i className="h-full flex-1 bg-check" />
+      <i
+        className={cn(rotulo, "rounded-full bg-rng-bet")}
+        style={{ width: `calc(${bucket}% - 2px)` }}
+      >
+        1 a {bucket} · aposta {size}
+      </i>
+      {bucket < 100 && (
+        <i className={cn(rotulo, "flex-1 rounded-full bg-check")}>
+          {bucket + 1} a 100 · check
+        </i>
+      )}
     </>
   )
   return (
@@ -106,11 +117,9 @@ function RngBarra({
         role="img"
         aria-label={`RNG ${rng}. De 1 a ${bucket} aposta ${size ?? ""}, de ${bucket + 1} a 100 dá check`}
       >
-        <div className="flex h-5 overflow-hidden rounded-full opacity-25">
-          {segmentos}
-        </div>
+        <div className="flex h-10 gap-1 opacity-25">{segmentos}</div>
         <div
-          className="absolute inset-0 flex h-5 overflow-hidden rounded-full transition-[clip-path] duration-[1100ms] ease-out motion-reduce:transition-none"
+          className="absolute inset-0 flex h-10 gap-1 transition-[clip-path] duration-[1100ms] ease-out motion-reduce:transition-none"
           style={{
             clipPath: cheio
               ? `inset(0 ${100 - rng}% 0 0)`
@@ -120,22 +129,10 @@ function RngBarra({
           {segmentos}
         </div>
         <span
-          className="absolute -top-1 h-7 w-0.5 -translate-x-1/2 rounded bg-white transition-[left] duration-[1100ms] ease-out motion-reduce:transition-none"
+          className="absolute -top-1.5 h-[52px] w-0.5 -translate-x-1/2 rounded bg-white transition-[left] duration-[1100ms] ease-out motion-reduce:transition-none"
           style={{ left: cheio ? `${rng}%` : "0%" }}
           aria-hidden="true"
         />
-      </div>
-      <div className="mt-2 flex flex-wrap gap-4 text-sm text-muted-foreground">
-        <span className="inline-flex items-center gap-2">
-          <b className="inline-block size-2.5 rounded-sm bg-rng-bet" />1 a{" "}
-          {bucket}: aposta {size}
-        </span>
-        {bucket < 100 && (
-          <span className="inline-flex items-center gap-2">
-            <b className="inline-block size-2.5 rounded-sm bg-check" />
-            {bucket + 1} a 100: check
-          </span>
-        )}
       </div>
     </div>
   )
