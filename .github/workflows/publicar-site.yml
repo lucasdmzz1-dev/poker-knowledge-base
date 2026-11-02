@@ -1,7 +1,8 @@
 # Publica o site (pasta app/) no GitHub Pages a cada merge na main.
 # Configuração única: Settings > Pages > Source = "GitHub Actions" e, em
 # Settings > Secrets and variables > Actions > Variables, crie
-# VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY (a chave pública anon).
+# VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY (a chave pública anon) e, se ligar o
+# login com o Google, VITE_LOGIN_GOOGLE=true.
 name: Publicar site
 
 on:
@@ -40,6 +41,7 @@ jobs:
         env:
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
+          VITE_LOGIN_GOOGLE: ${{ vars.VITE_LOGIN_GOOGLE }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: app/dist
