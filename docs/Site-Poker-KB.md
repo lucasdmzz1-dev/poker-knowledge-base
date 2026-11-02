@@ -89,6 +89,7 @@ O repositório é público: não coloque dados pessoais nele. Os dados de cada j
 - Pilotos dos módulos 14 e 17.
 - Rodar o SQL da tabela `relatos_erro` (fim de `docs/Supabase-Poker-KB.sql`) no SQL Editor do Supabase. Sem isso, o botão "Relatar erro" salva só no aparelho de quem relata.
 - Prática: dúvidas para o coach do módulo 01 (second pair no split, trincas no check, B40 no A high) e do módulo 02 (boards de exemplo do conectado e do low seco, AA e KK no low carregado).
+- Bet vs Missed: os boards 10-7-3, 10-7-5, 8-3-2 e 8-7-2 são secos (exemplos do trainer do coach, 02/11/2026). Falta registrar isso no `12-Padroes.md` do módulo 15 (dúvida 1, boards intermediários).
 - Prática: second barrel do módulo 02 (e o turn depois de check-check do módulo 01), em tema separado.
 
 ## Padrão dos temas da Prática
@@ -106,4 +107,4 @@ Todo tema novo da Prática usa os mesmos blocos, para ficar igual aos outros:
 - Botão "Voltar à seleção" no topo do jogo e seletor de tema na seleção (`SeletorTema`).
 - Textos em minúsculas, percentuais e tipo de board em negrito.
 
-Temas da Prática hoje: Bet vs Missed C-Bet (`pratica.tsx`), Probe Turn (`pratica-probe.tsx`, `data/prat14.ts`) C-Bet IP Short Stack (`pratica-cbet.tsx`, `data/prat01.ts`, mesa com `cbet`) e C-Bet IP 40bb (`pratica-cbet40.tsx`, `data/prat02.ts`, só o flop, herói no HJ, CO ou BTN) e C-Bet OOP 40bb (`pratica-oop.tsx`, `data/prat05.ts`, só o flop, EP ou CO contra o BTN; a resposta de cada mão sai de regras que leem os naipes, em `decidir`).
+Temas da Prática hoje: Bet vs Missed C-Bet (`pratica.tsx`; as questões extras saem das tabelas de bucket em `data/prat15.ts`), Probe Turn (`pratica-probe.tsx`, `data/prat14.ts`) C-Bet IP Short Stack (`pratica-cbet.tsx`, `data/prat01.ts`, mesa com `cbet`) e C-Bet IP 40bb (`pratica-cbet40.tsx`, `data/prat02.ts`, só o flop, herói no HJ, CO ou BTN) e C-Bet OOP 40bb (`pratica-oop.tsx`, `data/prat05.ts`, só o flop, EP ou CO contra o BTN; a resposta de cada mão sai de regras que leem os naipes, em `decidir`).

@@ -25,6 +25,7 @@ import PraticaCbet40 from "@/pages/pratica-cbet40"
 import PraticaOop from "@/pages/pratica-oop"
 import PraticaProbe, { SeletorTema, type Tema } from "@/pages/pratica-probe"
 import { btnPaga } from "@/data/ranges"
+import { situacoesMaisBvM } from "@/data/prat15"
 import { mod15, tipoById, type Situacao, type TipoId } from "@/data/mod15"
 import {
   randomInt,
@@ -41,8 +42,16 @@ type Acao = "Check" | "B25" | "B50"
 
 // O treino só usa mãos que o BTN paga contra o open do CO e do HJ (Poker Academy,
 // 40bb). As que ele só 3beta ficam de fora, mas continuam nos exemplos da Teoria.
-const situacoesTreino = mod15.situacoes.filter(
-  (s) => btnPaga("CO", s.hero) && btnPaga("HJ", s.hero)
+// Junta as questões do módulo com as geradas a partir das tabelas de bucket.
+const jaTem = new Set<string>()
+const situacoesTreino = [...mod15.situacoes, ...situacoesMaisBvM].filter(
+  (s) => {
+    if (!(btnPaga("CO", s.hero) && btnPaga("HJ", s.hero))) return false
+    const chave = s.board.join("") + s.hero.join("")
+    if (jaTem.has(chave)) return false
+    jaTem.add(chave)
+    return true
+  }
 )
 
 const contagem = situacoesTreino.reduce<Record<string, number>>((c, s) => {

@@ -70,11 +70,7 @@ const TEXTO_RFI: Record<PosRange, string> = {
 }
 
 // A posição abre a mão em pelo menos `min`% das vezes?
-export function abre(
-  pos: PosRange,
-  m: readonly string[],
-  min = 0.01
-): boolean {
+export function abre(pos: PosRange, m: readonly string[], min = 0.01): boolean {
   return (tabela(TEXTO_RFI[pos]).get(classeDaMao(m))?.R ?? 0) >= min
 }
 
@@ -90,4 +86,13 @@ export function btnPaga(
 // O BB paga o open do BTN?
 export function bbPaga(m: readonly string[], min = 0.01): boolean {
   return (tabela(BB_CONTRA_BTN).get(classeDaMao(m))?.C ?? 0) >= min
+}
+
+// As classes ("AQs", "77") que o BTN paga tanto contra o CO quanto contra o HJ.
+export function classesQueOBTNPaga(): string[] {
+  const co = tabela(BTN_CONTRA_OPEN.CO)
+  const hj = tabela(BTN_CONTRA_OPEN.HJ)
+  return [...co.keys()].filter(
+    (k) => (co.get(k)?.C ?? 0) > 0 && (hj.get(k)?.C ?? 0) > 0
+  )
 }
