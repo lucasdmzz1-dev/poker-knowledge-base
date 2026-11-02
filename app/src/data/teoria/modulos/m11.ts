@@ -180,7 +180,7 @@ const m11: ModuloTeoria = {
     },
   ],
   fonte:
-    "theory/11-Value-Bet-Masterclass (guideline). A guideline não traz boards nem mãos de exemplo",
+    "theory/11-Value-Bet-Masterclass (guideline). A guideline não traz boards nem mãos de exemplo.",
 }
 
 export default m11
