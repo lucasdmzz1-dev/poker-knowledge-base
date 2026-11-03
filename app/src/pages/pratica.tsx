@@ -175,6 +175,10 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
     let pool = shuffle(situacoesTreino.filter((s) => tipos.includes(s.tipo)))
     if (n && pool.length > n) pool = pool.slice(0, n)
     setErro("")
+    comecar(pool)
+  }
+
+  function comecar(pool: Situacao[]) {
     setFila(pool)
     setI(0)
     setItens([])
@@ -185,6 +189,12 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
     setLevada(false)
     setVerErros(false)
     setFase("jogo")
+  }
+
+  // Joga de novo só as questões erradas da sessão, em outra ordem.
+  function refazerErros() {
+    const ids = new Set(itens.filter((x) => !x.ok).map((x) => x.sid))
+    comecar(shuffle(fila.filter((q) => ids.has(q.id))))
   }
 
   // Fecha a sessão com as mãos respondidas até aqui e abre o resultado.
@@ -431,6 +441,16 @@ function PraticaBet({ onTema }: { onTema: (t: Tema) => void }) {
                 onClick={() => setVerErros((v) => !v)}
               >
                 {verErros ? "Esconder erros" : "Ver erros"}
+              </Button>
+            )}
+            {erros.length > 0 && (
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-12 px-6 font-bold"
+                onClick={refazerErros}
+              >
+                Jogar os erros de novo
               </Button>
             )}
             <Button

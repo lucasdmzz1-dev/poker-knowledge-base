@@ -80,6 +80,7 @@ export function ResultadoFinal({
   levada,
   onLevar,
   onNovo,
+  onRefazer,
   nomeTipo,
 }: {
   itens: ItemSessao[]
@@ -88,6 +89,7 @@ export function ResultadoFinal({
   levada: boolean
   onLevar: () => void
   onNovo: () => void
+  onRefazer?: () => void
   nomeTipo?: (t: string) => string
 }) {
   const [verErros, setVerErros] = useState(false)
@@ -188,6 +190,16 @@ export function ResultadoFinal({
               onClick={() => setVerErros((v) => !v)}
             >
               {verErros ? "Esconder erros" : "Ver erros"}
+            </Button>
+          )}
+          {onRefazer && erros.length > 0 && (
+            <Button
+              size="lg"
+              variant="outline"
+              className="h-12 px-6 font-bold"
+              onClick={onRefazer}
+            >
+              Jogar os erros de novo
             </Button>
           )}
           <Button

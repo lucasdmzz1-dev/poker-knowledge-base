@@ -137,6 +137,10 @@ export default function PraticaCbet40({
     const n = Number(qty)
     let pool = shuffle(situacoesCbet40)
     if (n && pool.length > n) pool = pool.slice(0, n)
+    comecar(pool)
+  }
+
+  function comecar(pool: SituacaoCbet40[]) {
     setFila(pool)
     setI(0)
     setItens([])
@@ -144,6 +148,12 @@ export default function PraticaCbet40({
     respondido.current = false
     setLevada(false)
     setFase("jogo")
+  }
+
+  // Joga de novo só as questões erradas da sessão, em outra ordem.
+  function refazerErros() {
+    const ids = new Set(itens.filter((x) => !x.ok).map((x) => x.sid))
+    comecar(shuffle(fila.filter((q) => ids.has(q.id))))
   }
 
   // Fecha a sessão com as mãos respondidas até aqui e abre o resultado.
@@ -258,6 +268,7 @@ export default function PraticaCbet40({
         levada={levada}
         onLevar={levar}
         onNovo={() => setFase("setup")}
+        onRefazer={refazerErros}
       />
     )
   }
