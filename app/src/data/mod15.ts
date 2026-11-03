@@ -81,7 +81,7 @@ export const mod15 = {
       size: "B50",
       exemplo: ["Js", "9h", "6c"],
       criterio:
-        "O range do opener acerta muito o board: por cartas altas (A-K-2), por cartas médias conectadas (J-9-6, 9-6-2) ou por boards baixos conectados (7-6-5, 6-5-4).",
+        "O range do opener acerta muito o board: por cartas altas (A-K-2), por cartas médias conectadas (J-9-6) ou por boards baixos conectados (7-6-5, 6-5-4).",
       nota: "A pior trinca, o top two pair e o overpair vão em 100%.",
       buckets: [
         { p: 100, maos: "Pior trinca, top two pair e overpair" },
@@ -99,7 +99,7 @@ export const mod15 = {
       size: "B25",
       exemplo: ["Qs", "5h", "3c"],
       criterio:
-        "Poucas cartas altas, com gaps amplos e poucas possibilidades de gutshot e duas pontas (T-6-2, K-7-4). Quanto mais baixo o board e maiores os gaps, mais seco. T-7-3, T-7-5, 8-3-2 e 8-7-2 também são secos, pelos exemplos do trainer do coach.",
+        "Poucas cartas altas, com gaps amplos e poucas possibilidades de gutshot e duas pontas (T-6-2, K-7-4). Quanto mais baixo o board e maiores os gaps, mais seco. Pelos exemplos do trainer do coach, também são secos T-7-3, T-7-5, 8-3-2, 8-7-2, 9-8-2, 9-6-4, 9-5-4 e 9-6-2.",
       nota: "Frequência média de 55% a 65%. Não existe bucket de 25%. A top trinca vai em 75% porque bloqueia o valor que você sempre dá check.",
       buckets: [
         { p: 100, maos: "Overpair e trincas (menos a top trinca)" },
@@ -129,7 +129,7 @@ export const mod15 = {
       size: "B25",
       exemplo: ["Ks", "Kh", "7c"],
       criterio:
-        "Board pareado, sempre. Seco: a terceira carta não forma sequência nem flush draw com o par (K-K-2, J-3-3). Carregado: forma (K-K-J, J-J-9).",
+        "Board pareado, sempre. Seco: a terceira carta não forma sequência nem flush draw com o par (K-K-2, J-3-3, 8-8-4, 7-7-3). Carregado: forma (K-K-J, J-J-9).",
       nota: "O subtipo do K-K-7 como seco é inferência.",
       blocos: [
         { grupo: "Seco", rotulo: "Seco", codes: ["Ks", "Kh", "7c"] },
@@ -166,14 +166,19 @@ export const mod15 = {
     { b: ["Qs", "Jh", "Td"], t: "conectado", fixo: false },
     { b: ["Ad", "Kh", "2c"], t: "semi", fixo: false },
     { b: ["Js", "9h", "6c"], t: "semi", fixo: true },
-    { b: ["9d", "6h", "2c"], t: "semi", fixo: false },
     { b: ["7s", "6h", "5c"], t: "semi", fixo: false },
     { b: ["Qs", "5h", "3c"], t: "seco", fixo: true },
     { b: ["Kd", "7h", "4c"], t: "seco", fixo: false },
     { b: ["Td", "6h", "2c"], t: "seco", fixo: false },
+    { b: ["9d", "6h", "2c"], t: "seco", fixo: false },
+    { b: ["9s", "8h", "2c"], t: "seco", fixo: false },
+    { b: ["9h", "6s", "4c"], t: "seco", fixo: false },
+    { b: ["9c", "5h", "4d"], t: "seco", fixo: false },
     { b: ["As", "9s", "8s"], t: "monotone", fixo: true },
     { b: ["Ks", "Kh", "7c"], t: "dobrado", fixo: true },
     { b: ["Kd", "Kh", "Jc"], t: "dobrado", fixo: false },
+    { b: ["8c", "8h", "4d"], t: "dobrado", fixo: false },
+    { b: ["7h", "7c", "3s"], t: "dobrado", fixo: false },
   ] as RefBoard[],
 
   // Só para a tela da teoria: o treino (situacoes) não usa estes exemplos.

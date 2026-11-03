@@ -15,7 +15,6 @@ const BOARDS: { tipo: TipoId; board: string[] }[] = [
   { tipo: "conectado", board: ["Qs", "Jh", "Td"] },
   { tipo: "semi", board: ["Ad", "Kh", "2c"] },
   { tipo: "semi", board: ["Js", "9h", "6c"] },
-  { tipo: "semi", board: ["9d", "6h", "2c"] },
   { tipo: "semi", board: ["7s", "6h", "5c"] },
   { tipo: "seco", board: ["Qs", "5h", "3c"] },
   { tipo: "seco", board: ["Kd", "7h", "4c"] },
@@ -25,6 +24,11 @@ const BOARDS: { tipo: TipoId; board: string[] }[] = [
   { tipo: "seco", board: ["7c", "Ts", "5h"] },
   { tipo: "seco", board: ["8c", "2d", "3h"] },
   { tipo: "seco", board: ["8c", "2d", "7h"] },
+  // Exemplos do trainer do coach de 03/11/2026: 9-6-2 passou de semi para seco.
+  { tipo: "seco", board: ["9d", "6h", "2c"] },
+  { tipo: "seco", board: ["9s", "8h", "2c"] },
+  { tipo: "seco", board: ["9h", "6s", "4c"] },
+  { tipo: "seco", board: ["9c", "5h", "4d"] },
   { tipo: "monotone", board: ["As", "9s", "8s"] },
 ]
 

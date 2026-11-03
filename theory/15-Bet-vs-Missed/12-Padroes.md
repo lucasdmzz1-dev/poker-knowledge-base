@@ -54,7 +54,7 @@ Siga esta ordem:
 | Tipo | Critério | Size |
 |---|---|---|
 | **Conectado high** | Cartas encadeadas (altas, ou baixas contra um opener que acerta quase tudo), com muitas sequências e draws. Não existe bucket de 100% | B50 |
-| **Semi conectado** | O range do opener acerta muito o board, por cartas altas (A-K-2), por cartas médias conectadas (J-9-6, 9-6-2) ou por boards baixos conectados (7-6-5, 6-5-4) | B50 |
+| **Semi conectado** | O range do opener acerta muito o board, por cartas altas (A-K-2), por cartas médias conectadas (J-9-6) ou por boards baixos conectados (7-6-5, 6-5-4) | B50 |
 | **Seco** | Poucas cartas altas, com gaps amplos e poucas possibilidades de gutshot e duas pontas (T-6-2, K-7-4). Quanto mais baixo o board e maiores os gaps, mais seco. O range do opener acerta pouco | B25 |
 | **Monotone** | Três cartas do mesmo naipe | B25 |
 | **Dobrado** | Board pareado. Seco: a terceira carta não forma sequência nem flush draw com o par. Carregado: forma |  B25 |
@@ -145,17 +145,19 @@ Contra EP e MP o range é outro que o do BB, então o tipo pode mudar (Regra 16 
 | J♠ 9♥ 6♣ | Semi conectado | Imagem | Validado |
 | 9-8-6 (contra HJ) | Semi conectado | Aula | Validado |
 | 8-7-6 (deep) | Semi conectado | Aula | Validado |
-| 9-6-2 | Semi conectado | Autor | Validado |
 | 7-6-5, 6-5-4 | Semi conectado | Autor | Validado |
 | Q♠ 5♥ 3♣ | Seco | Imagem | Validado |
 | Q-2-3, K-5-3, K-7-4, A-7-2 | Seco | Autor | Validado |
 | A-5-3, 9-4-2, T-3-2, Q-6-4 | Seco | Aula | Validado |
 | T-6-2 | Seco | Autor | Validado |
 | T-7-3, T-7-5, 8-3-2, 8-7-2 | Seco | Autor (exemplos do trainer do coach, 02/11/2026) | Validado |
+| 9-8-2, 9-6-4, 9-5-4 | Seco | Trainer do coach (03/11/2026) | Validado |
+| 9-6-2 | Seco (antes semi conectado) | Autor, pelos exemplos do trainer do coach (03/11/2026) | Validado |
 | 8-5-4 | Seco (tratado como) | Aula | Validado |
 | A♠ 9♠ 8♠ | Monotone | Imagem | Validado |
 | J-3-3 | Dobrado seco | Aula | Validado |
 | K-K-2 | Dobrado seco | Autor | Validado |
+| 8-8-4, 7-7-3 | Dobrado seco | Trainer do coach (03/11/2026) | Validado |
 | J-J-9 | Dobrado carregado | Aula | Validado |
 | K-K-J | Dobrado carregado | Autor | Validado |
 | K♠ K♥ 7♣ | Dobrado (tipo validado; subtipo seco é inferência) | Imagem e autor | Tipo validado |
@@ -170,7 +172,7 @@ Contra EP e MP o range é outro que o do BB, então o tipo pode mudar (Regra 16 
 4. **Fonte do range base do TP:** o range é o de call pré-flop do autor em cada posição. Falta esse range registrado no KB, por posição, para eu classificar o TP.
 5. **Resolvida em 01/11/2026:** no K-9-2, os melhores kickers são KQ e KJ, e o pior pode ser o K8s, conforme a posição.
 
-Itens esclarecidos em 01/11/2026: o critério de altura e de possibilidades de gutshot e duas pontas, os boards 9-6-2 (semi), T-6-2 (seco), 7-6-5 e 6-5-4 (semi), o critério da terceira carta no dobrado e o range base do TP.
+Itens esclarecidos em 01/11/2026: o critério de altura e de possibilidades de gutshot e duas pontas, os boards 9-6-2 (semi, revisto em 03/11/2026 para seco), T-6-2 (seco), 7-6-5 e 6-5-4 (semi), o critério da terceira carta no dobrado e o range base do TP.
 
 Itens esclarecidos em 31/10/2026: A-K-2 é semi conectado, a lista dos boards secos, o critério da terceira carta no dobrado, o top pair relativo ao range e a pior trinca (ver `09-Decisoes.md`, Decisão 10).
 
@@ -188,6 +190,13 @@ Por enquanto, os exercícios e as situações do trainer usam **só boards com s
 - **Top set:** a imagem do flop seco (Q-5-3) lista overpair e trincas em 100% e "2 pares, TPs e TS" em 75%. A top trinca (TS) fica em 75%.
 - **Pares de bolso (autor):** overpair é acima de todas as cartas. Entre a primeira e a segunda carta é segundo par, entre a segunda e a terceira é terceiro par, e só abaixo de todas é underpair. No J-9-6, TT é segundo par, 77 é terceiro par e 55 é underpair.
 - **Range do treino:** a Prática só sorteia mãos que o BTN paga contra o open do CO e do HJ, a 40bb (Poker Academy). Os ranges estão em `theory/tools/ranges-poker-academy.md`. Mãos que o BTN só 3beta (AA, QQ, AKs) ou folda (53s, 96s) ficam fora do treino.
+
+# 10. Exemplos do trainer do coach (03/11/2026)
+
+- **Boards secos:** 9-8-2, 9-6-4 e 9-5-4 aparecem no trainer como board seco, em split B25 (overpairs e sets em 100%, dois pares e top pairs em 75%, o restante em 50%). Pelo mesmo critério, o 9-6-2 passa de semi conectado para seco.
+- **Mãos do trainer:** TT no 9-8-2 e JJ no 9-5-4 são overpair, 100% B25. K9 no 9-6-4 é top pair, 75% B25.
+- **Dobrado seco:** 8-8-4 e 7-7-3 são dobrado seco, com as trincas em B25 a 75% (T8 no 8-8-4, J7 no 7-7-3).
+- **Top set:** o texto do trainer diz "overpairs e sets: 100%" sem citar a exceção da top trinca. Nenhum exemplo do trainer tem top set, então a top trinca segue em 75% (imagem do flop seco) até o coach confirmar.
 
 # Ligações
 
