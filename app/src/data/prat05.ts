@@ -31,6 +31,8 @@ export interface Textura {
   // Boards do módulo (rainbow) e a versão com dois naipes, de mesmos números.
   rainbow?: string[]
   doisNaipes?: string[]
+  // Outros boards da mesma textura, dos exemplos do coach (CBET OOP EXEMPLOS).
+  outros?: { rainbow: string[]; doisNaipes: string[] }[]
   EP: Jogada | null
   CO: Jogada | null
 }
@@ -56,6 +58,10 @@ export const TEXTURAS: Record<TexturaOop, Textura> = {
     nome: "BBX",
     rainbow: ["Ks", "Qd", "5c"],
     doisNaipes: ["Kh", "Qh", "5c"],
+    outros: [
+      { rainbow: ["Ks", "Td", "6c"], doisNaipes: ["Kh", "Th", "6c"] },
+      { rainbow: ["Qs", "Jd", "6c"], doisNaipes: ["Qh", "Jh", "6c"] },
+    ],
     EP: { estrategia: "range", size: "B25" },
     CO: { estrategia: "split25", size: "B40" },
   },
@@ -63,6 +69,11 @@ export const TEXTURAS: Record<TexturaOop, Textura> = {
     nome: "K-Q high",
     rainbow: ["Ks", "8d", "4c"],
     doisNaipes: ["Kh", "8h", "4c"],
+    outros: [
+      { rainbow: ["Qs", "8d", "4c"], doisNaipes: ["Qh", "8h", "4c"] },
+      { rainbow: ["Ks", "8d", "5c"], doisNaipes: ["Kh", "8h", "5c"] },
+      { rainbow: ["Ks", "6d", "4c"], doisNaipes: ["Kh", "6h", "4c"] },
+    ],
     EP: { estrategia: "split", size: "B40" },
     CO: { estrategia: "split25", size: "B40" },
   },
@@ -70,6 +81,10 @@ export const TEXTURAS: Record<TexturaOop, Textura> = {
     nome: "J-T high",
     rainbow: ["Js", "7d", "3c"],
     doisNaipes: ["Jh", "7h", "3c"],
+    outros: [
+      { rainbow: ["Js", "6d", "4c"], doisNaipes: ["Jh", "6h", "4c"] },
+      { rainbow: ["Js", "8d", "3c"], doisNaipes: ["Jh", "8h", "3c"] },
+    ],
     EP: { estrategia: "split", size: "B40" },
     CO: { estrategia: "split25", size: "B70" },
   },
@@ -84,6 +99,7 @@ export const TEXTURAS: Record<TexturaOop, Textura> = {
     nome: "Low com sequência",
     rainbow: ["7s", "6d", "4c"],
     doisNaipes: ["7h", "6h", "4c"],
+    outros: [{ rainbow: ["7s", "6d", "5c"], doisNaipes: ["7h", "6h", "5c"] }],
     EP: { estrategia: "split", size: "B70" },
     CO: { estrategia: "split", size: "B40" },
   },
@@ -675,6 +691,10 @@ function gerar(): SituacaoOop[] {
     const variantes: [SituacaoOop["variante"], string[]][] = []
     if (t.rainbow) variantes.push(["rainbow", t.rainbow])
     if (t.doisNaipes) variantes.push(["doisNaipes", t.doisNaipes])
+    for (const o of t.outros ?? []) {
+      variantes.push(["rainbow", o.rainbow])
+      variantes.push(["doisNaipes", o.doisNaipes])
+    }
     for (const cenario of ["EP", "CO"] as Cenario[]) {
       const jogada = t[cenario]
       if (!jogada) continue
@@ -688,7 +708,7 @@ function gerar(): SituacaoOop[] {
           if (!d) continue
           const chave = d.classe + "|" + d.acao
           const sit: SituacaoOop = {
-            id: `${id}-${cenario}-${variante}-${m[0]}${m[1]}`,
+            id: `${id}-${cenario}-${variante}-${board.join("")}-${m[0]}${m[1]}`,
             textura: id,
             cenario,
             variante,
@@ -708,7 +728,9 @@ function gerar(): SituacaoOop[] {
         }
         // Duas mãos de cada categoria, sorteadas sempre do mesmo jeito.
         for (const [chave, g] of grupos) {
-          const rnd = semente(`${id}${cenario}${variante}${chave}`)
+          const rnd = semente(
+            `${id}${cenario}${variante}${board.join("")}${chave}`
+          )
           const copia = g.slice()
           for (let i = copia.length - 1; i > 0; i--) {
             const j = Math.floor(rnd() * (i + 1))

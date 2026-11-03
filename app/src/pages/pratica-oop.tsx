@@ -170,6 +170,10 @@ export default function PraticaOop({ onTema }: { onTema: (t: Tema) => void }) {
     )
     if (n && pool.length > n) pool = pool.slice(0, n)
     setErro("")
+    comecar(pool)
+  }
+
+  function comecar(pool: SituacaoOop[]) {
     setFila(pool)
     setI(0)
     setItens([])
@@ -177,6 +181,12 @@ export default function PraticaOop({ onTema }: { onTema: (t: Tema) => void }) {
     respondido.current = false
     setLevada(false)
     setFase("jogo")
+  }
+
+  // Joga de novo só as questões erradas da sessão, em outra ordem.
+  function refazerErros() {
+    const ids = new Set(itens.filter((x) => !x.ok).map((x) => x.sid))
+    comecar(shuffle(fila.filter((q) => ids.has(q.id))))
   }
 
   // Fecha a sessão com as mãos respondidas até aqui e abre o resultado.
@@ -359,6 +369,7 @@ export default function PraticaOop({ onTema }: { onTema: (t: Tema) => void }) {
         levada={levada}
         onLevar={levar}
         onNovo={() => setFase("setup")}
+        onRefazer={refazerErros}
       />
     )
   }
