@@ -16,6 +16,7 @@ tags:
 
 - 12-Padroes: 9-8-2, 9-6-4 e 9-5-4 secos, 8-8-4 e 7-7-3 dobrado seco, pelos exemplos do trainer do coach (seção 10).
 - 9-6-2 passa de semi conectado para seco (12-Padroes e Decisão 10).
+- Top set no seco: 75% confirmado pelo autor do KB.
 
 ---
 
