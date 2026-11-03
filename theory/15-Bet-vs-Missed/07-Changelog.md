@@ -12,6 +12,13 @@ tags:
 
 ---
 
+# Versão 1.2 (03/11/2026)
+
+- 12-Padroes: 9-8-2, 9-6-4 e 9-5-4 secos, 8-8-4 e 7-7-3 dobrado seco, pelos exemplos do trainer do coach (seção 10).
+- 9-6-2 passa de semi conectado para seco (12-Padroes e Decisão 10).
+
+---
+
 # Versão 1.1 (02/11/2026)
 
 - 12-Padroes: boards T-7-3, T-7-5, 8-3-2 e 8-7-2 como secos, definição dos pares de bolso, top set em 75% e o range do treino (seção 9).

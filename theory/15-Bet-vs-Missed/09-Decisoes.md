@@ -89,7 +89,7 @@ Foi criada a ficha `12-Padroes.md`, com o fluxo de classificação do board e os
 
 Complemento de 01/11/2026 (autor do KB):
 
-- **Quanto mais alto o board, mais conectado**, e quanto mais possibilidades de gutshot e duas pontas, mais conectado também. 9-6-2 é semi conectado e T-6-2 é seco, por ter um espaço mais amplo.
+- **Quanto mais alto o board, mais conectado**, e quanto mais possibilidades de gutshot e duas pontas, mais conectado também. T-6-2 é seco, por ter um espaço mais amplo. O 9-6-2 era semi conectado, mas passou a seco em 03/11/2026 pelos exemplos do trainer do coach (9-8-2, 9-6-4 e 9-5-4 são secos).
 - **Boards baixos conectados** (7-6-5 e 6-5-4) entram no semi conectado. Os mais baixos e com mais gaps entram no seco.
 - **Dobrado carregado** é quando a terceira carta forma sequência e flush draw com o par.
 - O **range base do top pair** é o range com que o autor paga pré-flop em cada posição.
