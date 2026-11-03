@@ -196,7 +196,7 @@ Por enquanto, os exercícios e as situações do trainer usam **só boards com s
 - **Boards secos:** 9-8-2, 9-6-4 e 9-5-4 aparecem no trainer como board seco, em split B25 (overpairs e sets em 100%, dois pares e top pairs em 75%, o restante em 50%). Pelo mesmo critério, o 9-6-2 passa de semi conectado para seco.
 - **Mãos do trainer:** TT no 9-8-2 e JJ no 9-5-4 são overpair, 100% B25. K9 no 9-6-4 é top pair, 75% B25.
 - **Dobrado seco:** 8-8-4 e 7-7-3 são dobrado seco, com as trincas em B25 a 75% (T8 no 8-8-4, J7 no 7-7-3).
-- **Top set:** o texto do trainer diz "overpairs e sets: 100%" sem citar a exceção da top trinca. Nenhum exemplo do trainer tem top set, então a top trinca segue em 75% (imagem do flop seco) até o coach confirmar.
+- **Top set:** o texto do trainer diz "overpairs e sets: 100%" sem citar a exceção da top trinca. No seco, a top trinca fica em 75%: confirmado pelo autor do KB em 03/11/2026, como na imagem do flop seco.
 
 # Ligações
 
