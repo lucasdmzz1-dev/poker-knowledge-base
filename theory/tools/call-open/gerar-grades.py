@@ -36,6 +36,8 @@ for nome in ("call-open-btn-vanilla.json", "call-open-btn-pko.json"):
                 btn = a["stacks_bb"]["BTN"] if "stacks_bb" in a else a["jogadores"]["BTN"][0]
                 meta[(a["arvore"], c["opener"])] = (a, c, btn)
 
+with open(os.path.join(dados, "grades-meta-extra.json"), encoding="utf-8") as f:
+    extra = json.load(f)
 cenarios = []
 with open(os.path.join(dados, "grades-raw.txt"), encoding="utf-8") as f:
     for linha in f:
@@ -43,7 +45,14 @@ with open(os.path.join(dados, "grades-raw.txt"), encoding="utf-8") as f:
             continue
         chave, tot, cod = linha.split()
         id_, _, op = chave.partition("@")
-        a, c, btn = meta[(id_, op or "MP")]
+        chave = id_ + "@" + (op or "MP")
+        if chave in extra:  # árvore lida depois do resumo: metadados em grades-meta-extra.json
+            e = extra[chave]
+            a = {"arvore": id_, "tipo": "Bounty 50%" if e["tipo"] == "PKO" else "Vanilla", "fase": e["fase"]}
+            c = dict(e, opener=op or "MP", rp_btn_vs_opener=e["rp"])
+            btn = e["btn_bb"]
+        else:
+            a, c, btn = meta[(id_, op or "MP")]
         m = decodifica(cod)
         w = [6 if len(x) == 2 else 4 if x.endswith("s") else 12 for x in MAOS]
         calc = [round(sum(wi * mi[k] for wi, mi in zip(w, m)) / 1326, 1) for k in range(3)]
