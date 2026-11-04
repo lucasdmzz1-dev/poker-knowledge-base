@@ -113,6 +113,14 @@ Pendente:
 
 ---
 
+# Versão 1.2 (02/11/2026)
+
+- Pendências: acrescentados os itens 7 (check-fold e pares baixos), 8 (boards sem textura definida) e 9 (posições dos exemplos).
+- Referências: acrescentada a seção 5, com os 16 exemplos do coach.
+- Decisões: acrescentada a Decisão 8 (boards extras do treino).
+
+---
+
 # Próximas atualizações
 
 Adicionar:
