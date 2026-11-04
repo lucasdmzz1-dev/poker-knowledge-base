@@ -324,5 +324,83 @@
   "call": 27.9,
   "raise": 10.3,
   "allin": 0.0
+ },
+ "#4060@CO": {
+  "tipo": "Vanilla",
+  "fase": "Mid",
+  "btn_bb": 35.7,
+  "opener_bb": 28.7,
+  "open_pct": 32.5,
+  "relacao": "cobre",
+  "rp": 4.4,
+  "fold": 80.6,
+  "call": 8.0,
+  "raise": 11.4,
+  "allin": 0.0
+ },
+ "#4047@CO": {
+  "tipo": "Vanilla",
+  "fase": "Mid",
+  "btn_bb": 36.8,
+  "opener_bb": 31.5,
+  "open_pct": 29.5,
+  "relacao": "similar",
+  "rp": 9.9,
+  "fold": 83.5,
+  "call": 6.3,
+  "raise": 10.2,
+  "allin": 0.0
+ },
+ "#9054@CO": {
+  "tipo": "Vanilla",
+  "fase": "Mid",
+  "btn_bb": 35.5,
+  "opener_bb": 31.8,
+  "open_pct": 32.2,
+  "relacao": "similar",
+  "rp": 11.3,
+  "fold": 76.7,
+  "call": 13.2,
+  "raise": 10.2,
+  "allin": 0.0
+ },
+ "#6098@CO": {
+  "tipo": "Vanilla",
+  "fase": "Mid",
+  "btn_bb": 37.6,
+  "opener_bb": 33.6,
+  "open_pct": 35.0,
+  "relacao": "similar",
+  "rp": 2.7,
+  "fold": 78.3,
+  "call": 10.1,
+  "raise": 11.6,
+  "allin": 0.0
+ },
+ "#10557@CO": {
+  "tipo": "Vanilla",
+  "fase": "Mid",
+  "btn_bb": 31.5,
+  "opener_bb": 27.3,
+  "open_pct": 28.4,
+  "relacao": "similar",
+  "rp": 6.5,
+  "fold": 83.3,
+  "call": 5.8,
+  "raise": 10.8,
+  "allin": 0.0
+ },
+ "#1969@CO": {
+  "tipo": "Vanilla",
+  "fase": "Mid",
+  "btn_bb": 34.1,
+  "opener_bb": 33.9,
+  "open_pct": 32.0,
+  "relacao": "similar",
+  "rp": 11.5,
+  "fold": 78.7,
+  "call": 10.7,
+  "raise": 10.6,
+  "allin": 0.0
  }
 }
