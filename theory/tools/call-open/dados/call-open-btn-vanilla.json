@@ -336,6 +336,96 @@
         { "opener": "MP", "opener_bb": 14.5, "open_pct": 13.6, "relacao": "similar", "rp_btn_vs_opener": 7.9, "fold": 91.6, "call": 0.1, "raise": 1.7, "allin": 6.7,
           "classes": { "P-alto": [27, 1], "P-medio": [0, 1], "P-baixo": [0, 0], "Axs": [21, 2], "Kxs": [0, 0], "QJxs": [0, 0], "Suited-con": [0, 0], "Axo": [3, 0], "Broad-off": [1, 0], "Outras-off": [0, 0] } }
       ]
+    },
+    {
+      "arvore": "#2356", "tipo": "Vanilla", "fase": "Bubble", "mesa": 8,
+      "pct_field_left": 13, "jogadores_left": 156, "media_bb": 20.2,
+      "stacks_bb": { "UTG1": 6.0, "MP": 7.7, "LJ": 33.3, "HJ": 8.8, "CO": 8.2, "BTN": 14, "SB": 65.1, "BB": null },
+      "open_size_bb": 2, "pot_bb": 4.7,
+      "cenarios": [
+        { "opener": "MP", "opener_bb": 7.7, "open_pct": 12.8, "_open_obs": "2,8% raise 2 mais 10,0% all-in; o BTN foi lido contra o raise 2", "relacao": "cobre", "rp_btn_vs_opener": 2.7, "fold": 89.0, "call": 2.1, "raise": 5.6, "allin": 3.3,
+          "classes": { "P-alto": [58, 28], "P-medio": [19, 6], "P-baixo": [0, 1], "Axs": [55, 7], "Kxs": [15, 3], "QJxs": [0, 1], "Suited-con": [0, 1], "Axo": [11, 8], "Broad-off": [4, 0], "Outras-off": [0, 0] } }
+      ]
+    },
+    {
+      "arvore": "#9633", "tipo": "Vanilla", "fase": "Bubble", "mesa": 8,
+      "pct_field_left": 15, "jogadores_left": 116, "media_bb": 26.4,
+      "stacks_bb": { "UTG1": 28.4, "MP": 20.1, "LJ": 24.2, "HJ": 27.2, "CO": 27.8, "BTN": 56.3, "SB": 7.3, "BB": null },
+      "open_size_bb": 2, "pot_bb": 4.43,
+      "cenarios": [
+        { "opener": "MP", "opener_bb": 20.1, "open_pct": 14.6, "relacao": "cobre", "rp_btn_vs_opener": 1.7, "fold": 72.4, "call": 15.9, "raise": 7.9, "allin": 3.8,
+          "classes": { "P-alto": [77, 2], "P-medio": [3, 94], "P-baixo": [0, 42], "Axs": [9, 70], "Kxs": [28, 46], "QJxs": [11, 27], "Suited-con": [0, 28], "Axo": [30, 24], "Broad-off": [16, 41], "Outras-off": [0, 0] } }
+      ]
+    },
+    {
+      "arvore": "#4084", "tipo": "Vanilla", "fase": "Bubble", "mesa": 8,
+      "pct_field_left": 16, "jogadores_left": 335, "media_bb": 39.6,
+      "stacks_bb": { "UTG1": 8.2, "MP": 35.6, "LJ": 48, "HJ": 87.9, "CO": 6.1, "BTN": 55.9, "SB": 62.9, "BB": null },
+      "open_size_bb": 2, "pot_bb": 4.54,
+      "cenarios": [
+        { "opener": "MP", "opener_bb": 35.6, "open_pct": 14.5, "relacao": "cobre", "rp_btn_vs_opener": 2.7, "fold": 72.9, "call": 16.3, "raise": 10.7, "allin": 0,
+          "classes": { "P-alto": [74, 26], "P-medio": [4, 96], "P-baixo": [10, 90], "Axs": [41, 59], "Kxs": [39, 59], "QJxs": [7, 29], "Suited-con": [1, 27], "Axo": [34, 19], "Broad-off": [35, 30], "Outras-off": [0, 0] } }
+      ]
+    },
+    {
+      "arvore": "#3744", "tipo": "Vanilla", "fase": "Mesa Final", "mesa": 8,
+      "pct_field_left": null, "jogadores_left": 8, "media_bb": 49.2,
+      "stacks_bb": { "UTG1": 27, "MP": 76.8, "LJ": 68.7, "HJ": 25, "CO": 83.5, "BTN": 36.7, "SB": 18.4, "BB": 57 },
+      "open_size_bb": 2, "pot_bb": 4.46,
+      "cenarios": [
+        { "opener": "MP", "opener_bb": 76.8, "open_pct": 21.8, "relacao": "coberto", "rp_btn_vs_opener": 15.4, "fold": 89.0, "call": 6.9, "raise": 4.0, "allin": 0.2,
+          "classes": { "P-alto": [42, 58], "P-medio": [13, 72], "P-baixo": [1, 9], "Axs": [40, 47], "Kxs": [10, 22], "QJxs": [1, 9], "Suited-con": [1, 1], "Axo": [8, 8], "Broad-off": [2, 3], "Outras-off": [0, 0] } }
+      ]
+    },
+    {
+      "arvore": "#4440", "tipo": "Vanilla", "fase": "Mesa Final", "mesa": 9,
+      "pct_field_left": null, "jogadores_left": 9, "media_bb": 31.6,
+      "stacks_bb": { "UTG": 35, "UTG1": 8.9, "MP": 55.5, "LJ": 35.3, "HJ": 8.7, "CO": 26.1, "BTN": 36.5, "SB": 22, "BB": 57 },
+      "open_size_bb": 2, "pot_bb": 4.58,
+      "cenarios": [
+        { "opener": "MP", "opener_bb": 55.5, "open_pct": 24.8, "relacao": "coberto", "rp_btn_vs_opener": 18.0, "fold": 86.9, "call": 9.3, "raise": 2.4, "allin": 1.3,
+          "classes": { "P-alto": [24, 76], "P-medio": [10, 87], "P-baixo": [3, 22], "Axs": [23, 51], "Kxs": [2, 26], "QJxs": [1, 14], "Suited-con": [0, 1], "Axo": [6, 12], "Broad-off": [1, 13], "Outras-off": [0, 0] } }
+      ]
+    },
+    {
+      "arvore": "#3915", "tipo": "Vanilla", "fase": "Late", "mesa": 8,
+      "pct_field_left": 4, "jogadores_left": 29, "media_bb": 38.3,
+      "stacks_bb": { "UTG1": 26.8, "MP": 48.5, "LJ": 17.3, "HJ": 73.4, "CO": 15, "BTN": 58.3, "SB": 54.1, "BB": 13 },
+      "open_size_bb": 2, "pot_bb": 4.5,
+      "cenarios": [
+        { "opener": "MP", "opener_bb": 48.5, "open_pct": 17.5, "relacao": "similar", "rp_btn_vs_opener": 7.2, "fold": 83.7, "call": 8.7, "raise": 7.5, "allin": 0,
+          "classes": { "P-alto": [53, 47], "P-medio": [21, 79], "P-baixo": [13, 42], "Axs": [51, 47], "Kxs": [33, 15], "QJxs": [5, 14], "Suited-con": [4, 7], "Axo": [16, 10], "Broad-off": [6, 11], "Outras-off": [0, 0] } }
+      ]
+    },
+    {
+      "arvore": "#3690", "tipo": "Vanilla", "fase": "Late", "mesa": 8,
+      "pct_field_left": 4, "jogadores_left": 365, "media_bb": 37.1,
+      "stacks_bb": { "UTG1": 31.9, "MP": 58.8, "LJ": 21.1, "HJ": 20.6, "CO": 57.8, "BTN": 59.8, "SB": 18, "BB": 29 },
+      "open_size_bb": 2, "pot_bb": 4.46,
+      "cenarios": [
+        { "opener": "MP", "opener_bb": 58.8, "open_pct": 19.0, "relacao": "similar", "rp_btn_vs_opener": 2.9, "fold": 80.1, "call": 12.3, "raise": 7.6, "allin": 0,
+          "classes": { "P-alto": [70, 30], "P-medio": [16, 84], "P-baixo": [1, 98], "Axs": [27, 72], "Kxs": [21, 27], "QJxs": [8, 19], "Suited-con": [6, 16], "Axo": [18, 12], "Broad-off": [18, 13], "Outras-off": [0, 0] } }
+      ]
+    },
+    {
+      "arvore": "#5893", "tipo": "Vanilla", "fase": "Mesa Final", "mesa": 8,
+      "pct_field_left": null, "jogadores_left": 8, "media_bb": 37.8,
+      "stacks_bb": { "UTG1": 15.7, "MP": 76.4, "LJ": 27.7, "HJ": 19, "CO": 38.9, "BTN": 49.3, "SB": 19.8, "BB": 56 },
+      "open_size_bb": 2, "pot_bb": 4.5,
+      "cenarios": [
+        { "opener": "MP", "opener_bb": 76.4, "open_pct": 29.1, "relacao": "coberto", "rp_btn_vs_opener": 20.8, "fold": 83.8, "call": 13.1, "raise": 3.1, "allin": 0,
+          "classes": { "P-alto": [23, 77], "P-medio": [6, 95], "P-baixo": [1, 25], "Axs": [32, 68], "Kxs": [8, 37], "QJxs": [1, 20], "Suited-con": [1, 7], "Axo": [7, 24], "Broad-off": [2, 17], "Outras-off": [0, 0] } }
+      ]
+    },
+    {
+      "arvore": "#7738", "tipo": "Vanilla", "fase": "Mesa Final", "mesa": 9,
+      "pct_field_left": null, "jogadores_left": 9, "media_bb": 32.5,
+      "stacks_bb": { "UTG": 5.0, "UTG1": 18.1, "MP": 68.3, "LJ": 19.2, "HJ": 50, "CO": 13.8, "BTN": 50.2, "SB": 43.4, "BB": 24 },
+      "open_size_bb": 2, "pot_bb": 4.58,
+      "cenarios": [
+        { "opener": "MP", "opener_bb": 68.3, "open_pct": 28.6, "relacao": "coberto", "rp_btn_vs_opener": 20.4, "fold": 81.0, "call": 14.1, "raise": 4.9, "allin": 0,
+          "classes": { "P-alto": [35, 65], "P-medio": [5, 95], "P-baixo": [2, 34], "Axs": [36, 64], "Kxs": [14, 45], "QJxs": [11, 24], "Suited-con": [3, 11], "Axo": [11, 25], "Broad-off": [11, 24], "Outras-off": [0, 0] } }
+      ]
     }
   ]
 }

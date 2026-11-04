@@ -6,6 +6,7 @@
     "#5888": "mesa de 7 jogadores (sem SB)",
     "#4763": "MP abre RAISE 3",
     "#3615": "mesa de 7 jogadores (sem SB)",
+    "#5758": "sem a posição do BTN na mesa; a leitura caiu em outro nó",
     "#6148": "MP abre RAISE 3",
     "#5166": "MP abre RAISE 3",
     "#8497": "MP abre RAISE 3",
@@ -380,6 +381,16 @@
       "cenarios": [
         { "opener": "MP", "opener_bb": 17.5, "opener_bounty": 125, "open_pct": 12.7, "_open_obs": "6,4% raise 2 mais 6,3% all-in; o BTN foi lido contra o raise 2", "relacao": "cobre", "rp_btn_vs_opener": -10.9, "fold": 76.3, "call": 16.8, "raise": 2.9, "allin": 4.0,
           "classes": { "P-alto": [26, 67], "P-medio": [17, 26], "P-baixo": [0, 100], "Axs": [17, 64], "Kxs": [8, 54], "QJxs": [4, 47], "Suited-con": [0, 26], "Axo": [9, 14], "Broad-off": [4, 47], "Outras-off": [0, 0] } }
+      ]
+    },
+    {
+      "arvore": "#9243", "tipo": "Bounty 50%", "fase": "Bubble", "mesa": 8,
+      "pct_field_left": 11, "jogadores_left": 415, "media_bb": 35.7, "si_fichas": 10000, "koi_usd": 5,
+      "jogadores": { "UTG1": [21.5, 10], "MP": [20.6, 23.12], "LJ": [39.5, 24.37], "HJ": [15.2, 10.62], "CO": [19.7, 16.25], "BTN": [62, 28.12], "SB": [34, 21.25], "BB": [71.8, 36.88] },
+      "open_size_bb": 2, "pot_bb": 4.46,
+      "cenarios": [
+        { "opener": "MP", "opener_bb": 20.6, "opener_bounty": 23.12, "open_pct": 9.0, "relacao": "cobre", "rp_btn_vs_opener": -5.5, "fold": 79.2, "call": 13.3, "raise": 7.5, "allin": 0,
+          "classes": { "P-alto": [81, 19], "P-medio": [9, 91], "P-baixo": [30, 70], "Axs": [24, 76], "Kxs": [24, 43], "QJxs": [5, 26], "Suited-con": [0, 19], "Axo": [20, 10], "Broad-off": [11, 20], "Outras-off": [0, 0] } }
       ]
     }
   ]
