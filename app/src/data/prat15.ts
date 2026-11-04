@@ -10,7 +10,7 @@ const R = "23456789TJQKA"
 const rk = (c: string) => R.indexOf(c[0]) + 2
 
 // Boards do módulo (refBoards) em que o treino ainda não tinha questões geradas.
-const BOARDS: { tipo: TipoId; board: string[] }[] = [
+const BOARDS: { tipo: TipoId; board: string[]; carregado?: boolean }[] = [
   { tipo: "conectado", board: ["As", "Kh", "Td"] },
   { tipo: "conectado", board: ["Qs", "Jh", "Td"] },
   { tipo: "semi", board: ["Ad", "Kh", "2c"] },
@@ -36,6 +36,12 @@ const BOARDS: { tipo: TipoId; board: string[] }[] = [
   { tipo: "dobrado", board: ["Js", "3h", "3c"] },
   { tipo: "dobrado", board: ["8c", "8h", "4d"] },
   { tipo: "dobrado", board: ["7h", "7c", "3s"] },
+  // Dobrado carregado: a terceira carta forma sequência e flush draw com o par.
+  { tipo: "dobrado", carregado: true, board: ["Ks", "Kh", "Js"] },
+  { tipo: "dobrado", carregado: true, board: ["Js", "Jh", "9s"] },
+  { tipo: "dobrado", carregado: true, board: ["As", "Ah", "Js"] },
+  { tipo: "dobrado", carregado: true, board: ["Qs", "Qh", "Ts"] },
+  { tipo: "dobrado", carregado: true, board: ["Js", "Jh", "Ts"] },
 ]
 
 const NOME_TIPO: Record<string, string> = {
@@ -104,11 +110,14 @@ interface Resultado {
   classe: string
 }
 
-// Dobrado seco (guideline): fulls e trincas em 75%, todo o restante em 50%.
+// Dobrado seco (guideline): fulls e trincas em 75%, todo o restante em 50%. No carregado
+// (anotação do coach, 03/11/2026): full e trinca em 50%, todo o restante em 25%.
 function bucketDobrado(
   board: string[],
-  hero: [string, string]
+  hero: [string, string],
+  carregado: boolean
 ): Resultado | null {
+  const forte = carregado ? 50 : 75
   const cont: Record<number, number> = {}
   for (const c of board) cont[rk(c)] = (cont[rk(c)] ?? 0) + 1
   const ranks = Object.keys(cont).map(Number)
@@ -121,19 +130,20 @@ function bucketDobrado(
   if (doPar === 1) {
     const outra = h.find((x) => x !== par)
     return outra === solta
-      ? { bucket: 75, classe: "Full" }
-      : { bucket: 75, classe: "Trinca" }
+      ? { bucket: forte, classe: "Full" }
+      : { bucket: forte, classe: "Trinca" }
   }
-  if (h[0] === h[1] && h[0] === solta) return { bucket: 75, classe: "Full" }
-  return { bucket: 50, classe: "Todo o restante" }
+  if (h[0] === h[1] && h[0] === solta) return { bucket: forte, classe: "Full" }
+  return { bucket: carregado ? 25 : 50, classe: "Todo o restante" }
 }
 
 export function bucketDe(
   tipo: TipoId,
   board: string[],
-  hero: [string, string]
+  hero: [string, string],
+  carregado = false
 ): Resultado | null {
-  if (tipo === "dobrado") return bucketDobrado(board, hero)
+  if (tipo === "dobrado") return bucketDobrado(board, hero, carregado)
   const L = ler(board, hero)
   const naipes = board.map((c) => c[1])
   const monotone = naipes.every((n) => n === naipes[0])
@@ -283,12 +293,12 @@ function semente(texto: string): () => number {
 function gerar(): Situacao[] {
   const maos = todasAsMaos()
   const lista: Situacao[] = []
-  for (const { tipo, board } of BOARDS) {
+  for (const { tipo, board, carregado } of BOARDS) {
     const grupos = new Map<string, Situacao[]>()
     for (const m of maos) {
       if (m.some((c) => board.includes(c))) continue
       if (!btnPaga("CO", m) || !btnPaga("HJ", m)) continue
-      const r = bucketDe(tipo, board, m)
+      const r = bucketDe(tipo, board, m, carregado)
       if (!r) continue
       const chave = `${r.classe}|${r.bucket}`
       const sit: Situacao = {
@@ -298,7 +308,7 @@ function gerar(): Situacao[] {
         hero: [...m],
         classe: r.classe,
         bucket: r.bucket,
-        porque: `${r.classe} vai em ${r.bucket}% no ${NOME_TIPO[tipo]}. (${classeDaMao(m)})`,
+        porque: `${r.classe} vai em ${r.bucket}% no ${carregado ? "dobrado carregado" : NOME_TIPO[tipo]}. (${classeDaMao(m)})`,
       }
       const g = grupos.get(chave) ?? []
       g.push(sit)
