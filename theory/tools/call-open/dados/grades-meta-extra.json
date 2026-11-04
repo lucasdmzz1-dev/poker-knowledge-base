@@ -116,5 +116,44 @@
   "call": 6.9,
   "raise": 7.1,
   "allin": 0.1
+ },
+ "#6702@MP": {
+  "tipo": "Vanilla",
+  "fase": "Early",
+  "btn_bb": 56.9,
+  "opener_bb": 54.7,
+  "open_pct": 18.9,
+  "relacao": "similar",
+  "rp": 3.3,
+  "fold": 79.4,
+  "call": 12.5,
+  "raise": 8.0,
+  "allin": 0
+ },
+ "#4103@MP": {
+  "tipo": "Vanilla",
+  "fase": "Mid",
+  "btn_bb": 54.7,
+  "opener_bb": 25.5,
+  "open_pct": 19.8,
+  "relacao": "cobre",
+  "rp": 2.3,
+  "fold": 82.9,
+  "call": 11.6,
+  "raise": 5.5,
+  "allin": 0
+ },
+ "#6763@MP": {
+  "tipo": "Vanilla",
+  "fase": "Early",
+  "btn_bb": 64.9,
+  "opener_bb": 69.1,
+  "open_pct": 19.1,
+  "relacao": "similar",
+  "rp": 3.2,
+  "fold": 85.8,
+  "call": 6.4,
+  "raise": 7.8,
+  "allin": 0
  }
 }
