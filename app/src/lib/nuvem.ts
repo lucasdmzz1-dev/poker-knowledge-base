@@ -287,6 +287,8 @@ export async function ehAdmin(): Promise<boolean> {
 }
 
 export interface ResumoUsuario {
+  id_usuario: string
+  aprovado: boolean
   email: string
   provedor: string
   cadastro: string
@@ -311,3 +313,34 @@ export async function resumoUsuarios(): Promise<ResumoUsuario[]> {
   })
   return Array.isArray(r) ? (r as ResumoUsuario[]) : []
 }
+
+// Conta aprovada por um administrador. Se não der para checar (rede ou tabela
+// ainda sem criar), deixa passar: quem barra de verdade é o servidor.
+export async function estouAprovado(): Promise<boolean> {
+  const s = await sessaoValida()
+  if (!s) return false
+  try {
+    const linhas = await chamar(
+      `/rest/v1/aprovados?select=user_id&user_id=eq.${s.user.id}`,
+      { token: s.access_token }
+    )
+    return Array.isArray(linhas) && linhas.length > 0
+  } catch {
+    return true
+  }
+}
+
+async function chamarRpc(nome: string, corpo: unknown): Promise<void> {
+  const s = await sessaoValida()
+  if (!s) throw new Error("Sessão vencida. Entre de novo.")
+  await chamar(`/rest/v1/rpc/${nome}`, {
+    method: "POST",
+    token: s.access_token,
+    body: JSON.stringify(corpo),
+  })
+}
+
+export const aprovarUsuario = (id: string) =>
+  chamarRpc("aprovar_usuario", { p_user: id })
+export const removerAprovacao = (id: string) =>
+  chamarRpc("remover_aprovacao", { p_user: id })

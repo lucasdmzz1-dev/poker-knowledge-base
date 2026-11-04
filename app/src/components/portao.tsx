@@ -5,6 +5,7 @@ import {
   capturarRetornoGoogle,
   criarConta,
   entrar,
+  estouAprovado,
   googleAtivo,
   irParaGoogle,
   nuvemAtiva,
@@ -17,7 +18,7 @@ import { comecarRegistroDeUso } from "@/lib/uso"
 import { UsuarioContext } from "@/lib/usuario"
 import { cn } from "@/lib/utils"
 
-type Fase = "carregando" | "fora" | "dentro"
+type Fase = "carregando" | "fora" | "pendente" | "dentro"
 
 function Login({
   aoEntrar,
@@ -165,8 +166,13 @@ export function Portao({ children }: { children: ReactNode }) {
   const [erro, setErro] = useState("")
 
   async function entrouComSessao(s: Sessao) {
-    await sincronizarAoEntrar()
     setEmail(s.user.email)
+    if (!(await estouAprovado())) {
+      setErro("")
+      setFase("pendente")
+      return
+    }
+    await sincronizarAoEntrar()
     setErro("")
     setFase("dentro")
   }
@@ -208,17 +214,52 @@ export function Portao({ children }: { children: ReactNode }) {
       nuvemAtiva && fase === "dentro"
         ? {
             email,
-            sair: () => {
-              void sair().then(() => {
-                limparLocal()
-                window.location.reload()
-              })
-            },
+            sair: sairDaConta,
           }
         : null,
     [fase, email]
   )
 
+  function sairDaConta() {
+    void sair().then(() => {
+      limparLocal()
+      window.location.reload()
+    })
+  }
+
+  if (fase === "pendente")
+    return (
+      <main className="grid min-h-svh place-items-center px-5">
+        <div className="w-full max-w-sm rounded-2xl border bg-card/60 p-6">
+          <div className="mb-4 flex items-center gap-2.5 font-bold">
+            <span className="grid size-8 place-items-center rounded-lg bg-primary text-sm text-primary-foreground">
+              PK
+            </span>
+            Poker KB
+          </div>
+          <h1 className="mb-2 text-lg font-bold">Aguardando aprovação</h1>
+          <p className="text-sm text-muted-foreground">
+            Sua conta ({email}) foi criada. Falta um administrador liberar o
+            acesso. Volte aqui depois e clique em verificar de novo.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            <Button
+              className="h-10 px-5 font-bold"
+              onClick={() => window.location.reload()}
+            >
+              Verificar de novo
+            </Button>
+            <Button
+              variant="outline"
+              className="h-10 px-5"
+              onClick={sairDaConta}
+            >
+              Sair
+            </Button>
+          </div>
+        </div>
+      </main>
+    )
   if (fase === "carregando")
     return (
       <main className="grid min-h-svh place-items-center text-muted-foreground">
