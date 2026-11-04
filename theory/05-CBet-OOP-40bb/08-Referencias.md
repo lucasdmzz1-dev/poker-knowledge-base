@@ -59,6 +59,31 @@ Fonte para:
 
 ---
 
+# 5. Exemplos do coach (02/11/2026)
+
+Arquivo "CBET OOP EXEMPLOS", enviado pelo coach, com 16 mãos de exemplo e os rótulos dele:
+
+| Board | Rótulo do coach | Posições |
+|---|---|---|
+| J-8-7 com dois corações | High card conectado com flush draw | CO contra BTN |
+| J-8-3 com dois corações | High card conectado com flush draw | EP contra CO |
+| 864 rainbow | Low | HJ contra BTN |
+| 969 com duas espadas | Dobrado com flush draw | EP contra CO |
+| 964 com dois ouros | High card com flush draw | EP contra BTN |
+| K-T-6 | 2 broadways | EP contra BTN |
+| K-8-5 rainbow | High card | MP contra CO |
+| J-6-4 com dois paus | High card com flush draw | MP contra HJ |
+| 765 rainbow | Low conectado | EP contra BTN |
+| Q-J-6 com duas espadas | 2 broadways com flush draw | MP contra HJ |
+| Q-8-4 rainbow | High card | CO contra BTN |
+| 832 monotone de ouros | Monotone | HJ contra CO |
+| 332 rainbow | Dobrado low | CO contra BTN |
+| 652 rainbow | Low | MP contra HJ |
+| A-A-8 com dois ouros | Dobrado com A | — |
+| K-6-4 com dois corações | High card com flush draw | — |
+
+Os replays estão nos links do arquivo original, que fica fora do repositório.
+
 # Critério de Prioridade
 
 Em caso de conflito:

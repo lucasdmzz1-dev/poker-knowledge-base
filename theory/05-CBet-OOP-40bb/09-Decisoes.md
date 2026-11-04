@@ -104,6 +104,23 @@ Na Prática, o "EP" do módulo é o EP2 do Poker Academy (UTG+1 de uma mesa de 9
 
 **Status:** definitiva para a Prática.
 
+---
+
+# Decisão 8 — Boards extras do treino (02/11/2026)
+
+A Prática passou a ter mais de um board por textura, só com os que o coach rotulou no arquivo de exemplos e que encaixam de forma clara no guideline:
+
+| Textura | Boards |
+|---|---|
+| BBX | K-Q-5 (base), K-T-6, Q-J-6 |
+| K-Q high | K-8-4 (base), Q-8-4, K-8-5, K-6-4 |
+| J-T high | J-7-3 (base), J-6-4, J-8-3 |
+| Low com sequência | 7-6-4 (base), 7-6-5 |
+
+As regras de decisão de cada textura não mudaram. Cada board entra rainbow e com dois naipes.
+
+**Status:** provisória. Os boards sem textura clara estão na Pendência 8.
+
 <!-- graphify-links:start -->
 
 ---

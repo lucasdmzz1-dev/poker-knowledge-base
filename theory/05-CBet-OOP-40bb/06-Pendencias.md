@@ -85,6 +85,50 @@ O guideline cobre só o range de valor. Falta definir:
 - Gyazos de Solver do turn.
 - Videoaula (seção ainda sem aula).
 
+---
+
+# 7. Check-fold (02/11/2026)
+
+A Prática do módulo não tem a ação check-fold: só entram mãos com regra de check-call, check-raise ou bet (B25, B40, B70), e as outras são descartadas do treino.
+
+**Regra do autor do KB:** mão que o herói abre e que não se encaixa em nenhuma das possibilidades é claramente check-fold.
+
+**Indiferentes entre check-call e check-fold (autor):**
+
+- Os underpairs (par de bolso abaixo do terceiro par) ficam indiferentes em várias situações.
+- Exemplo do GTO Wizard (CO contra BTN, flop 9-8-4, 43,9bb), em frente à aposta do BTN: fold 46,4%, call 27,8% e raise 25,8%. O 33 e o 22 aparecem misturados entre call e fold, numa situação de 50% de stack restante.
+- Com ICM maior os pares baixos já foldariam mais. O treino não modela ICM.
+
+**Falta saber (coach):** quais mãos do range de abertura viram check-fold em cada textura e posição, e onde fica a fronteira dos pares baixos.
+
+**Status:** aberta. O botão foi adiado a pedido do autor.
+
+---
+
+# 8. Boards do arquivo de exemplos do coach (02/11/2026)
+
+O arquivo "CBET OOP EXEMPLOS" lista 16 mãos de exemplo, cada uma com o rótulo do coach e as posições. A Prática passou a usar os que tinham rótulo claro (Decisão 8). Os outros ficam sem textura definida:
+
+- 864 rainbow (HJ contra BTN), rotulado só "low".
+- 652 rainbow (MP contra HJ), rotulado só "low".
+- J-8-7 com dois corações (CO contra BTN), rotulado "high card conectado com flush draw".
+- 969 com duas espadas (EP contra CO), 332 rainbow (CO contra BTN) e A-A-8 com dois ouros: boards pareados, fora das texturas da tabela.
+- 832 monotone de ouros (HJ contra CO): o monotone da tabela é do CO contra BTN.
+
+**Falta saber (coach):** a qual textura do guideline (A HIGH, BBX, K-Q high, J-T high, high ou low com sequência) cada um desses pertence. Os pareados precisam de uma tabela própria.
+
+**Status:** aberta.
+
+---
+
+# 9. Posições dos exemplos
+
+Os exemplos do coach trazem posições diferentes das do módulo (MP contra HJ, EP contra CO, HJ contra CO). O treino usa sempre o BTN como vilão, com o herói no EP ou no CO.
+
+**Falta saber (coach):** se a tabela de estratégia vale para essas outras posições.
+
+**Status:** aberta.
+
 <!-- graphify-links:start -->
 
 ---
