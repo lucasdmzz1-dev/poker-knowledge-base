@@ -2,7 +2,7 @@
 # Uso (na raiz do repositório):
 #   python -I theory/tools/call-open/gerar-simplificacao.py
 # Método: separa Vanilla e PKO e, em cada um, BTN médio (menos de 45bb) e deep. No PKO deep há ainda o grupo
-# "RP até -2% ou opener de 35% ou mais" (5 dos 6 cenários). Posição "i" = opener inicial (UTG a HJ), "c" = opener CO. Por mão e por grupo guarda a média, o mínimo e o
+# "RP até -2% ou opener de 35% ou mais" (5 dos 6 cenários). Posição "i" = opener inicial (UTG, UTG1, MP, LJ), "c" = opener CO ou HJ. Por mão e por grupo guarda a média, o mínimo e o
 # máximo de continuar (call + 3bet + all-in) entre as árvores do grupo e a parte de 3bet.
 import json, os
 
@@ -16,7 +16,7 @@ def tot(c):
     return sum((a + b + e) * w for a, b, e, w in zip(c["call"], c["raise"], c["allin"], W)) / 1326
 
 G = {}
-for pos, f_pos in (("i", lambda c: c["opener"] != "CO"), ("c", lambda c: c["opener"] == "CO")):
+for pos, f_pos in (("i", lambda c: c["opener"] in ("UTG", "UTG1", "MP", "LJ")), ("c", lambda c: c["opener"] in ("CO", "HJ"))):
     for t, tn in (("V", "Vanilla"), ("P", "PKO")):
         for f, fn in (("m", "médio"), ("f", "deep")):
             cs = [c for c in C if f_pos(c) and c["tipo"] == tn and c["faixa"] == fn]

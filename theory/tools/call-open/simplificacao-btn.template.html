@@ -54,7 +54,7 @@ const NOMET={V:'Vanilla',P:'PKO (Bounty 50%)'};
 function cor(v){return v>=80?'#5fa365':v>=50?'rgba(95,163,101,.6)':v>=25?'rgba(95,163,101,.28)':'#2a3338'}
 function tag(h){return h[3]>=60?'3':h[3]>=30?'f+3':''}
 function ui(){
- $('b0').innerHTML=[['i','BTN contra posições iniciais (UTG a HJ)'],['c','BTN contra CO']].map(([k,n])=>`<button data-p="${k}" class="${k===pos?'on':''}">${n}</button>`).join('');
+ $('b0').innerHTML=[['i','BTN contra posições iniciais (UTG a LJ)'],['c','BTN contra CO e HJ']].map(([k,n])=>`<button data-p="${k}" class="${k===pos?'on':''}">${n}</button>`).join('');
  $('b0').querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{pos=b.dataset.p;x=false;render()});
  $('b1').innerHTML=['V','P'].map(k=>`<button data-t="${k}" class="${k===t?'on':''}">${NOMET[k]}</button>`).join('')+['m','f'].map(k=>`<button data-f="${k}" class="${k===f?'on':''}">BTN ${k==='m'?'médio (30 a 40bb)':'deep (50bb ou mais)'}</button>`).join('');
  $('b2').innerHTML=(t==='P'&&f==='f')?`<label style="cursor:pointer"><input type="checkbox" id="xx" ${x?'checked':''}> Só os spots mais largos: RP do BTN até -2% ou opener abrindo 35% ou mais (${(D.g[pos+'Px']||{n:0}).n} das ${(D.g[pos+'Pf']||{n:0}).n} árvores)</label>`:'';
