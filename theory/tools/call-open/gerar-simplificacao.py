@@ -1,7 +1,7 @@
 # Gera simplificacao-btn.html a partir de dados/call-open-btn-grades.json.
 # Uso (na raiz do repositório):
 #   python -I theory/tools/call-open/gerar-simplificacao.py
-# Método: separa Vanilla e PKO e, em cada um, BTN médio (menos de 45bb) e fundo. No PKO fundo há ainda o grupo
+# Método: separa Vanilla e PKO e, em cada um, BTN médio (menos de 45bb) e deep. No PKO deep há ainda o grupo
 # "RP até -2% ou opener de 35% ou mais" (5 dos 6 cenários). Por mão e por grupo guarda a média, o mínimo e o
 # máximo de continuar (call + 3bet + all-in) entre as árvores do grupo e a parte de 3bet.
 import json, os
@@ -17,9 +17,9 @@ def tot(c):
 
 G = {
     "Vm": [c for c in C if c["tipo"] == "Vanilla" and c["faixa"] == "médio"],
-    "Vf": [c for c in C if c["tipo"] == "Vanilla" and c["faixa"] == "fundo"],
+    "Vf": [c for c in C if c["tipo"] == "Vanilla" and c["faixa"] == "deep"],
     "Pm": [c for c in C if c["tipo"] == "PKO" and c["faixa"] == "médio"],
-    "Pf": [c for c in C if c["tipo"] == "PKO" and c["faixa"] == "fundo"],
+    "Pf": [c for c in C if c["tipo"] == "PKO" and c["faixa"] == "deep"],
 }
 G["Px"] = [c for c in G["Pf"] if c["rp"] <= -2 or c["open_pct"] >= 35]
 
