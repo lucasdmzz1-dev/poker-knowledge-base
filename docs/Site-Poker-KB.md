@@ -83,6 +83,12 @@ O site registra só qual área cada jogador abre (início, teoria, prática ou a
 
 Para ligar: rode `docs/Supabase-Admin.sql` no SQL Editor e inclua o seu usuário em `admins` (comando no fim do arquivo). Para outro administrador, repita o `insert` com o e-mail dele. Sem o SQL, o registro de uso falha em silêncio e a página mostra "só para administradores".
 
+## Aprovação de contas
+
+Quem cria conta (e-mail ou Google) fica em "Aguardando aprovação" e não vê o site até um administrador liberar em `/#/admin`, na coluna Acesso: **Aprovar** libera, **Aprovado · tirar** (com confirmação) tira o acesso depois. A regra vale no servidor: conta sem aprovação não grava dados nem uso. Quem tem o acesso tirado volta para a tela de espera na próxima vez que abrir o site. Um administrador não consegue tirar o próprio acesso.
+
+Para ligar: rode `docs/Supabase-Aprovacao.sql` no SQL Editor depois dos outros dois. As contas que já existem entram aprovadas. Mergear este código sem rodar o SQL é seguro (a tela de espera não aparece), mas o botão de aprovar só funciona depois do SQL.
+
 ## Fluxo mensal
 
 1. Receber os prints do HUD do mês e colocar em Leaks do mês.
