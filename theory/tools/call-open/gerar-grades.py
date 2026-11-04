@@ -38,6 +38,9 @@ for nome in ("call-open-btn-vanilla.json", "call-open-btn-pko.json"):
 
 with open(os.path.join(dados, "grades-meta-extra.json"), encoding="utf-8") as f:
     extra = json.load(f)
+with open(os.path.join(dados, "grades-pct-left.json"), encoding="utf-8") as f:
+    pct_left = json.load(f)  # % de field left lido na biblioteca; escopo do estudo: 20% ou mais (abaixo disso muda muito)
+excluidas = []
 cenarios = []
 with open(os.path.join(dados, "grades-raw.txt"), encoding="utf-8") as f:
     for linha in f:
@@ -53,6 +56,12 @@ with open(os.path.join(dados, "grades-raw.txt"), encoding="utf-8") as f:
             btn = e["btn_bb"]
         else:
             a, c, btn = meta[(id_, op or "MP")]
+        pl = pct_left.get(id_)
+        if pl is None:
+            pl = a.get("pct_field_left")
+        if pl is not None and pl < 20:
+            excluidas.append(id_ + "@" + (op or "MP") + " (" + str(pl) + "%)")
+            continue
         m = decodifica(cod)
         w = [6 if len(x) == 2 else 4 if x.endswith("s") else 12 for x in MAOS]
         calc = [round(sum(wi * mi[k] for wi, mi in zip(w, m)) / 1326, 1) for k in range(3)]
@@ -62,7 +71,7 @@ with open(os.path.join(dados, "grades-raw.txt"), encoding="utf-8") as f:
             obs = f"o resumo registra all-in {c.get('allin', 0) or 0}%, mas a grade tem {calc[2]}% (o cabeçalho do solver não fecha 100% sem ele); vale a grade"
         cenarios.append({
             "arvore": id_, "tipo": "PKO" if a["tipo"].startswith("Bounty") else "Vanilla", "fase": a["fase"],
-            "faixa": "médio" if btn < 45 else "deep", "btn_bb": btn,
+            "faixa": "médio" if btn < 45 else "deep", "btn_bb": btn, "pct_left": pl,
             "opener": c["opener"], "opener_bb": c["opener_bb"], "open_pct": c["open_pct"],
             "relacao": c["relacao"], "rp": c["rp_btn_vs_opener"],
             "resumo": {"fold": c["fold"], "call": c["call"], "raise": c["raise"], "allin": calc[2] if obs else (c.get("allin", 0) or 0)}, "obs": obs,
@@ -71,7 +80,7 @@ with open(os.path.join(dados, "grades-raw.txt"), encoding="utf-8") as f:
 
 saida = {
     "_nota": "Grades 13x13 do BTN contra 1 open (opener indicado em cada cenário), solver do 4BET Trainer (HRC Library), lidas em "
-             "03/11/2026. Cada mão: % de call, 3bet (raise) e all-in; fold = 100 - soma. Ordem das mãos = ordem do "
+             "03/11/2026. Escopo: Early e Mid com 20% ou mais do field left (abaixo disso o spot muda muito e fica para outro estudo). Cada mão: % de call, 3bet (raise) e all-in; fold = 100 - soma. Ordem das mãos = ordem do "
              "solver (AA, AKs, AQs, ..., linha a linha). Conferidas contra os totais de call-open-btn-*.json (média "
              "ponderada por combos, tolerância 0,2).",
     "maos": MAOS, "cenarios": cenarios,
@@ -84,4 +93,6 @@ with open(os.path.join(aqui, "grades-btn.template.html"), encoding="utf-8") as f
 html = html.replace("/*DADOS*/null", json.dumps(saida, ensure_ascii=False, separators=(",", ":")))
 with open(os.path.join(aqui, "grades-btn.html"), "w", encoding="utf-8") as f:
     f.write(html)
-print(len(cenarios), "cenários")
+
+
+print(len(cenarios), "cenários; fora do escopo (<20% do field):", ", ".join(excluidas))
