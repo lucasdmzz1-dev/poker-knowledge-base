@@ -27,60 +27,49 @@ p{margin:4px 0}b.v{color:var(--g)}
 </head>
 <body>
 <h1>Call open do BTN, simplificado</h1>
-<p class="sub">Resumo de 24 árvores do solver (Early e Mid, Vanilla e PKO, BTN médio e fundo). O núcleo você já sabe; aqui só o que muda: as bordas.</p>
+<p class="sub">Resumo de 24 árvores do solver (Early e Mid), separado em Vanilla e PKO e por stack do BTN. O núcleo você já sabe; olhe as bordas (as cores mais claras).</p>
 
-<h2>1. Descubra o nível do spot (3 perguntas)</h2>
-<div class="box" id="q">
- <label><input type="checkbox" id="q1"><span><b>BTN fundo:</b> stack do BTN em torno de 50bb ou mais (e não só 30 a 35bb).</span></label>
- <label><input type="checkbox" id="q2"><span><b>Opener largo:</b> o opener abre 25% ou mais do range.</span></label>
- <label><input type="checkbox" id="q3"><span><b>RP do BTN até 0%:</b> no PKO, bounty a favor do BTN. <span class="mut">(Inferência: nas 24 árvores, RP até 0 só aparece no PKO.)</span></span></label>
- <div class="lv" id="nivel"></div>
- <p class="mut" id="nivelObs"></p>
-</div>
-<p class="mut">Cada pergunta "sim" soma 1 ponto: 0 = apertado, 1 = médio, 2 ou 3 = favorável. Essa regra acerta o nível em 18 de 24 árvores (75%); nas outras 6 erra por um nível.</p>
+<h2>1. Escolha o spot</h2>
+<div class="bar" id="b1"></div>
+<div class="bar" id="b2"></div>
+<div class="box" id="info"></div>
 
-<h2>2. Seu range de jogar (flat e 3bet) nesse nível</h2>
-<div class="bar" id="btns"></div>
+<h2>2. Mãos para jogar (flat e 3bet)</h2>
 <div class="grid" id="grid"></div>
 <div class="leg" id="leg"></div>
 <div class="box" id="txt"></div>
 
-<h2>3. O que decorar</h2>
-<div class="box">
- <p><b class="v">Sempre, em qualquer nível:</b> pares 44 ou mais; Ax suited de A3s a AQs; KTs ou mais, QJs, QTs, JTs; AJo ou mais, KQo.</p>
- <p><b>Já no apertado, de 40 a 80%, e sempre no médio:</b> A2s, K9s, Q9s, J9s, T9s, T8s, 98s, 87s, 76s, KJo, ATo, 33.</p>
- <p><b>Entram no médio:</b> K8s, K7s, K6s, 65s, 54s, 22.</p>
- <p><b>Entram no favorável (quase sempre lá):</b> K5s, Q8s, J8s, T7s, 97s, 86s, 75s, QJo, JTo.</p>
- <p><b>No favorável, mas só de 70 a 80%:</b> K4s, K3s, K2s, Q7s, Q6s, KTo, QTo, A9o, 96s, 64s, 53s.</p>
- <p><b>No favorável, só de 50 a 67%:</b> Q5s, Q4s, J7s, 85s, 74s, 43s. T6s, T9o e A8o ficam abaixo de 45% mesmo lá. O resto é fold.</p>
- <p class="mut">Os números exatos de cada grupo estão no modo "Todos" da grade e na grade da página <code>grades-btn.html</code>.</p>
-</div>
-<p class="mut">Amostra pequena: só 6 a 10 árvores por nível. Serve como atalho de mesa, não como regra exata. 3bet marcado com "3" quando a maior parte do que se continua com essa mão é 3bet.</p>
+<h2>3. Vanilla contra PKO (mesmo stack)</h2>
+<div class="box" id="dif"></div>
+<p class="mut">Amostra pequena: 6 árvores por grupo (5 no PKO de spots largos). Serve como atalho de mesa, não como regra exata. Marca "3" = quase sempre 3bet; "f+3" = misto de flat e 3bet. Passe o mouse (ou toque) numa mão para ver média, mínimo e máximo entre as árvores.</p>
 
 <script>
 const D=/*DADOS*/null;
 const $=id=>document.getElementById(id);
-const NOM=['','Apertado','Médio','Favorável'];
-let nivel=1,vis=1;
-function calc(){const p=['q1','q2','q3'].filter(i=>$(i).checked).length;nivel=p===0?1:p===1?2:3;
- $('nivel').innerHTML=`Nível: <span style="color:var(--g)">${NOM[nivel].toUpperCase()}</span> (${p} ${p===1?'ponto':'pontos'})`;
- $('nivelObs').textContent={1:'BTN contra open fechado e stack não tão fundo: pague só o que está em verde forte.',2:'Um fator a favor: some as mãos do grupo médio.',3:'Dois ou mais fatores a favor: este é o spot largo, pague até a borda do grupo favorável.'}[nivel];
- vis=nivel;render()}
+let t='V',f='m',x=false;
+const key=()=>t+(t==='P'&&f==='f'&&x?'x':f);
+const NOMET={V:'Vanilla',P:'PKO (Bounty 50%)'};
+function cor(v){return v>=80?'#5fa365':v>=50?'rgba(95,163,101,.6)':v>=25?'rgba(95,163,101,.28)':'#2a3338'}
+function tag(h){return h[3]>=60?'3':h[3]>=30?'f+3':''}
+function ui(){
+ $('b1').innerHTML=['V','P'].map(k=>`<button data-t="${k}" class="${k===t?'on':''}">${NOMET[k]}</button>`).join('')+['m','f'].map(k=>`<button data-f="${k}" class="${k===f?'on':''}">BTN ${k==='m'?'médio (30 a 40bb)':'fundo (50bb ou mais)'}</button>`).join('');
+ $('b2').innerHTML=(t==='P'&&f==='f')?`<label style="cursor:pointer"><input type="checkbox" id="xx" ${x?'checked':''}> Só os spots mais largos: RP do BTN até -2% ou opener abrindo 35% ou mais (${D.g.Px.n} das ${D.g.Pf.n} árvores)</label>`:'';
+ $('b1').querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{t=b.dataset.t;render()});
+ $('b1').querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{f=b.dataset.f;render()});
+ const e=$('xx');if(e)e.onchange=()=>{x=e.checked;render()}}
+function lista(g,lo,hi){const r={fl:[],r3:[],mx:[]};D.maos.forEach((n,i)=>{const h=g.h[i];if(h[0]>=lo&&h[0]<hi){(h[3]>=60?r.r3:h[3]>=30?r.mx:r.fl).push(n)}});return r}
 function render(){
- const B=$('btns');B.innerHTML=[[1,'Apertado'],[2,'Médio'],[3,'Favorável'],[0,'Todos (a partir de qual nível entra)']].map(([k,n])=>`<button data-k="${k}" class="${k===vis?'on':''}">${n}</button>`).join('');
- B.querySelectorAll('button').forEach(b=>b.onclick=()=>{vis=+b.dataset.k;render()});
- let h='';
- for(const m of D.maos){const [n,a,b,c,s]=m;let col='#2a3338',tag='';
-  if(vis>0){const f=m[vis];col=f>=80?'#5fa365':f>=50?'rgba(95,163,101,.6)':f>=25?'rgba(95,163,101,.28)':'#2a3338'}
-  else{col=a>=80?'#5fa365':a>=40?'rgba(95,163,101,.75)':b>=70?'rgba(95,163,101,.5)':(b>=35||c>=70)?'rgba(95,163,101,.3)':c>=30?'rgba(232,194,90,.35)':'#2a3338'}
-  const mx=vis>0?m[vis]:Math.max(a,b,c);if(mx>=50&&s>=60)tag='3';else if(mx>=50&&s>=30)tag='f+3';
-  h+=`<div class="c" style="background:${col}" title="${n}: nível 1 ${a}%, nível 2 ${b}%, nível 3 ${c}% continuando; 3bet ${s}%">${n}<i>${tag}</i></div>`}
- $('grid').innerHTML=h;
- $('leg').innerHTML=vis>0?'<span style="--k:#5fa365">joga (80% ou mais)</span><span style="--k:rgba(95,163,101,.6)">joga bastante (50 a 80%)</span><span style="--k:rgba(95,163,101,.28)">às vezes (25 a 50%)</span><span style="--k:#2a3338">fold</span><span style="--k:#ffb3a8">3 = quase sempre 3bet</span>':'<span style="--k:#5fa365">sempre</span><span style="--k:rgba(95,163,101,.75)">já no apertado (metade)</span><span style="--k:rgba(95,163,101,.5)">entra no médio</span><span style="--k:rgba(95,163,101,.3)">só no favorável</span><span style="--k:rgba(232,194,90,.35)">raro, só no favorável</span>';
- const sel=D.maos.filter(m=>vis>0?m[vis]>=50:m[1]>=50||m[2]>=50||m[3]>=50);
- const f3=sel.filter(m=>m[4]>=60).map(m=>m[0]),mix=sel.filter(m=>m[4]>=30&&m[4]<60).map(m=>m[0]),fl=sel.filter(m=>m[4]<30).map(m=>m[0]);
- $('txt').innerHTML=vis>0?`<p><b>${sel.length} das 169 mãos</b> com 50% ou mais de continuar no nível ${NOM[vis].toLowerCase()} (média de ${D.n[vis]} árvores).</p><p><b class="v">Flat:</b> ${fl.join(' ')}</p><p><b style="color:var(--r)">3bet (maior parte):</b> ${f3.join(' ')}</p><p><b>Misto flat + 3bet:</b> ${mix.join(' ')}</p>`:'<p class="mut">Passe o mouse (ou toque) em uma mão para ver os números por nível.</p>'}
-['q1','q2','q3'].forEach(i=>$(i).onchange=calc);calc();
+ ui();const g=D.g[key()];
+ $('info').innerHTML=`<b>${NOMET[t]}, BTN ${f==='m'?'médio':'fundo'}${key().endsWith('x')?', spots largos':''}</b>: média de ${g.n} árvores (${g.arv.join(', ')}). O BTN continua com <b style="color:var(--g)">${g.tot[1]}%</b> das mãos em média (de ${g.tot[0]}% a ${g.tot[2]}% entre as árvores).`;
+ $('grid').innerHTML=D.maos.map((n,i)=>{const h=g.h[i];return`<div class="c" style="background:${cor(h[0])}" title="${n}: média ${h[0]}% (de ${h[1]}% a ${h[2]}%); 3bet ${h[3]}% do que continua">${n}<i>${tag(h)}</i></div>`}).join('');
+ $('leg').innerHTML='<span style="--k:#5fa365">sempre (80% ou mais)</span><span style="--k:rgba(95,163,101,.6)">bastante (50 a 80%)</span><span style="--k:rgba(95,163,101,.28)">às vezes (25 a 50%)</span><span style="--k:#2a3338">fold</span>';
+ const bloco=(n,lo,hi)=>{const r=lista(g,lo,hi);if(!r.fl.length&&!r.r3.length&&!r.mx.length)return'';return`<p><b>${n}</b></p>`+(r.fl.length?`<p><b class="v">Flat:</b> ${r.fl.join(' ')}</p>`:'')+(r.mx.length?`<p><b>Misto flat + 3bet:</b> ${r.mx.join(' ')}</p>`:'')+(r.r3.length?`<p><b style="color:var(--r)">3bet:</b> ${r.r3.join(' ')}</p>`:'')};
+ $('txt').innerHTML=bloco('Sempre (80% ou mais)',80,101)+bloco('Bastante (50 a 80%): a borda para decorar',50,80)+bloco('Às vezes (25 a 50%): só se o spot estiver bom',25,50);
+ // diferenças no mesmo stack
+ const a=D.g['V'+f],b=D.g[(t==='P'&&f==='f'&&x)?'Px':'P'+f];const mais=[],menos=[];
+ D.maos.forEach((n,i)=>{const d=b.h[i][0]-a.h[i][0];if(d>=25)mais.push(`${n} (${a.h[i][0]}% para ${b.h[i][0]}%)`);else if(d<=-25)menos.push(`${n} (${a.h[i][0]}% para ${b.h[i][0]}%)`)});
+ $('dif').innerHTML=`<p>BTN ${f==='m'?'médio':'fundo'}: Vanilla continua com ${a.tot[1]}% e PKO${(t==='P'&&f==='f'&&x)?' (spots largos)':''} com ${b.tot[1]}%. Mãos com diferença de 25 pontos ou mais:</p><p><b class="v">Entram mais no PKO:</b> ${mais.join(', ')||'nenhuma'}</p><p><b>Entram mais no Vanilla:</b> ${menos.join(', ')||'nenhuma'}</p>`}
+render();
 </script>
 </body>
 </html>
