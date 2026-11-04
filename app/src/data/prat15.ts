@@ -30,6 +30,12 @@ const BOARDS: { tipo: TipoId; board: string[] }[] = [
   { tipo: "seco", board: ["9h", "6s", "4c"] },
   { tipo: "seco", board: ["9c", "5h", "4d"] },
   { tipo: "monotone", board: ["As", "9s", "8s"] },
+  // Dobrado seco: a terceira carta não forma sequência nem flush draw com o par. O
+  // K-K-7 fica de fora porque o subtipo seco dele é inferência (12-Padroes).
+  { tipo: "dobrado", board: ["Ks", "Kh", "2c"] },
+  { tipo: "dobrado", board: ["Js", "3h", "3c"] },
+  { tipo: "dobrado", board: ["8c", "8h", "4d"] },
+  { tipo: "dobrado", board: ["7h", "7c", "3s"] },
 ]
 
 const NOME_TIPO: Record<string, string> = {
@@ -37,6 +43,7 @@ const NOME_TIPO: Record<string, string> = {
   semi: "semi conectado",
   seco: "seco",
   monotone: "monotone",
+  dobrado: "dobrado seco",
 }
 
 function janelas(): number[][] {
@@ -97,11 +104,36 @@ interface Resultado {
   classe: string
 }
 
+// Dobrado seco (guideline): fulls e trincas em 75%, todo o restante em 50%.
+function bucketDobrado(
+  board: string[],
+  hero: [string, string]
+): Resultado | null {
+  const cont: Record<number, number> = {}
+  for (const c of board) cont[rk(c)] = (cont[rk(c)] ?? 0) + 1
+  const ranks = Object.keys(cont).map(Number)
+  const par = ranks.find((r) => cont[r] === 2)
+  const solta = ranks.find((r) => cont[r] === 1)
+  if (par === undefined || solta === undefined) return null
+  const h = hero.map(rk)
+  const doPar = h.filter((x) => x === par).length
+  if (doPar === 2) return null
+  if (doPar === 1) {
+    const outra = h.find((x) => x !== par)
+    return outra === solta
+      ? { bucket: 75, classe: "Full" }
+      : { bucket: 75, classe: "Trinca" }
+  }
+  if (h[0] === h[1] && h[0] === solta) return { bucket: 75, classe: "Full" }
+  return { bucket: 50, classe: "Todo o restante" }
+}
+
 export function bucketDe(
   tipo: TipoId,
   board: string[],
   hero: [string, string]
 ): Resultado | null {
+  if (tipo === "dobrado") return bucketDobrado(board, hero)
   const L = ler(board, hero)
   const naipes = board.map((c) => c[1])
   const monotone = naipes.every((n) => n === naipes[0])
