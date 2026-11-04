@@ -402,5 +402,70 @@
   "call": 10.7,
   "raise": 10.6,
   "allin": 0.0
+ },
+ "#1701@CO": {
+  "tipo": "Vanilla",
+  "fase": "Mid",
+  "btn_bb": 55.5,
+  "opener_bb": 29.7,
+  "open_pct": 28.8,
+  "relacao": "similar",
+  "rp": 4.9,
+  "fold": 70.3,
+  "call": 17.5,
+  "raise": 11.9,
+  "allin": 0.3
+ },
+ "#4637@CO": {
+  "tipo": "Vanilla",
+  "fase": "Early",
+  "btn_bb": 56.9,
+  "opener_bb": 33.2,
+  "open_pct": 34.3,
+  "relacao": "cobre",
+  "rp": 2.6,
+  "fold": 76.4,
+  "call": 13.7,
+  "raise": 10.0,
+  "allin": 0.0
+ },
+ "#6132@CO": {
+  "tipo": "Vanilla",
+  "fase": "Mid",
+  "btn_bb": 57.1,
+  "opener_bb": 28.7,
+  "open_pct": 32.9,
+  "relacao": "cobre",
+  "rp": 2.6,
+  "fold": 79.0,
+  "call": 10.9,
+  "raise": 10.1,
+  "allin": 0.0
+ },
+ "#3750@CO": {
+  "tipo": "Vanilla",
+  "fase": "Mid",
+  "btn_bb": 58.1,
+  "opener_bb": 33.2,
+  "open_pct": 30.0,
+  "relacao": "cobre",
+  "rp": 2.9,
+  "fold": 80.1,
+  "call": 9.4,
+  "raise": 10.5,
+  "allin": 0.0
+ },
+ "#1741@CO": {
+  "tipo": "Vanilla",
+  "fase": "Early",
+  "btn_bb": 53.6,
+  "opener_bb": 31.2,
+  "open_pct": 33.7,
+  "relacao": "cobre",
+  "rp": 2.1,
+  "fold": 76.8,
+  "call": 13.8,
+  "raise": 9.4,
+  "allin": 0.0
  }
 }
