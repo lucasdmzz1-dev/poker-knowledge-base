@@ -2,7 +2,7 @@
 # Uso (na raiz do repositório):
 #   python -I theory/tools/call-open/gerar-simplificacao.py
 # Método: separa Vanilla e PKO e, em cada um, BTN médio (menos de 45bb) e deep. No PKO deep há ainda o grupo
-# "RP até -2% ou opener de 35% ou mais" (5 dos 6 cenários). Por mão e por grupo guarda a média, o mínimo e o
+# "RP até -2% ou opener de 35% ou mais" (5 dos 6 cenários). Posição "i" = opener inicial (UTG a HJ), "c" = opener CO. Por mão e por grupo guarda a média, o mínimo e o
 # máximo de continuar (call + 3bet + all-in) entre as árvores do grupo e a parte de 3bet.
 import json, os
 
@@ -15,13 +15,16 @@ W = [6 if len(h) == 2 else 4 if h[2:] == "s" else 12 for h in M]
 def tot(c):
     return sum((a + b + e) * w for a, b, e, w in zip(c["call"], c["raise"], c["allin"], W)) / 1326
 
-G = {
-    "Vm": [c for c in C if c["tipo"] == "Vanilla" and c["faixa"] == "médio"],
-    "Vf": [c for c in C if c["tipo"] == "Vanilla" and c["faixa"] == "deep"],
-    "Pm": [c for c in C if c["tipo"] == "PKO" and c["faixa"] == "médio"],
-    "Pf": [c for c in C if c["tipo"] == "PKO" and c["faixa"] == "deep"],
-}
-G["Px"] = [c for c in G["Pf"] if c["rp"] <= -2 or c["open_pct"] >= 35]
+G = {}
+for pos, f_pos in (("i", lambda c: c["opener"] != "CO"), ("c", lambda c: c["opener"] == "CO")):
+    for t, tn in (("V", "Vanilla"), ("P", "PKO")):
+        for f, fn in (("m", "médio"), ("f", "deep")):
+            cs = [c for c in C if f_pos(c) and c["tipo"] == tn and c["faixa"] == fn]
+            if cs:
+                G[pos + t + f] = cs
+        px = [c for c in G.get(pos + "Pf", []) if c["rp"] <= -2 or c["open_pct"] >= 35]
+        if t == "P" and px:
+            G[pos + "Px"] = px
 
 saida = {"maos": M, "g": {}}
 for k, cs in G.items():
