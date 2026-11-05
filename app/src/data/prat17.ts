@@ -61,6 +61,16 @@ export const BOARDS_BB: BoardBBTreino[] = [
       "Seguida em board low: o SB não tem a sequência offsuit, então B70.",
   },
   {
+    id: "t84fd",
+    nome: "T-8-4, com flush draw",
+    board: ["Ts", "8s", "4d"],
+    size: "B70",
+    estrategia: "split70",
+    grupo: "B70",
+    criterio:
+      "O 4 conecta mais com o T e o 8 que o 3 e o 2: mais interação e flush draw, então B70 (coach, áudio de 04/11/2026).",
+  },
+  {
     id: "qt7",
     nome: "Q-T-7, semi conectado com flush draw",
     board: ["Qh", "Th", "7c"],
@@ -266,6 +276,36 @@ export const BOARDS_BB: BoardBBTreino[] = [
     size: "B40",
     estrategia: "split40",
     grupo: "B40",
+  },
+  {
+    id: "t84",
+    nome: "T-8-4, sem flush draw",
+    board: ["Ts", "8d", "4c"],
+    size: "B40",
+    estrategia: "split40",
+    grupo: "B40",
+    criterio:
+      "Duas cartas acima do 8 e sem flush draw: B40. É leitura da resposta do autor, a confirmar com o coach.",
+  },
+  {
+    id: "t83fd",
+    nome: "T-8-3, com flush draw",
+    board: ["Ts", "8s", "3d"],
+    size: "B40",
+    estrategia: "split40",
+    grupo: "B40",
+    criterio:
+      "Com um 3 no lugar do 4 há menos interação: B40 mesmo com flush draw (coach, áudio de 04/11/2026).",
+  },
+  {
+    id: "t82fd",
+    nome: "T-8-2, com flush draw",
+    board: ["Ts", "8s", "2d"],
+    size: "B40",
+    estrategia: "split40",
+    grupo: "B40",
+    criterio:
+      "Com um 2 no lugar do 4 há menos interação: B40 mesmo com flush draw (coach, áudio de 04/11/2026).",
   },
   {
     id: "t42",
