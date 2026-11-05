@@ -272,3 +272,29 @@ Fontes: resposta do coach no Discord (colada pelo autor do KB), nota do Yago no 
 ## Item 11 — Q-6-3 e T-7-4 (nota)
 
 O critério do coach explica o Q-6-3 em B25 (uma alta e duas baixas), mas o T-7-4 com flush draw continua B40 na fala, e por essa regra seria B25. Continua aberta.
+
+---
+
+# Atualizações de 04/11/2026
+
+Fonte: dois áudios de voz (voice-message 4 e 5, com 89 s e 36 s), enviados pelo autor do KB a partir de uma mão jogada (A♥ 6♣ no flop 4♠ T♣ 8♦). A autoria da gravação não aparece nos áudios: parecem do coach, a confirmar. A transcrição é automática, então o texto abaixo reescreve só o que ficou claro e marca o que ficou duvidoso.
+
+## Item 29 — T-8-4 (novas evidências)
+
+O primeiro áudio dá o critério para duas cartas acima do 8: o SB interage mais com o board (mais draws diretos e mais pares), o que piora bastante e é um motivo para não usar B25 e ir para B40 ou B70. O T e o 8 do T-8-4 são duas cartas acima do 8, então o board não é B25.
+
+O segundo áudio fala de um board com um 4, em que trocar o 4 por um 3 ou um 2 faria o coach voltar ao B40 mesmo com flush draw, "porque ainda é um pouco menos de interação". O áudio não diz qual é o board. Pela mão em questão, ele provavelmente é o T-8-4 (ou o T-7-4) com flush draw. Se for o T-8-4, ele com flush draw tende para o B70, e sem flush draw fica no B40 que já era a leitura.
+
+**Status:** aberta, com mais evidência. Continua faltando o coach dizer, com todas as letras, o size do T-8-4 sem flush draw e com flush draw. **Dúvida da transcrição:** o board do segundo áudio.
+
+## Item 33 — O flush draw como segundo critério do size (novo)
+
+O primeiro critério é a categoria do board (cartas abaixo ou acima do 8, Regra 26). O segundo, que o coach chama de "meio termo", é o flush draw (Regra 27). A pergunta de quanto ele pesa em cada board continua em aberto: ele "acaba sendo um fator" para subir ou não o size em "alguns boards específicos", e o áudio não lista quais.
+
+**Status:** registrada, sem lista de boards.
+
+## Item 34 — Muitos draws e flush draw juntos (novo)
+
+Quando o board junta vários draws diretos com flush draw, ele dificilmente é B40 e passa a ser tratado como semi conectado: B70 ou check, porque as mãos de valor querem cobrar o máximo quando as equities mudam muito (Regra 28). O áudio não diz quantos draws bastam, nem quais boards.
+
+**Status:** registrada, sem lista de boards. **Dúvida da transcrição:** a frase "esses 2 3-t draws" saiu truncada, e eu li como "vários draws diretos".
