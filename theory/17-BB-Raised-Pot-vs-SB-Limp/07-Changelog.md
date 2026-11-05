@@ -1,5 +1,13 @@
 # Changelog — BB Raised Pot vs SB
 
+## Versão 1.5 (04/11/2026)
+
+Fonte: dois áudios de voz sobre uma mão no T-8-4, transcritos automaticamente.
+
+- Regras: acrescentadas as Regras 26 a 28 (cartas acima e abaixo do 8, flush draw como segundo critério e pouca interação com flush draw).
+- Decisões: acrescentada a Decisão 15.
+- Pendências: seção "Atualizações de 04/11/2026", com mais evidência para o item 29 (T-8-4) e os itens novos 33 e 34.
+
 ## Versão 1.4 (02/11/2026)
 
 Fontes: resposta do coach e nota do Yago no Discord, IMG1 e IMG2 com todos os naipes e esclarecimentos do autor do KB.

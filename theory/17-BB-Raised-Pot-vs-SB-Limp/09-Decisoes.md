@@ -111,3 +111,11 @@ Nos 10 boards do IMG1 valem os buckets do próprio board. Nos demais boards vale
 Underpair é o par de bolso abaixo do terceiro par. Par de bolso entre cartas do board conta como segundo ou terceiro par. A decisão vale também para os módulos 05 e 15.
 
 **Status:** definitiva (autor do KB).
+
+---
+
+# Decisão 15 — Critério do size em duas etapas (04/11/2026)
+
+O size sai da categoria do board (cartas acima ou abaixo do 8, Regras 22 e 26) e, em seguida, do flush draw (Regras 27 e 28). O T-8-4 segue sem resposta direta do coach (Pendência 29). Enquanto isso, a Prática não treina esse board.
+
+**Status:** provisória, até o coach confirmar a autoria e o board do segundo áudio.

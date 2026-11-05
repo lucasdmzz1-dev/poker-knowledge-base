@@ -1302,21 +1302,21 @@
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/05-Regras-Consolidadas.md": {
-    "mtime": 1793663701.8115332,
-    "seen": 1793675380.8735867,
-    "ast_hash": "98538b8654c683d3dbb2753a4023fa04",
+    "mtime": 1793839955.354864,
+    "seen": 1793839977.5747437,
+    "ast_hash": "871c47f88073b25572cd82294a616b25",
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/06-Pendencias.md": {
-    "mtime": 1793663701.810533,
-    "seen": 1793675380.8735867,
-    "ast_hash": "ff878e9b6a1d39a1f0bf5aad6ca967ef",
+    "mtime": 1793839955.3437421,
+    "seen": 1793839977.5747437,
+    "ast_hash": "db54683c574b5cba1137236be97d3aa4",
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/07-Changelog.md": {
-    "mtime": 1793663701.8115332,
-    "seen": 1793675380.8735867,
-    "ast_hash": "e3aafa7f292fa161bf33889cebdbcf24",
+    "mtime": 1793839955.3682542,
+    "seen": 1793839977.5747437,
+    "ast_hash": "cde9b634bf035a429ce52f0aa3390af3",
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/08-Referencias.md": {
@@ -1326,9 +1326,9 @@
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/09-Decisoes.md": {
-    "mtime": 1793663701.810533,
-    "seen": 1793675380.8735867,
-    "ast_hash": "39df3e28814f6d7c022bb245ab016964",
+    "mtime": 1793839955.3615644,
+    "seen": 1793839977.5757637,
+    "ast_hash": "cb7d9eb4bd721ea99b91a4618f02006e",
     "semantic_hash": ""
   },
   "theory/17-BB-Raised-Pot-vs-SB-Limp/README.md": {
@@ -2370,9 +2370,9 @@
     "semantic_hash": ""
   },
   "docs/Site-Poker-KB.md": {
-    "mtime": 1793751796.212476,
-    "seen": 1793751811.9787025,
-    "ast_hash": "5abd04278be489461e38287ae0474c07",
+    "mtime": 1793838791.729627,
+    "seen": 1793839977.5306551,
+    "ast_hash": "07474d2fdd157bf58b01e923e03e9ea9",
     "semantic_hash": ""
   },
   "app/src/data/mod14.ts": {
@@ -2526,9 +2526,9 @@
     "semantic_hash": ""
   },
   "app/src/components/portao.tsx": {
-    "mtime": 1793657481.3317883,
-    "seen": 1793675380.8735867,
-    "ast_hash": "fe56e21f3509ba8ee4ce24ca1d0ee441",
+    "mtime": 1793838791.7250817,
+    "seen": 1793839977.4894035,
+    "ast_hash": "f1ef62364db9729428894123e7be01ef",
     "semantic_hash": ""
   },
   "app/src/components/teoria/icm-ranges.tsx": {
@@ -2568,9 +2568,9 @@
     "semantic_hash": ""
   },
   "app/src/lib/nuvem.ts": {
-    "mtime": 1793657481.3327904,
-    "seen": 1793675380.8735867,
-    "ast_hash": "eec4a1a5c8bd8f9918528624e21cf756",
+    "mtime": 1793838791.7271025,
+    "seen": 1793839977.5007954,
+    "ast_hash": "261abf6cd61e8d14218d1131ee4d8d7d",
     "semantic_hash": ""
   },
   "app/src/lib/sync.ts": {
@@ -2694,9 +2694,9 @@
     "semantic_hash": ""
   },
   "app/src/pages/admin.tsx": {
-    "mtime": 1793657481.3342981,
-    "seen": 1793675380.8735867,
-    "ast_hash": "7b6d204d68fac0963e2a893203fe6b3f",
+    "mtime": 1793838791.7286074,
+    "seen": 1793839977.5027955,
+    "ast_hash": "309f2c0390ba322a0cf401301dcf40e7",
     "semantic_hash": ""
   },
   "app/src/pages/pratica-bb.tsx": {

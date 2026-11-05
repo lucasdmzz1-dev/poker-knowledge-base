@@ -167,6 +167,34 @@ T-7-4 é B40, T-7-5 "piora um pouco" e T-8-5 com flush draw é B70.
 
 **Faça:** use o split B70 no low conectado (9-7-5, T-8-5) e no semi conectado com flush draw (Q-T-7, Q-8-7, J-7-6, K-9-8). **[Autor]**
 
+# Regra 26 — Cartas abaixo e acima do 8 (04/11/2026)
+
+**Faça:** em board seco ou com cartas abaixo do 8, aposte thin value. Com duas cartas acima do 8, não use B25: vá para B40 ou B70.
+
+**Por quê:** o SB acerta menos par nas cartas baixas, tem menos mão para continuar, e você tira valor de forma mais efetiva. Com duas cartas acima do 8 ele interage mais com o board, com mais draws diretos e mais pares, e isso piora bastante a sua aposta de thin value. **[Áudio do coach, a confirmar]**
+
+---
+
+# Regra 27 — O flush draw é o segundo critério do size (04/11/2026)
+
+**Faça:** olhe o flush draw depois da categoria do board.
+
+- Board sem flush draw: você realiza mais equity, e tem mais mãos com backdoor flush draw.
+- Board com flush draw: se você aposta muito, realiza menos equity, porque parte das mãos que você enfrenta são flush draws.
+
+**Por quê:** em alguns boards específicos o flush draw decide se o size sobe ou não. **[Áudio do coach, a confirmar]**
+
+---
+
+# Regra 28 — Pouca interação mantém o B40 com flush draw (04/11/2026)
+
+**Faça:**
+
+- Com menos interação (por exemplo, o 4 trocado por um 3 ou um 2), o B40 continua valendo mesmo com flush draw.
+- Com vários draws diretos e flush draw no mesmo board, ele dificilmente fica em B40: trate como semi conectado, com B70 ou check.
+
+**Por quê:** quando as equities mudam muito, as mãos de valor querem cobrar o máximo, e quem não realiza tão bem não tem incentivo de dar thin value. **[Áudio do coach, a confirmar]**
+
 # Regra principal do módulo
 
 Ao escolher o size, pergunte primeiro quanto thin value o board dá para este range de SB. O resto segue dessa resposta.
