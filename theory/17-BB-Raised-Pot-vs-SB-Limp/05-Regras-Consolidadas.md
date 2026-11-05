@@ -195,6 +195,20 @@ T-7-4 é B40, T-7-5 "piora um pouco" e T-8-5 com flush draw é B70.
 
 **Por quê:** quando as equities mudam muito, as mãos de valor querem cobrar o máximo, e quem não realiza tão bem não tem incentivo de dar thin value. **[Áudio do coach, a confirmar]**
 
+# Regra 29 — T-8-4 (04/11/2026)
+
+**Faça:** com flush draw, B70. Sem flush draw, B40 (leitura da resposta do autor, a confirmar). Se o 4 for um 3 ou um 2 (T-8-3, T-8-2), o B40 volta, mesmo com flush draw.
+
+**Por quê:** o 4 conecta mais com o T e o 8 do que o 3 e o 2, então há mais interação. **[Coach, via autor]**
+
+---
+
+# Regra 30 — Dois straight draws mais flush draw (04/11/2026)
+
+**Faça:** quando o board junta dois straight draws com flush draw, trate como B70. Dificilmente ele deixa de se encaixar em B70.
+
+**Por quê:** as equities mudam muito, e as mãos de valor querem cobrar o máximo. Essa regra concretiza a Regra 28. **[Coach, via autor]**
+
 # Regra principal do módulo
 
 Ao escolher o size, pergunte primeiro quanto thin value o board dá para este range de SB. O resto segue dessa resposta.
