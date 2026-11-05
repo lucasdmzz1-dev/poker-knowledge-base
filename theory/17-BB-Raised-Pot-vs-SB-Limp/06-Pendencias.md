@@ -298,3 +298,25 @@ O primeiro critério é a categoria do board (cartas abaixo ou acima do 8, Regra
 Quando o board junta vários draws diretos com flush draw, ele dificilmente é B40 e passa a ser tratado como semi conectado: B70 ou check, porque as mãos de valor querem cobrar o máximo quando as equities mudam muito (Regra 28). O áudio não diz quantos draws bastam, nem quais boards.
 
 **Status:** registrada, sem lista de boards. **Dúvida da transcrição:** a frase "esses 2 3-t draws" saiu truncada, e eu li como "vários draws diretos".
+
+---
+
+# Respostas do autor de 04/11/2026
+
+Fonte: o autor do KB respondeu às dúvidas dos áudios de 04/11/2026 (Atualizações de 04/11/2026, itens 29, 33 e 34). Os áudios são do coach.
+
+## Item 29 — T-8-4
+
+**Status:** resolvida com flush draw. O T-8-4 com flush draw é **B70**. Sem flush draw, a resposta foi escrita de forma curta ("B70, com FD, sem B40"), e eu li como B40, que também era a leitura anterior. **A confirmar:** o size do T-8-4 sem flush draw.
+
+## Item 33 — Boards em que o flush draw decide o size
+
+**Status:** resolvida em parte. O exemplo do coach: com flush draw, o T-8-4 é B70, e o T-8-3 ou o T-8-2 voltam ao B40. Mais um 3 ou um 2 no lugar do 4 faz o board ter menos interação. A lista completa de boards continua aberta.
+
+## Item 34 — Muitos draws e flush draw juntos
+
+**Status:** resolvida na regra. Dois straight draws mais flush draw dificilmente deixam de ser B70 (a frase "2 3-t draws" da transcrição era "dois straight draws"). Quais boards e quantos draws continuam sem lista.
+
+## Autoria e board dos áudios
+
+**Status:** resolvida. Os dois áudios são do coach. O board do segundo áudio é o T-8-4 com flush draw, com a troca do 4 por um 3 ou por um 2.

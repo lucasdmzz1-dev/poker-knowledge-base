@@ -119,3 +119,11 @@ Underpair é o par de bolso abaixo do terceiro par. Par de bolso entre cartas do
 O size sai da categoria do board (cartas acima ou abaixo do 8, Regras 22 e 26) e, em seguida, do flush draw (Regras 27 e 28). O T-8-4 segue sem resposta direta do coach (Pendência 29). Enquanto isso, a Prática não treina esse board.
 
 **Status:** provisória, até o coach confirmar a autoria e o board do segundo áudio.
+
+---
+
+# Decisão 16 — T-8-4 em B70 com flush draw (04/11/2026)
+
+O T-8-4 com flush draw é B70, e o T-8-3 e o T-8-2 com flush draw são B40. Dois straight draws mais flush draw viram B70. A Decisão 15 passa a ter o T-8-4 como exemplo do segundo critério (o flush draw).
+
+**Status:** definitiva para o T-8-4 com flush draw (coach, via autor). Sem flush draw, B40 é leitura, a confirmar.
