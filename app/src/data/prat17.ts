@@ -226,11 +226,11 @@ export const BOARDS_BB: BoardBBTreino[] = [
     id: "kj4",
     nome: "K-J-4, dois broadways",
     board: ["4c", "Jd", "Kc"],
-    size: "B40",
-    estrategia: "split40",
-    grupo: "B40",
+    size: "B70",
+    estrategia: "split70",
+    grupo: "B70",
     criterio:
-      "Duas cartas altas e uma baixa tendem ao B40: o 4 não é defendido pelo SB.",
+      "O autor corrigiu em 06/11/2026: este board é B70. A aula e o guideline dizem B40 (o 4 não é defendido pelo SB), então a teoria precisa ser confirmada com o coach.",
   },
   {
     id: "jt8",

@@ -126,4 +126,6 @@ Bet vs Missed, dobrado: o treino tem o tipo dobrado (`bucketDobrado` em `data/pr
 
 BB raised pot vs SB: revisão pelas Regras 26 a 30 da teoria (áudios do coach de 04/11/2026). Os boards que já existiam não conflitam com elas (as exceções de A high, monotone e dobrado seguem o guideline, e o Q-J-8 com flush draw segue B40 por decisão explícita do coach). Entraram T-8-4 com flush draw (B70), T-8-4 sem flush draw (B40, leitura a confirmar) e T-8-3 e T-8-2 com flush draw (B40). A regra "dois straight draws mais flush draw é B70" não virou regra de código, porque a teoria não diz quantos draws bastam nem lista os boards.
 
+K-J-4 no treino do módulo 17: o autor corrigiu em 06/11/2026 para B70 (split B70), no lugar do B40 da aula e do guideline. A teoria (guideline, Regra 22 e `mod17.ts`) ainda diz B40 e precisa ser confirmada com o coach.
+
 Boards do C-Bet OOP: cada textura tem o board principal e, em `outros`, boards extras tirados do arquivo de exemplos do coach (CBET OOP EXEMPLOS): K-T-6 e Q-J-6 (BBX), Q-8-4, K-8-5 e K-6-4 (K-Q high), J-6-4 e J-8-3 (J-T high) e 7-6-5 (low com sequência). Ficaram de fora os que o coach não rotulou de forma clara (8-6-4, 6-5-2 "low", J-8-7 "high conectado") e os pareados. Nos seis temas, o resultado final tem "Jogar os erros de novo" (`refazerErros`, que reaproveita `comecar`).
